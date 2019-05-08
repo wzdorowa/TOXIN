@@ -1,8 +1,20 @@
+@import "base.css";
+
 .text_field-paragraph {
     display: flex;
     flex-direction: column;
 
     margin: 0;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+
+    color: $DarkShade;
+
 }
 .text_field {
     width: 320px;
