@@ -1,0 +1,40 @@
+@charset "UTF-8";
+.text_field-paragraph {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  /*заменить на значение переменной*/
+}
+
+.text_field {
+  width: 320px;
+  height: 44px;
+  left: 141px;
+  top: 163px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/Montserrat-Regular.917603d9.svg") format("svg");
+  src: url("/Montserrat-Regular.df153d04.ttf") format("ttf");
+  src: url("/Montserrat-Regular.d027b670.woff") format("woff");
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("/Quicksand-Regular.aedec7f6.svg") format("svg");
+  src: url("/Quicksand-Regular.658f173e.ttf") format("ttf");
+  src: url("/Quicksand-Regular.4bf22a33.woff") format("woff");
+}
+
+/*# sourceMappingURL=/global.92c4c1a3.css.map */

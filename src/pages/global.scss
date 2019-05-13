@@ -1,6 +1,2 @@
-@import "/src/elements/**/*.scss";
-@import "../fonts/fonts.scss";
-
-$DarkShade: #1F2041;
-$Purple: #BC9CFF;
-$Green: #6FCF97;
+@import "src/elements/text_field/text_field.scss";
+@import "src/fonts/fonts.scss";
