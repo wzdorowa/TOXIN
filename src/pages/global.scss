@@ -1,15 +1,5 @@
-@font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/Montserrat/Montserrat-Regular.svg') format('svg');
-    src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('ttf');
-    src: url('../fonts/Montserrat/Montserrat-Regular.woff') format('woff');
-}
-@font-face {
-    font-family: "Quicksand";
-    src: url('../fonts/Quicksand/Quicksand-Regular.svg') format('svg');
-    src: url('../fonts/Quicksand/Quicksand-Regular.ttf') format('ttf');
-    src: url('../fonts/Quicksand/Quicksand-Regular.woff') format('woff');
-}
+@import "/src/elements/**/*.scss";
+@import "../fonts/fonts.scss";
 
 $DarkShade: #1F2041;
 $Purple: #BC9CFF;
