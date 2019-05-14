@@ -47,29 +47,15 @@
     content: "";
 
     position: absolute;
+    top: 35px;
+    right: 13px;
 
-    width: 9px;
-    height: 3px;
-    top: 39px;
-    right: 9px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid rgba(31, 32, 65, 0.5);
+    border-right: 2px solid rgba(31, 32, 65, 0.5);
 
-    background-color: rgba(31, 32, 65, 0.5);
-
-    transform: rotate(-45deg);
-}
-.dropdown-item::after {
-    content: "";
-
-    position: absolute;
-
-    width: 12px;
-    height: 3px;
-    top: 40px;
-    right: 15px;
-
-    background-color: rgba(31, 32, 65, 0.5);
-
-    transform: rotate(45deg);
+    transform: rotate(135deg);
 }
 .dropdown:hover,
 .dropdown:focus {
