@@ -1,4 +1,8 @@
-.text_field-paragraph {
+.text_field-list {
+  padding: 0;
+}
+
+.text_field-item {
   display: flex;
   flex-direction: column;
   margin: 0;
