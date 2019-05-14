@@ -1,5 +1,4 @@
+include ../base_input/base_input.pug 
+
 mixin dropdown()
-    ul.dropdown-list
-        li.dropdown-item
-            label Dropdown
-            input#dropdown.dropdown(type='text', name='dropdown', placeholder='Сколько гостей')
+    +base_input('Dropdown', 'Сколько гостей')            
