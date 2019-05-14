@@ -80,13 +80,6 @@
   padding-right: 44px;
 }
 
-.dropdown:hover,
-.dropdown:focus {
-  border: 1px solid rgba(31, 32, 65, 0.5);
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
-}
-
 .dropdown-item::before {
   content: "";
   position: absolute;
@@ -107,6 +100,56 @@
   right: 15px;
   background-color: rgba(31, 32, 65, 0.5);
   transform: rotate(45deg);
+}
+
+.dropdown:hover,
+.dropdown:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.masked_text_field-list {
+  padding: 0;
+}
+
+.masked_text_field-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: var(--DarkShade);
+}
+
+.masked_text_field {
+  width: 320px;
+  height: 44px;
+  left: 141px;
+  top: 163px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.25);
+  margin-top: 5px;
+  padding-left: 15px;
+}
+
+.masked_text_field:hover,
+.masked_text_field:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 :root {
