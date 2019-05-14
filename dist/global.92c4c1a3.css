@@ -1,3 +1,46 @@
+.base_input-list {
+  padding: 0;
+}
+
+.base_input-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: var(--DarkShade);
+}
+
+.base_input {
+  width: 320px;
+  height: 44px;
+  left: 141px;
+  top: 163px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.25);
+  margin-top: 5px;
+  padding-left: 15px;
+}
+
+.base_input:hover,
+.base_input:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
 .text_field-list {
   padding: 0;
 }

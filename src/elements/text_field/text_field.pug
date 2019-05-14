@@ -1,5 +1,4 @@
+include ../base_input/base_input.pug 
+
 mixin text_field()
-    ul.text_field-list
-        li.text_field-item
-            label Text field
-            input#text_field.text_field(type='text', name='text_field', placeholder='Email')
+    +base_input('Text field', 'Email')
