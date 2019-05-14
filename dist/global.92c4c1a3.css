@@ -37,9 +37,15 @@
   color: rgba(31, 32, 65, 0.75);
 }
 
-.dropdown-paragraph {
+.dropdown-list {
+  padding: 0;
+}
+
+.dropdown-item {
+  position: relative;
   display: flex;
   flex-direction: column;
+  width: 320px;
   margin: 0;
   font-family: "Montserrat";
   font-style: normal;
@@ -77,22 +83,26 @@
   color: rgba(31, 32, 65, 0.75);
 }
 
-.dropdown::after,
-.dropdown::before {
+.dropdown-item::before {
   content: "";
   position: absolute;
-  width: 35px;
-  height: 2px;
-  right: 10px;
+  width: 9px;
+  height: 3px;
+  top: 39px;
+  right: 9px;
   background-color: rgba(31, 32, 65, 0.5);
-}
-
-.dropdown::after {
-  transform: rotate(45deg);
-}
-
-.dropdown::before {
   transform: rotate(-45deg);
+}
+
+.dropdown-item::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 40px;
+  right: 15px;
+  background-color: rgba(31, 32, 65, 0.5);
+  transform: rotate(45deg);
 }
 
 :root {
