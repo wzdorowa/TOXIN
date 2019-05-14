@@ -301,17 +301,17 @@
   right: 13px;
   width: 10px;
   height: 10px;
-  border-top: 3px solid #BC9CFF;
-  border-right: 3px solid #BC9CFF;
+  border-top: 2px solid #BC9CFF;
+  border-right: 2px solid #BC9CFF;
   transform: rotate(45deg);
 }
 
 .subscription_text_field-item::after {
   content: "";
   position: absolute;
-  width: 17px;
-  height: 3px;
-  top: 41px;
+  width: 15px;
+  height: 2px;
+  top: 40px;
   right: 12px;
   background-color: #BC9CFF;
 }
