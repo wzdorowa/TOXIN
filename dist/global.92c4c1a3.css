@@ -16,7 +16,6 @@
 }
 
 .base_input {
-  width: 320px;
   height: 44px;
   left: 141px;
   top: 163px;
@@ -39,6 +38,18 @@
   border: 1px solid rgba(31, 32, 65, 0.5);
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
+}
+
+.base_input_size_large {
+  width: 320px;
+}
+
+.base_input_size_medium {
+  width: 266px;
+}
+
+.base_input_size_small {
+  width: 150px;
 }
 
 .text_field-list {
