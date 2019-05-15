@@ -1,4 +1,4 @@
 include ../base_input/base_input.pug 
 
-mixin date_dropdown()
-    +base_input('Date dropdown', 'ДД.ММ.ГГГГ', 'small', 'arrow-down')            
+mixin date_dropdown(label, placeholder, size, arrow)
+    +base_input(label, placeholder, size, arrow)            
