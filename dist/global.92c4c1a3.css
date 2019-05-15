@@ -52,7 +52,7 @@
   width: 150px;
 }
 
-.base_input-item_arrow::before {
+.base_input-item_arrow-down::before {
   content: "";
   position: absolute;
   top: 35px;
@@ -64,7 +64,7 @@
   transform: rotate(135deg);
 }
 
-.base_input-item_arrow-down::before {
+.base_input-item_arrow::before {
   content: "";
   position: absolute;
   top: 35px;
@@ -76,7 +76,7 @@
   transform: rotate(45deg);
 }
 
-.base_input-item_arrow-down::after {
+.base_input-item_arrow::after {
   content: "";
   position: absolute;
   width: 15px;
