@@ -1,11 +1,7 @@
-.base_input-list {
-    padding: 0;
-}
-.base_input-item {
+.base_input-container {
+    position: relative;
     display: flex;
     flex-direction: column;
-    
-    margin: 0;
 
     font-family: "Montserrat";
     font-style: normal;
@@ -54,7 +50,7 @@
 .base_input_size_small {
     width: 150px;
 }
-.base_input-item_arrow-down::before {
+.base_input-container_arrow-down::before {
     content: "";
 
     position: absolute;
@@ -68,7 +64,7 @@
 
     transform: rotate(135deg);
 }
-.base_input-item_arrow::before {
+.base_input-container_arrow::before {
     content: "";
 
     position: absolute;
@@ -82,7 +78,7 @@
 
     transform: rotate(45deg);
 }
-.base_input-item_arrow::after {
+.base_input-container_arrow::after {
     content: "";
 
     position: absolute;

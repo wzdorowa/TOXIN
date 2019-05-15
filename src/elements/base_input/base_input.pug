@@ -1,5 +1,4 @@
 mixin base_input(label, placeholder, size, arrow)
-    ul.base_input-list
-        li.base_input-item(class='base_input-item_'+arrow || false)
-            label= label
-            input#base_input.base_input(class='base_input_size_'+size || 'large')(type='text', name='base_input', placeholder= placeholder)            
+    div.base_input-container(class='base_input-container_'+arrow || false)(class='base_input_size_'+size || 'large')
+        label= label
+        input#base_input.base_input(class='base_input_size_'+size || 'large')(type='text', name='base_input', placeholder= placeholder)            
