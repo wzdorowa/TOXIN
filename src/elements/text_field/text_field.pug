@@ -1,4 +1,4 @@
 include ../base_input/base_input.pug 
 
-mixin text_field()
-    +base_input('Text field', 'Email', 'large')
+mixin text_field(label, placeholder, size)
+    +base_input(label, placeholder, size)

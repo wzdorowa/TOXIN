@@ -9,7 +9,7 @@ include ../../elements/subscription_text_field/subscription_text_field.pug
     
 block content
     .inputs
-        +text_field()
+        +text_field('Text field', 'Email', 'large')
         +dropdown('Dropdown', 'Сколько гостей', 'large', 'arrow-down') 
         +masked_text_field() 
         +date_dropdown('Date dropdown', 'ДД.ММ.ГГГГ', 'small', 'arrow-down')
