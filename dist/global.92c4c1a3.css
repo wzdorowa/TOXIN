@@ -100,5 +100,11 @@
   src: url("/Quicksand-Regular.658f173e.ttf") format("ttf");
   src: url("/Quicksand-Regular.4bf22a33.woff") format("woff");
 }
+.inputs {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  max-height: 633px;
+}
 
 /*# sourceMappingURL=/global.92c4c1a3.css.map */
