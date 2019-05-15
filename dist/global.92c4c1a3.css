@@ -103,8 +103,9 @@
 .inputs {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   max-width: 320px;
-  max-height: 633px;
+  height: 500px;
 }
 
 /*# sourceMappingURL=/global.92c4c1a3.css.map */
