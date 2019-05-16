@@ -3,3 +3,4 @@ mixin base_checkbox_button(text, checked)
         label.filter-checkbox
             input#base_checkbox_button.base_checkbox_button.visually-hidden(type='checkbox', name='base_checkbox_button', checked=checked || false)
             span.checkbox-indicator
+            span.checkbox-description=text
