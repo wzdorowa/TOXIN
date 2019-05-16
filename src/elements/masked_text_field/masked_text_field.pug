@@ -1,4 +1,4 @@
 include ../base_input/base_input.pug 
 
-mixin masked_text_field()
-    +base_input('Masked text field', 'ДД.ММ.ГГГГ', 'large')            
+mixin masked_text_field(label, placeholder, size)
+    +base_input(label, placeholder, size)            
