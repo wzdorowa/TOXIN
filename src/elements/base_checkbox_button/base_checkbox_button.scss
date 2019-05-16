@@ -24,7 +24,18 @@
     border: 1px solid #BC9CFF;
 }
 .filter-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
-    
+    content: "";
+
+    position: absolute;
+    top: 3px;
+    left: 5px;
+
+    width: 8px;
+    height: 6px;
+    border-top: 2px solid #BC9CFF;
+    border-right: 2px solid #BC9CFF;
+
+    transform: rotate(135deg); 
 }
 .visually-hidden:not(:focus):not(:active),
  input[type="checkbox"].visually-hidden,
