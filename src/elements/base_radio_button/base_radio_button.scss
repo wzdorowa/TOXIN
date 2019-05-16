@@ -22,18 +22,18 @@
 .radio_button-description {
     padding-left: 30px;
 }
-.filter-radio_button input[type="checkbox"]:checked + .radio_button-indicator {
+.filter-radio_button input[type="radio"]:checked + .radio_button-indicator {
     border: 1px solid #BC9CFF;
 }
-.filter-radio_button input[type="checkbox"]:checked + .radio_button-indicator::before {
+.filter-radio_button input[type="radio"]:checked + .radio_button-indicator::before {
     content: "";
 
     position: absolute;
     top: 3px;
-    left: 5px;
+    left: 3px;
 
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 10px;
 }
