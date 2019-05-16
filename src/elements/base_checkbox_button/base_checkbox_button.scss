@@ -20,6 +20,12 @@
 .checkbox-description {
     padding-left: 30px;
 }
+.filter-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
+    border: 1px solid #BC9CFF;
+}
+.filter-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+    
+}
 .visually-hidden:not(:focus):not(:active),
  input[type="checkbox"].visually-hidden,
  input[type="radio"].visually-hidden {
