@@ -1,0 +1,56 @@
+.filter-radio_button {
+    position: relative;
+
+    display: flex;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: rgba(31, 32, 65, 0.5);
+}
+.radio_button-indicator {
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 10px;
+}
+.radio_button-description {
+    padding-left: 30px;
+}
+.filter-radio_button input[type="checkbox"]:checked + .radio_button-indicator {
+    border: 1px solid #BC9CFF;
+}
+.filter-radio_button input[type="checkbox"]:checked + .radio_button-indicator::before {
+    content: "";
+
+    position: absolute;
+    top: 3px;
+    left: 5px;
+
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 10px;
+}
+.visually-hidden:not(:focus):not(:active),
+ input[type="checkbox"].visually-hidden,
+ input[type="radio"].visually-hidden {
+   position: absolute;
+
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+
+   white-space: nowrap;
+
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden; 
+ }

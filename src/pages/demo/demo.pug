@@ -7,6 +7,7 @@ include ../../elements/date_dropdown/date_dropdown.pug
 include ../../elements/filter_date_dropdown/filter_date_dropdown.pug
 include ../../elements/subscription_text_field/subscription_text_field.pug
 include ../../elements/base_checkbox_button/base_checkbox_button.pug
+include ../../elements/base_radio_button/base_radio_button.pug
     
 block content
     .inputs
@@ -18,7 +19,12 @@ block content
         +filter_date_dropdown('Filter date dropdown', '19 авг - 23 авг', 'medium', 'arrow-down')
         +subscription_text_field('Subscription text field', 'Email', 'medium', 'arrow')
     .chechbox_buttons
-        h1.chechbox_buttons-title Chechbox buttons
+        h1.buttons-title Chechbox buttons
         +base_checkbox_button('Можно курить')
         +base_checkbox_button('Можно с питомцами', 'checked')
         +base_checkbox_button('Можно пригласить гостей (до 10 человек)', 'checked')
+    .radio_buttons
+        h1.buttons-title Radio buttons
+        +base_radio_button('Мужчина')
+        +base_radio_button('Женщина')
+
