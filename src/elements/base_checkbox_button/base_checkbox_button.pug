@@ -1,5 +1,5 @@
-mixin base_checkbox_button(placeholder, checked)
+mixin base_checkbox_button(text, checked)
     .base_checkbox_button-container
         label
-            input#base_checkbox_button.base_checkbox_button(type='checkbox', name='base_checkbox_button', placeholder=placeholder)
+            input#base_checkbox_button.base_checkbox_button(type='checkbox', name='base_checkbox_button', checked=checked || false)
             span.checkbox-indicator=text
