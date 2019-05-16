@@ -233,4 +233,17 @@ input[type=radio].visually-hidden {
   margin: 0;
 }
 
+.radio_buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 220px;
+  height: 51px;
+}
+
+.radio_buttons_string {
+  display: flex;
+  justify-content: space-between;
+}
+
 /*# sourceMappingURL=/global.92c4c1a3.css.map */

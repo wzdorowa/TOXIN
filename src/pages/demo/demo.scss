@@ -27,3 +27,14 @@ height: 130px;
 
     margin: 0;
 }
+.radio_buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 220px;
+    height: 51px;
+}
+.radio_buttons_string {
+    display: flex;
+    justify-content: space-between;
+}
