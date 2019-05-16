@@ -8,7 +8,11 @@
 
 }
 .buttons {
+display: flex;
+flex-wrap: wrap;
 
+max-width: 222px;
+height: 130px;
 }
 .chechbox_buttons {
     font-family: 'Montserrat';
@@ -20,4 +24,6 @@
     text-transform: uppercase;
 
     color: #1F2041;
+
+    margin: 0;
 }

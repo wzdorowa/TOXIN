@@ -161,6 +161,13 @@ input[type=radio].visually-hidden {
   height: 500px;
 }
 
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 222px;
+  height: 130px;
+}
+
 .chechbox_buttons {
   font-family: "Montserrat";
   font-style: normal;
@@ -169,6 +176,7 @@ input[type=radio].visually-hidden {
   line-height: 15px;
   text-transform: uppercase;
   color: #1F2041;
+  margin: 0;
 }
 
 /*# sourceMappingURL=/global.92c4c1a3.css.map */
