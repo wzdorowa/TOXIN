@@ -35,7 +35,7 @@ height: 130px;
     max-width: 220px;
     height: 51px;
 }
-.radio_buttons_string {
+.buttons_string {
     display: flex;
     justify-content: space-between;
 }
@@ -43,7 +43,15 @@ height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
     max-width: 260px;
     height: 85px;
+}
+.like_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 90px;
+    height: 51px;
 }

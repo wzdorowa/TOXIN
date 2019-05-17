@@ -5,7 +5,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  color: rgba(31, 32, 65, 0.75);
+  color: rgba(31, 32, 65, 0.5);
 }
 
 .like_button-indicator {
@@ -17,32 +17,21 @@
 }
 
 .like_button-description {
-  padding-left: 50px;
+  padding-left: 30px;
 }
 
-.like_button-toogle input[type=radio]:checked + .like_button-indicator {
+.filter-like_button input[type=radio]:checked + .like_button-indicator {
   border: 1px solid #BC9CFF;
 }
 
-.like_button-toogle input[type=radio]:checked + .like_button-indicator::before {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 23px;
-  width: 14px;
-  height: 14px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 10px;
-}
-
-.like_button-toogle input[type=radio]:not(:checked) + .like_button-indicator::before {
+.filter-like_button input[type=radio]:checked + .like_button-description::before {
   content: "";
   position: absolute;
   top: 3px;
   left: 3px;
   width: 14px;
   height: 14px;
-  background: rgba(31, 32, 65, 0.25);
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 10px;
 }
 
@@ -366,7 +355,7 @@ input[type=radio].visually-hidden {
   height: 51px;
 }
 
-.radio_buttons_string {
+.buttons_string {
   display: flex;
   justify-content: space-between;
 }
@@ -377,6 +366,14 @@ input[type=radio].visually-hidden {
   justify-content: space-between;
   max-width: 260px;
   height: 85px;
+}
+
+.like_button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 90px;
+  height: 51px;
 }
 
 /*# sourceMappingURL=/global.92c4c1a3.css.map */

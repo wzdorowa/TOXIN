@@ -27,7 +27,7 @@ block content
         +base_checkbox_button('Можно пригласить гостей (до 10 человек)', 'checked')
     .radio_buttons
         h1.buttons-title Radio buttons
-        .radio_buttons_string
+        .buttons_string
             +base_radio_button('Мужчина', 'checked')
             +base_radio_button('Женщина')
     .toggle
@@ -36,6 +36,6 @@ block content
         +toggle('Получать спецпредложения')
     .like_button
         h1.buttons-title Like button
-        .like_button_string
-        +like_button('2')
-        +like_button('12')
+        .button_string
+            +like_button('2')
+            +like_button('12', 'checked')
