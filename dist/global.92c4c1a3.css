@@ -1,3 +1,66 @@
+.filter-toogle {
+  position: relative;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.toggle-indicator {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+}
+
+.toggle-description {
+  padding-left: 50px;
+}
+
+.filter-toogle input[type=radio]:checked + .toggle-indicator {
+  border: 1px solid #BC9CFF;
+}
+
+.filter-toogle input[type=radio]:checked + .toggle-indicator::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 10px;
+}
+
+.filter-toogle input[type=radio]:not(:checked) + .toggle-indicator::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type=checkbox].visually-hidden,
+input[type=radio].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .filter-radio_button {
   position: relative;
   font-family: "Montserrat";
