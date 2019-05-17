@@ -1,0 +1,6 @@
+mixin toggle(text, checked)
+    .toggle-container
+        label.filter-toogle
+            input#toggle.toggle.visually-hidden(type='radio', name='toggle', checked=checked || false)
+            span.toggle-indicator
+            span.toggle-description=text
