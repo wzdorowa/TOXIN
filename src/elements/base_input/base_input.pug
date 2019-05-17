@@ -1,4 +1,4 @@
 mixin base_input(label, placeholder, size, arrow)
-    div.base_input-container(class='base_input-container_'+arrow || false)(class='base_input_size_'+size || 'large')
+    div.base_input-container(class='base_input-container_'+arrow || false, class='base_input_size_'+size || 'large')
         label= label
-        input#base_input.base_input(class='base_input_size_'+size || 'large')(type='text', name='base_input', placeholder= placeholder)            
+        input#base_input.base_input(class='base_input_size_'+size || 'large', type='text', name='base_input', placeholder= placeholder)

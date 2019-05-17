@@ -8,12 +8,12 @@ include ../../elements/filter_date_dropdown/filter_date_dropdown.pug
 include ../../elements/subscription_text_field/subscription_text_field.pug
 include ../../elements/base_checkbox_button/base_checkbox_button.pug
 include ../../elements/base_radio_button/base_radio_button.pug
-    
+
 block content
     .inputs
         +text_field('Text field', 'Email', 'large')
-        +dropdown('Dropdown', 'Сколько гостей', 'large', 'arrow-down') 
-        +masked_text_field('Masked text field', 'ДД.ММ.ГГГГ', 'large') 
+        +dropdown('Dropdown', 'Сколько гостей', 'large', 'arrow-down')
+        +masked_text_field('Masked text field', 'ДД.ММ.ГГГГ', 'large')
         +date_dropdown('Date dropdown', 'ДД.ММ.ГГГГ', 'small', 'arrow-down')
         +date_dropdown('Date dropdown', '19.08.2019', 'small', 'arrow-down')
         +filter_date_dropdown('Filter date dropdown', '19 авг - 23 авг', 'medium', 'arrow-down')
@@ -26,6 +26,5 @@ block content
     .radio_buttons
         h1.buttons-title Radio buttons
         .radio_buttons_string
-            +base_radio_button('Мужчина')
+            +base_radio_button('Мужчина', 'checked')
             +base_radio_button('Женщина')
-
