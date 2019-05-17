@@ -1,0 +1,6 @@
+mixin like_button(text, checked)
+    .like_button-container
+        label.filter-like_button
+            input#like_button.like_button.visually-hidden(type='radio', name='like_button', checked=checked || false)
+            span.like_button-indicator
+            span.like_button-description=text
