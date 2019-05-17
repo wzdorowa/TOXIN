@@ -31,10 +31,19 @@ height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     max-width: 220px;
     height: 51px;
 }
 .radio_buttons_string {
     display: flex;
     justify-content: space-between;
+}
+.toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    max-width: 260px;
+    height: 85px;
 }
