@@ -9,6 +9,7 @@ include ../../elements/subscription_text_field/subscription_text_field.pug
 include ../../elements/base_checkbox_button/base_checkbox_button.pug
 include ../../elements/base_radio_button/base_radio_button.pug
 include ../../elements/toggle/toggle.pug
+include ../../elements/like_button/like_button.pug
 
 block content
     .inputs
@@ -31,5 +32,10 @@ block content
             +base_radio_button('Женщина')
     .toggle
         h1.buttons-title Toggle
+        +toggle('Получать спецпредложения', 'checked')
         +toggle('Получать спецпредложения')
-        +toggle('Получать спецпредложения')
+    .like_button
+        h1.buttons-title Like button
+        .like_button_string
+        +like_button('2')
+        +like_button('12')
