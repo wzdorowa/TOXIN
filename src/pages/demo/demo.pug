@@ -8,6 +8,7 @@ include ../../elements/filter_date_dropdown/filter_date_dropdown.pug
 include ../../elements/subscription_text_field/subscription_text_field.pug
 include ../../elements/base_checkbox_button/base_checkbox_button.pug
 include ../../elements/base_radio_button/base_radio_button.pug
+include ../../elements/toggle/toggle.pug
 
 block content
     .inputs
@@ -28,3 +29,7 @@ block content
         .radio_buttons_string
             +base_radio_button('Мужчина', 'checked')
             +base_radio_button('Женщина')
+    .toggle
+        h1.buttons-title Toggle
+            +toggle('Получать спецпредложения')
+            +toggle('Получать спецпредложения')
