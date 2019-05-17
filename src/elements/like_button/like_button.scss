@@ -26,17 +26,26 @@
 .filter-like_button input[type="radio"]:checked ~ .like_button-description {
     color:#BC9CFF;
 }
-.filter-like_button input[type="radio"]:checked + .like_button-description::before {
-    content: "";
+.filter-like_button input[type="radio"]:checked ~ .like_button-description::before {
+    content: "favorite";
 
     position: absolute;
-    top: 3px;
-    left: 3px;
+    top: -4px;
+    left: 8px;
 
-    width: 14px;
-    height: 14px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 10px;
+    font-family: 'Material Icons';
+    color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+}
+.filter-like_button input[type="radio"]:not(:checked) ~ .like_button-description::before {
+    content: "favorite_border";
+
+    position: absolute;
+    top: -4px;
+    left: 8px;
+
+    font-family: 'Material Icons';
+    color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .visually-hidden:not(:focus):not(:active),
  input[type="checkbox"].visually-hidden,
