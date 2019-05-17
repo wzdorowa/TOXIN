@@ -31,7 +31,7 @@
 .filter-like_button input[type=radio]:checked ~ .like_button-description::before {
   content: "favorite";
   position: absolute;
-  top: -4px;
+  top: -3px;
   left: 8px;
   font-family: "Material Icons";
   color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -40,7 +40,7 @@
 .filter-like_button input[type=radio]:not(:checked) ~ .like_button-description::before {
   content: "favorite_border";
   position: absolute;
-  top: -4px;
+  top: -3px;
   left: 8px;
   font-family: "Material Icons";
   color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
