@@ -325,6 +325,14 @@ input[type=radio].visually-hidden {
   src: url("/Quicksand-Regular.658f173e.ttf") format("ttf");
   src: url("/Quicksand-Regular.4bf22a33.woff") format("woff");
 }
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/MaterialIcons-Regular.8ad74ea7.svg") format("svg");
+  src: url("/MaterialIcons-Regular.60b44097.ttf") format("ttf");
+  src: url("/MaterialIcons-Regular.4c3bba58.woff") format("woff");
+}
 .inputs {
   display: flex;
   flex-wrap: wrap;
