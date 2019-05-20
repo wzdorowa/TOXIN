@@ -24,7 +24,7 @@
     color:#BC9CFF;
 }
 .filter-rate_button input[type="radio"]:checked ~ .rate_button-description::before {
-    content: "favorite";
+    content: "star";
 
     position: absolute;
     top: -3px;

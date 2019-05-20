@@ -25,7 +25,7 @@
 }
 
 .filter-rate_button input[type=radio]:checked ~ .rate_button-description::before {
-  content: "favorite";
+  content: "star";
   position: absolute;
   top: -3px;
   left: 8px;
@@ -452,6 +452,13 @@ input[type=radio].visually-hidden {
   justify-content: space-between;
   max-width: 90px;
   height: 51px;
+}
+
+.rate_button {
+  display: flex;
+  justify-content: space-between;
+  max-width: 120px;
+  height: 55px;
 }
 
 /*# sourceMappingURL=/global.92c4c1a3.css.map */
