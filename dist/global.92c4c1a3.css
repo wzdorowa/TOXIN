@@ -450,8 +450,14 @@ input[type=radio].visually-hidden {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 120px;
-  height: 45px;
+  max-width: 260px;
+  height: 55px;
+}
+
+.rate_group_button {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
 }
 
 /*# sourceMappingURL=/global.92c4c1a3.css.map */
