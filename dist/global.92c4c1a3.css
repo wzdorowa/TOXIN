@@ -1,3 +1,11 @@
+.range_slider-container {
+  width: 266px;
+  height: 6px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
 .filter-rate_button {
   position: relative;
   font-family: "Montserrat";
