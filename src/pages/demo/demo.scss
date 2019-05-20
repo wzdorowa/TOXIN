@@ -79,3 +79,10 @@ height: 130px;
 
     width: 105px;
 }
+.range_slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    max-width: 266px;
+}

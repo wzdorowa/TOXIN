@@ -479,4 +479,11 @@ input[type=radio].visually-hidden {
   width: 105px;
 }
 
+.range_slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 266px;
+}
+
 /*# sourceMappingURL=/global.92c4c1a3.css.map */
