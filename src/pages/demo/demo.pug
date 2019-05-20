@@ -11,6 +11,7 @@ include ../../elements/base_radio_button/base_radio_button.pug
 include ../../elements/toggle/toggle.pug
 include ../../elements/like_button/like_button.pug
 include ../../elements/rate_button/rate_button.pug
+include ../../elements/range_slider/range_slider.pug
 
 block content
     .columns
@@ -59,4 +60,6 @@ block content
                         +rate_button('checked')
                         +rate_button('checked')
         .column
-            
+            .range_slider
+                h1.buttons-title Range slider
+                +range_slider('5000р', '10000р')
