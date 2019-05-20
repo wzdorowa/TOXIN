@@ -1,3 +1,62 @@
+.filter-rate_button {
+  position: relative;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 20px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.rate_button-indicator {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+}
+
+.filter-rate_button input[type=radio]:checked + .rate_button-indicator {
+  border: 1px solid #BC9CFF;
+}
+
+.filter-rate_button input[type=radio]:checked ~ .rate_button-description {
+  color: #BC9CFF;
+}
+
+.filter-rate_button input[type=radio]:checked ~ .rate_button-description::before {
+  content: "favorite";
+  position: absolute;
+  top: -3px;
+  left: 8px;
+  font-family: "Material Icons";
+  color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.filter-rate_button input[type=radio]:not(:checked) ~ .rate_button-description::before {
+  content: "favorite_border";
+  position: absolute;
+  top: -3px;
+  left: 8px;
+  font-family: "Material Icons";
+  color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type=checkbox].visually-hidden,
+input[type=radio].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .filter-like_button {
   position: relative;
   font-family: "Montserrat";
