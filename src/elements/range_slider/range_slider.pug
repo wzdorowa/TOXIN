@@ -1,0 +1,5 @@
+mixin range_slider(label, price1, price2)
+    div.range_slider-container
+        label= label
+        span= price1 - price2
+        input#range_slider.range_slider.visually-hidden(class='range_slider', type='text', name='range_slider')
