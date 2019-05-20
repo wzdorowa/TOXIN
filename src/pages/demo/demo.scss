@@ -57,8 +57,9 @@ height: 130px;
 }
 .rate_button {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 
     max-width: 120px;
-    height: 55px;
+    height: 45px;
 }

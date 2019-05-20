@@ -10,36 +10,28 @@
 
 .rate_button-indicator {
   position: absolute;
-  width: 40px;
-  height: 20px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 10px;
+  width: 24px;
+  height: 24px;
 }
 
-.filter-rate_button input[type=radio]:checked + .rate_button-indicator {
-  border: 1px solid #BC9CFF;
-}
-
-.filter-rate_button input[type=radio]:checked ~ .rate_button-description {
+.filter-rate_button input[type=checkbox]:checked ~ .rate_button-indicator::before {
+  content: "star";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-family: "Material Icons";
+  font-size: 24px;
   color: #BC9CFF;
 }
 
-.filter-rate_button input[type=radio]:checked ~ .rate_button-description::before {
-  content: "star";
+.filter-rate_button input[type=checkbox]:not(:checked) ~ .rate_button-indicator::before {
+  content: "star_border";
   position: absolute;
-  top: -3px;
-  left: 8px;
+  top: 0px;
+  left: 0px;
   font-family: "Material Icons";
-  color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-
-.filter-rate_button input[type=radio]:not(:checked) ~ .rate_button-description::before {
-  content: "favorite_border";
-  position: absolute;
-  top: -3px;
-  left: 8px;
-  font-family: "Material Icons";
-  color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  font-size: 24px;
+  color: #BC9CFF;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -456,9 +448,10 @@ input[type=radio].visually-hidden {
 
 .rate_button {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   max-width: 120px;
-  height: 55px;
+  height: 45px;
 }
 
 /*# sourceMappingURL=/global.92c4c1a3.css.map */
