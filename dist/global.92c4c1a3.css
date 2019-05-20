@@ -391,6 +391,17 @@ input[type=radio].visually-hidden {
   src: url("/MaterialIcons-Regular.60b44097.ttf") format("ttf");
   src: url("/MaterialIcons-Regular.4c3bba58.woff") format("woff");
 }
+.columns {
+  display: flex;
+  justify-content: space-between;
+  max-width: 950px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 .inputs {
   display: flex;
   flex-wrap: wrap;

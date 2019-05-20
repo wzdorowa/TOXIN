@@ -1,3 +1,13 @@
+.columns {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 950px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
 .inputs {
     display: flex;
     flex-wrap: wrap;
