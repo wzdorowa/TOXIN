@@ -9,12 +9,47 @@
 }
 
 .range_slider-container {
+  position: relative;
   width: 266px;
   height: 6px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 3px;
   background-image: linear-gradient(to right, #FFFFFF, 82px, #FFFFFF, 82px, #6FCF97, 170px, #6FCF97, 170px, #FFFFFF, 266px, #FFFFFF);
+}
+
+.range_slider {
+  position: absolute;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+}
+
+.range_slider-left::before {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 77px;
+  top: -5px;
+  content: "";
+  cursor: pointer;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+}
+
+.range_slider-right::before {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 162px;
+  top: -5px;
+  content: "";
+  cursor: pointer;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
 }
 
 .filter-rate_button {
