@@ -17,7 +17,7 @@
 .filter-rate_button input[type=checkbox]:checked ~ .rate_button-indicator::before {
   content: "star";
   position: absolute;
-  top: -24px;
+  top: 0px;
   left: 0px;
   font-family: "Material Icons";
   font-size: 24px;
@@ -27,7 +27,7 @@
 .filter-rate_button input[type=checkbox]:not(:checked) ~ .rate_button-indicator::before {
   content: "star_border";
   position: absolute;
-  top: -24px;
+  top: 0px;
   left: 0px;
   font-family: "Material Icons";
   font-size: 24px;
@@ -449,7 +449,7 @@ input[type=radio].visually-hidden {
 .rate_button {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 260px;
   height: 55px;
 }
@@ -457,7 +457,7 @@ input[type=radio].visually-hidden {
 .rate_group_button {
   display: flex;
   justify-content: space-between;
-  width: 120px;
+  width: 105px;
 }
 
 /*# sourceMappingURL=/global.92c4c1a3.css.map */

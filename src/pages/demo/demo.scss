@@ -58,7 +58,7 @@ height: 130px;
 .rate_button {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 
     max-width: 260px;
     height: 55px;
@@ -67,5 +67,5 @@ height: 130px;
     display: flex;
     justify-content: space-between;
 
-    width: 120px;
+    width: 105px;
 }
