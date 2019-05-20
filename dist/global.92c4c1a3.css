@@ -17,7 +17,7 @@
 .filter-rate_button input[type=checkbox]:checked ~ .rate_button-indicator::before {
   content: "star";
   position: absolute;
-  top: 0px;
+  top: -24px;
   left: 0px;
   font-family: "Material Icons";
   font-size: 24px;
@@ -27,7 +27,7 @@
 .filter-rate_button input[type=checkbox]:not(:checked) ~ .rate_button-indicator::before {
   content: "star_border";
   position: absolute;
-  top: 0px;
+  top: -24px;
   left: 0px;
   font-family: "Material Icons";
   font-size: 24px;
