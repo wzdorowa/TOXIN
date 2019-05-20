@@ -10,6 +10,7 @@ include ../../elements/base_checkbox_button/base_checkbox_button.pug
 include ../../elements/base_radio_button/base_radio_button.pug
 include ../../elements/toggle/toggle.pug
 include ../../elements/like_button/like_button.pug
+include ../../elements/rate_button/rate_button.pug
 
 block content
     .inputs
@@ -39,3 +40,13 @@ block content
         .buttons_string
             +like_button('2')
             +like_button('12', 'checked')
+    .rate_button
+        h1.buttons-title Rate button
+        .buttons_string
+            +rate_button('checked')
+            +rate_button('checked')
+            +rate_button('checked')
+            +rate_button('checked')
+            +rate_button()
+
+
