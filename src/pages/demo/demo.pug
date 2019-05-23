@@ -12,6 +12,7 @@ include ../../elements/toggle/toggle.pug
 include ../../elements/like_button/like_button.pug
 include ../../elements/rate_button/rate_button.pug
 include ../../elements/range_slider/range_slider.pug
+include ../../elements/base_button/base_button.pug
 
 block content
     .columns
@@ -63,3 +64,6 @@ block content
             .range_slider
                 h1.buttons-title Range slider
                 +range_slider('5000', '10000')
+            .base_button
+                h1.buttons-title Buttons
+                +base_button()
