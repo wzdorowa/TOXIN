@@ -453,7 +453,9 @@ input[type=radio].visually-hidden {
 
 .column {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  min-width: 260;
 }
 
 .inputs {
