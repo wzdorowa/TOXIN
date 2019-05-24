@@ -11,6 +11,14 @@
   border: none;
 }
 
+.base_button_size_small {
+  width: 99px;
+}
+
+.base_button_size_large {
+  width: 320px;
+}
+
 .range_slider-text {
   font-family: Montserrat;
   font-style: normal;
