@@ -8,8 +8,16 @@
 }
 
 .pagination_item {
+  display: inline-block;
   width: 40px;
   height: 40px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 40px;
+  text-align: center;
+  color: rgba(31, 32, 65, 0.5);
 }
 
 .pagination_description {
