@@ -90,3 +90,10 @@ height: 130px;
     max-width: 266px;
     height: 45px;
 }
+.base_button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 240px;
+}
