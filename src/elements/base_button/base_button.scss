@@ -19,7 +19,16 @@
 }
 .base_button_size_small {
     width: 99px;
+
+    border-radius: 22px;
 }
 .base_button_size_large {
     width: 320px;
+
+    border-radius: 22px;
+}
+.base_button_background {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+    color: white;
 }
