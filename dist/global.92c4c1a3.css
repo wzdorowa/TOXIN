@@ -31,6 +31,12 @@
   color: white;
 }
 
+.base_button_border {
+  border: 2px solid;
+  border-radius: 22px;
+  border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
 .range_slider-text {
   font-family: "Montserrat";
   font-style: normal;
