@@ -1,5 +1,6 @@
 .base_button-container {
-    
+    display: flex;
+    flex-wrap: wrap;
 }
 .base_button {
     font-family: "Montserrat";
