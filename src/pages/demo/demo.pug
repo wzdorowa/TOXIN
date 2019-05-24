@@ -17,7 +17,7 @@ include ../../elements/base_button/base_button.pug
 block content
     .columns
         .column
-            .inputs
+            .inputs-wrapper
                 +text_field('Text field', 'Email', 'large')
                 +dropdown('Dropdown', 'Сколько гостей', 'large', 'arrow-down')
                 +masked_text_field('Masked text field', 'ДД.ММ.ГГГГ', 'large')
@@ -26,26 +26,26 @@ block content
                 +filter_date_dropdown('Filter date dropdown', '19 авг - 23 авг', 'medium', 'arrow-down')
                 +subscription_text_field('Subscription text field', 'Email', 'medium', 'arrow')
         .column
-            .chechbox_buttons
+            .chechbox_buttons-wrapper
                 h1.buttons-title Chechbox buttons
                 +base_checkbox_button('Можно курить')
                 +base_checkbox_button('Можно с питомцами', 'checked')
                 +base_checkbox_button('Можно пригласить гостей (до 10 человек)', 'checked')
-            .radio_buttons
+            .radio_buttons-wrapper
                 h1.buttons-title Radio buttons
                 .buttons_string
                     +base_radio_button('Мужчина', 'checked')
                     +base_radio_button('Женщина')
-            .toggle
+            .toggle-wrapper
                 h1.buttons-title Toggle
                 +toggle('Получать спецпредложения', 'checked')
                 +toggle('Получать спецпредложения')
-            .like_button
+            .like_button-wrapper
                 h1.buttons-title Like button
                 .buttons_string
                     +like_button('2')
                     +like_button('12', 'checked')
-            .rate_button
+            .rate_button-wrapper
                 h1.buttons-title Rate button
                 .buttons_string
                     .rate_group_button
@@ -61,10 +61,10 @@ block content
                         +rate_button('checked')
                         +rate_button('checked')
         .column
-            .range_slider
+            .range_slider-wrapper
                 h1.buttons-title Range slider
                 +range_slider('5000', '10000')
-            .base_button
+            .base_button-wrapper
                 h1.buttons-title Buttons
                 +base_button('Click Me', 'small')
                 +base_button('Click Me', 'small')

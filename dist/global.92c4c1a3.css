@@ -25,7 +25,7 @@
 }
 
 .range_slider-text {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -484,7 +484,7 @@ input[type=radio].visually-hidden {
   min-width: 260;
 }
 
-.inputs {
+.inputs-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -492,7 +492,7 @@ input[type=radio].visually-hidden {
   height: 500px;
 }
 
-.chechbox_buttons {
+.chechbox_buttons-wrapper {
   display: flex;
   flex-wrap: wrap;
   max-width: 222px;
@@ -510,7 +510,7 @@ input[type=radio].visually-hidden {
   margin: 0;
 }
 
-.radio_buttons {
+.radio_buttons-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -523,7 +523,7 @@ input[type=radio].visually-hidden {
   justify-content: space-between;
 }
 
-.toggle {
+.toggle-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -531,7 +531,7 @@ input[type=radio].visually-hidden {
   height: 85px;
 }
 
-.like_button {
+.like_button-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -539,7 +539,7 @@ input[type=radio].visually-hidden {
   height: 51px;
 }
 
-.rate_button {
+.rate_button-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -553,7 +553,7 @@ input[type=radio].visually-hidden {
   width: 105px;
 }
 
-.range_slider {
+.range_slider-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
