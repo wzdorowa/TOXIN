@@ -679,4 +679,11 @@ input[type=radio].visually-hidden {
   height: 240px;
 }
 
+.pagination-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+
 /*# sourceMappingURL=/global.92c4c1a3.css.map */

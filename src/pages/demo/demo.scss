@@ -97,3 +97,10 @@ height: 130px;
 
     height: 240px;
 }
+.pagination-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100px;
+}
