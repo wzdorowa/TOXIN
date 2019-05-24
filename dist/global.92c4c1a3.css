@@ -469,7 +469,7 @@ input[type=radio].visually-hidden {
 .columns {
   display: flex;
   justify-content: space-between;
-  max-width: 950px;
+  max-width: 1160px;
 }
 
 .column {
