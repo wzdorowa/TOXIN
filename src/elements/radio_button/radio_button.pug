@@ -1,0 +1,6 @@
+mixin radio_button(text, checked)
+    .radio_button-container
+        label.filter-radio_button
+            input#radio_button.radio_button.visually-hidden(type='radio', name='radio_button', checked=checked || false)
+            span.radio_button-indicator
+            span.radio_button-description=text
