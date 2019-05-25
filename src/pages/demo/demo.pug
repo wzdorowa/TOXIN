@@ -1,13 +1,7 @@
 extends ../base.pug
 
 include ../../elements/base_input/base_input.pug
-include ../../elements/text_field/text_field.pug
-include ../../elements/dropdown/dropdown.pug
-include ../../elements/masked_text_field/masked_text_field.pug
-include ../../elements/date_dropdown/date_dropdown.pug
-include ../../elements/filter_date_dropdown/filter_date_dropdown.pug
-include ../../elements/subscription_text_field/subscription_text_field.pug
-include ../../elements/base_checkbox_button/base_checkbox_button.pug
+include ../../elements/checkbox_button/checkbox_button.pug
 include ../../elements/base_radio_button/base_radio_button.pug
 include ../../elements/toggle/toggle.pug
 include ../../elements/like_button/like_button.pug
@@ -30,9 +24,9 @@ block content
         .column
             .chechbox_buttons-wrapper
                 h1.buttons-title Chechbox buttons
-                +base_checkbox_button('Можно курить')
-                +base_checkbox_button('Можно с питомцами', 'checked')
-                +base_checkbox_button('Можно пригласить гостей (до 10 человек)', 'checked')
+                +checkbox_button('Можно курить')
+                +checkbox_button('Можно с питомцами', 'checked')
+                +checkbox_button('Можно пригласить гостей (до 10 человек)', 'checked')
             .radio_buttons-wrapper
                 h1.buttons-title Radio buttons
                 .buttons_string
