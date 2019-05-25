@@ -1,5 +1,6 @@
 extends ../base.pug
 
+include ../../elements/base_input/base_input.pug
 include ../../elements/text_field/text_field.pug
 include ../../elements/dropdown/dropdown.pug
 include ../../elements/masked_text_field/masked_text_field.pug
@@ -19,13 +20,13 @@ block content
     .columns
         .column
             .inputs-wrapper
-                +text_field('Text field', 'Email', 'large')
-                +dropdown('Dropdown', 'Сколько гостей', 'large', 'arrow-down')
-                +masked_text_field('Masked text field', 'ДД.ММ.ГГГГ', 'large')
-                +date_dropdown('Date dropdown', 'ДД.ММ.ГГГГ', 'small', 'arrow-down')
-                +date_dropdown('Date dropdown', '19.08.2019', 'small', 'arrow-down')
-                +filter_date_dropdown('Filter date dropdown', '19 авг - 23 авг', 'medium', 'arrow-down')
-                +subscription_text_field('Subscription text field', 'Email', 'medium', 'arrow')
+                +base_input('Text field', 'Email', 'large')
+                +base_input('Dropdown', 'Сколько гостей', 'large', 'arrow-down')
+                +base_input('Masked text field', 'ДД.ММ.ГГГГ', 'large')
+                +base_input('Date dropdown', 'ДД.ММ.ГГГГ', 'small', 'arrow-down')
+                +base_input('Date dropdown', '19.08.2019', 'small', 'arrow-down')
+                +base_input('Filter date dropdown', '19 авг - 23 авг', 'medium', 'arrow-down')
+                +base_input('Subscription text field', 'Email', 'medium', 'arrow')
         .column
             .chechbox_buttons-wrapper
                 h1.buttons-title Chechbox buttons
