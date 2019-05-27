@@ -3,8 +3,10 @@
     justify-content: space-between;
 
     max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.column {
+.columns__item {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -20,7 +22,7 @@
     height: 500px;
 
 }
-.chechbox_buttons-wrapper {
+.chechbox-buttons-wrapper {
 display: flex;
 flex-wrap: wrap;
 
@@ -40,7 +42,7 @@ height: 130px;
 
     margin: 0;
 }
-.radio_buttons-wrapper {
+.radio-buttons-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,7 +50,7 @@ height: 130px;
     max-width: 220px;
     height: 51px;
 }
-.buttons_string {
+.buttons-string {
     display: flex;
     justify-content: space-between;
 }
@@ -60,7 +62,7 @@ height: 130px;
     max-width: 260px;
     height: 85px;
 }
-.like_button-wrapper {
+.like-button-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -68,7 +70,7 @@ height: 130px;
     max-width: 90px;
     height: 51px;
 }
-.rate_button-wrapper {
+.rate-button-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -76,13 +78,13 @@ height: 130px;
     max-width: 260px;
     height: 55px;
 }
-.rate_group_button {
+.rate-group-button {
     display: flex;
     justify-content: space-between;
 
     width: 105px;
 }
-.range_slider-wrapper {
+.range-slider-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -90,7 +92,7 @@ height: 130px;
     max-width: 266px;
     height: 45px;
 }
-.base_button-wrapper {
+.base-button-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

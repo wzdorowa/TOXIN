@@ -12,7 +12,7 @@ include ../../elements/pagination/pagination.pug
 
 block content
     .columns
-        .column
+        .columns__item
             .inputs-wrapper
                 +base-input('Text field', 'Email', 'large')
                 +base-input('Dropdown', 'Сколько гостей', 'large', 'arrow-down')
@@ -21,45 +21,45 @@ block content
                 +base-input('Date dropdown', '19.08.2019', 'small', 'arrow-down')
                 +base-input('Filter date dropdown', '19 авг - 23 авг', 'medium', 'arrow-down')
                 +base-input('Subscription text field', 'Email', 'medium', 'arrow')
-        .column
-            .chechbox_buttons-wrapper
+        .columns__item
+            .chechbox-buttons-wrapper
                 h1.buttons-title Chechbox buttons
                 +checkbox-button('Можно курить')
                 +checkbox-button('Можно с питомцами', 'checked')
                 +checkbox-button('Можно пригласить гостей (до 10 человек)', 'checked')
-            .radio_buttons-wrapper
+            .radio-buttons-wrapper
                 h1.buttons-title Radio buttons
-                .buttons_string
+                .buttons-string
                     +radio-button('Мужчина', 'checked')
                     +radio-button('Женщина')
             .toggle-wrapper
                 h1.buttons-title Toggle
                 +toggle('Получать спецпредложения', 'checked')
                 +toggle('Получать спецпредложения')
-            .like_button-wrapper
+            .like-button-wrapper
                 h1.buttons-title Like button
-                .buttons_string
+                .buttons-string
                     +like-button('2')
                     +like-button('12', 'checked')
-            .rate_button-wrapper
+            .rate-button-wrapper
                 h1.buttons-title Rate button
-                .buttons_string
-                    .rate_group_button
+                .buttons-string
+                    .rate-group-button
                         +rate-button('checked')
                         +rate-button('checked')
                         +rate-button('checked')
                         +rate-button('checked')
                         +rate-button()
-                    .rate_group_button
+                    .rate-group-button
                         +rate-button('checked')
                         +rate-button('checked')
                         +rate-button('checked')
                         +rate-button('checked')
                         +rate-button('checked')
-        .column
-            .range_slider-wrapper
+        .columns__item
+            .range-slider-wrapper
                 +range-slider('Range slider', '5000', '10000')
-            .base_button-wrapper
+            .base-button-wrapper
                 h1.buttons-title Buttons
                 +base-button('Click Me', 'small', 'background')
                 +base-button('Click Me', 'small', 'border')
