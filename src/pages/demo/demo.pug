@@ -6,7 +6,7 @@ include ../../elements/radio-button/radio-button.pug
 include ../../elements/toggle/toggle.pug
 include ../../elements/like-button/like-button.pug
 include ../../elements/rate_button/rate_button.pug
-include ../../elements/range_slider/range_slider.pug
+include ../../elements/range-slider/range-slider.pug
 include ../../elements/base-button/base-button.pug
 include ../../elements/pagination/pagination.pug
 
@@ -58,8 +58,7 @@ block content
                         +rate_button('checked')
         .column
             .range_slider-wrapper
-                h1.buttons-title Range slider
-                +range_slider('5000', '10000')
+                +range-slider('Range slider', '5000', '10000')
             .base_button-wrapper
                 h1.buttons-title Buttons
                 +base-button('Click Me', 'small', 'background')

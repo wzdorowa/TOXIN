@@ -139,7 +139,23 @@
   background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
 }
 
-.range_slider-text {
+.range-slider-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.range-slider-container__description {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: var(--DarkShade);
+}
+
+.range-slider-container__text {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: normal;
@@ -149,7 +165,7 @@
   color: rgba(31, 32, 65, 0.5);
 }
 
-.range_slider-container {
+.range-slider-container__content {
   position: relative;
   width: 266px;
   height: 6px;
@@ -159,7 +175,7 @@
   background-image: linear-gradient(to right, #FFFFFF, 82px, #FFFFFF, 82px, #6FCF97, 170px, #6FCF97, 170px, #FFFFFF, 266px, #FFFFFF);
 }
 
-.range_slider {
+.range-slider-container__button {
   position: absolute;
   border: none;
   outline: none;
@@ -167,7 +183,7 @@
   padding: 0;
 }
 
-.range_slider-left::before {
+.range-slider-container__button-left::before {
   position: absolute;
   width: 12px;
   height: 12px;
@@ -180,7 +196,7 @@
   border-radius: 10px;
 }
 
-.range_slider-right::before {
+.range-slider-container__button-right::before {
   position: absolute;
   width: 12px;
   height: 12px;
