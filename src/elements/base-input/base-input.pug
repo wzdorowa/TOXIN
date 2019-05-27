@@ -1,0 +1,5 @@
+mixin base-input(label, placeholder, size, arrow)
+    div.input-container(class='input-container_'+arrow || false, 
+    class='input-container_size-'+size || 'large')
+        label.input-container__description= label
+        input.input-container__content(type='text', name='input-container__content', placeholder= placeholder)
