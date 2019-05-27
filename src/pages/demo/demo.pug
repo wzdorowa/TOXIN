@@ -5,7 +5,7 @@ include ../../elements/checkbox-button/checkbox-button.pug
 include ../../elements/radio-button/radio-button.pug
 include ../../elements/toggle/toggle.pug
 include ../../elements/like-button/like-button.pug
-include ../../elements/rate_button/rate_button.pug
+include ../../elements/rate-button/rate-button.pug
 include ../../elements/range-slider/range-slider.pug
 include ../../elements/base-button/base-button.pug
 include ../../elements/pagination/pagination.pug
@@ -45,17 +45,17 @@ block content
                 h1.buttons-title Rate button
                 .buttons_string
                     .rate_group_button
-                        +rate_button('checked')
-                        +rate_button('checked')
-                        +rate_button('checked')
-                        +rate_button('checked')
-                        +rate_button()
+                        +rate-button('checked')
+                        +rate-button('checked')
+                        +rate-button('checked')
+                        +rate-button('checked')
+                        +rate-button()
                     .rate_group_button
-                        +rate_button('checked')
-                        +rate_button('checked')
-                        +rate_button('checked')
-                        +rate_button('checked')
-                        +rate_button('checked')
+                        +rate-button('checked')
+                        +rate-button('checked')
+                        +rate-button('checked')
+                        +rate-button('checked')
+                        +rate-button('checked')
         .column
             .range_slider-wrapper
                 +range-slider('Range slider', '5000', '10000')

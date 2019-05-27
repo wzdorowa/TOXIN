@@ -1,4 +1,4 @@
-.filter-rate_button {
+.rate-button-container__filter {
     position: relative;
 
     font-family: 'Montserrat';
@@ -9,13 +9,13 @@
 
     color: rgba(31, 32, 65, 0.5);
 }
-.rate_button-indicator {
+.rate-button-container__indicator {
     position: absolute;
 
     width: 24px;
     height: 24px;
 }
-.filter-rate_button input[type="checkbox"]:checked ~ .rate_button-indicator::before {
+.rate-button-container__filter input[type="checkbox"]:checked ~ .rate-button-container__indicator::before {
     content: "star";
 
     position: absolute;
@@ -27,7 +27,7 @@
     color: #BC9CFF;
 
 }
-.filter-rate_button input[type="checkbox"]:not(:checked) ~ .rate_button-indicator::before {
+.rate-button-container__filter input[type="checkbox"]:not(:checked) ~ .rate-button-container__indicator::before {
     content: "star_border";
 
     position: absolute;
