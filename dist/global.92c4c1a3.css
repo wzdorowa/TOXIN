@@ -323,7 +323,7 @@ input[type=radio].visually-hidden {
   overflow: hidden;
 }
 
-.filter-toogle {
+.toggle-container__filter {
   position: relative;
   font-family: "Montserrat";
   font-style: normal;
@@ -333,7 +333,7 @@ input[type=radio].visually-hidden {
   color: rgba(31, 32, 65, 0.75);
 }
 
-.toggle-indicator {
+.toggle-container__indicator {
   position: absolute;
   width: 40px;
   height: 20px;
@@ -341,15 +341,15 @@ input[type=radio].visually-hidden {
   border-radius: 10px;
 }
 
-.toggle-description {
+.toggle-container__description {
   padding-left: 50px;
 }
 
-.filter-toogle input[type=radio]:checked + .toggle-indicator {
+.toggle-container__filter input[type=radio]:checked + .toggle-container__indicator {
   border: 1px solid #BC9CFF;
 }
 
-.filter-toogle input[type=radio]:checked + .toggle-indicator::before {
+.toggle-container__filter input[type=radio]:checked + .toggle-container__indicator::before {
   content: "";
   position: absolute;
   top: 3px;
@@ -360,7 +360,7 @@ input[type=radio].visually-hidden {
   border-radius: 10px;
 }
 
-.filter-toogle input[type=radio]:not(:checked) + .toggle-indicator::before {
+.toggle-container__filter input[type=radio]:not(:checked) + .toggle-container__indicator::before {
   content: "";
   position: absolute;
   top: 3px;
