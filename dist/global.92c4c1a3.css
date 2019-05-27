@@ -418,7 +418,7 @@ input[type=radio].visually-hidden {
   overflow: hidden;
 }
 
-.filter-checkbox {
+.checkbox-button-container__filter {
   position: relative;
   display: flex;
   font-family: "Montserrat";
@@ -429,7 +429,7 @@ input[type=radio].visually-hidden {
   color: rgba(31, 32, 65, 0.5);
 }
 
-.checkbox-indicator {
+.checkbox-button-container__indicator {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -437,15 +437,15 @@ input[type=radio].visually-hidden {
   border-radius: 4px;
 }
 
-.checkbox-description {
+.checkbox-button-container__description {
   padding-left: 30px;
 }
 
-.filter-checkbox input[type=checkbox]:checked + .checkbox-indicator {
+.checkbox-button-container__filter input[type=checkbox]:checked + .checkbox-button-container__indicator {
   border: 1px solid #BC9CFF;
 }
 
-.filter-checkbox input[type=checkbox]:checked + .checkbox-indicator::before {
+.checkbox-button-container__filter input[type=checkbox]:checked + .checkbox-button-container__indicator::before {
   content: "";
   position: absolute;
   top: 3px;

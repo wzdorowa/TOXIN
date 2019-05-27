@@ -1,7 +1,7 @@
 extends ../base.pug
 
 include ../../elements/base-input/base-input.pug
-include ../../elements/checkbox_button/checkbox_button.pug
+include ../../elements/checkbox-button/checkbox-button.pug
 include ../../elements/radio_button/radio_button.pug
 include ../../elements/toggle/toggle.pug
 include ../../elements/like_button/like_button.pug
@@ -24,9 +24,9 @@ block content
         .column
             .chechbox_buttons-wrapper
                 h1.buttons-title Chechbox buttons
-                +checkbox_button('Можно курить')
-                +checkbox_button('Можно с питомцами', 'checked')
-                +checkbox_button('Можно пригласить гостей (до 10 человек)', 'checked')
+                +checkbox-button('Можно курить')
+                +checkbox-button('Можно с питомцами', 'checked')
+                +checkbox-button('Можно пригласить гостей (до 10 человек)', 'checked')
             .radio_buttons-wrapper
                 h1.buttons-title Radio buttons
                 .buttons_string
