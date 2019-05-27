@@ -64,12 +64,12 @@
   color: rgba(31, 32, 65, 0.75);
 }
 
-.base_button-container {
+.button-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.base_button {
+.button-container__content {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: bold;
@@ -82,27 +82,32 @@
   border: none;
 }
 
-.base_button_size_small {
+.button-container__content_small {
   width: 99px;
   border-radius: 22px;
 }
 
-.base_button_size_large {
+.button-container__content_large {
   width: 320px;
   border-radius: 22px;
 }
 
-.base_button_decor_background {
+.button-container__content_background {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   color: white;
 }
 
-.base_button_decor_no-decor:hover {
+.button-container__content_background:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.button-container__content_no-decor:hover {
   color: rgba(31, 32, 65, 0.5);
   cursor: pointer;
 }
 
-.base_button_decor_border {
+.button-container__content_border {
   position: relative;
   border: 2px solid transparent;
   border-radius: 22px;
@@ -110,7 +115,7 @@
   padding: 10px;
 }
 
-.base_button_decor_border::before {
+.button-container__content_border::before {
   position: absolute;
   top: -2px;
   bottom: -2px;
@@ -122,16 +127,11 @@
   border-radius: 22px;
 }
 
-.base_button_decor_background:hover {
-  opacity: 0.5;
+.button-container__content_border:hover {
   cursor: pointer;
 }
 
-.base_button_decor_border:hover {
-  cursor: pointer;
-}
-
-.base_button_decor_border:hover::before {
+.button-container__content_border:hover::before {
   background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
 }
 
