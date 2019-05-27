@@ -1,4 +1,4 @@
-.filter-like_button {
+.like-button-container__filter {
     position: relative;
 
     font-family: 'Montserrat';
@@ -9,7 +9,7 @@
 
     color: rgba(31, 32, 65, 0.5);
 }
-.like_button-indicator {
+.like-button-container__indicator {
     position: absolute;
 
     width: 40px;
@@ -17,16 +17,16 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 10px;
 }
-.like_button-description {
+.like-button-container__description {
     padding-left: 25px;
 }
-.filter-like_button input[type="radio"]:checked + .like_button-indicator {
+.like-button-container__filter input[type="radio"]:checked + .like-button-container__indicator {
     border: 1px solid #BC9CFF;
 }
-.filter-like_button input[type="radio"]:checked ~ .like_button-description {
+.like-button-container__filter input[type="radio"]:checked ~ .like-button-container__description {
     color:#BC9CFF;
 }
-.filter-like_button input[type="radio"]:checked ~ .like_button-description::before {
+.like-button-container__filter input[type="radio"]:checked ~ .like-button-container__description::before {
     content: "favorite";
 
     position: absolute;
@@ -37,7 +37,7 @@
     color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
 }
-.filter-like_button input[type="radio"]:not(:checked) ~ .like_button-description::before {
+.like-button-container__filter input[type="radio"]:not(:checked) ~ .like-button-container__description::before {
     content: "favorite_border";
 
     position: absolute;

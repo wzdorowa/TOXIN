@@ -4,7 +4,7 @@ include ../../elements/base-input/base-input.pug
 include ../../elements/checkbox-button/checkbox-button.pug
 include ../../elements/radio_button/radio_button.pug
 include ../../elements/toggle/toggle.pug
-include ../../elements/like_button/like_button.pug
+include ../../elements/like-button/like-button.pug
 include ../../elements/rate_button/rate_button.pug
 include ../../elements/range_slider/range_slider.pug
 include ../../elements/base-button/base-button.pug
@@ -39,8 +39,8 @@ block content
             .like_button-wrapper
                 h1.buttons-title Like button
                 .buttons_string
-                    +like_button('2')
-                    +like_button('12', 'checked')
+                    +like-button('2')
+                    +like-button('12', 'checked')
             .rate_button-wrapper
                 h1.buttons-title Rate button
                 .buttons_string
