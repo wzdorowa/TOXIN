@@ -1,5 +1,6 @@
 mixin pagination(text)
-    ul.pagination_list
-        each val, index in ['1', '2', '3', '...', '15', '']
-            li.pagination_item= val
-    span.pagination_description=text
+    .pagination-container
+        ul.pagination-container__list
+            each val, index in ['1', '2', '3', '...', '15', '']
+                li.pagination-container__item= val
+        span.pagination-container__description=text
