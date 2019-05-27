@@ -1,4 +1,4 @@
-.filter-radio_button {
+.radio-button-container__filter {
     position: relative;
 
     font-family: 'Montserrat';
@@ -9,7 +9,7 @@
 
     color: rgba(31, 32, 65, 0.5);
 }
-.radio_button-indicator {
+.radio-button-container__indicator {
     position: absolute;
 
     width: 20px;
@@ -17,13 +17,13 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 10px;
 }
-.radio_button-description {
+.radio-button-container__description {
     padding-left: 30px;
 }
-.filter-radio_button input[type="radio"]:checked + .radio_button-indicator {
+.radio-button-container__filter input[type="radio"]:checked + .radio-button-container__indicator {
     border: 1px solid #BC9CFF;
 }
-.filter-radio_button input[type="radio"]:checked + .radio_button-indicator::before {
+.radio-button-container__filter input[type="radio"]:checked + .radio-button-container__indicator::before {
     content: "";
 
     position: absolute;

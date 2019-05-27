@@ -2,7 +2,7 @@ extends ../base.pug
 
 include ../../elements/base-input/base-input.pug
 include ../../elements/checkbox-button/checkbox-button.pug
-include ../../elements/radio_button/radio_button.pug
+include ../../elements/radio-button/radio-button.pug
 include ../../elements/toggle/toggle.pug
 include ../../elements/like-button/like-button.pug
 include ../../elements/rate_button/rate_button.pug
@@ -30,8 +30,8 @@ block content
             .radio_buttons-wrapper
                 h1.buttons-title Radio buttons
                 .buttons_string
-                    +radio_button('Мужчина', 'checked')
-                    +radio_button('Женщина')
+                    +radio-button('Мужчина', 'checked')
+                    +radio-button('Женщина')
             .toggle-wrapper
                 h1.buttons-title Toggle
                 +toggle('Получать спецпредложения', 'checked')
