@@ -1,9 +1,9 @@
-include ../dropdown-string/dropdown-string.pug
+include ../dropdown-row/dropdown-row.pug
 
-mixin dropdown ()
+mixin dropdown(placeholder)
     .dropdown-container
-        +base-input('dropdown', '2 спальни, 2 кровати...', 'medium', 'arrow-down', 'top', '')
-    .dropdown-strings
-        +dropdown-string('Спальня', '2')
-        +dropdown-string('Кровати', '2')
-        +dropdown-string('Ванные комнаты', '0')
+        +base-input('dropdown', placeholder, 'medium', 'arrow-down', 'top', '')
+    .dropdown-rows
+        +dropdown-row('Взрослые', '0')
+        +dropdown-row('Дети', '0')
+        +dropdown-row('Младенцы', '0')
