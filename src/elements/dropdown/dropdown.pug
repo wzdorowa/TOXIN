@@ -1,3 +1,7 @@
+include ../dropdown-string/dropdown-string.pug
+
 mixin dropdown ()
     .dropdown-container
         +base-input('dropdown', '2 спальни, 2 кровати...', 'medium', 'arrow-down', 'top', '')
+    .dropdown-strings
+        +dropdown-string('Спальня', '2')
