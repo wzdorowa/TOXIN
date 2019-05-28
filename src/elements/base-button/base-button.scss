@@ -13,6 +13,8 @@
 
     height: 44px;
 
+    padding: 0;
+
     color: #BC9CFF;
     background: white;
     border: none;
@@ -36,7 +38,7 @@
     opacity: 0.5;
     cursor: pointer;
 }
-.button-container__content_decor-no-decor:hover {
+.button-container__content_decor-noDecor:hover {
     color: rgba(31, 32, 65, 0.5);
     cursor: pointer;
 }
