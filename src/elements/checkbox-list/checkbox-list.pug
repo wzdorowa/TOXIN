@@ -1,4 +1,7 @@
-mixin checkbox-list()
+mixin checkbox-list(text)
+    .chechbox-list-title
+        span.chechbox-list-title__description= text
+        span.chechbox-list-title__indicator
     .checkbox-list-container
         +checkbox-button('Завтрак')
         +checkbox-button('Письменный стол', 'checked')
