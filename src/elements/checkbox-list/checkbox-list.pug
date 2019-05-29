@@ -1,0 +1,7 @@
+mixin checkbox-list(text, checked)
+    .checkbox-list-container
+        label.checkbox-list-container__filter
+            input.checkbox-list-container__content.visually-hidden(type='checkbox',
+             name='checkbox-list-container__content', checked=checked || false)
+            span.checkbox-list-container__indicator
+            span.checkbox-list-container__description=text
