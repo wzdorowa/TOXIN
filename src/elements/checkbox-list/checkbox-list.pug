@@ -1,7 +1,10 @@
-mixin checkbox-list(text, checked)
+mixin checkbox-list()
     .checkbox-list-container
-        label.checkbox-list-container__filter
-            input.checkbox-list-container__content.visually-hidden(type='checkbox',
-             name='checkbox-list-container__content', checked=checked || false)
-            span.checkbox-list-container__indicator
-            span.checkbox-list-container__description=text
+        +checkbox-button('Завтрак')
+        +checkbox-button('Письменный стол', 'checked')
+        +checkbox-button('Стул для кормления', 'checked')
+        +checkbox-button('Кроватка', 'checked')
+        +checkbox-button('Телевизор')
+        +checkbox-button('Шампунь')
+        +checkbox-button('Телевизор')
+        +checkbox-button('Шампунь')
