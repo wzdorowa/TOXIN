@@ -24,6 +24,12 @@
     padding-left: 30px;
 }
 .checkbox-button-container__description {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+
     padding-left: 30px;
 }
 .checkbox-button-container__filter input[type="checkbox"]:checked + .checkbox-button-container__indicator {

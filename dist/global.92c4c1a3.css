@@ -560,6 +560,11 @@ input[type=radio].visually-hidden {
 }
 
 .checkbox-button-container__description {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
   padding-left: 30px;
 }
 
@@ -830,7 +835,11 @@ input[type=radio].visually-hidden {
 }
 
 .rich-checkbox-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 266px;
+  height: 145px;
 }
 
 /*# sourceMappingURL=/global.92c4c1a3.css.map */
