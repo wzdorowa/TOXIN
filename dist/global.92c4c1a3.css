@@ -533,9 +533,7 @@ input[type=radio].visually-hidden {
   overflow: hidden;
 }
 
-.checkbox-button-container__filter {
-  position: relative;
-  display: flex;
+.checkbox-button-container {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: normal;
@@ -544,12 +542,21 @@ input[type=radio].visually-hidden {
   color: rgba(31, 32, 65, 0.5);
 }
 
+.checkbox-button-container__filter {
+  position: relative;
+  display: flex;
+}
+
 .checkbox-button-container__indicator {
   position: absolute;
   width: 20px;
   height: 20px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
+}
+
+.checkbox-button-container__value {
+  padding-left: 30px;
 }
 
 .checkbox-button-container__description {

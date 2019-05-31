@@ -1,7 +1,9 @@
-mixin checkbox-button(text, checked)
+mixin checkbox-button(value, checked, description)
     .checkbox-button-container
         label.checkbox-button-container__filter
             input.checkbox-button-container__content.visually-hidden(type='checkbox',
              name='checkbox-button-container__content', checked=checked || false)
             span.checkbox-button-container__indicator
-            span.checkbox-button-container__description=text
+            span.checkbox-button-container__value=value
+        .checkbox-button-container__description= description
+            | много букав
