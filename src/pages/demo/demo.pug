@@ -76,5 +76,8 @@ block content
                 +dropdown('Сколько гостей', 'large')
     .columns
         .columns__item
-            .checkbox-list
+            .expandable-checkbox-list
                 +checkbox-list('Expandable checkbox list')
+        .columns__item
+            .rich-checkbox-buttons
+                +checkbox-button('Широкий коридор', '', 'bold', 'Ширина коридоров в номере не менее 91 см.')
