@@ -11,6 +11,7 @@ include ../../elements/base-button/base-button.pug
 include ../../elements/pagination/pagination.pug
 include ../../elements/dropdown/dropdown.pug
 include ../../elements/checkbox-list/checkbox-list.pug
+include ../../elements/bullet-list/bullet-list.pug
 
 block content
     .columns
@@ -83,3 +84,6 @@ block content
                 h1.buttons-title Rich checkbox buttons
                 +checkbox-button('Широкий коридор', '', 'bold', 'Ширина коридоров в номере не менее 91 см.')
                 +checkbox-button('Помощник для инвалидов', '', 'bold', 'На 1 этаже вас встретит специалист и проводит до номера.')
+        .columns__item
+            .bullet-list-wrapper
+                +bullet-list('Нельзя с питомцами')
