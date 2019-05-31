@@ -864,4 +864,12 @@ input[type=radio].visually-hidden {
   height: 145px;
 }
 
+.bullet-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 291px;
+  height: 147px;
+}
+
 /*# sourceMappingURL=/global.92c4c1a3.css.map */
