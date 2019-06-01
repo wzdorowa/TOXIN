@@ -1,6 +1,18 @@
+.advantages-container {
+  position: relative;
+}
+
 .advantages-container__icon {
   width: 48px;
   height: 48px;
+}
+
+.advantages-container__icon::before {
+  content: "mood";
+  position: absolute;
+  font-family: "Material Icons";
+  font-size: 48px;
+  color: #BC9CFF;
 }
 
 .advantages-container__title {
