@@ -1,6 +1,9 @@
 .advantages-container {
     position: relative;
     display: flex;
+    justify-content: space-between;
+
+    width: 253px;
 }
 .advantages-container__icon {
     width: 48px;
