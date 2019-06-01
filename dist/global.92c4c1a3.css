@@ -928,4 +928,11 @@ input[type=radio].visually-hidden {
   height: 147px;
 }
 
+.advantages-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 155px;
+}
+
 /*# sourceMappingURL=/global.92c4c1a3.css.map */
