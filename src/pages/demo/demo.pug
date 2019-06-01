@@ -12,6 +12,7 @@ include ../../elements/pagination/pagination.pug
 include ../../elements/dropdown/dropdown.pug
 include ../../elements/checkbox-list/checkbox-list.pug
 include ../../elements/bullet-list/bullet-list.pug
+include ../../elements/advantages/advantages.pug
 
 block content
     .columns
@@ -90,3 +91,7 @@ block content
                 +bullet-list('Нельзя с питомцами')
                 +bullet-list('Без вечеринок и мероприятий')
                 +bullet-list('Время прибытия - после 13:00, а выезд до 12:00')
+    .columns
+        .columns__item
+            .advantages-wrapper
+                +advantages()
