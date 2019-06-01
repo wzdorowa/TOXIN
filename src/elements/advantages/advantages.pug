@@ -1,6 +1,6 @@
-mixin advantages(title, value)
+mixin advantages(title, value, nameIcon)
     .advantages-container
-        .advantages-container__icon
+        .advantages-container__icon(class='advantages-container__icon-'+nameIcon || false)
         .advantages-container__content
             h1.advantages-container__title= title
             span.advantages-container__value= value
