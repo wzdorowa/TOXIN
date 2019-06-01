@@ -3,13 +3,20 @@
     display: flex;
     justify-content: space-between;
 
-    width: 253px;
+    width: 280px;
+}
+.advantages-container_line {
+    height: 65px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+}
+.advantages-container__content {
+    width: 223px;
 }
 .advantages-container__icon {
     width: 48px;
     height: 48px;
 }
-.advantages-container__icon-mood::before {
+.advantages-container__icon_mood::before {
     content: "mood";
 
     position: absolute;
@@ -18,7 +25,7 @@
     font-size: 48px;
     color: #BC9CFF;
 }
-.advantages-container__icon-locationCity::before {
+.advantages-container__icon_locationCity::before {
     content: "location_city";
 
     position: absolute;
