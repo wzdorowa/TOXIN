@@ -1,5 +1,5 @@
-mixin advantages()
+mixin advantages(title, value)
     .advantages-container
         span.advantages-container__icon
-        h1.advantages-container__title
-        span.advantages-container__value
+        h1.advantages-container__title= title
+        span.advantages-container__value= value
