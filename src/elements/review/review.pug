@@ -1,0 +1,9 @@
+include ../advantages/advantages.pug
+include ../like-button/like-button.pug
+
+mixin review(text)
+    .review-container
+        +advantages('Мурад Сафаров', '5 дней назад', 'userIcon')
+        .review-container__content
+            +like-button('12', 'checked')
+            p.review-container__paragraph= text
