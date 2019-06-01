@@ -34,6 +34,14 @@
     font-size: 48px;
     color: #BC9CFF;
 }
+.advantages-container__icon_userIcon::before {
+    content: url(/src/elements/advantages/images/userIcon.png);
+
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+}
 .advantages-container__title {
     font-family: 'Montserrat';
     font-style: normal;
