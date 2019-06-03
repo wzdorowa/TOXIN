@@ -14,6 +14,7 @@ include ../../elements/checkbox-list/checkbox-list.pug
 include ../../elements/bullet-list/bullet-list.pug
 include ../../elements/advantages/advantages.pug
 include ../../elements/review/review.pug
+include ../../components/form-search-room/form-search-room.pug
 
 block content
     .columns
@@ -100,3 +101,7 @@ block content
         .columns__item
             .review-wrapper
                 +review('Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+    .columns
+        .columns__item
+            .search-room-wrapper
+                +searchRoom('Найдем номера под ваши пожелания')
