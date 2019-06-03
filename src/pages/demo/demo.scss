@@ -7,6 +7,10 @@
     margin-right: auto;
     margin-top: 50px;
 }
+.columns-content-wrapper {
+    width: 100%;
+    background-color: rgba(31, 32, 65, 0.05);
+}
 .columns__item {
     display: flex;
     flex-wrap: wrap;
