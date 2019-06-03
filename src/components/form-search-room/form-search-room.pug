@@ -3,4 +3,4 @@ include ../elements/base-input/base-input.pug
 mixin searchRoom(text)
     .searchRoom-container
         span.searchRoom-container__title= text
-        +base-input('Прибытие')
+        +base-input('Прибытие', 'ДД.ММ.ГГГГ', 'small', 'arrow-down', 'top', 'bottom')
