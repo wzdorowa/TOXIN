@@ -35,12 +35,14 @@
     color: #BC9CFF;
 }
 .advantages-container__icon_userIcon::before {
-    content: url();
+    content: "";
 
     position: absolute;
 
     width: 48px;
     height: 48px;
+    background-image: url(./images/userIcon.png);
+    
 }
 .advantages-container__title {
     font-family: 'Montserrat';
