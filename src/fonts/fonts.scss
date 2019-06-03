@@ -1,8 +1,18 @@
 @font-face {
-    font-family: "Montserrat";
-    src: url('../fonts/Montserrat/Montserrat-Regular.svg') format('svg');
-    src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('ttf');
-    src: url('../fonts/Montserrat/Montserrat-Regular.woff') format('woff');
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Montserrat/Regular/Montserrat-Regular.svg') format('svg');
+    src: url('../fonts/Montserrat/Regular/Montserrat-Regular.ttf') format('ttf');
+    src: url('../fonts/Montserrat/Regular/Montserrat-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Montserrat/Bold/Montserrat-Bold.svg') format('svg');
+    src: url('../fonts/Montserrat/Bold/Montserrat-Bold.ttf') format('ttf');
+    src: url('../fonts/Montserrat/Bold/Montserrat-Bold.woff') format('woff');
 }
 @font-face {
     font-family: 'Quicksand';
