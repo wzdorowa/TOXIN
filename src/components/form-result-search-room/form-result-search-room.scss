@@ -97,6 +97,7 @@
     padding: 0;
 }
 .resultSearchRoom-container__count-item {
+    position: relative;
     max-width: 214px;
 }
 .resultSearchRoom-container__total {
@@ -122,4 +123,24 @@
     width: 180px;
     height: 18px;
     border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
+}
+.resultSearchRoom-container__count-item-sign::before {
+    position: absolute;
+    content: 'i';
+    width: 20px;
+    height: 20px;
+    top:-2px;
+    right: -25px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 10px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 18px;
+
+    text-align: center;
+
+    color: rgba(31, 32, 65, 0.25);
 }
