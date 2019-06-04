@@ -12,4 +12,24 @@ mixin resultSearchRoom(number, text, cost)
         +base-input('Прибытие', 'ДД.ММ.ГГГГ', 'small', 'arrow-down', 'top', 'bottom')
         +base-input('Выезд', 'ДД.ММ.ГГГГ', 'small', 'arrow-down', 'top', 'bottom')
         +base-input('Гости', 'Сколько гостей', 'large', 'arrow-down', 'top', 'bottom')
+        ul.resultSearchRoom-container__count
+            li.resultSearchRoom-container__count-item 
+                | 9 990&#x20bd
+                | x 4 суток
+            li.resultSearchRoom-container__count-item 
+                | 39 960&#x20bd
+        ul.resultSearchRoom-container__count
+            li.resultSearchRoom-container__count-item 
+                | Сбор за услуги: скидка 2 179&#x20bd
+            li.resultSearchRoom-container__count-item 
+                | 0&#x20bd
+        ul.resultSearchRoom-container__count
+            li.resultSearchRoom-container__count-item 
+                | Сбор за дополнительные услуги
+            li.resultSearchRoom-container__count-item 
+                | 300&#x20bd
+        ul.resultSearchRoom-container__total
+            li.resultSearchRoom-container__total-item
+            li.resultSearchRoom-container__total-item
+            li.resultSearchRoom-container__total-item
         +base-button('Забронировать', 'large', 'background')
