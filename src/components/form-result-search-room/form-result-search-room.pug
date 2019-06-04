@@ -1,12 +1,15 @@
 mixin resultSearchRoom(number, text, cost)
     .resultSearchRoom-container
-        .resultSearchRoom-container__specification
-            span.resultSearchRoom-container__number= number
-            span.resultSearchRoom-container__kind= text
-        .resultSearchRoom-container__cost
-            span.resultSearchRoom-container__cost-room= cost
-            | &#x20bd
-            | в сутки
+        .resultSearchRoom-container__description
+            .resultSearchRoom-container__specification
+                span.resultSearchRoom-container__sign-number
+                | №
+                span.resultSearchRoom-container__number= number
+                span.resultSearchRoom-container__kind= text
+            .resultSearchRoom-container__cost
+                span.resultSearchRoom-container__cost-room= cost
+                | &#x20bd
+                | в сутки
         +base-input('Прибытие', 'ДД.ММ.ГГГГ', 'small', 'arrow-down', 'top', 'bottom')
         +base-input('Выезд', 'ДД.ММ.ГГГГ', 'small', 'arrow-down', 'top', 'bottom')
         +base-input('Гости', 'Сколько гостей', 'large', 'arrow-down', 'top', 'bottom')

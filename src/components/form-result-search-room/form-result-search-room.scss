@@ -16,3 +16,30 @@
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
+.resultSearchRoom-container__description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.resultSearchRoom-container__number {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #1F2041;
+
+    padding-right: 5px;
+}
+.resultSearchRoom-container__kind {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+
+    text-transform: uppercase;
+
+    color: #BC9CFF;
+}
