@@ -21,7 +21,7 @@
     justify-content: space-between;
     width: 100%;
 }
-.resultSearchRoom-container__number {
+.resultSearchRoom-container__sign-number {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
@@ -30,6 +30,16 @@
 
     color: #1F2041;
 
+    padding-right: 5px;
+}
+.resultSearchRoom-container__number {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+
+    color: #1F2041;
     padding-right: 5px;
 }
 .resultSearchRoom-container__kind {
@@ -42,4 +52,22 @@
     text-transform: uppercase;
 
     color: #BC9CFF;
+}
+.resultSearchRoom-container__cost-room {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 30px;
+
+    color: rgba(31, 32, 65, 0.5);
+}
+.resultSearchRoom-container__cost-room-description {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+
+    color: rgba(31, 32, 65, 0.5);
 }
