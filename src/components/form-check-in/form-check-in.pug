@@ -1,15 +1,18 @@
 mixin checkIn(text)
     .checkIn-container
         span.checkIn-container__title= text
-        +base-input('', 'Имя', 'large', '', 'top', 'bottom')
-        +base-input('', 'Фамилия', 'large', '', 'top', 'bottom')
-        .checkIn-container__buttons
-            +radio-button('Мужчина', 'checked')
-            +radio-button('Женщина')
+        .checkIn-container__user-data
+            +base-input('', 'Имя', 'large', '', 'top', 'bottom')
+            +base-input('', 'Фамилия', 'large', '', 'top', 'bottom')
+            .checkIn-container__buttons
+                +radio-button('Мужчина', 'checked')
+                +radio-button('Женщина')
         +base-input('Дата рождения', 'ДД.ММ.ГГГГ', 'large', '', 'top', 'bottom')
-        +base-input('Данные для входа в сервис', 'Email', 'large', '', 'top', 'bottom')
-        +base-input('', 'Пароль', 'large', '', 'top', 'bottom')
-        +toggle('Получать спецпредложения')
+        .checkIn-container__login-details
+            +base-input('Данные для входа в сервис', 'Email', 'large', '', 'top', 'bottom')
+            +base-input('', 'Пароль', 'large', '', 'top', 'bottom')
+            +toggle('Получать спецпредложения')
         +base-button('Зарегистрироваться', 'large', 'background')
-        span Уже есть аккаунт на Toxin
-        +base-button('Войти', 'small', 'border')
+        .checkIn-container__have-an-account
+            span Уже есть аккаунт на Toxin
+            +base-button('Войти', 'small', 'border')

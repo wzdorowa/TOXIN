@@ -31,3 +31,17 @@
 
     width: 217px;
 }
+.checkIn-container__user-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 130px;
+}
+.checkIn-container__login-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    height: 152px;
+}
