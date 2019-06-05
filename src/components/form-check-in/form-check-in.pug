@@ -1,0 +1,10 @@
+mixin checkIn(text)
+    .checkIn-container
+        span.checkIn-container__title= text
+        +base-input('', 'Имя', 'large', '', 'top', 'bottom')
+        +base-input('', 'Фамилия', 'large', '', 'top', 'bottom')
+        .checkIn-container__buttons
+            +radio-button('Мужчина', 'checked')
+            +radio-button('Женщина')
+        +base-input('Гости', 'Сколько гостей', 'large', 'arrow-down', 'top', 'bottom')
+        +base-button('Подобрать номер', 'large', 'background')
