@@ -16,6 +16,7 @@ include ../../elements/advantages/advantages.pug
 include ../../elements/review/review.pug
 include ../../components/form-search-room/form-search-room.pug
 include ../../components/form-result-search-room/form-result-search-room.pug
+include ../../components/form-check-in/form-check-in.pug
 
 block content
     .columns
@@ -110,3 +111,7 @@ block content
             .columns__item
                 .result-search-room-wrapper
                     +resultSearchRoom('888', 'люкс', '9 990')
+        .columns
+            .columns__item
+                .check-in-wrapper
+                    +checkIn('Регистрация аккаунта')
