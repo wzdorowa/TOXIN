@@ -8,8 +8,10 @@
     margin-top: 50px;
 }
 .columns-content-wrapper {
+    position: relative;
     width: 100%;
     background-color: rgba(31, 32, 65, 0.05);
+    z-index: -3;
 }
 .columns__item {
     display: flex;
