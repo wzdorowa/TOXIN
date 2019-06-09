@@ -1,5 +1,8 @@
 mixin numberCard(number, text, cost, amount, border)
     .numberCard-container
+        input.switch-slider(type="radio", name="point-slider", id="slide1" checked)
+        input.switch-slider(type="radio", name="point-slider", id="slide2")
+        input.switch-slider(type="radio", name="point-slider", id="slide3")
         .numberCard-container__content
             img.numberCard-container__img(src="../../components/number-card/images/image.png", alt="")
         .numberCard-container__description
