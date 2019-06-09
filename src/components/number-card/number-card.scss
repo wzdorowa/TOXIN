@@ -197,9 +197,9 @@
     height: 8px;
     border-radius: 50%;
 }
-#slide1:checked ~ .numberCard-container__controls .numberCard-container__switch-btn:nth-of-type(1),
-#slide2:checked ~ .numberCard-container__controls .numberCard-container__switch-btn:nth-of-type(2),
-#slide3:checked ~ .numberCard-container__controls .numberCard-container__switch-btn:nth-of-type(3),
-#slide4:checked ~ .numberCard-container__controls .numberCard-container__switch-btn:nth-of-type(4) {
+#numberCard-1:checked ~ .numberCard-container__controls .numberCard-container__switch-btn:nth-of-type(1),
+#numberCard-2:checked ~ .numberCard-container__controls .numberCard-container__switch-btn:nth-of-type(2),
+#numberCard-3:checked ~ .numberCard-container__controls .numberCard-container__switch-btn:nth-of-type(3),
+#numberCard-4:checked ~ .numberCard-container__controls .numberCard-container__switch-btn:nth-of-type(4) {
   background: white;
 }
