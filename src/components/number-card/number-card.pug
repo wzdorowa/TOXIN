@@ -1,6 +1,7 @@
 mixin numberCard(number, text, cost, amount, border)
     .numberCard-container
-        img.numberCard-container__img(src="../../components/number-card/images/image.png", alt="")
+        .numberCard-container__content
+            img.numberCard-container__img(src="../../components/number-card/images/image.png", alt="")
         .numberCard-container__description
             .numberCard-container__data(class='numberCard-container__data_'+ border)
                 .numberCard-container__specification
