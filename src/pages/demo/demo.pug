@@ -106,21 +106,17 @@ block content
             .review-wrapper
                 +review('Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
     .columns-content-wrapper
-        .columns
+        .columns-content
             .columns__item
                 .search-room-wrapper
                     +searchRoom('Найдем номера под ваши пожелания')
-            .columns__item
-                .result-search-room-wrapper
-                    +resultSearchRoom('888', 'люкс', '9 990')
-        .columns
-            .columns__item
                 .check-in-wrapper
                     +checkIn('Регистрация аккаунта')
             .columns__item
+                .result-search-room-wrapper
+                    +resultSearchRoom('888', 'люкс', '9 990')
                 .login-wrapper
                     +login('Вход')
-        .columns
             .columns__item
                 .number-card-wrapper
-                    +numberCard('888', 'люкс', '9 990', '145')
+                    +numberCard('888', 'люкс', '9 990', '145', 'border')

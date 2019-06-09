@@ -1,8 +1,8 @@
-mixin numberCard(number, text, cost, amount)
+mixin numberCard(number, text, cost, amount, border)
     .numberCard-container
         img.numberCard-container__img(src="../../components/number-card/images/image.png", alt="")
         .numberCard-container__description
-            .numberCard-container__data
+            .numberCard-container__data(class='numberCard-container__data_'+ border)
                 .numberCard-container__specification
                     span.numberCard-container__sign-number №
                     span.numberCard-container__number= number
@@ -18,5 +18,7 @@ mixin numberCard(number, text, cost, amount)
                         +rate-button('checked')
                         +rate-button('checked')
                         +rate-button('checked')
-                span.numberCard-container__amount-reviews= amount
-                    | Отзывов
+                .numberCard--container__amount
+                    span.numberCard-container__amount-reviews= amount
+                    span.numberCard-container__amount-reviews-description
+                        |  Отзывов

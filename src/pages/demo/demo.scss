@@ -7,6 +7,16 @@
     margin-right: auto;
     margin-top: 50px;
 }
+.columns-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
 .columns-content-wrapper {
     position: relative;
     width: 100%;
@@ -135,4 +145,19 @@ height: 130px;
     justify-content: space-between;
     
     height: 155px;
+}
+.search-room-wrapper {
+    margin-top: 50px;
+}
+.check-in-wrapper {
+    margin-top: 50px;
+}
+.result-search-room-wrapper {
+    margin-top: 50px;
+}
+.login-wrapper {
+    margin-top: 50px;
+}
+.number-card-wrapper {
+    margin-top: 50px;
 }
