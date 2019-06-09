@@ -1,0 +1,23 @@
+mixin numberCard(number, text, cost, amount)
+    .numberCard-container
+        .numberCard-container__img
+            img(src="", alt="")
+        .numberCard-container__description
+            .numberCard-container__data
+                .numberCard-container__specification
+                    span.numberCard-container__sign-number №
+                    span.numberCard-container__number= number
+                    span.numberCard-container__kind= text
+                .numberCard-container__cost
+                    span.numberCard-container__cost-room= cost
+                        | &#x20bd
+                    span.numberCard-container__cost-room-description в сутки
+            .numberCard-container__reviews
+                .numberCard-container__rate-group-button
+                        +rate-button('checked')
+                        +rate-button('checked')
+                        +rate-button('checked')
+                        +rate-button('checked')
+                        +rate-button('checked')
+                span.numberCard-container__amount-reviews= amount
+                    | Отзывов
