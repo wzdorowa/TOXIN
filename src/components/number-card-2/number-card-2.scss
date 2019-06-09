@@ -1,4 +1,4 @@
-.numberCard-container {
+.numberCard2-container {
     position: relative;
     width: 270px;
     height: 257px;
@@ -7,7 +7,7 @@
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
 }
-.numberCard-container::before {
+.numberCard2-container::before {
     position: absolute;
     content: 'keyboard_arrow_left';
 
@@ -23,7 +23,7 @@
     color: #FFFFFF;
     z-index: 10;
 }
-.numberCard-container::after {
+.numberCard2-container::after {
     position: absolute;
     content: 'keyboard_arrow_right';
 
@@ -39,7 +39,7 @@
     color: #FFFFFF;
     z-index: 10;
 }
-.numberCard-container__description {
+.numberCard2-container__description {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -50,15 +50,15 @@
     padding-bottom: 20px;
     height: 90px;
 }
-.numberCard-container__data_border {
+.numberCard2-container__data_border {
     border-bottom: solid 1px rgba(31, 32, 65, 0.1);
 }
-.numberCard-container__img{
+.numberCard2-container__img{
     width: 270px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
-.numberCard-container__content::before {
+.numberCard2-container__content::before {
     position: absolute;
     content: '';
     width: 42px;
@@ -67,7 +67,7 @@
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
     border-top-left-radius: 4px;
 }
-.numberCard-container__content::after {
+.numberCard2-container__content::after {
     position: absolute;
     content: '';
     width: 42px;
@@ -78,7 +78,7 @@
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
     transform: matrix(-1, 0, 0, 1, 0, 0);
 }
-.numberCard-container__data {
+.numberCard2-container__data {
     display: flex;
     justify-content: space-between;
 
@@ -86,7 +86,7 @@
     height: 35px;
 
 }
-.numberCard-container__sign-number {
+.numberCard2-container__sign-number {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
@@ -97,7 +97,7 @@
 
     padding-right: 5px;
 }
-.numberCard-container__number {
+.numberCard2-container__number {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
@@ -107,7 +107,7 @@
     color: #1F2041;
     padding-right: 5px;
 }
-.numberCard-container__kind {
+.numberCard2-container__kind {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
@@ -118,7 +118,7 @@
 
     color: #BC9CFF;
 }
-.numberCard-container__cost-room {
+.numberCard2-container__cost-room {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
@@ -127,7 +127,7 @@
 
     color: rgba(31, 32, 65, 0.5);
 }
-.numberCard-container__cost-room-description {
+.numberCard2-container__cost-room-description {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -136,7 +136,7 @@
 
     color: rgba(31, 32, 65, 0.5);
 }
-.numberCard-container__reviews {
+.numberCard2-container__reviews {
     display: flex;
     justify-content: space-between;
 
@@ -144,13 +144,13 @@
 
     padding-bottom: 20px;
 }
-.numberCard-container__rate-group-button {
+.numberCard2-container__rate-group-button {
     display: flex;
     justify-content: space-between;
 
     width: 105px;
 }
-.numberCard-container__amount-reviews {
+.numberCard2-container__amount-reviews {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
@@ -159,7 +159,7 @@
 
     color: rgba(31, 32, 65, 0.5);
 }
-.numberCard-container__amount-reviews-description {
+.numberCard2-container__amount-reviews-description {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -168,15 +168,15 @@
 
     color: rgba(31, 32, 65, 0.5);
 }
-.numberCard-container__switch-slider {
+.numberCard2-container__switch-slider {
     display: none;
 }
-.numberCard-container__controls {
+.numberCard2-container__controls {
     position: absolute;
     right: 15px;
     top: 125px;
 }
-.numberCard-container__switch-btn {
+.numberCard2-container__switch-btn {
     position: relative;
     display: inline-block;
     width: 8px;
@@ -185,7 +185,7 @@
 
     margin-right: 3.7px; 
 }
-.numberCard-container__switch-btn::after {
+.numberCard2-container__switch-btn::after {
     display: block;
     position: absolute;
     content: " ";
@@ -197,9 +197,9 @@
     height: 8px;
     border-radius: 50%;
 }
-#slide1:checked ~ .numberCard-container__controls .numberCard-container__switch-btn:nth-of-type(1),
-#slide2:checked ~ .numberCard-container__controls .numberCard-container__switch-btn:nth-of-type(2),
-#slide3:checked ~ .numberCard-container__controls .numberCard-container__switch-btn:nth-of-type(3),
-#slide4:checked ~ .numberCard-container__controls .numberCard-container__switch-btn:nth-of-type(4) {
+#slide1:checked ~ .numberCard2-container__controls .numberCard2-container__switch-btn:nth-of-type(1),
+#slide2:checked ~ .numberCard2-container__controls .numberCard2-container__switch-btn:nth-of-type(2),
+#slide3:checked ~ .numberCard2-container__controls .numberCard2-container__switch-btn:nth-of-type(3),
+#slide4:checked ~ .numberCard2-container__controls .numberCard2-container__switch-btn:nth-of-type(4) {
   background: white;
 }
