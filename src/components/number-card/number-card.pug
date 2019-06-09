@@ -1,8 +1,9 @@
 mixin numberCard(number, text, cost, amount, border)
     .numberCard-container
-        input.switch-slider(type="radio", name="point-slider", id="slide1" checked)
-        input.switch-slider(type="radio", name="point-slider", id="slide2")
-        input.switch-slider(type="radio", name="point-slider", id="slide3")
+        input.numberCard-container__switch-slider(type="radio", name="point-slider", id="slide1" checked)
+        input.numberCard-container__switch-slider(type="radio", name="point-slider", id="slide2")
+        input.numberCard-container__switch-slider(type="radio", name="point-slider", id="slide3")
+        input.numberCard-container__switch-slider(type="radio", name="point-slider", id="slide4")
         .numberCard-container__content
             img.numberCard-container__img(src="../../components/number-card/images/image.png", alt="")
         .numberCard-container__description
@@ -26,3 +27,8 @@ mixin numberCard(number, text, cost, amount, border)
                     span.numberCard-container__amount-reviews= amount
                     span.numberCard-container__amount-reviews-description
                         |  Отзывов
+        .numberCard-container__controls
+            label.numberCard-container__switch-btn(for="slide1")
+            label.numberCard-container__switch-btn(for="slide2")
+            label.numberCard-container__switch-btn(for="slide3")
+            label.numberCard-container__switch-btn(for="slide4")
