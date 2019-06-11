@@ -1,2 +1,5 @@
 mixin datepicker()
     .datepicker-container(id='datepicker')
+        .datepicker-container__buttons
+            +base-button('Очистить', '', 'noDecor')
+            +base-button('Применить', '', 'noDecor')

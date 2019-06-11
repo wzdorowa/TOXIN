@@ -1,3 +1,6 @@
 jQuery(document).ready(function($) {
-    $('#datepicker').datepicker($.datepicker.regional["ru"]);
+    $('#datepicker').datepicker(
+        $.datepicker.regional["ru"],
+        {showOtherMonths: true}
+        );
 });
