@@ -1,1 +1,2 @@
-import jquery from "jquery";
+import {jquery} from "jquery";
+import {iquery} from './variables';
