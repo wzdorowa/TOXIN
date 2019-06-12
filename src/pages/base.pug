@@ -5,10 +5,12 @@ html
         title Document
         link(rel="stylesheet", href="../global.scss")
         block scripts
-            
+            script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
+            script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+            link(rel="stylesheet", href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css")
+            script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js")
     body
         block content
         block scripts
-            script(src="../main.js")
             script(src="../../components/datepicker/datepicker.js")
             script(src="../../components/datepicker/datepicker-ru.js")
