@@ -15,8 +15,48 @@
     justify-content: space-between;
 }
 .datepicker {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+
     width: 100%;
     height: 300px;
 
     border: none;
+
+    color: rgba(31, 32, 65, 0.5);
+}
+.datepicker--nav {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+
+    color: #1F2041;
+
+    border-bottom: none;
+}
+.datepicker--nav-title i {
+    color: #1F2041;
+}
+.datepicker--nav-action {
+    position: relative;
+}
+.datepicker--nav-action path {
+    display: none;
+}
+.datepicker--nav-action svg::before {
+    position: absolute;
+    content: "arrow_back";
+
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 20px;
+
+    color: #BC9CFF;
 }
