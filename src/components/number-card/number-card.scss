@@ -21,7 +21,7 @@
     line-height: 24px;
 
     color: #FFFFFF;
-    z-index: 10;
+    z-index: 2;
 }
 .numberCard-container::after {
     position: absolute;
@@ -37,7 +37,6 @@
     line-height: 24px;
 
     color: #FFFFFF;
-    z-index: 10;
 }
 .numberCard-container__description {
     display: flex;
