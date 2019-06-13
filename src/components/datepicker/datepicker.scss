@@ -108,6 +108,31 @@
     border-radius: 22px;
 }
 .datepicker--cell.-selected- {
+    position: relative;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 22px;
+}
+.datepicker--cell.-range-from-::before {
+    position: absolute;
+    content: "";
+
+    width: 20px;
+    height: 40px;
+
+    right: 0;
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+}
+.datepicker--cell.-range-to-::before {
+    position: absolute;
+    content: "";
+
+    width: 20px;
+    height: 40px;
+
+    left: 0;
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+}
+.datepicker--cell.-in-range- {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+    color: rgba(31, 32, 65, 0.5);
 }
