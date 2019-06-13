@@ -77,3 +77,33 @@
     margin-left: -5px;
     background: #FFFFFF;
 }
+.datepicker--content {
+    margin-top: 10px;
+}
+.datepicker--days-names {
+    margin: 0;
+}
+.datepicker--day-name {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    text-transform: none;
+
+    height: 40px;
+    color:#BC9CFF;
+}
+.datepicker--cell {
+    height: 40px;
+}
+.datepicker--cell.-current- {
+    color: #FFFFFF;
+
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 22px;
+}
