@@ -48,7 +48,7 @@
 .datepicker--nav-action path {
     display: none;
 }
-.datepicker--nav-action svg::before {
+.datepicker--nav-action-prev::before {
     position: absolute;
     content: "arrow_back";
 
