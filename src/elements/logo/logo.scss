@@ -1,0 +1,31 @@
+.logo-container {
+    position: relative;
+    display: flex;
+}
+.logo-container__sign::before {
+    position: absolute;
+    content: '';
+
+    width: 11.76px;
+    height: 11.76px;
+
+    top: 15.29px;
+    left: 9.4px;
+
+    background-image: url('../elements/logo/images/Vector-1.svg');
+}
+.logo-container__sign::after {
+    position: absolute;
+    content: '';
+
+    width: 9.5px;
+    height: 5.91px;
+
+    top: 15.29px;
+    left: 21.74px;
+
+    background-image: url('../elements/logo/images/Vector-2.svg');
+}
+.logo-container__text {
+    margin-top: 13px;
+}
