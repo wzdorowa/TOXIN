@@ -1,6 +1,9 @@
 .logo-container {
     position: relative;
     display: flex;
+    justify-content: space-between;
+
+    width: 106px;
 }
 .logo-container__sign::before {
     position: absolute;
