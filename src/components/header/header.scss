@@ -28,9 +28,31 @@
     margin: 0;
 }
 .header-container__item {
+    position: relative;
     display: block;
     margin-top: auto;
     margin-bottom: auto;
+}
+.header-container__item:first-child .header-container__link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: rgba(31, 32, 65, 0.75);
+}
+.header-container__item:nth-of-type(3) .header-container__link::before {
+    position: absolute;
+    content: 'keyboard_arrow_down';
+
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 20px;
+    right: -12px;
+
 }
 .header-container__link {
     text-decoration: none;
@@ -43,7 +65,8 @@
 
     color: rgba(31, 32, 65, 0.5);
 
-    margin-left: 30px;
+    padding-right: 10px;
+    margin-left: 20px;
 }
 .header-container__user {
     display: flex;
@@ -52,4 +75,5 @@
     width: 200px;
     margin-top: auto;
     margin-bottom: auto;
+    z-index: 1;
 }
