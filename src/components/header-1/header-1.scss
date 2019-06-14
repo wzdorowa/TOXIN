@@ -18,12 +18,14 @@
 .header-container__navigation {
     display: flex;
     justify-content: space-between;
-
-    width: 775px;
 }
 .header-container__list {
     display: flex;
+    justify-content: space-between;
     list-style: none;
+
+    width: 530px;
+
     padding: 0;
     margin: 0;
 }
@@ -51,7 +53,7 @@
     font-weight: normal;
     font-size: 24px;
     line-height: 20px;
-    right: -12px;
+    right: -20px;
 
 }
 .header-container__link {
@@ -65,8 +67,8 @@
 
     color: rgba(31, 32, 65, 0.5);
 
-    padding-right: 10px;
-    margin-left: 20px;
+    margin: 0;
+    padding: 0;
 }
 .header-container__user {
     display: flex;
@@ -75,5 +77,6 @@
     width: 200px;
     margin-top: auto;
     margin-bottom: auto;
+    margin-left: 30px;
     z-index: 1;
 }

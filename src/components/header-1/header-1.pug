@@ -1,0 +1,13 @@
+mixin header-1()
+    .header-container-wrapper
+        .header-container
+            .header-container__logo
+                +logo()
+            .header-container__navigation
+                ul.header-container__list
+                    each val, index in ['Home', 'About Us', 'Services', 'Careers', 'News', 'Documentation']
+                        li.header-container__item
+                            a.header-container__link(href="")= val
+                .header-container__user
+                    +base-button('Login', 'small', 'small', 'border')
+                    +base-button('Register', 'medium', 'small', 'background')

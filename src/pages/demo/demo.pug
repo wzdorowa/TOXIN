@@ -22,7 +22,8 @@ include ../../components/number-card/number-card.pug
 include ../../components/number-card-2/number-card-2.pug
 include ../../components/datepicker/datepicker.pug
 include ../../elements/logo/logo.pug
-include ../../components/header/header.pug
+include ../../components/header-1/header-1.pug
+include ../../components/header-2/header-2.pug
 
 block content
     .columns
@@ -130,4 +131,7 @@ block content
                     +numberCard2('840', 'люкс', '9 990', '65', 'border')
         .rows-content
             .header-wrapper
-                +header()
+                +header-1()
+        .rows-content
+            .header-wrapper
+                +header-2()
