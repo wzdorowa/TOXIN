@@ -1,8 +1,29 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1160px;
+    height: 70px;
+}
+.header-container__logo {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.header-container__navigation {
+    display: flex;
+    justify-content: space-between;
+
+    width: 775px;
+}
 .header-container__list {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
+}
+.header-container__item {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .header-container__link {
     text-decoration: none;
@@ -19,4 +40,9 @@
 }
 .header-container__user {
     display: flex;
+    justify-content: space-between;
+
+    width: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
