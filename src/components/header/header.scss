@@ -1,8 +1,15 @@
+.header-container-wrapper {
+    width: 100%;
+    height: 70px;
+    background-color: white;
+}
 .header-container {
     display: flex;
     justify-content: space-between;
     width: 1160px;
     height: 70px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .header-container__logo {
     margin-top: auto;
