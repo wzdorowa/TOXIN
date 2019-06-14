@@ -4,7 +4,7 @@ mixin login(text)
         .login-container__login-details
             +base-input('', 'Email', 'large', '', 'top', 'bottom')
             +base-input('', 'Пароль', 'large', '', 'top', 'bottom')
-        +base-button('Войти', 'large', 'background')
+        +base-button('Войти', 'large', 'large', 'background')
         .login-container__have-an-account
-            span.login-container__text Уже есть аккаунт на Toxin
-            +base-button('Войти', 'small', 'border')
+            span.login-container__text Нет аккаунта на Toxin?
+            +base-button('Создать', 'medium', 'large', 'border')

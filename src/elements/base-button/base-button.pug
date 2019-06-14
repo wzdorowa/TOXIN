@@ -1,5 +1,6 @@
-mixin base-button(text, size, decor)
+mixin base-button(text, width, height, decor)
     .button-container
-        button.button-container__content(class='button-container__content_size-'+size || false,
+        button.button-container__content(class='button-container__content_width-'+width || false,
+         class='button-container__content_height-'+height || height,
          class='button-container__content_decor-'+decor || false, type="button")
             span.button-container__text=text

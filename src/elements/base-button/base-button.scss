@@ -7,11 +7,9 @@
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
-    line-height: 15px;
+    line-height: 12px;
     
     text-transform: uppercase;
-
-    height: 44px;
 
     padding: 0;
 
@@ -19,15 +17,26 @@
     background: white;
     border: none;
 }
-.button-container__content_size-small {
-    width: 99px;
+.button-container__content_width-small {
+    width: 80px;
 
     border-radius: 22px;
 }
-.button-container__content_size-large {
+.button-container__content_width-medium {
+    width: 100px;
+
+    border-radius: 22px;
+}
+.button-container__content_width-large {
     width: 320px;
 
     border-radius: 22px;
+}
+.button-container__content_height-small {
+    height: 34px;
+}
+.button-container__content_height-large {
+    height: 44px;
 }
 .button-container__content_decor-background {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
