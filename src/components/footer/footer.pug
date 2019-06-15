@@ -18,6 +18,8 @@ mixin footer()
                     li.footer-container__item
                         a.footer-container__link(href="")= val
             .footer-container__subscribe
+                span.footer-container__subscribe-title
+                    |Subscribe to our newsletter
                 span.footer-container__subscribe-description
                     |Receive our latest news and promotions in your inbox!
                 +base-input('', 'Your email address', 'medium', 'arrow', 'top', 'bottom')

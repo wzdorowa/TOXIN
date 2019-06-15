@@ -54,3 +54,34 @@
     
     color: #1F2041;
 }
+.footer-container__subscribe {
+    width: 266px;
+}
+.footer-container__subscribe-title {
+    display: block;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+
+    text-transform: uppercase;
+
+    color: #1F2041;
+
+    margin-bottom: 20px;
+}
+.footer-container__subscribe-description {
+    display: block;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: rgba(31, 32, 65, 0.75);
+
+    margin-bottom: 20px;
+}
