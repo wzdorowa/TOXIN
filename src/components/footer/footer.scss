@@ -6,7 +6,12 @@
 }
 .footer-container {
     display: flex;
+    justify-content: space-between;
     width: 1160px;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
 }
 .footer-container__logo {
     display: flex;
