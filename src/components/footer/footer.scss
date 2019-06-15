@@ -6,6 +6,7 @@
 }
 .footer-container {
     display: flex;
+    width: 1160px;
 }
 .footer-container__logo {
     display: flex;
@@ -22,4 +23,34 @@
     color: rgba(31, 32, 65, 0.75);
 
     margin-top: 20px;
+}
+.footer-container__list {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+.footer-container__item {
+    margin-bottom: 20px;
+}
+.footer-container__link {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: rgba(31, 32, 65, 0.5);
+}
+.footer-container__item:first-child .footer-container__link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    
+    text-transform: uppercase;
+    
+    color: #1F2041;
 }

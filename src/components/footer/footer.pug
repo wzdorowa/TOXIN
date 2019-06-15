@@ -5,15 +5,15 @@ mixin footer()
                 +logo()
                 span.footer-container__logo-description
                     |Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
-            ul.footer-container__navigation
+            ul.footer-container__list
                 each val, index in ['Navigation', 'About Us', 'News', 'Support', 'Products']
                     li.footer-container__item
                         a.footer-container__link(href="")= val
-            ul.footer-container__about-us
+            ul.footer-container__list
                 each val, index in ['About Us', 'Who we are', 'Our team', 'Careers', 'Investors']
                     li.footer-container__item
                         a.footer-container__link(href="")= val
-            ul.footer-container__support
+            ul.footer-container__list
                 each val, index in ['Support', 'Documentation', 'Community', 'Get in Touch']
                     li.footer-container__item
                         a.footer-container__link(href="")= val
