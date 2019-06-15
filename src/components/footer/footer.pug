@@ -3,7 +3,19 @@ mixin footer()
         .footer-container__logo
             +logo()
             span.footer-container__logo-description
-        .footer-container__navigation
-        .footer-container__about-us
-        .footer-container__support
+            |Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+        ul.footer-container__navigation
+            each val, index in ['Navigation', 'About Us', 'News', 'Support', 'Products']
+                li.footer-container__item
+                    a.footer-container__link(href="")= val
+        ul.footer-container__about-us
+            each val, index in ['About Us', 'Who we are', 'Our team', 'Careers', 'Investors']
+                li.footer-container__item
+                    a.footer-container__link(href="")= val
+        ul.footer-container__support
+            each val, index in ['Support', 'Documentation', 'Community', 'Get in Touch']
+                li.footer-container__item
+                    a.footer-container__link(href="")= val
         .footer-container__subscribe
+            span.footer-container__subscribe-description
+            +base-input('', 'Your email address', 'medium', 'arrow', 'top', 'bottom')
