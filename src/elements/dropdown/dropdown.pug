@@ -3,10 +3,11 @@ include ../dropdown-row/dropdown-row.pug
 mixin dropdown(placeholder, size)
     .dropdown-container
         +base-input('dropdown', placeholder, size, 'arrow-down', 'top', '', 'dropdown-list')
-    .dropdown-rows
-        +dropdown-row('Взрослые', '0')
-        +dropdown-row('Дети', '0')
-        +dropdown-row('Младенцы', '0')
-        .dropdown-buttons
-            +base-button('Очистить', '', 'noDecor')
-            +base-button('Применить', '', 'noDecor')
+        .dropdown-container__slideToggle
+            .dropdown-container__rows
+                +dropdown-row('Взрослые', '0')
+                +dropdown-row('Дети', '0')
+                +dropdown-row('Младенцы', '0')
+                .dropdown-container__buttons
+                    +base-button('Очистить', '', 'noDecor')
+                    +base-button('Применить', '', 'noDecor')
