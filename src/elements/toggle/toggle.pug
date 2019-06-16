@@ -1,7 +1,7 @@
 mixin toggle(text, checked)
     .toggle-container
         label.toggle-container__filter
-            input.toggle-container__content.visually-hidden(type='radio',
+            input.toggle-container__content.visually-hidden(type='checkbox',
              name='toggle-container__content', checked=checked || false)
             span.toggle-container__indicator
             span.toggle-container__description=text

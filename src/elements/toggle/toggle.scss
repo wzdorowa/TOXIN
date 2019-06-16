@@ -20,10 +20,10 @@
 .toggle-container__description {
     padding-left: 50px;
 }
-.toggle-container__filter input[type="radio"]:checked + .toggle-container__indicator {
+.toggle-container__filter input[type="checkbox"]:checked + .toggle-container__indicator {
     border: 1px solid #BC9CFF;
 }
-.toggle-container__filter input[type="radio"]:checked + .toggle-container__indicator::before {
+.toggle-container__filter input[type="checkbox"]:checked + .toggle-container__indicator::before {
     content: "";
 
     position: absolute;
@@ -35,7 +35,7 @@
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 10px;
 }
-.toggle-container__filter input[type="radio"]:not(:checked) + .toggle-container__indicator::before {
+.toggle-container__filter input[type="checkbox"]:not(:checked) + .toggle-container__indicator::before {
     content: "";
 
     position: absolute;
