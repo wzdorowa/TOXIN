@@ -1,7 +1,7 @@
 mixin like-button(text, checked)
     .like-button-container
         label.like-button-container__filter
-            input.like-button-container__content.visually-hidden(type='radio',
+            input.like-button-container__content.visually-hidden(type='checkbox',
              name='like-button-container__content', checked=checked || false)
             span.like-button-container__indicator
             span.like-button-container__description=text

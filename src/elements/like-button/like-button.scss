@@ -20,13 +20,13 @@
 .like-button-container__description {
     padding-left: 25px;
 }
-.like-button-container__filter input[type="radio"]:checked + .like-button-container__indicator {
+.like-button-container__filter input[type="checkbox"]:checked + .like-button-container__indicator {
     border: 1px solid #BC9CFF;
 }
-.like-button-container__filter input[type="radio"]:checked ~ .like-button-container__description {
+.like-button-container__filter input[type="checkbox"]:checked ~ .like-button-container__description {
     color:#BC9CFF;
 }
-.like-button-container__filter input[type="radio"]:checked ~ .like-button-container__description::before {
+.like-button-container__filter input[type="checkbox"]:checked ~ .like-button-container__description::before {
     content: "favorite";
 
     position: absolute;
@@ -37,7 +37,7 @@
     color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
 }
-.like-button-container__filter input[type="radio"]:not(:checked) ~ .like-button-container__description::before {
+.like-button-container__filter input[type="checkbox"]:not(:checked) ~ .like-button-container__description::before {
     content: "favorite_border";
 
     position: absolute;
