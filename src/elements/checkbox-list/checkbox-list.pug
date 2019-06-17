@@ -1,13 +1,15 @@
 mixin checkbox-list(text)
-    .chechbox-list-title
-        span.chechbox-list-title__description= text
-        span.chechbox-list-title__indicator
-    .checkbox-list-container
-        +checkbox-button('Завтрак')
-        +checkbox-button('Письменный стол', 'checked')
-        +checkbox-button('Стул для кормления', 'checked')
-        +checkbox-button('Кроватка', 'checked')
-        +checkbox-button('Телевизор')
-        +checkbox-button('Шампунь')
-        +checkbox-button('Телевизор')
-        +checkbox-button('Шампунь')
+    .chechbox-list
+        .chechbox-list-title
+            span.chechbox-list-title__description= text
+            span.chechbox-list-title__indicator
+        .chechbox-list__slideToggle
+            .checkbox-list-container
+                +checkbox-button('Завтрак')
+                +checkbox-button('Письменный стол', 'checked')
+                +checkbox-button('Стул для кормления', 'checked')
+                +checkbox-button('Кроватка', 'checked')
+                +checkbox-button('Телевизор')
+                +checkbox-button('Шампунь')
+                +checkbox-button('Телевизор')
+                +checkbox-button('Шампунь')

@@ -1,3 +1,6 @@
+.chechbox-list__slideToggle {
+    display: none;
+}
 .chechbox-list-title {
     position: relative;
     display: flex;
@@ -36,4 +39,7 @@
     justify-content: space-between;
     
     height: 230px;
+}
+.chechbox-list__slideToggle_show {
+    display: block;
 }
