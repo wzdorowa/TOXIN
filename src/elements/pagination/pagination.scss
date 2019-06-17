@@ -40,30 +40,26 @@
     border-radius: 22px;
 }
 .pagination-container__item:last-of-type::before {
-    content: "";
-
-    position: absolute;
-    top: 14px;
-    right: 13px;
-
-    width: 10px;
-    height: 10px;
-    border-top: 2px solid white;
-    border-right: 2px solid white;
-
-    transform: rotate(45deg);
-}
-.pagination-container__item:last-of-type::after {
-    content: "";
-
     position: absolute;
 
-    width: 15px;
-    height: 2px;
-    top: 19px;
-    right: 13px;
+    content: "arrow_forward";
+    width: 24px;
+    height: 24px;
+    top: 8px;
+    left: 8px;
 
-    background-color: white;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    text-transform: initial;
+
+    color: white;
 }
 .pagination-container__description {
     font-family: 'Montserrat';
