@@ -73,3 +73,25 @@
 .button-container__content_decor-border:hover::before {
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
 }
+.button-container__content_arrow::before {
+    position: absolute;
+
+    content: "arrow_forward";
+    width: 44px;
+    height: 44px;
+    top: 5px;
+    right: 0;
+
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    text-transform: initial;
+
+    color: white;
+}
