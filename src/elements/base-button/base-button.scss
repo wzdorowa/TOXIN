@@ -3,6 +3,7 @@
     flex-wrap: wrap;
 }
 .button-container__content {
+    position: relative;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
@@ -79,7 +80,7 @@
     content: "arrow_forward";
     width: 44px;
     height: 44px;
-    top: 5px;
+    top: 0px;
     right: 0;
 
     font-family: 'Material Icons';
