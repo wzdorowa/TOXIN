@@ -39,7 +39,7 @@
 
     color: rgba(31, 32, 65, 0.5);
 }
-.rotate.chechbox-list__indicator::before {
+.opened.chechbox-list__indicator::before {
     transform: rotate(180deg);
 }
 .checkbox-list-container {

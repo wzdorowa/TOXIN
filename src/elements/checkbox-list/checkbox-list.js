@@ -4,8 +4,8 @@ $(document).ready(function() {
     })
 })
 var checkboxList = document.querySelector(".chechbox-list__title");
-var checkboxRotate = document.querySelector(".chechbox-list__indicator");
+var checkboxOpened = document.querySelector(".chechbox-list__indicator");
 
 checkboxList.onclick = function(){
-    checkboxRotate.classList.toggle('rotate')
+    checkboxOpened.classList.toggle('opened')
   }
