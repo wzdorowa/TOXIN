@@ -1,6 +1,7 @@
 mixin base-input(label, placeholder, size, arrow, borderRadiusTop, borderRadiusBottom, attributeName)
-    div.input-container(class='input-container_'+arrow || false, class='input-container_size-'+size || 'large')
-        label.input-container__description= label
-        input.input-container__content(class='input-container__content_border-radius-'+borderRadiusTop || false,
-         class='input-container__content_border-radius-'+borderRadiusBottom || false, type='text',
-          name= attributeName, placeholder= placeholder)
+    div.input-container()
+        span.input-container__description= label
+        .input-container__wrapper(class='input-container_'+arrow || false, class='input-container_size-'+size || 'large')
+            input.input-container__content(class='input-container__content_border-radius-'+borderRadiusTop || false,
+            class='input-container__content_border-radius-'+borderRadiusBottom || false, type='text',
+            name= attributeName, placeholder= placeholder)

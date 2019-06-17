@@ -12,8 +12,12 @@
 
     color: var(--DarkShade);
 }
+.input-container__wrapper {
+    position: relative;
+}
 .input-container__content {
     height: 44px;
+    width: 100%;
 
     background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
@@ -56,18 +60,26 @@
     width: 150px;
 }
 .input-container_arrow-down::before {
-    content: "";
-
     position: absolute;
-    top: 35px;
-    right: 13px;
 
-    width: 8px;
-    height: 8px;
-    border-top: 2px solid rgba(31, 32, 65, 0.5);
-    border-right: 2px solid rgba(31, 32, 65, 0.5);
+    content: "keyboard_arrow_down";
+    width: 44px;
+    height: 44px;
+    top: 5px;
+    right: 0;
 
-    transform: rotate(135deg);
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    text-transform: initial;
+
+    color: rgba(31, 32, 65, 0.5);
 }
 .input-container_arrow::before {
     content: "";
