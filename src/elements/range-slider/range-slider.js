@@ -1,7 +1,7 @@
 $(".range-slider-container__polzunok").slider({
     min: 0,
-    max: 5000,
-    values: [2000, 3000],
+    max: 15000,
+    values: [5000, 10000],
     range: true,
     animate: "fast",
     slide : function(event, ui) {    
