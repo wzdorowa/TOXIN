@@ -1,23 +1,23 @@
-$(".polzunok-5").slider({
+$(".range-slider-container__polzunok").slider({
     min: 0,
     max: 5000,
     values: [2000, 3000],
     range: true,
     animate: "fast",
     slide : function(event, ui) {    
-        $(".polzunok-input-5-left").val(ui.values[ 0 ]);   
-        $(".polzunok-input-5-right").val(ui.values[ 1 ]);  
+        $(".range-slider-container__left-price").val(ui.values[ 0 ]);   
+        $(".range-slider-container__right-price").val(ui.values[ 1 ]);  
     }    
 });
-$(".polzunok-input-5-left").val($(".polzunok-5").slider("values", 0));
-$(".polzunok-input-5-right").val($(".polzunok-5").slider("values", 1));
+$(".range-slider-container__left-price").val($(".range-slider-container__polzunok").slider("values", 0));
+$(".range-slider-container__right-price").val($(".range-slider-container__polzunok").slider("values", 1));
 $(document).focusout(function() {
-    var input_left = $(".polzunok-input-5-left").val().replace(/[^0-9]/g, ''),    
-    opt_left = $(".polzunok-5").slider("option", "min"),
-    where_right = $(".polzunok-5").slider("values", 1),
-    input_right = $(".polzunok-input-5-right").val().replace(/[^0-9]/g, ''),    
-    opt_right = $(".polzunok-5").slider("option", "max"),
-    where_left = $(".polzunok-5").slider("values", 0); 
+    var input_left = $(".range-slider-container__left-price").val().replace(/[^0-9]/g, ''),    
+    opt_left = $(".range-slider-container__polzunok").slider("option", "min"),
+    where_right = $(".range-slider-container__polzunok").slider("values", 1),
+    input_right = $(".range-slider-container__right-price").val().replace(/[^0-9]/g, ''),    
+    opt_right = $(".range-slider-container__polzunok").slider("option", "max"),
+    where_left = $(".range-slider-container__polzunok").slider("values", 0); 
     if (input_left > where_right) { 
         input_left = where_right; 
     }
@@ -36,7 +36,7 @@ $(document).focusout(function() {
     if (input_right == "") {
     input_right = 0;    
     }    
-    $(".polzunok-input-5-left").val(input_left); 
-    $(".polzunok-input-5-right").val(input_right); 
-    $(".polzunok-5").slider( "values", [ input_left, input_right ] );
-})
+    $(".range-slider-container__left-price").val(input_left); 
+    $(".range-slider-container__right-price").val(input_right); 
+    $(".range-slider-container__polzunok").slider( "values", [ input_left, input_right ] );
+});
