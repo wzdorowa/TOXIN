@@ -60,19 +60,33 @@
     box-sizing: border-box;
   }
   .rating {
+    position: relative;
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
   }
   .rating-item {
-    width: 20px;
-    height: 20px;
-    background-color: green;
-    border: 2px solid #fff;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
   }
+  .rating-item::before {
+    content: "star_border";
+
+    position: absolute;
+
+    font-family: 'Material Icons';
+    font-size: 24px;
+    color: #BC9CFF;
+  }
   
-  .rating-item.active{
-    background-color: yellow;
+  .rating-item.active::after {
+    content: "star";
+
+    position: absolute;
+
+    font-family: 'Material Icons';
+    font-size: 24px;
+    color: #BC9CFF;
   }
