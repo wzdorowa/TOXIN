@@ -1,6 +1,13 @@
-mixin rate-button(checked)
+mixin rate-button()
     .rate-button-container
-        label.rate-button-container__filter
-            input.rate-button-container__content.visually-hidden(type='checkbox',
-             name='rate-button-container__content', checked=checked || false)
-            span.rate-button-container__indicator
+        //- label.rate-button-container__filter
+        //-     input.rate-button-container__content.visually-hidden(type='checkbox',
+        //-      name='rate-button-container__content', checked=checked || false)
+        //-     span.rate-button-container__indicator
+        <div class="rating">
+            <div class="rating-item active" data-rate="1"></div>
+            <div class="rating-item" data-rate="2"></div>
+            <div class="rating-item" data-rate="3"></div>
+            <div class="rating-item" data-rate="4"></div>
+            <div class="rating-item" data-rate="5"></div>
+        </div>

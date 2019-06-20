@@ -1,57 +1,75 @@
-.rate-button-container__filter {
-    position: relative;
+// .rate-button-container__filter {
+//     position: relative;
 
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 10px;
-    line-height: 20px;
+//     font-family: 'Montserrat';
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 10px;
+//     line-height: 20px;
 
-    color: rgba(31, 32, 65, 0.5);
-}
-.rate-button-container__indicator {
-    position: absolute;
+//     color: rgba(31, 32, 65, 0.5);
+// }
+// .rate-button-container__indicator {
+//     position: absolute;
 
-    width: 24px;
-    height: 24px;
-}
-.rate-button-container__filter input[type="checkbox"]:checked ~ .rate-button-container__indicator::before {
-    content: "star";
+//     width: 24px;
+//     height: 24px;
+// }
+// .rate-button-container__filter input[type="checkbox"]:checked ~ .rate-button-container__indicator::before {
+//     content: "star";
 
-    position: absolute;
-    top: 0px;
-    left: 0px;
+//     position: absolute;
+//     top: 0px;
+//     left: 0px;
 
-    font-family: 'Material Icons';
-    font-size: 24px;
-    color: #BC9CFF;
+//     font-family: 'Material Icons';
+//     font-size: 24px;
+//     color: #BC9CFF;
 
-}
-.rate-button-container__filter input[type="checkbox"]:not(:checked) ~ .rate-button-container__indicator::before {
-    content: "star_border";
+// }
+// .rate-button-container__filter input[type="checkbox"]:not(:checked) ~ .rate-button-container__indicator::before {
+//     content: "star_border";
 
-    position: absolute;
-    top: 0px;
-    left: 0px;
+//     position: absolute;
+//     top: 0px;
+//     left: 0px;
 
-    font-family: 'Material Icons';
-    font-size: 24px;
-    color: #BC9CFF;
-}
-.visually-hidden:not(:focus):not(:active),
- input[type="checkbox"].visually-hidden,
- input[type="radio"].visually-hidden {
-   position: absolute;
+//     font-family: 'Material Icons';
+//     font-size: 24px;
+//     color: #BC9CFF;
+// }
+// .visually-hidden:not(:focus):not(:active),
+//  input[type="checkbox"].visually-hidden,
+//  input[type="radio"].visually-hidden {
+//    position: absolute;
 
-   width: 1px;
-   height: 1px;
-   margin: -1px;
-   border: 0;
-   padding: 0;
+//    width: 1px;
+//    height: 1px;
+//    margin: -1px;
+//    border: 0;
+//    padding: 0;
 
-   white-space: nowrap;
+//    white-space: nowrap;
 
-   clip-path: inset(100%);
-   clip: rect(0 0 0 0);
-   overflow: hidden; 
- }
+//    clip-path: inset(100%);
+//    clip: rect(0 0 0 0);
+//    overflow: hidden; 
+//  }
+
+*{
+    box-sizing: border-box;
+  }
+  .rating {
+    display: flex;
+  }
+  .rating-item {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border: 2px solid #fff;
+    cursor: pointer;
+  }
+  
+  .rating-item.active{
+    background-color: yellow;
+  }
