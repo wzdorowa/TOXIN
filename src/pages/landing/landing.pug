@@ -5,3 +5,9 @@ include ../../components/form-search-room/form-search-room.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../components/social-btn/social-btn.pug
+
+block content
+    +header-1()
+    +searchRoom('Найдем номера под ваши пожелания')
+    +footer()
+    +copyright()
