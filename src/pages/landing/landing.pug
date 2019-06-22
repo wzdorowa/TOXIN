@@ -7,8 +7,9 @@ include ../../components/copyright/copyright.pug
 include ../../components/social-btn/social-btn.pug
 
 block content
-    .landing-content
         +header1()
-        +searchRoom('Найдем номера под ваши пожелания')
+        .landing-content
+            img(src="image/image-3.png", alt="")
+            +searchRoom('Найдем номера под ваши пожелания')
         +footer()
         +copyright()
