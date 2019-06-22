@@ -1,4 +1,6 @@
-mixin header-1()
+include ../../elements/logo/logo.pug
+
+mixin header1()
     .header-container-wrapper
         .header-container
             .header-container__logo
@@ -9,5 +11,5 @@ mixin header-1()
                         li.header-container__item
                             a.header-container__link(href="")= val
                 .header-container__user
-                    +base-button('Login', 'small', 'small', 'border')
-                    +base-button('Register', 'medium', 'small', 'background')
+                    +base-button('Войти', 'small', 'small', 'border')
+                    +base-button('Зарегистироваться', 'madium-large', 'small', 'background')
