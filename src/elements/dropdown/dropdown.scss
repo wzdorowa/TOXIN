@@ -1,10 +1,20 @@
+.dropdown-container {
+    position: relative;
+}
 .dropdown-container__slideToggle {
+    position: absolute;
+
+    width: 100%;
+    z-index: 2;
+
     display: none;
 }
 .dropdown-container__rows {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    background-color: white;
 
     min-height: 160px;
 

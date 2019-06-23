@@ -1,5 +1,6 @@
 include ../../elements/base-input/base-input.pug
 include ../../elements/base-button/base-button.pug
+include ../../elements/dropdown/dropdown.pug
 
 mixin searchRoom(text)
     .searchRoom-container
@@ -7,5 +8,6 @@ mixin searchRoom(text)
         .searchRoom-container__date-group
             +base-input('Прибытие', 'ДД.ММ.ГГГГ', 'small', 'arrow-down', 'top', 'bottom')
             +base-input('Выезд', 'ДД.ММ.ГГГГ', 'small', 'arrow-down', 'top', 'bottom')
-        +base-input('Гости', 'Сколько гостей', 'large', 'arrow-down', 'top', 'bottom')
+        //- +base-input('Гости', 'Сколько гостей', 'large', 'arrow-down', 'top', 'bottom')
+        +dropdown('Гости', 'large')
         +base-button('Подобрать номер', 'large', 'large', 'background', 'arrow')
