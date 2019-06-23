@@ -5,11 +5,14 @@ include ../../components/form-search-room/form-search-room.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../components/social-btn/social-btn.pug
+include ../../components/datepicker/datepicker.pug
 
 block content
     .landing-container-wrapper
         +header1()
         .landing-content
             +searchRoom('Найдем номера под ваши пожелания')
+            .landing-content__datepicker
+                +datepicker()
         +footer()
         +copyright()
