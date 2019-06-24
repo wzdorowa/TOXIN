@@ -1,16 +1,35 @@
 extends ../base.pug
 
 include ../../components/header-1/header-1.pug
-include ../../components/form-search-room/form-search-room.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
-include ../../components/social-btn/social-btn.pug
-include ../../components/datepicker/datepicker.pug
+include ../../elements/base-input/base-input.pug
+include ../../elements/range-slider/range-slider.pug
+include ../../elements/checkbox-button/checkbox-button.pug
+include ../../elements/dropdown/dropdown.pug
+include ../../elements/checkbox-list/checkbox-list.pug
 
 block content
 	.search-room-container-wrapper
 		+header1()
 		.search-room-content
-
+			.search-room-filter
+				+base-input('Даты пребывания в отеле', '19 авг - 23 авг', 'medium', 'arrow-down', 'top', 'bottom')
+				+base-input('Гости', '3 гостя, 1 младенец', 'large', 'arrow-down', 'top', 'bottom')
+				.search-room-filter__range-slider
+					+range-slider('Диапозон цены')
+				.search-room-filter__chechbox-buttons
+					h1.buttons-title Chechbox buttons
+					+checkbox-button('Можно курить')
+					+checkbox-button('Можно с питомцами', 'checked')
+					+checkbox-button('Можно пригласить гостей (до 10 человек)', 'checked')
+				.search-room-filter__rich-checkbox
+					h1.buttons-title Доступность
+					+checkbox-button('Широкий коридор', '', 'bold', 'Ширина коридоров в номере не менее 91 см.')
+					+checkbox-button('Помощник для инвалидов', '', 'bold', 'На 1 этаже вас встретит специалист и проводит до номера.')
+				.search-room-filter__dropdown
+					+dropdown('2 спальни, 2 кровати...', 'large')
+				+checkbox-list('Expandable checkbox list')
+			.search-room-result
 		+footer()
 		+copyright()
