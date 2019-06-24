@@ -11,3 +11,28 @@
     margin-left: 140px;
     margin-right: 140px;
 }
+.search-room-filter {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 266px;
+	min-height: 725px;
+}
+.search-room-filter__chechbox-buttons {
+	display: flex;
+    flex-wrap: wrap;
+
+    max-width: 222px;
+	min-height: 130px;
+}
+.search-room-filter__item-title {
+	font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+
+    text-transform: uppercase;
+
+    color: #1F2041;
+}
