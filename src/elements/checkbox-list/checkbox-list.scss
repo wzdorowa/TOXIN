@@ -1,4 +1,12 @@
+.chechbox-list {
+	position: relative;
+}
 .chechbox-list__slideToggle {
+	position: absolute;
+
+	width: 100%;
+	z-index: 2;
+
     display: none;
 }
 .chechbox-list__title {
@@ -19,7 +27,8 @@
     position: relative;
     width: 44px;
     height: 44px;
-    margin-left: 30px;
+	margin-right: 0;
+	margin-left: auto;
 }
 .chechbox-list__indicator::before {
     position: absolute;

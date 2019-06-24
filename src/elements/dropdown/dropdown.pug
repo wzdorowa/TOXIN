@@ -1,9 +1,9 @@
 include ../dropdown-row/dropdown-row.pug
 
-mixin dropdown(placeholder, size)
+mixin dropdown(label, placeholder, size)
     .dropdown-container
         .dropdown-container__list
-            +base-input('dropdown', placeholder, size, 'arrow-down', 'top', '', 'dropdown-list')
+            +base-input(label, placeholder, size, 'arrow-down', 'top', '', 'dropdown-list')
         .dropdown-container__slideToggle
             .dropdown-container__rows
                 +dropdown-row('Взрослые', '0')

@@ -6,7 +6,7 @@
 }
 .search-room-content {
     position: relative;
-    min-height: 830px;
+    min-height: 1430px;
     padding-top: 70px;
     margin-left: 140px;
     margin-right: 140px;
@@ -24,6 +24,14 @@
 
     max-width: 222px;
 	min-height: 130px;
+}
+.search-room-filter__rich-checkbox {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 266px;
+    min-height: 145px;
 }
 .search-room-filter__item-title {
 	font-family: 'Montserrat';

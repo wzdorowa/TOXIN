@@ -24,12 +24,12 @@ block content
 					+checkbox-button('Можно с питомцами', 'checked')
 					+checkbox-button('Можно пригласить гостей (до 10 человек)', 'checked')
 				.search-room-filter__rich-checkbox
-					h1.buttons-title Доступность
+					h1.search-room-filter__item-title Доступность
 					+checkbox-button('Широкий коридор', '', 'bold', 'Ширина коридоров в номере не менее 91 см.')
 					+checkbox-button('Помощник для инвалидов', '', 'bold', 'На 1 этаже вас встретит специалист и проводит до номера.')
 				.search-room-filter__dropdown
-					+dropdown('2 спальни, 2 кровати...', 'medium')
-				+checkbox-list('Expandable checkbox list')
+					+dropdown('Удобства номера', '2 спальни, 2 кровати...', 'medium')
+				+checkbox-list('Дополнительные удобства')
 			.search-room-result
 		+footer()
 		+copyright()
