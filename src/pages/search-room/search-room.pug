@@ -10,6 +10,7 @@ include ../../elements/dropdown/dropdown.pug
 include ../../elements/checkbox-list/checkbox-list.pug
 include ../../components/number-card/number-card.pug
 include ../../components/number-card-2/number-card-2.pug
+include ../../elements/pagination/pagination.pug
 
 block content
 	.search-room-container-wrapper
@@ -47,6 +48,7 @@ block content
 					+numberCard2('840', 'люкс', '9 990', '65', 'border')
 					+numberCard2('840', 'люкс', '9 990', '65', 'border')
 					+numberCard2('840', 'люкс', '9 990', '65', 'border')
-
+				.search-room-result__pagination
+					+pagination('1 - 12 из 100+ вариантов аренды')
 		+footer()
 		+copyright()
