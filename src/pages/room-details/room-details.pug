@@ -1,23 +1,27 @@
 extends ../base.pug
 
 include ../../components/header-1/header-1.pug
-
+include ../../elements/advantages/advantages.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 
 block content
-    .room-details-container-wrapper
-        +header1()
-        .room-details-content
+	.room-details-container-wrapper
+		+header1()
+		.room-details-content
 			.room-details-content__slider
 			.room-details-content__column
 				.room-details-content__row
 					.room-details-content__number-info
+						h2.room-details-content__title Сведения о номере
+						+advantages('Комфорт', 'Шумопоглощающие стены', 'mood', 'line')
+						+advantages('Удобство', 'Окна в каждой из спален', 'locationCity', 'line')
+						+advantages('Уют', 'Номер оснащен камином', 'whatshot', '')
 					.room-details-content__impressions
 				.room-details-content__row
 					.room-details-content__review
 				.room-details-content__row
 					.room-details-content__extra-info
 			.room-details-content__column
-        +footer()
-        +copyright()
+		+footer()
+		+copyright()
