@@ -21,6 +21,7 @@ block content
 				+base-input('Гости', '3 гостя, 1 младенец', 'medium', 'arrow-down', 'top', 'bottom')
 				.search-room-filter__range-slider
 					+range-slider('Диапозон цены')
+					span.search-room-filter__range-slider-description Стоимость за сутки пребывания в номере
 				.search-room-filter__chechbox-buttons
 					h1.search-room-filter__item-title Chechbox buttons
 					+checkbox-button('Можно курить')
@@ -37,17 +38,17 @@ block content
 				.search-room-result__cards-numbers
 					h1.search-room-result__title Номера, которые мы для вас подобрали
 					+numberCard('888', 'люкс', '9 990', '145', 'border')
-					+numberCard2('840', 'люкс', '9 990', '65', 'border')
-					+numberCard2('840', 'люкс', '9 990', '65', 'border')
-					+numberCard2('840', 'люкс', '9 990', '65', 'border')
-					+numberCard2('840', 'люкс', '9 990', '65', 'border')
-					+numberCard2('840', 'люкс', '9 990', '65', 'border')
-					+numberCard2('840', 'люкс', '9 990', '65', 'border')
-					+numberCard2('840', 'люкс', '9 990', '65', 'border')
-					+numberCard2('840', 'люкс', '9 990', '65', 'border')
-					+numberCard2('840', 'люкс', '9 990', '65', 'border')
-					+numberCard2('840', 'люкс', '9 990', '65', 'border')
-					+numberCard2('840', 'люкс', '9 990', '65', 'border')
+					+numberCard2('840', '', '9 990', '65', 'border')
+					+numberCard2('980', 'люкс', '8 500', '35', 'border')
+					+numberCard2('856', '', '7 300', '19', 'border')
+					+numberCard2('740', '', '6 000', '44', 'border')
+					+numberCard2('982', '', '5 800', '56', 'border')
+					+numberCard2('678', '', '5 500', '45', 'border')
+					+numberCard2('450', '', '5 300', '39', 'border')
+					+numberCard2('350', '', '5 000', '77', 'border')
+					+numberCard2('666', '', '5 000', '25', 'border')
+					+numberCard2('444', '', '5 000', '15', 'border')
+					+numberCard2('352', '', '5 000', '55', 'border')
 				.search-room-result__pagination
 					+pagination('1 - 12 из 100+ вариантов аренды')
 		+footer()
