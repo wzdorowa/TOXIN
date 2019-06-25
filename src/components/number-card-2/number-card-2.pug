@@ -1,3 +1,5 @@
+include ../../elements/rate-button/rate-button.pug
+
 mixin numberCard2(number, text, cost, amount, border)
     .numberCard2-container
         input.numberCard2-container__switch-slider(type="radio", name="point-slider2", id="numberCard2-slide1" checked)
@@ -18,10 +20,6 @@ mixin numberCard2(number, text, cost, amount, border)
                     span.numberCard2-container__cost-room-description в сутки
             .numberCard2-container__reviews
                 .numberCard2-container__rate-group-button
-                        +rate-button('checked')
-                        +rate-button('checked')
-                        +rate-button('checked')
-                        +rate-button('checked')
                         +rate-button()
                 .numberCard2--container__amount
                     span.numberCard2-container__amount-reviews= amount
