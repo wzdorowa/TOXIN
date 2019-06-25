@@ -1,6 +1,6 @@
 .search-room-container-wrapper {
     width: 1440px;
-    min-height: 900px;
+    height: 1360px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -54,11 +54,28 @@
 	line-height: 30px;
 
 	color: #1F2041;
-	margin-top: 0;
+	margin: 0;
+
+	width: 100%;
+}
+.search-room-result {
+	height: 1275px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .search-room-result__cards-numbers {
+	max-width: 835px;
+	height: 1160px;
+
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	max-width: 835px;
+	align-items: space-between;
+	
+}
+.search-room-result__pagination {
+	margin-left: auto;
+	margin-right: auto;
 }
