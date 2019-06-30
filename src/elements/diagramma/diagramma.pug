@@ -1,11 +1,17 @@
 mixin diagramma(number, label)
-	.diagramma-content
-		svg(width="100%" height="100%" viewBox="0 0 42 42" class="donut")
-			circle(class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff")
-			circle(class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1")
-			circle(class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#FFBA9C" stroke-width="1" stroke-dasharray="49 50" stroke-dashoffset="73.5")
-			circle(class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#6FCF97" stroke-width="1" stroke-dasharray="24.5 75" stroke-dashoffset="-0.4")
-			circle(class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#BC9CFF" stroke-width="3" stroke-dasharray="24.5 75" stroke-dashoffset="24.5")
-		.diagramma-content__chart-text
-			p.diagramma-content__chart-number= number
-			p.diagramma-content__chart-label= label
+	.diagramma-container
+		.diagramma-content
+			svg(width="100%" height="100%" viewBox="0 0 42 42" class="donut")
+				circle(class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff")
+				circle(class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1")
+				circle(class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#FFBA9C" stroke-width="1" stroke-dasharray="49 50" stroke-dashoffset="73.5")
+				circle(class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#6FCF97" stroke-width="1" stroke-dasharray="24.5 75" stroke-dashoffset="-0.4")
+				circle(class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#BC9CFF" stroke-width="3" stroke-dasharray="24.5 75" stroke-dashoffset="24.5")
+			.diagramma-content__chart-text
+				p.diagramma-content__chart-number= number
+				p.diagramma-content__chart-label= label
+		ul.diagramma-list
+			li.diagramma-list__item Великолепно
+			li.diagramma-list__item Хорошо
+			li.diagramma-list__item Удовлетворительно
+			li.diagramma-list__item Разочарован
