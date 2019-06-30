@@ -1,0 +1,20 @@
+.registration-container-wrapper {
+    width: 1440px;
+    min-height: 772px;
+    background: url(registration/images/image4.1.png);
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+}
+.registration-content {
+	position: relative;
+	width: 100%;
+	min-height: 672px;
+	
+}
+.registration-content__checkIn {
+	margin-top: 30px;
+
+	display: flex;
+	justify-content: center;
+}

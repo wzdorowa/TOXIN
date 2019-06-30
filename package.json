@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel ./src/pages/sign-in-registration/sign-in-registration.pug"
+    "dev": "parcel ./src/pages/registration/registration.pug"
   },
   "repository": {
     "type": "git",

@@ -5,12 +5,12 @@ include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../components/social-btn/social-btn.pug
 include ../../components/form-check-in/form-check-in.pug
-include ../../components/login/login.pug
 
 block content
-	.sign-in-registration-container-wrapper
+	.registration-container-wrapper
 		+header1()
-		.sign-in-registration-content
-			+checkIn('Регистрация аккаунта')
-			+login('Вход')
+		.registration-content
+			.registration-content__checkIn
+				+checkIn('Регистрация аккаунта')
+		+footer()
 		+copyright()
