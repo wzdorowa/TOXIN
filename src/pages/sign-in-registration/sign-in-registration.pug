@@ -1,0 +1,16 @@
+extends ../base.pug
+
+include ../../components/header-1/header-1.pug
+include ../../components/form-search-room/form-search-room.pug
+include ../../components/footer/footer.pug
+include ../../components/copyright/copyright.pug
+include ../../components/social-btn/social-btn.pug
+include ../../components/datepicker/datepicker.pug
+
+block content
+	.sign-in-registration-container-wrapper
+		+header1()
+		.sign-in-registration-content
+			+checkIn('Регистрация аккаунта')
+			+login('Вход')
+		+copyright()
