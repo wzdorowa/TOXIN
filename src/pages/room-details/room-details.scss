@@ -1,9 +1,27 @@
+.room-details-content {
+	width: 100%;
+	background: white;
+}
+.room-details-content__information {
+	width: 1160px;
+	margin-left: auto;
+	margin-right: auto;
+
+	margin-top: 70px;
+	margin-bottom: 70px;
+
+	display: flex;
+	justify-content: space-between;
+}
 .room-details-content__column-wide {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	width: 672px;
 	min-height: 800px;
+}
+.room-details-content__column-narrow {
+	width: 380px;
 }
 .room-details-content__row {
 	display: flex;
