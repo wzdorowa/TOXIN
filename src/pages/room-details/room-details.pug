@@ -6,6 +6,7 @@ include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../elements/diagramma/diagramma.pug
 include ../../elements/review/review.pug
+include ../../components/form-result-search-room/form-result-search-room.pug
 
 block content
 	.room-details-container-wrapper
@@ -40,5 +41,6 @@ block content
 							h2.room-details-content__title Отмена
 							p.room-details-content__cancel-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 			.room-details-content__column-narrow
+				+resultSearchRoom('888', 'люкс', '9 990')
 		+footer()
 		+copyright()
