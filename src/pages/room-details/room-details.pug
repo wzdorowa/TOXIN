@@ -4,7 +4,7 @@ include ../../components/header-1/header-1.pug
 include ../../elements/advantages/advantages.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
-include ../../elements/diagramma.pug
+include ../../elements/diagramma/diagramma.pug
 
 block content
 	.room-details-container-wrapper
@@ -20,9 +20,7 @@ block content
 						+advantages('Уют', 'Номер оснащен камином', 'whatshot', '')
 					.room-details-content__impressions
 						h2.room-details-content__title Впечатления от номера
-						.room-details-content__diagram
-							span.room-details-content__diagram-number 260 
-							span.room-details-content__diagram-text голосов
+						+diagramma()
 				.room-details-content__row
 					.room-details-content__review
 				.room-details-content__row
