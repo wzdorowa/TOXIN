@@ -2,6 +2,19 @@
 	width: 100%;
 	background: white;
 }
+.room-details-content__slider {
+	width: 1442px;
+	margin-left: auto;
+	margin-right: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+.room-details-content__img-min-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
 .room-details-content__information {
 	width: 1160px;
 	margin-left: auto;
