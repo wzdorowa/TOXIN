@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
 
-    width: 106px;
+    width: 99px;
 }
 .logo-container__sign::before {
     position: absolute;
@@ -12,8 +12,8 @@
     width: 11.76px;
     height: 11.76px;
 
-    top: 15.29px;
-    left: 9.4px;
+    top: 14px;
+    left: 9px;
 
     background-image: url('../elements/logo/images/Vector-1.svg');
 }
@@ -21,14 +21,14 @@
     position: absolute;
     content: '';
 
-    width: 9.5px;
+    width: 8px;
     height: 5.91px;
 
-    top: 15.29px;
-    left: 21.74px;
+    top: 13px;
+    left: 21px;
 
     background-image: url('../elements/logo/images/Vector-2.svg');
 }
 .logo-container__text {
-    margin-top: 13px;
+    margin-top: 10px;
 }
