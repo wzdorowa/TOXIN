@@ -1,13 +1,13 @@
 mixin header-2()
-    .header-container-wrapper
-        .header-container
-            .header-container__logo
+    .header-2-container-wrapper
+        .header-2-container
+            .header-2-container__logo
                 +logo()
             .header-2-container__navigation
-                ul.header-container__list
+                ul.header-2-container__list
                     each val, index in ['Home', 'About Us', 'Services', 'Careers', 'News', 'Documentation']
-                        li.header-container__item
-                            a.header-container__link(href="")= val
+                        li.header-2-container__item
+                            a.header-2-container__link(href="")= val
                 .header-2-container__user
                     a.header-2-container__link(href="")
                         |Cosmin Negoita

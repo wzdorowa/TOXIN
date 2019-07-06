@@ -17,6 +17,7 @@
     margin-bottom: auto;
 }
 .header-container__navigation {
+	min-width: 700px;
     display: flex;
     justify-content: space-between;
 }
@@ -25,7 +26,7 @@
     justify-content: space-between;
     list-style: none;
 
-    width: 530px;
+    width: 400px;
 
     padding: 0;
     margin: 0;
@@ -34,18 +35,18 @@
     position: relative;
     display: block;
     margin-top: auto;
-    margin-bottom: auto;
+	margin-bottom: auto;
 }
-.header-container__item:first-child .header-container__link {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 17px;
-
-    color: rgba(31, 32, 65, 0.75);
+.header-container__item:nth-of-type(5) {
+	padding-right: 15px;
 }
-.header-container__item:nth-of-type(3) .header-container__link::before {
+.header-container__item:nth-of-type(2) {
+	padding-right: 15px;
+}
+.header-container__item:nth-of-type(3) {
+	padding-left: 10px;
+}
+.header-container__item:nth-of-type(5) .header-container__link::before {
     position: absolute;
     content: 'keyboard_arrow_down';
 
@@ -53,9 +54,21 @@
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    line-height: 20px;
-    right: -20px;
+	line-height: 20px;
+	top: 2px;
+    right: -8px;
+}
+.header-container__item:nth-of-type(2) .header-container__link::before {
+    position: absolute;
+    content: 'keyboard_arrow_down';
 
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+	line-height: 20px;
+	top: 2px;
+    right: -10px;
 }
 .header-container__link {
     text-decoration: none;
@@ -63,13 +76,13 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 13px;
+    line-height: 13px;
 
     color: rgba(31, 32, 65, 0.5);
 
     margin: 0;
-    padding: 0;
+    padding: 0px;
 }
 .header-container__user {
     display: flex;
@@ -78,6 +91,5 @@
     min-width: 275px;
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 30px;
     z-index: 1;
 }
