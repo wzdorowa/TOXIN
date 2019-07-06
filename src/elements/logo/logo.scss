@@ -5,6 +5,9 @@
 
     width: 99px;
 }
+.logo-container__sign {
+	height: 36px;
+}
 .logo-container__sign::before {
     position: absolute;
     content: '';
