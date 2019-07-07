@@ -36,21 +36,26 @@
 	min-height: 60px;
 }
 .footer-container__list {
-    list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	list-style: none;
+	width: 148px;
+	height: 155px;
 
     padding: 0;
     margin: 0;
 }
-.footer-container__item {
-    margin-bottom: 20px;
+.footer-container__list:nth-of-type(3) {
+	height: 120px;
 }
 .footer-container__link {
     text-decoration: none;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 12.8px;
+    line-height: 15px;
     
     color: rgba(31, 32, 65, 0.5);
 }
@@ -58,7 +63,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 15px;
     
     text-transform: uppercase;
@@ -66,7 +71,11 @@
     color: #1F2041;
 }
 .footer-container__subscribe {
-    width: 266px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 237px;
+	height: 137px;
 }
 .footer-container__subscribe-title {
     display: block;
@@ -74,14 +83,12 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 11px;
+    line-height: 16px;
 
     text-transform: uppercase;
 
     color: #1F2041;
-
-    margin-bottom: 20px;
 }
 .footer-container__subscribe-description {
     display: block;
@@ -89,10 +96,8 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 12.78px;
+    line-height: 22px;
 
     color: rgba(31, 32, 65, 0.75);
-
-    margin-bottom: 20px;
 }
