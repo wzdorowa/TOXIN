@@ -15,6 +15,22 @@
     src: url('../fonts/Montserrat/Bold/Montserrat-Bold.woff') format('woff');
 }
 @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/OpenSans/Regular/OpenSans-Regular.svg') format('svg');
+    src: url('../fonts/OpenSans/Regular/OpenSans-Regular.ttf') format('ttf');
+    src: url('../fonts/OpenSans/Regular/OpenSans-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: bold;
+    font-weight: 700;
+    src: url('../fonts/OpenSans/Bold/OpenSans-Bold.svg') format('svg');
+    src: url('../fonts/OpenSans/Bold/OpenSans-Bold.ttf') format('ttf');
+    src: url('../fonts/OpenSans/Bold/OpenSans-Bold.woff') format('woff');
+}
+@font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
