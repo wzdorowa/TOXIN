@@ -1,14 +1,15 @@
 include ../dropdown-row/dropdown-row.pug
 
 mixin dropdown(label, placeholder, size)
-    .dropdown-container
-        .dropdown-container__list
-            +base-input(label, placeholder, size, 'arrow-down', 'top', '', 'dropdown-list')
-        .dropdown-container__slideToggle
-            .dropdown-container__rows
-                +dropdown-row('Взрослые', '0')
-                +dropdown-row('Дети', '0')
-                +dropdown-row('Младенцы', '0')
-                .dropdown-container__buttons
-                    +base-button('Очистить', '', 'noDecor')
-                    +base-button('Применить', '', 'noDecor')
+	.dropdown-container
+		.dropdown-container__list
+			+base-input(label, placeholder, size, 'arrow-down', 'top', '', 'dropdown-list')
+		.dropdown-container__slideToggle
+			.dropdown-container__content
+				.dropdown-container__rows
+					+dropdown-row('Взрослые', '2')
+					+dropdown-row('Дети', '1')
+					+dropdown-row('Младенцы', '0')
+				.dropdown-container__buttons
+					+base-button('Очистить', '', 'noDecor')
+					+base-button('Применить', '', 'noDecor')
