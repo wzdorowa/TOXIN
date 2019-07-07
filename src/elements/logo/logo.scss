@@ -3,7 +3,8 @@
     display: flex;
     justify-content: space-between;
 
-    width: 99px;
+	width: 99px;
+	height: 36px;
 }
 .logo-container__sign {
 	height: 36px;
@@ -33,5 +34,6 @@
     background-image: url('../elements/logo/images/Vector-2.svg');
 }
 .logo-container__text {
-    margin-top: 10px;
+	padding-top: 10px;
+	height: 36px;
 }

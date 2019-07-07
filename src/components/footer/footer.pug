@@ -1,10 +1,9 @@
-mixin footer()
-    .footer-container-wrapper
+mixin footer(borderTop)
+    .footer-container-wrapper.footer-container-wrapper_= borderTop
         .footer-container
             .footer-container__logo
                 +logo()
-                span.footer-container__logo-description
-                    |Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+                p.footer-container__logo-description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации "Отельные взгляды"
             ul.footer-container__list
                 each val, index in ['Navigation', 'About Us', 'News', 'Support', 'Products']
                     li.footer-container__item
