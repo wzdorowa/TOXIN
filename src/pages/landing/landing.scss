@@ -2,19 +2,21 @@ body {
 	margin: 0;
 }
 .landing-container-wrapper {
-    width: 1440px;
+    width: 1310px;
     min-height: 900px;
-    background: url(landing/image/image-3.png);
+	background: url(landing/image/image-3.png);
+	background-size: 1310px;
     background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
 }
 .landing-content {
     position: relative;
-    min-height: 830px;
-    padding-top: 70px;
-    margin-left: 140px;
-    margin-right: 140px;
+	min-height: 755px;
+	max-width: 1055px;
+    padding-top: 65px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .landing-content__datepicker {
     display: none;
@@ -25,16 +27,16 @@ body {
 .landing-content__text {
     position: absolute;
 
-    width: 297px;
+    width: 280px;
 
-    right: 0;
-    bottom: 70px;
+    right: -7px;
+    bottom: 18px;
 
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 13px;
+    line-height: 22px;
     
     text-align: right;
     
