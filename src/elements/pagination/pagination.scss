@@ -1,5 +1,5 @@
 .pagination-container {
-    height: 75px;
+    height: 77px;
 }
 .pagination-container__list {
     display: flex;
@@ -9,35 +9,37 @@
     margin: 0;
     padding: 0;
 
-    width: 240px;
+    width: 225px;
 }
 .pagination-container__item {
     position: relative;
     display: inline-block;
 
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
 
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 40px;
+    font-size: 11px;
+    line-height: 36px;
 
-    text-align: center;
+	text-align: center;
 
     color: rgba(31, 32, 65, 0.5);
 }
 .pagination-container__item:first-child {
+	width: 36.5px;
     font-weight: bold;
     color: #FFFFFF;
 
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
+    border-radius: 50%;
 }
 .pagination-container__item:last-of-type {
+	width: 36.5px;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    border-radius: 22px;
+    border-radius: 50%;
 }
 .pagination-container__item:last-of-type::before {
     position: absolute;
@@ -45,8 +47,8 @@
     content: "arrow_forward";
     width: 24px;
     height: 24px;
-    top: 8px;
-    left: 8px;
+    top: 6.5px;
+    left: 6px;
 
     font-family: 'Material Icons';
     font-style: normal;
@@ -62,12 +64,14 @@
     color: white;
 }
 .pagination-container__description {
+	display: inline-block;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12.7px;
     line-height: 24px;
 
-    color: rgba(31, 32, 65, 0.75);
-
+	color: rgba(31, 32, 65, 0.75);
+	margin-top: 5px;
+	padding-left: 2px;
 }

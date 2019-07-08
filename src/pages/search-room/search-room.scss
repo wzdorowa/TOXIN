@@ -10,7 +10,7 @@
 	justify-content: space-between;
 
 	width: 1055px;
-    min-height: 1430px;
+    min-height: 1235px;
     padding-top: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -75,13 +75,10 @@
 	margin: 0;
 
 	width: 100%;
+	margin-bottom: 21px;
 }
 .search-room-result {
-	height: 1150px;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	height: 1152px;
 }
 .search-room-result__cards-numbers {
 	max-width: 758px;
@@ -94,6 +91,8 @@
 	
 }
 .search-room-result__pagination {
-	margin-left: auto;
-	margin-right: auto;
+	display: flex;
+	justify-content: center;
+
+	margin-top: 20px;
 }
