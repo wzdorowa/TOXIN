@@ -1,32 +1,33 @@
 include ../../elements/rate-button/rate-button.pug
 
-mixin numberCard(number, text, cost, amount, border)
-    .numberCard-container
-        input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-1" checked)
-        input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-2")
-        input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-3")
-        input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-4")
-        .numberCard-container__content
-            img.numberCard-container__img(src="../../components/number-card/images/image.png", alt="")
-        .numberCard-container__description
-            .numberCard-container__data(class='numberCard-container__data_'+ border)
-                .numberCard-container__specification
-                    span.numberCard-container__sign-number №
-                    span.numberCard-container__number= number
-                    span.numberCard-container__kind= text
-                .numberCard-container__cost
-                    span.numberCard-container__cost-room= cost
-                        | &#x20bd
-                    span.numberCard-container__cost-room-description в сутки
-            .numberCard-container__reviews
-                .numberCard-container__rate-group-button
-                        +rate-button()
-                .numberCard--container__amount
-                    span.numberCard-container__amount-reviews= amount
-                    span.numberCard-container__amount-reviews-description
-                        |  Отзывов
-        .numberCard-container__controls
-            label.numberCard-container__switch-btn(for="numberCard-1")
-            label.numberCard-container__switch-btn(for="numberCard-2")
-            label.numberCard-container__switch-btn(for="numberCard-3")
-            label.numberCard-container__switch-btn(for="numberCard-4")
+mixin numberCard(number, text, cost, amount)
+	.numberCard-container
+		input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-1" checked)
+		input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-2")
+		input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-3")
+		input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-4")
+		.numberCard-container__content
+			img.numberCard-container__img(src="../../components/number-card/images/image.png", alt="")
+		.numberCard-container__description
+			.numberCard-container__data
+				.numberCard-container__specification
+					span.numberCard-container__sign-number №
+					span.numberCard-container__number= number
+					span.numberCard-container__kind= text
+				.numberCard-container__cost
+					span.numberCard-container__cost-room= cost
+						| &#x20bd
+					span.numberCard-container__cost-room-description в сутки
+			.numberCard-container__data-border
+			.numberCard-container__reviews
+				.numberCard-container__rate-group-button
+						+rate-button()
+				.numberCard--container__amount
+					span.numberCard-container__amount-reviews= amount
+					span.numberCard-container__amount-reviews-description
+						|  Отзывов
+		.numberCard-container__controls
+			label.numberCard-container__switch-btn(for="numberCard-1")
+			label.numberCard-container__switch-btn(for="numberCard-2")
+			label.numberCard-container__switch-btn(for="numberCard-3")
+			label.numberCard-container__switch-btn(for="numberCard-4")

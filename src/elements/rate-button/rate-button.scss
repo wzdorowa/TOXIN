@@ -4,7 +4,9 @@
   .rating {
     position: relative;
     display: flex;
-    list-style: none;
+	list-style: none;
+	
+	width: 110px;
     padding: 0;
     margin: 0;
   }
@@ -19,7 +21,7 @@
     position: absolute;
 
     font-family: 'Material Icons';
-    font-size: 24px;
+    font-size: 22px;
     color: #BC9CFF;
   }
   
@@ -29,6 +31,6 @@
     position: absolute;
 
     font-family: 'Material Icons';
-    font-size: 24px;
+    font-size: 22px;
     color: #BC9CFF;
   }
