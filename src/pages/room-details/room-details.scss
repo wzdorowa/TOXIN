@@ -3,7 +3,7 @@
 	background: white;
 }
 .room-details-content__slider {
-	width: 1442px;
+	width: 1308px;
 	margin-left: auto;
 	margin-right: auto;
 
@@ -14,6 +14,8 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+
+	background: rgba(128, 128, 128, 0.8);
 }
 .room-details-content__information {
 	width: 1160px;
