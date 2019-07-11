@@ -1,26 +1,28 @@
 .diagramma-container {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-end;
 
-	width: 310px;
+	width: 284px;
 }
 .diagramma-content {
 	position: relative;
-	width: 120px;
-	height: 120px;
+	width: 139px;
+	height: 138px;
+	margin-left: -15px;
+	margin-top: 3px;
 }
 .diagramma-content__chart-text {
 	position: absolute;
-	top: 35px;
+	top: 45px;
 	width: 100%;
 }
 .diagramma-content__chart-number {
-	font-family: 'Montserrat';
+	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: bold;
-	font-size: 24px;
-	line-height: 30px;
+	font-size: 21.8px;
+	line-height: 29px;
 
 	color: #BC9CFF;
 
@@ -33,7 +35,7 @@
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 11px;
 	line-height: 15px;
 
 	text-align: center;
@@ -48,23 +50,24 @@
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: normal;
-	font-size: 14px;
-	line-height: 24px;
+	font-size: 12.8px;
+	line-height: 22.5px;
 
 	color: rgba(31, 32, 65, 0.75);
 
 	padding: 0;
 	margin: 0;
+	margin-bottom: 13px;
 }
 .diagramma-list__item {
 	position: relative;
-	padding-left: 15px;
+	padding-left: 14px;
 }
 .diagramma-list__item::before {
 	position: absolute;
 	content: "";
-	width: 10px;
-	height: 10px;
+	width: 9px;
+	height: 9px;
 
 	top: 6.5px;
 	left: 0;

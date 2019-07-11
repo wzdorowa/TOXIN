@@ -18,11 +18,11 @@
 	background: rgba(128, 128, 128, 0.8);
 }
 .room-details-content__information {
-	width: 1160px;
+	width: 1055px;
 	margin-left: auto;
 	margin-right: auto;
 
-	margin-top: 70px;
+	margin-top: 63px;
 	margin-bottom: 70px;
 
 	display: flex;
@@ -32,7 +32,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 672px;
+	width: 639px;
 	min-height: 800px;
 }
 .room-details-content__column-narrow {
@@ -47,23 +47,22 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 280px;
-	height: 270px;
+	width: 255px;
+	height: 266px;
 }
 .room-details-content__title {
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: bold;
-	font-size: 19px;
+	font-size: 16.7px;
 	line-height: 24px;
 
 	color: #1F2041;
 
 	margin: 0;
 }
-.room-details-content__diagramma {
-	width: 120px;
-	height: 120px;
+.room-details-content__impressions {
+	width: 310px;
 }
 .room-details-content__review {
 	width: 100%;
