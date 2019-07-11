@@ -1,9 +1,9 @@
 include ../advantages/advantages.pug
 include ../like-button/like-button.pug
 
-mixin review(text)
+mixin review(title, value, nameIcon, line, height, text)
     .review-container
-        +advantages('Мурад Сафаров', '5 дней назад', 'userIcon')
+        +advantages(title, value, nameIcon, line, height)
         .review-container__content
             +like-button('12', 'checked')
             p.review-container__paragraph= text
