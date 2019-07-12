@@ -17,13 +17,14 @@ block content
 		+header1()
 		.search-room-content
 			.search-room-filter
-				+base-input('Даты пребывания в отеле', '19 авг - 23 авг', 'medium', 'arrow-down', 'top', 'bottom')
-				+base-input('Гости', '3 гостя, 1 младенец', 'medium', 'arrow-down', 'top', 'bottom')
+				.search-room-filter__group-inputs
+					+base-input('Даты пребывания в отеле', 'padding', '19 авг - 23 авг', 'medium', 'arrow-down', 'top', 'bottom')
+					+base-input('Гости', 'padding', '3 гостя, 1 младенец', 'medium', 'arrow-down', 'top', 'bottom')
 				.search-room-filter__range-slider
-					+range-slider('Диапозон цены')
+					+range-slider('Диапазон цены')
 					span.search-room-filter__range-slider-description Стоимость за сутки пребывания в номере
 				.search-room-filter__chechbox-buttons
-					h1.search-room-filter__item-title Chechbox buttons
+					h1.search-room-filter__chechbox-buttons-title Chechbox buttons
 					+checkbox-button('Можно курить')
 					+checkbox-button('Можно с питомцами', 'checked')
 					+checkbox-button('Можно пригласить гостей (до 10 человек)', 'checked')
@@ -32,7 +33,7 @@ block content
 					+checkbox-button('Широкий коридор', '', 'bold', 'Ширина коридоров в номере не менее 91 см.')
 					+checkbox-button('Помощник для инвалидов', '', 'bold', 'На 1 этаже вас встретит специалист и проводит до номера.')
 				.search-room-filter__dropdown
-					+dropdown('Удобства номера', '2 спальни, 2 кровати...', 'medium')
+					+dropdown('Удобства номера', 'padding', '2 спальни, 2 кровати...', 'medium')
 				+checkbox-list('Дополнительные удобства')
 			.search-room-result
 				h1.search-room-result__title Номера, которые мы для вас подобрали
