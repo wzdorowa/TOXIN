@@ -1,13 +1,15 @@
 .checkIn-container {
     position: relative;
-    display: flex;
+	display: flex;
+	flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    width: 380px;
-    height: 646px;
-    padding: 30px;
-    padding-top: 40px;
+    width: 345px;
+    height: 587px;
+    padding: 26.5px;
+	padding-top: 35px;
+	padding-bottom: 27px;
 
     background-color: white;
 
@@ -22,42 +24,69 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 21px;
+    line-height: 28px;
 
-    color: #1F2041;
-}
-.checkIn-container__buttons {
-    display: flex;
-    justify-content: space-between;
-
-    width: 217px;
+	color: #1F2041;
 }
 .checkIn-container__user-data {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    height: 130px;
+    height: 120px;
+}
+.checkIn-container__group-inputs {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	width: 100%;
+	height: 89px;
+}
+.checkIn-container__buttons {
+	display: flex;
+    justify-content: space-between;
+
+	width: 201px;
+	height: 25px;
+	padding-top: 3px;
+}
+.checkIn-container__group-inputs-login {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 106px;
 }
 .checkIn-container__login-details {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    height: 152px;
+	height: 137px;
 }
 .checkIn-container__text {
+	display: inline-block;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 44px;
+    font-size: 12.75px;
+	line-height: 39px;
+
+	align-items: center;
+}
+.checkIn-container__checkIn-details {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 107px;
 }
 .checkIn-container__have-an-account {
     display: flex;
     justify-content: space-between;
 
     width: 100%;
-    height: 44px;
+    height: 40px;
 }

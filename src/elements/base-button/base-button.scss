@@ -1,4 +1,5 @@
 .button-container {
+	position: relative;
     display: flex;
     flex-wrap: wrap;
 }
@@ -21,6 +22,11 @@
 }
 .button-container__content_width-small {
     width: 79px;
+
+    border-radius: 22px;
+}
+.button-container__content_width-small-medium {
+    width: 89px;
 
     border-radius: 22px;
 }
@@ -79,10 +85,10 @@
 .button-container__content_decor-border:hover::before {
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
 }
-.button-container__content_arrow::before {
+.button-container_arrow::before {
     position: absolute;
 
-    content: "arrow_forward";
+    content: 'arrow_forward';
     width: 40px;
     height: 40px;
     top: 0px;
@@ -99,5 +105,6 @@
 
     text-transform: initial;
 
-    color: white;
+	color: white;
+	z-index: 10;
 }

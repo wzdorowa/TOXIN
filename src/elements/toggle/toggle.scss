@@ -4,7 +4,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12.8px;
     line-height: 20px;
 
     color: rgba(31, 32, 65, 0.75);
@@ -12,13 +12,13 @@
 .toggle-container__indicator {
     position: absolute;
 
-    width: 40px;
-    height: 20px;
+    width: 36px;
+    height: 18.5px;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 10px;
 }
 .toggle-container__description {
-    padding-left: 50px;
+    padding-left: 45px;
 }
 .toggle-container__filter input[type="checkbox"]:checked + .toggle-container__indicator {
     border: 1px solid #BC9CFF;
@@ -27,11 +27,11 @@
     content: "";
 
     position: absolute;
-    top: 3px;
-    left: 23px;
+    top: 2.5px;
+    left: 21px;
 
-    width: 14px;
-    height: 14px;
+    width: 11px;
+    height: 11px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 10px;
 }
@@ -39,11 +39,11 @@
     content: "";
 
     position: absolute;
-    top: 3px;
+    top: 2.5px;
     left: 3px;
 
-    width: 14px;
-    height: 14px;
+    width: 11px;
+    height: 11px;
     background: rgba(31, 32, 65, 0.25);
     border-radius: 10px;
 }
