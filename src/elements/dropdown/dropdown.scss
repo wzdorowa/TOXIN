@@ -4,10 +4,12 @@
 .dropdown-container__slideToggle {
 	position: absolute;
 
-    width: 100%;
     z-index: 2;
 
     display: none;
+}
+.dropdown-container__slideToggle_medium {
+	width: 242px;
 }
 .dropdown-container__content {
 	display: flex;
@@ -16,12 +18,13 @@
 
     background-color: white;
 
-    min-height: 145px;
+	min-height: 106px;
+	max-height: 145px;
 
 	padding-top: 6px;
     padding-left: 12px;
 	padding-right: 6px;
-	padding-bottom: 10px;
+	padding-bottom: 4px;
 
     border: 1px solid rgba(31, 32, 65, 0.5);
     box-sizing: border-box;
@@ -37,7 +40,11 @@
 }
 .dropdown-container__buttons {
     display: flex;
-    justify-content: space-between;
+	justify-content: space-between;
+	height: 39px;
+}
+.dropdown-container__buttons_display-none {
+	display: none;
 }
 .dropdown-container__slideToggle_show {
     display: block;

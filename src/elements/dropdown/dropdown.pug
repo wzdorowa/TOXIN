@@ -1,15 +1,15 @@
 include ../dropdown-row/dropdown-row.pug
 
-mixin dropdown(label, padding, placeholder, size)
+mixin dropdown(label, padding, placeholder, size, display)
 	.dropdown-container
 		.dropdown-container__list
 			+base-input(label, padding, placeholder, size, 'arrow-down', 'top', '', 'dropdown-list')
-		.dropdown-container__slideToggle
+		.dropdown-container__slideToggle(class='dropdown-container__slideToggle_'+size)
 			.dropdown-container__content
 				.dropdown-container__rows
 					+dropdown-row('Взрослые', '2')
 					+dropdown-row('Дети', '1')
 					+dropdown-row('Младенцы', '0')
-				.dropdown-container__buttons
+				.dropdown-container__buttons(class='dropdown-container__buttons_display-'+display || false)
 					+base-button('Очистить', '', 'noDecor')
 					+base-button('Применить', '', 'noDecor')
