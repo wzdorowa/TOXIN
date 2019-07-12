@@ -11,6 +11,9 @@
 .dropdown-container__slideToggle_medium {
 	width: 242px;
 }
+.dropdown-container__slideToggle_large {
+	width: 290px;
+}
 .dropdown-container__content {
 	display: flex;
     flex-direction: column;
@@ -42,6 +45,8 @@
     display: flex;
 	justify-content: space-between;
 	height: 39px;
+
+	padding-top: 12px;
 }
 .dropdown-container__buttons_display-none {
 	display: none;
