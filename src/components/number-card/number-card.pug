@@ -6,8 +6,7 @@ mixin numberCard(number, text, cost, amount)
 		input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-2")
 		input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-3")
 		input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-4")
-		.numberCard-container__content
-			img.numberCard-container__img(src="../../components/number-card/images/image.png", alt="")
+		.numberCard-container__content(class='numberCard-container__content_'+number)
 		.numberCard-container__description
 			.numberCard-container__data
 				.numberCard-container__specification

@@ -1,8 +1,11 @@
 .header-container-wrapper {
-    width: 100%;
+    width: 1310px;
     height: 64px;
     background-color: white;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+	
+	margin-left: auto;
+	margin-right: auto;
 }
 .header-container {
     display: flex;
