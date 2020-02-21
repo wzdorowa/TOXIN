@@ -1,4 +1,4 @@
-$('.rating').forEach(() => {
+$('.rating').each(() => {
 //var rating = document.querySelector('.rating');
 //var ratingItem = document.querySelectorAll('.rating-item');
 const rating = this;

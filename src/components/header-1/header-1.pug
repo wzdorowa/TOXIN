@@ -7,11 +7,12 @@ mixin header1()
         .header-container
             .header-container__logo
                 +logo()
-            .header-container__navigation
-                ul.header-container__list
-                    each val, index in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
-                        li.header-container__item
-                            a.header-container__link(href="")= val
-                .header-container__user
-                    +base-button('Войти', 'small', 'small', 'border')
-                    +base-button('Зарегистироваться', 'medium-large', 'small', 'background')
+                .header-container__user-icon
+                .header-container__navigation-icon
+            ul.header-container__navigation
+                each val, index in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+                    li.header-container__item
+                        a.header-container__link(href="")= val
+            .header-container__user
+                +base-button('Войти', 'small', 'small', 'border')
+                +base-button('Зарегистироваться', 'medium-large', 'small', 'background')

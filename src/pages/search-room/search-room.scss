@@ -1,26 +1,54 @@
 .search-room-container-wrapper {
-    width: 1440px;
-    height: 1360px;
+    width: 320px; //1440px;
+    //min-height: 1360px;
     margin-left: auto;
     margin-right: auto;
 }
 .search-room-content {
 	position: relative;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
 
-	width: 1055px;
-    min-height: 1232px;
     padding-top: 27px;
     margin-left: auto;
     margin-right: auto;
+}
+.search-room-filter-access__title {
+	display: inline-block;
+	position: relative;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	line-height: 17px;
+
+	color: #1F2041;
+	margin: 0;
+	padding-right: 30px;
+	padding-bottom: 15px;
+}
+.search-room-filter-access__title::before {
+	position: absolute;
+    content: 'filter_list';
+
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+	line-height: 20px;
+	top: -2px;
+	right: 0px;
+    text-transform: initial;
 }
 .search-room-filter {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 248px;
+	align-items: center;
 	height: 675px;
+	display: none;
 }
 .search-room-filter__group-inputs {
 	display: flex;
@@ -107,18 +135,18 @@
 
 	width: 100%;
 	margin-bottom: 21px;
+	text-align: center;
 }
 .search-room-result {
-	height: 1152px;
+	display: flex;
+	flex-direction: column;
 }
 .search-room-result__cards-numbers {
-	max-width: 758px;
-	height: 1010px;
+	width: 100%;
 
-	display: flex;
-	flex-wrap: wrap;
+	display: flex;flex-direction: column;
 	justify-content: space-between;
-	align-items: space-between;
+	align-items: center;
 	
 }
 .search-room-result__pagination {
