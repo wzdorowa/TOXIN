@@ -3,11 +3,11 @@
     display: flex;
     justify-content: space-between;
 
-	width: 99px;
-	height: 36px;
+	width: 106px;
+	height: 40px;
 }
 .logo-container__sign {
-	height: 36px;
+	height: 40px;
 }
 .logo-container__sign::before {
     position: absolute;
@@ -34,6 +34,6 @@
     background-image: url('../elements/logo/images/Vector-2.svg');
 }
 .logo-container__text {
-	padding-top: 10px;
+	padding-top: 15px;
 	height: 36px;
 }

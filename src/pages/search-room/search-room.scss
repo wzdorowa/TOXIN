@@ -1,10 +1,10 @@
 .search-room-container-wrapper {
-    width: 320px; //1440px;
-    //min-height: 1360px;
     margin-left: auto;
-    margin-right: auto;
+	margin-right: auto;
+	padding-top: 2px;
 }
 .search-room-content {
+	min-width: 320px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -13,7 +13,20 @@
 
     padding-top: 27px;
     margin-left: auto;
-    margin-right: auto;
+	margin-right: auto;
+	@media (min-width: 720px) {
+		min-width: 720px;
+	}
+	@media (min-width: 1160px) {
+		width: 1160px;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+}
+.search-room-filter-access {
+	@media (min-width: 1160px) {
+		display: none;
+	}
 }
 .search-room-filter-access__title {
 	display: inline-block;
@@ -43,18 +56,22 @@
     text-transform: initial;
 }
 .search-room-filter {
+	min-width: 265px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
-	height: 675px;
+	min-height: 675px;
 	display: none;
+	@media (min-width: 1160px) {
+		display: flex;
+		min-height: 740px;
+	}
 }
 .search-room-filter__group-inputs {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 135px;
+	height: 145px;
 }
 .search-room-filter__range-slider {
 	display: flex;
@@ -93,7 +110,7 @@
     justify-content: space-between;
 
     max-width: 240px;
-	min-height: 139px;
+	min-height: 150px;
 	margin-bottom: 16px;
 }
 .search-room-filter__dropdown {
@@ -136,17 +153,28 @@
 	width: 100%;
 	margin-bottom: 21px;
 	text-align: center;
+	@media (min-width: 1160px) {
+		text-align: start;
+	}
 }
 .search-room-result {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
+	margin-left: 40px;
 }
 .search-room-result__cards-numbers {
 	width: 100%;
 
-	display: flex;flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+	@media (min-width: 321px) {
+		flex-direction: row;
+		justify-content: space-around;
+	}
 	
 }
 .search-room-result__pagination {

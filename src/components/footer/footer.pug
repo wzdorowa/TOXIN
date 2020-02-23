@@ -4,18 +4,19 @@ mixin footer(borderTop)
 			.footer-container__logo
 				+logo()
 				p.footer-container__logo-description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации "Отельные взгляды"
-			ul.footer-container__list
-				each val, index in ['Навигация', 'О нас', 'Новости', 'Служба поддержки', 'Услуги']
-					li.footer-container__item
-						a.footer-container__link(href="")= val
-			ul.footer-container__list
-				each val, index in ['О нас', 'О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
-					li.footer-container__item
-						a.footer-container__link(href="")= val
-			ul.footer-container__list
-				each val, index in ['Служба поддержки', 'Соглашения', 'Сообщества', 'Связь с нами']
-					li.footer-container__item
-						a.footer-container__link(href="")= val
+			.footer-container__information
+				ul.footer-container__list
+					each val, index in ['Навигация', 'О нас', 'Новости', 'Служба поддержки', 'Услуги']
+						li.footer-container__item
+							a.footer-container__link(href="")= val
+				ul.footer-container__list
+					each val, index in ['О нас', 'О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+						li.footer-container__item
+							a.footer-container__link(href="")= val
+				ul.footer-container__list
+					each val, index in ['Служба поддержки', 'Соглашения', 'Сообщества', 'Связь с нами']
+						li.footer-container__item
+							a.footer-container__link(href="")= val
 			.footer-container__subscribe
 				span.footer-container__subscribe-title Подписка
 				span.footer-container__subscribe-description Получайте специальные предложения и новости сервиса
