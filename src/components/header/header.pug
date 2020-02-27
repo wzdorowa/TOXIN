@@ -2,17 +2,17 @@ include ../../elements/logo/logo.pug
 include ../../elements/base-button/base-button.pug
 include ../../elements/base-input/base-input.pug
 
-mixin header1()
+mixin header()
     .header-container-wrapper
         .header-container
             .header-container__logo
-                +logo()
-                .header-container__user-icon
-                .header-container__navigation-icon
+                +logo()   
             ul.header-container__navigation
                 each val, index in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
                     li.header-container__item
                         a.header-container__link(href="")= val
+            .header-container__user-icon
+            .header-container__navigation-icon 
             .header-container__user
                 +base-button('Войти', 'small-medium', 'small', 'border')
                 +base-button('Зарегистироваться', 'medium-large', 'small', 'background')

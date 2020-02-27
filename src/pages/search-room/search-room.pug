@@ -1,6 +1,6 @@
 extends ../base.pug
 
-include ../../components/header-1/header-1.pug
+include ../../components/header/header.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../elements/base-input/base-input.pug
@@ -13,7 +13,7 @@ include ../../elements/pagination/pagination.pug
 
 block content
 	.search-room-container-wrapper
-		+header1()
+		+header()
 		.search-room-content
 			.search-room-filter-access
 				h1.search-room-filter-access__title Дополнительные параметры

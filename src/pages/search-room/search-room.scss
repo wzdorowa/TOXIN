@@ -8,23 +8,38 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 
     padding-top: 27px;
     margin-left: auto;
 	margin-right: auto;
+	@media (min-width: 321px) {
+		min-width: 321px;
+	}
+	@media (min-width: 480px) {
+		min-width: 480px;
+	}
 	@media (min-width: 720px) {
 		min-width: 720px;
 	}
-	@media (min-width: 1160px) {
-		width: 1160px;
+	@media (min-width: 1024px) {
+		min-width: 1024px;
 		flex-direction: row;
 		align-items: flex-start;
 	}
+	@media (min-width: 1136px) {
+		min-width: 1136px;
+		max-width: 1170px;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	@media (min-width: 1170px) {
+	}
 }
 .search-room-filter-access {
-	@media (min-width: 1160px) {
+	@media (min-width: 1024px) {
 		display: none;
 	}
 }
@@ -62,7 +77,7 @@
 	justify-content: space-between;
 	min-height: 675px;
 	display: none;
-	@media (min-width: 1160px) {
+	@media (min-width: 1024px) {
 		display: flex;
 		min-height: 740px;
 	}
@@ -143,25 +158,51 @@
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: bold;
-	font-size: 23.2px;
-	line-height: 23.2px;
+	font-size: 20px;
+	line-height: 20px;
 
 	color: #1F2041;
 	margin: 0;
 	margin-top: 5px;
 
-	width: 100%;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom: 23px;
 	text-align: center;
-	@media (min-width: 1160px) {
+	@media (min-width: 321px) {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media (min-width: 1024px) {
+		width: 100%;
+		font-size: 23.2px;
+		line-height: 23.2px;
+	}
+	@media (min-width: 1097px) {
+		width: 100%;
 		text-align: start;
+		font-size: 23.2px;
+		line-height: 23.2px;
 	}
 }
 .search-room-result {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	margin-left: 5.3%;
+	@media (min-width: 1024px) {
+		margin-left: 1%;
+		margin-right: 1%;
+	}
+	@media (min-width: 1136px) {
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+	@media (min-width: 1170px) {
+		margin-left: 5.3%;
+		margin-right: auto;
+	}
 }
 .search-room-result__cards-numbers {
 	width: 100%;
@@ -175,8 +216,16 @@
 		flex-direction: row;
 		justify-content: space-around;
 	}
-	@media (min-width: 1160px) {
+	@media (min-width: 480px) {
+	}
+	@media (min-width: 720px) {
+	}
+	@media (min-width: 1080px) {
+	}
+	@media (min-width: 1136px) {
 		justify-content: space-between;
+	}
+	@media (min-width: 1170px) {
 	}
 	
 }
