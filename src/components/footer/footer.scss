@@ -2,7 +2,9 @@
     width: 100%;
     background-color: white;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-    @media (min-width: 1160px) {
+    margin-top: 65px;
+    padding-top: 30px;
+    @media (min-width: 1170px) {
         margin-top: 65px;
         padding-top: 62px;
         padding-bottom: 75px;
@@ -16,19 +18,21 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 320px;//1055px;
+    width: 320px;
 
     margin-left: auto;
     margin-right: auto;
-    padding-top: 40px; //92px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     @media (min-width: 720px) {
         min-width: 720px;
     }
-    @media (min-width: 1160px) {
-        min-width: 1160px;
+    @media (min-width: 1170px) {
+        min-width: 1170px;
         min-height: 180px;
         flex-direction: row;
         align-items: flex-start;
+        padding-bottom: 0;
     }
 }
 .footer-container__logo {
@@ -38,9 +42,10 @@
     align-items: center;
 	width: 260px;
     height: 117px;
-    margin-bottom: 15px;
-    @media (min-width: 1160px) {
+    margin-bottom: 30px;
+    @media (min-width: 1170px) {
         align-items: flex-start;
+        margin-bottom: 15px;
     }
 }
 .footer-container__logo-description {
@@ -56,7 +61,7 @@
 	margin: 0;
     min-height: 60px;
     text-align: center;
-    @media (min-width: 1160px) {
+    @media (min-width: 1170px) {
         margin-top: 20px;
         text-align: start;
     }
@@ -66,11 +71,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 15px;
 
-    @media (min-width: 489px) {
+    @media (min-width: 480px) {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
+        min-height: 300px;
     }
     @media (min-width: 720px) {
         width: 560px;
@@ -106,12 +113,11 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
+
+    font-size: 14px;
+    line-height: 17px;
     
     color: rgba(31, 32, 65, 0.5);
-    @media (min-width: 321px) {
-        font-size: 14px;
-        line-height: 17px;
-    }
 }
 .footer-container__item:first-child .footer-container__link {
     font-family: 'Montserrat';
@@ -135,11 +141,13 @@
 	flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    @media (min-width: 1160px) {
+    min-height: 120px;
+    @media (min-width: 720px) {
         width: 258px;
+    }
+    @media (min-width: 1170px) {
         min-height: 150px;
         align-items: flex-start;
-        
     }
 }
 .footer-container__subscribe-title {
@@ -166,7 +174,7 @@
 
     color: rgba(31, 32, 65, 0.75);
     text-align: center;
-    @media (min-width: 1160px) {
+    @media (min-width: 1170px) {
         text-align: start;
     }
 }
