@@ -2,11 +2,18 @@ include ../../elements/rate-button/rate-button.pug
 
 mixin numberCard(number, text, cost, amount)
 	.numberCard-container
-		input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-1" checked)
-		input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-2")
-		input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-3")
-		input.numberCard-container__switch-slider(type="radio", name="point-slider", id="numberCard-4")
-		.numberCard-container__content(class='numberCard-container__content_'+number)
+		.numberCard-container__slider
+			.numberCard-container__content(class='numberCard-container__content_'+number)
+			.numberCard-container__content(class='numberCard-container__content_'+number)
+			.numberCard-container__content(class='numberCard-container__content_'+number)
+			.numberCard-container__content(class='numberCard-container__content_'+number)
+			.numberCard-container__prev
+			.numberCard-container__next
+		.numberCard-container__slider-dots
+			span.numberCard-container__switch-slider
+			span.numberCard-container__switch-slider
+			span.numberCard-container__switch-slider
+			span.numberCard-container__switch-slider
 		.numberCard-container__description
 			.numberCard-container__data
 				.numberCard-container__specification
@@ -25,8 +32,3 @@ mixin numberCard(number, text, cost, amount)
 					span.numberCard-container__amount-reviews= amount
 					span.numberCard-container__amount-reviews-description
 						|  Отзывов
-		.numberCard-container__controls
-			label.numberCard-container__switch-btn(for="numberCard-1")
-			label.numberCard-container__switch-btn(for="numberCard-2")
-			label.numberCard-container__switch-btn(for="numberCard-3")
-			label.numberCard-container__switch-btn(for="numberCard-4")

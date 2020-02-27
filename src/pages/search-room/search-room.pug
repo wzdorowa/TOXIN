@@ -9,7 +9,6 @@ include ../../elements/checkbox-button/checkbox-button.pug
 include ../../elements/dropdown/dropdown.pug
 include ../../elements/checkbox-list/checkbox-list.pug
 include ../../components/number-card/number-card.pug
-include ../../components/number-card-2/number-card-2.pug
 include ../../elements/pagination/pagination.pug
 
 block content
@@ -41,17 +40,17 @@ block content
 				h1.search-room-result__title Номера, которые мы для вас подобрали
 				.search-room-result__cards-numbers
 					+numberCard('888', 'люкс', '9 990', '145', 'border')
-					+numberCard2('840', '', '9 990', '65', 'border')
-					+numberCard2('980', 'люкс', '8 500', '35', 'border')
-					+numberCard2('856', '', '7 300', '19', 'border')
-					+numberCard2('740', '', '6 000', '44', 'border')
-					+numberCard2('982', '', '5 800', '56', 'border')
-					+numberCard2('678', '', '5 500', '45', 'border')
-					+numberCard2('450', '', '5 300', '39', 'border')
-					+numberCard2('350', '', '5 000', '77', 'border')
-					+numberCard2('666', '', '5 000', '25', 'border')
-					+numberCard2('444', '', '5 000', '15', 'border')
-					+numberCard2('352', '', '5 000', '55', 'border')
+					+numberCard('840', '', '9 990', '65', 'border')
+					+numberCard('980', 'люкс', '8 500', '35', 'border')
+					+numberCard('856', '', '7 300', '19', 'border')
+					+numberCard('740', '', '6 000', '44', 'border')
+					+numberCard('982', '', '5 800', '56', 'border')
+					+numberCard('678', '', '5 500', '45', 'border')
+					+numberCard('450', '', '5 300', '39', 'border')
+					+numberCard('350', '', '5 000', '77', 'border')
+					+numberCard('666', '', '5 000', '25', 'border')
+					+numberCard('444', '', '5 000', '15', 'border')
+					+numberCard('352', '', '5 000', '55', 'border')
 				.search-room-result__pagination
 					+pagination('1 – 12 из 100+ вариантов аренды')
 		+footer('borderTop')
