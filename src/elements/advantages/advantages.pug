@@ -1,6 +1,6 @@
-mixin advantages(title, value, nameIcon, line, height, marginLeft)
+mixin advantages(title, value, nameIcon, line, height)
     .advantages-container(class='advantages-container_'+line || false, class='advantages-container_'+height || false)
         .advantages-container__icon(class='advantages-container__icon_'+nameIcon || userIcon)
-        .advantages-container__content(class='advantages-container__content_'+marginLeft || false)
+        .advantages-container__content
             h1.advantages-container__title= title
             span.advantages-container__value= value

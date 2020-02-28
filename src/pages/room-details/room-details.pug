@@ -1,6 +1,6 @@
 extends ../base.pug
 
-include ../../components/header-1/header-1.pug
+include ../../components/header/header.pug
 include ../../elements/advantages/advantages.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
@@ -10,13 +10,12 @@ include ../../components/form-result-search-room/form-result-search-room.pug
 
 block content
 	.room-details-container-wrapper
-		+header1()
+		+header()
 		.room-details-content
 			.room-details-content__slider
-				img(src="images/image1.png", alt="", width="892px" height="441px")
-				.room-details-content__img-min-group
-					img(src="images/image2.png", alt="", width="416px", height="221px")
-					img(src="images/image3.png", alt="", width="416px", height="220px")
+				img.room-details-content__slider-image-1(src="images/image1.png")
+				img.room-details-content__slider-image-2(src="images/image2.png")
+				img.room-details-content__slider-image-3(src="images/image3.png")
 			.room-details-content__information
 				.room-details-content__column-wide
 					.room-details-content__row
@@ -33,8 +32,8 @@ block content
 							.room-details-content__review-description
 								h2.room-details-content__title-review Отзывы посетителей номера
 								span.room-details-content__review-sum 2 отзыва
-							+review('Мурад Сарафанов', '5 дней назад', 'Murad', '', 'small', '8', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-							+review('Патрисия Стёклышкова', 'Неделю назад', 'Patriziya', '', 'small', '8', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+							+review('Мурад Сарафанов', '5 дней назад', 'Murad', '', 'small', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+							+review('Патрисия Стёклышкова', 'Неделю назад', 'Patriziya', '', 'small', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
 					.room-details-content__row
 						.room-details-content__extra-info
 							.room-details-content-regulations
