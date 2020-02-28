@@ -75,11 +75,23 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	min-height: 675px;
+	height: 675px;
 	display: none;
+	@media (min-width: 650px) {
+		min-width: 570px;
+		height: 400px;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		margin-right: auto;
+		margin-left: auto;
+	}
 	@media (min-width: 1024px) {
-		display: flex;
+		min-width: 265px;
 		min-height: 740px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		
 	}
 }
 .search-room-filter__group-inputs {
@@ -234,4 +246,7 @@
 	justify-content: center;
 
 	margin-top: 25px;
+}
+.display-show {
+    display: flex;
 }
