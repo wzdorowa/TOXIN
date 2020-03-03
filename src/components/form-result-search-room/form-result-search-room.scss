@@ -7,7 +7,6 @@
     padding-left: 7.9%;
     padding-right: 7.9%;
 	padding-top: 7.8%;
-	//padding-bottom: 27px;
 
     background-color: white;
 
@@ -15,6 +14,9 @@
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    @media(min-width: 720px) {
+        padding-top: 40px;
+	}
 }
 .resultSearchRoom-container__description {
     display: flex;
