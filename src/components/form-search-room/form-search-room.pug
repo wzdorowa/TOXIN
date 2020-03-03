@@ -8,5 +8,5 @@ mixin searchRoom(text)
         .searchRoom-container__date-group
             +base-input('Прибытие', 'padding', 'ДД.ММ.ГГГГ', 'small', 'arrow-down', 'top', 'bottom')
             +base-input('Выезд', 'padding', 'ДД.ММ.ГГГГ', 'small', 'arrow-down', 'top', 'bottom')
-        +dropdown('Гости', 'padding', 'Сколько гостей', 'large')
-        +base-button('Подобрать номер', 'large', 'large', 'background', 'arrow')
+        +dropdown('Гости', 'padding', 'Сколько гостей', 'parent-container')
+        +base-button('Подобрать номер', 'parent-container', 'large', 'background', 'arrow')

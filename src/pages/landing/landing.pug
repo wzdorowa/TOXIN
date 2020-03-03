@@ -1,6 +1,6 @@
 extends ../base.pug
 
-include ../../components/header-1/header-1.pug
+include ../../components/header/header.pug
 include ../../components/form-search-room/form-search-room.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
@@ -9,7 +9,7 @@ include ../../components/datepicker/datepicker.pug
 
 block content
 	.landing-container-wrapper
-		+header1()
+		+header()
 		.landing-content
 			+searchRoom('Найдём номера под ваши пожелания')
 			.landing-content__datepicker

@@ -14,6 +14,9 @@
 .dropdown-container__slideToggle_large {
 	width: 290px;
 }
+.dropdown-container__slideToggle_parent-container {
+	width: 100%;
+}
 .dropdown-container__content {
 	display: flex;
     flex-direction: column;
@@ -22,10 +25,10 @@
     background-color: white;
 
 	min-height: 106px;
-	max-height: 145px;
+	max-height: 175px;
 
 	padding-top: 6px;
-    padding-left: 12px;
+    padding-left: 15px;
 	padding-right: 6px;
 	padding-bottom: 4px;
 
@@ -39,12 +42,13 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-    height: 95px;
+	padding-top: 5px;
+    height: 107px;
 }
 .dropdown-container__buttons {
     display: flex;
 	justify-content: space-between;
-	height: 39px;
+	height: 40px;
 
 	padding-top: 12px;
 }
