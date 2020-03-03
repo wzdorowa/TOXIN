@@ -65,10 +65,7 @@
     width: 258px;
 }
 .input-container_size-small {
-    width: 125px;
-    @media(min-width: 380px) {
-        width: 150px;
-    }
+    width: 99%;
 }
 .input-container_arrow-down::before {
     position: absolute;
