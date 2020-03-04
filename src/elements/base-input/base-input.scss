@@ -53,10 +53,7 @@
     color: rgba(31, 32, 65, 0.75);
 }
 .input-container_size-large {
-    width: 260px;
-    @media(min-width: 380px) {
-        width: 320px;
-    }
+    width: 100%;
 }
 .input-container_size-medium {
     width: 265px;

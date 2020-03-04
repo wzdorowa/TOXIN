@@ -1,16 +1,21 @@
 .registration-container-wrapper {
-    width: 1310px;
-    min-height: 772px;
-    background: url(registration/images/image4.1.png);
-	background-repeat: no-repeat;
-	background-size: 1310px;
+    min-width: 320px;
+    max-width: 1440px;
+	min-height: 670px;
+	
+	margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+}
+.registration-content__image-background {
+	position: absolute;
+	top: 0;
+    z-index: -1;
 }
 .registration-content {
 	position: relative;
 	width: 100%;
-	min-height: 610px;
+	min-height: 670px;
 	margin-left: auto;
 	margin-right: auto;
 	

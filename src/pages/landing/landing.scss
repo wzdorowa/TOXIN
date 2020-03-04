@@ -9,6 +9,10 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+.landing-content__image-background {
+    position: absolute;
+    z-index: -1;
+}
 .landing-content {
     position: relative;
     min-width: 320px;
@@ -19,10 +23,6 @@ body {
     z-index: 1;
     margin-left: auto;
     margin-right: auto;
-}
-.landing-content__image-background {
-    position: absolute;
-    z-index: -1;
 }
 .landing-content__datepicker {
     display: none;

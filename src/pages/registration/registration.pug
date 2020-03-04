@@ -1,16 +1,17 @@
 extends ../base.pug
 
-include ../../components/header-1/header-1.pug
+include ../../components/header/header.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../components/social-btn/social-btn.pug
 include ../../components/form-check-in/form-check-in.pug
 
 block content
+	+header()
 	.registration-container-wrapper
-		+header1()
+		img.registration-content__image-background(src="images/image4.1.png")
 		.registration-content
 			.registration-content__checkIn
 				+checkIn('Регистрация аккаунта')
-		+footer()
-		+copyright()
+	+footer()
+	+copyright()

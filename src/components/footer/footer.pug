@@ -1,5 +1,5 @@
-mixin footer(borderTop)
-	.footer-container-wrapper(class='footer-container-wrapper_'+borderTop)
+mixin footer(borderTop, marginTop)
+	.footer-container-wrapper(class='footer-container-wrapper_'+borderTop, class='footer-container-wrapper_'+marginTop)
 		.footer-container
 			.footer-container__logo
 				+logo()
