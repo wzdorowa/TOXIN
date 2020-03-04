@@ -1,16 +1,17 @@
 extends ../base.pug
 
-include ../../components/header-1/header-1.pug
+include ../../components/header/header.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../components/social-btn/social-btn.pug
 include ../../components/login/login.pug
 
 block content
+	+header()
 	.sign-in-container-wrapper
-		+header1()
+		img.sign-in-content__image-background(src="images/image4.png")
 		.sign-in-content
 			.sign-in-content__login
 				+login('Войти')
-		+footer()
-		+copyright()
+	+footer()
+	+copyright()
