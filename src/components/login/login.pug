@@ -2,8 +2,8 @@ mixin login(text)
 	.login-container
 		span.login-container__title= text
 		.login-container__login-details
-			+base-input('', '', 'Email', 'large', '', 'top', 'bottom')
-			+base-input('', '', 'Пароль', 'large', '', 'top', 'bottom')
+			+base-input('', '', 'Email', '', 'top', 'bottom')
+			+base-input('', '', 'Пароль', '', 'top', 'bottom')
 		.login-container__checkIn-details
 			+base-button('Войти', 'large', 'large', 'background', 'arrow')
 			.login-container__have-an-account

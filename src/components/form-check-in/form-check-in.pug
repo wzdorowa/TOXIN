@@ -6,16 +6,19 @@ mixin checkIn(text)
 		span.checkIn-container__title= text
 		.checkIn-container__user-data
 			.checkIn-container__group-inputs
-				+base-input('', '', 'Имя', 'large', '', 'top', 'bottom')
-				+base-input('', '', 'Фамилия', 'large', '', 'top', 'bottom')
+					+base-input('', '', 'Имя', '', 'top', 'bottom')
+					+base-input('', '', 'Фамилия', '', 'top', 'bottom')
 			.checkIn-container__buttons
 				+radio-button('Мужчина', 'checked')
 				+radio-button('Женщина')
-		+base-input('Дата рождения', 'padding', 'ДД.ММ.ГГГГ', 'large', '', 'top', 'bottom')
+		.checkIn-container__input-container
+			+base-input('Дата рождения', 'padding', 'ДД.ММ.ГГГГ', '', 'top', 'bottom')
 		.checkIn-container__login-details
 			.checkIn-container__group-inputs-login
-				+base-input('Данные для входа в сервис', 'padding', 'Email', 'large', '', 'top', 'bottom')
-				+base-input('', '', 'Пароль', 'large', '', 'top', 'bottom')
+				.checkIn-container__input-container
+					+base-input('Данные для входа в сервис', 'padding', 'Email', '', 'top', 'bottom')
+				.checkIn-container__input-container
+					+base-input('', '', 'Пароль', '', 'top', 'bottom')
 			+toggle('Получать спецпредложения')
 		.checkIn-container__checkIn-details
 			+base-button('Зарегистрироваться', 'large', 'large', 'background', 'arrow')

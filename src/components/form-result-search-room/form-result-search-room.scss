@@ -88,6 +88,12 @@
 
 	margin-bottom: 20px;
 }
+.resultSearchRoom-container__input-container {
+    width: 47%;
+}
+.resultSearchRoom-container__input-container:last-of-type {
+    width: 100%;
+}
 .resultSearchRoom-container__count-wrapper {
     width: 100%;
 	height: 110px;

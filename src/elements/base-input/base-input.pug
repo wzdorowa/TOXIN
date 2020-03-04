@@ -1,4 +1,4 @@
-mixin base-input(label, padding, placeholder, size, arrow, borderRadiusTop, borderRadiusBottom, attributeName)
+mixin base-input(label, padding, placeholder, arrow, borderRadiusTop, borderRadiusBottom, attributeName)
     div.input-container()
         span(class='input-container__description-'+padding || false)= label
         .input-container__wrapper(class='input-container_'+arrow || false, class='input-container_size-'+size || 'large')
