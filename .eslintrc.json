@@ -1,0 +1,29 @@
+{
+  "env": {
+  "browser": true,
+  "es6": true,
+  "es2017": true,
+  "jest": true
+  },
+  "plugins": [
+    "prettier"
+  ],
+  "extends": [
+    "eslint-config-airbnb-base",
+    "plugin:prettier/recommended",
+    "prettier"
+],
+"rules": {
+  "import": "off",
+  "import/extensions": "off",
+  "import/no-unresolved": "off",
+  "import/first": "off",
+  "import/order": "off",
+  "no-new": "off",
+  "no-shadow": "off"
+},
+"globals": {
+  "$": true,
+  "jQuery": true
+  }
+}
