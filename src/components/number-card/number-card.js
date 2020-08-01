@@ -15,24 +15,7 @@ $('.numberCard-container').each((index, element) => {
 
   /* Индекс слайда по умолчанию */
   let slideIndex = 1;
-  showSlides(slideIndex);
 
-  /* Функция уменьшяет индекс на 1, показывает предыдущий слайд */
-  prev[0].onclick = function () {
-    showSlides((slideIndex -= 1));
-  };
-  /* Функция увеличивает индекс на 1, показывает следующй слайд */
-  next[0].onclick = function () {
-    showSlides((slideIndex += 1));
-  };
-  dots.forEach((element, i) => {
-    element.addEventListener('click', () => currentSlide(i + 1));
-  });
-  /* Устанавливает текущий слайд */
-  function currentSlide(n) {
-    showSlides((slideIndex = n));
-  }
-  /* Основная функция слайдера */
   function showSlides(n) {
     if (n > slides.length) {
       slideIndex = 1;
@@ -40,11 +23,13 @@ $('.numberCard-container').each((index, element) => {
     if (n < 1) {
       slideIndex = slides.length;
     }
-    slides.forEach((element, i) => {
-      element.style.display = 'none';
+    slides.forEach(element => {
+      const slide = element;
+      slide.style.display = 'none';
     });
-    dots.forEach((element, i) => {
-      element.className = element.className.replace(
+    dots.forEach(element => {
+      const slide = element;
+      slide.className = element.className.replace(
         ' numberCard-container__switch-slider-active',
         '',
       );
@@ -53,4 +38,22 @@ $('.numberCard-container').each((index, element) => {
     dots[slideIndex - 1].className +=
       ' numberCard-container__switch-slider-active';
   }
+  /* Устанавливает текущий слайд */
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  showSlides(slideIndex);
+
+  /* Функция уменьшяет индекс на 1, показывает предыдущий слайд */
+  prev[0].onclick = () => {
+    showSlides((slideIndex -= 1));
+  };
+  /* Функция увеличивает индекс на 1, показывает следующй слайд */
+  next[0].onclick = () => {
+    showSlides((slideIndex += 1));
+  };
+  dots.forEach((element, i) => {
+    element.addEventListener('click', () => currentSlide(i + 1));
+  });
 });

@@ -1,5 +1,5 @@
-$(document).ready(function () {
-  $('.searchRoom-container__date-group').click(function () {
+$(document).ready(() => {
+  $('.searchRoom-container__date-group').click(() => {
     $('.landing-content__datepicker').slideToggle();
   });
 });

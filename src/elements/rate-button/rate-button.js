@@ -1,47 +1,20 @@
 $('.rating').each((index, element) => {
-  // var rating = document.querySelector('.rating');
-  // var ratingItem = document.querySelectorAll('.rating-item');
   const rating = element;
   const ratingItems = Array.from($(rating).children('.rating-item'));
 
-  rating.onclick = function (e) {
-    const { target } = e;
-    if (target.classList.contains('rating-item')) {
-      removeClass(ratingItems, 'current-active');
-      target.classList.add('active', 'current-active');
-    }
-  };
-
-  rating.onmouseover = function (e) {
-    const { target } = e;
-    if (target.classList.contains('rating-item')) {
-      removeClass(ratingItems, 'active');
-      target.classList.add('active');
-      mouseOverActiveClass(ratingItems);
-    }
-  };
-  rating.onmouseout = function () {
-    addClass(ratingItems, 'active');
-    mouseOutActiveClas(ratingItems);
-  };
-
-  function removeClass(arr) {
-    for (let i = 0, iLen = arr.length; i < iLen; i++) {
-      for (let j = 1; j < arguments.length; j++) {
-        ratingItems[i].classList.remove(arguments[j]);
-      }
+  function removeClass(elements, className) {
+    for (let i = 0; i < elements.length; i += i) {
+      ratingItems[i].classList.remove(className);
     }
   }
-  function addClass(arr) {
-    for (let i = 0, iLen = arr.length; i < iLen; i++) {
-      for (let j = 1; j < arguments.length; j++) {
-        ratingItems[i].classList.add(arguments[j]);
-      }
+  function addClass(elements, className) {
+    for (let i = 0, iLen = elements.length; i < iLen; i += i) {
+      ratingItems[i].classList.add(className);
     }
   }
 
   function mouseOverActiveClass(arr) {
-    for (let i = 0, iLen = arr.length; i < iLen; i++) {
+    for (let i = 0, iLen = arr.length; i < iLen; i += i) {
       if (arr[i].classList.contains('active')) {
         break;
       } else {
@@ -50,8 +23,8 @@ $('.rating').each((index, element) => {
     }
   }
 
-  function mouseOutActiveClas(arr) {
-    for (let i = arr.length - 1; i >= 1; i--) {
+  function mouseOutActiveClass(arr) {
+    for (let i = arr.length - 1; i >= 1; i -= i) {
       if (arr[i].classList.contains('current-active')) {
         break;
       } else {
@@ -59,4 +32,25 @@ $('.rating').each((index, element) => {
       }
     }
   }
+
+  rating.onclick = e => {
+    const { target } = e;
+    if (target.classList.contains('rating-item')) {
+      removeClass(ratingItems, 'current-active');
+      target.classList.add('active', 'current-active');
+    }
+  };
+
+  rating.onmouseover = e => {
+    const { target } = e;
+    if (target.classList.contains('rating-item')) {
+      removeClass(ratingItems, 'active');
+      target.classList.add('active');
+      mouseOverActiveClass(ratingItems);
+    }
+  };
+  rating.onmouseout = () => {
+    addClass(ratingItems, 'active');
+    mouseOutActiveClass(ratingItems);
+  };
 });
