@@ -1,18 +1,19 @@
-.advantages-container {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
+.advantages {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
 
-	width: 100%;
+  width: 100%;
+  height: 100%;
 }
-.advantages-container_line {
+.advantages_line {
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
 }
-.advantages-container__icon {
+.advantages__icon {
     width: 44px;
     height: 44px;
 }
-.advantages-container__icon_mood::before {
+.advantages__icon_mood::before {
     content: "mood";
 
     position: absolute;
@@ -21,7 +22,7 @@
     font-size: 44px;
     color: #BC9CFF;
 }
-.advantages-container__icon_locationCity::before {
+.advantages__icon_locationCity::before {
     content: "location_city";
 
     position: absolute;
@@ -30,7 +31,7 @@
     font-size: 44px;
     color: #BC9CFF;
 }
-.advantages-container__icon_whatshot::before {
+.advantages__icon_whatshot::before {
 	content: "whatshot";
 
     position: absolute;
@@ -39,7 +40,7 @@
     font-size: 44px;
     color: #BC9CFF;
 }
-.advantages-container__icon_userIcon::before {
+.advantages__icon_userIcon::before {
     content: "";
 
     position: absolute;
@@ -51,7 +52,7 @@
 	background-image: url(../elements/advantages/images/userIcon.png);
 	background-size: 90px;
 }
-.advantages-container__icon_Murad::before {
+.advantages-__icon_Murad::before {
     content: "";
 
     position: absolute;
@@ -64,7 +65,7 @@
 	background-size: 90px;
     
 }
-.advantages-container__icon_Patriziya::before {
+.advantages__icon_Patriziya::before {
     content: "";
 
     position: absolute;
@@ -77,10 +78,10 @@
 	background-size: 90px;
     
 }
-.advantages-container__content {
+.advantages__content {
     padding-left: 15px;
 }
-.advantages-container__title {
+.advantages__title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
@@ -91,7 +92,7 @@
 
     margin: 0;
 }
-.advantages-container__value {
+.advantages__value {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
@@ -99,10 +100,4 @@
     line-height: 24px;
 
     color: rgba(31, 32, 65, 0.75);
-}
-.advantages-container_large {
-	height: 63px;
-}
-.advantages-container_small {
-	height: 54px;
 }

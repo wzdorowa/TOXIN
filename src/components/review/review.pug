@@ -1,0 +1,9 @@
+include ../../elements/advantages/advantages.pug
+include ../../elements/like-button/like-button.pug
+
+mixin review(title, value, nameIcon, line, height, text)
+  .review
+    +advantages(title, value, nameIcon, line, height)
+    .review__content
+      +like-button('12', 'checked')
+      p.review__paragraph= text

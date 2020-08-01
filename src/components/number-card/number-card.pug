@@ -1,34 +1,34 @@
 include ../../elements/rate-button/rate-button.pug
 
 mixin numberCard(number, text, cost, amount)
-	.numberCard-container
-		.numberCard-container__slider
-			.numberCard-container__content(class='numberCard-container__content_'+number)
-			.numberCard-container__content(class='numberCard-container__content_'+number)
-			.numberCard-container__content(class='numberCard-container__content_'+number)
-			.numberCard-container__content(class='numberCard-container__content_'+number)
-			.numberCard-container__prev
-			.numberCard-container__next
-		.numberCard-container__slider-dots
-			span.numberCard-container__switch-slider
-			span.numberCard-container__switch-slider
-			span.numberCard-container__switch-slider
-			span.numberCard-container__switch-slider
-		.numberCard-container__description
-			.numberCard-container__data
-				.numberCard-container__specification
-					span.numberCard-container__sign-number №
-					span.numberCard-container__number= number
-					span.numberCard-container__kind= text
-				.numberCard-container__cost
-					span.numberCard-container__cost-room= cost
+	.numberCard
+		.numberCard__slider
+			.numberCard__content(class='numberCard__content_'+number)
+			.numberCard__content(class='numberCard__content_'+number)
+			.numberCard__content(class='numberCard__content_'+number)
+			.numberCard__content(class='numberCard__content_'+number)
+			.numberCard__prev
+			.numberCard__next
+		.numberCard__slider-dots
+			span.numberCard__switch-slider
+			span.numberCard__switch-slider
+			span.numberCard__switch-slider
+			span.numberCard__switch-slider
+		.numberCard__description
+			.numberCard__data
+				.numberCard__specification
+					span.numberCard__sign-number №
+					span.numberCard__number= number
+					span.numberCard__kind= text
+				.numberCard__cost
+					span.numberCard__cost-room= cost
 						| &#x20bd
-					span.numberCard-container__cost-room-description в сутки
-			.numberCard-container__data-border
-			.numberCard-container__reviews
-				.numberCard-container__rate-group-button
+					span.numberCard__cost-room-description в сутки
+			.numberCard__data-border
+			.numberCard__reviews
+				.numberCard__rate-group-button
 						+rate-button()
-				.numberCard--container__amount
-					span.numberCard-container__amount-reviews= amount
-					span.numberCard-container__amount-reviews-description
+				.numberCard__amount
+					span.numberCard__amount-reviews= amount
+					span.numberCard__amount-reviews-description
 						|  Отзывов

@@ -2,26 +2,26 @@ include ../../elements/radio-button/radio-button.pug
 include ../../elements/toggle/toggle.pug
 
 mixin checkIn(text)
-	.checkIn-container
-		span.checkIn-container__title= text
-		.checkIn-container__user-data
-			.checkIn-container__group-inputs
+	.checkIn
+		span.checkIn__title= text
+		.checkIn__user-data
+			.checkIn__group-inputs
 					+base-input('', '', 'Имя', '', 'top', 'bottom')
 					+base-input('', '', 'Фамилия', '', 'top', 'bottom')
-			.checkIn-container__buttons
+			.checkIn__buttons
 				+radio-button('Мужчина', 'checked')
 				+radio-button('Женщина')
-		.checkIn-container__input-container
+		.checkIn__input-container
 			+base-input('Дата рождения', 'padding', 'ДД.ММ.ГГГГ', '', 'top', 'bottom')
-		.checkIn-container__login-details
-			.checkIn-container__group-inputs-login
-				.checkIn-container__input-container
+		.checkIn__login-details
+			.checkIn__group-inputs-login
+				.checkIn__input-container
 					+base-input('Данные для входа в сервис', 'padding', 'Email', '', 'top', 'bottom')
-				.checkIn-container__input-container
+				.checkIn__input-container
 					+base-input('', '', 'Пароль', '', 'top', 'bottom')
 			+toggle('Получать спецпредложения')
-		.checkIn-container__checkIn-details
+		.checkIn__checkIn-details
 			+base-button('Зарегистрироваться', 'large', 'large', 'background', 'arrow')
-			.checkIn-container__have-an-account
-				span.checkIn-container__text Уже есть аккаунт на Toxin
+			.checkIn__have-an-account
+				span.checkIn__text Уже есть аккаунт на Toxin
 				+base-button('Войти', 'medium', 'large', 'border')

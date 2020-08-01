@@ -1,4 +1,4 @@
-.dropdown-row-container {
+.dropdown-row {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -12,7 +12,7 @@
     text-transform: uppercase;
     color: #1F2041;
 }
-.dropdown-row-container__amount-counter {
+.dropdown-row__amount-counter {
 	display: flex;
 	justify-content: space-between;
 	
@@ -21,13 +21,13 @@
     padding: 0;
     margin: 0;
 }
-.dropdown-row-container__amount {
+.dropdown-row__amount {
     width: 30px;
     height: 30px;
 
     text-align: center;
 }
-.dropdown-row-container__amount_sign {
+.dropdown-row__amount_sign {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;

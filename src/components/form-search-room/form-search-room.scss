@@ -1,4 +1,4 @@
-.searchRoom-container {
+.searchRoom {
 	display: flex;
 	flex-direction: column;
     flex-wrap: wrap;
@@ -48,7 +48,7 @@
     }
 
 }
-.searchRoom-container__title {
+.searchRoom__title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -58,13 +58,13 @@
 	color: #1F2041;
 	margin-bottom: -11px;
 }
-.searchRoom-container__date-group {
+.searchRoom__date-group {
     display: flex;
     justify-content: space-between;
 	width: 100%;
 	
 	margin-bottom: -10px;
 }
-.searchRoom-container__input-container {
+.searchRoom__input-container {
     width: 47%;
 }

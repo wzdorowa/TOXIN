@@ -1,7 +1,49 @@
-.chechbox-list {
+.checkbox-list {
 	position: relative;
 }
-.chechbox-list__slideToggle {
+.checkbox-list__title {
+  position: relative;
+  display: flex;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 44px;
+
+  text-transform: uppercase;
+
+  color: #1F2041;
+}
+.checkbox-list__indicator {
+  position: relative;
+  width: 44px;
+  height: 44px;
+margin-right: 0;
+margin-left: auto;
+}
+.checkbox-list__indicator::before {
+  position: absolute;
+
+  content: "keyboard_arrow_down";
+
+  top: 10px;
+  left: 7px;
+
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+line-height: 24px;
+
+  text-transform: initial;
+
+  color: rgba(31, 32, 65, 0.5);
+}
+.opened.checkbox-list__indicator::before {
+  transform: rotate(180deg);
+}
+.checkbox-list__slideToggle {
 	position: absolute;
 
 	width: 100%;
@@ -9,49 +51,7 @@
 
     display: none;
 }
-.chechbox-list__title {
-    position: relative;
-    display: flex;
-
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 11px;
-    line-height: 44px;
-
-    text-transform: uppercase;
-
-    color: #1F2041;
-}
-.chechbox-list__indicator {
-    position: relative;
-    width: 44px;
-    height: 44px;
-	margin-right: 0;
-	margin-left: auto;
-}
-.chechbox-list__indicator::before {
-    position: absolute;
-
-    content: "keyboard_arrow_down";
-
-    top: 10px;
-    left: 7px;
-
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-	line-height: 24px;
-
-    text-transform: initial;
-
-    color: rgba(31, 32, 65, 0.5);
-}
-.opened.chechbox-list__indicator::before {
-    transform: rotate(180deg);
-}
-.checkbox-list-container {
+.checkbox-list-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,6 +59,6 @@
     min-height: 213px;
     background-color: white;
 }
-.chechbox-list__slideToggle_show {
+.checkbox-list__slideToggle_show {
     display: block;
 }

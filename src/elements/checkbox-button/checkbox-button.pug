@@ -1,8 +1,8 @@
 mixin checkbox-button(value, checked, weight, description)
-    .checkbox-button-container
-        label.checkbox-button-container__filter
-            input.checkbox-button-container__content.visually-hidden(type='checkbox',
-             name='checkbox-button-container__content', checked=checked || false)
-            span.checkbox-button-container__indicator
-            span.checkbox-button-container__value(class='checkbox-button-container__value_weight-'+weight || false)=value
-        .checkbox-button-container__description= description
+  .checkbox-button
+    label.checkbox-button__filter
+      input.checkbox-button__content.visually-hidden(type='checkbox',
+        name='checkbox-button__content', checked=checked || false)
+      span.checkbox-button__indicator
+      span.checkbox-button__value(class='checkbox-button__value_'+weight || false)=value
+    .checkbox-button__description= description

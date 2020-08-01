@@ -1,15 +1,12 @@
-.logo-container {
+.logo {
     position: relative;
     display: flex;
     justify-content: space-between;
-
-	width: 106px;
+}
+.logo__sign {
 	height: 40px;
 }
-.logo-container__sign {
-	height: 40px;
-}
-.logo-container__sign::before {
+.logo__sign::before {
     position: absolute;
     content: '';
 
@@ -21,7 +18,7 @@
 
     background-image: url('../elements/logo/images/Vector-1.svg');
 }
-.logo-container__sign::after {
+.logo__sign::after {
     position: absolute;
     content: '';
 
@@ -33,7 +30,7 @@
 
     background-image: url('../elements/logo/images/Vector-2.svg');
 }
-.logo-container__text {
+.logo__text {
 	padding-top: 15px;
 	height: 36px;
 }

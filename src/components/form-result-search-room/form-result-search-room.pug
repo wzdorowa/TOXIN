@@ -1,42 +1,42 @@
 mixin resultSearchRoom(number, text, cost)
-	.resultSearchRoom-container
-		.resultSearchRoom-container__description
-			.resultSearchRoom-container__specification
-				span.resultSearchRoom-container__sign-number №
-				span.resultSearchRoom-container__number= number
-				span.resultSearchRoom-container__kind= text
-			.resultSearchRoom-container__cost
-				span.resultSearchRoom-container__cost-room= cost
+	.resultSearchRoom
+		.resultSearchRoom__description
+			.resultSearchRoom__specification
+				span.resultSearchRoom__sign-number №
+				span.resultSearchRoom-__number= number
+				span.resultSearchRoom__kind= text
+			.resultSearchRoom__cost
+				span.resultSearchRoom__cost-room= cost
 					| &#x20bd
-				span.resultSearchRoom-container__cost-room-description в сутки
-		.resultSearchRoom-container__inputs
-			.resultSearchRoom-container__input-container
+				span.resultSearchRoom__cost-room-description в сутки
+		.resultSearchRoom__inputs
+			.resultSearchRoom__input-container
 				+base-input('Прибытие', 'padding', '19.08.2019', 'arrow-down', 'top', 'bottom')
-			.resultSearchRoom-container__input-container
+			.resultSearchRoom__input-container
 				+base-input('Выезд', 'padding', '23.08.2019', 'arrow-down', 'top', 'bottom')
-			.resultSearchRoom-container__input-container
+			.resultSearchRoom__input-container
 				+base-input('Гости', 'padding', '3 гостя', 'arrow-down', 'top', 'bottom')
-		.resultSearchRoom-container__count-wrapper
-			ul.resultSearchRoom-container__count
-				li.resultSearchRoom-container__count-item 
+		.resultSearchRoom__count-wrapper
+			ul.resultSearchRoom__count
+				li.resultSearchRoom__count-item 
 					| 9 990&#x20bd
 					| x 4 суток
-				li.resultSearchRoom-container__count-item 
+				li.resultSearchRoom__count-item 
 					| 39 960&#x20bd
-			ul.resultSearchRoom-container__count
-				li.resultSearchRoom-container__count-item 
+			ul.resultSearchRoom__count
+				li.resultSearchRoom__count-item 
 					| Сбор за услуги: скидка 2 179&#x20bd
-					span.resultSearchRoom-container__count-item-sign
-				li.resultSearchRoom-container__count-item 
+					span.resultSearchRoom-__count-item-sign
+				li.resultSearchRoom__count-item 
 					| 0&#x20bd
-			ul.resultSearchRoom-container__count
-				li.resultSearchRoom-container__count-item 
+			ul.resultSearchRoom__count
+				li.resultSearchRoom__count-item 
 					| Сбор за дополнительные услуги
-					span.resultSearchRoom-container__count-item-sign
-				li.resultSearchRoom-container__count-item 
+					span.resultSearchRoom__count-item-sign
+				li.resultSearchRoom__count-item 
 					| 300&#x20bd
-		ul.resultSearchRoom-container__total
-			li.resultSearchRoom-container__total-item Итого
-			li.resultSearchRoom-container__total-item.resultSearchRoom-container__total-item_border
-			li.resultSearchRoom-container__total-item.resultSearchRoom-container__total-item_cost 38 081&#x20bd
+		ul.resultSearchRoom__total
+			li.resultSearchRoom__total-item Итого
+			li.resultSearchRoom__total-item.resultSearchRoom__total-item_border
+			li.resultSearchRoom__total-item.resultSearchRoom-__total-item_cost 38 081&#x20bd
 		+base-button('Забронировать', 'large', 'large', 'background', 'arrow')

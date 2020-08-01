@@ -1,4 +1,4 @@
-.numberCard-container {
+.numberCard {
     position: relative;
     width: 270px;
     height: 257px;
@@ -8,12 +8,12 @@
     border-radius: 4px;
     margin-bottom: 20px;
 }
-.numberCard-container__slider {
+.numberCard__slider {
     position: relative;
     width: 100%;
     height: 152px;
 }
-.numberCard-container__content {
+.numberCard__content {
 	width: 100%;
 	height: 100%;
 	background-size: 245px;
@@ -21,59 +21,59 @@
 	border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
-.numberCard-container__content_888 {
+.numberCard__content_888 {
     background-image: url("../components/number-card/images/image888.png");
     background-size: auto;
 }
-.numberCard-container__content_350 {
+.numberCard__content_350 {
     background-image: url("../components/number-card/images/image350.png");
     background-size: auto;
 }
-.numberCard-container__content_352 {
+.numberCard__content_352 {
     background-image: url("../components/number-card/images/image352.png");
     background-size: auto;
 }
-.numberCard-container__content_444 {
+.numberCard__content_444 {
     background-image: url("../components/number-card/images/image444.png");
     background-size: auto;
 }
-.numberCard-container__content_450 {
+.numberCard__content_450 {
     background-image: url("../components/number-card/images/image450.png");
     background-size: auto;
 }
-.numberCard-container__content_666 {
+.numberCard__content_666 {
     background-image: url("../components/number-card/images/image666.png");
     background-size: auto;
 }
-.numberCard-container__content_678 {
+.numberCard__content_678 {
     background-image: url("../components/number-card/images/image678.png");
     background-size: auto;
 }
-.numberCard-container__content_740 {
+.numberCard__content_740 {
     background-image: url("../components/number-card/images/image740.png");
     background-size: auto;
 }
-.numberCard-container__content_840 {
+.numberCard__content_840 {
     background-image: url("../components/number-card/images/image840.png");
     background-size: auto;
 }
-.numberCard-container__content_856 {
+.numberCard__content_856 {
     background-image: url("../components/number-card/images/image856.png");
     background-size: auto;
 }
-.numberCard-container__content_980 {
+.numberCard__content_980 {
     background-image: url("../components/number-card/images/image980.png");
     background-size: auto;
 }
-.numberCard-container__content_982 {
+.numberCard__content_982 {
     background-image: url("../components/number-card/images/image982.png");
     background-size: auto;
 }
-.numberCard-container__prev {
+.numberCard__prev {
     height: 100%;
     width: 44px;
 }
-.numberCard-container__slider:hover .numberCard-container__prev:after {
+.numberCard__slider:hover .numberCard__prev:after {
     position: absolute;
     content: 'keyboard_arrow_left';
 
@@ -88,7 +88,7 @@
     color: #FFFFFF;
     cursor: pointer;
 }
-.numberCard-container__slider:hover .numberCard-container__prev:before {
+.numberCard__slider:hover .numberCard__prev:before {
     position: absolute;
     content: '';
     top: 0;
@@ -98,11 +98,11 @@
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
     border-top-left-radius: 4px;
 }
-.numberCard-container__next {
+.numberCard__next {
     height: 100%;
     width: 44px;
 }
-.numberCard-container__slider:hover .numberCard-container__next::after {
+.numberCard__slider:hover .numberCard__next::after {
     position: absolute;
     content: 'keyboard_arrow_right';
 
@@ -118,7 +118,7 @@
     color: #FFFFFF;
     cursor: pointer;
 }
-.numberCard-container__slider:hover .numberCard-container__next::before {
+.numberCard__slider:hover .numberCard__next::before {
     position: absolute;
     content: '';
     width: 42px;
@@ -130,13 +130,13 @@
     transform: matrix(-1, 0, 0, 1, 0, 0);
     border-top-left-radius: 4px;
 }
-.numberCard-container__slider-dots {
+.numberCard__slider-dots {
     position: absolute;
     top: 48%;
     right: 15px;
     text-align: center;
 }
-.numberCard-container__switch-slider {
+.numberCard__switch-slider {
     position: relative;
     display: inline-block;
     width: 7px;
@@ -145,7 +145,7 @@
 
     margin-right: 3.3px; 
 }
-.numberCard-container__switch-slider::after {
+.numberCard__switch-slider::after {
     display: block;
     position: absolute;
     content: " ";
@@ -157,10 +157,10 @@
     height: 7px;
     border-radius: 50%;
 }
-.numberCard-container__switch-slider-active {
+.numberCard__switch-slider-active {
     background-color: white;
 }
-.numberCard-container__content {
+.numberCard__content {
     animation-name: fade;
     animation-duration: 1.5s;
 }
@@ -180,7 +180,7 @@
         opacity: 1
     }
 }
-.numberCard-container__description {
+.numberCard__description {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -191,16 +191,16 @@
 	padding-bottom: 5px;
     height: 101px;
 }
-.numberCard-container__data-border {
+.numberCard__data-border {
     border-bottom: solid 1px rgba(31, 32, 65, 0.1);
 }
-.numberCard-container__data {
+.numberCard__data {
     display: flex;
     justify-content: space-between;
 
     width: 100%;
 }
-.numberCard-container__sign-number {
+.numberCard__sign-number {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: bold;
@@ -211,7 +211,7 @@
 
     padding-right: 5px;
 }
-.numberCard-container__number {
+.numberCard__number {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: bold;
@@ -221,7 +221,7 @@
     color: #1F2041;
     padding-right: 5px;
 }
-.numberCard-container__kind {
+.numberCard__kind {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
@@ -232,11 +232,11 @@
 
     color: #BC9CFF;
 }
-.numberCard-container__cost {
+.numberCard__cost {
 	display: flex;
 	align-items: center;
 }
-.numberCard-container__cost-room {
+.numberCard__cost-room {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
@@ -246,7 +246,7 @@
 	color: rgba(31, 32, 65, 0.5);
 	padding-right: 5px;
 }
-.numberCard-container__cost-room-description {
+.numberCard__cost-room-description {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -256,23 +256,23 @@
 	color: rgba(31, 32, 65, 0.5);
 	padding-top: 6px;
 }
-.numberCard-container__reviews {
+.numberCard__reviews {
     display: flex;
     justify-content: space-between;
 
 	width: 100%;
 }
-.numberCard-container__rate-group-button {
+.numberCard__rate-group-button {
     display: flex;
     justify-content: space-between;
 
     width: 105px;
 }
-.numberCard--container__amount {
+.numberCard__amount {
 	display: flex;
 	align-items: center;
 }
-.numberCard-container__amount-reviews {
+.numberCard__amount-reviews {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
@@ -282,7 +282,7 @@
 	color: rgba(31, 32, 65, 0.5);
 	padding-right: 10px;
 }
-.numberCard-container__amount-reviews-description {
+.numberCard__amount-reviews-description {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -291,7 +291,7 @@
 
 	color: rgba(31, 32, 65, 0.5);
 }
-.numberCard-container__controls {
+.numberCard__controls {
     width: 16.5%;
     position: absolute;
     display: flex;

@@ -1,113 +1,79 @@
-.button-container {
+.button {
 	position: relative;
-    display: flex;
-    flex-wrap: wrap;
-}
-.button-container__content {
-    position: relative;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-	font-size: 11.3px;
-	letter-spacing: 0.05em;
-    line-height: 15px;
-    
-    text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
 
-    padding: 0;
+  position: relative;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11.3px;
+  letter-spacing: 0.05em;
+  line-height: 15px;
+  
+  text-transform: uppercase;
 
-    color: #BC9CFF;
-    background: white;
-    border: none;
-}
-.button-container__content_width-small {
-    width: 79px;
+  padding: 0;
 
-    border-radius: 22px;
-}
-.button-container__content_width-small-medium {
-    width: 88px;
+  color: #BC9CFF;
+  background: white;
+  border: none;
 
-    border-radius: 22px;
+  width: 100%;
+  height: 100%;
 }
-.button-container__content_width-medium {
-    width: 100px;
+.button_decor-background {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: white;
+}
+.button_decor-background:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.button_decor-noDecor:hover {
+  color: rgba(31, 32, 65, 0.5);
+  cursor: pointer;
+}
+.button_decor-border {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 22px;
+  background-clip: padding-box;
+}
+.button_decor-border::before {
+  position: absolute;
+  top: -2px; bottom: -2px;
+  left: -2px; right: -2px;
+  background: linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);
+  content: '';
+  z-index: -1;
+  border-radius: 22px;
+}
+.button_decor-border:hover {
+  cursor: pointer;
+}
+.button_decor-border:hover::before {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+.button_arrow::before {
+  position: absolute;
 
-    border-radius: 22px;
-}
-.button-container__content_width-medium-large {
-    width: 194px;
+  content: 'arrow_forward';
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  right: 0;
 
-    border-radius: 22px;
-}
-.button-container__content_width-parent-container {
-    width: 100%;
-    border-radius: 22px;
-}
-.button-container__content_width-large {
-    width: 330px;
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
-    border-radius: 22px;
-}
-.button-container__content_height-small {
-    height: 33px;
-}
-.button-container__content_height-large {
-    height: 40px;
-}
-.button-container__content_decor-background {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-
-    color: white;
-}
-.button-container__content_decor-background:hover {
-    opacity: 0.5;
-    cursor: pointer;
-}
-.button-container__content_decor-noDecor:hover {
-    color: rgba(31, 32, 65, 0.5);
-    cursor: pointer;
-}
-.button-container__content_decor-border {
-    position: relative;
-    border: 2px solid transparent;
-    border-radius: 22px;
-    background-clip: padding-box;
-}
-.button-container__content_decor-border::before {
-    position: absolute;
-    top: -2px; bottom: -2px;
-    left: -2px; right: -2px;
-    background: linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);
-    content: '';
-    z-index: -1;
-    border-radius: 22px;
-}
-.button-container__content_decor-border:hover {
-    cursor: pointer;
-}
-.button-container__content_decor-border:hover::before {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-}
-.button-container_arrow::before {
-    position: absolute;
-
-    content: 'arrow_forward';
-    width: 40px;
-    height: 40px;
-    top: 0px;
-    right: 0;
-
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    text-transform: initial;
+  text-transform: initial;
 
 	color: white;
 	z-index: 10;

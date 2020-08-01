@@ -1,4 +1,4 @@
-.toggle-container__filter {
+.toggle {
     position: relative;
 
     font-family: 'Montserrat';
@@ -8,11 +8,11 @@
     line-height: 20px;
 
     color: rgba(31, 32, 65, 0.75);
-    @media(min-width: 400px) {
-        font-size: 14px;
-    }
+    // @media(min-width: 400px) {
+    //     font-size: 14px;
+    // }
 }
-.toggle-container__indicator {
+.toggle__indicator {
     position: absolute;
 
     width: 36px;
@@ -20,13 +20,13 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 10px;
 }
-.toggle-container__description {
+.toggle__description {
     padding-left: 45px;
 }
-.toggle-container__filter input[type="checkbox"]:checked + .toggle-container__indicator {
+.toggle input[type="checkbox"]:checked + .toggle__indicator {
     border: 1px solid #BC9CFF;
 }
-.toggle-container__filter input[type="checkbox"]:checked + .toggle-container__indicator::before {
+.toggle input[type="checkbox"]:checked + .toggle__indicator::before {
     content: "";
 
     position: absolute;
@@ -38,7 +38,7 @@
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 10px;
 }
-.toggle-container__filter input[type="checkbox"]:not(:checked) + .toggle-container__indicator::before {
+.toggle input[type="checkbox"]:not(:checked) + .toggle__indicator::before {
     content: "";
 
     position: absolute;

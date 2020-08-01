@@ -1,7 +1,7 @@
-mixin dropdown-row(value, number)
-    .dropdown-row-container
-        span.dropdown-row-container__value= value
-        ul.dropdown-row-container__amount-counter
-            li.dropdown-row-container__amount.dropdown-row-container__amount_sign -
-            li.dropdown-row-container__amount= number
-            li.dropdown-row-container__amount.dropdown-row-container__amount_sign +
+mixin dropdown-row(label, number)
+  .dropdown-row
+    span.dropdown-row__label= label
+    ul.dropdown-row__amount-counter
+      li.dropdown-row__amount.dropdown-row__amount_sign -
+      li.dropdown-row__amount= number
+      li.dropdown-row__amount.dropdown-row__amount_sign +

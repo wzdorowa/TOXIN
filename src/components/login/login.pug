@@ -1,11 +1,11 @@
 mixin login(text)
-	.login-container
-		span.login-container__title= text
-		.login-container__login-details
+	.login
+		span.login__title= text
+		.login__login-details
 			+base-input('', '', 'Email', '', 'top', 'bottom')
 			+base-input('', '', 'Пароль', '', 'top', 'bottom')
-		.login-container__checkIn-details
+		.login__checkIn-details
 			+base-button('Войти', 'large', 'large', 'background', 'arrow')
-			.login-container__have-an-account
-				span.login-container__text Нет аккаунта на Toxin?
+			.login__have-an-account
+				span.login__text Нет аккаунта на Toxin?
 				+base-button('Создать', 'medium', 'large', 'border')

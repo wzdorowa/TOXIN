@@ -1,4 +1,4 @@
-.checkbox-button-container {
+.checkbox-button {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
@@ -7,12 +7,11 @@
 
     color: rgba(31, 32, 65, 0.5);
 }
-.checkbox-button-container__filter {
+.checkbox-button__filter {
     position: relative;
-
     display: flex;
 }
-.checkbox-button-container__indicator {
+.checkbox-button__indicator {
 	position: absolute;
 	
 	left: 1px;
@@ -22,7 +21,7 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
 }
-.checkbox-button-container__value {
+.checkbox-button__value {
 	font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
@@ -31,7 +30,7 @@
 	
     padding-left: 28px;
 }
-.checkbox-button-container__description {
+.checkbox-button__description {
 	font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
@@ -41,10 +40,10 @@
 	padding-left: 28px;
 	padding-top: 5px;
 }
-.checkbox-button-container__filter input[type="checkbox"]:checked + .checkbox-button-container__indicator {
+.checkbox-button__filter input[type="checkbox"]:checked + .checkbox-button__indicator {
     border: 1px solid #BC9CFF;
 }
-.checkbox-button-container__filter input[type="checkbox"]:checked + .checkbox-button-container__indicator::before {
+.checkbox-button__filter input[type="checkbox"]:checked + .checkbox-button__indicator::before {
     content: "";
 
     position: absolute;
@@ -58,7 +57,7 @@
 
     transform: rotate(135deg); 
 }
-.checkbox-button-container__value_weight-bold {
+.checkbox-button__value_bold {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
