@@ -3,55 +3,57 @@ extends ../base.pug
 include ../../components/header/header.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
+include ../../components/dropdown/dropdown.pug
 include ../../elements/base-input/base-input.pug
 include ../../elements/range-slider/range-slider.pug
 include ../../elements/checkbox-button/checkbox-button.pug
-include ../../elements/dropdown/dropdown.pug
 include ../../elements/checkbox-list/checkbox-list.pug
 include ../../components/number-card/number-card.pug
 include ../../elements/pagination/pagination.pug
 
 block content
-	.search-room-container-wrapper
-		+header()
-		.search-room-content
-			.search-room-filter-access
-				h1.search-room-filter-access__title Дополнительные параметры
-			.search-room-filter
-				.search-room-filter__group-inputs
-					+base-input('Даты пребывания в отеле', 'padding', '19 авг - 23 авг', 'medium', 'arrow-down', 'top', 'bottom')
-					+base-input('Гости', 'padding', '3 гостя, 1 младенец', 'medium', 'arrow-down', 'top', 'bottom')
-				.search-room-filter__range-slider
-					+range-slider('Диапазон цены')
-					span.search-room-filter__range-slider-description Стоимость за сутки пребывания в номере
-				.search-room-filter__chechbox-buttons
-					h1.search-room-filter__chechbox-buttons-title Chechbox buttons
-					+checkbox-button('Можно курить')
-					+checkbox-button('Можно с питомцами', 'checked')
-					+checkbox-button('Можно пригласить гостей (до 10 человек)', 'checked')
-				.search-room-filter__rich-checkbox
-					h1.search-room-filter__item-title Доступность
-					+checkbox-button('Широкий коридор', '', 'bold', 'Ширина коридоров в номере не менее 91 см.')
-					+checkbox-button('Помощник для инвалидов', '', 'bold', 'На 1 этаже вас встретит специалист и проводит до номера.')
-				.search-room-filter__dropdown
-					+dropdown('Удобства номера', 'padding', '2 спальни, 2 кровати...', 'medium', 'none')
-				+checkbox-list('Дополнительные удобства')
-			.search-room-result
-				h1.search-room-result__title Номера, которые мы для вас подобрали
-				.search-room-result__cards-numbers
-					+numberCard('888', 'люкс', '9 990', '145', 'border')
-					+numberCard('840', '', '9 990', '65', 'border')
-					+numberCard('980', 'люкс', '8 500', '35', 'border')
-					+numberCard('856', '', '7 300', '19', 'border')
-					+numberCard('740', '', '6 000', '44', 'border')
-					+numberCard('982', '', '5 800', '56', 'border')
-					+numberCard('678', '', '5 500', '45', 'border')
-					+numberCard('450', '', '5 300', '39', 'border')
-					+numberCard('350', '', '5 000', '77', 'border')
-					+numberCard('666', '', '5 000', '25', 'border')
-					+numberCard('444', '', '5 000', '15', 'border')
-					+numberCard('352', '', '5 000', '55', 'border')
-				.search-room-result__pagination
-					+pagination('1 – 12 из 100+ вариантов аренды')
-		+footer('borderTop', 'marginTop')
-		+copyright()
+  .search-room
+    .search-room__header
+      .search-room__header-container
+        +header()
+    .search-room__content
+      .search-room__filter-access
+        h1.search-room__filter-access-title Дополнительные параметры
+      .search-room__filter
+        .search-room__filter-inputs
+          +base-input('Даты пребывания в отеле', 'padding', '19 авг - 23 авг', 'medium', 'arrow-down', 'top', 'bottom')
+          +base-input('Гости', 'padding', '3 гостя, 1 младенец', 'medium', 'arrow-down', 'top', 'bottom')
+        .search-room__filter-range-slider
+          +range-slider('Диапазон цены')
+          span.search-room__filter-range-slider-description Стоимость за сутки пребывания в номере
+        .search-room__filter-checkbox-buttons
+          h1.search-room__filter-checkbox-buttons-title Chechbox buttons
+          +checkbox-button('Можно курить')
+          +checkbox-button('Можно с питомцами', 'checked')
+          +checkbox-button('Можно пригласить гостей (до 10 человек)', 'checked')
+        .search-room__filter-rich-checkbox
+          h1.search-room__filter-item-title Доступность
+          +checkbox-button('Широкий коридор', '', 'bold', 'Ширина коридоров в номере не менее 91 см.')
+          +checkbox-button('Помощник для инвалидов', '', 'bold', 'На 1 этаже вас встретит специалист и проводит до номера.')
+        .search-room__filter-dropdown
+          +dropdown('Удобства номера', 'padding', '2 спальни, 2 кровати...', 'medium', 'none')
+        +checkbox-list('Дополнительные удобства')
+      .search-room__result
+        h1.search-room__result-title Номера, которые мы для вас подобрали
+        .search-room__result-cards-numbers
+          +numberCard('888', 'люкс', '9 990', '145', 'border')
+          +numberCard('840', '', '9 990', '65', 'border')
+          +numberCard('980', 'люкс', '8 500', '35', 'border')
+          +numberCard('856', '', '7 300', '19', 'border')
+          +numberCard('740', '', '6 000', '44', 'border')
+          +numberCard('982', '', '5 800', '56', 'border')
+          +numberCard('678', '', '5 500', '45', 'border')
+          +numberCard('450', '', '5 300', '39', 'border')
+          +numberCard('350', '', '5 000', '77', 'border')
+          +numberCard('666', '', '5 000', '25', 'border')
+          +numberCard('444', '', '5 000', '15', 'border')
+          +numberCard('352', '', '5 000', '55', 'border')
+        .search-room__result-pagination
+          +pagination('1 – 12 из 100+ вариантов аренды')
+    +footer('borderTop', 'marginTop')
+    +copyright()
