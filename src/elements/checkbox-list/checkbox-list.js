@@ -1,11 +1,11 @@
 $(document).ready(() => {
-  $('.chechbox-list__title').click(() => {
-    $('.chechbox-list__slideToggle').slideToggle();
+  $('.checkbox-list__title').click(() => {
+    $('.checkbox-list__slide-toggle').slideToggle();
   });
-});
-const checkboxList = document.querySelector('.chechbox-list__title');
-const checkboxOpened = document.querySelector('.chechbox-list__indicator');
+  const checkboxList = document.querySelector('.checkbox-list__title');
+  const checkboxOpened = document.querySelector('.checkbox-list__indicator');
 
-checkboxList.onclick = () => {
-  checkboxOpened.classList.toggle('opened');
-};
+  checkboxList.onclick = () => {
+    checkboxOpened.classList.toggle('opened');
+  };
+});

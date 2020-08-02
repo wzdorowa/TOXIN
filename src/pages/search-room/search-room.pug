@@ -21,23 +21,38 @@ block content
         h1.search-room__filter-access-title Дополнительные параметры
       .search-room__filter
         .search-room__filter-inputs
-          +base-input('Даты пребывания в отеле', 'padding', '19 авг - 23 авг', 'medium', 'arrow-down', 'top', 'bottom')
-          +base-input('Гости', 'padding', '3 гостя, 1 младенец', 'medium', 'arrow-down', 'top', 'bottom')
+          .search-room__filter-input
+            +base-input('Даты пребывания в отеле', '19 авг - 23 авг', 'arrow-down', 'top', 'bottom')
+          .search-room__filter-input
+            +base-input('Гости', '3 гостя, 1 младенец', 'arrow-down', 'top', 'bottom')
         .search-room__filter-range-slider
           +range-slider('Диапазон цены')
           span.search-room__filter-range-slider-description Стоимость за сутки пребывания в номере
         .search-room__filter-checkbox-buttons
           h1.search-room__filter-checkbox-buttons-title Chechbox buttons
-          +checkbox-button('Можно курить')
-          +checkbox-button('Можно с питомцами', 'checked')
-          +checkbox-button('Можно пригласить гостей (до 10 человек)', 'checked')
+          .search-room__filter-checkbox-buttons-group
+            +checkbox-button('Можно курить')
+            +checkbox-button('Можно с питомцами', 'checked')
+            +checkbox-button('Можно пригласить гостей (до 10 человек)', 'checked')
         .search-room__filter-rich-checkbox
           h1.search-room__filter-item-title Доступность
           +checkbox-button('Широкий коридор', '', 'bold', 'Ширина коридоров в номере не менее 91 см.')
           +checkbox-button('Помощник для инвалидов', '', 'bold', 'На 1 этаже вас встретит специалист и проводит до номера.')
         .search-room__filter-dropdown
-          +dropdown('Удобства номера', 'padding', '2 спальни, 2 кровати...', 'medium', 'none')
-        +checkbox-list('Дополнительные удобства')
+          +dropdown('Удобства номера', '2 спальни, 2 кровати...', 'none')
+            +dropdown-row('Спальни', '2')
+            +dropdown-row('Кровати', '1')
+            +dropdown-row('Ванные комнаты', '0')
+        .search-room__filter-options
+          +checkbox-list('Дополнительные удобства')
+            +checkbox-button('Завтрак')
+            +checkbox-button('Письменный стол', 'checked')
+            +checkbox-button('Стул для кормления', 'checked')
+            +checkbox-button('Кроватка', 'checked')
+            +checkbox-button('Телевизор')
+            +checkbox-button('Шампунь')
+            +checkbox-button('Телевизор')
+            +checkbox-button('Шампунь')
       .search-room__result
         h1.search-room__result-title Номера, которые мы для вас подобрали
         .search-room__result-cards-numbers

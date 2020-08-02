@@ -34,15 +34,15 @@
   }
 }
 .search-room__content {
-	min-width: 320px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	align-items: center;
-
-    padding-top: 27px;
-    margin-left: auto;
+  align-items: center;
+  
+  min-width: 320px;
+  padding-top: 30px;
+  margin-left: auto;
 	margin-right: auto;
 	@media (min-width: 321px) {
 		min-width: 321px;
@@ -64,8 +64,6 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: flex-start;
-	}
-	@media (min-width: 1170px) {
 	}
 }
 .search-room__filter-access {
@@ -101,15 +99,14 @@
   text-transform: initial;
 }
 .search-room__filter {
-	min-width: 265px;
-	display: flex;
+  display: flex;
+  display: none;
 	flex-direction: column;
-	justify-content: space-between;
-	height: 675px;
-	display: none;
+  justify-content: space-between;
+
+  min-width: 265px;
 	@media (min-width: 650px) {
 		min-width: 570px;
-		height: 400px;
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		margin-right: auto;
@@ -117,28 +114,26 @@
 	}
 	@media (min-width: 1024px) {
 		min-width: 265px;
-		min-height: 740px;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: nowrap;
-		
+		margin-left: 4px;
 	}
 }
 .search-room__filter-inputs {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 145px;
+  height: 148px;
+  margin-bottom: 15px;
 }
 .search-room__filter-range-slider {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 
-	height: 67px;
-
-	padding-left: 1px;
-	padding-right: 5.5px;
+  width: 100%;
+	height: 70px;
 
 	margin-top: 16px;
 }
@@ -147,31 +142,37 @@
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: normal;
-	font-size: 10.95px;
+	font-size: 12px;
 	line-height: 14px;
 
 	color: rgba(31, 32, 65, 0.5);
 }
 .search-room__filter-checkbox-buttons {
-	display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-    max-width: 222px;
+  max-width: 222px;
 	min-height: 135px;
 
-	margin-top: 9px;
+	margin-top: 26px;
 }
 .search-room__filter-checkbox-buttons-title {
 	font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 10.9px;
-    line-height: 11px;
-
-    text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 11px;
+  text-transform: uppercase;
 
 	color: #1F2041;
-	margin-bottom: 12px;
+	margin-bottom: 18px;
+}
+.search-room__filter-checkbox-buttons-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 102px;
 }
 .search-room__filter-rich-checkbox {
 	display: flex;
@@ -179,22 +180,27 @@
   justify-content: space-between;
 
   max-width: 240px;
-	min-height: 150px;
-	margin-bottom: 16px;
+  min-height: 150px;
+  margin-top: 20px;
 }
 .search-room__filter-item-title {
 	font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
-  font-size: 10.9px;
+  font-size: 12px;
   line-height: 11px;
 
   text-transform: uppercase;
 
   color: #1F2041;
+
+  margin-bottom: 5px;
 }
 .search-room__filter-dropdown {
-	margin-bottom: 2px;
+	margin-top: 30px;
+}
+.search-room__filter-options {
+  margin-top: 15px;
 }
 .search-room__result {
 	width: 100%;
@@ -276,6 +282,6 @@
 
 	margin-top: 25px;
 }
-.display-show {
+.search-room__filter_show {
     display: flex;
 }

@@ -1,22 +1,22 @@
-.range-slider-container * {
+.slider * {
     box-sizing: border-box;
     outline: none;
 }
-.range-slider-container:after {
+.slider:after {
     content: "";
     clear: both;
     display: table;
 }
-.range-slider-container__description {
+.slider__description {
     display: flex;
 	justify-content: space-between;
 	margin-bottom: 20px;
 }
-.range-slider-container__title {
+.slider__title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: bold;
-    font-size: 10.9px;
+    font-size: 12px;
     line-height: 15px;
 
     text-transform: uppercase;
@@ -25,7 +25,7 @@
 
     margin: 0;
 }
-.range-slider-container .ui-slider {
+.slider .ui-slider {
     position: relative;
     background: white;
     height: 5px;
@@ -33,7 +33,7 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
 }
-.range-slider-container .ui-slider .ui-slider-handle {
+.slider .ui-slider .ui-slider-handle {
     position: absolute;
     width: 13px;
     height: 13px;
@@ -45,42 +45,57 @@
     box-shadow: 0 1px 2px rgba(0,0,0,0.2), 0 1px 6px rgba(0,0,0,0.2);
     transition: transform 0.2s, border 0.4s;
 }
-.range-slider-container__price {
+.slider__price {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    min-width: 107px;
 }
-.range-slider-container__left-price,
-.range-slider-container__right-price {
+.slider__left {
+  display: flex;
+}
+.slider__right {
+  display: flex;
+}
+.slider__left-price,
+.slider__right-price {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    text-align: center;
-    
+    text-align: right;
     color: rgba(31, 32, 65, 0.5);
 
     height: 15px;
-    max-width: 51px;
+    max-width: 40px;
     background: #FFF;
     border: none;
 }
-.range-slider-container__left-price {
-	max-width: 44px;
+.slider__ruble-sign {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 15px;
+  color: rgba(31, 32, 65, 0.5);
+  padding: 0;
+  margin: 0;
 }
-.range-slider-container__sign {
+.slider__sign {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    text-align: center;
+    text-align: right;
     
     color: rgba(31, 32, 65, 0.5);
 }
-.range-slider-container .ui-slider .ui-slider-range {
+.slider .ui-slider .ui-slider-range {
     position: absolute;
     z-index: 1;
     height: 5px;
@@ -89,7 +104,4 @@
 	border-radius:3px;
 	
 	margin-top: -1px;
-}
-.range-slider-container__polzunok {
-    
 }

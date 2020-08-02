@@ -3,47 +3,36 @@
 }
 .dropdown__slide-toggle {
 	position: absolute;
-
-    z-index: 2;
-
-    display: none;
-}
-.dropdown__slide-toggle_medium {
-	width: 242px;
-}
-.dropdown__slide-toggle_large {
-	width: 290px;
-}
-.dropdown__slide-toggle_parent-container {
-	width: 100%;
+  z-index: 2;
+  display: none;
+  width: 100%;
 }
 .dropdown__content {
 	display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 
-    background-color: white;
+  background-color: white;
 
 	min-height: 106px;
 	max-height: 175px;
 
 	padding-top: 6px;
-    padding-left: 15px;
+  padding-left: 15px;
 	padding-right: 6px;
 	padding-bottom: 4px;
 
-    border: 1px solid rgba(31, 32, 65, 0.5);
-    box-sizing: border-box;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top: none;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  box-sizing: border-box;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top: none;
 }
 .dropdown__rows {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding-top: 5px;
-    height: 107px;
+  height: 107px;
 }
 .dropdown__buttons {
     display: flex;
