@@ -1,11 +1,13 @@
 mixin social-btn()
   ul.social-btn
-    li.social-btn__item
-      a.social-btn__button
-        img(src="../../components/social-btn/images/tw.svg", alt="", weight="19px", height="19px")
-    li.social-btn__item
-      a.social-btn__button
-        img(src="../../components/social-btn/images/fb.svg", alt="", weight="20.5px", height="20.5px")
-    li.social-btn__item
-      a.social-btn__button
-        img(src="../../components/social-btn/images/insta.svg", alt="", weight="20.5px", height="20.5px")
+    - let social = ['tw', 'fb', 'insta']
+    each val in social
+      li.social-btn__item
+        a.social-btn__button
+          case val
+            when 'tw'
+              img(src="../../components/social-btn/images/tw.svg", alt="", weight="19px", height="19px")
+            when 'fb'
+              img(src="../../components/social-btn/images/fb.svg", alt="", weight="20.5px", height="20.5px")
+            when 'insta'
+              img(src="../../components/social-btn/images/insta.svg", alt="", weight="20.5px", height="20.5px")

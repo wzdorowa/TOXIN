@@ -1,32 +1,32 @@
 include ../../elements/rate-button/rate-button.pug
 
-mixin numberCard(number, text, cost, amount)
-  .numberCard
-    .numberCard__slider
+mixin number-card(number, text, cost, amount)
+  .number-card
+    .number-card__slider
       - var images = new Array(4);
       each val, index in images
-        .numberCard__content(class='numberCard__content_'+number)
-      .numberCard__prev
-      .numberCard__next
-    .numberCard__slider-dots
+        .number-card__content(class='number-card__content_'+number)
+      .number-card__prev
+      .number-card__next
+    .number-card__slider-dots
       - var switches = new Array(4);
       each val, index in switches
-        span.numberCard__switch-slider
-    .numberCard__description
-      .numberCard__data
-        .numberCard__specification
-          span.numberCard__sign-number №
-          span.numberCard__number= number
-          span.numberCard__kind= text
-        .numberCard__cost
-          span.numberCard__cost-room= cost
+        span.number-card__switch-slider
+    .number-card__description
+      .number-card__data
+        .number-card__specification
+          span.number-card__sign-number №
+          span.number-card__number= number
+          span.number-card__kind= text
+        .number-card__cost
+          span.number-card__cost-room= cost
             | &#x20bd
-          span.numberCard__cost-room-description в сутки
-      .numberCard__data-border
-      .numberCard__reviews
-        .numberCard__rate-group-button
+          span.number-card__cost-room-description в сутки
+      .number-card__data-border
+      .number-card__reviews
+        .number-card__rate-group-button
             +rate-button()
-        .numberCard__amount
-          span.numberCard__amount-reviews= amount
-          span.numberCard__amount-reviews-description
+        .number-card__amount
+          span.number-card__amount-reviews= amount
+          span.number-card__amount-reviews-description
             |  Отзывов

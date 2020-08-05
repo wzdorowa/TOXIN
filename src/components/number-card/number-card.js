@@ -1,13 +1,13 @@
-$('.numberCard').each((index, element) => {
+$('.number-card').each((index, element) => {
   const numberCardContainer = element;
   const slides = Array.from(
-    $(numberCardContainer).find('.numberCard__content'),
+    $(numberCardContainer).find('.number-card__content'),
   );
   const dots = Array.from(
-    $(numberCardContainer).find('.numberCard__switch-slider'),
+    $(numberCardContainer).find('.number-card__switch-slider'),
   );
-  const prev = Array.from($(numberCardContainer).find('.numberCard__prev'));
-  const next = Array.from($(numberCardContainer).find('.numberCard__next'));
+  const prev = Array.from($(numberCardContainer).find('.number-card__prev'));
+  const next = Array.from($(numberCardContainer).find('.number-card__next'));
 
   /* Индекс слайда по умолчанию */
   let slideIndex = 1;
@@ -26,12 +26,12 @@ $('.numberCard').each((index, element) => {
     dots.forEach(element => {
       const slide = element;
       slide.className = element.className.replace(
-        ' numberCard__switch-slider-active',
+        ' number-card__switch-slider-active',
         '',
       );
     });
     slides[slideIndex - 1].style.display = 'block';
-    dots[slideIndex - 1].className += ' numberCard__switch-slider-active';
+    dots[slideIndex - 1].className += ' number-card__switch-slider-active';
   }
   /* Устанавливает текущий слайд */
   function currentSlide(n) {
