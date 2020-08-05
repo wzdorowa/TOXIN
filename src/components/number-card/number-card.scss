@@ -1,12 +1,8 @@
 .numberCard {
     position: relative;
-    width: 270px;
-    height: 257px;
-
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
-    margin-bottom: 20px;
 }
 .numberCard__slider {
     position: relative;
@@ -186,9 +182,9 @@
     justify-content: space-evenly;
 
     padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 10px;
-	padding-bottom: 5px;
+	  padding-right: 20px;
+	  padding-top: 10px;
+	  padding-bottom: 5px;
     height: 101px;
 }
 .numberCard__data-border {

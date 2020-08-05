@@ -1,23 +1,24 @@
 mixin footer(borderTop, marginTop)
-	.footer(class='footer_'+borderTop, class='footer_'+marginTop)
-		.footer__container
-			.footer__logo
-				+logo()
-				p.footer__logo-description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации "Отельные взгляды"
-			.footer__information
-				ul.footer__list
-					each val, index in ['Навигация', 'О нас', 'Новости', 'Служба поддержки', 'Услуги']
-						li.footer__item
-							a.footer__link(href="")= val
-				ul.footer__list
-					each val, index in ['О нас', 'О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
-						li.footer__item
-							a.footer__link(href="")= val
-				ul.footer__list
-					each val, index in ['Служба поддержки', 'Соглашения', 'Сообщества', 'Связь с нами']
-						li.footer__item
-							a.footer__link(href="")= val
-			.footer__subscribe
-				span.footer__subscribe-title Подписка
-				span.footer__subscribe-description Получайте специальные предложения и новости сервиса
-				+base-input('', '', 'Email', 'footer', 'arrow', 'top', 'bottom')
+  .footer(class='footer_'+borderTop, class='footer_'+marginTop)
+    .footer__container
+      .footer__logo-container
+        .footer__logo
+          +logo()
+        p.footer__logo-description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»‎
+      .footer__information
+        ul.footer__list
+          each val, index in ['Навигация', 'О нас', 'Новости', 'Служба поддержки', 'Услуги']
+            li.footer__item
+              a.footer__link(href="")= val
+        ul.footer__list
+          each val, index in ['О нас', 'О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+            li.footer__item
+              a.footer__link(href="")= val
+        ul.footer__list
+          each val, index in ['Служба поддержки', 'Соглашения', 'Сообщества', 'Связь с нами']
+            li.footer__item
+              a.footer__link(href="")= val
+      .footer__subscribe
+        span.footer__subscribe-title Подписка
+        span.footer__subscribe-description Получайте специальные предложения и новости сервиса
+        +base-input('', 'Email', 'arrow', 'top', 'bottom')

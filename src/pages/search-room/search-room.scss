@@ -215,9 +215,14 @@
 		margin-right: 2%;
 	}
 	@media (min-width: 1170px) {
-		margin-left: 5.3%;
-		margin-right: auto;
+		margin-left: 5.25%;
+		margin-right: 0.5%;
 	}
+}
+.search-room__card-number {
+  width: 270px;
+  height: 258px;
+  margin-bottom: 20px;
 }
 .search-room__result-title {
 	font-family: 'Montserrat';
@@ -280,7 +285,8 @@
 	display: flex;
 	justify-content: center;
 
-	margin-top: 25px;
+  margin-top: 20px;
+  margin-bottom: 8px;
 }
 .search-room__filter_show {
     display: flex;

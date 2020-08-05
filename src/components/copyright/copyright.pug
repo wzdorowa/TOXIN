@@ -1,8 +1,9 @@
 include ../../components/social-btn/social-btn.pug
 
 mixin copyright()
-  .footer-copyright
-    .footer-copyright__content
-      span.footer-copyright__description
+  .copyright
+    .copyright__content
+      span.copyright__description
         |Copyright © 2018 Toxin отель. Все права защищены.
-      +social-btn()
+      .copyright__social-btn
+        +social-btn()
