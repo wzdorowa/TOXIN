@@ -2,19 +2,24 @@ $('.rating').each((index, element) => {
   const rating = element;
   const ratingItems = Array.from($(rating).children('.rating-item'));
 
-  function removeClass(elements, className) {
-    for (let i = 0; i < elements.length; i += i) {
-      ratingItems[i].classList.remove(className);
-    }
+  function removeClass(arr, className) {
+    arr.forEach((_element, i) => {
+      const arg = new Array(2);
+      for (let j = 1; j < arg.length; j += 1) {
+        ratingItems[i].classList.remove(className);
+      }
+    });
   }
-  function addClass(elements, className) {
-    for (let i = 0, iLen = elements.length; i < iLen; i += i) {
-      ratingItems[i].classList.add(className);
-    }
+  function addClass(arr, className) {
+    arr.forEach((_element, i) => {
+      const arg = new Array(2);
+      for (let j = 1; j < arg.length; j += 1) {
+        ratingItems[i].classList.add(className);
+      }
+    });
   }
-
   function mouseOverActiveClass(arr) {
-    for (let i = 0, iLen = arr.length; i < iLen; i += i) {
+    for (let i = 0, iLen = arr.length; i < iLen; i += 1) {
       if (arr[i].classList.contains('active')) {
         break;
       } else {
@@ -22,9 +27,8 @@ $('.rating').each((index, element) => {
       }
     }
   }
-
   function mouseOutActiveClass(arr) {
-    for (let i = arr.length - 1; i >= 1; i -= i) {
+    for (let i = arr.length - 1; i >= 1; i -= 1) {
       if (arr[i].classList.contains('current-active')) {
         break;
       } else {
@@ -32,20 +36,18 @@ $('.rating').each((index, element) => {
       }
     }
   }
-
   rating.onclick = e => {
-    const { target } = e;
-    if (target.classList.contains('rating-item')) {
+    const targetElement = e.target;
+    if (targetElement.classList.contains('rating-item')) {
       removeClass(ratingItems, 'current-active');
-      target.classList.add('active', 'current-active');
+      targetElement.classList.add('active', 'current-active');
     }
   };
-
   rating.onmouseover = e => {
-    const { target } = e;
-    if (target.classList.contains('rating-item')) {
+    const targetElement = e.target;
+    if (targetElement.classList.contains('rating-item')) {
       removeClass(ratingItems, 'active');
-      target.classList.add('active');
+      targetElement.classList.add('active');
       mouseOverActiveClass(ratingItems);
     }
   };
