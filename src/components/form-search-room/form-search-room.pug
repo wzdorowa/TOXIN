@@ -2,13 +2,13 @@ include ../../elements/base-input/base-input.pug
 include ../../elements/base-button/base-button.pug
 include /dropdown/dropdown.pug
 
-mixin searchRoom(text)
-  .searchRoom
-    span.searchRoom__title= text
-    .searchRoom__date-group
-      .searchRoom__input-container
+mixin search-room(text)
+  .search-room
+    span.search-room__title= text
+    .search-room__date-group
+      .search-room__input-container
         +base-input('Прибытие', 'padding', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom')
-      .searchRoom__input-container
+      .search-room__input-container
         +base-input('Выезд', 'padding', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom')
     +dropdown('Гости', 'padding', 'Сколько гостей', 'parent-container')
     +base-button('Подобрать номер', 'parent-container', 'large', 'background', 'arrow')

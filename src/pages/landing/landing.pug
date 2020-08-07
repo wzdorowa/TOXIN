@@ -8,13 +8,15 @@ include ../../components/social-btn/social-btn.pug
 include ../../components/datepicker/datepicker.pug
 
 block content
-	+header()
-	.landing-container-wrapper
-		img.landing-content__image-background(src="image/image-3.png")
-		.landing-content
-			+searchRoom('Найдём номера под ваши пожелания')
-			.landing-content__datepicker
-				+datepicker()
-			p.landing-content__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-	+footer('', 'marginTop')
-	+copyright()
+  .landing
+    +header()
+    .landing__container
+      img.landing__image-background(src="image/image-3.png")
+      .landing__content
+        .landing__form-search-room
+          +search-room('Найдём номера под ваши пожелания')
+        .landing__datepicker
+          +datepicker()
+        p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+    +footer('', 'marginTop')
+    +copyright()

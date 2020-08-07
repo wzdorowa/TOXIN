@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 }
-.landing-container-wrapper {
+.landing__container {
     min-width: 320px;
     max-width: 1440px;
     min-height: 765px;
@@ -9,11 +9,11 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-.landing-content__image-background {
+.landing__image-background {
     position: absolute;
     z-index: -1;
 }
-.landing-content {
+.landing__content {
     position: relative;
     min-width: 320px;
     max-width: 1160px;
@@ -24,13 +24,52 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-.landing-content__datepicker {
+.landing__form-search-room {
+  width: 300px;
+  height: 375px;
+
+  padding-top: 40px;
+  padding-left: 27px;
+  padding-right: 30px;
+  padding-bottom: 33px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media(min-width: 480px) {
+    width: 380px;
+    margin-left: 8%;
+    margin-right: auto;
+  }
+  @media(min-width: 1160px) {
+      margin-left: 7.5%;
+      margin-right: 0;
+  }
+  @media(min-width: 1180px) {
+      margin-left: 7%;
+  }
+  @media(min-width: 1200px) {
+      margin-left: 6%;
+  }
+  @media(min-width: 1220px) {
+      margin-left: 4%;
+  }
+  @media(min-width: 1240px) {
+      margin-left: 2%;
+  }
+  @media(min-width: 1260px) {
+      margin-left: 0;
+  }
+}
+.landing__datepicker {
     display: none;
     position: absolute;
     top: 260px;
     left: 28px;
+
+    padding: 10px;
+  padding-top: 10px;
 }
-.landing-content__text {
+.landing__text {
     position: absolute;
 
     width: 280px;
@@ -56,6 +95,6 @@ body {
         margin-right: 0px;
     }
 }
-.landing-content__datepicker_show {
+.landing__datepicker_show {
     display: block;
 }
