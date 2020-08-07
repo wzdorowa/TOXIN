@@ -1,4 +1,4 @@
-.registration-container-wrapper {
+.registration__container {
     min-width: 320px;
     max-width: 1440px;
 	min-height: 670px;
@@ -7,12 +7,12 @@
     margin-left: auto;
     margin-right: auto;
 }
-.registration-content__image-background {
+.registration__image-background {
 	position: absolute;
 	top: 0;
     z-index: -1;
 }
-.registration-content {
+.registration__content {
 	position: relative;
 	width: 100%;
 	min-height: 670px;
@@ -20,9 +20,19 @@
 	margin-right: auto;
 	
 }
-.registration-content__checkIn {
+.registration__check-in {
+  width: 300px;
+  height: 643px;
+  padding-left: 29px;
+  padding-right: 29px;
+	padding-top: 40px;
+	padding-bottom: 27px;
 	margin-top: 27px;
 
 	display: flex;
-	justify-content: center;
+  justify-content: center;
+  
+  @media(min-width: 400px) {
+    width: 380px;
+}
 }

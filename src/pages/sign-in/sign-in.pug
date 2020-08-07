@@ -7,11 +7,12 @@ include ../../components/social-btn/social-btn.pug
 include ../../components/login/login.pug
 
 block content
-	+header()
-	.sign-in-container-wrapper
-		img.sign-in-content__image-background(src="images/image4.png")
-		.sign-in-content
-			.sign-in-content__login
-				+login('Войти')
-	+footer()
-	+copyright()
+  .sign-in
+    +header()
+    .sign-in__container
+      img.sign-in__image-background(src="images/image4.png")
+      .sign-in__content
+        .sign-in__login
+          +login('Войти')
+    +footer()
+    +copyright()

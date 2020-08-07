@@ -7,11 +7,12 @@ include ../../components/social-btn/social-btn.pug
 include ../../components/form-check-in/form-check-in.pug
 
 block content
-	+header()
-	.registration-container-wrapper
-		img.registration-content__image-background(src="images/image4.1.png")
-		.registration-content
-			.registration-content__checkIn
-				+checkIn('Регистрация аккаунта')
-	+footer()
-	+copyright()
+  .registration
+    +header()
+    .registration__container
+      img.registration__image-background(src="images/image4.1.png")
+      .registration__content
+        .registration__check-in
+          +check-in('Регистрация аккаунта')
+    +footer()
+    +copyright()

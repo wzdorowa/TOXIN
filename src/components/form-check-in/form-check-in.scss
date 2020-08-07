@@ -1,16 +1,9 @@
-.checkIn {
-    position: relative;
+.check-in {
+  position: relative;
 	display: flex;
 	flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    width: 300px;
-    height: 643px;
-    padding-left: 29px;
-    padding-right: 29px;
-	padding-top: 40px;
-	padding-bottom: 27px;
 
     background-color: white;
 
@@ -20,11 +13,8 @@
     border-radius: 4px;
 
     z-index: 2;
-    @media(min-width: 400px) {
-        width: 380px;
-    }
 }
-.checkIn__title {
+.check-in__title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -33,14 +23,14 @@
 
 	color: #1F2041;
 }
-.checkIn__user-data {
+.check-in__user-data {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     height: 130px;
 }
-.checkIn__group-inputs {
+.check-in__group-inputs {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -48,7 +38,7 @@
 	width: 100%;
 	height: 95px;
 }
-.checkIn__buttons {
+.check-in__buttons {
 	display: flex;
     justify-content: space-between;
 
@@ -56,21 +46,21 @@
 	height: 25px;
 	padding-top: 3px;
 }
-.checkIn__group-inputs-login {
+.check-in__group-inputs-login {
 	display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     height: 115px;
 }
-.checkIn__login-details {
+.check-in__login-details {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
 	height: 150px;
 }
-.checkIn__text {
+.check-in__text {
 	display: inline-block;
     font-family: 'Montserrat';
     font-style: normal;
@@ -85,7 +75,7 @@
         text-align: left;
     } 
 }
-.checkIn__checkIn-details {
+.check-in__check-in-details {
     width: 100%;
 	display: flex;
     flex-direction: column;
@@ -93,7 +83,7 @@
 
     height: 117px;
 }
-.checkIn__have-an-account {
+.check-in__have-an-account {
     display: flex;
     justify-content: space-between;
 

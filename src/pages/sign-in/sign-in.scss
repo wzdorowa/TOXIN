@@ -1,4 +1,4 @@
-.sign-in-container-wrapper {
+.sign-in__container {
     min-width: 320px;
     max-width: 1440px;
 	min-height: 685px;
@@ -6,16 +6,28 @@
     margin-left: auto;
     margin-right: auto;
 }
-.sign-in-content__image-background {
+.sign-in__image-background {
 	position: absolute;
 	top: 0;
     z-index: -1;
 }
-.sign-in-content {
+.sign-in__content {
 	position: relative;
 	width: 100%;
 	min-height: 685px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.sign-in__login {
+  width: 300px;
+  height: 357px;
+  padding-left: 29px;
+  padding-right: 29px;
+	padding-top: 40px;
+  padding-bottom: 32px;
+  
+  @media(min-width: 400px) {
+    width: 380px;
+  }
 }
