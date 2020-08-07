@@ -22,13 +22,13 @@
 	
     padding-left: 20px;
 }
-.like-button__filter input[type="checkbox"]:checked + .like-button-container__indicator {
+.like-button input[type="checkbox"]:checked + .like-button__indicator {
     border: 1px solid #BC9CFF;
 }
-.like-button__filter input[type="checkbox"]:checked ~ .like-button-container__description {
+.like-button input[type="checkbox"]:checked ~ .like-button__description {
     color:#BC9CFF;
 }
-.like-button__filter input[type="checkbox"]:checked ~ .like-button-container__description::before {
+.like-button input[type="checkbox"]:checked ~ .like-button__description::before {
     content: "favorite";
 
 	position: absolute;
@@ -43,7 +43,7 @@
     color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
 }
-.like-button__filter input[type="checkbox"]:not(:checked) ~ .like-button__description::before {
+.like-button input[type="checkbox"]:not(:checked) ~ .like-button__description::before {
     content: "favorite_border";
 
     position: absolute;
