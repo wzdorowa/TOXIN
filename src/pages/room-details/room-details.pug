@@ -5,12 +5,14 @@ include ../../elements/advantages/advantages.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../elements/diagram/diagram.pug
-include ../../elements/review/review.pug
-include ../../components/form-result-search-room/form-result-search-room.pug
+include ../../components/review/review.pug
+include ../../components/room-cost-form/room-cost-form.pug
 
 block content
   .room-details
-    +header()
+    .room-details__header
+      .room-details__header-container
+        +header()
     .room-details__content
       .room-details__slider
         img.room-details__slider-image-1(src="images/image1.png")
@@ -34,11 +36,11 @@ block content
                 circle(class="room-details__donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#6FCF97" stroke-width="1" stroke-dasharray="24.5 75" stroke-dashoffset="-0.4")
                 circle(class="room-details__donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#BC9CFF" stroke-width="2.2" stroke-dasharray="24.5 75" stroke-dashoffset="24.5")
         .room-details__column-narrow
-          +result-search-room('888', 'люкс', '9 990')
+          +room-cost-form('888', 'люкс', '9 990')
         .room-details__review
           .room-details__review-description
-            h2.room-details-content__title-review Отзывы посетителей номера
-            span.room-details-content__review-sum 2 отзыва
+            h2.room-details__title-review Отзывы посетителей номера
+            span.room-details__review-sum 2 отзыва
           +review('Мурад Сарафанов', '5 дней назад', 'Murad', '', 'small', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
           +review('Патрисия Стёклышкова', 'Неделю назад', 'Patriziya', '', 'small', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
         .room-details__extra-info
