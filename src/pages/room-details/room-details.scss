@@ -100,6 +100,7 @@
 .room-details__column-narrow {
   width: 96%;
   max-width: 380px;
+  min-width: 310px;
   min-height: 510px;
 
   background-color: white;
@@ -117,16 +118,18 @@
   padding-top: 7.8%;
   
 	order: -1;
-	@media(min-width: 380px) {
+	@media(min-width: 400px) {
 		margin-left: auto;
-		margin-right: auto;
+    margin-right: auto;
+    padding-top: 42px;
+    padding-left: 28px;
+    padding-right: 30px;
 	}
 	@media(min-width: 720px) {
-		width: 50.77%;
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
     margin-bottom: 0;
-    padding-top: 42px;
 		order: 0;
 	}
 	@media(min-width: 1000px) {
@@ -137,8 +140,6 @@
 		width: 100%;
     min-width: 380px;
     max-height: 510px;
-    padding-left: 28px;
-    padding-right: 30px;
 		margin-left: auto;
 		margin-right: 2%;
 		order: 0;
