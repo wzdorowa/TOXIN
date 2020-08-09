@@ -7,5 +7,4 @@ mixin diagram(number, label, impressions)
         p.diagram__number= number
         p.diagram__label= label
     .diagram__list
-      each val, index in impressions
-        li.diagram__item(class="diagram__item_" + impressions[index].modifier)= impressions[index].text
+      +bulleted-list(impressions)

@@ -5,6 +5,7 @@ include ../../elements/advantages/advantages.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../elements/diagram/diagram.pug
+include ../../elements/bulleted-list/bulleted-list.pug
 include ../../components/review/review.pug
 include ../../components/room-cost-form/room-cost-form.pug
 
@@ -49,11 +50,11 @@ block content
           +review('Мурад Сарафанов', '5 дней назад', 'Murad', '', 'small', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
           +review('Патрисия Стёклышкова', 'Неделю назад', 'Patriziya', '', 'small', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
         .room-details__extra-info
-          .room-details__regulations
-            h2.room-details__title-regulations Правила
-            ul.room-details__regulations-list
-              each val, index in ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
-                li.room-details__regulations-item= val
+          .room-details__rules
+            h2.room-details__title-rules Правила
+            .room-details__rules-list
+              - const rules = [{modifier: 'light-gray', text: 'Нельзя с питомцами', padding: 'increased-indent'}, {modifier: 'light-gray', text: 'Без вечеринок и мероприятий', padding: 'increased-indent'}, {modifier: 'light-gray', text: 'Время прибытия — после 13:00, а выезд до 12:00', padding: 'increased-indent'}]
+              +bulleted-list(rules)
           .room-details__cancel
             h2.room-details__title-cancel Отмена
             p.room-details__cancel-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.		

@@ -1,0 +1,4 @@
+mixin bulleted-list(values)
+  ul.bulleted-list
+      each val, index in values
+        li.bulleted-list__item(class="bulleted-list__item_" + values[index].modifier || false, class="bulleted-list__item_" + values[index].padding || false)= values[index].text
