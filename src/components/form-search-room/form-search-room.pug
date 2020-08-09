@@ -1,14 +1,19 @@
 include ../../elements/base-input/base-input.pug
 include ../../elements/base-button/base-button.pug
-include /dropdown/dropdown.pug
+include ../dropdown/dropdown.pug
 
 mixin search-room(text)
   .search-room
     span.search-room__title= text
-    .search-room__date-group
+    .search-room__inputs
       .search-room__input-container
-        +base-input('Прибытие', 'padding', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom')
+        +base-input('Прибытие', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom')
       .search-room__input-container
-        +base-input('Выезд', 'padding', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom')
-    +dropdown('Гости', 'padding', 'Сколько гостей', 'parent-container')
-    +base-button('Подобрать номер', 'parent-container', 'large', 'background', 'arrow')
+        +base-input('Выезд', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom')
+      .search-room__input-container
+        +dropdown('Гости', 'Сколько гостей')
+          +dropdown-row('Взрослые', '2')
+          +dropdown-row('Дети', '1')
+          +dropdown-row('Младенцы', '0')
+    .search-room__select-button
+      +base-button('Подобрать номер', 'background', 'arrow')

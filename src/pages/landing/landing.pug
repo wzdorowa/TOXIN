@@ -2,6 +2,7 @@ extends ../base.pug
 
 include ../../components/header/header.pug
 include ../../components/form-search-room/form-search-room.pug
+
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../components/social-btn/social-btn.pug
@@ -9,14 +10,17 @@ include ../../components/datepicker/datepicker.pug
 
 block content
   .landing
-    +header()
+    img.landing__image-background(src="image/image-3.png")
+    .landing__header
+      .landing__header-container
+        +header()
     .landing__container
-      img.landing__image-background(src="image/image-3.png")
       .landing__content
         .landing__form-search-room
           +search-room('Найдём номера под ваши пожелания')
         .landing__datepicker
           +datepicker()
         p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-    +footer('', 'marginTop')
+    .landing__footer
+      +footer()
     +copyright()
