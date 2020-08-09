@@ -23,18 +23,23 @@ block content
         .room-details__number-impressions
           .room-details__number-info
             h2.room-details__title Сведения о номере
-            +advantages('Комфорт', 'Шумопоглощающие стены', 'mood', 'line', 'large', '14')
-            +advantages('Удобство', 'Окна в каждой из спален', 'locationCity', 'line', 'large', '14')
-            +advantages('Уют', 'Номер оснащен камином', 'whatshot', '', 'large', '14')
+            .room-details__advantages
+              .room-details__advantage-item
+                +advantages('Комфорт', 'Шумопоглощающие стены', 'mood')
+              .room-details__advantage-item
+                +advantages('Удобство', 'Окна в каждой из спален', 'locationCity')
+              .room-details__advantage-item
+                +advantages('Уют', 'Номер оснащен камином', 'whatshot')
           .room-details__impressions
             h2.room-details__title Впечатления от номера
             .room-details__diagram
-              +diagram('260', 'голосов')
-                circle(class="room-details__donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff")
-                circle(class="room-details__donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1")
-                circle(class="room-details__donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#FFBA9C" stroke-width="1" stroke-dasharray="49 50" stroke-dashoffset="73.5")
-                circle(class="room-details__donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#6FCF97" stroke-width="1" stroke-dasharray="24.5 75" stroke-dashoffset="-0.4")
-                circle(class="room-details__donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#BC9CFF" stroke-width="2.2" stroke-dasharray="24.5 75" stroke-dashoffset="24.5")
+              - const impressions = [{modifier: 'sumptuously', text: 'Великолепно'}, {modifier: 'good', text: 'Хорошо'}, {modifier: 'satisfactorily', text: 'Удовлетворительно'}, {modifier: 'disappointed', text: 'Разочарован'}]
+              +diagram('260', 'голосов', impressions)
+                circle(class="room-details__donut-hole" cx="50%" cy="50%" r="15.91549430918954" fill="#fff")
+                circle(class="room-details__donut-ring" cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1")
+                circle(class="room-details__donut-segment" cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#FFBA9C" stroke-width="1" stroke-dasharray="49 50" stroke-dashoffset="73.5")
+                circle(class="room-details__donut-segment" cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#6FCF97" stroke-width="1" stroke-dasharray="24.5 75" stroke-dashoffset="-0.4")
+                circle(class="room-details__donut-segment" cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#BC9CFF" stroke-width="2.2" stroke-dasharray="24.5 75" stroke-dashoffset="24.5")
         .room-details__column-narrow
           +room-cost-form('888', 'люкс', '9 990')
         .room-details__review

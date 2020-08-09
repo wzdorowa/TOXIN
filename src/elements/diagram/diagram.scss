@@ -1,9 +1,15 @@
 .diagram {
-	position: relative;
+  
+  display: flex;
+
+}
+.diagram__image {
+  position: relative;
+  width: 120px;
 }
 .diagram__text {
 	position: absolute;
-	top: 45px;
+	top: 37px;
 	width: 100%;
 }
 .diagram__number {
@@ -32,4 +38,68 @@
 
 	color: #BC9CFF;
 	margin: 0;
+}
+.diagram__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 9%;
+}
+.diagram__item {
+  position: relative;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  
+  color: rgba(31, 32, 65, 0.75);
+
+  padding-left: 16.5px;
+}
+.diagram__item_sumptuously::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 25%;
+  left: 0;
+  background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+}
+.diagram__item_good::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 25%;
+  left: 0;
+  
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.diagram__item_satisfactorily::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 25%;
+  left: 0;
+  
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.diagram__item_disappointed::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 25%;
+  left: 0;
+
+  background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
 }

@@ -1,5 +1,5 @@
-mixin advantages(title, value, nameIcon, line, height)
-  .advantages(class='advantages_'+line || false)
+mixin advantages(title, value, nameIcon)
+  .advantages
     .advantages__icon(class='advantages__icon_'+nameIcon || userIcon)
     .advantages__content
       h1.advantages__title= title

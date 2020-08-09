@@ -3,9 +3,6 @@
   display: flex;
   justify-content: flex-start;
 }
-.advantages_line {
-    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
-}
 .advantages__icon {
     width: 44px;
     height: 44px;
@@ -49,7 +46,7 @@
 	background-image: url(../elements/advantages/images/userIcon.png);
 	background-size: 90px;
 }
-.advantages-__icon_Murad::before {
+.advantages__icon_Murad::before {
     content: "";
 
     position: absolute;
