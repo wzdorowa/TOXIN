@@ -6,8 +6,13 @@
 .review__content {
     display: flex;
     justify-content: space-around;
-	width: 100%;
-    margin-top: 5px;
+  	width: 100%;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+.review__like-button {
+  width: 40px;
+  height: 20px;
 }
 .review__paragraph {
     font-family: 'Montserrat';
@@ -17,7 +22,7 @@
     line-height: 24px;
 
     color: rgba(31, 32, 65, 0.75);
-
-	padding-left: 15px;
+    width: 92%;
     margin: 0;
+    margin-left: 10px;
 }

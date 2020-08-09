@@ -5,5 +5,6 @@ mixin review(title, value, nameIcon, line, height, text)
   .review
     +advantages(title, value, nameIcon, line, height)
     .review__content
-      +like-button('12', 'checked')
+      .review__like-button
+        +like-button('12', 'checked')
       p.review__paragraph= text
