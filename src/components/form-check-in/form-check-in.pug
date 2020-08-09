@@ -2,26 +2,29 @@ include ../../elements/radio-button/radio-button.pug
 include ../../elements/toggle/toggle.pug
 
 mixin check-in(text)
-	.check-in
-		span.check-in__title= text
-		.check-in__user-data
-			.check-in__group-inputs
-					+base-input('', '', 'Имя', '', 'top', 'bottom')
-					+base-input('', '', 'Фамилия', '', 'top', 'bottom')
-			.check-in__buttons
-				+radio-button('Мужчина', 'checked')
-				+radio-button('Женщина')
-		.check-in__input-container
-			+base-input('Дата рождения', 'padding', 'ДД.ММ.ГГГГ', '', 'top', 'bottom')
-		.check-in__login-details
-			.check-in__group-inputs-login
-				.check-in__input-container
-					+base-input('Данные для входа в сервис', 'padding', 'Email', '', 'top', 'bottom')
-				.check-in__input-container
-					+base-input('', '', 'Пароль', '', 'top', 'bottom')
-			+toggle('Получать спецпредложения')
-		.check-in__check-in-details
-			+base-button('Зарегистрироваться', 'large', 'large', 'background', 'arrow')
-			.check-in__have-an-account
-				span.check-in__text Уже есть аккаунт на Toxin
-				+base-button('Войти', 'medium', 'large', 'border')
+  .check-in
+    span.check-in__title= text
+    .check-in__user-data
+      .check-in__group-inputs
+          +base-input('', 'Имя', '', 'top', 'bottom')
+          +base-input('', 'Фамилия', '', 'top', 'bottom')
+      .check-in__buttons
+        +radio-button('Мужчина', 'checked')
+        +radio-button('Женщина')
+    .check-in__input-container
+      +base-input('Дата рождения', 'ДД.ММ.ГГГГ', '', 'top', 'bottom')
+    .check-in__login-details
+      .check-in__group-inputs-login
+        .check-in__input-container
+          +base-input('Данные для входа в сервис', 'Email', '', 'top', 'bottom')
+        .check-in__input-container
+          +base-input('', 'Пароль', '', 'top', 'bottom')
+      .check-in__toggle
+        +toggle('Получать спецпредложения')
+    .check-in__check-in-details
+      .check-in__check-in-button
+        +base-button('Зарегистрироваться', 'background', 'arrow')
+      .check-in__have-an-account
+        span.check-in__text Уже есть аккаунт на Toxin
+        .check-in__sign-in-button
+          +base-button('Войти', 'border')

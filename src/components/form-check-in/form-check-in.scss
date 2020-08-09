@@ -2,24 +2,19 @@
   position: relative;
 	display: flex;
 	flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    background-color: white;
-
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-
-    z-index: 2;
+  z-index: 2;
+  width: 100%;
 }
 .check-in__title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.6px;
 
 	color: #1F2041;
 }
@@ -53,6 +48,10 @@
 
     height: 115px;
 }
+// .check-in__toggle {
+//   width: 40px;
+//   height: 20px;
+// }
 .check-in__login-details {
     display: flex;
     flex-direction: column;
@@ -76,12 +75,16 @@
     } 
 }
 .check-in__check-in-details {
-    width: 100%;
+  width: 100%;
 	display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 
-    height: 117px;
+  height: 115px;
+}
+.check-in__check-in-button {
+  width: 100%;
+  height: 44px;
 }
 .check-in__have-an-account {
     display: flex;
@@ -89,4 +92,8 @@
 
     width: 100%;
     height: 40px;
+}
+.check-in__sign-in-button {
+  width: 99px;
+  height: 44px;
 }
