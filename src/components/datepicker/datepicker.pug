@@ -1,6 +1,8 @@
 mixin datepicker()
-  .datepicker
-    .datepicker__content.datepicker-here(data-range="true")
-    .datepicker__buttons
-      +base-button('Очистить', '', 'large', 'noDecor')
-      +base-button('Применить', '', 'large', 'noDecor')
+  .calendar
+    .calendar__content.datepicker-here(data-range="true")
+    .calendar__buttons
+      .calendar__buttons-container
+        +base-button('Очистить', 'noDecor')
+      .calendar__buttons-container
+        +base-button('Применить', 'noDecor')

@@ -10,7 +10,9 @@ mixin search-room(text)
         +base-input('Прибытие', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom')
       .search-room__input-container
         +base-input('Выезд', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom')
-      .search-room__input-container
+      .search-room__datepicker
+          +datepicker()
+      .search-room__dropdown-container
         +dropdown('Гости', 'Сколько гостей')
           +dropdown-row('Взрослые', '2')
           +dropdown-row('Дети', '1')
