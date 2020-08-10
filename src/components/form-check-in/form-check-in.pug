@@ -6,8 +6,8 @@ mixin check-in(text)
     span.check-in__title= text
     .check-in__user-data
       .check-in__group-inputs
-          +base-input('', 'Имя', '', 'top', 'bottom')
-          +base-input('', 'Фамилия', '', 'top', 'bottom')
+          +base-input('', 'Имя', '', 'top', 'bottom', 'hide')
+          +base-input('', 'Фамилия', '', 'top', 'bottom', 'hide')
       .check-in__buttons
         +radio-button('Мужчина', 'checked')
         +radio-button('Женщина')
