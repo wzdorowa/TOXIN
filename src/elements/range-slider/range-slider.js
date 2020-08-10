@@ -11,7 +11,7 @@ $('.slider__range').slider({
 });
 $('.slider__left-price').val($('.slider__range').slider('values', 0));
 $('.slider__right-price').val($('.slider__range').slider('values', 1));
-$(document).focusout(() => {
+$('.slider__range').focusout(() => {
   let inputLeft = $('.slider__left-price')
     .val()
     .replace(/[^0-9]/g, '');
