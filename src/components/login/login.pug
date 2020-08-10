@@ -3,9 +3,9 @@ mixin login(text)
     span.login__title= text
     .login__login-details
       .login__input-item
-        +base-input( '', 'Email', '', 'top', 'bottom')
+        +base-input( '', 'Email', '', 'top', 'bottom', 'hide')
       .login__input-item
-        +base-input( '', 'Пароль', '', 'top', 'bottom')
+        +base-input( '', 'Пароль', '', 'top', 'bottom', 'hide')
     .login__check-in-details
       .login__check-in-button
         +base-button('Войти', 'background', 'arrow')

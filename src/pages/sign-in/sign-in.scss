@@ -32,7 +32,7 @@
 .sign-in__container {
     min-width: 320px;
     max-width: 1440px;
-	min-height: 685px;
+	  min-height: 520px;
     
     margin-left: auto;
     margin-right: auto;
@@ -63,4 +63,8 @@
   @media(min-width: 400px) {
     width: 380px;
   }
+}
+.sign-in__footer {
+  margin-top: 60px;
+  padding-bottom: 60px;
 }
