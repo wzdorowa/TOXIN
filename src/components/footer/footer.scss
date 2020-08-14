@@ -1,31 +1,31 @@
 .footer {
-    width: 100%;
+  width: 100%;
 }
 .footer__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
 
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    @media (min-width: 720px) {
-        min-width: 720px;
-    }
-    @media (min-width: 1170px) {
-        min-width: 1160px;
-        min-height: 180px;
-        flex-direction: row;
-        align-items: flex-start;
-        padding-bottom: 0;
-    }
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @media (min-width: 720px) {
+    min-width: 720px;
+  }
+  @media (min-width: 1170px) {
+    min-width: 1160px;
+    min-height: 180px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
 }
 .footer__logo-container {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 260px;
@@ -41,135 +41,135 @@
   width: 105px;
 }
 .footer__logo-description {
-    width: 100%;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+  width: 100%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
 
-	color: rgba(31, 32, 65, 0.75);
-	
-	margin: 0;
-    min-height: 60px;
-    text-align: center;
-    @media (min-width: 1170px) {
-        margin-top: 17px;
-        text-align: start;
-    }
+  color: rgba(31, 32, 65, 0.75);
+
+  margin: 0;
+  min-height: 60px;
+  text-align: center;
+  @media (min-width: 1170px) {
+    margin-top: 17px;
+    text-align: start;
+  }
 }
 .footer__information {
-    min-width: 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 15px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15px;
 
-    @media (min-width: 480px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        min-height: 300px;
-    }
-    @media (min-width: 720px) {
-        width: 535px;
-        min-height: 195px;
-        justify-content: space-between;
-    }
-    @media (min-width: 1170px) {
-      margin-right: auto;
+  @media (min-width: 480px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 300px;
+  }
+  @media (min-width: 720px) {
+    width: 535px;
+    min-height: 195px;
+    justify-content: space-between;
+  }
+  @media (min-width: 1170px) {
+    margin-right: auto;
   }
 }
 .footer__list {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-	list-style: none;
+  list-style: none;
 
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 15px;
-    @media (min-width: 720px) {
-        align-items: flex-start;
-    }
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+  @media (min-width: 720px) {
+    align-items: flex-start;
+  }
 }
 .footer__list:last-of-type {
-    @media (min-width: 720px) {
-        align-items: flex-start;
-        max-height: 140px;
-    }
+  @media (min-width: 720px) {
+    align-items: flex-start;
+    max-height: 140px;
+  }
 }
 .footer__item {
-    height: 25px;
+  height: 25px;
 }
 .footer__link {
-    text-decoration: none;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: normal;
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
 
-    font-size: 14px;
-    line-height: 17px;
-    
-    color: rgba(31, 32, 65, 0.5);
+  font-size: 14px;
+  line-height: 17px;
+  
+  color: rgba(31, 32, 65, 0.5);
 }
 .footer__item:first-child .footer__link {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    
-    text-transform: uppercase; 
-    
-    color: #1F2041;
-    margin-bottom: 20px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  
+  text-transform: uppercase; 
+  
+  color: #1F2041;
+  margin-bottom: 20px;
 
-    @media (min-width: 321px) {
-        font-size: 11px;
-        line-height: 15px;
-    }
+  @media (min-width: 321px) {
+    font-size: 11px;
+    line-height: 15px;
+  }
 }
 .footer__subscribe {
-	display: flex;
-	flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 120px;
-    @media (min-width: 720px) {
-        width: 258px;
-    }
-    @media (min-width: 1170px) {
-        min-height: 150px;
-        align-items: flex-start;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 120px;
+  @media (min-width: 720px) {
+    width: 258px;
+  }
+  @media (min-width: 1170px) {
+    min-height: 150px;
+    align-items: flex-start;
+  }
 }
 .footer__subscribe-title {
-    display: block;
+  display: block;
 
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 11px;
-    line-height: 16px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 16px;
 
-    text-transform: uppercase;
+  text-transform: uppercase;
 
-    color: #1F2041;
+  color: #1F2041;
 }
 .footer__subscribe-description {
-    display: block;
+  display: block;
 
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
 
-    color: rgba(31, 32, 65, 0.75);
-    text-align: center;
-    @media (min-width: 1170px) {
-        text-align: start;
-    }
+  color: rgba(31, 32, 65, 0.75);
+  text-align: center;
+  @media (min-width: 1170px) {
+    text-align: start;
+  }
 }

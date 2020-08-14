@@ -8,19 +8,19 @@
   cursor: pointer;
 }
 .like-button__indicator {
-    position: absolute;
+  position: absolute;
 
-    width: 100%;
-    height: 100%;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
 }
 .like-button__description {
-	position: relative;
+  position: relative;
 
-	display: flex;
+  display: flex;
 
-	font-family: 'Montserrat';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: normal;
   font-size: 9px;
@@ -29,25 +29,24 @@
   padding-left: 50%;
 }
 .like-button__filter input[type="checkbox"]:checked + .like-button__indicator {
-    border: 1px solid #BC9CFF;
+  border: 1px solid #BC9CFF;
 }
 .like-button__filter input[type="checkbox"]:checked ~ .like-button__description {
-    color:#BC9CFF;
+  color:#BC9CFF;
 }
 .like-button__filter input[type="checkbox"]:checked ~ .like-button__description::before {
   content: "favorite";
 
-	position: absolute;
-	top: 0;
+  position: absolute;
+  top: 0;
   left: 5px;
 
-	font-family: 'Material Icons';
-	font-style: normal;
+  font-family: 'Material Icons';
+  font-style: normal;
   font-weight: normal;
   font-size: 10px;
   line-height: 20px;
   color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-
 }
 .like-button input[type="checkbox"]:not(:checked) ~ .like-button__description::before {
   content: "favorite_border";
@@ -56,27 +55,27 @@
   top: 0;
   left: 5px;
 
-	font-family: 'Material Icons';
-	font-style: normal;
+  font-family: 'Material Icons';
+  font-style: normal;
   font-weight: normal;
   font-size: 10px;
   line-height: 20px;
   color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .visually-hidden:not(:focus):not(:active),
- input[type="checkbox"].visually-hidden,
- input[type="radio"].visually-hidden {
-   position: absolute;
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
 
-   width: 1px;
-   height: 1px;
-   margin: -1px;
-   border: 0;
-   padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-   white-space: nowrap;
+  white-space: nowrap;
 
-   clip-path: inset(100%);
-   clip: rect(0 0 0 0);
-   overflow: hidden; 
- }
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; 
+}

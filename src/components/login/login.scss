@@ -1,12 +1,12 @@
 .login {
-    position: relative;
-	display: flex;
-	flex-direction: column;
-    justify-content: space-between;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    z-index: 2;
-    width: 100%;
-    height: 100%;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 .login__title {
   font-family: 'Montserrat';
@@ -16,50 +16,50 @@
   line-height: 30px;
   letter-spacing: -0.6px;
 
-	color: #1F2041;
-	
-	width: 100%;
+  color: #1F2041;
+
+  width: 100%;
 }
 .login__check-in-details {
-    width: 100%;
-	display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 100%;
+  height: 115px;
 
-    height: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .login__check-in-button {
   width: 100%;
   height: 44px;
 }
 .login__login-details {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 100%;
+  height: 95px;
 
-    height: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .login__text {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 25px;
-    text-align: center;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
 
-    align-items: center;
-    @media(min-width: 400px) {
-        line-height: 39px;
-        text-align: left;
-    }
+  align-items: center;
+  @media(min-width: 400px) {
+    line-height: 39px;
+    text-align: left;
+  }
 }
 .login__have-an-account {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    width: 100%;
-    height: 40px;
+  width: 100%;
+  height: 40px;
 }
 .login__create-button {
   width: 99px;

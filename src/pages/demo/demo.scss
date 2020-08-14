@@ -1,175 +1,169 @@
 .columns {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    max-width: 1160px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }
 .columns-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    max-width: 1160px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }
 .rows-content {
-    max-width: 100%;
-    margin-top: 50px;
+  max-width: 100%;
+  margin-top: 50px;
 }
 .columns-content-wrapper {
-    position: relative;
-    width: 100%;
-    background-color: rgba(31, 32, 65, 0.05);
+  position: relative;
+  width: 100%;
+  background-color: rgba(31, 32, 65, 0.05);
 }
 .columns__item {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 
-    min-width: 260;
+  min-width: 260;
 }
 .inputs-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    max-width: 320px;
-    height: 500px;
-
+  max-width: 320px;
+  height: 500px;
 }
 .chechbox-buttons-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    max-width: 222px;
-    height: 130px;
+  max-width: 222px;
+  height: 130px;
 }
 .buttons-title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
 
-    text-transform: uppercase;
+  text-transform: uppercase;
 
-    color: #1F2041;
+  color: #1F2041;
 
-    margin: 0;
+  margin: 0;
 }
 .radio-buttons-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    max-width: 220px;
-    height: 51px;
+  max-width: 220px;
+  height: 51px;
 }
 .buttons-string {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .toggle-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    max-width: 260px;
-    height: 85px;
+  max-width: 260px;
+  height: 85px;
 }
 .like-button-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    max-width: 90px;
-    height: 51px;
+  max-width: 90px;
+  height: 51px;
 }
 .rate-button-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
-    max-width: 260px;
-    height: 55px;
+  max-width: 260px;
+  height: 55px;
 }
 .rate-group-button {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    width: 105px;
+  width: 105px;
 }
 .range-slider-wrapper {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
-
-    max-width: 266px;
-    height: 45px;
+  max-width: 266px;
+  height: 45px;
 }
 .base-button-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    height: 240px;
+  height: 240px;
 }
 .pagination-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    height: 100px;
+  height: 100px;
 }
 .rich-checkbox-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    width: 266px;
-    height: 145px;
+  width: 266px;
+  height: 145px;
 }
 .bullet-list-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    width: 291px;
-    height: 147px;
+  width: 291px;
+  height: 147px;
 }
 .advantages-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    height: 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 155px;
 }
 .search-room-wrapper {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .check-in-wrapper {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .result-search-room-wrapper {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .login-wrapper {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .number-card-wrapper {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .datepicker-wrapper {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .header-wrapper {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .footer-wrapper {
-    margin-top: 50px;
+  margin-top: 50px;
 }

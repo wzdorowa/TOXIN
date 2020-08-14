@@ -5,79 +5,79 @@
   align-items: center;
 }
 .header__grouping {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    width: 100%;
-    @media (min-width: 610px) {
-        width: 30%;
-    }
-    @media (min-width: 910px) {
-        width: 106px;
-    }
+  width: 100%;
+  @media (min-width: 610px) {
+    width: 30%;
+  }
+  @media (min-width: 910px) {
+    width: 106px;
+  }
 }
 .header__logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    width: 105px;
-    @media (min-width: 1055px) {
-        justify-content: flex-start;
-    }
+  width: 105px;
+  @media (min-width: 1055px) {
+    justify-content: flex-start;
+  }
 }
 .header__user-icon{
-    position: relative;
-    width: 38px;
-    height: 38px;
-    margin-left: auto;
-    margin-right: 10px;
-    @media (min-width: 910px) {
-        display: none;
-    }
+  position: relative;
+  width: 38px;
+  height: 38px;
+  margin-left: auto;
+  margin-right: 10px;
+  @media (min-width: 910px) {
+    display: none;
+  }
 }
 .header__user-icon::before {
-    position: absolute;
+  position: absolute;
 
-    content: "account_circle";
-    right: 0px;
+  content: "account_circle";
+  right: 0px;
 
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 38px;
-    line-height: 38px;
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 38px;
 
-    text-transform: initial;
+  text-transform: initial;
 
-    color: rgba(33, 37, 138, 0.5);
+  color: rgba(33, 37, 138, 0.5);
 }
 .header__navigation-icon{
-    position: relative;
-    width: 38px;
-    height: 38px;
-    @media (min-width: 610px) {
-        display: none;
-    }
-    @media (min-width: 1055px) {
-        display: none;
-    }
+  position: relative;
+  width: 38px;
+  height: 38px;
+  @media (min-width: 610px) {
+    display: none;
+  }
+  @media (min-width: 1055px) {
+    display: none;
+  }
 }
 .header__navigation-icon::before {
-    position: absolute;
+  position: absolute;
 
-    content: "reorder";
-    right: 0px;
+  content: "reorder";
+  right: 0px;
 
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 38px;
-    line-height: 38px;
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 38px;
 
-    text-transform: initial;
+  text-transform: initial;
 
-    color: rgba(33, 37, 138, 0.5);
+  color: rgba(33, 37, 138, 0.5);
 }
 .header__navigation {
   display: flex;
@@ -92,35 +92,35 @@
   margin-right: auto;
 
   @media (min-width: 610px) {
-      display: flex;
-      flex-direction: row;
+    display: flex;
+    flex-direction: row;
 
-      width: 65%;
-      margin-left: auto;
-      margin-right: 0;
-      padding-right: 15px;
+    width: 65%;
+    margin-left: auto;
+    margin-right: 0;
+    padding-right: 15px;
   }
   @media (min-width: 910px) {
-      width: 490px;
+    width: 490px;
   }
   @media (min-width: 1055px) {
-      display: flex;
-      flex-direction: row;
+    display: flex;
+    flex-direction: row;
 
-      width: 490px;
-      padding-right: 30px;
+    width: 490px;
+    padding-right: 30px;
   }
 }
 .header__item {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 100%;
-    height: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+  width: 100%;
+  height: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .header__item_drop-down-menu {
   @media (min-width: 610px) {
@@ -140,50 +140,50 @@
   right: 50px;
   text-transform: initial;
   @media (min-width: 610px) {
-      top: 7px;
-      right: -5px;
+    top: 7px;
+    right: -5px;
   }
 }
 .header__link {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
 
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12.8px;
+  line-height: 15px;
+  text-transform: uppercase;
+
+  color: rgba(31, 32, 65, 0.5);
+
+  margin: 0;
+  padding: 0px;
+  @media (min-width: 610px) {
     font-size: 12.8px;
     line-height: 15px;
-    text-transform: uppercase;
-
-    color: rgba(31, 32, 65, 0.5);
-
-    margin: 0;
-    padding: 0px;
-    @media (min-width: 610px) {
-        font-size: 12.8px;
-        line-height: 15px;
-        text-transform: none;
-    }
+    text-transform: none;
+  }
 }
 .header__user {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    min-width: 303px;
-    min-height: 70px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: auto;
-    margin-left: auto;
-    z-index: 1;
-    display: none;
-    @media (min-width: 910px) {
-        display: flex;
-        margin-right: 0;
-        margin-left: 0;
-    }
+  min-width: 303px;
+  min-height: 70px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 1;
+  display: none;
+  @media (min-width: 910px) {
+    display: flex;
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 .header__user-button-login {
   width: 87px;

@@ -45,19 +45,19 @@
   transform: rotate(180deg);
 }
 .checkbox-list__slide-toggle {
-	position: absolute;
+  position: absolute;
 
-	width: 100%;
-	z-index: 2;
+  width: 100%;
+  z-index: 2;
 
   display: none;
 }
 .checkbox-list__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    min-height: 235px;
-    margin-top: 5px;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  min-height: 235px;
+  margin-top: 5px;
+  background-color: white;
 }

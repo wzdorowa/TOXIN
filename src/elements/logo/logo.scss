@@ -1,37 +1,37 @@
 .logo {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .logo__sign {
-	height: 40px;
+  height: 40px;
 }
 .logo__sign::before {
-    position: absolute;
-    content: '';
+  position: absolute;
+  content: '';
 
-    width: 11.76px;
-    height: 11.76px;
+  width: 11.76px;
+  height: 11.76px;
 
-    top: 14px;
-    left: 9px;
+  top: 14px;
+  left: 9px;
 
-    background-image: url('../elements/logo/images/Vector-1.svg');
+  background-image: url('../elements/logo/images/Vector-1.svg');
 }
 .logo__sign::after {
-    position: absolute;
-    content: '';
+  position: absolute;
+  content: '';
 
-    width: 8px;
-    height: 5.91px;
+  width: 8px;
+  height: 5.91px;
 
-    top: 13px;
-    left: 21px;
+  top: 13px;
+  left: 21px;
 
-    background-image: url('../elements/logo/images/Vector-2.svg');
+  background-image: url('../elements/logo/images/Vector-2.svg');
 }
 .logo__text {
-	padding-top: 15px;
-	height: 36px;
+  padding-top: 15px;
+  height: 36px;
 }

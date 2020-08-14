@@ -9,10 +9,10 @@
   margin-right: auto;
 
   @media (min-width: 720px) {
-      min-width: 720px;
+    min-width: 720px;
   }
   @media (min-width: 1160px) {
-      min-width: 1160px;
+    min-width: 1160px;
   }
 }
 .registration__header-container {
@@ -21,26 +21,26 @@
 
   min-width: 300px;
   @media (min-width: 720px) {
-      min-width: 720px;
+    min-width: 720px;
   }
   @media (min-width: 1160px) {
-      max-width: 1160px;
-      height: 64px;
-      flex-direction: row;
+    max-width: 1160px;
+    height: 64px;
+    flex-direction: row;
   }
 }
 .registration__container {
-    min-width: 320px;
-    max-width: 1440px;
-	min-height: 670px;
-	
-	margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+  min-width: 320px;
+  max-width: 1440px;
+  min-height: 670px;
+
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .registration__image-background {
-	position: absolute;
-	top: 0;
+  position: absolute;
+  top: 0;
   z-index: -1;
 }
 .registration__check-in {
@@ -51,8 +51,8 @@
   height: 643px;
   padding-left: 29px;
   padding-right: 29px;
-	padding-top: 40px;
-	padding-bottom: 30px;
+  padding-top: 40px;
+  padding-bottom: 30px;
   margin-top: 27px;
   margin-left: auto;
   margin-right: auto;
