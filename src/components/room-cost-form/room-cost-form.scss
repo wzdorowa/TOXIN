@@ -106,7 +106,7 @@
 
     color: #1F2041;
 }
-.room-cost-form__total-item_border {
+.room-cost-form__total-item_with-border {
     width: 120px;
     height: 18px;
     border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
@@ -114,7 +114,7 @@
         width: 180px;
     }
 }
-.room-cost-form__total-item_cost {
+.room-cost-form__total-item_with-cost {
 	font-family: 'Quicksand';
     font-style: normal;
     font-weight: bold;

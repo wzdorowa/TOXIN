@@ -26,26 +26,26 @@
   height: 100%;
   padding: 0;
 }
-.button__content_decor-background {
+.button__content_with-background {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   color: white;
   border-radius: 22px;
 }
-.button__content_decor-background:hover {
+.button__content_with-background:hover {
   opacity: 0.5;
   cursor: pointer;
 }
-.button__content_decor-noDecor:hover {
+.button__content_with-noDecor:hover {
   color: rgba(31, 32, 65, 0.5);
   cursor: pointer;
 }
-.button__content_decor-border {
+.button__content_with-border {
   position: relative;
   border: 2px solid transparent;
   border-radius: 22px;
   background-clip: padding-box;
 }
-.button__content_decor-border::before {
+.button__content_with-border::before {
   position: absolute;
   top: -2px; bottom: -2px;
   left: -2px; right: -2px;
@@ -54,13 +54,13 @@
   z-index: -1;
   border-radius: 22px;
 }
-.button__content_decor-border:hover {
+.button__content_with-border:hover {
   cursor: pointer;
 }
-.button__content_decor-border:hover::before {
+.button__content_with-border:hover::before {
   background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
 }
-.button_arrow::before {
+.button_with-arrow::before {
   position: absolute;
 
   content: 'arrow_forward';

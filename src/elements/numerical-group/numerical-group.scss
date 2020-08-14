@@ -10,7 +10,7 @@
 .numerical-group__sign-number {
   padding-right: 5px;
 }
-.numerical-group__sign-number_hide {
+.numerical-group__sign-number_hidden {
   display: none;
 }
 .numerical-group__number_bold {
@@ -29,13 +29,13 @@
 	border-bottom: 1px solid; 
   display: inline-block;
 }
-.numerical-group__sign-rouble_hide {
+.numerical-group__sign-rouble_hidden {
   display: none;
 }
 .numerical-group__description {
   display: inline-block;
 }
-.numerical-group__description_lux {
+.numerical-group__description_bold-pink {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
@@ -79,6 +79,6 @@
       right: -25px;
   }
 }
-.numerical-group__description-sign_hide {
+.numerical-group__description-sign_hidden {
   display: none;
 }

@@ -34,7 +34,7 @@ block content
           .room-details__impressions
             h2.room-details__title Впечатления от номера
             .room-details__diagram
-              - const impressions = [{modifier: 'sumptuously', text: 'Великолепно'}, {modifier: 'good', text: 'Хорошо'}, {modifier: 'satisfactorily', text: 'Удовлетворительно'}, {modifier: 'disappointed', text: 'Разочарован'}]
+              - const impressions = [{modifier: 'yellow-pink', text: 'Великолепно'}, {modifier: 'turquoise-blue', text: 'Хорошо'}, {modifier: 'light-blue', text: 'Удовлетворительно'}, {modifier: 'violet-blue', text: 'Разочарован'}]
               +diagram('260', 'голосов', impressions)
                 circle(class="room-details__donut-hole" cx="50%" cy="50%" r="15.91549430918954" fill="#fff")
                 circle(class="room-details__donut-ring" cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1")

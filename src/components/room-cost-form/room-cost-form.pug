@@ -4,10 +4,10 @@ mixin room-cost-form(number, text, cost)
     .room-cost-form
       .room-cost-form__identification-room
           .room-cost-form__specification-room
-              - const specificationState = {number: '888', description: 'люкс', visibilitySignNumber: '', visibilitySignRouble: 'hide', visibilityDescriptionSign: 'hide', numberDecor: 'bold', descriptionDecor: 'lux'}
+              - const specificationState = {number: '888', description: 'люкс', visibilitySignNumber: '', visibilitySignRouble: 'hidden', visibilityDescriptionSign: 'hidden', numberDecor: 'bold', descriptionDecor: 'bold-pink'}
               +numerical-group(specificationState)
           .room-cost-form__cost-per-day
-              - const costPerDay = {number: '9 990', description: ' в сутки', visibilitySignNumber: 'hide', visibilitySignRouble: '', visibilityDescriptionSign: 'hide', numberDecor: '', descriptionDecor: 'normal'}
+              - const costPerDay = {number: '9 990', description: ' в сутки', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden', numberDecor: '', descriptionDecor: 'normal'}
               +numerical-group(costPerDay)
       .room-cost-form__inputs
           .room-cost-form__input-container
@@ -17,7 +17,7 @@ mixin room-cost-form(number, text, cost)
           .room-cost-form__input-container
               +base-input('Гости', '3 гостя', 'arrow-down', 'top', 'bottom')
       .room-cost-form__calculation
-          - const calculationItems = [[{number: '9 990', description: ' x 4 суток', visibilitySignNumber: 'hide', visibilitySignRouble: '', visibilityDescriptionSign: 'hide'},{number: '39 690', description: '', visibilitySignNumber: 'hide', visibilitySignRouble: '', visibilityDescriptionSign: 'hide'}],[{number: '', description: 'Сбор за услуги: скидка', visibilitySignNumber: 'hide', visibilitySignRouble: 'hide', visibilityDescriptionSign: 'hide'},{number: ' 2 179', description: '', visibilitySignNumber: 'hide', visibilitySignRouble: '', visibilityDescriptionSign: ''},{number: '0', description: '', visibilitySignNumber: 'hide', visibilitySignRouble: '', visibilityDescriptionSign: 'hide'}],[{number: '', description: 'Сбор за дополнительные услуги', visibilitySignNumber: 'hide', visibilitySignRouble: 'hide', visibilityDescriptionSign: ''},{number: '300', description: '', visibilitySignNumber: 'hide', visibilitySignRouble: '', visibilityDescriptionSign: 'hide'}]]
+          - const calculationItems = [[{number: '9 990', description: ' x 4 суток', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'},{number: '39 690', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}],[{number: '', description: 'Сбор за услуги: скидка', visibilitySignNumber: 'hidden', visibilitySignRouble: 'hidden', visibilityDescriptionSign: 'hidden'},{number: ' 2 179', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: ''},{number: '0', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}],[{number: '', description: 'Сбор за дополнительные услуги', visibilitySignNumber: 'hidden', visibilitySignRouble: 'hidden', visibilityDescriptionSign: ''},{number: '300', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}]]
           - const itemNumber = ['first', 'second', 'third']
           each val, index in calculationItems
               - let calculationItem = val
@@ -33,9 +33,9 @@ mixin room-cost-form(number, text, cost)
                       +numerical-group(calculationItem[1])
       .room-cost-form__total
           .room-cost-form__total-item Итого
-          .room-cost-form__total-item.room-cost-form__total-item_border
-          .room-cost-form__total-item.room-cost-form__total-item_cost
-              - const totalState = {number: '38 081', description: '', visibilitySignNumber: 'hide', visibilitySignRouble: '', visibilityDescriptionSign: 'hide'}
+          .room-cost-form__total-item.room-cost-form__total-item_with-border
+          .room-cost-form__total-item.room-cost-form__total-item_with-cost
+              - const totalState = {number: '38 081', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}
               +numerical-group(totalState)
       .room-cost-form__armor-button
           +base-button('Забронировать', 'background', 'arrow')

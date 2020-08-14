@@ -5,7 +5,7 @@ mixin number-card(number, text, cost, amount)
     .number-card__slider
       - var images = new Array(4);
       each val, index in images
-        .number-card__content(class='number-card__content_'+number)
+        .number-card__content(class='number-card__content_with-img-'+number)
       .number-card__prev
       .number-card__next
     .number-card__slider-dots
