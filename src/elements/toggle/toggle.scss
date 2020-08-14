@@ -21,11 +21,11 @@
 .toggle__description {
   padding-left: 50px;
 }
-.toggle input[type="checkbox"]:checked + .toggle__indicator {
+.toggle input[type='checkbox']:checked + .toggle__indicator {
   border: 1px solid #BC9CFF;
 }
-.toggle input[type="checkbox"]:checked + .toggle__indicator::before {
-  content: "";
+.toggle input[type='checkbox']:checked + .toggle__indicator::before {
+  content: '';
 
   position: absolute;
   top: 3px;
@@ -36,8 +36,8 @@
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 10px;
 }
-.toggle input[type="checkbox"]:not(:checked) + .toggle__indicator::before {
-  content: "";
+.toggle input[type='checkbox']:not(:checked) + .toggle__indicator::before {
+  content: '';
 
   position: absolute;
   top: 3px;
@@ -49,8 +49,8 @@
   border-radius: 10px;
 }
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
   position: absolute;
 
   width: 1px;

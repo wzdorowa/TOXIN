@@ -40,11 +40,11 @@
   padding-left: 28px;
   padding-top: 5px;
 }
-.checkbox-button__filter input[type="checkbox"]:checked + .checkbox-button__indicator {
+.checkbox-button__filter input[type='checkbox']:checked + .checkbox-button__indicator {
   border: 1px solid #BC9CFF;
 }
-.checkbox-button__filter input[type="checkbox"]:checked + .checkbox-button__indicator::before {
-  content: "";
+.checkbox-button__filter input[type='checkbox']:checked + .checkbox-button__indicator::before {
+  content: '';
 
   position: absolute;
   top: 4px;
@@ -67,8 +67,8 @@
   color: rgba(31, 32, 65, 0.75);
 }
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
   position: absolute;
 
   width: 1px;

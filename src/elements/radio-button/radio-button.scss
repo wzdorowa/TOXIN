@@ -20,11 +20,11 @@
 .radio-button__description {
   padding-left: 30px;
 }
-.radio-button__filter input[type="radio"]:checked + .radio-button__indicator {
+.radio-button__filter input[type='radio']:checked + .radio-button__indicator {
   border: 1px solid #BC9CFF;
 }
-.radio-button__filter input[type="radio"]:checked + .radio-button__indicator::before {
-  content: "";
+.radio-button__filter input[type='radio']:checked + .radio-button__indicator::before {
+  content: '';
 
   position: absolute;
   top: 3px;
@@ -36,8 +36,8 @@
   border-radius: 10px;
 }
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
   position: absolute;
 
   width: 1px;

@@ -39,9 +39,9 @@
 .datepicker-inline .datepicker--nav-action path {
   display: none;
 }
-.datepicker-inline .datepicker--nav-action[data-action="prev"]::before {
+.datepicker-inline .datepicker--nav-action[data-action='prev']::before {
   position: absolute;
-  content: "arrow_back";
+  content: 'arrow_back';
 
   font-family: 'Material Icons';
   font-style: normal;
@@ -51,9 +51,9 @@
 
   color: #BC9CFF;
 }
-.datepicker-inline .datepicker--nav-action[data-action="next"]::before {
+.datepicker-inline .datepicker--nav-action[data-action='next']::before {
   position: absolute;
-  content: "arrow_forward";
+  content: 'arrow_forward';
 
   font-family: 'Material Icons';
   font-style: normal;
@@ -118,7 +118,7 @@
 }
 .datepicker-inline .datepicker--cell.-range-from-::before {
   position: absolute;
-  content: "";
+  content: '';
 
   width: 20px;
   height: 38.5px;
@@ -128,7 +128,7 @@
 }
 .datepicker-inline .datepicker--cell.-range-to-::before {
   position: absolute;
-  content: "";
+  content: '';
 
   width: 20px;
   height: 38.5px;

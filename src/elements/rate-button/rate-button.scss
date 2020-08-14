@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 .rating-item::before {
-  content: "star_border";
+  content: 'star_border';
 
   position: absolute;
 
@@ -26,7 +26,7 @@
 }
 
 .rating-item.active::after {
-  content: "star";
+  content: 'star';
 
   position: absolute;
 
