@@ -19,7 +19,7 @@ mixin header()
           li.header__item
             a.header__link(href="")= val
     .header__user
-      .header__user-button-login
-        +base-button('Войти', 'border', '')
-      .header__user-button-registration
-        +base-button('Зарегистироваться', 'background', '')
+      form.header__user-button-login(action='../../pages/sign-in/sign-in.pug', target="_blank")
+        +base-button('Войти', 'border', '', 'submit')
+      form.header__user-button-registration(action='../../pages/registration/registration.pug', target="_blank")
+        +base-button('Зарегистироваться', 'background', '', 'submit')
