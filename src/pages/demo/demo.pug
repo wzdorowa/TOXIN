@@ -9,24 +9,21 @@ include ../../elements/rate-button/rate-button.pug
 include ../../elements/range-slider/range-slider.pug
 include ../../elements/base-button/base-button.pug
 include ../../elements/pagination/pagination.pug
-include ../../elements/dropdown/dropdown.pug
+include ../../elements/dropdown-row/dropdown-row.pug
 include ../../elements/checkbox-list/checkbox-list.pug
-include ../../elements/bullet-list/bullet-list.pug
+include ../../elements/bulleted-list/bulleted-list.pug
 include ../../elements/advantages/advantages.pug
-include ../../elements/review/review.pug
+include ../../components/review/review.pug
+include ../../components/room-cost-form/room-cost-form.pug
 include ../../components/form-search-room/form-search-room.pug
-include ../../components/form-result-search-room/form-result-search-room.pug
 include ../../components/form-check-in/form-check-in.pug
 include ../../components/login/login.pug
 include ../../components/number-card/number-card.pug
-include ../../components/number-card-2/number-card-2.pug
 include ../../components/datepicker/datepicker.pug
 include ../../elements/logo/logo.pug
-include ../../components/header-1/header-1.pug
-include ../../components/header-2/header-2.pug
+include ../../components/header/header.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
-include ../../components/footer-small/footer-small.pug
 include ../../components/social-btn/social-btn.pug
 
 block content
@@ -95,9 +92,9 @@ block content
         .columns__item
             .bullet-list-wrapper
                 h1.buttons-title Bullet list
-                +bullet-list('Нельзя с питомцами')
-                +bullet-list('Без вечеринок и мероприятий')
-                +bullet-list('Время прибытия - после 13:00, а выезд до 12:00')
+                +bulleted-list('Нельзя с питомцами')
+                +bulleted-list('Без вечеринок и мероприятий')
+                +bulleted-list('Время прибытия - после 13:00, а выезд до 12:00')
     .columns
         .columns__item
             .advantages-wrapper
@@ -110,30 +107,30 @@ block content
         .columns-content
             .columns__item
                 .search-room-wrapper
-                    +searchRoom('Найдем номера под ваши пожелания')
+                    +search-room('Найдем номера под ваши пожелания')
                 .check-in-wrapper
-                    +checkIn('Регистрация аккаунта')
+                    +check-in('Регистрация аккаунта')
             .columns__item
                 .result-search-room-wrapper
-                    +resultSearchRoom('888', 'люкс', '9 990')
+                    +room-cost-form('888', 'люкс', '9 990')
                 .login-wrapper
                     +login('Вход')
             .columns__item
                 .datepicker-wrapper
                     +datepicker()
                 .number-card-wrapper
-                    +numberCard('888', 'люкс', '9 990', '145', 'border')
+                    +number-card('888', 'люкс', '9 990', '145', 'border')
                 .number-card-wrapper
-                    +numberCard2('840', 'люкс', '9 990', '65', 'border')
+                    +number-card('840', 'люкс', '9 990', '65', 'border')
         .rows-content
             .header-wrapper
-                +header-1()
+                +header()
         .rows-content
             .header-wrapper
-                +header-2()
+                +header()
         .rows-content
             .footer-wrapper
                 +footer()
                 +copyright()
             .footer-wrapper
-                +footer-small()
+                +footer()
