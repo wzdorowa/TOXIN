@@ -1,1 +1,0 @@
-{"version":3,"sources":["landing/landing.js"],"names":["$","click","slideToggle"],"mappings":";AAAAA,EAAE,iCAAiCC,MAAM,WACvCD,EAAE,wBAAwBE","file":"landing.1396fbc4.js","sourceRoot":"../../src/pages","sourcesContent":["$('.search-room__input-container').click(() => {\n  $('.landing__datepicker').slideToggle();\n});\n"]}
