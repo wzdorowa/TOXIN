@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel ./src/pages/demo/demo.pug ./src/pages/landing/landing.pug ./src/pages/registration/registration.pug ./src/pages/room-details/room-details.pug ./src/pages/search-room/search-room.pug ./src/pages/sign-in/sign-in.pug",
-    "build": "parcel build ./src/pages/demo/demo.pug ./src/pages/landing/landing.pug ./src/pages/registration/registration.pug ./src/pages/room-details/room-details.pug ./src/pages/search-room/search-room.pug ./src/pages/sign-in/sign-in.pug --out-dir build/output --public-url ./",
+    "dev": "parcel index.pug ./src/pages/demo/demo.pug ./src/pages/landing/landing.pug ./src/pages/registration/registration.pug ./src/pages/room-details/room-details.pug ./src/pages/search-room/search-room.pug ./src/pages/sign-in/sign-in.pug",
+    "build": "parcel build index.pug ./src/pages/demo/demo.pug ./src/pages/landing/landing.pug ./src/pages/registration/registration.pug ./src/pages/room-details/room-details.pug ./src/pages/search-room/search-room.pug ./src/pages/sign-in/sign-in.pug --out-dir build/output --public-url ./",
     "eslint": "eslint --cache --ext .js,.ts, src",
     "prettier": "prettier"
   },
