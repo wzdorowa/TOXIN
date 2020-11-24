@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel index.pug ./src/pages/demo/demo.pug ./src/pages/landing/landing.pug ./src/pages/registration/registration.pug ./src/pages/room-details/room-details.pug ./src/pages/search-room/search-room.pug ./src/pages/sign-in/sign-in.pug",
-    "build": "parcel build index.pug ./src/pages/demo/demo.pug ./src/pages/landing/landing.pug ./src/pages/registration/registration.pug ./src/pages/room-details/room-details.pug ./src/pages/search-room/search-room.pug ./src/pages/sign-in/sign-in.pug --out-dir build/output --public-url ./",
+    "dev": "parcel ./src/index.pug ./src/pages/demo/demo.pug ./src/pages/landing/landing.pug ./src/pages/registration/registration.pug ./src/pages/room-details/room-details.pug ./src/pages/search-room/search-room.pug ./src/pages/sign-in/sign-in.pug",
+    "build": "parcel build ./src/index.pug ./src/pages/demo/demo.pug ./src/pages/landing/landing.pug ./src/pages/registration/registration.pug ./src/pages/room-details/room-details.pug ./src/pages/search-room/search-room.pug ./src/pages/sign-in/sign-in.pug --out-dir build --public-url /",
+    "deploy": "gh-pages -d build",
     "eslint": "eslint --cache --ext .js,.ts, src",
     "prettier": "prettier"
   },
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/wzdorowa/TOXIN#readme",
   "devDependencies": {
     "eslint-plugin-import": "^2.22.0",
+    "gh-pages": "^3.1.0",
     "parcel-bundler": "^1.12.4",
     "pug": "^2.0.4",
     "sass": "^1.26.10"
