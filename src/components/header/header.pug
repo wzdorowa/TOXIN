@@ -19,7 +19,7 @@ mixin header()
           li.header__item
             a.header__link(href="")= val
     .header__user
-      form.header__user-button-login(action='/TOXIN/build/pages/sign-in/sign-in.html', target="_blank")
+      form.header__user-button-login(action='/TOXIN/pages/sign-in/sign-in.html', target="_blank")
         +base-button('Войти', 'border', '', 'submit')
-      form.header__user-button-registration(action='/TOXIN/build/pages/registration/registration.html', target="_blank")
+      form.header__user-button-registration(action='/TOXIN/pages/registration/registration.html', target="_blank")
         +base-button('Зарегистироваться', 'background', '', 'submit')
