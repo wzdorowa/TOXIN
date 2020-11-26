@@ -17,7 +17,14 @@
   margin-right: auto;
   margin-top: 50px;
 }
-.rows-content {
+.columns-content__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  min-width: 260;
+}
+.footer {
   max-width: 100%;
   margin-top: 50px;
 }
@@ -33,7 +40,7 @@
 
   min-width: 260;
 }
-.inputs-wrapper {
+.inputs {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -41,20 +48,20 @@
   max-width: 320px;
   height: 500px;
 }
-.inputs-wrapper__item {
+.inputs__item {
   width: 320px;
 }
-.inputs-wrapper__item_with-two-columns {
+.inputs__item_with-two-columns {
   display: flex;
   justify-content: space-between;
 }
-.inputs-wrapper__item_medium-width {
+.inputs__item_medium-width {
   width: 265px;
 }
-.inputs-wrapper__date-dropdown {
+.inputs__date-dropdown {
   width: 150px;
 }
-.checkbox-buttons-wrapper {
+.checkbox-buttons {
   display: flex;
   flex-wrap: wrap;
 
@@ -74,7 +81,7 @@
 
   margin: 0;
 }
-.radio-buttons-wrapper {
+.radio-buttons {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -82,11 +89,11 @@
   max-width: 220px;
   height: 51px;
 }
-.buttons-string {
+.rate-button__string {
   display: flex;
   justify-content: space-between;
 }
-.toggle-wrapper {
+.toggle {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -94,7 +101,7 @@
   max-width: 260px;
   height: 85px;
 }
-.like-button-wrapper {
+.like-button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -102,11 +109,11 @@
   max-width: 90px;
   height: 51px;
 }
-.like-button-wrapper__content {
+.like-button__content {
   width: 40px;
   height: 20px;
 }
-.rate-button-wrapper {
+.rate-button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -114,32 +121,32 @@
   max-width: 260px;
   height: 55px;
 }
-.rate-group-button {
+.rate-button__group {
   display: flex;
   justify-content: space-between;
 
   width: 105px;
 }
-.range-slider-wrapper {
+.range-slider {
   max-width: 266px;
   height: 45px;
 }
-.base-button-wrapper {
+.base-button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   height: 240px;
 }
-.base-button-wrapper__content_small {
+.base-button__content_small {
   width: 100px;
   height: 44px;
 }
-.base-button-wrapper__content_big {
+.base-button__content_big {
   width: 320px;
   height: 44px;
 }
-.pagination-wrapper {
+.pagination {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -157,7 +164,7 @@
   width: 266px;
   height: 145px;
 }
-.bullet-list-wrapper {
+.bullet-list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -165,18 +172,18 @@
   width: 291px;
   height: 147px;
 }
-.advantages-wrapper {
+.advantages {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 155px;
 }
-.advantages-wrapper__item {
+.advantages__item {
   width: 291px;
   height: 68px;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
 }
-.search-room-wrapper {
+.columns-content__search-room {
   width: 300px;
   height: 375px;
 
@@ -198,7 +205,7 @@
     width: 380px;
   }
 }
-.check-in-wrapper {
+.columns-content__check-in {
   display: flex;
   justify-content: center;
 
@@ -223,7 +230,7 @@
     width: 380px;
   }
 }
-.result-search-room-wrapper {
+.columns-content__result-search-room {
   width: 96%;
   max-width: 380px;
   min-width: 310px;
@@ -271,7 +278,7 @@
     order: 0;
   }
 }
-.login-wrapper {
+.columns-content__login {
   width: 300px;
   height: 357px;
   padding-left: 29px;
@@ -293,12 +300,12 @@
     width: 380px;
   }
 }
-.number-card-wrapper {
+.columns-content__number-card {
   width: 270px;
   height: 258px;
   margin-bottom: 20px;
 }
-.datepicker-wrapper {
+.columns-content__datepicker {
   width: 320px;
   height: 400px;
   padding-left: 29px;
@@ -319,7 +326,7 @@
     width: 380px;
   }
 }
-.demo__header {
+.header {
   background-color: white;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   
@@ -336,7 +343,7 @@
     min-width: 1160px;
   }
 }
-.demo__header-container {
+.header__container {
   margin-left: auto;
   margin-right: auto;
 
@@ -350,7 +357,7 @@
     flex-direction: row;
   }
 }
-.demo__footer {
+.footer__container {
   background-color: white;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-top: 1px solid rgba(31, 32, 65, 0.25);
