@@ -4,10 +4,9 @@ mixin dropdown(label, placeholder, display)
   .dropdown
     .dropdown__list
       +base-input(label, placeholder, 'arrow-down', 'top', '', 'dropdown-list')
-    .dropdown__slide-toggle
-      .dropdown__content
-        .dropdown__rows
-          block
-        .dropdown__buttons(class='dropdown__buttons_'+display || false)
-          +base-button('Очистить', '', 'noDecor', '', 'button')
-          +base-button('Применить', '', 'noDecor', '', 'button')
+    .dropdown__content
+      .dropdown__rows
+        block
+      .dropdown__buttons(class='dropdown__buttons_'+display || false)
+        +base-button('Очистить', '', 'noDecor', '', 'button')
+        +base-button('Применить', '', 'noDecor', '', 'button')

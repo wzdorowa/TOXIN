@@ -46,20 +46,29 @@
   justify-content: space-between;
 
   max-width: 320px;
-  height: 500px;
+  min-height: 500px;
 }
 .inputs__item {
   width: 320px;
 }
-.inputs__item_with-two-columns {
-  display: flex;
-  justify-content: space-between;
+.datepicker-container {
+  display: none;
 }
 .inputs__item_medium-width {
   width: 265px;
 }
-.inputs__date-dropdown {
+.inputs-with-datepicker__inputs {
+  display: flex;
+  justify-content: space-between;
+}
+.inputs-with-datepicker__input_small-width {
   width: 150px;
+}
+.inputs-with-datepicker__datepicker {
+  display: none;
+}
+.inputs-with-datepicker__datepicker_visible {
+  display: block;
 }
 .checkbox-buttons {
   display: flex;
@@ -153,7 +162,7 @@
 
   height: 100px;
 }
-.dropdown {
+.dropdown-container {
   width: 265px;
 }
 .rich-checkbox-buttons {
