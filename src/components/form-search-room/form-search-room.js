@@ -1,5 +1,4 @@
 const elements = document.querySelectorAll('.search-room__input-container');
-console.log('elements', elements);
 
 elements.forEach(element => {
   const elementInput = element.querySelector('.input__content');

@@ -1,9 +1,9 @@
 include ../../elements/dropdown-row/dropdown-row.pug
 
-mixin dropdown(label, placeholder, display)
+mixin dropdown(label, placeholder, display, readonly)
   .dropdown
     .dropdown__list
-      +base-input(label, placeholder, 'arrow-down', 'top', '', 'dropdown-list')
+      +base-input(label, placeholder, 'arrow-down', 'top', '', 'dropdown-list', readonly)
     .dropdown__content
       .dropdown__rows
         block

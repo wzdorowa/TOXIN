@@ -1,4 +1,7 @@
+include ../../components/datepicker/datepicker.pug
+include ../../components/dropdown/dropdown.pug
 include ../../elements/numerical-group/numerical-group.pug
+include ../../elements/dropdown-row/dropdown-row.pug
 
 mixin room-cost-form(number, text, cost)
     .room-cost-form
@@ -11,11 +14,16 @@ mixin room-cost-form(number, text, cost)
               +numerical-group(costPerDay)
       .room-cost-form__inputs
           .room-cost-form__input-container
-              +base-input('Прибытие', '19.08.2019', 'arrow-down', 'top', 'bottom')
+              +base-input('Прибытие', '19.08.2019', 'arrow-down', 'top', 'bottom', '', 'readonly')
           .room-cost-form__input-container
-              +base-input('Выезд', '23.08.2019', 'arrow-down', 'top', 'bottom')
-          .room-cost-form__input-container
-              +base-input('Гости', '3 гостя', 'arrow-down', 'top', 'bottom')
+              +base-input('Выезд', '23.08.2019', 'arrow-down', 'top', 'bottom', '', 'readonly')
+          .room-cost-form__datepicker
+              +datepicker()
+          .room-cost-form__dropdown-container
+            +dropdown('Гости', '3 гостя', 'arrow-down', 'top', 'bottom', '', 'readonly')
+              +dropdown-row('Взрослые', '2')
+              +dropdown-row('Дети', '1')
+              +dropdown-row('Младенцы', '0')
       .room-cost-form__calculation
           - const calculationItems = [[{number: '9 990', description: ' x 4 суток', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'},{number: '39 690', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}],[{number: '', description: 'Сбор за услуги: скидка', visibilitySignNumber: 'hidden', visibilitySignRouble: 'hidden', visibilityDescriptionSign: 'hidden'},{number: ' 2 179', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: ''},{number: '0', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}],[{number: '', description: 'Сбор за дополнительные услуги', visibilitySignNumber: 'hidden', visibilitySignRouble: 'hidden', visibilityDescriptionSign: ''},{number: '300', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}]]
           - const itemNumber = ['first', 'second', 'third']

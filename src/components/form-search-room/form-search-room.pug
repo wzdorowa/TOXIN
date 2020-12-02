@@ -7,13 +7,13 @@ mixin search-room(text)
     span.search-room__title= text
     .search-room__inputs
       .search-room__input-container
-        +base-input('Прибытие', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom')
+        +base-input('Прибытие', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom', '', 'readonly')
       .search-room__input-container
-        +base-input('Выезд', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom')
+        +base-input('Выезд', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom', '', 'readonly')
       .search-room__datepicker
           +datepicker()
       .search-room__dropdown-container
-        +dropdown('Гости', 'Сколько гостей')
+        +dropdown('Гости', 'Сколько гостей', '', '', '', '', 'readonly')
           +dropdown-row('Взрослые', '2')
           +dropdown-row('Дети', '1')
           +dropdown-row('Младенцы', '0')

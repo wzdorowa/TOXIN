@@ -1,7 +1,7 @@
-mixin base-input(label, placeholder, arrow, borderRadiusTop, borderRadiusBottom, hide)
+mixin base-input(label, placeholder, arrow, borderRadiusTop, borderRadiusBottom, hide, readonly)
   div.input()
     span(class='input__description', class='input__description_' + hide || false)= label
     .input__wrapper(class='input__wrapper_with-'+arrow || false)
       input.input__content(class='input__content_with-border-radius-'+borderRadiusTop || false,
       class='input__content_with-border-radius-'+borderRadiusBottom || false, type='text',
-      name='input-content', placeholder= placeholder)
+      name='input-content', placeholder= placeholder, readonly= readonly)
