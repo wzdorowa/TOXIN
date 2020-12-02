@@ -1,6 +1,5 @@
 .checkbox-list {
   position: relative;
-  cursor: pointer;
 }
 .checkbox-list__title {
   position: relative;
@@ -15,6 +14,9 @@
   text-transform: uppercase;
 
   color: #1F2041;
+}
+.checkbox-list__description {
+  cursor: pointer;
 }
 .checkbox-list__indicator {
   position: relative;
