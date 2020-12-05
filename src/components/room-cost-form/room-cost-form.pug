@@ -13,10 +13,11 @@ mixin room-cost-form(number, text, cost)
               - const costPerDay = {number: '9 990', description: ' в сутки', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden', numberDecor: '', descriptionDecor: 'normal'}
               +numerical-group(costPerDay)
       .room-cost-form__inputs
-          .room-cost-form__input-container
-              +base-input('Прибытие', '19.08.2019', 'arrow-down', 'top', 'bottom', '', 'readonly')
-          .room-cost-form__input-container
-              +base-input('Выезд', '23.08.2019', 'arrow-down', 'top', 'bottom', '', 'readonly')
+          .room-cost-form__inputs-with-datepicker
+            .room-cost-form__input-container
+                +base-input('Прибытие', '19.08.2019', 'arrow-down', 'top', 'bottom', '', 'readonly')
+            .room-cost-form__input-container
+                +base-input('Выезд', '23.08.2019', 'arrow-down', 'top', 'bottom', '', 'readonly')
           .room-cost-form__datepicker
               +datepicker()
           .room-cost-form__dropdown-container

@@ -28,12 +28,12 @@
 
   margin-bottom: 12px;
 }
-.search-room__input-container {
-  width: 47%;
-}
 .search-room__inputs-with-datepicker {
   display: flex;
   justify-content: space-between;
+}
+.search-room__input-container {
+  width: 47%;
 }
 .search-room__datepicker {
   display: none;

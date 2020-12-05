@@ -263,7 +263,6 @@
   width: 96%;
   max-width: 380px;
   min-width: 310px;
-  min-height: 510px;
 
   background-color: white;
 
@@ -286,6 +285,7 @@
     padding-top: 42px;
     padding-left: 28px;
     padding-right: 30px;
+    padding-bottom: 30px;
   }
   @media(min-width: 720px) {
     width: 100%;
@@ -301,7 +301,6 @@
     grid-row-end: 3;
     width: 100%;
     min-width: 380px;
-    max-height: 510px;
     margin-left: auto;
     margin-right: 2%;
     order: 0;
@@ -314,7 +313,7 @@
   padding-right: 29px;
   padding-top: 40px;
   padding-bottom: 33px;
-  margin-top: 163px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
 
