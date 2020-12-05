@@ -6,10 +6,11 @@ mixin search-room(text)
   .search-room
     span.search-room__title= text
     .search-room__inputs
-      .search-room__input-container
-        +base-input('Прибытие', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom', '', 'readonly')
-      .search-room__input-container
-        +base-input('Выезд', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom', '', 'readonly')
+      .search-room__inputs-with-datepicker
+        .search-room__input-container
+          +base-input('Прибытие', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom', '', 'readonly')
+        .search-room__input-container
+          +base-input('Выезд', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom', '', 'readonly')
       .search-room__datepicker
           +datepicker()
       .search-room__dropdown-container

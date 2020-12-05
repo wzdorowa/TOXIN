@@ -19,7 +19,7 @@
 .search-room__inputs {
   position: relative;
   width: 100%;
-  height: 147px;
+  min-height: 147px;
 
   display: flex;
   flex-wrap: wrap;
@@ -31,11 +31,13 @@
 .search-room__input-container {
   width: 47%;
 }
+.search-room__inputs-with-datepicker {
+  display: flex;
+  justify-content: space-between;
+}
 .search-room__datepicker {
   display: none;
-  position: absolute;
-  top: 68px;
-  left: 0px;
+
   width: 320px;
   height: 369px;
 
@@ -47,7 +49,7 @@
 
   padding: 10px;
   padding-top: 10px;
-  z-index: 2;
+  margin-top: 5.5px;
 }
 .search-room__datepicker_visible {
   display: block;
