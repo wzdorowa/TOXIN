@@ -1,4 +1,4 @@
-const inputs = document.querySelectorAll('.check-in__input-container');
+const inputs = document.querySelectorAll('.check-in__input-container_for-datepicker');
 
 inputs.forEach(element => {
   const elementInput = element.querySelector('.input__content');

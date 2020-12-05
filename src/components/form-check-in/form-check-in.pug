@@ -12,7 +12,7 @@ mixin check-in(text)
         +radio-button('Мужчина', 'checked')
         +radio-button('Женщина')
     .check-in__input
-      .check-in__input-container
+      .check-in__input-container.check-in__input-container_for-datepicker
         +base-input('Дата рождения', 'ДД.ММ.ГГГГ', '', 'top', 'bottom')
       .check-in__datepicker
           +datepicker()
