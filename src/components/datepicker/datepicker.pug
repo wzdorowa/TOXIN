@@ -2,7 +2,7 @@ mixin datepicker()
   .calendar
     .calendar__content.datepicker-here(data-range="true")
     .calendar__buttons
-      .calendar__buttons-container
+      .calendar__buttons-container.calendar__buttons-container_for-clear
         +base-button('Очистить', 'noDecor', '', 'button')
-      .calendar__buttons-container
+      .calendar__buttons-container.calendar__buttons-container_for-apply
         +base-button('Применить', 'noDecor', '', 'button')
