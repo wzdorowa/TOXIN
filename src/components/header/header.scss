@@ -32,6 +32,7 @@
   height: 38px;
   margin-left: auto;
   margin-right: 10px;
+  cursor: pointer;
   @media (min-width: 910px) {
     display: none;
   }
@@ -56,6 +57,7 @@
   position: relative;
   width: 38px;
   height: 38px;
+  cursor: pointer;
   @media (min-width: 610px) {
     display: none;
   }
