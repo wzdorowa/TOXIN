@@ -66,35 +66,37 @@ block content
                 .inputs__item.inputs__item_medium-width
                     +base-input('Subscription text field', 'Email', 'arrow', 'top', 'bottom', '')
         .columns__item
-            .checkbox-buttons
-                h1.buttons-title Chechbox buttons
-                +checkbox-button('Можно курить')
-                +checkbox-button('Можно с питомцами', 'checked')
-                +checkbox-button('Можно пригласить гостей (до 10 человек)', 'checked')
-            .radio-buttons
-                h1.buttons-title Radio buttons
-                .radio-buttons__string
-                    +radio-button('Мужчина', 'checked', 'gender')
-                    +radio-button('Женщина', '', 'gender')
-            .toggle
-                h1.buttons-title Toggle
-                +toggle('Получать спецпредложения', 'checked')
-                +toggle('Получать спецпредложения')
-            .like-button
-                h1.buttons-title Like button
-                .buttons-string
-                  .like-button__content
-                    +like-button('2')
-                  .like-button__content
-                    +like-button('12', 'checked')
-            .rate-button
+            .elements
+              .elements__checkbox-buttons
+                  h1.buttons-title Chechbox buttons
+                  +checkbox-button('Можно курить')
+                  +checkbox-button('Можно с питомцами', 'checked')
+                  +checkbox-button('Можно пригласить гостей (до 10 человек)', 'checked')
+              .elements__radio-buttons
+                  h1.buttons-title Radio buttons
+                  .elements__radio-buttons__string
+                      +radio-button('Мужчина', 'checked', 'gender')
+                      +radio-button('Женщина', '', 'gender')
+              .elements__toggle
+                  h1.buttons-title Toggle
+                  +toggle('Получать спецпредложения', 'checked')
+                  +toggle('Получать спецпредложения')
+              .elements__like-button
+                  h1.buttons-title Like button
+                  .buttons-string
+                    .elements__like-button-content
+                      +like-button('2')
+                    .elements__like-button-content
+                      +like-button('12', 'checked')
+              .elements__rate-button
                 h1.buttons-title Rate button
-                .rate-button__string
-                    .rate-button__group
+                .elements__rate-button-string
+                    .elements__rate-button-group
                         +rate-button()
-                    .rate-button__group
+                    .elements__rate-button-group
                         +rate-button()
         .columns__item
+          .elements
             .range-slider
                 +range-slider('Range Slider')
             .base-button
@@ -141,14 +143,16 @@ block content
                 +bulleted-list(rules)
     .columns
         .columns__item
-            .advantages
-                .advantages__item
-                    +advantages('Комфорт', 'Шумопоглощающие стены', 'mood')
-                .advantages__item
-                    +advantages('Удобство', 'Окна в каждой из спален', 'locationCity')
+            .elements
+                .elements__advantages
+                    .elements__advantages-item
+                        +advantages('Комфорт', 'Шумопоглощающие стены', 'mood')
+                    .elements__advantages-item
+                        +advantages('Удобство', 'Окна в каждой из спален', 'locationCity')
         .columns__item
-            .review
-                +review('Мурад Сарафанов', '5 дней назад', 'Murad', '', 'small', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+            .elements
+                .elements__review
+                    +review('Мурад Сарафанов', '5 дней назад', 'Murad', '', 'small', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
     .columns-content-wrapper
         .columns-content
             .columns-content__item

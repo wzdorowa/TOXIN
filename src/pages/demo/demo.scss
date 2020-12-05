@@ -51,6 +51,19 @@
 .inputs__item {
   width: 320px;
 }
+.elements {
+  min-height: 420px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.elements__radio-buttons__string {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+}
 .datepicker-container {
   display: none;
 }
@@ -70,7 +83,7 @@
 .inputs-with-datepicker__datepicker_visible {
   display: block;
 }
-.checkbox-buttons {
+.elements__checkbox-buttons {
   display: flex;
   flex-wrap: wrap;
 
@@ -90,19 +103,19 @@
 
   margin: 0;
 }
-.radio-buttons {
+.elements__radio-buttons {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   max-width: 220px;
-  height: 51px;
+  min-height: 70px;
 }
-.rate-button__string {
+.elements__rate-button-string {
   display: flex;
   justify-content: space-between;
 }
-.toggle {
+.elements__toggle {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -110,19 +123,26 @@
   max-width: 260px;
   height: 85px;
 }
-.like-button {
+.elements__like-button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   max-width: 90px;
-  height: 51px;
+  min-height: 70px;
 }
-.like-button__content {
+.buttons-string {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 70%;
+}
+.elements__like-button-content {
   width: 40px;
   height: 20px;
 }
-.rate-button {
+.elements__rate-button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -130,7 +150,7 @@
   max-width: 260px;
   height: 55px;
 }
-.rate-button__group {
+.elements__rate-button-group {
   display: flex;
   justify-content: space-between;
 
@@ -181,20 +201,20 @@
   width: 291px;
   height: 147px;
 }
-.advantages {
+.elements__advantages {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 155px;
 }
-.advantages__item {
+.elements__advantages-item {
   width: 291px;
   height: 68px;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
 }
 .columns-content__search-room {
   width: 300px;
-  height: 375px;
+  min-height: 375px;
 
   padding-top: 40px;
   padding-left: 27px;
