@@ -46,12 +46,7 @@
 .opened.checkbox-list__indicator::before {
   transform: rotate(180deg);
 }
-.checkbox-list__slide-toggle {
-  position: absolute;
-
-  width: 100%;
-  z-index: 2;
-
+.checkbox-list__toggle {
   display: none;
 }
 .checkbox-list__content {
