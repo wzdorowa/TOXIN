@@ -6,6 +6,20 @@ elements.forEach(element => {
   const buttonApply = datepicker.querySelector(
     '.calendar__buttons-container_for-apply',
   );
+  const dropdownArrow = element.querySelector('.input__icon-arrow-down');
+
+  dropdownArrow.addEventListener('click', () => {
+    if (
+      datepicker.classList.contains('room-cost-form__datepicker_visible') ===
+      false
+    ) {
+      datepicker.classList.add('room-cost-form__datepicker_visible');
+    } else if (
+      datepicker.classList.contains('room-cost-form__datepicker_visible')
+    ) {
+      datepicker.classList.remove('room-cost-form__datepicker_visible');
+    }
+  });
 
   elementInput.addEventListener('focus', () => {
     datepicker.classList.add('room-cost-form__datepicker_visible');

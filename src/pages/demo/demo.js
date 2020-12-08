@@ -5,6 +5,29 @@ const datepicker = document.querySelectorAll(
 
 elements.forEach((element, index) => {
   const elementsInput = element.querySelectorAll('.input__content');
+  const dropdownsArrow = element.querySelectorAll('.input__icon-arrow-down');
+
+  dropdownsArrow.forEach(dropdownArrow => {
+    dropdownArrow.addEventListener('click', () => {
+      if (
+        datepicker[index].classList.contains(
+          'inputs-with-datepicker__datepicker_visible',
+        ) === false
+      ) {
+        datepicker[index].classList.add(
+          'inputs-with-datepicker__datepicker_visible',
+        );
+      } else if (
+        datepicker[index].classList.contains(
+          'inputs-with-datepicker__datepicker_visible',
+        )
+      ) {
+        datepicker[index].classList.remove(
+          'inputs-with-datepicker__datepicker_visible',
+        );
+      }
+    });
+  });
 
   elementsInput.forEach(elementInput => {
     elementInput.addEventListener('focus', () => {
