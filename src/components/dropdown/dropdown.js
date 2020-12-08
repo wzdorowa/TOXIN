@@ -27,6 +27,28 @@ elements.forEach(element => {
   });
   buttonApply.addEventListener('click', e => {
     e.preventDefault();
+
+    const numbers = element.querySelectorAll(
+      '.dropdown-row__amount_with-count',
+    );
+    let result = 0;
+    numbers.forEach(number => {
+      result += Number(number.innerHTML);
+    });
+
+    if (result === 0) {
+      elementInput.value = 'Сколько гостей';
+    } else if (String(result).includes('1')) {
+      elementInput.value = `${String(result)} гость`;
+    } else if (
+      String(result).includes('2') ||
+      String(result).includes('3') ||
+      String(result).includes('4')
+    ) {
+      elementInput.value = `${String(result)} гостя`;
+    } else {
+      elementInput.value = `${String(result)} гостей`;
+    }
     dropdownList.classList.remove('dropdown__content_visible');
   });
 });
