@@ -14,9 +14,9 @@ elements.forEach(element => {
       dropdownList.classList.remove('dropdown__content_visible');
     }
   });
-  elementInput.onfocus = () => {
+  elementInput.addEventListener('focus', () => {
     dropdownList.classList.add('dropdown__content_visible');
-  };
+  });
   document.addEventListener('click', event => {
     if (event.target.closest('.dropdown') !== element) {
       dropdownList.classList.remove('dropdown__content_visible');
