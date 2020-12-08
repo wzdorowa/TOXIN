@@ -3,7 +3,7 @@ const elements = document.querySelectorAll('.dropdown');
 elements.forEach(element => {
   const elementInput = element.querySelector('.input__content');
   const dropdownList = element.querySelector('.dropdown__content');
-  const dropdownArrow = element.querySelector('.dropdown__list-arrow-down');
+  const dropdownArrow = element.querySelector('.input__icon-arrow-down');
 
   dropdownArrow.addEventListener('click', () => {
     if (
