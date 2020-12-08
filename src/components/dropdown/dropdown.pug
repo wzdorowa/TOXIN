@@ -8,5 +8,7 @@ mixin dropdown(label, placeholder, display, readonly)
       .dropdown__rows
         block
       .dropdown__buttons(class='dropdown__buttons_'+display || false)
-        +base-button('Очистить', '', 'noDecor', '', 'button')
-        +base-button('Применить', '', 'noDecor', '', 'button')
+        .dropdown__buttons-container.dropdown__buttons-container_for-clear
+          +base-button('Очистить', '', 'noDecor', '', 'button')
+        .dropdown__buttons-container.dropdown__buttons-container_for-apply
+          +base-button('Применить', '', 'noDecor', '', 'button')

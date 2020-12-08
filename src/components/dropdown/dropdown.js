@@ -4,6 +4,9 @@ elements.forEach(element => {
   const elementInput = element.querySelector('.input__content');
   const dropdownList = element.querySelector('.dropdown__content');
   const dropdownArrow = element.querySelector('.input__icon-arrow-down');
+  const buttonApply = element.querySelector(
+    '.dropdown__buttons-container_for-apply',
+  );
 
   dropdownArrow.addEventListener('click', () => {
     if (
@@ -21,5 +24,9 @@ elements.forEach(element => {
     if (event.target.closest('.dropdown') !== element) {
       dropdownList.classList.remove('dropdown__content_visible');
     }
+  });
+  buttonApply.addEventListener('click', e => {
+    e.preventDefault();
+    dropdownList.classList.remove('dropdown__content_visible');
   });
 });
