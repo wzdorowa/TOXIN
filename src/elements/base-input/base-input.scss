@@ -23,27 +23,6 @@
 .input__description_hidden {
   display: none;
 }
-.input__wrapper_with-arrow-down::before {
-  position: absolute;
-
-  content: 'keyboard_arrow_down';
-  width: 44px;
-  height: 44px;
-  right: 0;
-
-  font-family: 'Material Icons', Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  text-transform: initial;
-
-  color: rgba(31, 32, 65, 0.5);
-}
 .input__wrapper_with-arrow::before {
   position: absolute;
 
@@ -64,6 +43,7 @@
   text-transform: initial;
 
   color: #BC9CFF;
+  cursor: pointer;
 }
 .input__content {
   height: 44px;
