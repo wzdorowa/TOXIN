@@ -43,7 +43,8 @@ block content
                         +dropdown-row('Дети', '0')
                         +dropdown-row('Младенцы', '0')
                 .inputs__item
-                    +base-input('Masked text field', 'ДД.ММ.ГГГГ', '', 'top', 'bottom', '')
+                    .inputs__item-masked-field
+                        +base-input('Masked text field', 'ДД.ММ.ГГГГ', '', 'top', 'bottom', '')
                 .inputs__item
                     .inputs-with-datepicker
                         .inputs-with-datepicker__inputs
