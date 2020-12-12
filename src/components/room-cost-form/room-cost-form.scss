@@ -28,18 +28,6 @@
 
   color: rgba(31, 32, 65, 0.5);
 }
-.room-cost-form__inputs {
-  position: relative;
-  width: 100%;
-  min-height: 147px;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
-
-  margin-bottom: 20px;
-}
 .room-cost-form__inputs-with-datepicker {
   display: flex;
   justify-content: space-between;
@@ -68,6 +56,7 @@
 }
 .room-cost-form__dropdown-container {
   width: 100%;
+  margin-top: 20px;
 }
 .room-cost-form__calculation {
   width: 100%;

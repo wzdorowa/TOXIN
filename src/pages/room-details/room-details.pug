@@ -9,6 +9,7 @@ include ../../elements/bulleted-list/bulleted-list.pug
 include ../../components/review/review.pug
 include ../../components/room-cost-form/room-cost-form.pug
 include ../../components/datepicker/datepicker.pug
+include ../../components/datepicker-with-inputs/datepicker-with-inputs.pug
 
 block meta
     meta(name="keywords", content="room details, toxin")
@@ -48,7 +49,8 @@ block content
                 circle(class="room-details__donut-segment" cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#6FCF97" stroke-width="1" stroke-dasharray="24.5 75" stroke-dashoffset="-0.4")
                 circle(class="room-details__donut-segment" cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#BC9CFF" stroke-width="2.2" stroke-dasharray="24.5 75" stroke-dashoffset="24.5")
         .room-details__column-narrow
-          +room-cost-form('888', 'люкс', '9 990')
+          -const roomDetailsRoomDateFormat = ['19.08.2019', '23.08.2019']
+          +room-cost-form('888', 'люкс', '9 990', roomDetailsRoomDateFormat)
         .room-details__review
           .room-details__review-description
             h2.room-details__title-review Отзывы посетителей номера

@@ -1,22 +1,17 @@
 include ../../elements/base-input/base-input.pug
 include ../../elements/base-button/base-button.pug
 include ../dropdown/dropdown.pug
+include ../../components/datepicker-with-inputs/datepicker-with-inputs.pug
 
-mixin search-room(text)
+mixin search-room(text, dateFormat)
   .search-room
     span.search-room__title= text
-    .search-room__inputs
-      .search-room__inputs-with-datepicker
-        .search-room__input-container
-          +base-input('Прибытие', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom', '', 'readonly')
-        .search-room__input-container
-          +base-input('Выезд', 'ДД.ММ.ГГГГ', 'arrow-down', 'top', 'bottom', '', 'readonly')
-      .search-room__datepicker
-          +datepicker()
-      .search-room__dropdown-container
-        +dropdown('Гости', 'Сколько гостей', '', '', '', '', 'readonly')
-          +dropdown-row('Взрослые', '2')
-          +dropdown-row('Дети', '1')
-          +dropdown-row('Младенцы', '0')
+    -const placeholder = ['Прибытие', 'Выезд']
+    +datepicker-with-inputs(placeholder, dateFormat, 'small-width', '')
+    .search-room__dropdown-container
+      +dropdown('Гости', 'Сколько гостей', '', '', '', '', 'readonly')
+        +dropdown-row('Взрослые', '2')
+        +dropdown-row('Дети', '1')
+        +dropdown-row('Младенцы', '0')
     .search-room__select-button
       +base-button('Подобрать номер', 'background', 'arrow', 'button')

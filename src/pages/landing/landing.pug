@@ -22,7 +22,8 @@ block content
       img.landing__image-background(src="image/image-3.png")
       .landing__content
         .landing__form-search-room
-          +search-room('Найдём номера под ваши пожелания')
+          -const landingDateFormat = ['19.08.2019', '23.08.2019']
+          +search-room('Найдём номера под ваши пожелания', landingDateFormat)
         p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения
     .landing__footer
       +footer()
