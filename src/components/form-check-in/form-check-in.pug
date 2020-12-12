@@ -6,20 +6,20 @@ mixin check-in(text)
     span.check-in__title= text
     .check-in__user-data
       .check-in__group-inputs
-          +base-input('', 'Имя', '', 'top', 'bottom', 'hidden')
-          +base-input('', 'Фамилия', '', 'top', 'bottom', 'hidden')
+          +base-input('', 'Имя', 'text', '', 'top', 'bottom', 'hidden')
+          +base-input('', 'Фамилия', 'text', '', 'top', 'bottom', 'hidden')
       .check-in__buttons
         +radio-button('Мужчина', 'checked')
         +radio-button('Женщина')
     .check-in__input
       .check-in__input-container.check-in__input-container_for-masked-field
-        +base-input('Дата рождения', 'ДД.ММ.ГГГГ', '', 'top', 'bottom')
+        +base-input('Дата рождения', 'ДД.ММ.ГГГГ', 'date', '', 'top', 'bottom')
     .check-in__login-details
       .check-in__group-inputs-login
         .check-in__input-container
-          +base-input('Данные для входа в сервис', 'Email', '', 'top', 'bottom')
+          +base-input('Данные для входа в сервис', 'email', 'Email', '', 'top', 'bottom')
         .check-in__input-container
-          +base-input('', 'Пароль', '', 'top', 'bottom')
+          +base-input('', 'Пароль', 'password', '', 'top', 'bottom')
       .check-in__toggle
         +toggle('Получать спецпредложения')
     .check-in__check-in-details

@@ -37,7 +37,7 @@ block content
         .columns__item
             .inputs
                 .inputs__item
-                    +base-input('Text field', 'Email', '', 'top', 'bottom', '')
+                    +base-input('Text field', 'Email', 'text', '', 'top', 'bottom', '')
                 .inputs__item
                     +dropdown('Dropdown', 'Сколько гостей', 'hidden', 'readonly')
                         +dropdown-row('Взрослые', '0')
@@ -45,7 +45,7 @@ block content
                         +dropdown-row('Младенцы', '0')
                 .inputs__item
                     .inputs__item-masked-field
-                        +base-input('Masked text field', 'ДД.ММ.ГГГГ', '', 'top', 'bottom', '')
+                        +base-input('Masked text field', 'ДД.ММ.ГГГГ', 'date', '', 'top', 'bottom', '')
                 .inputs__item
                     - const dateDropdown = ['ДД.ММ.ГГГГ', '19.08.2019']
                     - const dateDropdownPlaceholder = ['Date dropdown', 'Date dropdown']
@@ -55,7 +55,7 @@ block content
                     - const filterDateDropdownPlaceholder = ['Filter date dropdown']
                     +datepicker-with-inputs(filterDateDropdownPlaceholder, filterDateDropdown, 'large-width', 'only')
                 .inputs__item.inputs__item_medium-width
-                    +base-input('Subscription text field', 'Email', 'arrow', 'top', 'bottom', '')
+                    +base-input('Subscription text field', 'Email', 'email', 'arrow', 'top', 'bottom', '')
         .columns__item
             .elements
               .elements__checkbox-buttons
