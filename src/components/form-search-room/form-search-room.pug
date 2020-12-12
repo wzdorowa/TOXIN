@@ -3,15 +3,15 @@ include ../../elements/base-button/base-button.pug
 include ../dropdown/dropdown.pug
 include ../../components/datepicker-with-inputs/datepicker-with-inputs.pug
 
-mixin search-room(text, dateFormat)
-  .search-room
-    span.search-room__title= text
+mixin form-search-room(text, dateFormat)
+  .form-search-room
+    span.form-search-room__title= text
     -const placeholder = ['Прибытие', 'Выезд']
     +datepicker-with-inputs(placeholder, dateFormat, 'small-width', '')
-    .search-room__dropdown-container
+    .form-search-room__dropdown-container
       +dropdown('Гости', 'Сколько гостей', '', '', '', '', 'readonly')
         +dropdown-row('Взрослые', '2')
         +dropdown-row('Дети', '1')
         +dropdown-row('Младенцы', '0')
-    .search-room__select-button
+    .form-search-room__select-button
       +base-button('Подобрать номер', 'background', 'arrow', 'button')

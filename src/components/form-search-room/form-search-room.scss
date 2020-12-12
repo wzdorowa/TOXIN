@@ -1,4 +1,4 @@
-.search-room {
+.form-search-room {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -6,7 +6,7 @@
   width: 100%;
   height: 100%;
 }
-.search-room__title {
+.form-search-room__title {
   font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -16,7 +16,7 @@
 
   color: #1F2041;
 }
-.search-room__inputs {
+.form-search-room__inputs {
   position: relative;
   width: 100%;
 
@@ -25,14 +25,14 @@
   justify-content: space-between;
   align-content: space-between;
 }
-.search-room__inputs-with-datepicker {
+.form-search-room__inputs-with-datepicker {
   display: flex;
   justify-content: space-between;
 }
-.search-room__input-container {
+.form-search-room__input-container {
   width: 47%;
 }
-.search-room__datepicker {
+.form-search-room__datepicker {
   display: none;
 
   width: 320px;
@@ -48,13 +48,13 @@
   padding-top: 10px;
   margin-top: 5.5px;
 }
-.search-room__datepicker_visible {
+.form-search-room__datepicker_visible {
   display: block;
 }
-.search-room__dropdown-container {
+.form-search-room__dropdown-container {
   width: 100%;
 }
-.search-room__select-button {
+.form-search-room__select-button {
   width: 100%;
   height: 44px;
 }
