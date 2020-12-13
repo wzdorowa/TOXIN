@@ -1,4 +1,4 @@
 mixin base-button(text, decor, arrow, type)
-  .button(class='button_with-'+arrow || false,)
-    button.button__content(class='button__content_with-'+decor || false, type=""+type)
+  .button(class=`button_with-${arrow}` || false,)
+    button.button__content(class=`button__content_with-${decor}` || false, type=''+type)
       span.button__text=text

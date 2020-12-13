@@ -1,8 +1,3 @@
-// $(document).ready(() => {
-//   $('.checkbox-list__title').click(() => {
-//     $('.checkbox-list__slide-toggle').slideToggle();
-//   });
-// });
 const checkboxLists = document.querySelectorAll('.checkbox-list');
 
 checkboxLists.forEach(element => {

@@ -1,6 +1,6 @@
 mixin advantages(title, value, nameIcon)
   .advantages
-    .advantages__icon(class='advantages__icon_with-sign-'+nameIcon || userIcon)
+    .advantages__icon(class=`advantages__icon_with-sign-${nameIcon}` || userIcon)
     .advantages__content
       h1.advantages__title= title
       span.advantages__value= value

@@ -1,8 +1,8 @@
 mixin numerical-group(state)
   .numerical-group
     .numerical-group__main-group
-      span.numerical-group__sign-number(class="numerical-group__sign-number_" + state.visibilitySignNumber || false) №
-      span.numerical-group__number(class="numerical-group__number_" + state.numberDecor || false)= state.number
-      span.numerical-group__sign-rouble(class="numerical-group__sign-rouble_" + state.visibilitySignRouble || false) P
-    span.numerical-group__description(class="numerical-group__description_" + state.descriptionDecor || false)= state.description
-    span.numerical-group__description-sign(class="numerical-group__description-sign_" + state.visibilityDescriptionSign || false)
+      span.numerical-group__sign-number(class=`numerical-group__sign-number_${state.visibilitySignNumber}` || false) №
+      span.numerical-group__number(class=`numerical-group__number_${state.numberDecor}` || false)= state.number
+      span.numerical-group__sign-rouble(class=`numerical-group__sign-rouble_${state.visibilitySignRouble}` || false) P
+    span.numerical-group__description(class=`numerical-group__description_${state.descriptionDecor}` || false)= state.description
+    span.numerical-group__description-sign(class=`numerical-group__description-sign_${state.visibilityDescriptionSign}` || false)

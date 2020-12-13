@@ -26,12 +26,12 @@ mixin room-cost-form(number, text, cost, dateFormat)
               - let calculationItem = val
               .room-cost-form__calculation-item
                   if(index === 1)
-                      .room-cost-form__calculation-item-content(class="room-cost-form__calculation-item-content_" + itemNumber[index])
+                      .room-cost-form__calculation-item-content(class=`room-cost-form__calculation-item-content_${itemNumber[index]}`)
                           +numerical-group(calculationItem[0])
                           +numerical-group(calculationItem[1])
                       +numerical-group(calculationItem[2])
                   else
-                      .room-cost-form__calculation-item-content(class="room-cost-form__calculation-item-content_" + itemNumber[index])
+                      .room-cost-form__calculation-item-content(class=`room-cost-form__calculation-item-content_${itemNumber[index]}`)
                           +numerical-group(calculationItem[0])
                       +numerical-group(calculationItem[1])
       .room-cost-form__total
