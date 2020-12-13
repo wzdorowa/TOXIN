@@ -45,7 +45,7 @@ block content
                         +dropdown-row('Младенцы', '0')
                 .inputs__item
                     .inputs__item-masked-field
-                        +base-input('Masked text field', 'ДД.ММ.ГГГГ', 'date', '', 'top', 'bottom', '')
+                        +base-input('Masked text field', 'ДД.ММ.ГГГГ', 'text', '', 'top', 'bottom', '')
                 .inputs__item
                     - const dateDropdown = ['ДД.ММ.ГГГГ', '19.08.2019']
                     - const dateDropdownPlaceholder = ['Date dropdown', 'Date dropdown']
@@ -54,7 +54,7 @@ block content
                     - const filterDateDropdown = ['19 авг - 23 авг']
                     - const filterDateDropdownPlaceholder = ['Filter date dropdown']
                     +datepicker-with-inputs(filterDateDropdownPlaceholder, filterDateDropdown, 'large-width', 'only')
-                .inputs__item.inputs__item_medium-width
+                .inputs__item.inputs__item_medium-width.inputs__item_for-email
                     +base-input('Subscription text field', 'Email', 'email', 'arrow', 'top', 'bottom', '')
         .columns__item
             .elements

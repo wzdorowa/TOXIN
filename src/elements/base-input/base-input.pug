@@ -3,6 +3,6 @@ mixin base-input(label, placeholder, type, arrow, borderRadiusTop, borderRadiusB
     span(class='input__description', class='input__description_' + hide || false)= label
     .input__wrapper
       input.input__content(class='input__content_with-border-radius-'+borderRadiusTop || false,
-      class='input__content_with-border-radius-'+borderRadiusBottom || false, class='input__content_with-type-'+ type || 'text', type= type || 'text',
+      class='input__content_with-border-radius-'+borderRadiusBottom || false, type= type || 'text',
       name='input-content', placeholder= placeholder, readonly= readonly)
       span(class='input__icon-'+arrow || false)
