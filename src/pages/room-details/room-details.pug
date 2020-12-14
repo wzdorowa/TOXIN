@@ -12,8 +12,8 @@ include ../../components/datepicker/datepicker.pug
 include ../../components/datepicker-with-inputs/datepicker-with-inputs.pug
 
 block meta
-    meta(name="keywords", content="room details, toxin")
-    meta(name="description", content="Room details page TOXIN")
+    meta(name='keywords', content='room details, toxin')
+    meta(name='description', content='Room details page TOXIN')
 block title
     title Room details page
 block content
@@ -23,46 +23,56 @@ block content
         +header()
     .room-details__content
       .room-details__slider
-        img.room-details__slider-image-1(src="images/image1.png")
+        img.room-details__slider-image-1(src='images/image1.png')
         .room-details__slider-group-image
-          img.room-details__slider-image-2(src="images/image2.png")
-          img.room-details__slider-image-3(src="images/image3.png")
+          img.room-details__slider-image-2(src='images/image2.png')
+          img.room-details__slider-image-3(src='images/image3.png')
       .room-details__information
         .room-details__number-impressions
           .room-details__number-info
             h2.room-details__title Сведения о номере
             .room-details__advantages
               .room-details__advantage-item
-                +advantages('Комфорт', 'Шумопоглощающие стены', 'mood')
+                +advantages({title: 'Комфорт', value: 'Шумопоглощающие стены', nameIcon: 'mood'})
               .room-details__advantage-item
-                +advantages('Удобство', 'Окна в каждой из спален', 'locationCity')
+                +advantages({title: 'Удобство', value: 'Окна в каждой из спален', nameIcon: 'locationCity'})
               .room-details__advantage-item
-                +advantages('Уют', 'Номер оснащен камином', 'whatshot')
+                +advantages({title: 'Уют', value: 'Номер оснащен камином', nameIcon: 'whatshot'})
           .room-details__impressions
             h2.room-details__title Впечатления от номера
             .room-details__diagram
               - const impressions = [{modifier: 'yellow-pink', text: 'Великолепно'}, {modifier: 'turquoise-blue', text: 'Хорошо'}, {modifier: 'light-blue', text: 'Удовлетворительно'}, {modifier: 'violet-blue', text: 'Разочарован'}]
-              +diagram('260', 'голосов', impressions)
-                circle(class="room-details__donut-hole" cx="50%" cy="50%" r="15.91549430918954" fill="#fff")
-                circle(class="room-details__donut-ring" cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1")
-                circle(class="room-details__donut-segment" cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#FFBA9C" stroke-width="1" stroke-dasharray="49 50" stroke-dashoffset="73.5")
-                circle(class="room-details__donut-segment" cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#6FCF97" stroke-width="1" stroke-dasharray="24.5 75" stroke-dashoffset="-0.4")
-                circle(class="room-details__donut-segment" cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#BC9CFF" stroke-width="2.2" stroke-dasharray="24.5 75" stroke-dashoffset="24.5")
+              +diagram({number: '260', label: 'голосов', impressions: impressions})
+                circle(class='room-details__donut-hole' cx='50%' cy='50%' r='15.91549430918954' fill='#fff')
+                circle(class='room-details__donut-ring' cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke='#fff' stroke-width='1')
+                circle(class='room-details__donut-segment' cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke='#FFBA9C' stroke-width='1' stroke-dasharray='49 50' stroke-dashoffset='73.5')
+                circle(class='room-details__donut-segment' cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke='#6FCF97' stroke-width='1' stroke-dasharray='24.5 75' stroke-dashoffset='-0.4')
+                circle(class='room-details__donut-segment' cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke='#BC9CFF' stroke-width='2.2' stroke-dasharray='24.5 75' stroke-dashoffset='24.5')
         .room-details__column-narrow
           -const roomDetailsRoomDateFormat = ['19.08.2019', '23.08.2019']
-          +room-cost-form('888', 'люкс', '9 990', roomDetailsRoomDateFormat)
+          +room-cost-form({number: '888', text: 'люкс', cost: '9 990', dateFormat: roomDetailsRoomDateFormat})
         .room-details__review
           .room-details__review-description
             h2.room-details__title-review Отзывы посетителей номера
             span.room-details__review-sum 2 отзыва
-          +review('Мурад Сарафанов', '5 дней назад', 'Murad', '', 'small', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-          +review('Патрисия Стёклышкова', 'Неделю назад', 'Patriziya', '', 'small', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+          +review({
+            title: 'Мурад Сарафанов',
+            value: '5 дней назад',
+            nameIcon: 'Murad',
+            text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+          })
+          +review({
+            title: 'Патрисия Стёклышкова',
+            value: 'Неделю назад',
+            nameIcon: 'Patriziya',
+            text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+          })
         .room-details__extra-info
           .room-details__rules
             h2.room-details__title-rules Правила
             .room-details__rules-list
               - const rules = [{modifier: 'light-gray', text: 'Нельзя с питомцами', padding: 'increased-indent'}, {modifier: 'light-gray', text: 'Без вечеринок и мероприятий', padding: 'increased-indent'}, {modifier: 'light-gray', text: 'Время прибытия — после 13:00, а выезд до 12:00', padding: 'increased-indent'}]
-              +bulleted-list(rules)
+              +bulleted-list({values: rules})
           .room-details__cancel
             h2.room-details__title-cancel Отмена
             p.room-details__cancel-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.

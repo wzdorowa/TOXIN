@@ -12,8 +12,8 @@ include ../../components/number-card/number-card.pug
 include ../../elements/pagination/pagination.pug
 
 block meta
-    meta(name="keywords", content="search room, toxin")
-    meta(name="description", content="Search room page TOXIN")
+    meta(name='keywords', content='search room, toxin')
+    meta(name='description', content='Search room page TOXIN')
 block title
     title Search room page
 block content
@@ -27,66 +27,90 @@ block content
       .search-room__filter
         .search-room__filter-inputs
           .search-room__filter-input
-            +base-input('Даты пребывания в отеле', '19 авг - 23 авг', 'text', 'arrow-down', 'top', 'bottom')
+            +base-input({
+              label: 'Даты пребывания в отеле',
+              placeholder: '19 авг - 23 авг',
+              arrow: 'arrow-down', 
+              borderRadiusTop: 'top',
+              borderRadiusBottom: 'bottom',
+            })
           .search-room__filter-input
-            +base-input('Гости', '3 гостя, 1 младенец', 'text', 'arrow-down', 'top', 'bottom')
+            +base-input({
+              label: 'Гости',
+              placeholder: '3 гостя, 1 младенец',
+              arrow: 'arrow-down', 
+              borderRadiusTop: 'top',
+              borderRadiusBottom: 'bottom',
+            })
         .search-room__filter-range-slider
-          +range-slider('Диапазон цены')
+          +range-slider({text: 'Диапазон цены'})
           span.search-room__filter-range-slider-description Стоимость за сутки пребывания в номере
         .search-room__filter-checkbox-buttons
           h1.search-room__filter-checkbox-buttons-title Chechbox buttons
           .search-room__filter-checkbox-buttons-group
-            +checkbox-button('Можно курить')
-            +checkbox-button('Можно с питомцами', 'checked')
-            +checkbox-button('Можно пригласить гостей (до 10 человек)', 'checked')
+            +checkbox-button({value: 'Можно курить'})
+            +checkbox-button({value: 'Можно с питомцами', checked: 'checked'})
+            +checkbox-button({value: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
         .search-room__filter-rich-checkbox
           h1.search-room__filter-item-title Доступность
-          +checkbox-button('Широкий коридор', '', 'bold', 'Ширина коридоров в номере не менее 91 см.')
-          +checkbox-button('Помощник для инвалидов', '', 'bold', 'На 1 этаже вас встретит специалист и проводит до номера.')
+          +checkbox-button({
+                  value: 'Широкий коридор',
+                  weight: 'bold',
+                  description: 'Ширина коридоров в номере не менее 91 см.'
+                  })
+          +checkbox-button({
+                  value: 'Помощник для инвалидов',
+                  weight: 'bold',
+                  description: 'На 1 этаже вас встретит специалист и проводит до номера.'
+                  })
         .search-room__filter-dropdown
-          +dropdown('Удобства номера', '2 спальни, 2 кровати...', 'hidden')
-            +dropdown-row('Спальни', '2')
-            +dropdown-row('Кровати', '1')
-            +dropdown-row('Ванные комнаты', '0')
+          +dropdown({
+            label: 'Удобства номера',
+            placeholder: '2 спальни, 2 кровати...',
+            display: 'hidden',
+          })
+            +dropdown-row({label: 'Спальни', number: '2'})
+            +dropdown-row({label: 'Кровати', number: '1'})
+            +dropdown-row({label: 'Ванные комнаты', number: '0'})
         .search-room__filter-options
-          +checkbox-list('Дополнительные удобства')
-            +checkbox-button('Завтрак')
-            +checkbox-button('Письменный стол', 'checked')
-            +checkbox-button('Стул для кормления', 'checked')
-            +checkbox-button('Кроватка', 'checked')
-            +checkbox-button('Телевизор')
-            +checkbox-button('Шампунь')
-            +checkbox-button('Телевизор')
-            +checkbox-button('Шампунь')
+          +checkbox-list({text: 'Дополнительные удобства'})
+            +checkbox-button({value: 'Завтрак'})
+            +checkbox-button({value: 'Письменный стол', checked: 'checked'})
+            +checkbox-button({value: 'Стул для кормления', checked: 'checked'})
+            +checkbox-button({value: 'Кроватка', checked: 'checked'})
+            +checkbox-button({value: 'Телевизор'})
+            +checkbox-button({value: 'Шампунь'})
+            +checkbox-button({value: 'Телевизор'})
+            +checkbox-button({value: 'Шампунь'})
       .search-room__result
         h1.search-room__result-title Номера, которые мы для вас подобрали
         .search-room__result-cards-numbers
           .search-room__card-number
-            +number-card('888', 'люкс', '9 990', '145', 'border')
+            +number-card({number: '888', text: 'люкс', cost: '9 990', amount: '145'})
           .search-room__card-number
-            +number-card('840', '', '9 990', '65', 'border')
+            +number-card({number: '840', cost: '9 990', amount: '65'})
           .search-room__card-number
-            +number-card('980', 'люкс', '8 500', '35', 'border')
+            +number-card({number: '980', text: 'люкс', cost: '8 500', amount: '35'})
           .search-room__card-number
-            +number-card('856', '', '7 300', '19', 'border')
+            +number-card({number: '856', cost: '7 300', amount: '19'})
           .search-room__card-number
-            +number-card('740', '', '6 000', '44', 'border')
+            +number-card({number: '740', cost: '6 000', amount: '44'})
           .search-room__card-number
-            +number-card('982', '', '5 800', '56', 'border')
+            +number-card({number: '982', cost: '5 800', amount: '56'})
           .search-room__card-number
-            +number-card('678', '', '5 500', '45', 'border')
+            +number-card({number: '678', cost: '5 500', amount: '45'})
           .search-room__card-number
-            +number-card('450', '', '5 300', '39', 'border')
+            +number-card({number: '450', cost: '5 300', amount: '39'})
           .search-room__card-number
-            +number-card('350', '', '5 000', '77', 'border')
+            +number-card({number: '350', cost: '5 000', amount: '77'})
           .search-room__card-number
-            +number-card('666', '', '5 000', '25', 'border')
+            +number-card({number: '666', cost: '5 000', amount: '25'})
           .search-room__card-number
-            +number-card('444', '', '5 000', '15', 'border')
+            +number-card({number: '444', cost: '5 000', amount: '15'})
           .search-room__card-number
-            +number-card('352', '', '5 000', '55', 'border')
+            +number-card({number: '352', cost: '5 000', amount: '55'})
         .search-room__result-pagination
-          +pagination('1 – 12 из 100+ вариантов аренды')
+          +pagination({text: '1 – 12 из 100+ вариантов аренды'})
     .search-room__footer
-      +footer('borderTop', 'marginTop')
+      +footer()
     +copyright()

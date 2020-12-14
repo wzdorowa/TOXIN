@@ -1,14 +1,21 @@
 include ../../elements/dropdown-row/dropdown-row.pug
 
-mixin dropdown(label, placeholder, display, readonly)
+mixin dropdown({label, placeholder, display, readonly} = {})
   .dropdown
     .dropdown__list
-      +base-input(label, placeholder, 'text', 'arrow-down', 'top', '', 'dropdown-list', readonly)
+      +base-input({
+        label: label,
+        placeholder: placeholder,
+        arrow: 'arrow-down',
+        borderRadiusTop: 'top',
+        hide: 'dropdown-list',
+        readonly: readonly,
+      })
     .dropdown__content
       .dropdown__rows
         block
       .dropdown__buttons(class=`dropdown__buttons_${display}` || false)
         .dropdown__buttons-container.dropdown__buttons-container_for-clear
-          +base-button('Очистить', '', 'noDecor', '', 'button')
+          +base-button({text: 'Очистить', decor: 'noDecor'})
         .dropdown__buttons-container.dropdown__buttons-container_for-apply
-          +base-button('Применить', '', 'noDecor', '', 'button')
+          +base-button({text: 'Применить', decor: 'noDecor'})

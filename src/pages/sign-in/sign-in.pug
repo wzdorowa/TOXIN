@@ -7,8 +7,8 @@ include ../../components/social-btn/social-btn.pug
 include ../../components/login/login.pug
 
 block meta
-    meta(name="keywords", content="sign in, toxin")
-    meta(name="description", content="Sign in page TOXIN")
+    meta(name='keywords', content='sign in, toxin')
+    meta(name='description', content='Sign in page TOXIN')
 block title
     title Sign in page
 block content
@@ -17,9 +17,9 @@ block content
       .sign-in__header-container
         +header()
     .sign-in__container
-      img.sign-in__image-background(src="images/image4.png")
+      img.sign-in__image-background(src='images/image4.png')
       .sign-in__login
-        +login('Войти')
+        +login({text: 'Войти'})
     .sign-in__footer
       +footer()
     +copyright()

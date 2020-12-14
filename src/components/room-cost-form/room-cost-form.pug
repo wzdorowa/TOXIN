@@ -3,22 +3,34 @@ include ../../components/dropdown/dropdown.pug
 include ../../elements/numerical-group/numerical-group.pug
 include ../../elements/dropdown-row/dropdown-row.pug
 
-mixin room-cost-form(number, text, cost, dateFormat)
+mixin room-cost-form({number, text, cost, dateFormat} = {})
     .room-cost-form
       .room-cost-form__identification-room
           .room-cost-form__specification-room
-              - const specificationState = {number: '888', description: 'люкс', visibilitySignNumber: '', visibilitySignRouble: 'hidden', visibilityDescriptionSign: 'hidden', numberDecor: 'bold', descriptionDecor: 'bold-pink'}
-              +numerical-group(specificationState)
+              +numerical-group({
+                numberDecor: 'bold',
+                number: '888',
+                visibilitySignRouble: 'hidden',
+                descriptionDecor: 'bold-pink',
+                description: 'люкс',
+                visibilityDescriptionSign: 'hidden'
+              })
           .room-cost-form__cost-per-day
-              - const costPerDay = {number: '9 990', description: ' в сутки', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden', numberDecor: '', descriptionDecor: 'normal'}
-              +numerical-group(costPerDay)
-      -const placeholder = ['Прибытие', 'Выезд']
-      +datepicker-with-inputs(placeholder, dateFormat, 'small-width', '')
+              +numerical-group({
+                visibilitySignNumber: 'hidden',
+                numberDecor,
+                number: '9 990',
+                descriptionDecor: 'normal',
+                description: ' в сутки',
+                visibilityDescriptionSign: 'hidden'
+              })
+      -const label = ['Прибытие', 'Выезд']
+      +datepicker-with-inputs({labelInputs: label, dates: dateFormat, size: 'small-width', amountField: 'two'})
       .room-cost-form__dropdown-container
-        +dropdown('Гости', '3 гостя', 'arrow-down', 'top', 'bottom', '', 'readonly')
-          +dropdown-row('Взрослые', '2')
-          +dropdown-row('Дети', '1')
-          +dropdown-row('Младенцы', '0')
+        +dropdown({abel: 'Гости', placeholder: '3 гостя', display: 'arrow-down', readonly: 'readonly'})
+          +dropdown-row({label: 'Взрослые', number: '2'})
+          +dropdown-row({label: 'Дети', number: '1'})
+          +dropdown-row({label: 'Младенцы', number: '0'})
       .room-cost-form__calculation
           - const calculationItems = [[{number: '9 990', description: ' x 4 суток', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'},{number: '39 690', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}],[{number: '', description: 'Сбор за услуги: скидка', visibilitySignNumber: 'hidden', visibilitySignRouble: 'hidden', visibilityDescriptionSign: 'hidden'},{number: ' 2 179', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: ''},{number: '0', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}],[{number: '', description: 'Сбор за дополнительные услуги', visibilitySignNumber: 'hidden', visibilitySignRouble: 'hidden', visibilityDescriptionSign: ''},{number: '300', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}]]
           - const itemNumber = ['first', 'second', 'third']
@@ -41,4 +53,4 @@ mixin room-cost-form(number, text, cost, dateFormat)
               - const totalState = {number: '38 081', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}
               +numerical-group(totalState)
       .room-cost-form__armor-button
-          +base-button('Забронировать', 'background', 'arrow', 'button')
+          +base-button({text: 'Забронировать', decor: 'background', arrow: 'arrow'})

@@ -1,15 +1,27 @@
-mixin login(text)
+mixin login({text} = {})
   .login
     span.login__title= text
     .login__login-details
       .login__input-item
-        +base-input( '', 'Email', 'email', '', 'top', 'bottom', 'hidden')
+        +base-input({
+          placeholder: 'Email',
+          type: 'email',
+          borderRadiusTop: 'top',
+          borderRadiusBottom: 'bottom',
+          hide: 'hidden',
+        })
       .login__input-item
-        +base-input( '', 'Пароль', 'password', '', 'top', 'bottom', 'hidden')
+        +base-input({
+          placeholder: 'Пароль',
+          type: 'password',
+          borderRadiusTop: 'top',
+          borderRadiusBottom: 'bottom',
+          hide: 'hidden',
+        })
     .login__check-in-details
       .login__check-in-button
-        +base-button('Войти', 'background', 'arrow', 'button')
+        +base-button({text: 'Войти', decor: 'background', arrow: 'arrow'})
       .login__have-an-account
         span.login__text Нет аккаунта на Toxin?
         .login__create-button
-          +base-button('Создать', 'border', '', 'button')
+          +base-button({text: 'Создать', decor: 'border'})

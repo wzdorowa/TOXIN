@@ -1,14 +1,14 @@
-mixin range-slider(text)
+mixin range-slider({text} = {})
   .slider
     .slider__description
       h1.slider__title= text
       .slider__price
         .slider__left
-          input.slider__left-price(type="text") 
+          input.slider__left-price(type='text') 
           p.slider__ruble-sign ₽
         span.slider__sign
           |-
         .slider__right
-          input.slider__right-price(type="text") 
+          input.slider__right-price(type='text') 
           p.slider__ruble-sign ₽
     .slider__range

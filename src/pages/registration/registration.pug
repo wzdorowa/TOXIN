@@ -8,8 +8,8 @@ include ../../components/form-check-in/form-check-in.pug
 include ../../components/datepicker/datepicker.pug
 
 block meta
-    meta(name="keywords", content="registration, toxin")
-    meta(name="description", content="Registration page TOXIN")
+    meta(name='keywords', content='registration, toxin')
+    meta(name='description', content='Registration page TOXIN')
 block title
     title Registration page
 block content
@@ -18,9 +18,9 @@ block content
       .registration__header-container
         +header()
     .registration__container
-      img.registration__image-background(src="images/image4.1.png")
+      img.registration__image-background(src='images/image4.1.png')
       .registration__check-in
-        +check-in('Регистрация аккаунта')
+        +check-in({text: 'Регистрация аккаунта'})
     .registration__footer
       +footer()
     +copyright()

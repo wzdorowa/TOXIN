@@ -14,12 +14,12 @@ mixin header()
         - var itemName = val
         if(itemName === 'Услуги' || itemName === 'Соглашения')
           li.header__item.header__item_drop-down-menu
-            a.header__link(href="")= val
+            a.header__link(href='')= val
         else
           li.header__item
-            a.header__link(href="")= val
+            a.header__link(href='')= val
     .header__user
-      form.header__user-button-login(action='/TOXIN/pages/sign-in/sign-in.html', target="_blank")
-        +base-button('Войти', 'border', '', 'submit')
-      form.header__user-button-registration(action='/TOXIN/pages/registration/registration.html', target="_blank")
-        +base-button('Зарегистироваться', 'background', '', 'submit')
+      form.header__user-button-login(action='/TOXIN/pages/sign-in/sign-in.html', target='_blank')
+        +base-button({text: 'Войти', decor: 'border', type: 'submit'})
+      form.header__user-button-registration(action='/TOXIN/pages/registration/registration.html', target='_blank')
+        +base-button({text: 'Зарегистироваться', decor: 'background', type: 'submit'})

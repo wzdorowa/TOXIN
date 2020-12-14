@@ -1,31 +1,58 @@
 include ../../elements/radio-button/radio-button.pug
 include ../../elements/toggle/toggle.pug
 
-mixin check-in(text)
+mixin check-in({text} = {})
   .check-in
     span.check-in__title= text
     .check-in__user-data
       .check-in__group-inputs
-          +base-input('', 'Имя', 'text', '', 'top', 'bottom', 'hidden')
-          +base-input('', 'Фамилия', 'text', '', 'top', 'bottom', 'hidden')
+          +base-input({
+            placeholder: 'Имя',
+            borderRadiusTop: 'top',
+            borderRadiusBottom: 'bottom',
+            hide: 'hidden',
+          })
+          +base-input({
+            placeholder: 'Фамилия',
+            borderRadiusTop: 'top',
+            borderRadiusBottom: 'bottom',
+            hide: 'hidden',
+          })
       .check-in__buttons
-        +radio-button('Мужчина', 'checked')
-        +radio-button('Женщина')
+        +radio-button({text: 'Мужчина', checked: 'checked'})
+        +radio-button({text: 'Женщина'})
     .check-in__input
       .check-in__input-container.check-in__input-container_for-masked-field
-        +base-input('Дата рождения', 'ДД.ММ.ГГГГ', 'text', '', 'top', 'bottom')
+        +base-input({
+          label: 'Дата рождения',
+          placeholder: 'ДД.ММ.ГГГГ',
+          type: 'text',
+          borderRadiusTop: 'top',
+          borderRadiusBottom: 'bottom',
+        })
     .check-in__login-details
       .check-in__group-inputs-login
         .check-in__input-container
-          +base-input('Данные для входа в сервис', 'email', 'Email', '', 'top', 'bottom')
+          +base-input({
+            label: 'Данные для входа в сервис',
+            placeholder: 'email',
+            type: 'Email',
+            borderRadiusTop: 'top',
+            borderRadiusBottom: 'bottom',
+          })
         .check-in__input-container
-          +base-input('', 'Пароль', 'password', '', 'top', 'bottom')
+          +base-input({
+            placeholder: 'Пароль',
+            type: 'password',
+            borderRadiusTop: 'top',
+            borderRadiusBottom: 'bottom',
+          })
       .check-in__toggle
-        +toggle('Получать спецпредложения')
+        +toggle({text: 'Получать спецпредложения'})
     .check-in__check-in-details
       .check-in__check-in-button
-        +base-button('Зарегистрироваться', 'background', 'arrow', 'button')
+        +base-button({text: 'Зарегистрироваться', decor: 'background', arrow: 'arrow'})
       .check-in__have-an-account
         span.check-in__text Уже есть аккаунт на Toxin
         .check-in__sign-in-button
-          +base-button('Войти', 'border', '', 'button')
+          +base-button({text: 'Войти', decor: 'border'})

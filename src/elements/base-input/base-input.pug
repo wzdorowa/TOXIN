@@ -1,4 +1,4 @@
-mixin base-input(label, placeholder, type, arrow, borderRadiusTop, borderRadiusBottom, hide, readonly)
+mixin base-input({label, placeholder, type, arrow, borderRadiusTop, borderRadiusBottom, hide, readonly} = {})
   div.input()
     span(class='input__description', class=`input__description_${hide}` || false)= label
     .input__wrapper

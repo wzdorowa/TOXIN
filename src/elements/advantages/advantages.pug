@@ -1,4 +1,4 @@
-mixin advantages(title, value, nameIcon)
+mixin advantages({title, value, nameIcon} = {})
   .advantages
     .advantages__icon(class=`advantages__icon_with-sign-${nameIcon}` || userIcon)
     .advantages__content

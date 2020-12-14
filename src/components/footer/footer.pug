@@ -15,8 +15,14 @@ mixin footer()
           ul.footer__list
             each value, index in column
               li.footer__item
-                a.footer__link(href="")= value
+                a.footer__link(href='')= value
       .footer__subscribe
         span.footer__subscribe-title Подписка
         span.footer__subscribe-description Получайте специальные предложения и новости сервиса
-        +base-input('', 'Email', 'email', 'arrow', 'top', 'bottom')
+        +base-input({
+          placeholder: 'Email',
+          type: 'email',
+          arrow: 'arrow',
+          borderRadiusTop: 'top',
+          borderRadiusBottom: 'bottom',
+        })

@@ -1,6 +1,6 @@
 include ../../elements/rate-button/rate-button.pug
 
-mixin number-card(number, text, cost, amount)
+mixin number-card({number, text, cost, amount} = {})
   .number-card
     .number-card__slider
       - var images = new Array(4);
