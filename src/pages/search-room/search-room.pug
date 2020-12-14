@@ -4,6 +4,7 @@ include ../../components/header/header.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../components/dropdown/dropdown.pug
+include ../../components/datepicker-with-inputs/datepicker-with-inputs.pug
 include ../../elements/base-input/base-input.pug
 include ../../elements/range-slider/range-slider.pug
 include ../../elements/checkbox-button/checkbox-button.pug
@@ -26,22 +27,21 @@ block content
         h1.search-room__filter-access-title Дополнительные параметры
       .search-room__filter
         .search-room__filter-inputs
+          +datepicker-with-inputs({
+            labelArray: ['Даты пребывания в отеле'],
+            dates: ['19 авг - 23 авг'],
+            size: 'large-width',
+            amountField: 'only'})
           .search-room__filter-input
-            +base-input({
-              label: 'Даты пребывания в отеле',
-              placeholder: '19 авг - 23 авг',
-              arrow: 'arrow-down', 
-              borderRadiusTop: 'top',
-              borderRadiusBottom: 'bottom',
-            })
-          .search-room__filter-input
-            +base-input({
+            +dropdown({
               label: 'Гости',
               placeholder: '3 гостя, 1 младенец',
-              arrow: 'arrow-down', 
-              borderRadiusTop: 'top',
-              borderRadiusBottom: 'bottom',
+              display: 'hidden',
+              readonly: 'readonly',
             })
+              +dropdown-row({label: 'Взрослые', number: '3'})
+              +dropdown-row({label: 'Дети', number: '0'})
+              +dropdown-row({label: 'Младенцы', number: '1'})
         .search-room__filter-range-slider
           +range-slider({text: 'Диапазон цены'})
           span.search-room__filter-range-slider-description Стоимость за сутки пребывания в номере
@@ -70,7 +70,7 @@ block content
             display: 'hidden',
           })
             +dropdown-row({label: 'Спальни', number: '2'})
-            +dropdown-row({label: 'Кровати', number: '1'})
+            +dropdown-row({label: 'Кровати', number: '2'})
             +dropdown-row({label: 'Ванные комнаты', number: '0'})
         .search-room__filter-options
           +checkbox-list({text: 'Дополнительные удобства'})

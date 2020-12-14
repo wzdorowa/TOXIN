@@ -1,13 +1,13 @@
 include ../../components/datepicker/datepicker.pug
 include ../../elements/base-input/base-input.pug
 
-mixin datepicker-with-inputs({labelInputs, dates, size, amountField} = {})
+mixin datepicker-with-inputs({labelArray, dates, size, amountField} = {})
   .datepicker-group
     .datepicker-group__inputs
       if (amountField === 'only')
         .datepicker-group__input(class=`datepicker-group__input_${size}` || false)
           +base-input({
-            label: labelInputs[0],
+            label: labelArray[0],
             placeholder: dates[0],
             arrow: 'arrow-down',
             borderRadiusTop: 'top',
@@ -17,7 +17,7 @@ mixin datepicker-with-inputs({labelInputs, dates, size, amountField} = {})
       else if (amountField === 'two')
         .datepicker-group__input(class=`datepicker-group__input_${size}` || false)
           +base-input({
-            label: labelInputs[0],
+            label: labelArray[0],
             placeholder: dates[0],
             arrow: 'arrow-down',
             borderRadiusTop: 'top',
@@ -26,7 +26,7 @@ mixin datepicker-with-inputs({labelInputs, dates, size, amountField} = {})
           })
         .datepicker-group__input(class=`datepicker-group__input_${size}` || false)
           +base-input({
-            label: labelInputs[1],
+            label: labelArray[1],
             placeholder: dates[1],
             arrow: 'arrow-down',
             borderRadiusTop: 'top',

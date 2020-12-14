@@ -5,10 +5,14 @@
 .datepicker-group__input_large-width {
   width: 100%;
 }
+.datepicker-group__input_medium-width {
+  width: 265px;
+}
 .datepicker-group__input_small-width {
   width: 150px;
 }
 .datepicker-group__datepicker {
+  width: 100%;
   display: none;
 
   background: #FFFFFF;
