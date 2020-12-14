@@ -1,6 +1,6 @@
 const elements = document.querySelectorAll('.dropdown');
 
-elements.forEach(element => {
+elements.forEach((element, index) => {
   const elementInput = element.querySelector('.input__content');
   const dropdownList = element.querySelector('.dropdown__content');
   const dropdownArrow = element.querySelector('.input__icon-arrow-down');
@@ -25,30 +25,63 @@ elements.forEach(element => {
       dropdownList.classList.remove('dropdown__content_visible');
     }
   });
-  buttonApply.addEventListener('click', e => {
+  const signsGroup = element.querySelectorAll('.dropdown-row__amount-counter');
+  console.log('signsGroup[index]', signsGroup[index]);
+  signsGroup[index].addEventListener('click', e => {
     e.preventDefault();
 
     const numbers = element.querySelectorAll(
       '.dropdown-row__amount_with-count',
     );
-    let result = 0;
-    numbers.forEach(number => {
-      result += Number(number.innerHTML);
-    });
 
-    if (result === 0) {
-      elementInput.value = 'Сколько гостей';
-    } else if (String(result).includes('1')) {
-      elementInput.value = `${String(result)} гость`;
-    } else if (
-      String(result).includes('2') ||
-      String(result).includes('3') ||
-      String(result).includes('4')
-    ) {
-      elementInput.value = `${String(result)} гостя`;
-    } else {
-      elementInput.value = `${String(result)} гостей`;
-    }
+    const countValues = value => {
+      if (value === 0) {
+        elementInput.value += 'Сколько гостей';
+      } else if (String(value).includes('1')) {
+        elementInput.value += `${String(value)} гость`;
+      } else if (
+        String(value).includes('2') ||
+        String(value).includes('3') ||
+        String(value).includes('4')
+      ) {
+        elementInput.value += `${String(value)} гостя`;
+      } else {
+        elementInput.value += `${String(value)} гостей`;
+      }
+    };
+    const countTheGuests = () => {
+      let adults = 0;
+      let babies = 0;
+      numbers.forEach((number, index) => {
+        if (index <= 1) {
+          adults += Number(number.innerHTML);
+        } else if (index === 2) {
+          babies += Number(number.innerHTML);
+        }
+        countValues(adults);
+        countValues(babies);
+      });
+    };
+    const countAmenities = () => {
+      let bedrooms = 0;
+      let beds = 0;
+      let bathrooms = 0;
+
+      numbers.forEach((number, index) => {
+        if (index <= 1) {
+          bedrooms += Number(number.innerHTML);
+        } else if (index === 2) {
+          beds += Number(number.innerHTML);
+        } else if (index === 2) {
+          bathrooms += Number(number.innerHTML);
+        }
+        countValues(bedrooms);
+        countValues(beds);
+        countValues(bathrooms);
+      });
+    };
+  });
+  buttonApply.addEventListener('click', () => {
     dropdownList.classList.remove('dropdown__content_visible');
   });
 });
