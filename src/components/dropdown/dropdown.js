@@ -38,24 +38,29 @@ elements.forEach(element => {
     } else {
       const newString = [];
       values.forEach((value, i) => {
-        const declination = declinations[i];
-        if (String(value).includes('1')) {
-          newString[i] = `${String(value)} ${declination[0]}`;
-        } else if (
-          String(value).includes('2') ||
-          String(value).includes('3') ||
-          String(value).includes('4')
-        ) {
-          newString[i] = `${String(value)} ${declination[1]}`;
-        } else {
-          newString[i] = `${String(value)} ${declination[2]}`;
+        if (value !== 0) {
+          const declination = declinations[i];
+          if (String(value).includes('1')) {
+            newString.push(`${String(value)} ${declination[0]}`);
+          } else if (
+            String(value).includes('2') ||
+            String(value).includes('3') ||
+            String(value).includes('4')
+          ) {
+            newString.push(`${String(value)} ${declination[1]}`);
+          } else {
+            newString.push(`${String(value)} ${declination[2]}`);
+          }
         }
       });
       newString.forEach((string, index) => {
-        if (index < newString.length - 1) {
-          elementInput.value += `${newString[index]}, `;
-        } else if (index === newString.length - 1) {
+        if (
+          (index === 0 && newString.length === 1) ||
+          index === newString.length - 1
+        ) {
           elementInput.value += `${newString[index]}`;
+        } else if (index < newString.length - 1 && newString.length > 1) {
+          elementInput.value += `${newString[index]}, `;
         }
       });
     }
