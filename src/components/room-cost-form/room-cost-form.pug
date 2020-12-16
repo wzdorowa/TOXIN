@@ -27,7 +27,13 @@ mixin room-cost-form({number, text, cost, dateFormat} = {})
       -const label = ['Прибытие', 'Выезд']
       +datepicker-with-inputs({labelArray: label, dates: dateFormat, size: 'small-width', amountField: 'two'})
       .room-cost-form__dropdown-container
-        +dropdown({abel: 'Гости', placeholder: '3 гостя', display: 'arrow-down', readonly: 'readonly'})
+        +dropdown({
+          abel: 'Гости',
+          placeholder: '3 гостя',
+          display: 'arrow-down',
+          readonly: 'readonly',
+          dropdownFor: 'the-guests'
+          })
           +dropdown-row({label: 'Взрослые', number: '2'})
           +dropdown-row({label: 'Дети', number: '1'})
           +dropdown-row({label: 'Младенцы', number: '0'})

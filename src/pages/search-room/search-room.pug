@@ -38,6 +38,7 @@ block content
               placeholder: '3 гостя, 1 младенец',
               display: 'hidden',
               readonly: 'readonly',
+              dropdownFor: 'the-guests'
             })
               +dropdown-row({label: 'Взрослые', number: '3'})
               +dropdown-row({label: 'Дети', number: '0'})
@@ -68,6 +69,7 @@ block content
             label: 'Удобства номера',
             placeholder: '2 спальни, 2 кровати...',
             display: 'hidden',
+            dropdownFor: 'amenities'
           })
             +dropdown-row({label: 'Спальни', number: '2'})
             +dropdown-row({label: 'Кровати', number: '2'})

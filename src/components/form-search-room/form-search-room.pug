@@ -9,7 +9,12 @@ mixin form-search-room({text, dateFormat} = {})
     -const labelInputs = ['Прибытие', 'Выезд']
     +datepicker-with-inputs({labelArray: labelInputs, dates: dateFormat, size: 'small-width', amountField: 'two'})
     .form-search-room__dropdown-container
-      +dropdown({label: 'Гости', placeholder: 'Сколько гостей', readonly: 'readonly'})
+      +dropdown({
+        label: 'Гости',
+        placeholder: 'Сколько гостей',
+        readonly: 'readonly',
+        dropdownFor: 'the-guests'
+        })
         +dropdown-row({label: 'Взрослые', number: '2'})
         +dropdown-row({label: 'Дети', number: '1'})
         +dropdown-row({label: 'Младенцы', number: '0'})

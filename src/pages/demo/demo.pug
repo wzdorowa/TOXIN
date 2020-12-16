@@ -49,6 +49,7 @@ block content
                       placeholder: 'Сколько гостей',
                       display: 'hidden',
                       readonly: 'readonly',
+                      dropdownFor: 'the-guests'
                     })
                         +dropdown-row({label: 'Взрослые', number: '0'})
                         +dropdown-row({label: 'Дети', number: '0'})
@@ -143,6 +144,7 @@ block content
                   placeholder: '2 спальни, 2 кровати...',
                   display: 'hidden',
                   readonly: 'readonly',
+                  dropdownFor: 'amenities'
                 })
                   +dropdown-row({label: 'Спальни', number: '2'})
                   +dropdown-row({label: 'Кровати', number: '1'})

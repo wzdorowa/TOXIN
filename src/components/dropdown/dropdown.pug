@@ -1,6 +1,6 @@
 include ../../elements/dropdown-row/dropdown-row.pug
 
-mixin dropdown({label, placeholder, display, readonly} = {})
+mixin dropdown({label, placeholder, display, readonly, dropdownFor} = {})
   .dropdown
     .dropdown__list
       +base-input({
@@ -12,7 +12,7 @@ mixin dropdown({label, placeholder, display, readonly} = {})
         readonly: readonly,
       })
     .dropdown__content
-      .dropdown__rows
+      .dropdown__rows(class=`dropdown__rows_for-count-${dropdownFor}` || false)
         block
       .dropdown__buttons(class=`dropdown__buttons_${display}` || false)
         .dropdown__buttons-container.dropdown__buttons-container_for-clear
