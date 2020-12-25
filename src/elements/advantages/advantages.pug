@@ -1,6 +1,6 @@
-mixin advantages({title, value, nameIcon} = {})
+mixin advantages({title = 'Field name', value = 'Field description', nameIcon = 'userIcon'} = {title, value, nameIcon})
   .advantages
-    .advantages__icon(class=`advantages__icon_with-sign-${nameIcon}` || userIcon)
+    .advantages__icon(class=`advantages__icon_with-sign-${nameIcon}`)
     .advantages__content
       h1.advantages__title= title
       span.advantages__value= value

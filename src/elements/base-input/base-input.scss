@@ -23,6 +23,9 @@
 .input__description_hidden {
   display: none;
 }
+.input__description_visible {
+  display: inline;
+}
 .input__icon-arrow-down::before {
   position: absolute;
 

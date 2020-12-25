@@ -1,8 +1,8 @@
-mixin base-input({label, placeholder, type, arrow, borderRadiusTop, borderRadiusBottom, hide, readonly} = {})
+mixin base-input({label, placeholder = 'Введите значение', type = 'text', arrow = false, borderRadiusTop = false, borderRadiusBottom = false, hide = false, readonly = false} = {label, placeholder, type, arrow, borderRadiusTop, borderRadiusBottom, hide, readonly})
   div.input()
-    span(class='input__description', class=`input__description_${hide}` || false)= label
+    span(class=`input__description ${hide ? 'input__description_'+hide : ''}`)= label
     .input__wrapper
-      input.input__content(class=`input__content_with-border-radius-${borderRadiusTop}` || false,
-      class=`input__content_with-border-radius-${borderRadiusBottom}` || false, type= type || 'text',
+      input.input__content(class=`${borderRadiusTop ? 'input__content_with-border-radius-'+borderRadiusTop : ''}`,
+      class=`${borderRadiusBottom ? 'input__content_with-border-radius-'+borderRadiusBottom : ''}`, type= type,
       name='input-content', placeholder= placeholder, readonly= readonly)
-      span(class=`input__icon-${arrow}` || false)
+      span(class=`${arrow ? 'input__icon-'+arrow : ''}`)
