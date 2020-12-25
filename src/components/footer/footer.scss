@@ -48,7 +48,7 @@
   font-size: 14px;
   line-height: 24px;
 
-  color: rgba(31, 32, 65, 0.75);
+  color: $DarkShade75;
 
   margin: 0;
   min-height: 60px;
@@ -112,7 +112,7 @@
   font-size: 14px;
   line-height: 17px;
   
-  color: rgba(31, 32, 65, 0.5);
+  color: $DarkShade50;
 }
 .footer__item:first-child .footer__link {
   font-family: 'Montserrat', Arial, sans-serif;
@@ -123,7 +123,7 @@
   
   text-transform: uppercase; 
   
-  color: #1F2041;
+  color: $DarkShade100;
   margin-bottom: 20px;
 
   @media (min-width: 321px) {
@@ -156,7 +156,7 @@
 
   text-transform: uppercase;
 
-  color: #1F2041;
+  color: $DarkShade100;
 }
 .footer__subscribe-description {
   display: block;
@@ -167,7 +167,7 @@
   font-size: 14px;
   line-height: 24px;
 
-  color: rgba(31, 32, 65, 0.75);
+  color: $DarkShade75;
   text-align: center;
   @media (min-width: 1170px) {
     text-align: start;

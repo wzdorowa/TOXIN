@@ -7,7 +7,7 @@
   font-size: 14px;
   line-height: 20px;
 
-  color: rgba(31, 32, 65, 0.5);
+  color: $DarkShade50;
 }
 .radio-button__filter {
   cursor: pointer;
@@ -17,14 +17,14 @@
 
   width: 20px;
   height: 20px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid $DarkShade25;
   border-radius: 10px;
 }
 .radio-button__description {
   padding-left: 30px;
 }
 .radio-button__filter input[type='radio']:checked + .radio-button__indicator {
-  border: 1px solid #BC9CFF;
+  border: 1px solid $Purple;
 }
 .radio-button__filter input[type='radio']:checked + .radio-button__indicator::before {
   content: '';
@@ -35,7 +35,7 @@
 
   width: 12px;
   height: 12px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
   border-radius: 10px;
 }
 .visually-hidden:not(:focus):not(:active),

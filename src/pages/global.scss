@@ -1,3 +1,4 @@
+@import './variables.scss';
 @import 'src/components/datepicker-with-inputs/datepicker-with-inputs.scss';
 @import 'src/components/social-btn/social-btn.scss';
 @import 'src/components/copyright/copyright.scss';
@@ -27,7 +28,6 @@
 @import 'src/elements/radio-button/radio-button.scss';
 @import 'src/elements/checkbox-button/checkbox-button.scss';
 @import 'src/elements/base-input/base-input.scss';
-@import 'src/pages/variables.scss';
 @import 'src/fonts/fonts.scss';
 @import 'src/pages/sign-in/sign-in.scss';
 @import 'src/pages/registration/registration.scss';
@@ -38,7 +38,7 @@
 
 html {
   background-color:#FFFFFF;
-  color: #1F2041;
+  color: $DarkShade100;
   font-size: 14px;
   font-family: 'Montserrat', Arial, sans-serif;
 }

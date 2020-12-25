@@ -51,7 +51,7 @@
 
   text-transform: initial;
 
-  color: rgba(33, 37, 138, 0.5);
+  color: $Purple 0.5%;
 }
 .header__navigation-icon{
   position: relative;
@@ -79,7 +79,7 @@
 
   text-transform: initial;
 
-  color: rgba(33, 37, 138, 0.5);
+  color: $Purple;
 }
 .header__navigation {
   display: flex;
@@ -158,7 +158,7 @@
   line-height: 15px;
   text-transform: uppercase;
 
-  color: rgba(31, 32, 65, 0.5);
+  color: $DarkShade50;
 
   margin: 0;
   padding: 0px;

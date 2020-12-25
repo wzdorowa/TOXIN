@@ -4,7 +4,7 @@
 }
 .search-room__header {
   background-color: white;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  box-shadow: 0px 10px 20px $DarkShade05;
   
   min-width: 320px;
   min-height: 70px;
@@ -80,7 +80,7 @@
   font-size: 17px;
   line-height: 17px;
 
-  color: #1F2041;
+  color: $DarkShade100;
   margin: 0;
   padding-right: 30px;
   padding-bottom: 15px;
@@ -145,7 +145,7 @@
   font-size: 12px;
   line-height: 14px;
 
-  color: rgba(31, 32, 65, 0.5);
+  color: $DarkShade50;
 }
 .search-room__filter-checkbox-buttons {
   display: flex;
@@ -165,7 +165,7 @@
   line-height: 11px;
   text-transform: uppercase;
 
-  color: #1F2041;
+  color: $DarkShade100;
   margin-bottom: 18px;
 }
 .search-room__filter-checkbox-buttons-group {
@@ -192,7 +192,7 @@
 
   text-transform: uppercase;
 
-  color: #1F2041;
+  color: $DarkShade100;
 
   margin-bottom: 5px;
 }
@@ -231,7 +231,7 @@
   font-size: 20px;
   line-height: 20px;
 
-  color: #1F2041;
+  color: $DarkShade100;
   margin: 0;
   margin-top: 5px;
 
@@ -284,8 +284,8 @@
 }
 .search-room__footer {
   background-color: white;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  border-top: 1px solid rgba(31, 32, 65, 0.25);
+  box-shadow: 0px 10px 20px $DarkShade05;
+  border-top: 1px solid $DarkShade25;
   padding-top: 30px;
   margin-top: 65px;
   @media (min-width: 1160px) {

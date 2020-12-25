@@ -1,6 +1,6 @@
 .like-button {
   position: relative;
-  color: rgba(31, 32, 65, 0.5);
+  color: $DarkShade50;
 }
 .like-button__filter {
   position: relative;
@@ -12,7 +12,7 @@
 
   width: 100%;
   height: 100%;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid $DarkShade25;
   border-radius: 10px;
 }
 .like-button__description {
@@ -29,7 +29,7 @@
   padding-left: 50%;
 }
 .like-button__filter input[type='checkbox']:checked + .like-button__indicator {
-  border: 1px solid #BC9CFF;
+  border: 1px solid $Purple;
 }
 .like-button__filter input[type='checkbox']:checked ~ .like-button__description {
   color:#BC9CFF;
@@ -46,7 +46,7 @@
   font-weight: normal;
   font-size: 10px;
   line-height: 20px;
-  color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
 }
 .like-button input[type='checkbox']:not(:checked) ~ .like-button__description::before {
   content: 'favorite_border';
@@ -60,7 +60,7 @@
   font-weight: normal;
   font-size: 10px;
   line-height: 20px;
-  color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
 }
 .visually-hidden:not(:focus):not(:active),
 input[type='checkbox'].visually-hidden,

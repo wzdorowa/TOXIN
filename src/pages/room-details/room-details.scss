@@ -3,7 +3,7 @@
 }
 .room-details__header {
   background-color: white;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  box-shadow: 0px 10px 20px $DarkShade05;
   
   min-width: 320px;
   min-height: 70px;
@@ -51,7 +51,7 @@
   flex-direction: column;
   justify-content: flex-start;
 
-  background: rgba(128, 128, 128, 0.8);
+  background: $Purple25;
 }
 .room-details__slider-image-1 {
   height: auto;
@@ -189,7 +189,7 @@
   font-size: 19px;
   line-height: 24px;
 
-  color: #1F2041;
+  color: $DarkShade100;
 
   margin: 0;
   letter-spacing: -0.6px;
@@ -203,7 +203,7 @@
 }
 .room-details__advantage-item {
   height: 68px;
-  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  border-bottom: 1px solid $DarkShade10;
 }
 .room-details__advantage-item:last-of-type {
   border: none;
@@ -215,7 +215,7 @@
   font-size: 19px;
   line-height: 24px;
 
-  color: #1F2041;
+  color: $DarkShade100;
 
   margin: 0;
   letter-spacing: -0.3px
@@ -227,7 +227,7 @@
   font-size: 19px;
   line-height: 24px;
 
-  color: #1F2041;
+  color: $DarkShade100;
 
   margin: 0;
 }
@@ -283,7 +283,7 @@
   display: flex;
   align-items: center;
 
-  color: rgba(31, 32, 65, 0.5);
+  color: $DarkShade50;
 }
 .room-details__extra-info {
   display: flex;
@@ -316,7 +316,7 @@
   font-size: 19px;
   line-height: 24px;
 
-  color: #1F2041;
+  color: $DarkShade100;
 
   margin: 0;
   padding-left: 20px;
@@ -346,7 +346,7 @@
   font-size: 14px;
   line-height: 24px;
 
-  color: rgba(31, 32, 65, 0.75);
+  color: $DarkShade75;
 
   margin: 0;
 }
@@ -354,5 +354,5 @@
   padding-top: 60px;
   padding-bottom: 60px;
   margin-top: 70px;
-  border-top: 1px solid rgba(31, 32, 65, 0.25);
+  border-top: 1px solid $DarkShade25;
 }

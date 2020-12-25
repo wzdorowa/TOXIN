@@ -16,7 +16,7 @@
   font-size: 14px;
   line-height: 17px;
 
-  color: #1F2041;
+  color: $DarkShade100;
 }
 .room-cost-form__cost-per-day {
   padding-right: 3px;
@@ -26,7 +26,7 @@
   font-size: 14px;
   line-height: 34px;
 
-  color: rgba(31, 32, 65, 0.5);
+  color: $DarkShade50;
 }
 .room-cost-form__inputs-with-datepicker {
   display: flex;
@@ -42,9 +42,9 @@
   height: 369px;
 
   background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid $DarkShade25;
   box-sizing: border-box;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  box-shadow: 0px 10px 20px $DarkShade05;
   border-radius: 4px;
 
   padding: 10px;
@@ -80,7 +80,7 @@
   font-size: 14px;
   line-height: 21px;
 
-  color: rgba(31, 32, 65, 0.75);
+  color: $DarkShade75;
 }
 .room-cost-form__calculation-item-content_first {
   width: 115px;
@@ -118,12 +118,12 @@
   font-size: 19px;
   line-height: 24px;
 
-  color: #1F2041;
+  color: $DarkShade100;
 }
 .room-cost-form__total-item_with-border {
   width: 120px;
   height: 18px;
-  border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
+  border-bottom: 1px dotted $DarkShade25;
   @media(min-width: 380px) {
     width: 180px;
   }
@@ -135,7 +135,7 @@
   font-size: 19px;
   line-height: 24px;
 
-  color: #1F2041;
+  color: $DarkShade100;
 }
 .room-cost-form__armor-button {
   width: 100%;

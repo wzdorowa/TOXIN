@@ -10,7 +10,7 @@
   line-height: 30px;
 
   text-transform: uppercase;
-  color: #1F2041;
+  color: $DarkShade100;
 }
 .dropdown-row__amount-counter {
   display: flex;
@@ -35,9 +35,9 @@
   line-height: 30px;
   text-align: center;
 
-  color: rgba(31, 32, 65, 0.5);
+  color: $DarkShade50;
 
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid $DarkShade25;
   box-sizing: border-box;
   border-radius: 30px;
   cursor: pointer;

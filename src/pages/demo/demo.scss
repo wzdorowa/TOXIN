@@ -31,7 +31,7 @@
 .columns-content-wrapper {
   position: relative;
   width: 100%;
-  background-color: rgba(31, 32, 65, 0.05);
+  background-color: $DarkShade05;
 }
 .columns__item {
   display: flex;
@@ -81,9 +81,9 @@
   display: none;
 
   background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid $DarkShade25;
   box-sizing: border-box;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  box-shadow: 0px 10px 20px $DarkShade05;
   border-radius: 4px;
   padding: 10px;
   padding-top: 10px;
@@ -110,7 +110,7 @@
 
   text-transform: uppercase;
 
-  color: #1F2041;
+  color: $DarkShade100;
 
   margin: 0;
 }
@@ -221,7 +221,7 @@
 .elements__advantages-item {
   width: 291px;
   height: 68px;
-  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  border-bottom: 1px solid $DarkShade10;
 }
 .columns-content__search-room {
   width: 300px;
@@ -370,7 +370,7 @@
 }
 .demo-header {
   background-color: white;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  box-shadow: 0px 10px 20px $DarkShade05;
   
   min-width: 320px;
   min-height: 70px;
@@ -402,8 +402,8 @@
 }
 .demo-footer {
   background-color: white;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  border-top: 1px solid rgba(31, 32, 65, 0.25);
+  box-shadow: 0px 10px 20px $DarkShade05;
+  border-top: 1px solid $DarkShade25;
   padding-top: 30px;
   margin-top: 65px;
   @media (min-width: 1160px) {

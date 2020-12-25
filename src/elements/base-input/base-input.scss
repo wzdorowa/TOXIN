@@ -46,7 +46,7 @@
 
   text-transform: initial;
 
-  color: rgba(31, 32, 65, 0.5);
+  color: $DarkShade50;
   cursor: pointer;
 }
 .input__icon-arrow::before {
@@ -69,7 +69,7 @@
 
   text-transform: initial;
 
-  color: #BC9CFF;
+  color: $Purple;
   cursor: pointer;
 }
 .input__content {
@@ -77,7 +77,7 @@
   width: 100%;
 
   background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid $DarkShade25;
   box-sizing: border-box;
 
   font-family: 'Montserrat', Arial, sans-serif;
@@ -86,7 +86,7 @@
   font-size: 14px;
   line-height: 15px;
 
-  color: rgba(31, 32, 65, 0.25);
+  color: $DarkShade25;
 
   padding-left: 12px;
   padding-right: 40px;
@@ -101,9 +101,9 @@
 }
 .input__content:hover,
 .input__content:focus {
-  border: 1px solid rgba(31, 32, 65, 0.5);
+  border: 1px solid $DarkShade50;
 
   line-height: 24px;
 
-  color: rgba(31, 32, 65, 0.75);
+  color: $DarkShade75;
 }

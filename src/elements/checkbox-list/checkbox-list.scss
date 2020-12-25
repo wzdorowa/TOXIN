@@ -13,7 +13,7 @@
 
   text-transform: uppercase;
 
-  color: #1F2041;
+  color: $DarkShade100;
 }
 .checkbox-list__description {
   cursor: pointer;
@@ -41,7 +41,7 @@
 
   text-transform: initial;
 
-  color: rgba(31, 32, 65, 0.5);
+  color: $DarkShade50;
 }
 .opened.checkbox-list__indicator::before {
   transform: rotate(180deg);
