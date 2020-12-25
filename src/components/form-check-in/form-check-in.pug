@@ -1,7 +1,7 @@
 include ../../elements/radio-button/radio-button.pug
 include ../../elements/toggle/toggle.pug
 
-mixin check-in({text} = {})
+mixin check-in({text = 'Form name'} = {text})
   .check-in
     span.check-in__title= text
     .check-in__user-data
@@ -19,8 +19,8 @@ mixin check-in({text} = {})
             hide: 'hidden',
           })
       .check-in__buttons
-        +radio-button({text: 'Мужчина', checked: 'checked'})
-        +radio-button({text: 'Женщина'})
+        +radio-button({text: 'Мужчина', checked: 'checked', name: 'gender'})
+        +radio-button({text: 'Женщина', name: 'gender'})
     .check-in__input
       .check-in__input-container.check-in__input-container_for-masked-field
         +base-input({

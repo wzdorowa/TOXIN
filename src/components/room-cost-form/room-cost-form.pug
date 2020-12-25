@@ -3,7 +3,7 @@ include ../../components/dropdown/dropdown.pug
 include ../../elements/numerical-group/numerical-group.pug
 include ../../elements/dropdown-row/dropdown-row.pug
 
-mixin room-cost-form({number, text, cost, dateFormat} = {})
+mixin room-cost-form({number = '100', text = 'text', cost = '1000', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']} = {number, text, cost, dateFormat})
     .room-cost-form
       .room-cost-form__identification-room
           .room-cost-form__specification-room
