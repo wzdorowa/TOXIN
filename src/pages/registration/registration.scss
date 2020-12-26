@@ -1,8 +1,43 @@
+.registration {
+  background-image: url('../../src/pages/registration/images/image4.1.png');
+  background-repeat: no-repeat;
+
+  @media (width: 280px) {
+    min-height: 1730px;
+  }
+  @media (width: 320px) {
+    min-height: 1680px;
+  }
+  @media (width: 360px) {
+    min-height: 1700px;
+  }
+  @media (width: 375px) {
+    min-height: 1880px;
+  }
+  @media (width: 411px) {
+    min-height: 1885px;
+  }
+  @media (width: 414px) {
+    min-height: 1800px;
+  }
+  @media (width: 540px) {
+    min-height: 1695px;
+  }
+  @media (width: 768px) {
+    min-height: 1910px;
+  }
+  @media (width: 1024px) {
+    min-height: 2250px;
+  }
+  @media (width: 1366px) {
+    min-height: 2220px;
+  }
+}
 .registration__header {
   background-color: white;
   box-shadow: 0px 10px 20px $DarkShade05;
   
-  min-width: 320px;
+  min-width: 280px;
   min-height: 70px;
 
   margin-left: auto;
@@ -19,7 +54,8 @@
   margin-left: auto;
   margin-right: auto;
 
-  min-width: 300px;
+  min-width: 280px;
+  height: 70px;
   @media (min-width: 720px) {
     min-width: 720px;
   }
@@ -30,7 +66,7 @@
   }
 }
 .registration__container {
-  min-width: 320px;
+  min-width: 280px;
   max-width: 1440px;
   min-height: 670px;
 
@@ -47,7 +83,7 @@
   display: flex;
   justify-content: center;
 
-  width: 300px;
+  width: 280px;
   height: 643px;
   padding-left: 29px;
   padding-right: 29px;
@@ -64,11 +100,19 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   
+  @media(min-width: 300px) {
+    width: 300px;
+  }
   @media(min-width: 400px) {
     width: 380px;
   }
 }
 .registration__footer {
   margin-top: 60px;
-  padding-bottom: 60px;
+  @media(min-width: 768px) {
+    padding-bottom: 30px;
+  }
+  @media(min-width: 1160px) {
+    padding-bottom: 60px;
+  }
 }

@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 .header__grouping {
   display: flex;
@@ -51,7 +52,7 @@
 
   text-transform: initial;
 
-  color: $Purple 0.5%;
+  color: $Purple;
 }
 .header__navigation-icon{
   position: relative;
