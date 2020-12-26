@@ -1,3 +1,6 @@
+.datepicker-group {
+  position: relative;
+}
 .datepicker-group__inputs {
   display: flex;
   justify-content: space-between;
@@ -14,6 +17,8 @@
 .datepicker-group__datepicker {
   width: 100%;
   display: none;
+  position: absolute;
+  z-index: 3;
 
   background: #FFFFFF;
   border: 1px solid $DarkShade25;
