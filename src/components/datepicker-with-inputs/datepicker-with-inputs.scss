@@ -12,7 +12,10 @@
   width: 265px;
 }
 .datepicker-group__input_small-width {
-  width: 150px;
+  width: 130px;
+  @media(min-width: 480px) {
+    width: 150px;
+  }
 }
 .datepicker-group__datepicker {
   width: 100%;
