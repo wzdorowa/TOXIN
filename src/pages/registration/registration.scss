@@ -3,31 +3,31 @@
   background-repeat: no-repeat;
 
   @media (width: 280px) {
-    min-height: 1730px;
+    min-height: 1790px;
   }
   @media (width: 320px) {
-    min-height: 1680px;
+    min-height: 1690px;
   }
   @media (width: 360px) {
-    min-height: 1700px;
+    min-height: 1760px;
   }
   @media (width: 375px) {
-    min-height: 1880px;
+    min-height: 1940px;
   }
   @media (width: 411px) {
-    min-height: 1885px;
+    min-height: 1950px;
   }
   @media (width: 414px) {
-    min-height: 1800px;
+    min-height: 1860px;
   }
   @media (width: 540px) {
-    min-height: 1695px;
+    min-height: 1750px;
   }
   @media (width: 768px) {
-    min-height: 1910px;
+    min-height: 1970px;
   }
   @media (width: 1024px) {
-    min-height: 2250px;
+    min-height: 2300px;
   }
   @media (width: 1366px) {
     min-height: 2220px;
@@ -53,11 +53,12 @@
 .registration__header-container {
   margin-left: auto;
   margin-right: auto;
+  padding-top: 15px;
 
   min-width: 280px;
-  height: 70px;
   @media (min-width: 720px) {
     min-width: 720px;
+    padding-top: 0;
   }
   @media (min-width: 1160px) {
     max-width: 1160px;
