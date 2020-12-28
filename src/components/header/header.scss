@@ -152,11 +152,8 @@
   text-align: center;
   text-decoration: none;
 
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
+  font-family: 'Montserrat Regular', Arial, sans-serif;
   font-size: 12.8px;
-  line-height: 15px;
   text-transform: uppercase;
 
   color: $DarkShade50;
@@ -164,8 +161,7 @@
   margin: 0;
   padding: 0px;
   @media (min-width: 610px) {
-    font-size: 12.8px;
-    line-height: 15px;
+    font-size: 14px;
     text-transform: none;
   }
 }
