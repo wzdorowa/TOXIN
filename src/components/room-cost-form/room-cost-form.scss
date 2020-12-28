@@ -1,6 +1,8 @@
 .room-cost-form {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .room-cost-form__identification-room {
   display: flex;
@@ -77,10 +79,13 @@
   font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 21px;
 
   color: $DarkShade75;
+  @media(min-width: 320px) {
+    font-size: 14px;
+  }
 }
 .room-cost-form__calculation-item-content_first {
   width: 115px;
@@ -94,7 +99,10 @@
   width: 220px;
 }
 .room-cost-form__calculation-item-content {
-  max-width: 215px;
+  max-width: 200px;
+  @media(min-width: 320px) {
+    max-width: 215px;
+  }
   @media(min-width: 380px) {
     max-width: 215px;
   }

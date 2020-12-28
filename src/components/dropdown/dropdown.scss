@@ -5,6 +5,8 @@
   position: relative;
 }
 .dropdown__content {
+  position: absolute;
+  z-index: 1;
   display: none;
   flex-direction: column;
   justify-content: space-between;

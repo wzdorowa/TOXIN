@@ -62,7 +62,7 @@
   width: 18px;
   height: 18px;
   top: 0px;
-  right: -15px;
+  right: -25px;
   border: 1px solid $DarkShade25;
   border-radius: 10px;
 
@@ -75,9 +75,6 @@
   text-align: center;
 
   color: $DarkShade25;
-  @media(min-width: 380px) {
-    right: -25px;
-  }
 }
 .numerical-group__description-sign_hidden {
   display: none;
