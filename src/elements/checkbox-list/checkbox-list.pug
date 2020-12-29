@@ -3,6 +3,6 @@ mixin checkbox-list({text = 'Text'} = {text})
     .checkbox-list__title
       span.checkbox-list__description= text
       span.checkbox-list__indicator
-    .checkbox-list__toggle
+    .checkbox-list__container(class='checkbox-list__container_hidden')
       .checkbox-list__content
         block

@@ -46,7 +46,7 @@
 .opened.checkbox-list__indicator::before {
   transform: rotate(180deg);
 }
-.checkbox-list__toggle {
+.checkbox-list__container_hidden {
   display: none;
 }
 .checkbox-list__content {
