@@ -105,3 +105,32 @@
 
   color: $DarkShade75;
 }
+.input__content::placeholder {
+  font-family: 'Montserrat Regular', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: $DarkShade25;
+}
+.input__content_for-dropdown {
+  font-family: 'Montserrat Regular', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: $DarkShade75;
+}
+.input__content_for-dropdown:hover,
+.input__content_for-dropdown:focus {
+  font-family: 'Montserrat Regular', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: $DarkShade75;
+}
+.input__content_for-dropdown::placeholder {
+  font-family: 'Montserrat Regular', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: $DarkShade75;
+}

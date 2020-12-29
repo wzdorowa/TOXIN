@@ -10,6 +10,7 @@ mixin dropdown({label, placeholder = 'Выберите нужное количе
         borderRadiusTop: 'top',
         hide: hide,
         readonly: readonly,
+        forDropdown: true,
       })
     .dropdown__content
       .dropdown__rows(class=`${dropdownFor ? 'dropdown__rows_for-count-'+dropdownFor : ''}`)
