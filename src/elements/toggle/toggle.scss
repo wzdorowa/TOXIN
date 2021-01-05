@@ -1,7 +1,7 @@
 .toggle {
   position: relative;
 
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Montserrat Regular', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -10,44 +10,50 @@
 
   color: $DarkShade75;
   cursor: pointer;
-}
-.toggle__indicator {
-  position: absolute;
 
-  width: 40px;
-  height: 20px;
-  border: 1px solid $DarkShade25;
-  border-radius: 10px;
-}
-.toggle__description {
-  padding-left: 50px;
-}
-.toggle input[type='checkbox']:checked + .toggle__indicator {
-  border: 1px solid $Purple;
-}
-.toggle input[type='checkbox']:checked + .toggle__indicator::before {
-  content: '';
+  &__indicator {
+    position: absolute;
+  
+    width: 40px;
+    height: 20px;
+    border: 1px solid $DarkShade25;
+    border-radius: 10px;
+  }
+  &__description {
+    padding-left: 50px;
+  }
+  & input[type='checkbox']:checked {
+    & + .toggle__indicator {
+      border: 1px solid $Purple;
 
-  position: absolute;
-  top: 3px;
-  left: 21px;
-
-  width: 12px;
-  height: 12px;
-  background: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
-  border-radius: 10px;
-}
-.toggle input[type='checkbox']:not(:checked) + .toggle__indicator::before {
-  content: '';
-
-  position: absolute;
-  top: 3px;
-  left: 3px;
-
-  width: 12px;
-  height: 12px;
-  background: $DarkShade25;
-  border-radius: 10px;
+      &::before {
+        content: '';
+      
+        position: absolute;
+        top: 3px;
+        left: 21px;
+      
+        width: 12px;
+        height: 12px;
+        background: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
+        border-radius: 10px;
+      }
+    }
+  }
+  & input[type='checkbox']:not(:checked) {
+    & + .toggle__indicator::before {
+      content: '';
+    
+      position: absolute;
+      top: 3px;
+      left: 3px;
+    
+      width: 12px;
+      height: 12px;
+      background: $DarkShade25;
+      border-radius: 10px;
+    }
+  }
 }
 .visually-hidden:not(:focus):not(:active),
 input[type='checkbox'].visually-hidden,

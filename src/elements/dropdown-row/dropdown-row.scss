@@ -11,34 +11,36 @@
 
   text-transform: uppercase;
   color: $DarkShade100;
-}
-.dropdown-row__amount-counter {
-  display: flex;
-  justify-content: space-between;
 
-  width: 90px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.dropdown-row__amount {
-  width: 30px;
-  height: 30px;
+  &__amount {
+    width: 30px;
+    height: 30px;
+  
+    text-align: center;
 
-  text-align: center;
-}
-.dropdown-row__amount_with-sign {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: center;
-
-  color: $DarkShade50;
-
-  border: 1px solid $DarkShade25;
-  box-sizing: border-box;
-  border-radius: 30px;
-  cursor: pointer;
+    &-counter {
+      display: flex;
+      justify-content: space-between;
+    
+      width: 90px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    &_with-sign {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+    
+      color: $DarkShade50;
+    
+      border: 1px solid $DarkShade25;
+      box-sizing: border-box;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  }
 }

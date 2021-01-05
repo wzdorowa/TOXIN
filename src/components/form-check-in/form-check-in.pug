@@ -19,8 +19,8 @@ mixin check-in({text = 'Form name'} = {text})
             hide: 'hidden',
           })
       .check-in__buttons
-        +radio-button({text: 'Мужчина', checked: 'checked', name: 'gender'})
-        +radio-button({text: 'Женщина', name: 'gender'})
+        +radio-button({text: 'Мужчина', checked: 'checked', name: 'gender-for-check-in'})
+        +radio-button({text: 'Женщина', name: 'gender-for-check-in'})
     .check-in__input
       .check-in__input-container.check-in__input-container_for-masked-field
         +base-input({

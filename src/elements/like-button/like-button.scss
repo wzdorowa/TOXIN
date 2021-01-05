@@ -1,81 +1,72 @@
 .like-button {
   position: relative;
   color: $DarkShade50;
-}
-.like-button__filter {
-  position: relative;
-  display: flex;
-  cursor: pointer;
-}
-.like-button__indicator {
-  position: absolute;
 
-  width: 100%;
-  height: 100%;
-  border: 1px solid $DarkShade25;
-  border-radius: 10px;
-}
-.like-button__description {
-  position: relative;
+  &__filter {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+  }
+  &__indicator {
+    position: absolute;
+  
+    width: 100%;
+    height: 100%;
+    border: 1px solid $DarkShade25;
+    border-radius: 10px;
+  }
+  &__description {
+    position: relative;
+  
+    display: flex;
+  
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    line-height: 20px;
+  
+    padding-left: 50%;
+  }
+  &__filter {
+    & input[type='checkbox']:checked {
+      & + .like-button__indicator {
+        border: 1px solid $Purple;
+      }
+      & ~ .like-button__description {
+        color:#BC9CFF;
 
-  display: flex;
-
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 9px;
-  line-height: 20px;
-
-  padding-left: 50%;
-}
-.like-button__filter input[type='checkbox']:checked + .like-button__indicator {
-  border: 1px solid $Purple;
-}
-.like-button__filter input[type='checkbox']:checked ~ .like-button__description {
-  color:#BC9CFF;
-}
-.like-button__filter input[type='checkbox']:checked ~ .like-button__description::before {
-  content: 'favorite';
-
-  position: absolute;
-  top: 0;
-  left: 5px;
-
-  font-family: 'Material Icons', Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 10px;
-  line-height: 20px;
-  color: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
-}
-.like-button input[type='checkbox']:not(:checked) ~ .like-button__description::before {
-  content: 'favorite_border';
-
-  position: absolute;
-  top: 0;
-  left: 5px;
-
-  font-family: 'Material Icons', Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 10px;
-  line-height: 20px;
-  color: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
-}
-.visually-hidden:not(:focus):not(:active),
-input[type='checkbox'].visually-hidden,
-input[type='radio'].visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden; 
+        &::before {
+          content: 'favorite';
+        
+          position: absolute;
+          top: 0;
+          left: 5px;
+        
+          font-family: 'Material Icons', Arial, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 10px;
+          line-height: 20px;
+          color: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
+        }
+      }
+    }
+    & input[type='checkbox']:not(:checked) {
+      & ~ .like-button__description::before {
+        content: 'favorite_border';
+      
+        position: absolute;
+        top: 0;
+        left: 5px;
+      
+        font-family: 'Material Icons', Arial, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 20px;
+        color: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
+      }
+    }
+  }
 }

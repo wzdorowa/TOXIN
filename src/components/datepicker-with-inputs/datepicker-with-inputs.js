@@ -5,6 +5,23 @@ elements.forEach((element, index) => {
   const elementsInput = element.querySelectorAll('.input__content');
   const dropdownsArrow = element.querySelectorAll('.input__icon-arrow-down');
 
+  document.addEventListener('click', event => {
+    const hide = () => {
+      if (
+        datepicker[index].classList.contains(
+          'datepicker-group__datepicker_visible',
+        )
+      ) {
+        datepicker[index].classList.remove(
+          'datepicker-group__datepicker_visible',
+        );
+      }
+    };
+    console.log('event.target', event.target);
+    if (!element.contains(event.target)) {
+      hide();
+    }
+  });
   dropdownsArrow.forEach(dropdownArrow => {
     const addOrRemoveClass = () => {
       if (

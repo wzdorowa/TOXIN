@@ -1,60 +1,59 @@
 .checkbox-list {
   position: relative;
-}
-.checkbox-list__title {
-  position: relative;
-  display: flex;
 
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 44px;
-
-  text-transform: uppercase;
-
-  color: $DarkShade100;
-}
-.checkbox-list__description {
-  cursor: pointer;
-}
-.checkbox-list__indicator {
-  position: relative;
-  width: 44px;
-  height: 44px;
-  margin-right: 0;
-  margin-left: auto;
-}
-.checkbox-list__indicator::before {
-  position: absolute;
-
-  content: 'keyboard_arrow_down';
-
-  top: 12px;
-  left: 12px;
-
-  font-family: 'Material Icons', Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 22px;
-
-  text-transform: initial;
-
-  color: $DarkShade50;
-}
-.opened.checkbox-list__indicator::before {
-  transform: rotate(180deg);
-}
-.checkbox-list__container_hidden {
-  display: none;
-}
-.checkbox-list__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  &__title {
+    position: relative;
+    display: flex;
   
-  min-height: 235px;
-  margin-top: 5px;
-  background-color: white;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 44px;
+  
+    text-transform: uppercase;
+  
+    color: $DarkShade100;
+  }
+  &__description {
+    cursor: pointer;
+  }
+  &__indicator {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    margin-right: 0;
+    margin-left: auto;
+
+    &::before {
+      position: absolute;
+    
+      content: 'keyboard_arrow_down';
+    
+      top: 12px;
+      left: 12px;
+    
+      font-family: 'Material Icons', Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 22px;
+    
+      text-transform: initial;
+    
+      color: $DarkShade50;
+    }
+  }
+  &__container_hidden {
+    display: none;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    min-height: 235px;
+    margin-top: 5px;
+    background-color: white;
+  }
 }

@@ -1,4 +1,6 @@
-const maskedContainer = document.querySelectorAll('.inputs__item-masked-field');
+const maskedContainer = document.querySelectorAll(
+  '.components__inputs-item-masked-field',
+);
 
 maskedContainer.forEach(element => {
   const maskedForDate = element.querySelector('.input__content');

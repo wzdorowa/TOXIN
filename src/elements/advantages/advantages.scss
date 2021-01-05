@@ -2,94 +2,96 @@
   position: relative;
   display: flex;
   justify-content: flex-start;
-}
-.advantages__icon {
-  width: 44px;
-  height: 44px;
-}
-.advantages__icon_with-sign-mood::before {
-  content: 'mood';
 
-  position: absolute;
+  &__icon {
+    width: 44px;
+    height: 44px;
 
-  font-family: 'Material Icons', Arial, sans-serif;
-  font-size: 44px;
-  color: $Purple;
-}
-.advantages__icon_with-sign-locationCity::before {
-  content: 'location_city';
-
-  position: absolute;
-
-  font-family: 'Material Icons', Arial, sans-serif;
-  font-size: 44px;
-  color: $Purple;
-}
-.advantages__icon_with-sign-whatshot::before {
-  content: 'whatshot';
-
-  position: absolute;
-
-  font-family: 'Material Icons', Arial, sans-serif;
-  font-size: 44px;
-  color: $Purple;
-}
-.advantages__icon_with-sign-userIcon::before {
-  content: '';
-
-  position: absolute;
-  top: -10px;
-  left: -20px;
-
-  width: 90px;
-  height: 90px;
-  background-image: url(../elements/advantages/images/userIcon.png);
-  background-size: 90px;
-}
-.advantages__icon_with-sign-Murad::before {
-  content: '';
-
-  position: absolute;
-  top: -10px;
-  left: -20px;
-
-  width: 90px;
-  height: 90px;
-  background-image: url(../elements/advantages/images/Murad.png);
-  background-size: 90px;
-}
-.advantages__icon_with-sign-Patriziya::before {
-  content: '';
-
-  position: absolute;
-  top: -10px;
-  left: -20px;
-
-  width: 90px;
-  height: 90px;
-  background-image: url(../elements/advantages/images/Patriziya.png);
-  background-size: 90px;
-}
-.advantages__content {
-  padding-left: 15px;
-}
-.advantages__title {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-
-  color: $DarkShade75;
-
-  margin: 0;
-}
-.advantages__value {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-
-  color: $DarkShade75;
+    &_with-sign-mood::before {
+      content: 'mood';
+    
+      position: absolute;
+    
+      font-family: 'Material Icons', Arial, sans-serif;
+      font-size: 44px;
+      color: $Purple;
+    }
+    &_with-sign-locationCity::before {
+      content: 'location_city';
+    
+      position: absolute;
+    
+      font-family: 'Material Icons', Arial, sans-serif;
+      font-size: 44px;
+      color: $Purple;
+    }
+    &_with-sign-whatshot::before {
+      content: 'whatshot';
+    
+      position: absolute;
+    
+      font-family: 'Material Icons', Arial, sans-serif;
+      font-size: 44px;
+      color: $Purple;
+    }
+    &_with-sign-userIcon::before {
+      content: '';
+    
+      position: absolute;
+      top: -10px;
+      left: -20px;
+    
+      width: 90px;
+      height: 90px;
+      background-image: url(../elements/advantages/images/userIcon.png);
+      background-size: 90px;
+    }
+    &_with-sign-Murad::before {
+      content: '';
+    
+      position: absolute;
+      top: -10px;
+      left: -20px;
+    
+      width: 90px;
+      height: 90px;
+      background-image: url(../elements/advantages/images/Murad.png);
+      background-size: 90px;
+    }
+    &_with-sign-Patriziya::before {
+      content: '';
+    
+      position: absolute;
+      top: -10px;
+      left: -20px;
+    
+      width: 90px;
+      height: 90px;
+      background-image: url(../elements/advantages/images/Patriziya.png);
+      background-size: 90px;
+    }
+  }
+  &__content {
+    padding-left: 15px;
+  }
+  &__title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+  
+    color: $DarkShade75;
+  
+    margin: 0;
+  }
+  &__value {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+  
+    color: $DarkShade75;
+  }
 }
