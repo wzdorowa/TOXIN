@@ -10,7 +10,7 @@
     height: 152px;
 
     &:hover {
-      &.number-card__prev {
+      & .number-card__prev {
         &::after {
           position: absolute;
           content: 'keyboard_arrow_left';
@@ -37,7 +37,7 @@
           border-top-left-radius: 4px;
         }
       }
-      &.number-card__next {
+      & .number-card__next {
         &::after {
           position: absolute;
           content: 'keyboard_arrow_right';
