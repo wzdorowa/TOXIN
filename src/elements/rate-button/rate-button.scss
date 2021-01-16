@@ -5,7 +5,6 @@
   position: relative;
   display: flex;
   list-style: none;
-
   width: 120px;
   padding: 0;
   margin: 0;
@@ -17,18 +16,15 @@
 
     &::before {
       content: 'star_border';
-    
       position: absolute;
-    
       font-family: 'Material Icons', Arial, sans-serif;
       font-size: 22px;
       color: $Purple;
     }
+
     &.active::after {
       content: 'star';
-    
       position: absolute;
-    
       font-family: 'Material Icons', Arial, sans-serif;
       font-size: 22px;
       color: $Purple;

@@ -7,7 +7,6 @@
     justify-content: space-between;
     align-items: center;
     min-width: 280px;
-  
     margin-left: auto;
     margin-right: auto;
     padding-top: 40px;
@@ -24,6 +23,7 @@
       margin-right: auto;
     }
   }
+
   &__logo {
     width: 105px;
 
@@ -35,21 +35,19 @@
       width: 260px;
       height: 117px;
       margin-bottom: 30px;
-
       @media (min-width: 1170px) {
         align-items: flex-start;
         margin-bottom: 15px;
         margin-right: 40px;
       }
     }
+
     &-description {
       width: 100%;
       font-family: 'Montserrat Regular', Arial, sans-serif;
       font-size: 14px;
       line-height: 24px;
-    
       color: $DarkShade75;
-    
       margin: 0;
       min-height: 60px;
       text-align: center;
@@ -59,13 +57,13 @@
       }
     }
   }
+
   &__information {
     min-width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 15px;
-  
     @media (min-width: 480px) {
       flex-direction: row;
       flex-wrap: wrap;
@@ -81,13 +79,13 @@
       margin-right: auto;
     }
   }
+
   &__list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-  
     padding: 0;
     margin-top: 0;
     margin-bottom: 15px;
@@ -106,22 +104,21 @@
       }
     }
   }
+
   &__item {
     height: 25px;
 
     &:first-child {
+
       .footer__link {
         font-family: 'Montserrat', Arial, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 11px;
         line-height: 15px;
-        
         text-transform: uppercase; 
-        
         color: $DarkShade100;
         margin-bottom: 20px;
-      
         @media (min-width: 720px) {
           font-size: 12px;
           line-height: 15px;
@@ -129,15 +126,15 @@
       }
     }
   }
+
   &__link {
     text-decoration: none;
     font-family: 'Montserrat Regular', Arial, sans-serif;
-  
     font-size: 14px;
     line-height: 17px;
-    
     color: $DarkShade50;
   }
+
   &__subscribe {
     display: flex;
     flex-direction: column;
@@ -155,24 +152,20 @@
 
     &-title {
       display: block;
-    
       font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 12px;
       line-height: 16px;
-    
       text-transform: uppercase;
-    
       color: $DarkShade100;
     }
+
     &-description {
       display: block;
-    
       font-family: 'Montserrat Regular', Arial, sans-serif;
       font-size: 14px;
       line-height: 24px;
-    
       color: $DarkShade75;
       text-align: center;
       @media (min-width: 1170px) {

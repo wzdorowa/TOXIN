@@ -13,13 +13,12 @@
     font-size: 24px;
     line-height: 30px;
     letter-spacing: -0.4px;
-  
     color: $DarkShade100;
   }
+
   &__inputs {
     position: relative;
     width: 100%;
-  
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -30,21 +29,20 @@
       justify-content: space-between;
     }
   }
+
   &__input-container {
     width: 47%;
   }
+
   &__datepicker {
     display: none;
-  
     width: 320px;
     height: 369px;
-  
     background: #FFFFFF;
     border: 1px solid $DarkShade25;
     box-sizing: border-box;
     box-shadow: 0px 10px 20px $DarkShade05;
     border-radius: 4px;
-  
     padding: 10px;
     padding-top: 10px;
     margin-top: 5.5px;
@@ -53,9 +51,11 @@
       display: block;
     }
   }
+
   &__dropdown-container {
     width: 100%;
   }
+
   &__select-button {
     width: 100%;
     height: 44px;

@@ -14,14 +14,13 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    
     color: $DarkShade75;
-  
     padding-left: 16.5px;
 
     &_with-increased-indent {
       padding-left: 21.5px;
     }
+
     &_yellow-pink::before {
       content: '';
       position: absolute;
@@ -32,6 +31,7 @@
       left: 0;
       background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
     }
+
     &_turquoise-blue::before {
       content: '';
       position: absolute;
@@ -40,9 +40,9 @@
       border-radius: 50%;
       top: 25%;
       left: 0;
-      
       background: linear-gradient(180deg, $Green 0%, #66D2EA 100%);
     }
+
     &_light-blue::before {
       content: '';
       position: absolute;
@@ -51,9 +51,9 @@
       border-radius: 50%;
       top: 25%;
       left: 0;
-      
       background: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
     }
+
     &_violet-blue::before {
       content: '';
       position: absolute;
@@ -62,9 +62,9 @@
       border-radius: 50%;
       top: 25%;
       left: 0;
-    
       background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
     }
+
     &_light-gray::before {
       content: '';
       position: absolute;
@@ -73,7 +73,6 @@
       border-radius: 50%;
       top: 25%;
       left: 0;
-    
       background: $DarkShade25;
     }
   }

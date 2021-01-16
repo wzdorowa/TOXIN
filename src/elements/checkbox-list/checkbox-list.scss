@@ -4,20 +4,19 @@
   &__title {
     position: relative;
     display: flex;
-  
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 44px;
-  
     text-transform: uppercase;
-  
     color: $DarkShade100;
   }
+
   &__description {
     cursor: pointer;
   }
+
   &__indicator {
     position: relative;
     width: 44px;
@@ -27,37 +26,35 @@
 
     &::before {
       position: absolute;
-    
       content: 'keyboard_arrow_down';
-    
       top: 12px;
       left: 12px;
-    
       font-family: 'Material Icons', Arial, sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 22px;
       line-height: 22px;
-    
       text-transform: initial;
-    
       color: $DarkShade50;
     }
+
     &:hover {
       cursor: pointer;
     }
+
     &_opened {
       transform: rotate(180deg);
     }
   }
+
   &__container_hidden {
     display: none;
   }
+
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
     min-height: 235px;
     margin-top: 5px;
     background-color: white;

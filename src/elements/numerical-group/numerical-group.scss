@@ -7,6 +7,7 @@
   &__main-group {
     display: inline-block;
   }
+
   &__sign-number {
     padding-right: 5px;
 
@@ -14,16 +15,17 @@
       display: none;
     }
   }
+
   &__number_bold {
     font-family: 'Quicksand', Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 24px;
-  
     color: $DarkShade100;
     padding-right: 6px;
   }
+
   &__sign-rouble {
     line-height: 5px;
     width: 0.4em;
@@ -34,6 +36,7 @@
       display: none;
     }
   }
+
   &__description {
     display: inline-block;
 
@@ -43,22 +46,22 @@
       font-weight: bold;
       font-size: 12px;
       line-height: 33px;
-    
       text-transform: uppercase;
-    
       color: $Purple;
     }
+
     &_normal {
       font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 11px;
       line-height: 30px;
-    
       color: $DarkShade50;
       padding-left: 7px;
     }
+
     &-sign{
+
       &::before {
         position: absolute;
         content: 'i';
@@ -68,17 +71,15 @@
         right: -25px;
         border: 1px solid $DarkShade25;
         border-radius: 10px;
-      
         font-family: 'Montserrat', Arial, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 13px;
         line-height: 18px;
-      
         text-align: center;
-      
         color: $DarkShade25;
       }
+
       &_hidden {
         display: none;
       }

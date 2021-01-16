@@ -5,7 +5,9 @@ checkboxLists.forEach(element => {
   const checkboxListToggle = element.querySelector(
     '.checkbox-list__container_hidden',
   );
-  const checkboxListIndicator = element.querySelector('.checkbox-list__indicator');
+  const checkboxListIndicator = element.querySelector(
+    '.checkbox-list__indicator',
+  );
 
   checkboxListTitle.onclick = () => {
     checkboxListToggle.classList.toggle('checkbox-list__container_hidden');

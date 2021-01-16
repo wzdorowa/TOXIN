@@ -1,27 +1,24 @@
 .dropdown {
   position: relative;
+
   &__list {
     position: relative;
   }
+
   &__content {
     position: absolute;
     z-index: 1;
     display: none;
     flex-direction: column;
     justify-content: space-between;
-  
     background-color: white;
-  
     min-height: 106px;
     max-height: 175px;
-  
     width: 100%;
-  
     padding-top: 6px;
     padding-left: 15px;
     padding-right: 6px;
     padding-bottom: 4px;
-  
     border: 1px solid $DarkShade50;
     box-sizing: border-box;
     border-bottom-left-radius: 4px;
@@ -32,22 +29,24 @@
       display: flex;
     }
   }
+
   &__rows {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 107px;
   }
+
   &__buttons {
     display: flex;
     justify-content: space-between;
     height: 40px;
-  
     padding-top: 12px;
 
     &-container {
       cursor: pointer;
     }
+
     &_hidden {
       display: none;
     }

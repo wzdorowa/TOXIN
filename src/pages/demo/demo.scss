@@ -1,7 +1,6 @@
 .components {
   display: flex;
   justify-content: space-between;
-
   max-width: 1160px;
   margin-left: auto;
   margin-right: auto;
@@ -12,7 +11,6 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-  
     min-width: 320px;
     min-height: 500px;
 
@@ -20,33 +18,34 @@
       width: 265px;
     }
   }
+
   &__elements {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-  
     min-width: 260px;
 
     &_first-column {
       height: 470px;
     }
+
     &_last-column {
       height: 420px;
     }
   }
+
   &__checkbox-buttons {
     display: flex;
     flex-wrap: wrap;
-  
     max-width: 222px;
     height: 130px;
   }
+
   &__radio-buttons {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
     max-width: 220px;
     min-height: 70px;
 
@@ -57,19 +56,19 @@
       height: 70%;
     }
   }
+
   &__toggle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
     max-width: 260px;
     height: 85px;
   }
+
   &__like-button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
     max-width: 90px;
     min-height: 70px;
 
@@ -77,19 +76,19 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    
       height: 70%;
     }
   }
+
   &__like-button-content {
     width: 40px;
     height: 20px;
   }
+
   &__rate-button {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-  
     max-width: 260px;
     height: 55px;
 
@@ -97,59 +96,63 @@
       display: flex;
       justify-content: space-between;
     }
+
     &-group {
       display: flex;
       justify-content: space-between;
-    
       width: 105px;
     }
   }
+
   &__range-slider {
     max-width: 266px;
     height: 45px;
   }
+
   &__base-button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
     height: 240px;
 
     &-content_small {
       width: 100px;
       height: 44px;
     }
+
     &-content_big {
       width: 320px;
       height: 44px;
     }
   }
+
   &__pagination {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
     height: 100px;
   }
+
   &__dropdown {
     width: 265px;
   }
+
   &__rich-checkbox-buttons {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
     width: 266px;
     height: 145px;
   }
+
   &__bullet-list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
     width: 291px;
     height: 147px;
   }
+
   &__advantages {
     display: flex;
     flex-direction: column;
@@ -162,14 +165,15 @@
       border-bottom: 1px solid $DarkShade10;
     }
   }
+
   &__review {
     max-width: 710px;
   }
+
   &-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  
     max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
@@ -180,17 +184,17 @@
       width: 100%;
       background-color: $DarkShade05;
     }
+
     &__item {
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-    
       min-width: 260;
     }
+
     &__search-room {
       width: 300px;
       min-height: 375px;
-    
       padding-top: 40px;
       padding-left: 27px;
       padding-right: 30px;
@@ -198,22 +202,19 @@
       margin-top: 30px;
       margin-left: auto;
       margin-right: auto;
-    
       background-color: white;
-    
       border: 1px solid rgba(0, 0, 0, 0.12);
       box-sizing: border-box;
       box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
       border-radius: 4px;
-    
       @media(min-width: 480px) {
         width: 380px;
       }
     }
+
     &__check-in {
       display: flex;
       justify-content: center;
-    
       width: 300px;
       min-height: 643px;
       padding-left: 29px;
@@ -223,30 +224,25 @@
       margin-top: 27px;
       margin-left: auto;
       margin-right: auto;
-    
       background-color: white;
-    
       border: 1px solid rgba(0, 0, 0, 0.12);
       box-sizing: border-box;
       box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
       border-radius: 4px;
-      
       @media(min-width: 400px) {
         width: 380px;
       }
     }
+
     &__result-search-room {
       width: 96%;
       max-width: 380px;
       min-width: 310px;
-    
       background-color: white;
-    
       border: 1px solid rgba(0, 0, 0, 0.12);
       box-sizing: border-box;
       box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
       border-radius: 4px;
-    
       margin-top: 30px;
       margin-right: 2%;
       margin-left: 2%;
@@ -254,7 +250,6 @@
       padding-left: 7.9%;
       padding-right: 7.9%;
       padding-top: 7.8%;
-      
       order: -1;
       @media(min-width: 400px) {
         margin-left: auto;
@@ -283,6 +278,7 @@
         order: 0;
       }
     }
+
     &__login {
       width: 300px;
       height: 357px;
@@ -293,18 +289,16 @@
       margin-top: 30px;
       margin-left: auto;
       margin-right: auto;
-    
       background-color: white;
-    
       border: 1px solid rgba(0, 0, 0, 0.12);
       box-sizing: border-box;
       box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
       border-radius: 4px;
-    
       @media(min-width: 400px) {
         width: 380px;
       }
     }
+
     &__datepicker {
       width: 320px;
       height: 400px;
@@ -315,34 +309,30 @@
       margin-left: auto;
       margin-right: auto;
       margin-top: 30px;
-    
       background-color: white;
-    
       border: 1px solid rgba(0, 0, 0, 0.12);
       box-sizing: border-box;
       box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
       border-radius: 4px;
-    
       @media(min-width: 400px) {
         width: 380px;
       }
     }
+
     &__number-card {
       width: 270px;
       height: 258px;
       margin-top: 30px;
     }
   }
+
   &-header {
     background-color: white;
     box-shadow: 0px 10px 20px $DarkShade05;
-    
     min-width: 320px;
     min-height: 70px;
-  
     margin-left: auto;
     margin-right: auto;
-  
     @media (min-width: 720px) {
       min-width: 720px;
     }
@@ -354,7 +344,6 @@
       margin-left: auto;
       margin-right: auto;
       margin-top: 30px;
-    
       min-width: 300px;
       @media (min-width: 720px) {
         min-width: 720px;
@@ -366,6 +355,7 @@
       }
     }
   }
+
   &-footer {
     background-color: white;
     box-shadow: 0px 10px 20px $DarkShade05;
@@ -378,16 +368,14 @@
     }
   }
 }
+
 .buttons-title {
   font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-
   text-transform: uppercase;
-
   color: $DarkShade100;
-
   margin: 0;
 }

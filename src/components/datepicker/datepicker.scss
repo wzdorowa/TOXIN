@@ -14,13 +14,11 @@
 .datepicker-inline .datepicker {
   width: 100%;
   height: 90%;
-
   font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
-
   color: $DarkShade50;
   border: none;
 
@@ -30,7 +28,6 @@
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
-
     color: $DarkShade100;
     border: none;
 
@@ -38,53 +35,57 @@
       i {
         color: $DarkShade100;
       }
+
       &:hover {
         background: linear-gradient(180deg, $Purple25 0%, $BlueLilac25 100%);
       }
     }
+
     &-action {
       position: relative;
 
       &:hover {
         background: linear-gradient(180deg, $Purple25 0%, $BlueLilac25 100%);
       }
+
       path {
         display: none;
       }
+
       &[data-action='prev']::before {
         position: absolute;
         content: 'arrow_back';
-      
         font-family: 'Material Icons', Arial, sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 20px;
         line-height: 20px;
-      
         color: $Purple;
       }
+
       &[data-action='next']::before {
         position: absolute;
         content: 'arrow_forward';
-      
         font-family: 'Material Icons', Arial, sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 20px;
         line-height: 20px;
-      
         color: $Purple;
       }
     }
   }
+
   &--content {
     margin-top: 20px;
     margin-left: 7px;
     margin-right: 5px;
   }
+
   &--days-names {
     margin: 0;
   }
+
   &--day-name {
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
@@ -94,19 +95,20 @@
     display: flex;
     align-items: center;
     text-align: center;
-  
     text-transform: none;
-  
     height: 42px;
     color:#BC9CFF;
   }
+
   &--cell {
     height: 38.5px;
+
     &.-current- {
       color: #FFFFFF;
       background: linear-gradient(180deg, $Green 0%, #66D2EA 100%);
       border-radius: 20px;
     }
+
     &.-range-from- {
       border: none;
       background: linear-gradient(180deg, $Purple25 0%, $BlueLilac25 100%); 
@@ -115,14 +117,13 @@
       &::before {
         position: absolute;
         content: '';
-      
         width: 20px;
         height: 38.5px;
-      
         right: 0;
         background: linear-gradient(180deg, $Purple25 0%, $BlueLilac25 100%);
       }
     }
+
     &.-range-to- {
       border: none;
       background: linear-gradient(180deg, $Purple25 0%, $BlueLilac25 100%); 
@@ -131,18 +132,18 @@
       &::before {
         position: absolute;
         content: '';
-      
         width: 20px;
         height: 38.5px;
-      
         left: 0;
         background: linear-gradient(180deg, $Purple25 0%, $BlueLilac25 100%);
       }
     }
+
     &.-focus- {
       background: linear-gradient(180deg, $Purple25 0%, $BlueLilac25 100%); 
       border-radius: 20px;
     }
+
     &.-selected- {
       position: relative;
       background: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
@@ -153,6 +154,7 @@
         border-radius: 20px;
       }
     }
+
     &.-in-range- {
       background: linear-gradient(180deg, $Purple25 0%, $BlueLilac25 100%);
       color: $DarkShade50;

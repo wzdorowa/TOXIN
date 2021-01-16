@@ -32,13 +32,10 @@
   &__header {
     background-color: white;
     box-shadow: 0px 10px 20px $DarkShade05;
-    
     min-width: 280px;
     min-height: 70px;
-  
     margin-left: auto;
     margin-right: auto;
-  
     @media (min-width: 720px) {
       min-width: 720px;
     }
@@ -50,7 +47,6 @@
       margin-left: auto;
       margin-right: auto;
       padding-top: 15px;
-    
       min-width: 280px;
       @media (min-width: 720px) {
         padding-top: 0px;
@@ -63,13 +59,13 @@
       }
     }
   }
+
   &__content {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-  
     min-width: 280px;
     padding-top: 30px;
     margin-left: auto;
@@ -96,10 +92,12 @@
       align-items: flex-start;
     }
   }
+
   &__filter-access {
     @media (min-width: 1024px) {
       display: none;
     }
+
     &-title {
       display: inline-block;
       position: relative;
@@ -108,7 +106,6 @@
       font-weight: bold;
       font-size: 15px;
       line-height: 17px;
-    
       color: $DarkShade100;
       margin: 0;
       padding-right: 30px;
@@ -116,10 +113,10 @@
       @media(min-width: 320px){
         font-size: 17px;
       }
+
       &::before {
         position: absolute;
         content: 'filter_list';
-      
         font-family: 'Material Icons', Arial, sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -131,12 +128,12 @@
       }
     }
   }
+
   &__filter {
     display: flex;
     display: none;
     flex-direction: column;
     justify-content: space-between;
-  
     min-width: 265px;
     @media (min-width: 650px) {
       min-width: 570px;
@@ -152,6 +149,7 @@
       flex-wrap: nowrap;
       margin-left: 4px;
     }
+
     &-inputs {
       display: flex;
       flex-direction: column;
@@ -159,14 +157,13 @@
       min-height: 148px;
       margin-bottom: 15px;
     }
+
     &-range-slider {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    
       width: 100%;
       height: 70px;
-    
       margin-top: 16px;
 
       &-description {
@@ -176,18 +173,16 @@
         font-weight: normal;
         font-size: 12px;
         line-height: 14px;
-      
         color: $DarkShade50;
       }
     }
+
     &-checkbox-buttons {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-    
       max-width: 222px;
       min-height: 135px;
-    
       margin-top: 26px;
 
       &-title {
@@ -197,10 +192,10 @@
         font-size: 12px;
         line-height: 11px;
         text-transform: uppercase;
-      
         color: $DarkShade100;
         margin-bottom: 18px;
       }
+
       &-group {
         display: flex;
         flex-direction: column;
@@ -208,35 +203,36 @@
         height: 102px;
       }
     }
+
     &-rich-checkbox {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    
       max-width: 240px;
       min-height: 150px;
       margin-top: 20px;
     }
+
     &-item-title {
       font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 12px;
       line-height: 11px;
-    
       text-transform: uppercase;
-    
       color: $DarkShade100;
-    
       margin-bottom: 5px;
     }
+
     &-dropdown {
       margin-top: 30px;
     }
+
     &-options {
       margin-top: 15px;
     }
   }
+
   &__result {
     width: 100%;
     display: flex;
@@ -253,17 +249,16 @@
       margin-left: 5.25%;
       margin-right: 0.5%;
     }
+
     &-title {
       font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 20px;
       line-height: 20px;
-    
       color: $DarkShade100;
       margin: 0;
       margin-top: 5px;
-    
       width: 90%;
       margin-left: auto;
       margin-right: auto;
@@ -286,9 +281,9 @@
         line-height: 23.2px;
       }
     }
+
     &-cards-numbers {
       width: 100%;
-    
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
@@ -304,19 +299,21 @@
       @media (min-width: 1170px) {
       }
     }
+
     &-pagination {
       display: flex;
       justify-content: center;
-    
       margin-top: 20px;
       margin-bottom: 8px;
     }
   }
+
   &__card-number {
     width: 270px;
     height: 258px;
     margin-bottom: 20px;
   }
+
   &__footer {
     background-color: white;
     box-shadow: 0px 10px 20px $DarkShade05;
