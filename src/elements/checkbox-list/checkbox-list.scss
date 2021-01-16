@@ -43,6 +43,12 @@
     
       color: $DarkShade50;
     }
+    &:hover {
+      cursor: pointer;
+    }
+    &_opened {
+      transform: rotate(180deg);
+    }
   }
   &__container_hidden {
     display: none;
