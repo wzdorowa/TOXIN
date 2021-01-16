@@ -8,15 +8,15 @@ mixin check-in({text = 'Form name'} = {text})
       .check-in__group-inputs
           +base-input({
             placeholder: 'Имя',
-            borderRadiusTop: 'top',
-            borderRadiusBottom: 'bottom',
-            hide: 'hidden',
+            borderRadiusTop: true,
+            borderRadiusBottom: true,
+            hide: true,
           })
           +base-input({
             placeholder: 'Фамилия',
-            borderRadiusTop: 'top',
-            borderRadiusBottom: 'bottom',
-            hide: 'hidden',
+            borderRadiusTop: true,
+            borderRadiusBottom: true,
+            hide: true,
           })
       .check-in__buttons
         +radio-button({text: 'Мужчина', checked: 'checked', name: 'gender-for-check-in'})
@@ -27,8 +27,8 @@ mixin check-in({text = 'Form name'} = {text})
           label: 'Дата рождения',
           placeholder: 'ДД.ММ.ГГГГ',
           type: 'text',
-          borderRadiusTop: 'top',
-          borderRadiusBottom: 'bottom',
+          borderRadiusTop: true,
+          borderRadiusBottom: true,
         })
     .check-in__login-details
       .check-in__group-inputs-login
@@ -37,15 +37,15 @@ mixin check-in({text = 'Form name'} = {text})
             label: 'Данные для входа в сервис',
             placeholder: 'email',
             type: 'Email',
-            borderRadiusTop: 'top',
-            borderRadiusBottom: 'bottom',
+            borderRadiusTop: true,
+            borderRadiusBottom: true,
           })
         .check-in__input-container
           +base-input({
             placeholder: 'Пароль',
             type: 'password',
-            borderRadiusTop: 'top',
-            borderRadiusBottom: 'bottom',
+            borderRadiusTop: true,
+            borderRadiusBottom: true,
           })
       .check-in__toggle
         +toggle({text: 'Получать спецпредложения'})

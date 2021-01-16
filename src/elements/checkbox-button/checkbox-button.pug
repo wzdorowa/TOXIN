@@ -4,5 +4,5 @@ mixin checkbox-button({value = 'Text', checked = false, weight = false, descript
       input.checkbox-button__content.visually-hidden(type='checkbox',
         name='checkbox-button__content', checked=checked)
       span.checkbox-button__indicator
-      span.checkbox-button__value(class=`${weight ? 'checkbox-button__value_'+weight : ''}`)=value
+      span.checkbox-button__value(class=`${weight ? 'checkbox-button__value_bold' : ''}`)=value
     .checkbox-button__description= description
