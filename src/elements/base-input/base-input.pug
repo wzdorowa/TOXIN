@@ -1,8 +1,8 @@
-mixin base-input({label, placeholder = 'Введите значение', type = 'text', arrow = '', borderRadiusTop = false, borderRadiusBottom = false, hide = false, readonly = false, forDropdown = false} = {label, placeholder, type, arrow, borderRadiusTop, borderRadiusBottom, hide, readonly, forDropdown})
+mixin base-input({label, placeholder = 'Введите значение', type = 'text', arrow = '', hasBorderRadiusTop = false, hasBorderRadiusBottom = false, isHide = false, readonly, areInDropdown = false} = {label, placeholder, type, arrow, hasBorderRadiusTop, hasBorderRadiusBottom, isHide, readonly, areInDropdown})
   div.input()
-    span(class=`input__description ${hide ? 'input__description_hidden' : ''}`)= label
+    span(class=`input__description ${isHide ? 'input__description_hidden' : ''}`)= label
     .input__wrapper
-      input.input__content(class=`${borderRadiusTop ? 'input__content_with-border-radius-top' : ''}`,
-      class=`${borderRadiusBottom ? 'input__content_with-border-radius-bottom' : ''}`, class=`${forDropdown ? 'input__content_for-dropdown' : ''}`, type= type,
+      input.input__content(class=`${hasBorderRadiusTop ? 'input__content_with-border-radius-top' : ''}`,
+      class=`${hasBorderRadiusBottom ? 'input__content_with-border-radius-bottom' : ''}`, class=`${areInDropdown ? 'input__content_for-dropdown' : ''}`, type= type,
       name='input-content', placeholder= placeholder, readonly= readonly)
       span(class=`${'input__icon-'}${arrow}`)

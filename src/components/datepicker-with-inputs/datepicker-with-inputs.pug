@@ -10,10 +10,10 @@ mixin datepicker-with-inputs({labelArray = ['date dropdown', 'date dropdown'], d
             label: labelArray[0],
             placeholder: dates[0],
             arrow: 'arrow-down',
-            borderRadiusTop: true,
-            borderRadiusBottom: true,
+            hasBorderRadiusTop: true,
+            hasBorderRadiusBottom: true,
             readonly: 'readonly',
-            forDropdown: true,
+            areInDropdown: true,
             })
       else if (amountField === 'two')
         .datepicker-group__input(class=`datepicker-group__input_${size}`)
@@ -21,20 +21,20 @@ mixin datepicker-with-inputs({labelArray = ['date dropdown', 'date dropdown'], d
             label: labelArray[0],
             placeholder: dates[0],
             arrow: 'arrow-down',
-            borderRadiusTop: true,
-            borderRadiusBottom: true,
+            hasBorderRadiusTop: true,
+            hasBorderRadiusBottom: true,
             readonly: 'readonly',
-            forDropdown: true,
+            areInDropdown: true,
           })
         .datepicker-group__input(class=`datepicker-group__input_${size}`)
           +base-input({
             label: labelArray[1],
             placeholder: dates[1],
             arrow: 'arrow-down',
-            borderRadiusTop: true,
-            borderRadiusBottom: true,
+            hasBorderRadiusTop: true,
+            hasBorderRadiusBottom: true,
             readonly: 'readonly',
-            forDropdown: true,
+            areInDropdown: true,
           })
     .datepicker-group__datepicker(class=`datepicker-group__datepicker_${amountField}`)
       +datepicker()

@@ -1,21 +1,21 @@
 include ../../elements/dropdown-row/dropdown-row.pug
 
-mixin dropdown({label, placeholder = 'Выберите нужное количество', hide = false, readonly = 'readonly', display = 'hidden', dropdownFor = false} = {label, placeholder, hide, readonly, display, dropdownFor})
+mixin dropdown({label, placeholder = 'Выберите нужное количество', isHide = false, readonly = 'readonly', display = '', dropdownFor = ''} = {label, placeholder, isHide, readonly, display, dropdownFor})
   .dropdown
     .dropdown__list
       +base-input({
         label: label,
         placeholder: placeholder,
         arrow: 'arrow-down',
-        borderRadiusTop: true,
-        hide: hide,
+        hasBorderRadiusTop: true,
+        isHide: isHide,
         readonly: readonly,
-        forDropdown: true,
+        areInDropdown: true,
       })
     .dropdown__content
-      .dropdown__rows(class=`${dropdownFor ? 'dropdown__rows_for-count-'+dropdownFor : ''}`)
+      .dropdown__rows(class=`${'dropdown__rows_for-count-'}${dropdownFor}`)
         block
-      .dropdown__buttons(class=`${display ? 'dropdown__buttons_'+display : ''}`)
+      .dropdown__buttons(class=`${'dropdown__buttons_'}${display}`)
         .dropdown__buttons-container.dropdown__buttons-container_for-clear
           +base-button({text: 'Очистить', decor: 'noDecor'})
         .dropdown__buttons-container.dropdown__buttons-container_for-apply

@@ -1,6 +1,6 @@
-mixin radio-button({text = 'Text', checked = false, name = false} = {text, checked, name})
+mixin radio-button({text = 'Text', checked, name = ''} = {text, checked, name})
   .radio-button
     label.radio-button__filter
-      input.radio-button__content.visually-hidden(type='radio', name=`${name ? 'radio-button__content-'+name : ''}`, checked=checked)
+      input.radio-button__content.visually-hidden(type='radio', name=`${'radio-button__content-'}${name}`, checked=checked)
       span.radio-button__indicator
       span.radio-button__description=text
