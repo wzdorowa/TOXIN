@@ -1,4 +1,5 @@
 mixin bulleted-list({values = [{modifier: 'light-gray', text: 'Text', padding: 'increased-indent'}]} = {values})
   ul.bulleted-list
-      each val, index in values
-        li.bulleted-list__item(class=`bulleted-list__item_${values[index].modifier}`, class=`bulleted-list__item_with-${values[index].padding}`)= values[index].text
+      each val in values
+        - let {mod, text, pad} = val
+        li.bulleted-list__item(class=`bulleted-list__item_${mod}`, class=`bulleted-list__item_with-${pad}`)= text
