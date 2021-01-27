@@ -1,40 +1,101 @@
-const elements = document.querySelectorAll('.dropdown');
+class Dropdown {
+  constructor(element) {
+    this.dropdown = element;
+    this.elementInput = null;
+    this.dropdownList = null;
+    this.dropdownArrow = null;
+    this.buttonApply = null;
+    this.buttonClear = null;
+    this.rowsGroupParent = null;
+    this.rowsGroup = null;
+    this.numbers = null;
 
-elements.forEach(element => {
-  const elementInput = element.querySelector('.input__content');
-  const dropdownList = element.querySelector('.dropdown__content');
-  const dropdownArrow = element.querySelector('.input__icon-arrow-down');
-  const buttonApply = element.querySelector(
-    '.dropdown__buttons-container_for-apply',
-  );
-  const buttonClear = element.querySelector(
-    '.dropdown__buttons-container_for-clear',
-  );
+    this.findElement();
+    this.listenClickDropdownArrow();
+    this.listenFocusInput();
+    this.listenButtonApply();
+    this.listenButtonClear();
+    this.listenClickDocument();
+    this.listenRowsGroup();
+  }
 
-  dropdownArrow.addEventListener('click', () => {
+  findElement() {
+    this.elementInput = this.dropdown.querySelector('.input__content');
+    this.dropdownList = this.dropdown.querySelector('.dropdown__content');
+    this.dropdownArrow = this.dropdown.querySelector('.input__icon-arrow-down');
+    this.buttonApply = this.dropdown.querySelector(
+      '.dropdown__buttons-container_for-apply',
+    );
+    this.buttonClear = this.dropdown.querySelector(
+      '.dropdown__buttons-container_for-clear',
+    );
+    this.rowsGroupParent = this.dropdown.querySelector('.dropdown__rows');
+    this.rowsGroup = this.dropdown.querySelectorAll('.dropdown-row');
+    this.numbers = this.dropdown.querySelectorAll(
+      '.dropdown-row__amount_with-count',
+    );
+  }
+
+  addClass() {
+    this.dropdownList.classList.add('dropdown__content_visible');
+  }
+
+  removeClass() {
+    this.dropdownList.classList.remove('dropdown__content_visible');
+  }
+
+  toggleClass() {
     if (
-      dropdownList.classList.contains('dropdown__content_visible') === false
+      this.dropdownList.classList.contains('dropdown__content_visible') ===
+      false
     ) {
-      dropdownList.classList.add('dropdown__content_visible');
-    } else if (dropdownList.classList.contains('dropdown__content_visible')) {
-      dropdownList.classList.remove('dropdown__content_visible');
+      this.addClass();
+    } else if (
+      this.dropdownList.classList.contains('dropdown__content_visible')
+    ) {
+      this.removeClass();
     }
-  });
-  elementInput.addEventListener('focus', () => {
-    dropdownList.classList.add('dropdown__content_visible');
-  });
-  document.addEventListener('click', event => {
-    if (event.target.closest('.dropdown') !== element) {
-      dropdownList.classList.remove('dropdown__content_visible');
-    }
-  });
-  const rowsGroupParent = element.querySelector('.dropdown__rows');
-  const rowsGroup = element.querySelectorAll('.dropdown-row');
-  const numbers = element.querySelectorAll('.dropdown-row__amount_with-count');
+  }
 
-  const countValues = (result, values, declinations) => {
+  listenClickDropdownArrow() {
+    this.dropdownArrow.addEventListener('click', () => {
+      this.toggleClass();
+    });
+  }
+
+  listenFocusInput() {
+    this.elementInput.addEventListener('focus', () => {
+      this.addClass();
+    });
+  }
+
+  listenButtonApply() {
+    this.buttonApply.addEventListener('click', () => {
+      this.removeClass();
+    });
+  }
+
+  listenButtonClear() {
+    this.buttonClear.addEventListener('click', () => {
+      this.elementInput.value = '';
+      this.numbers.forEach(number => {
+        const element = number;
+        element.innerHTML = '0';
+      });
+    });
+  }
+
+  listenClickDocument() {
+    document.addEventListener('click', event => {
+      if (event.target.closest('.dropdown') !== this.dropdown) {
+        this.removeClass();
+      }
+    });
+  }
+
+  countValues(result, values, declinations) {
     if (result === 0) {
-      elementInput.value = '';
+      this.elementInput.value = '';
     } else {
       const newString = [];
       values.forEach((value, i) => {
@@ -58,17 +119,18 @@ elements.forEach(element => {
           (index === 0 && newString.length === 1) ||
           index === newString.length - 1
         ) {
-          elementInput.value += `${newString[index]}`;
+          this.elementInput.value += `${newString[index]}`;
         } else if (index < newString.length - 1 && newString.length > 1) {
-          elementInput.value += `${newString[index]}, `;
+          this.elementInput.value += `${newString[index]}, `;
         }
       });
     }
-  };
-  const countTheGuests = () => {
+  }
+
+  countTheGuests() {
     let adults = 0;
     let babies = 0;
-    numbers.forEach((number, index) => {
+    this.numbers.forEach((number, index) => {
       if (index <= 1) {
         adults += Number(number.innerHTML);
       } else if (index === 2) {
@@ -80,14 +142,15 @@ elements.forEach(element => {
     const declinationGuests = ['гость', 'гостя', 'гостей'];
     const declinationBabies = ['младенец', 'младенца', 'младенцев'];
     const declinations = [declinationGuests, declinationBabies];
-    countValues(amountGuests, guests, declinations);
-  };
-  const countAmenities = () => {
+    this.countValues(amountGuests, guests, declinations);
+  }
+
+  countAmenities() {
     let bedrooms = 0;
     let beds = 0;
     let bathrooms = 0;
 
-    numbers.forEach((number, index) => {
+    this.numbers.forEach((number, index) => {
       if (index === 0) {
         bedrooms += Number(number.innerHTML);
       } else if (index === 1) {
@@ -110,36 +173,34 @@ elements.forEach(element => {
       declinationBeds,
       declinationBathrooms,
     ];
-    countValues(amountAmenities, amenities, declinations);
-  };
-  rowsGroup.forEach(element => {
-    element.addEventListener('click', e => {
-      e.preventDefault();
+    this.countValues(amountAmenities, amenities, declinations);
+  }
 
-      elementInput.value = null;
-      if (
-        rowsGroupParent.classList.contains(
-          'dropdown__rows_for-count-the-guests',
-        ) === true
-      ) {
-        countTheGuests();
-      } else if (
-        rowsGroupParent.classList.contains(
-          'dropdown__rows_for-count-amenities',
-        ) === true
-      ) {
-        countAmenities();
-      }
+  listenRowsGroup() {
+    this.rowsGroup.forEach(element => {
+      element.addEventListener('click', e => {
+        e.preventDefault();
+
+        this.elementInput.value = null;
+        if (
+          this.rowsGroupParent.classList.contains(
+            'dropdown__rows_for-count-the-guests',
+          ) === true
+        ) {
+          this.countTheGuests();
+        } else if (
+          this.rowsGroupParent.classList.contains(
+            'dropdown__rows_for-count-amenities',
+          ) === true
+        ) {
+          this.countAmenities();
+        }
+      });
     });
-  });
-  buttonApply.addEventListener('click', () => {
-    dropdownList.classList.remove('dropdown__content_visible');
-  });
-  buttonClear.addEventListener('click', () => {
-    elementInput.value = '';
-    numbers.forEach(number => {
-      const element = number;
-      element.innerHTML = '0';
-    });
-  });
+  }
+}
+
+const elements = document.querySelectorAll('.dropdown');
+elements.forEach(element => {
+  new Dropdown(element);
 });
