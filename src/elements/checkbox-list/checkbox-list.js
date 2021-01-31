@@ -1,22 +1,50 @@
+class CheckboxList {
+  constructor(element) {
+    this.checkboxList = element;
+    this.checkboxListTitle = null;
+    this.checkboxListToggle = null;
+    this.checkboxListIndicator = null;
+
+    this.findElements();
+    this.listenClickCheckboxListTitle();
+    this.listenClickDocument();
+  }
+
+  findElements() {
+    this.checkboxListTitle = this.checkboxList.querySelector(
+      '.checkbox-list__title',
+    );
+    this.checkboxListToggle = this.checkboxList.querySelector(
+      '.checkbox-list__container_hidden',
+    );
+    this.checkboxListIndicator = this.checkboxList.querySelector(
+      '.checkbox-list__indicator',
+    );
+  }
+
+  listenClickCheckboxListTitle() {
+    this.checkboxListTitle.addEventListener('click', () => {
+      this.checkboxListToggle.classList.toggle(
+        'checkbox-list__container_hidden',
+      );
+      this.checkboxListIndicator.classList.toggle(
+        'checkbox-list__indicator_opened',
+      );
+    });
+  }
+
+  listenClickDocument() {
+    document.addEventListener('click', event => {
+      if (event.target.closest('.checkbox-list') !== this.checkboxList) {
+        this.checkboxListToggle.classList.add(
+          'checkbox-list__container_hidden',
+        );
+      }
+    });
+  }
+}
+
 const checkboxLists = document.querySelectorAll('.checkbox-list');
-
 checkboxLists.forEach(element => {
-  const checkboxListTitle = element.querySelector('.checkbox-list__title');
-  const checkboxListToggle = element.querySelector(
-    '.checkbox-list__container_hidden',
-  );
-  const checkboxListIndicator = element.querySelector(
-    '.checkbox-list__indicator',
-  );
-
-  checkboxListTitle.onclick = () => {
-    checkboxListToggle.classList.toggle('checkbox-list__container_hidden');
-    checkboxListIndicator.classList.toggle('checkbox-list__indicator_opened');
-  };
-
-  document.addEventListener('click', event => {
-    if (event.target.closest('.checkbox-list') !== element) {
-      checkboxListToggle.classList.add('checkbox-list__container_hidden');
-    }
-  });
+  new CheckboxList(element);
 });

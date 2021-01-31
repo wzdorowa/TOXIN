@@ -1,28 +1,59 @@
-const dropdownRows = document.querySelectorAll('.dropdown-row');
+class DropdownRow {
+  constructor(element) {
+    this.dropdownRow = element;
+    this.signs = [];
+    this.minusSign = null;
+    this.plusSign = null;
+    this.listItems = [];
+    this.numberContainer = null;
 
-dropdownRows.forEach(element => {
-  const signs = element.querySelectorAll('.dropdown-row__amount_with-sign');
-  const minusSign = signs[0];
-  const plusSign = signs[1];
-  const listItems = element.querySelectorAll('.dropdown-row__amount');
-  const numberContainer = listItems[1];
+    this.findElements();
+    this.listenClickPlusSign();
+    this.listenClickMinusSign();
+  }
 
-  const add = () => {
-    const currentValue = numberContainer.innerHTML;
+  findElements() {
+    this.listItems = this.dropdownRow.querySelectorAll('.dropdown-row__amount');
+    this.signs = this.dropdownRow.querySelectorAll(
+      '.dropdown-row__amount_with-sign',
+    );
+    [this.firstArg, this.numberContainer] = this.listItems;
+    [this.minusSign, this.plusSign] = this.signs;
+  }
+
+  add() {
+    const currentValue = this.numberContainer.innerHTML;
     let result = 0;
     result = Number(currentValue) + 1;
-    numberContainer.innerHTML = String(result);
-  };
-  const subtract = () => {
-    const currentValue = numberContainer.innerHTML;
+
+    this.numberContainer.innerHTML = String(result);
+  }
+
+  subtract() {
+    const currentValue = this.numberContainer.innerHTML;
     let result = 0;
     result = currentValue - 1;
     if (result < 0) {
-      numberContainer.innerHTML = '0';
+      this.numberContainer.innerHTML = '0';
     } else {
-      numberContainer.innerHTML = result;
+      this.numberContainer.innerHTML = result;
     }
-  };
-  plusSign.addEventListener('click', add);
-  minusSign.addEventListener('click', subtract);
+  }
+
+  listenClickPlusSign() {
+    this.plusSign.addEventListener('click', () => {
+      this.add();
+    });
+  }
+
+  listenClickMinusSign() {
+    this.minusSign.addEventListener('click', () => {
+      this.subtract();
+    });
+  }
+}
+
+const dropdownRows = document.querySelectorAll('.dropdown-row');
+dropdownRows.forEach(element => {
+  new DropdownRow(element);
 });
