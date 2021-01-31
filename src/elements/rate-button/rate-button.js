@@ -1,58 +1,84 @@
-$('.rating').each((index, element) => {
-  const rating = element;
-  const ratingItems = Array.from($(rating).children('.rating-item'));
+class Rating {
+  constructor(element) {
+    this.rating = element;
+    this.ratingItems = null;
 
-  function removeClass(arr, className) {
+    this.findElements();
+    this.listenClickRating();
+    this.listenMouseoverRating();
+    this.listenMouseoutRating();
+  }
+
+  findElements() {
+    this.ratingItems = Array.from($(this.rating).children('.rating-item'));
+  }
+
+  removeClass(arr, className) {
     arr.forEach((_element, i) => {
       const arg = new Array(2);
       for (let j = 1; j < arg.length; j += 1) {
-        ratingItems[i].classList.remove(className);
+        this.ratingItems[i].classList.remove(className);
       }
     });
   }
-  function addClass(arr, className) {
+
+  addClass(arr, className) {
     arr.forEach((_element, i) => {
       const arg = new Array(2);
       for (let j = 1; j < arg.length; j += 1) {
-        ratingItems[i].classList.add(className);
+        this.ratingItems[i].classList.add(className);
       }
     });
   }
-  function mouseOverActiveClass(arr) {
-    for (let i = 0, iLen = arr.length; i < iLen; i += 1) {
-      if (arr[i].classList.contains('active')) {
+
+  mouseOverActiveClass() {
+    for (let i = 0, iLen = this.ratingItems.length; i < iLen; i += 1) {
+      if (this.ratingItems[i].classList.contains('active')) {
         break;
       } else {
-        arr[i].classList.add('active');
+        this.ratingItems[i].classList.add('active');
       }
     }
   }
-  function mouseOutActiveClass(arr) {
-    for (let i = arr.length - 1; i >= 1; i -= 1) {
-      if (arr[i].classList.contains('current-active')) {
+
+  mouseOutActiveClass() {
+    for (let i = this.ratingItems.length - 1; i >= 1; i -= 1) {
+      if (this.ratingItems[i].classList.contains('current-active')) {
         break;
       } else {
-        arr[i].classList.remove('active');
+        this.ratingItems[i].classList.remove('active');
       }
     }
   }
-  rating.onclick = e => {
-    const targetElement = e.target;
-    if (targetElement.classList.contains('rating-item')) {
-      removeClass(ratingItems, 'current-active');
-      targetElement.classList.add('active', 'current-active');
-    }
-  };
-  rating.onmouseover = e => {
-    const targetElement = e.target;
-    if (targetElement.classList.contains('rating-item')) {
-      removeClass(ratingItems, 'active');
-      targetElement.classList.add('active');
-      mouseOverActiveClass(ratingItems);
-    }
-  };
-  rating.onmouseout = () => {
-    addClass(ratingItems, 'active');
-    mouseOutActiveClass(ratingItems);
-  };
+
+  listenClickRating() {
+    this.rating.addEventListener('click', e => {
+      const targetElement = e.target;
+      if (targetElement.classList.contains('rating-item')) {
+        this.removeClass(this.ratingItems, 'current-active');
+        targetElement.classList.add('active', 'current-active');
+      }
+    });
+  }
+
+  listenMouseoverRating() {
+    this.rating.addEventListener('mouseover', e => {
+      const targetElement = e.target;
+      if (targetElement.classList.contains('rating-item')) {
+        this.removeClass(this.ratingItems, 'active');
+        targetElement.classList.add('active');
+        this.mouseOverActiveClass(this.ratingItems);
+      }
+    });
+  }
+
+  listenMouseoutRating() {
+    this.rating.addEventListener('mouseout', () => {
+      this.addClass(this.ratingItems, 'active');
+      this.mouseOutActiveClass(this.ratingItems);
+    });
+  }
+}
+$('.rating').each((index, element) => {
+  new Rating(element);
 });
