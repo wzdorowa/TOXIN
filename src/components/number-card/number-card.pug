@@ -4,13 +4,13 @@ mixin number-card({number = '100', text, cost = '1000', amount = '0'} = {number,
   .number-card
     .number-card__slider
       - var images = new Array(4);
-      each val, index in images
+      each value, index in images
         .number-card__content(class=`number-card__content_with-img-${number}`)
       .number-card__prev
       .number-card__next
     .number-card__slider-dots
       - var switches = new Array(4);
-      each val, index in switches
+      each value, index in switches
         span.number-card__switch-slider
     .number-card__description
       .number-card__data

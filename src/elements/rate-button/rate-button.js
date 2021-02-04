@@ -13,26 +13,26 @@ class Rating {
     this.ratingItems = Array.from($(this.rating).children('.rating-item'));
   }
 
-  removeClass(arr, className) {
-    arr.forEach((_element, i) => {
-      const arg = new Array(2);
-      for (let j = 1; j < arg.length; j += 1) {
+  removeClass(array, className) {
+    array.forEach((_element, i) => {
+      const elements = new Array(2);
+      for (let j = 1; j < elements.length; j += 1) {
         this.ratingItems[i].classList.remove(className);
       }
     });
   }
 
-  addClass(arr, className) {
-    arr.forEach((_element, i) => {
-      const arg = new Array(2);
-      for (let j = 1; j < arg.length; j += 1) {
+  addClass(array, className) {
+    array.forEach((_element, i) => {
+      const elements = new Array(2);
+      for (let j = 1; j < elements.length; j += 1) {
         this.ratingItems[i].classList.add(className);
       }
     });
   }
 
   mouseOverActiveClass() {
-    for (let i = 0, iLen = this.ratingItems.length; i < iLen; i += 1) {
+    for (let i = 0, iLength = this.ratingItems.length; i < iLength; i += 1) {
       if (this.ratingItems[i].classList.contains('active')) {
         break;
       } else {

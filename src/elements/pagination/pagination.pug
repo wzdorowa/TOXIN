@@ -1,6 +1,6 @@
 mixin pagination({text = 'text description'} = {text})
   .pagination
     ul.pagination__list
-      each val, index in ['1', '2', '3', '...', '15', '']
-        li.pagination__item= val
+      each value, index in ['1', '2', '3', '...', '15', '']
+        li.pagination__item= value
     span.pagination__description=text

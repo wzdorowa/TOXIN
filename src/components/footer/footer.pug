@@ -10,9 +10,9 @@ mixin footer()
         - let columnMedium = ['О нас', 'О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
         - let columnLast = ['Служба поддержки', 'Соглашения', 'Сообщества', 'Связь с нами']
         - let columns = [columnFirst, columnMedium, columnLast]
-        each val, index in columns
+        each column, index in columns
           ul.footer__list
-            each value, index in val
+            each value, index in column
               li.footer__item
                 a.footer__link(href='')= value
       .footer__subscribe

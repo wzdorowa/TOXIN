@@ -10,14 +10,14 @@ mixin header()
       .header__user-icon
       .header__navigation-icon 
     ul.header__navigation
-      each val, index in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
-        - var itemName = val
+      each value, index in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+        - var itemName = value
         if(itemName === 'Услуги' || itemName === 'Соглашения')
           li.header__item.header__item_drop-down-menu
-            a.header__link(href='')= val
+            a.header__link(href='')= value
         else
           li.header__item
-            a.header__link(href='')= val
+            a.header__link(href='')= value
     .header__user
       form.header__user-button-login(action='/TOXIN/pages/sign-in/sign-in.html', target='_blank')
         +base-button({text: 'Войти', decor: 'border', type: 'submit'})
