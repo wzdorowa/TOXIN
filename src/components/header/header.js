@@ -18,15 +18,17 @@ class Header {
   }
 
   listenClickUserIcon() {
-    this.userIcon.addEventListener('click', () => {
+    const toggle = () => {
       this.user.classList.toggle('header__user-icon_visible');
-    });
+    };
+    this.userIcon.addEventListener('click', toggle);
   }
 
   listenClickNavigationIcon() {
-    this.navigationIcon.addEventListener('click', () => {
+    const toggle = () => {
       this.navigation.classList.toggle('header__navigation-icon_visible');
-    });
+    };
+    this.navigationIcon.addEventListener('click', toggle);
   }
 }
 new Header();

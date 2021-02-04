@@ -52,31 +52,34 @@ class Rating {
   }
 
   listenClickRating() {
-    this.rating.addEventListener('click', e => {
-      const targetElement = e.target;
+    const setCurrentRating = event => {
+      const targetElement = event.target;
       if (targetElement.classList.contains('rating-item')) {
         this.removeClass(this.ratingItems, 'current-active');
         targetElement.classList.add('active', 'current-active');
       }
-    });
+    };
+    this.rating.addEventListener('click', setCurrentRating);
   }
 
   listenMouseoverRating() {
-    this.rating.addEventListener('mouseover', e => {
-      const targetElement = e.target;
+    const showActiveRating = event => {
+      const targetElement = event.target;
       if (targetElement.classList.contains('rating-item')) {
         this.removeClass(this.ratingItems, 'active');
         targetElement.classList.add('active');
         this.mouseOverActiveClass(this.ratingItems);
       }
-    });
+    };
+    this.rating.addEventListener('mouseover', showActiveRating);
   }
 
   listenMouseoutRating() {
-    this.rating.addEventListener('mouseout', () => {
+    const showCurrentRating = () => {
       this.addClass(this.ratingItems, 'active');
       this.mouseOutActiveClass(this.ratingItems);
-    });
+    };
+    this.rating.addEventListener('mouseout', showCurrentRating);
   }
 }
 $('.rating').each((index, element) => {

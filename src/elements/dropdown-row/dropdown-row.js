@@ -41,15 +41,17 @@ class DropdownRow {
   }
 
   listenClickPlusSign() {
-    this.plusSign.addEventListener('click', () => {
+    const add = () => {
       this.add();
-    });
+    };
+    this.plusSign.addEventListener('click', add);
   }
 
   listenClickMinusSign() {
-    this.minusSign.addEventListener('click', () => {
+    const subtract = () => {
       this.subtract();
-    });
+    };
+    this.minusSign.addEventListener('click', subtract);
   }
 }
 

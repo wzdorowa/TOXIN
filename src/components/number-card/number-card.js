@@ -57,20 +57,25 @@ class NumberCard {
   }
 
   listenClickButtonPrev() {
-    this.buttonPrev.addEventListener('click', () => {
+    const showPrevSlides = () => {
       this.showSlides((this.slideIndex -= 1));
-    });
+    };
+    this.buttonPrev.addEventListener('click', showPrevSlides);
   }
 
   listenClickButtonNext() {
-    this.buttonNext.addEventListener('click', () => {
+    const showNextSlides = () => {
       this.showSlides((this.slideIndex += 1));
-    });
+    };
+    this.buttonNext.addEventListener('click', showNextSlides);
   }
 
   listenClickDots() {
     this.dots.forEach((element, i) => {
-      element.addEventListener('click', () => this.currentSlide(i + 1));
+      const showCurrentSlide = () => {
+        this.currentSlide(i + 1);
+      };
+      element.addEventListener('click', showCurrentSlide);
     });
   }
 }

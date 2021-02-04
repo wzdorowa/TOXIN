@@ -58,39 +58,44 @@ class Dropdown {
   }
 
   listenClickDropdownArrow() {
-    this.dropdownArrow.addEventListener('click', () => {
+    const toggleClass = () => {
       this.toggleClass();
-    });
+    };
+    this.dropdownArrow.addEventListener('click', toggleClass);
   }
 
   listenFocusInput() {
-    this.elementInput.addEventListener('focus', () => {
+    const addClass = () => {
       this.addClass();
-    });
+    };
+    this.elementInput.addEventListener('focus', addClass);
   }
 
   listenButtonApply() {
-    this.buttonApply.addEventListener('click', () => {
+    const removeClass = () => {
       this.removeClass();
-    });
+    };
+    this.buttonApply.addEventListener('click', removeClass);
   }
 
   listenButtonClear() {
-    this.buttonClear.addEventListener('click', () => {
+    const clearInput = () => {
       this.elementInput.value = '';
       this.numbers.forEach(number => {
         const element = number;
         element.innerHTML = '0';
       });
-    });
+    };
+    this.buttonClear.addEventListener('click', clearInput);
   }
 
   listenClickDocument() {
-    document.addEventListener('click', event => {
+    const removeClass = event => {
       if (event.target.closest('.dropdown') !== this.dropdown) {
         this.removeClass();
       }
-    });
+    };
+    document.addEventListener('click', removeClass);
   }
 
   countValues(result, values, declinations) {
@@ -177,25 +182,26 @@ class Dropdown {
   }
 
   listenRowsGroup() {
-    this.rowsGroup.forEach(element => {
-      element.addEventListener('click', e => {
-        e.preventDefault();
+    const defineCategory = event => {
+      event.preventDefault();
 
-        this.elementInput.value = null;
-        if (
-          this.rowsGroupParent.classList.contains(
-            'dropdown__rows_for-count-the-guests',
-          ) === true
-        ) {
-          this.countTheGuests();
-        } else if (
-          this.rowsGroupParent.classList.contains(
-            'dropdown__rows_for-count-amenities',
-          ) === true
-        ) {
-          this.countAmenities();
-        }
-      });
+      this.elementInput.value = null;
+      if (
+        this.rowsGroupParent.classList.contains(
+          'dropdown__rows_for-count-the-guests',
+        ) === true
+      ) {
+        this.countTheGuests();
+      } else if (
+        this.rowsGroupParent.classList.contains(
+          'dropdown__rows_for-count-amenities',
+        ) === true
+      ) {
+        this.countAmenities();
+      }
+    };
+    this.rowsGroup.forEach(element => {
+      element.addEventListener('click', defineCategory);
     });
   }
 }

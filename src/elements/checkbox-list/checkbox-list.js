@@ -23,24 +23,26 @@ class CheckboxList {
   }
 
   listenClickCheckboxListTitle() {
-    this.checkboxListTitle.addEventListener('click', () => {
+    const toggleClassList = () => {
       this.checkboxListToggle.classList.toggle(
         'checkbox-list__container_hidden',
       );
       this.checkboxListIndicator.classList.toggle(
         'checkbox-list__indicator_opened',
       );
-    });
+    };
+    this.checkboxListTitle.addEventListener('click', toggleClassList);
   }
 
   listenClickDocument() {
-    document.addEventListener('click', event => {
+    const addClass = event => {
       if (event.target.closest('.checkbox-list') !== this.checkboxList) {
         this.checkboxListToggle.classList.add(
           'checkbox-list__container_hidden',
         );
       }
-    });
+    };
+    document.addEventListener('click', addClass);
   }
 }
 

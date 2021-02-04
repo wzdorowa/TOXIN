@@ -65,43 +65,44 @@ class Datepicker {
   }
 
   listenFocusInput() {
+    const addClass = () => {
+      this.addClass();
+    };
     this.elementsInput.forEach(elementInput => {
-      elementInput.addEventListener('focus', () => {
-        this.addClass();
-      });
+      elementInput.addEventListener('focus', addClass);
     });
   }
 
   listenClickDropdownArrow() {
+    const toggleClass = () => {
+      this.toggleClass();
+    };
     this.dropdownsArrow.forEach(dropdownArrow => {
-      dropdownArrow.addEventListener('click', () => {
-        this.toggleClass();
-      });
+      dropdownArrow.addEventListener('click', toggleClass);
     });
   }
 
   listenButtonApply() {
-    this.buttonApply.addEventListener('click', () => {
+    const removeClass = () => {
       this.removeClass();
-    });
+    };
+    this.buttonApply.addEventListener('click', removeClass);
   }
 
   listenButtonClear() {
-    this.buttonClear.addEventListener('click', () => {
+    const clearValues = () => {
       this.clearValues();
-    });
+    };
+    this.buttonClear.addEventListener('click', clearValues);
   }
 
   listenClickDocument() {
-    document.addEventListener(
-      'click',
-      event => {
-        if (!this.datepickerGroup.contains(event.target)) {
-          this.removeClass();
-        }
-      },
-      true,
-    );
+    const removeClass = event => {
+      if (!this.datepickerGroup.contains(event.target)) {
+        this.removeClass();
+      }
+    };
+    document.addEventListener('click', removeClass, true);
   }
 
   setValueToInput() {
