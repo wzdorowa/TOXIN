@@ -14,12 +14,13 @@ block title
     title Registration page
 block content
   .registration
-    .registration__header
-      .registration__header-container
-        +header()
-    .registration__container
-      .registration__check-in
-        +check-in({text: 'Регистрация аккаунта'})
-    .registration__footer
-      +footer()
-    +copyright()
+    .registration__wrapper
+      .registration__header
+        .registration__header-container
+          +header()
+      .registration__container
+        .registration__check-in
+          +check-in({text: 'Регистрация аккаунта'})
+      .registration__footer
+        +footer()
+      +copyright()

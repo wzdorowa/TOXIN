@@ -34,6 +34,7 @@ block title
     title Demo page
 block content
     .components
+      .components__wrapper
         .components__inputs
             .components__inputs-item
                 +base-input({
@@ -134,6 +135,7 @@ block content
                 h1.buttons-title Pagination
                 +pagination({text: '1 - 12 из 100+ вариантов аренды'})
     .components
+      .components__wrapper
         .components__dropdown
             +dropdown({
               label: 'Удобства номера',
@@ -146,6 +148,7 @@ block content
               +dropdown-row({label: 'Кровати', number: '1'})
               +dropdown-row({label: 'Ванные комнаты', number: '0'})
     .components
+      .components__wrapper
         .components__expandable-checkbox-list
             +checkbox-list({text: 'Expandable checkbox list'})
               +checkbox-button({value: 'Завтрак'})
@@ -173,6 +176,7 @@ block content
             - const rules = [{modifier: 'light-gray', text: 'Нельзя с питомцами', padding: 'increased-indent'}, {modifier: 'light-gray', text: 'Без вечеринок и мероприятий', padding: 'increased-indent'}, {modifier: 'light-gray', text: 'Время прибытия — после 13:00, а выезд до 12:00', padding: 'increased-indent'}]
             +bulleted-list({values: rules})
     .components
+      .components__wrapper
         .components__advantages
             .components__advantages-item
                 +advantages({title: 'Комфорт', value: 'Шумопоглощающие стены', nameIcon: 'mood'})
@@ -187,6 +191,7 @@ block content
               })
     .components-content-wrapper
         .components-content
+          .components-content__wrapper
             .components-content__item
                 .components-content__search-room
                     -const searchRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
@@ -207,9 +212,11 @@ block content
                 .components-content__number-card
                     +number-card({number: '840', text: 'люкс', cost: '9 990', amount: '65'})
         .components-header
+          .components-header__wrapper
             .components-header__container
               +header()
         .components-footer
+          .components-footer__wrapper
             +footer()
             +copyright()
             

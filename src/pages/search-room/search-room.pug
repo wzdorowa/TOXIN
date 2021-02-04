@@ -19,100 +19,101 @@ block title
     title Search room page
 block content
   .search-room
-    .search-room__header
-      .search-room__header-container
-        +header()
-    .search-room__content
-      .search-room__filter-access
-        h1.search-room__filter-access-title Дополнительные параметры
-      .search-room__filter
-        .search-room__filter-inputs
-          +datepicker-with-inputs({
-            labelArray: ['Даты пребывания в отеле'],
-            dates: ['19 авг - 23 авг'],
-            size: 'large-width',
-            amountField: 'only'})
-          .search-room__filter-input
+    .search-room__wrapper
+      .search-room__header
+        .search-room__header-container
+          +header()
+      .search-room__content
+        .search-room__filter-access
+          h1.search-room__filter-access-title Дополнительные параметры
+        .search-room__filter
+          .search-room__filter-inputs
+            +datepicker-with-inputs({
+              labelArray: ['Даты пребывания в отеле'],
+              dates: ['19 авг - 23 авг'],
+              size: 'large-width',
+              amountField: 'only'})
+            .search-room__filter-input
+              +dropdown({
+                label: 'Гости',
+                placeholder: '3 гостя, 1 младенец',
+                display: 'hidden',
+                readonly: 'readonly',
+                dropdownFor: 'the-guests'
+              })
+                +dropdown-row({label: 'Взрослые', number: '3'})
+                +dropdown-row({label: 'Дети', number: '0'})
+                +dropdown-row({label: 'Младенцы', number: '1'})
+          .search-room__filter-range-slider
+            +range-slider({text: 'Диапазон цены'})
+            span.search-room__filter-range-slider-description Стоимость за сутки пребывания в номере
+          .search-room__filter-checkbox-buttons
+            h1.search-room__filter-checkbox-buttons-title Chechbox buttons
+            .search-room__filter-checkbox-buttons-group
+              +checkbox-button({value: 'Можно курить'})
+              +checkbox-button({value: 'Можно с питомцами', checked: 'checked'})
+              +checkbox-button({value: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
+          .search-room__filter-rich-checkbox
+            h1.search-room__filter-item-title Доступность
+            +checkbox-button({
+                    value: 'Широкий коридор',
+                    isBoldText: true,
+                    description: 'Ширина коридоров в номере не менее 91 см.'
+                    })
+            +checkbox-button({
+                    value: 'Помощник для инвалидов',
+                    isBoldText: true,
+                    description: 'На 1 этаже вас встретит специалист и проводит до номера.'
+                    })
+          .search-room__filter-dropdown
             +dropdown({
-              label: 'Гости',
-              placeholder: '3 гостя, 1 младенец',
+              label: 'Удобства номера',
+              placeholder: '2 спальни, 2 кровати...',
               display: 'hidden',
-              readonly: 'readonly',
-              dropdownFor: 'the-guests'
+              dropdownFor: 'amenities'
             })
-              +dropdown-row({label: 'Взрослые', number: '3'})
-              +dropdown-row({label: 'Дети', number: '0'})
-              +dropdown-row({label: 'Младенцы', number: '1'})
-        .search-room__filter-range-slider
-          +range-slider({text: 'Диапазон цены'})
-          span.search-room__filter-range-slider-description Стоимость за сутки пребывания в номере
-        .search-room__filter-checkbox-buttons
-          h1.search-room__filter-checkbox-buttons-title Chechbox buttons
-          .search-room__filter-checkbox-buttons-group
-            +checkbox-button({value: 'Можно курить'})
-            +checkbox-button({value: 'Можно с питомцами', checked: 'checked'})
-            +checkbox-button({value: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
-        .search-room__filter-rich-checkbox
-          h1.search-room__filter-item-title Доступность
-          +checkbox-button({
-                  value: 'Широкий коридор',
-                  isBoldText: true,
-                  description: 'Ширина коридоров в номере не менее 91 см.'
-                  })
-          +checkbox-button({
-                  value: 'Помощник для инвалидов',
-                  isBoldText: true,
-                  description: 'На 1 этаже вас встретит специалист и проводит до номера.'
-                  })
-        .search-room__filter-dropdown
-          +dropdown({
-            label: 'Удобства номера',
-            placeholder: '2 спальни, 2 кровати...',
-            display: 'hidden',
-            dropdownFor: 'amenities'
-          })
-            +dropdown-row({label: 'Спальни', number: '2'})
-            +dropdown-row({label: 'Кровати', number: '2'})
-            +dropdown-row({label: 'Ванные комнаты', number: '0'})
-        .search-room__filter-options
-          +checkbox-list({text: 'Дополнительные удобства'})
-            +checkbox-button({value: 'Завтрак'})
-            +checkbox-button({value: 'Письменный стол', checked: 'checked'})
-            +checkbox-button({value: 'Стул для кормления', checked: 'checked'})
-            +checkbox-button({value: 'Кроватка', checked: 'checked'})
-            +checkbox-button({value: 'Телевизор'})
-            +checkbox-button({value: 'Шампунь'})
-            +checkbox-button({value: 'Телевизор'})
-            +checkbox-button({value: 'Шампунь'})
-      .search-room__result
-        h1.search-room__result-title Номера, которые мы для вас подобрали
-        .search-room__result-cards-numbers
-          .search-room__card-number
-            +number-card({number: '888', text: 'люкс', cost: '9 990', amount: '145'})
-          .search-room__card-number
-            +number-card({number: '840', cost: '9 990', amount: '65'})
-          .search-room__card-number
-            +number-card({number: '980', text: 'люкс', cost: '8 500', amount: '35'})
-          .search-room__card-number
-            +number-card({number: '856', cost: '7 300', amount: '19'})
-          .search-room__card-number
-            +number-card({number: '740', cost: '6 000', amount: '44'})
-          .search-room__card-number
-            +number-card({number: '982', cost: '5 800', amount: '56'})
-          .search-room__card-number
-            +number-card({number: '678', cost: '5 500', amount: '45'})
-          .search-room__card-number
-            +number-card({number: '450', cost: '5 300', amount: '39'})
-          .search-room__card-number
-            +number-card({number: '350', cost: '5 000', amount: '77'})
-          .search-room__card-number
-            +number-card({number: '666', cost: '5 000', amount: '25'})
-          .search-room__card-number
-            +number-card({number: '444', cost: '5 000', amount: '15'})
-          .search-room__card-number
-            +number-card({number: '352', cost: '5 000', amount: '55'})
-        .search-room__result-pagination
-          +pagination({text: '1 – 12 из 100+ вариантов аренды'})
-    .search-room__footer
-      +footer()
-    +copyright()
+              +dropdown-row({label: 'Спальни', number: '2'})
+              +dropdown-row({label: 'Кровати', number: '2'})
+              +dropdown-row({label: 'Ванные комнаты', number: '0'})
+          .search-room__filter-options
+            +checkbox-list({text: 'Дополнительные удобства'})
+              +checkbox-button({value: 'Завтрак'})
+              +checkbox-button({value: 'Письменный стол', checked: 'checked'})
+              +checkbox-button({value: 'Стул для кормления', checked: 'checked'})
+              +checkbox-button({value: 'Кроватка', checked: 'checked'})
+              +checkbox-button({value: 'Телевизор'})
+              +checkbox-button({value: 'Шампунь'})
+              +checkbox-button({value: 'Телевизор'})
+              +checkbox-button({value: 'Шампунь'})
+        .search-room__result
+          h1.search-room__result-title Номера, которые мы для вас подобрали
+          .search-room__result-cards-numbers
+            .search-room__card-number
+              +number-card({number: '888', text: 'люкс', cost: '9 990', amount: '145'})
+            .search-room__card-number
+              +number-card({number: '840', cost: '9 990', amount: '65'})
+            .search-room__card-number
+              +number-card({number: '980', text: 'люкс', cost: '8 500', amount: '35'})
+            .search-room__card-number
+              +number-card({number: '856', cost: '7 300', amount: '19'})
+            .search-room__card-number
+              +number-card({number: '740', cost: '6 000', amount: '44'})
+            .search-room__card-number
+              +number-card({number: '982', cost: '5 800', amount: '56'})
+            .search-room__card-number
+              +number-card({number: '678', cost: '5 500', amount: '45'})
+            .search-room__card-number
+              +number-card({number: '450', cost: '5 300', amount: '39'})
+            .search-room__card-number
+              +number-card({number: '350', cost: '5 000', amount: '77'})
+            .search-room__card-number
+              +number-card({number: '666', cost: '5 000', amount: '25'})
+            .search-room__card-number
+              +number-card({number: '444', cost: '5 000', amount: '15'})
+            .search-room__card-number
+              +number-card({number: '352', cost: '5 000', amount: '55'})
+          .search-room__result-pagination
+            +pagination({text: '1 – 12 из 100+ вариантов аренды'})
+      .search-room__footer
+        +footer()
+      +copyright()

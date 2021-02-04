@@ -1,33 +1,35 @@
 .sign-in {
-  background-image: url('../../src/pages/sign-in/images/image4.png');
-  background-repeat: no-repeat;
-
-  @media (width: 280px) {
-    min-height: 1740px;
-  }
-  @media (width: 320px) {
-    min-height: 1690px;
-  }
-  @media (width: 360px) {
-    min-height: 1710px;
-  }
-  @media (width: 375px) {
-    min-height: 1940px;
-  }
-  @media (width: 411px) {
-    min-height: 1895px;
-  }
-  @media (width: 414px) {
-    min-height: 1810px;
-  }
-  @media (width: 540px) {
-    min-height: 1700px;
-  }
-  @media (width: 768px) {
-    min-height: 1880px;
-  }
-  @media (width: 1024px) {
-    min-height: 2230px;
+  &__wrapper {
+    background-image: url('../../src/pages/sign-in/images/image4.png');
+    background-repeat: no-repeat;
+  
+    @media (width: 280px) {
+      min-height: 1740px;
+    }
+    @media (width: 320px) {
+      min-height: 1690px;
+    }
+    @media (width: 360px) {
+      min-height: 1710px;
+    }
+    @media (width: 375px) {
+      min-height: 1940px;
+    }
+    @media (width: 411px) {
+      min-height: 1895px;
+    }
+    @media (width: 414px) {
+      min-height: 1810px;
+    }
+    @media (width: 540px) {
+      min-height: 1700px;
+    }
+    @media (width: 768px) {
+      min-height: 1880px;
+    }
+    @media (width: 1024px) {
+      min-height: 2230px;
+    }
   }
 
   &__header {

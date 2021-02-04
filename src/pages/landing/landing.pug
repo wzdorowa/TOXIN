@@ -16,15 +16,16 @@ block title
     title Landing page
 block content
   .landing
-    .landing__header
-      .landing__header-container
-        +header()
-    .landing__container
-      .landing__content
-        .landing__form-search-room
-          -const landingDateFormat = ['19.08.2019', '23.08.2019']
-          +form-search-room({text: 'Найдём номера под ваши пожелания', dateFormat: landingDateFormat})
-        p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-    .landing__footer
-      +footer()
-    +copyright()
+    .landing__wrapper
+      .landing__header
+        .landing__header-container
+          +header()
+      .landing__container
+        .landing__content
+          .landing__form-search-room
+            -const landingDateFormat = ['19.08.2019', '23.08.2019']
+            +form-search-room({text: 'Найдём номера под ваши пожелания', dateFormat: landingDateFormat})
+          p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+      .landing__footer
+        +footer()
+      +copyright()
