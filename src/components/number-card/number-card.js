@@ -27,11 +27,11 @@ class NumberCard {
     );
   }
 
-  showSlides(n) {
-    if (n > this.slides.length) {
+  showSlides(slideNumber) {
+    if (slideNumber > this.slides.length) {
       this.slideIndex = 1;
     }
-    if (n < 1) {
+    if (slideNumber < 1) {
       this.slideIndex = this.slides.length;
     }
     this.slides.forEach(element => {
@@ -50,8 +50,8 @@ class NumberCard {
       ' number-card__switch-slider-active';
   }
 
-  currentSlide(n) {
-    this.showSlides((this.slideIndex = n));
+  currentSlide(slideNumber) {
+    this.showSlides((this.slideIndex = slideNumber));
   }
 
   handleButtonPrevClick() {
