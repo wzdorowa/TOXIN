@@ -11,12 +11,7 @@ class Dropdown {
     this.numbers = null;
 
     this.findElement();
-    this.listenClickDropdownArrow();
-    this.listenFocusInput();
-    this.listenButtonApply();
-    this.listenButtonClear();
-    this.listenClickDocument();
-    this.listenRowsGroup();
+    this.bindEventListeners();
   }
 
   findElement() {
@@ -45,57 +40,33 @@ class Dropdown {
   }
 
   toggleClass() {
-    if (
-      this.dropdownList.classList.contains('dropdown__content_visible') ===
-      false
-    ) {
-      this.addClass();
-    } else if (
-      this.dropdownList.classList.contains('dropdown__content_visible')
-    ) {
+    this.dropdownList.classList.toggle('dropdown__content_visible');
+  }
+
+  handleIconArrowDownClick() {
+    this.toggleClass();
+  }
+
+  handleInputContentFocus() {
+    this.addClass();
+  }
+
+  handleButtonsContainerForApplyClick() {
+    this.removeClass();
+  }
+
+  handleButtonsContainerForClearClick() {
+    this.elementInput.value = '';
+    this.numbers.forEach(number => {
+      const element = number;
+      element.innerHTML = '0';
+    });
+  }
+
+  handleDocumentClick(event) {
+    if (event.target.closest('.dropdown') !== this.dropdown) {
       this.removeClass();
     }
-  }
-
-  listenClickDropdownArrow() {
-    const toggleClass = () => {
-      this.toggleClass();
-    };
-    this.dropdownArrow.addEventListener('click', toggleClass);
-  }
-
-  listenFocusInput() {
-    const addClass = () => {
-      this.addClass();
-    };
-    this.elementInput.addEventListener('focus', addClass);
-  }
-
-  listenButtonApply() {
-    const removeClass = () => {
-      this.removeClass();
-    };
-    this.buttonApply.addEventListener('click', removeClass);
-  }
-
-  listenButtonClear() {
-    const clearInput = () => {
-      this.elementInput.value = '';
-      this.numbers.forEach(number => {
-        const element = number;
-        element.innerHTML = '0';
-      });
-    };
-    this.buttonClear.addEventListener('click', clearInput);
-  }
-
-  listenClickDocument() {
-    const removeClass = event => {
-      if (event.target.closest('.dropdown') !== this.dropdown) {
-        this.removeClass();
-      }
-    };
-    document.addEventListener('click', removeClass);
   }
 
   countValues(result, values, declinations) {
@@ -181,27 +152,48 @@ class Dropdown {
     this.countValues(amountAmenities, amenities, declinations);
   }
 
-  listenRowsGroup() {
-    const defineCategory = event => {
-      event.preventDefault();
+  handleDropdownRowsClick(event) {
+    event.preventDefault();
 
-      this.elementInput.value = null;
-      if (
-        this.rowsGroupParent.classList.contains(
-          'dropdown__rows_for-count-the-guests',
-        ) === true
-      ) {
-        this.countTheGuests();
-      } else if (
-        this.rowsGroupParent.classList.contains(
-          'dropdown__rows_for-count-amenities',
-        ) === true
-      ) {
-        this.countAmenities();
-      }
-    };
+    this.elementInput.value = null;
+    if (
+      this.rowsGroupParent.classList.contains(
+        'dropdown__rows_for-count-the-guests',
+      ) === true
+    ) {
+      this.countTheGuests();
+    } else if (
+      this.rowsGroupParent.classList.contains(
+        'dropdown__rows_for-count-amenities',
+      ) === true
+    ) {
+      this.countAmenities();
+    }
+  }
+
+  bindEventListeners() {
+    this.dropdownArrow.addEventListener(
+      'click',
+      this.handleIconArrowDownClick.bind(this),
+    );
+    this.elementInput.addEventListener(
+      'focus',
+      this.handleInputContentFocus.bind(this),
+    );
+    this.buttonApply.addEventListener(
+      'click',
+      this.handleButtonsContainerForApplyClick.bind(this),
+    );
+    this.buttonClear.addEventListener(
+      'click',
+      this.handleButtonsContainerForClearClick.bind(this),
+    );
+    document.addEventListener('click', this.handleDocumentClick.bind(this));
     this.rowsGroup.forEach(element => {
-      element.addEventListener('click', defineCategory);
+      element.addEventListener(
+        'click',
+        this.handleDropdownRowsClick.bind(this),
+      );
     });
   }
 }
