@@ -9,11 +9,7 @@ class Datepicker {
     this.calendar = null;
 
     this.findElement();
-    this.listenFocusInput();
-    this.listenClickDropdownArrow();
-    this.listenButtonApply();
-    this.listenButtonClear();
-    this.listenClickDocument();
+    this.bindEventListeners();
     this.setValueToInput();
   }
 
@@ -45,17 +41,7 @@ class Datepicker {
   }
 
   toggleClass() {
-    if (
-      this.datepicker.classList.contains(
-        'datepicker-group__datepicker_visible',
-      ) === false
-    ) {
-      this.addClass();
-    } else if (
-      this.datepicker.classList.contains('datepicker-group__datepicker_visible')
-    ) {
-      this.removeClass();
-    }
+    this.datepicker.classList.toggle('datepicker-group__datepicker_visible');
   }
 
   clearValues() {
@@ -64,45 +50,54 @@ class Datepicker {
     $calendar.clear();
   }
 
-  listenFocusInput() {
-    const addClass = () => {
-      this.addClass();
-    };
-    this.elementsInput.forEach(elementInput => {
-      elementInput.addEventListener('focus', addClass);
-    });
+  handleInputContentFocus() {
+    this.addClass();
   }
 
-  listenClickDropdownArrow() {
-    const toggleClass = () => {
-      this.toggleClass();
-    };
-    this.dropdownsArrow.forEach(dropdownArrow => {
-      dropdownArrow.addEventListener('click', toggleClass);
-    });
+  handleIconArrowDownClick() {
+    this.toggleClass();
   }
 
-  listenButtonApply() {
-    const removeClass = () => {
+  handleButtonsContainerForApplyClick() {
+    this.removeClass();
+  }
+
+  handleButtonsContainerForClearClick() {
+    this.clearValues();
+  }
+
+  handleDocumentClick(event) {
+    if (!this.datepickerGroup.contains(event.target)) {
       this.removeClass();
-    };
-    this.buttonApply.addEventListener('click', removeClass);
+    }
   }
 
-  listenButtonClear() {
-    const clearValues = () => {
-      this.clearValues();
-    };
-    this.buttonClear.addEventListener('click', clearValues);
-  }
-
-  listenClickDocument() {
-    const removeClass = event => {
-      if (!this.datepickerGroup.contains(event.target)) {
-        this.removeClass();
-      }
-    };
-    document.addEventListener('click', removeClass, true);
+  bindEventListeners() {
+    this.elementsInput.forEach(elementInput => {
+      elementInput.addEventListener(
+        'focus',
+        this.handleInputContentFocus.bind(this),
+      );
+    });
+    this.dropdownsArrow.forEach(dropdownArrow => {
+      dropdownArrow.addEventListener(
+        'click',
+        this.handleIconArrowDownClick.bind(this),
+      );
+    });
+    this.buttonApply.addEventListener(
+      'click',
+      this.handleButtonsContainerForApplyClick(this),
+    );
+    this.buttonClear.addEventListener(
+      'click',
+      this.handleButtonsContainerForClearClick(this),
+    );
+    document.addEventListener(
+      'click',
+      this.handleDocumentClick.bind(this),
+      true,
+    );
   }
 
   setValueToInput() {

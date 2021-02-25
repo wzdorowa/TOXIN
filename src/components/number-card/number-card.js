@@ -9,9 +9,7 @@ class NumberCard {
 
     this.findElements();
     this.showSlides(this.slideIndex);
-    this.listenClickButtonPrev();
-    this.listenClickButtonNext();
-    this.listenClickDots();
+    this.bindEventListeners();
   }
 
   findElements() {
@@ -56,26 +54,29 @@ class NumberCard {
     this.showSlides((this.slideIndex = n));
   }
 
-  listenClickButtonPrev() {
-    const showPrevSlides = () => {
-      this.showSlides((this.slideIndex -= 1));
-    };
-    this.buttonPrev.addEventListener('click', showPrevSlides);
+  handleButtonPrevClick() {
+    this.showSlides((this.slideIndex -= 1));
   }
 
-  listenClickButtonNext() {
-    const showNextSlides = () => {
-      this.showSlides((this.slideIndex += 1));
-    };
-    this.buttonNext.addEventListener('click', showNextSlides);
+  handleButtonNextClick() {
+    this.showSlides((this.slideIndex += 1));
   }
 
-  listenClickDots() {
-    this.dots.forEach((element, i) => {
-      const showCurrentSlide = () => {
-        this.currentSlide(i + 1);
-      };
-      element.addEventListener('click', showCurrentSlide);
+  handleDotsClick(index) {
+    this.currentSlide(index + 1);
+  }
+
+  bindEventListeners() {
+    this.buttonPrev.addEventListener(
+      'click',
+      this.handleButtonPrevClick.bind(this),
+    );
+    this.buttonNext.addEventListener(
+      'click',
+      this.handleButtonNextClick.bind(this),
+    );
+    this.dots.forEach((element, index) => {
+      element.addEventListener('click', this.handleDotsClick.bind(this, index));
     });
   }
 }

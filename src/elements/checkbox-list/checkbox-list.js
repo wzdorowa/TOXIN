@@ -6,8 +6,7 @@ class CheckboxList {
     this.checkboxListIndicator = null;
 
     this.findElements();
-    this.listenClickCheckboxListTitle();
-    this.listenClickDocument();
+    this.bindEventListeners();
   }
 
   findElements() {
@@ -22,27 +21,25 @@ class CheckboxList {
     );
   }
 
-  listenClickCheckboxListTitle() {
-    const toggleClassList = () => {
-      this.checkboxListToggle.classList.toggle(
-        'checkbox-list__container_hidden',
-      );
-      this.checkboxListIndicator.classList.toggle(
-        'checkbox-list__indicator_opened',
-      );
-    };
-    this.checkboxListTitle.addEventListener('click', toggleClassList);
+  handleCheckboxListTitleClick() {
+    this.checkboxListToggle.classList.toggle('checkbox-list__container_hidden');
+    this.checkboxListIndicator.classList.toggle(
+      'checkbox-list__indicator_opened',
+    );
   }
 
-  listenClickDocument() {
-    const addClass = event => {
-      if (event.target.closest('.checkbox-list') !== this.checkboxList) {
-        this.checkboxListToggle.classList.add(
-          'checkbox-list__container_hidden',
-        );
-      }
-    };
-    document.addEventListener('click', addClass);
+  handleDocumentClick(event) {
+    if (event.target.closest('.checkbox-list') !== this.checkboxList) {
+      this.checkboxListToggle.classList.add('checkbox-list__container_hidden');
+    }
+  }
+
+  bindEventListeners() {
+    this.checkboxListTitle.addEventListener(
+      'click',
+      this.handleCheckboxListTitleClick.bind(this),
+    );
+    document.addEventListener('click', this.handleDocumentClick.bind(this));
   }
 }
 

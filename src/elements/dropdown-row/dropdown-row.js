@@ -8,8 +8,7 @@ class DropdownRow {
     this.numberContainer = null;
 
     this.findElements();
-    this.listenClickPlusSign();
-    this.listenClickMinusSign();
+    this.bindEventListeners();
   }
 
   findElements() {
@@ -40,18 +39,23 @@ class DropdownRow {
     }
   }
 
-  listenClickPlusSign() {
-    const add = () => {
-      this.add();
-    };
-    this.plusSign.addEventListener('click', add);
+  handlePlusSignClick() {
+    this.add();
   }
 
-  listenClickMinusSign() {
-    const subtract = () => {
-      this.subtract();
-    };
-    this.minusSign.addEventListener('click', subtract);
+  handleMinusSignClick() {
+    this.subtract();
+  }
+
+  bindEventListeners() {
+    this.plusSign.addEventListener(
+      'click',
+      this.handlePlusSignClick.bind(this),
+    );
+    this.minusSign.addEventListener(
+      'click',
+      this.handleMinusSignClick.bind(this),
+    );
   }
 }
 

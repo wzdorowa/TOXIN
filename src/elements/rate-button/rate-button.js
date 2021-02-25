@@ -4,9 +4,7 @@ class Rating {
     this.ratingItems = null;
 
     this.findElements();
-    this.listenClickRating();
-    this.listenMouseoverRating();
-    this.listenMouseoutRating();
+    this.bindEventListener();
   }
 
   findElements() {
@@ -51,35 +49,38 @@ class Rating {
     }
   }
 
-  listenClickRating() {
-    const setCurrentRating = event => {
-      const targetElement = event.target;
-      if (targetElement.classList.contains('rating-item')) {
-        this.removeClass(this.ratingItems, 'current-active');
-        targetElement.classList.add('active', 'current-active');
-      }
-    };
-    this.rating.addEventListener('click', setCurrentRating);
+  handleRatingClick(event) {
+    const targetElement = event.target;
+    if (targetElement.classList.contains('rating-item')) {
+      this.removeClass(this.ratingItems, 'current-active');
+      targetElement.classList.add('active', 'current-active');
+    }
   }
 
-  listenMouseoverRating() {
-    const showActiveRating = event => {
-      const targetElement = event.target;
-      if (targetElement.classList.contains('rating-item')) {
-        this.removeClass(this.ratingItems, 'active');
-        targetElement.classList.add('active');
-        this.mouseOverActiveClass(this.ratingItems);
-      }
-    };
-    this.rating.addEventListener('mouseover', showActiveRating);
+  handleRatingMouseover(event) {
+    const targetElement = event.target;
+    if (targetElement.classList.contains('rating-item')) {
+      this.removeClass(this.ratingItems, 'active');
+      targetElement.classList.add('active');
+      this.mouseOverActiveClass(this.ratingItems);
+    }
   }
 
-  listenMouseoutRating() {
-    const showCurrentRating = () => {
-      this.addClass(this.ratingItems, 'active');
-      this.mouseOutActiveClass(this.ratingItems);
-    };
-    this.rating.addEventListener('mouseout', showCurrentRating);
+  handleRatingMouseout() {
+    this.addClass(this.ratingItems, 'active');
+    this.mouseOutActiveClass(this.ratingItems);
+  }
+
+  bindEventListener() {
+    this.rating.addEventListener('click', this.handleRatingClick.bind(this));
+    this.rating.addEventListener(
+      'mouseover',
+      this.handleRatingMouseover.bind(this),
+    );
+    this.rating.addEventListener(
+      'mouseout',
+      this.handleRatingMouseout.bind(this),
+    );
   }
 }
 $('.rating').each((index, element) => {
