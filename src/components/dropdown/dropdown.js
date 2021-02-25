@@ -159,13 +159,13 @@ class Dropdown {
     if (
       this.rowsGroupParent.classList.contains(
         'dropdown__rows_for-count-the-guests',
-      ) === true
+      )
     ) {
       this.countTheGuests();
     } else if (
       this.rowsGroupParent.classList.contains(
         'dropdown__rows_for-count-amenities',
-      ) === true
+      )
     ) {
       this.countAmenities();
     }
