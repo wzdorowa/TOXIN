@@ -7,9 +7,9 @@ mixin header()
     .header__grouping
       .header__logo
         +logo()   
-      .header__user-icon
-      .header__navigation-icon 
-    ul.header__navigation
+      .header__user-icon.js-header__user-icon
+      .header__navigation-icon.js-header__navigation-icon
+    ul.header__navigation.js-header__navigation
       each value, index in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
         - var itemName = value
         if(itemName === 'Услуги' || itemName === 'Соглашения')
@@ -18,7 +18,7 @@ mixin header()
         else
           li.header__item
             a.header__link(href='')= value
-    .header__user
+    .header__user.js-header__user
       form.header__user-button-login(action='/TOXIN/pages/sign-in/sign-in.html', target='_blank')
         +base-button({text: 'Войти', decor: 'border', type: 'submit'})
       form.header__user-button-registration(action='/TOXIN/pages/registration/registration.html', target='_blank')

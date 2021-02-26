@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $('.search-room__filter-access').click(() => {
-    $('.search-room__filter').slideToggle();
+  $('.js-search-room__filter-access').click(() => {
+    $('.js-search-room__filter').slideToggle();
   });
 });

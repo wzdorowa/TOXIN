@@ -1,8 +1,8 @@
 mixin checkbox-list({text = 'Text'} = {text})
-  .checkbox-list
-    .checkbox-list__title
+  .checkbox-list.js-checkbox-list
+    .checkbox-list__title.js-checkbox-list__title
       span.checkbox-list__description= text
-      span.checkbox-list__indicator
-    .checkbox-list__container(class='checkbox-list__container_hidden')
+      span.checkbox-list__indicator.js-checkbox-list__indicator
+    .checkbox-list__container(class='checkbox-list__container_hidden js-checkbox-list__container_hidden')
       .checkbox-list__content
         block

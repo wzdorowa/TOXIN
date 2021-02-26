@@ -1,7 +1,7 @@
 include ../../elements/dropdown-row/dropdown-row.pug
 
 mixin dropdown({label, placeholder = 'Выберите нужное количество', isHide = false, readonly = 'readonly', display = '', dropdownFor = ''} = {label, placeholder, isHide, readonly, display, dropdownFor})
-  .dropdown
+  .dropdown.js-dropdown
     .dropdown__list
       +base-input({
         label: label,
@@ -12,11 +12,11 @@ mixin dropdown({label, placeholder = 'Выберите нужное количе
         readonly: readonly,
         areInDropdown: true,
       })
-    .dropdown__content
-      .dropdown__rows(class=`${'dropdown__rows_for-count-'}${dropdownFor}`)
+    .dropdown__content.js-dropdown__content
+      .dropdown__rows.js-dropdown__rows(class=`${'dropdown__rows_for-count-'}${dropdownFor}`)
         block
       .dropdown__buttons(class=`${'dropdown__buttons_'}${display}`)
-        .dropdown__buttons-container.dropdown__buttons-container_for-clear
+        .dropdown__buttons-container.dropdown__buttons-container_for-clear.js-dropdown__buttons-container_for-clear
           +base-button({text: 'Очистить', decor: 'noDecor'})
-        .dropdown__buttons-container.dropdown__buttons-container_for-apply
+        .dropdown__buttons-container.dropdown__buttons-container_for-apply.js-dropdown__buttons-container_for-apply
           +base-button({text: 'Применить', decor: 'noDecor'})

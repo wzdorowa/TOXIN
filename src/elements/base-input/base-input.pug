@@ -2,7 +2,7 @@ mixin base-input({label, placeholder = 'Введите значение', type =
   div.input()
     span(class=`input__description ${isHide ? 'input__description_hidden' : ''}`)= label
     .input__wrapper
-      input.input__content(class=`${hasBorderRadiusTop ? 'input__content_with-border-radius-top' : ''}`,
+      input.input__content.js-input__content(class=`${hasBorderRadiusTop ? 'input__content_with-border-radius-top' : ''}`,
       class=`${hasBorderRadiusBottom ? 'input__content_with-border-radius-bottom' : ''}`, class=`${areInDropdown ? 'input__content_for-dropdown' : ''}`, type= type,
       name='input-content', placeholder= placeholder, readonly= readonly)
-      span(class=`${'input__icon-'}${arrow}`)
+      span(class=`${'input__icon-'}${arrow} ${'js-input__icon-'}${arrow}`)

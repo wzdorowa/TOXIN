@@ -8,7 +8,7 @@ class Rating {
   }
 
   findElements() {
-    this.ratingItems = Array.from($(this.rating).children('.rating-item'));
+    this.ratingItems = Array.from($(this.rating).children('.js-rating-item'));
   }
 
   removeClass(array, className) {
@@ -83,6 +83,6 @@ class Rating {
     );
   }
 }
-$('.rating').each((index, element) => {
+$('.js-rating').each((index, element) => {
   new Rating(element);
 });

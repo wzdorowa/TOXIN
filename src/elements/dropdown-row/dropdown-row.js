@@ -12,9 +12,11 @@ class DropdownRow {
   }
 
   findElements() {
-    this.listItems = this.dropdownRow.querySelectorAll('.dropdown-row__amount');
+    this.listItems = this.dropdownRow.querySelectorAll(
+      '.js-dropdown-row__amount',
+    );
     this.signs = this.dropdownRow.querySelectorAll(
-      '.dropdown-row__amount_with-sign',
+      '.js-dropdown-row__amount_with-sign',
     );
     [this.firstArg, this.numberContainer] = this.listItems;
     [this.minusSign, this.plusSign] = this.signs;
@@ -59,7 +61,7 @@ class DropdownRow {
   }
 }
 
-const dropdownRows = document.querySelectorAll('.dropdown-row');
+const dropdownRows = document.querySelectorAll('.js-dropdown-row');
 dropdownRows.forEach(element => {
   new DropdownRow(element);
 });

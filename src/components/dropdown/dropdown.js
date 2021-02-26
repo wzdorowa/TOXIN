@@ -15,19 +15,21 @@ class Dropdown {
   }
 
   findElement() {
-    this.elementInput = this.dropdown.querySelector('.input__content');
-    this.dropdownList = this.dropdown.querySelector('.dropdown__content');
-    this.dropdownArrow = this.dropdown.querySelector('.input__icon-arrow-down');
+    this.elementInput = this.dropdown.querySelector('.js-input__content');
+    this.dropdownList = this.dropdown.querySelector('.js-dropdown__content');
+    this.dropdownArrow = this.dropdown.querySelector(
+      '.js-input__icon-arrow-down',
+    );
     this.buttonApply = this.dropdown.querySelector(
-      '.dropdown__buttons-container_for-apply',
+      '.js-dropdown__buttons-container_for-apply',
     );
     this.buttonClear = this.dropdown.querySelector(
-      '.dropdown__buttons-container_for-clear',
+      '.js-dropdown__buttons-container_for-clear',
     );
     this.rowsGroupParent = this.dropdown.querySelector('.dropdown__rows');
-    this.rowsGroup = this.dropdown.querySelectorAll('.dropdown-row');
+    this.rowsGroup = this.dropdown.querySelectorAll('.js-dropdown-row');
     this.numbers = this.dropdown.querySelectorAll(
-      '.dropdown-row__amount_with-count',
+      '.js-dropdown-row__amount_with-count',
     );
   }
 
@@ -198,7 +200,7 @@ class Dropdown {
   }
 }
 
-const elements = document.querySelectorAll('.dropdown');
+const elements = document.querySelectorAll('.js-dropdown');
 elements.forEach(element => {
   new Dropdown(element);
 });

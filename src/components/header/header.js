@@ -10,10 +10,10 @@ class Header {
   }
 
   findElements() {
-    this.userIcon = document.querySelector('.header__user-icon');
-    this.user = document.querySelector('.header__user');
-    this.navigationIcon = document.querySelector('.header__navigation-icon');
-    this.navigation = document.querySelector('.header__navigation');
+    this.userIcon = document.querySelector('.js-header__user-icon');
+    this.user = document.querySelector('.js-header__user');
+    this.navigationIcon = document.querySelector('.js-header__navigation-icon');
+    this.navigation = document.querySelector('.js-header__navigation');
   }
 
   handleUserIconClick() {

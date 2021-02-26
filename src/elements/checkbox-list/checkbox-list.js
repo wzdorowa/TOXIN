@@ -11,13 +11,13 @@ class CheckboxList {
 
   findElements() {
     this.checkboxListTitle = this.checkboxList.querySelector(
-      '.checkbox-list__title',
+      '.js-checkbox-list__title',
     );
     this.checkboxListToggle = this.checkboxList.querySelector(
-      '.checkbox-list__container_hidden',
+      '.js-checkbox-list__container_hidden',
     );
     this.checkboxListIndicator = this.checkboxList.querySelector(
-      '.checkbox-list__indicator',
+      '.js-checkbox-list__indicator',
     );
   }
 
@@ -43,7 +43,7 @@ class CheckboxList {
   }
 }
 
-const checkboxLists = document.querySelectorAll('.checkbox-list');
+const checkboxLists = document.querySelectorAll('.js-checkbox-list');
 checkboxLists.forEach(element => {
   new CheckboxList(element);
 });

@@ -2,7 +2,7 @@ include ../../components/datepicker/datepicker.pug
 include ../../elements/base-input/base-input.pug
 
 mixin datepicker-with-inputs({labelArray = ['date dropdown', 'date dropdown'], dates = ['ДД.ММ.ГГГГ','ДД.ММ.ГГГГ'], size = 'large-width', amountField = 'two'} = {labelArray, dates, size, amountField})
-  .datepicker-group
+  .datepicker-group.js-datepicker-group
     .datepicker-group__inputs
       if (amountField === 'only')
         .datepicker-group__input(class=`datepicker-group__input_${size}`)
@@ -36,5 +36,5 @@ mixin datepicker-with-inputs({labelArray = ['date dropdown', 'date dropdown'], d
             readonly: 'readonly',
             areInDropdown: true,
           })
-    .datepicker-group__datepicker(class=`datepicker-group__datepicker_${amountField}`)
+    .datepicker-group__datepicker.js-datepicker-group__datepicker(class=`datepicker-group__datepicker_${amountField}`)
       +datepicker()

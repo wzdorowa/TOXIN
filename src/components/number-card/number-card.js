@@ -14,16 +14,16 @@ class NumberCard {
 
   findElements() {
     this.slides = this.numberCardContainer.querySelectorAll(
-      '.number-card__content',
+      '.js-number-card__content',
     );
     this.dots = this.numberCardContainer.querySelectorAll(
-      '.number-card__switch-slider',
+      '.js-number-card__switch-slider',
     );
     this.buttonPrev = this.numberCardContainer.querySelector(
-      '.number-card__prev',
+      '.js-number-card__prev',
     );
     this.buttonNext = this.numberCardContainer.querySelector(
-      '.number-card__next',
+      '.js-number-card__next',
     );
   }
 
@@ -80,7 +80,7 @@ class NumberCard {
     });
   }
 }
-const elements = document.querySelectorAll('.number-card');
+const elements = document.querySelectorAll('.js-number-card');
 elements.forEach(element => {
   new NumberCard(element);
 });

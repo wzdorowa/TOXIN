@@ -15,21 +15,21 @@ class Datepicker {
 
   findElement() {
     this.datepicker = this.datepickerGroup.querySelector(
-      '.datepicker-group__datepicker',
+      '.js-datepicker-group__datepicker',
     );
     this.elementsInput = this.datepickerGroup.querySelectorAll(
-      '.input__content',
+      '.js-input__content',
     );
     this.dropdownsArrow = this.datepickerGroup.querySelectorAll(
-      '.input__icon-arrow-down',
+      '.js-input__icon-arrow-down',
     );
     this.buttonApply = this.datepickerGroup.querySelector(
-      '.calendar__buttons-container_for-apply',
+      '.js-calendar__buttons-container_for-apply',
     );
     this.buttonClear = this.datepickerGroup.querySelector(
-      '.calendar__buttons-container_for-clear',
+      '.js-calendar__buttons-container_for-clear',
     );
-    this.calendar = this.datepickerGroup.querySelector('.calendar__content');
+    this.calendar = this.datepickerGroup.querySelector('.js-calendar__content');
   }
 
   addClass() {
@@ -45,7 +45,7 @@ class Datepicker {
   }
 
   clearValues() {
-    const $myCalendar = $(this.datepickerGroup).find('.calendar__content');
+    const $myCalendar = $(this.datepickerGroup).find('.js-calendar__content');
     const $calendar = $($myCalendar).datepicker().data('datepicker');
     $calendar.clear();
   }
@@ -112,7 +112,9 @@ class Datepicker {
         multipleDatesSeparator: ' - ',
         dateFormat: 'dd M',
         onSelect: (fd, dates) => {
-          const input = this.datepickerGroup.querySelector('.input__content');
+          const input = this.datepickerGroup.querySelector(
+            '.js-input__content',
+          );
           let string = '';
 
           if (dates) {
@@ -131,7 +133,7 @@ class Datepicker {
         dateFormat: 'dd.mm.yyyy',
         onSelect: fd => {
           const inputs = this.datepickerGroup.querySelectorAll(
-            '.input__content',
+            '.js-input__content',
           );
           let dayFrom = '';
           let dayTo = '';
@@ -152,7 +154,7 @@ class Datepicker {
   }
 }
 
-const elements = document.querySelectorAll('.datepicker-group');
+const elements = document.querySelectorAll('.js-datepicker-group');
 elements.forEach(element => {
   new Datepicker(element);
 });
