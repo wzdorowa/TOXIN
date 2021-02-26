@@ -7,7 +7,7 @@ mixin form-search-room({text = 'Form name', dateFormat = ['ДД.ММ.ГГГГ', 
   .form-search-room
     span.form-search-room__title= text
     -const labelInputs = ['Прибытие', 'Выезд']
-    +datepicker-with-inputs({labelArray: labelInputs, dates: dateFormat, size: 'small-width', amountField: 'two'})
+    +datepicker-with-inputs({labelArray: labelInputs, dates: dateFormat, size: 'small', amountField: 'two'})
     .form-search-room__dropdown-container
       +dropdown({
         label: 'Гости',

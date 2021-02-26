@@ -25,7 +25,7 @@ mixin room-cost-form({number = '100', text = 'text', cost = '1000', dateFormat =
                 visibilityDescriptionSign: 'hidden'
               })
       -const label = ['Прибытие', 'Выезд']
-      +datepicker-with-inputs({labelArray: label, dates: dateFormat, size: 'small-width', amountField: 'two'})
+      +datepicker-with-inputs({labelArray: label, dates: dateFormat, size: 'small', amountField: 'two'})
       .room-cost-form__dropdown-container
         +dropdown({
           label: 'Гости',
