@@ -5,6 +5,7 @@ body {
   &__wrapper {
     background-image: url('../../src/pages/landing/image/image-3.png');
     background-repeat: no-repeat;
+    background-position: top;
   
     @media (width: 280px) {
       min-height: 1850px;
