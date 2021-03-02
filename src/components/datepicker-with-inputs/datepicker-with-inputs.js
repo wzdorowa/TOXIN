@@ -63,6 +63,7 @@ class Datepicker {
   }
 
   handleButtonsContainerForClearClick() {
+    console.log(this);
     this.clearValues();
   }
 
@@ -87,11 +88,11 @@ class Datepicker {
     });
     this.buttonApply.addEventListener(
       'click',
-      this.handleButtonsContainerForApplyClick(this),
+      this.handleButtonsContainerForApplyClick.bind(this),
     );
     this.buttonClear.addEventListener(
       'click',
-      this.handleButtonsContainerForClearClick(this),
+      this.handleButtonsContainerForClearClick.bind(this),
     );
     document.addEventListener(
       'click',
