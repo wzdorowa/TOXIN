@@ -6,14 +6,18 @@
 
   &__sign {
     height: 40px;
+    outline: none;
+    border: none;
+    background-color: white;
+    cursor: pointer;
 
     &::before {
       position: absolute;
       content: '';
       width: 11.76px;
       height: 11.76px;
-      top: 14px;
-      left: 9px;
+      top: 15px;
+      left: 15px;
       background-image: url('../elements/logo/images/Vector-1.svg');
     }
 
@@ -22,8 +26,8 @@
       content: '';
       width: 8px;
       height: 5.91px;
-      top: 13px;
-      left: 21px;
+      top: 14px;
+      left: 27px;
       background-image: url('../elements/logo/images/Vector-2.svg');
     }
   }
@@ -31,5 +35,9 @@
   &__text {
     padding-top: 15px;
     height: 36px;
+    outline: none;
+    border: none;
+    background-color: white;
+    cursor: pointer;
   }
 }
