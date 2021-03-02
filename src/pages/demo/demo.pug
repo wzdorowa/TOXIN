@@ -139,13 +139,13 @@ block content
         .components__dropdown
             +dropdown({
               label: 'Удобства номера',
-              placeholder: '2 спальни, 2 кровати...',
+              placeholder: '2 спальни, 2 кровати',
               display: 'hidden',
               readonly: 'readonly',
               dropdownFor: 'amenities'
             })
               +dropdown-row({label: 'Спальни', number: '2'})
-              +dropdown-row({label: 'Кровати', number: '1'})
+              +dropdown-row({label: 'Кровати', number: '2'})
               +dropdown-row({label: 'Ванные комнаты', number: '0'})
     .components
       .components__wrapper

@@ -93,11 +93,18 @@ class Dropdown {
         }
       });
       newString.forEach((string, index) => {
+        const futureStringLength =
+          this.elementInput.value.length + newString[index].length;
         if (
           (index === 0 && newString.length === 1) ||
           index === newString.length - 1
         ) {
-          this.elementInput.value += `${newString[index]}`;
+          if (futureStringLength >= 23) {
+            const stringWithoutComma = this.elementInput.value.substring(0, 20);
+            this.elementInput.value = `${stringWithoutComma}...`;
+          } else {
+            this.elementInput.value += `${newString[index]}`;
+          }
         } else if (index < newString.length - 1 && newString.length > 1) {
           this.elementInput.value += `${newString[index]}, `;
         }
