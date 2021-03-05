@@ -80,7 +80,7 @@
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
-    color: $DarkShade25;
+    color: $DarkShade100;
     padding-left: 12px;
     padding-right: 40px;
 
@@ -91,9 +91,9 @@
     }
 
     &::placeholder {
-      font-family: inherit;
-      font-size: inherit;
-      line-height: inherit;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 14px;
+      line-height: 18px;
       color: $DarkShade25;
     }
 
