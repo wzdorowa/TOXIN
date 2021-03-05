@@ -16,7 +16,7 @@
     min-width: 320px;
     min-height: 500px;
 
-    &-item_medium-width {
+    &-item_width_medium {
       width: 265px;
     }
   }
@@ -28,11 +28,11 @@
     justify-content: space-between;
     min-width: 260px;
 
-    &_first-column {
+    &_column_first {
       height: 470px;
     }
 
-    &_last-column {
+    &_column_last {
       height: 420px;
     }
   }

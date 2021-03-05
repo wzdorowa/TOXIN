@@ -71,7 +71,7 @@ block content
                   size: 'small',
                   amountField: 'two'
                 })
-            .components__inputs-item.components__inputs-item_medium-width
+            .components__inputs-item.components__inputs-item_width_medium
                 - const filterDatesDropdown = ['ДД.ММ - ДД.ММ']
                 - const filterDateDropdownLabel = ['Filter date dropdown']
                 +datepicker-with-inputs({
@@ -80,7 +80,7 @@ block content
                   size: 'large',
                   amountField: 'only',
                 })
-            .components__inputs-item.components__inputs-item_medium-width.components__inputs-item_for-email
+            .components__inputs-item.components__inputs-item_width_medium.components__inputs-item_type_email
                     +base-input({
                       label: 'Subscription text field',
                       placeholder: 'Email',
@@ -89,7 +89,7 @@ block content
                       hasBorderRadiusTop: true,
                       hasBorderRadiusBottom: true,
                     })
-        .components__elements.components__elements_first-column
+        .components__elements.components__elements_column_first
             .components__checkbox-buttons
                 h1.buttons-title Chechbox buttons
                 +checkbox-button({value: 'Можно курить'})
@@ -118,7 +118,7 @@ block content
                       +rate-button()
                   .components__rate-button-group
                       +rate-button()
-        .components__elements.components__elements_last-column
+        .components__elements.components__elements_column_last
             .components__range-slider
                 +range-slider({text: 'Range Slider'})
             .components__base-button
