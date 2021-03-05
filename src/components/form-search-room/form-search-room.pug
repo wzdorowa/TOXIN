@@ -18,5 +18,5 @@ mixin form-search-room({text = 'Form name', dateFormat = ['ДД.ММ.ГГГГ', 
         +dropdown-row({label: 'Взрослые', number: '0'})
         +dropdown-row({label: 'Дети', number: '0'})
         +dropdown-row({label: 'Младенцы', number: '0'})
-    .form-search-room__select-button
-      +base-button({text: 'Подобрать номер', decor: 'background', arrow: 'arrow'})
+    form.form-search-room__select-button(action='/../pages/search-room/search-room.html', target='_blank')
+      +base-button({text: 'Подобрать номер', decor: 'background', arrow: 'arrow', type: 'submit'})

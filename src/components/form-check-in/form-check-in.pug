@@ -50,9 +50,9 @@ mixin check-in({text = 'Form name'} = {text})
       .check-in__toggle
         +toggle({text: 'Получать спецпредложения'})
     .check-in__check-in-details
-      .check-in__check-in-button
-        +base-button({text: 'Зарегистрироваться', decor: 'background', arrow: 'arrow'})
+      form.check-in__check-in-button(action='/../pages/landing/landing.html', target='_blank')
+        +base-button({text: 'Зарегистрироваться', decor: 'background', arrow: 'arrow', type: 'submit'})
       .check-in__have-an-account
         span.check-in__text Уже есть аккаунт на Toxin
-        .check-in__sign-in-button
-          +base-button({text: 'Войти', decor: 'border'})
+        form.check-in__sign-in-button(action='/../pages/sign-in/sign-in.html', target='_blank')
+          +base-button({text: 'Войти', decor: 'border', type: 'submit'})

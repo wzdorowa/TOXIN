@@ -204,6 +204,15 @@
       border-bottom: solid 1px $DarkShade10;
     }
   }
+  &__specification {
+
+    &-group {
+      outline: none;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+    }
+  }
 
   &__sign-number {
     font-family: 'Quicksand', Arial, sans-serif;
