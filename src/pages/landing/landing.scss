@@ -61,7 +61,7 @@ body {
       }
       @media (min-width: 1160px) {
         max-width: 1160px;
-        height: 64px;
+        min-height: 64px;
         flex-direction: row;
       }
     }
@@ -88,7 +88,7 @@ body {
 
   &__form-search-room {
     width: 280px;
-    height: 375px;
+    min-height: 375px;
     padding-top: 40px;
     padding-left: 5px;
     padding-right: 5px;

@@ -12,7 +12,7 @@
     position: relative;
     display: inline-block;
     width: 40px;
-    height: 40px;
+    min-height: 40px;
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -40,7 +40,7 @@
         content: 'arrow_forward';
         width: 24px;
         height: 24px;
-        top: 6.5px;
+        top: 8px;
         left: 8px;
         font-family: 'Material Icons', Arial, sans-serif;
         font-style: normal;

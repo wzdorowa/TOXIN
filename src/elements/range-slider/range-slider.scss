@@ -51,7 +51,7 @@
     & .ui-slider-range {
       position: absolute;
       z-index: 1;
-      height: 5px;
+      min-height: 5px;
       border: 0;
       background: linear-gradient(180deg, $Green 0%, #66D2EA 100%);
       border-radius:3px;
@@ -78,7 +78,6 @@
       text-transform: uppercase;
       text-align: right;
       color: $DarkShade50;
-      height: 15px;
       max-width: 40px;
       background: #FFF;
       border: none;
@@ -97,7 +96,6 @@
       text-transform: uppercase;
       text-align: right;
       color: $DarkShade50;
-      height: 15px;
       max-width: 40px;
       background: #FFF;
       border: none;

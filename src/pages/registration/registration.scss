@@ -61,7 +61,7 @@
       }
       @media (min-width: 1160px) {
         max-width: 1160px;
-        height: 64px;
+        min-height: 64px;
         flex-direction: row;
       }
     }
@@ -80,7 +80,7 @@
     display: flex;
     justify-content: center;
     width: 280px;
-    height: 643px;
+    min-height: 643px;
     padding-left: 29px;
     padding-right: 29px;
     padding-top: 32px;

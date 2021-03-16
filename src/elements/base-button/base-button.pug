@@ -1,4 +1,4 @@
-mixin base-button({text = 'button', decor = '', arrow = '', type = 'button'} = {text, decor, arrow, type})
+mixin base-button({text = 'button', decor = '', arrow = '', type = 'button', height = 'small'} = {text, decor, arrow, type, width})
   .button(class=`${'button_with-'}${arrow}`)
-    button.button__content(class=`${'button__content_with-'}${decor}`, type=type)
+    button.button__content(class=`${'button__content_with-'}${decor} ${'button__content_height_'}${height}`, type=type)
       span.button__text=text

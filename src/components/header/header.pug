@@ -20,6 +20,6 @@ mixin header()
             a.header__link(href='')= value
     .header__user.js-header__user
       form.header__user-button-login(action='/../pages/sign-in/sign-in.html', target='_blank')
-        +base-button({text: 'Войти', decor: 'border', type: 'submit'})
+        +base-button({text: 'Войти', decor: 'border', type: 'submit', height: 'small'})
       form.header__user-button-registration(action='/../pages/registration/registration.html', target='_blank')
-        +base-button({text: 'Зарегистироваться', decor: 'background', type: 'submit'})
+        +base-button({text: 'Зарегистироваться', decor: 'background', type: 'submit', height: 'small'})

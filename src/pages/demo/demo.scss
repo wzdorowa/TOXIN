@@ -29,11 +29,11 @@
     min-width: 260px;
 
     &_column_first {
-      height: 470px;
+      min-height: 470px;
     }
 
     &_column_last {
-      height: 420px;
+      min-height: 420px;
     }
   }
 
@@ -41,7 +41,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 222px;
-    height: 130px;
+    min-height: 130px;
   }
 
   &__radio-buttons {
@@ -55,7 +55,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 70%;
+      min-height: 70%;
     }
   }
 
@@ -64,7 +64,7 @@
     flex-direction: column;
     justify-content: space-between;
     max-width: 260px;
-    height: 85px;
+    min-height: 85px;
   }
 
   &__like-button {
@@ -78,13 +78,13 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 70%;
+      min-height: 70%;
     }
   }
 
   &__like-button-content {
     width: 40px;
-    height: 20px;
+    min-height: 20px;
   }
 
   &__rate-button {
@@ -92,7 +92,7 @@
     flex-direction: column;
     justify-content: space-around;
     max-width: 260px;
-    height: 55px;
+    min-height: 55px;
 
     &-string {
       display: flex;
@@ -108,23 +108,23 @@
 
   &__range-slider {
     max-width: 266px;
-    height: 45px;
+    min-height: 45px;
   }
 
   &__base-button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 240px;
+    min-height: 240px;
 
     &-content_small {
       width: 100px;
-      height: 44px;
+      min-height: 44px;
     }
 
     &-content_big {
       width: 320px;
-      height: 44px;
+      min-height: 44px;
     }
   }
 
@@ -132,7 +132,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100px;
+    min-height: 100px;
   }
 
   &__dropdown {
@@ -144,7 +144,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 266px;
-    height: 145px;
+    min-height: 145px;
   }
 
   &__bullet-list {
@@ -152,18 +152,18 @@
     flex-direction: column;
     justify-content: space-between;
     width: 291px;
-    height: 147px;
+    min-height: 147px;
   }
 
   &__advantages {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 155px;
+    min-height: 155px;
 
     &-item {
       width: 291px;
-      height: 68px;
+      min-height: 68px;
       border-bottom: 1px solid $DarkShade10;
     }
   }
@@ -284,7 +284,7 @@
 
   &__login {
     width: 300px;
-    height: 357px;
+    min-height: 357px;
     padding-left: 29px;
     padding-right: 29px;
     padding-top: 40px;
@@ -304,7 +304,7 @@
 
   &__datepicker {
     width: 320px;
-    height: 400px;
+    min-height: 400px;
     padding-left: 29px;
     padding-right: 29px;
     padding-top: 40px;
@@ -324,7 +324,7 @@
 
   &__number-card {
     width: 270px;
-    height: 258px;
+    min-height: 258px;
     margin-top: 30px;
   }
 }
@@ -354,7 +354,7 @@
     }
     @media (min-width: 1160px) {
       max-width: 1160px;
-      height: 64px;
+      min-height: 64px;
       flex-direction: row;
     }
   }

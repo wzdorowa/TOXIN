@@ -33,7 +33,7 @@
       justify-content: space-between;
       align-items: center;
       width: 260px;
-      height: 117px;
+      min-height: 117px;
       margin-bottom: 30px;
       @media (min-width: 1170px) {
         align-items: flex-start;
@@ -83,7 +83,6 @@
   &__list {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     list-style: none;
     padding: 0;
@@ -96,17 +95,13 @@
       align-items: flex-start;
       width: 27%;
     }
-
-    &:last-of-type {
-      @media (min-width: 720px) {
-        align-items: flex-start;
-        max-height: 140px;
-      }
+    @media (min-width: 900px) {
+      display: block;
     }
   }
 
   &__item {
-    height: 25px;
+    padding-top: 20px;
 
     &:first-child {
 

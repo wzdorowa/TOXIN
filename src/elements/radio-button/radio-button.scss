@@ -13,10 +13,10 @@
 
   &__indicator {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    min-width: 21px;
+    min-height: 21px;
     border: 1px solid $DarkShade25;
-    border-radius: 10px;
+    border-radius: 100%;
   }
 
   &__description {
@@ -39,7 +39,7 @@
         width: 12px;
         height: 12px;
         background: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
-        border-radius: 10px;
+        border-radius: 100%;
       }
     }
   }
