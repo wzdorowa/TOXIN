@@ -1,4 +1,4 @@
-include ../../elements/rate-button/rate-button.pug
+include ../../elements/rating/rating.pug
 
 mixin number-card({number = '100', text, cost = '1000', amount = '0'} = {number, text, cost, amount})
   .number-card.js-number-card
@@ -26,7 +26,7 @@ mixin number-card({number = '100', text, cost = '1000', amount = '0'} = {number,
       .number-card__data-border
       .number-card__reviews
         .number-card__rate-group-button
-            +rate-button()
+            +rating()
         .number-card__amount
           span.number-card__amount-reviews= amount
           span.number-card__amount-reviews-description

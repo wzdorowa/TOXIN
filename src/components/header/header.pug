@@ -1,6 +1,6 @@
 include ../../elements/logo/logo.pug
-include ../../elements/base-button/base-button.pug
-include ../../elements/base-input/base-input.pug
+include ../../elements/button/button.pug
+include ../../elements/input/input.pug
 
 mixin header()
   .header
@@ -20,6 +20,6 @@ mixin header()
             a.header__link(href='')= value
     .header__user.js-header__user
       form.header__user-button-login(action='/../pages/sign-in/sign-in.html', target='_blank')
-        +base-button({text: 'Войти', decor: 'border', type: 'submit', height: 'small'})
+        +button({text: 'Войти', decor: 'border', type: 'submit', height: 'small'})
       form.header__user-button-registration(action='/../pages/registration/registration.html', target='_blank')
-        +base-button({text: 'Зарегистироваться', decor: 'background', type: 'submit', height: 'small'})
+        +button({text: 'Зарегистироваться', decor: 'background', type: 'submit', height: 'small'})

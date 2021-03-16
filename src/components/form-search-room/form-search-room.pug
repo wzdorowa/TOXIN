@@ -1,13 +1,13 @@
-include ../../elements/base-input/base-input.pug
-include ../../elements/base-button/base-button.pug
+include ../../elements/input/input.pug
+include ../../elements/button/button.pug
 include ../dropdown/dropdown.pug
-include ../../components/datepicker-with-inputs/datepicker-with-inputs.pug
+include ../../components/datepicker-group/datepicker-group.pug
 
 mixin form-search-room({text = 'Form name', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']} = {text, dateFormat})
   .form-search-room
     span.form-search-room__title= text
     -const labelInputs = ['Прибытие', 'Выезд']
-    +datepicker-with-inputs({labelArray: labelInputs, dates: dateFormat, size: 'small', amountField: 'two'})
+    +datepicker-group({labelArray: labelInputs, dates: dateFormat, size: 'small', amountField: 'two'})
     .form-search-room__dropdown-container
       +dropdown({
         label: 'Гости',
@@ -19,4 +19,4 @@ mixin form-search-room({text = 'Form name', dateFormat = ['ДД.ММ.ГГГГ', 
         +dropdown-row({label: 'Дети', number: '0'})
         +dropdown-row({label: 'Младенцы', number: '0'})
     form.form-search-room__select-button(action='/../pages/search-room/search-room.html', target='_blank')
-      +base-button({text: 'Подобрать номер', decor: 'background', arrow: 'arrow', type: 'submit'})
+      +button({text: 'Подобрать номер', decor: 'background', arrow: 'arrow', type: 'submit'})

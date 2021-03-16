@@ -4,9 +4,9 @@ include ../../components/header/header.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../components/dropdown/dropdown.pug
-include ../../components/datepicker-with-inputs/datepicker-with-inputs.pug
-include ../../elements/base-input/base-input.pug
-include ../../elements/range-slider/range-slider.pug
+include ../../components/datepicker-group/datepicker-group.pug
+include ../../elements/input/input.pug
+include ../../elements/slider/slider.pug
 include ../../elements/checkbox-button/checkbox-button.pug
 include ../../elements/checkbox-list/checkbox-list.pug
 include ../../components/number-card/number-card.pug
@@ -28,7 +28,7 @@ block content
           h1.search-room__filter-access-title Дополнительные параметры
         .search-room__filter.js-search-room__filter
           .search-room__filter-inputs
-            +datepicker-with-inputs({
+            +datepicker-group({
               labelArray: ['Даты пребывания в отеле'],
               dates: ['19 авг - 23 авг'],
               size: 'large',
@@ -45,7 +45,7 @@ block content
                 +dropdown-row({label: 'Дети', number: '0'})
                 +dropdown-row({label: 'Младенцы', number: '1'})
           .search-room__filter-range-slider
-            +range-slider({text: 'Диапазон цены'})
+            +slider({text: 'Диапазон цены'})
             span.search-room__filter-range-slider-description Стоимость за сутки пребывания в номере
           .search-room__filter-checkbox-buttons
             h1.search-room__filter-checkbox-buttons-title Chechbox buttons

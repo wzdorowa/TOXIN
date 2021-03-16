@@ -1,26 +1,26 @@
 extends ../base.pug
 
-include ../../elements/base-input/base-input.pug
+include ../../elements/input/input.pug
 include ../../elements/checkbox-button/checkbox-button.pug
 include ../../elements/radio-button/radio-button.pug
 include ../../elements/toggle/toggle.pug
 include ../../elements/like-button/like-button.pug
-include ../../elements/rate-button/rate-button.pug
-include ../../elements/range-slider/range-slider.pug
-include ../../elements/base-button/base-button.pug
+include ../../elements/rating/rating.pug
+include ../../elements/slider/slider.pug
+include ../../elements/button/button.pug
 include ../../elements/pagination/pagination.pug
 include ../../elements/dropdown-row/dropdown-row.pug
 include ../../elements/checkbox-list/checkbox-list.pug
 include ../../elements/bulleted-list/bulleted-list.pug
 include ../../elements/advantages/advantages.pug
 include ../../components/review/review.pug
-include ../../components/room-cost-form/room-cost-form.pug
+include ../../components/form-room-cost/form-room-cost.pug
 include ../../components/form-search-room/form-search-room.pug
 include ../../components/form-check-in/form-check-in.pug
 include ../../components/login/login.pug
 include ../../components/number-card/number-card.pug
-include ../../components/datepicker/datepicker.pug
-include ../../components/datepicker-with-inputs/datepicker-with-inputs.pug
+include ../../components/calendar/calendar.pug
+include ../../components/datepicker-group/datepicker-group.pug
 include ../../elements/logo/logo.pug
 include ../../components/header/header.pug
 include ../../components/footer/footer.pug
@@ -37,7 +37,7 @@ block content
       .components__wrapper
         .components__inputs
             .components__inputs-item
-                +base-input({
+                +input({
                   label: 'Text field',
                   placeholder: 'Email',
                   hasBorderRadiusTop: true,
@@ -56,7 +56,7 @@ block content
                     +dropdown-row({label: 'Младенцы', number: '0'})
             .components__inputs-item
                 .components__inputs-item-masked-field.js-components__inputs-item-masked-field
-                    +base-input({
+                    +input({
                       label: 'Masked text field',
                       placeholder: 'ДД.ММ.ГГГГ',
                       hasBorderRadiusTop: true,
@@ -65,7 +65,7 @@ block content
             .components__inputs-item
                 - const datesDropdown = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
                 - const dateDropdownLabels = ['Date dropdown', 'Date dropdown']
-                +datepicker-with-inputs({
+                +datepicker-group({
                   labelArray: dateDropdownLabels,
                   dates: datesDropdown,
                   size: 'small',
@@ -74,14 +74,14 @@ block content
             .components__inputs-item.components__inputs-item_width_medium
                 - const filterDatesDropdown = ['ДД.ММ - ДД.ММ']
                 - const filterDateDropdownLabel = ['Filter date dropdown']
-                +datepicker-with-inputs({
+                +datepicker-group({
                   labelArray: filterDateDropdownLabel,
                   dates: filterDatesDropdown,
                   size: 'large',
                   amountField: 'only',
                 })
             .components__inputs-item.components__inputs-item_width_medium.components__inputs-item_type_email
-                    +base-input({
+                    +input({
                       label: 'Subscription text field',
                       placeholder: 'Email',
                       type: 'email',
@@ -115,22 +115,22 @@ block content
               h1.buttons-title Rate button
               .components__rate-button-string
                   .components__rate-button-group
-                      +rate-button()
+                      +rating()
                   .components__rate-button-group
-                      +rate-button()
+                      +rating()
         .components__elements.components__elements_column_last
             .components__range-slider
-                +range-slider({text: 'Range Slider'})
+                +slider({text: 'Range Slider'})
             .components__base-button
                 h1.buttons-title Buttons
                 .components__base-button-content.components__base-button-content_small
-                  +base-button({text: 'Click Me', decor: 'background'})
+                  +button({text: 'Click Me', decor: 'background'})
                 .components__base-button-content.components__base-button-content_small
-                  +base-button({text: 'Click Me', decor: 'border'})
+                  +button({text: 'Click Me', decor: 'border'})
                 .components__base-button-content.components__base-button-content_small
-                  +base-button({text: 'Click Me', decor: 'noDecor'})
+                  +button({text: 'Click Me', decor: 'noDecor'})
                 .components__base-button-content.components__base-button-content_big
-                  +base-button({text: 'Перейти к оплате', decor: 'background', arrow: 'arrow'})
+                  +button({text: 'Перейти к оплате', decor: 'background', arrow: 'arrow'})
             .components__pagination
                 h1.buttons-title Pagination
                 +pagination({text: '1 - 12 из 100+ вариантов аренды'})
@@ -197,16 +197,16 @@ block content
                     -const searchRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
                     +form-search-room({text: 'Найдём номера под ваши пожелания', dateFormat: searchRoomDateFormat})
                 .components-content__check-in
-                    +check-in({text: 'Регистрация аккаунта'})
+                    +form-check-in({text: 'Регистрация аккаунта'})
             .components-content__item
                 .components-content__result-search-room
                     -const resultSearchRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
-                    +room-cost-form({number: '888', text: 'люкс', cost: '9 990', dateFormat: resultSearchRoomDateFormat})
+                    +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: resultSearchRoomDateFormat})
                 .components-content__login
                     +login({text: 'Вход'})
             .components-content__item
                 .components-content__datepicker
-                    +datepicker()
+                    +calendar()
                 .components-content__number-card
                     +number-card({number: '888', text: 'люкс', cost: '9 990', amount: '145'})
                 .components-content__number-card

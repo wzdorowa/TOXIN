@@ -1,4 +1,4 @@
-mixin base-input({label, placeholder = 'Введите значение', type = 'text', arrow = '', hasBorderRadiusTop = false, hasBorderRadiusBottom = false, isHide = false, readonly, areInDropdown = false} = {label, placeholder, type, arrow, hasBorderRadiusTop, hasBorderRadiusBottom, isHide, readonly, areInDropdown})
+mixin input({label, placeholder = 'Введите значение', type = 'text', arrow = '', hasBorderRadiusTop = false, hasBorderRadiusBottom = false, isHide = false, readonly, areInDropdown = false} = {label, placeholder, type, arrow, hasBorderRadiusTop, hasBorderRadiusBottom, isHide, readonly, areInDropdown})
   div.input()
     span(class=`input__description ${isHide ? 'input__description_hidden' : ''}`)= label
     .input__wrapper

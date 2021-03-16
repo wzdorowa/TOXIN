@@ -1,12 +1,12 @@
-include ../../components/datepicker/datepicker.pug
-include ../../elements/base-input/base-input.pug
+include ../../components/calendar/calendar.pug
+include ../../elements/input/input.pug
 
-mixin datepicker-with-inputs({labelArray = ['date dropdown', 'date dropdown'], dates = ['ДД.ММ.ГГГГ','ДД.ММ.ГГГГ'], size = 'large', amountField = 'two'} = {labelArray, dates, size, amountField})
+mixin datepicker-group({labelArray = ['date dropdown', 'date dropdown'], dates = ['ДД.ММ.ГГГГ','ДД.ММ.ГГГГ'], size = 'large', amountField = 'two'} = {labelArray, dates, size, amountField})
   .datepicker-group.js-datepicker-group
     .datepicker-group__inputs
       if (amountField === 'only')
         .datepicker-group__input(class=`datepicker-group__input_width_${size}`)
-          +base-input({
+          +input({
             label: labelArray[0],
             placeholder: dates[0],
             arrow: 'arrow-down',
@@ -17,7 +17,7 @@ mixin datepicker-with-inputs({labelArray = ['date dropdown', 'date dropdown'], d
             })
       else if (amountField === 'two')
         .datepicker-group__input(class=`datepicker-group__input_width_${size}`)
-          +base-input({
+          +input({
             label: labelArray[0],
             placeholder: dates[0],
             arrow: 'arrow-down',
@@ -27,7 +27,7 @@ mixin datepicker-with-inputs({labelArray = ['date dropdown', 'date dropdown'], d
             areInDropdown: true,
           })
         .datepicker-group__input(class=`datepicker-group__input_width_${size}`)
-          +base-input({
+          +input({
             label: labelArray[1],
             placeholder: dates[1],
             arrow: 'arrow-down',
@@ -37,4 +37,4 @@ mixin datepicker-with-inputs({labelArray = ['date dropdown', 'date dropdown'], d
             areInDropdown: true,
           })
     .datepicker-group__datepicker.js-datepicker-group__datepicker(class=`datepicker-group__datepicker_${amountField}`)
-      +datepicker()
+      +calendar()

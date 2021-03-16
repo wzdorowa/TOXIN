@@ -5,7 +5,7 @@ include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../components/social-button/social-button.pug
 include ../../components/form-check-in/form-check-in.pug
-include ../../components/datepicker/datepicker.pug
+include ../../components/calendar/calendar.pug
 
 block meta
     meta(name='keywords', content='registration, toxin')
@@ -20,7 +20,7 @@ block content
           +header()
       .registration__container
         .registration__check-in
-          +check-in({text: 'Регистрация аккаунта'})
+          +form-check-in({text: 'Регистрация аккаунта'})
       .registration__footer
         +footer()
       +copyright()

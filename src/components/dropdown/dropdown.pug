@@ -3,7 +3,7 @@ include ../../elements/dropdown-row/dropdown-row.pug
 mixin dropdown({label, placeholder = 'Выберите нужное количество', isHide = false, readonly = 'readonly', display = '', dropdownFor = ''} = {label, placeholder, isHide, readonly, display, dropdownFor})
   .dropdown.js-dropdown
     .dropdown__list
-      +base-input({
+      +input({
         label: label,
         placeholder: placeholder,
         arrow: 'arrow-down',
@@ -17,6 +17,6 @@ mixin dropdown({label, placeholder = 'Выберите нужное количе
         block
       .dropdown__buttons(class=`${'dropdown__buttons_'}${display}`)
         .dropdown__buttons-container.dropdown__buttons-container_for-clear.js-dropdown__buttons-container_for-clear
-          +base-button({text: 'Очистить', decor: 'noDecor'})
+          +button({text: 'Очистить', decor: 'noDecor'})
         .dropdown__buttons-container.dropdown__buttons-container_for-apply.js-dropdown__buttons-container_for-apply
-          +base-button({text: 'Применить', decor: 'noDecor'})
+          +button({text: 'Применить', decor: 'noDecor'})

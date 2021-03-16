@@ -1,12 +1,12 @@
-include ../../components/datepicker/datepicker.pug
+include ../../components/calendar/calendar.pug
 include ../../components/dropdown/dropdown.pug
 include ../../elements/numerical-group/numerical-group.pug
 include ../../elements/dropdown-row/dropdown-row.pug
 
-mixin room-cost-form({number = '100', text = 'text', cost = '1000', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']} = {number, text, cost, dateFormat})
-    .room-cost-form
-      .room-cost-form__identification-room
-          .room-cost-form__specification-room
+mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']} = {number, text, cost, dateFormat})
+    .form-room-cost
+      .form-room-cost__identification-room
+          .form-room-cost__specification-room
               +numerical-group({
                 numberDecor: 'bold',
                 number: '888',
@@ -15,7 +15,7 @@ mixin room-cost-form({number = '100', text = 'text', cost = '1000', dateFormat =
                 description: 'люкс',
                 visibilityDescriptionSign: 'hidden'
               })
-          .room-cost-form__cost-per-day
+          .form-room-cost__cost-per-day
               +numerical-group({
                 visibilitySignNumber: 'hidden',
                 numberDecor,
@@ -25,8 +25,8 @@ mixin room-cost-form({number = '100', text = 'text', cost = '1000', dateFormat =
                 visibilityDescriptionSign: 'hidden'
               })
       -const label = ['Прибытие', 'Выезд']
-      +datepicker-with-inputs({labelArray: label, dates: dateFormat, size: 'small', amountField: 'two'})
-      .room-cost-form__dropdown-container
+      +datepicker-group({labelArray: label, dates: dateFormat, size: 'small', amountField: 'two'})
+      .form-room-cost__dropdown-container
         +dropdown({
           label: 'Гости',
           placeholder: '3 гостя',
@@ -36,26 +36,26 @@ mixin room-cost-form({number = '100', text = 'text', cost = '1000', dateFormat =
           +dropdown-row({label: 'Взрослые', number: '2'})
           +dropdown-row({label: 'Дети', number: '1'})
           +dropdown-row({label: 'Младенцы', number: '0'})
-      .room-cost-form__calculation
+      .form-room-cost__calculation
           - const calculationItems = [[{number: '9 990', description: ' x 4 суток', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'},{number: '39 690', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}],[{number: '', description: 'Сбор за услуги: скидка', visibilitySignNumber: 'hidden', visibilitySignRouble: 'hidden', visibilityDescriptionSign: 'hidden'},{number: ' 2 179', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: ''},{number: '0', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}],[{number: '', description: 'Сбор за дополнительные услуги', visibilitySignNumber: 'hidden', visibilitySignRouble: 'hidden', visibilityDescriptionSign: ''},{number: '300', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}]]
           - const itemNumber = ['first', 'second', 'third']
           each value, index in calculationItems
               - let [firstItem, secondItem, thirdItem] = value
-              .room-cost-form__calculation-item
+              .form-room-cost__calculation-item
                   if(index === 1)
-                      .room-cost-form__calculation-item-content(class=`room-cost-form__calculation-item-content_${itemNumber[index]}`)
+                      .form-room-cost__calculation-item-content(class=`form-room-cost__calculation-item-content_${itemNumber[index]}`)
                           +numerical-group(firstItem)
                           +numerical-group(secondItem)
                       +numerical-group(thirdItem)
                   else
-                      .room-cost-form__calculation-item-content(class=`room-cost-form__calculation-item-content_${itemNumber[index]}`)
+                      .form-room-cost__calculation-item-content(class=`form-room-cost__calculation-item-content_${itemNumber[index]}`)
                           +numerical-group(firstItem)
                       +numerical-group(secondItem)
-      .room-cost-form__total
-          .room-cost-form__total-item Итого
-          .room-cost-form__total-item.room-cost-form__total-item_with-border
-          .room-cost-form__total-item.room-cost-form__total-item_with-cost
+      .form-room-cost__total
+          .form-room-cost__total-item Итого
+          .form-room-cost__total-item.form-room-cost__total-item_with-border
+          .form-room-cost__total-item.form-room-cost__total-item_with-cost
               - const totalState = {number: '38 081', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}
               +numerical-group(totalState)
-      .room-cost-form__armor-button
-          +base-button({text: 'Забронировать', decor: 'background', arrow: 'arrow', height: 'large'})
+      .form-room-cost__armor-button
+          +button({text: 'Забронировать', decor: 'background', arrow: 'arrow', height: 'large'})

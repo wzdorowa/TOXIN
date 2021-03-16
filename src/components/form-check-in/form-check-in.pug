@@ -1,58 +1,58 @@
 include ../../elements/radio-button/radio-button.pug
 include ../../elements/toggle/toggle.pug
 
-mixin check-in({text = 'Form name'} = {text})
-  .check-in
-    span.check-in__title= text
-    .check-in__user-data
-      .check-in__group-inputs
-          +base-input({
+mixin form-check-in({text = 'Form name'} = {text})
+  .form-check-in
+    span.form-check-in__title= text
+    .form-check-in__user-data
+      .form-check-in__group-inputs
+          +input({
             placeholder: 'Имя',
             hasBorderRadiusTop: true,
             hasBorderRadiusBottom: true,
             isHide: true,
           })
-          +base-input({
+          +input({
             placeholder: 'Фамилия',
             hasBorderRadiusTop: true,
             hasBorderRadiusBottom: true,
             isHide: true,
           })
-      .check-in__buttons
-        +radio-button({text: 'Мужчина', checked: 'checked', name: 'gender-for-check-in'})
-        +radio-button({text: 'Женщина', name: 'gender-for-check-in'})
-    .check-in__input
-      .check-in__input-container.check-in__input-container_for-masked-field.js-check-in__input-container_for-masked-field
-        +base-input({
+      .form-check-in__buttons
+        +radio-button({text: 'Мужчина', checked: 'checked', name: 'gender-for-form-check-in'})
+        +radio-button({text: 'Женщина', name: 'gender-for-form-check-in'})
+    .form-check-in__input
+      .form-check-in__input-container.form-check-in__input-container_for-masked-field.js-form-check-in__input-container_for-masked-field
+        +input({
           label: 'Дата рождения',
           placeholder: 'ДД.ММ.ГГГГ',
           type: 'text',
           hasBorderRadiusTop: true,
           hasBorderRadiusBottom: true,
         })
-    .check-in__login-details
-      .check-in__group-inputs-login
-        .check-in__input-container
-          +base-input({
+    .form-check-in__login-details
+      .form-check-in__group-inputs-login
+        .form-check-in__input-container
+          +input({
             label: 'Данные для входа в сервис',
             placeholder: 'email',
             type: 'Email',
             hasBorderRadiusTop: true,
             hasBorderRadiusBottom: true,
           })
-        .check-in__input-container
-          +base-input({
+        .form-check-in__input-container
+          +input({
             placeholder: 'Пароль',
             type: 'password',
             hasBorderRadiusTop: true,
             hasBorderRadiusBottom: true,
           })
-      .check-in__toggle
+      .form-check-in__toggle
         +toggle({text: 'Получать спецпредложения'})
-    .check-in__check-in-details
-      form.check-in__check-in-button(action='/../pages/landing/landing.html', target='_blank')
-        +base-button({text: 'Зарегистрироваться', decor: 'background', arrow: 'arrow', type: 'submit'})
-      .check-in__have-an-account
-        span.check-in__text Уже есть аккаунт на Toxin
-        form.check-in__sign-in-button(action='/../pages/sign-in/sign-in.html', target='_blank')
-          +base-button({text: 'Войти', decor: 'border', type: 'submit'})
+    .form-check-in__check-in-details
+      form.form-check-in__check-in-button(action='/../pages/landing/landing.html', target='_blank')
+        +button({text: 'Зарегистрироваться', decor: 'background', arrow: 'arrow', type: 'submit'})
+      .form-check-in__have-an-account
+        span.form-check-in__text Уже есть аккаунт на Toxin
+        form.form-check-in__sign-in-button(action='/../pages/sign-in/sign-in.html', target='_blank')
+          +button({text: 'Войти', decor: 'border', type: 'submit'})
