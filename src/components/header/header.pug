@@ -13,7 +13,7 @@ mixin header()
       each value, index in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
         - var itemName = value
         if(itemName === 'Услуги' || itemName === 'Соглашения')
-          li.header__item.header__item_drop-down-menu
+          li.header__item.header__item_menu_drop-down
             a.header__link(href='')= value
         else
           li.header__item

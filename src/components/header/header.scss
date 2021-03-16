@@ -71,13 +71,13 @@
       padding-right: 15px;
     }
     @media (min-width: 910px) {
-      width: 490px;
+      width: 446px;
     }
     @media (min-width: 1055px) {
       display: flex;
       flex-direction: row;
-      width: 490px;
-      padding-right: 30px;
+      width: 465px;
+      padding-right: 27px;
     }
 
     &-icon{
@@ -116,17 +116,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     min-height: 30px;
     margin-top: auto;
     margin-bottom: auto;
 
-    &_drop-down-menu {
+    &_menu_drop-down {
       @media (min-width: 610px) {
         padding-right: 15px;
       }
 
-      &.header__link::before {
+      & .header__link::before {
         position: absolute;
         content: 'keyboard_arrow_down';
         font-family: 'Material Icons', Arial, sans-serif;
