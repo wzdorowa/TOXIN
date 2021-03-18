@@ -14,8 +14,8 @@ mixin number-card({number = '100', text, cost = '1000', amount = '0'} = {number,
         span.number-card__switch-slider.js-number-card__switch-slider
     .number-card__description
       .number-card__data
-        form.number-card__specification(action='/../pages/room-details/room-details.html', target='_blank')
-          button.number-card__specification-group
+        a.number-card__specification(href='../../pages/room-details/room-details.pug', target='_blank')
+          .number-card__specification-group
             span.number-card__sign-number №
             span.number-card__number= number
             span.number-card__kind= text

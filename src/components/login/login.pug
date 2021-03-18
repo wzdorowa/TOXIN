@@ -19,9 +19,9 @@ mixin login({text = 'Form name'} = {text})
           isHide: true,
         })
     .login__check-in-details
-      form.login__check-in-button(action='/../pages/landing/landing.html', target='_blank')
-        +button({text: 'Войти', decor: 'background', arrow: 'arrow', type: 'submit'})
+      a.login__check-in-button(href='../../pages/landing/landing.pug', target='_blank')
+        +button({text: 'Войти', decor: 'background', arrow: 'arrow', type: 'submit', height: 'large'})
       .login__have-an-account
         span.login__text Нет аккаунта на Toxin?
-        form.login__create-button(action='/../pages/registration/registration.html', target='_blank')
-          +button({text: 'Создать', decor: 'border', type: 'submit'})
+        a.login__create-button(href='../../pages/registration/registration.pug', target='_blank')
+          +button({text: 'Создать', decor: 'border', type: 'submit', height: 'large'})
