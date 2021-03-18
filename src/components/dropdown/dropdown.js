@@ -72,6 +72,13 @@ class Dropdown {
   }
 
   countValues(result, values, declinations) {
+    const isMatchingValue = value => {
+      const boolean =
+        String(value).includes('2') ||
+        String(value).includes('3') ||
+        String(value).includes('4');
+      return boolean;
+    };
     if (result === 0) {
       this.elementInput.value = '';
     } else {
@@ -81,11 +88,7 @@ class Dropdown {
           const declination = declinations[i];
           if (String(value).includes('1')) {
             newString.push(`${String(value)} ${declination[0]}`);
-          } else if (
-            String(value).includes('2') ||
-            String(value).includes('3') ||
-            String(value).includes('4')
-          ) {
+          } else if (isMatchingValue(value)) {
             newString.push(`${String(value)} ${declination[1]}`);
           } else {
             newString.push(`${String(value)} ${declination[2]}`);
@@ -93,19 +96,21 @@ class Dropdown {
         }
       });
       newString.forEach((string, index) => {
+        const firstOrLastElementString =
+          (index === 0 && newString.length === 1) ||
+          index === newString.length - 1;
+        const intermediateElementString =
+          index < newString.length - 1 && newString.length > 1;
         const futureStringLength =
           this.elementInput.value.length + newString[index].length;
-        if (
-          (index === 0 && newString.length === 1) ||
-          index === newString.length - 1
-        ) {
+        if (firstOrLastElementString) {
           if (futureStringLength >= 23) {
             const stringWithoutComma = this.elementInput.value.substring(0, 20);
             this.elementInput.value = `${stringWithoutComma}...`;
           } else {
             this.elementInput.value += `${newString[index]}`;
           }
-        } else if (index < newString.length - 1 && newString.length > 1) {
+        } else if (intermediateElementString) {
           this.elementInput.value += `${newString[index]}, `;
         }
       });
