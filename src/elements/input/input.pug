@@ -7,4 +7,4 @@ mixin input({label, placeholder = 'Введите значение', type = 'tex
       class=`${hasBorderRadiusBottom ? 'input__content_with-border-radius-bottom' : ''}`,
       class=`${areInDropdown ? 'input__content_with-dropdown' : ''}`, type= type,
       name='input-content', placeholder= placeholder, readonly= readonly)
-      span(class=`${'input__icon-'}${arrow} ${'js-input__icon-'}${arrow}`)
+      span(class=`input__icon-${arrow} js-input__icon-${arrow}`)

@@ -13,9 +13,9 @@ mixin dropdown({label, placeholder = 'Выберите нужное количе
         areInDropdown: true,
       })
     .dropdown__content.js-dropdown__content
-      .dropdown__rows.js-dropdown__rows(class=`${'dropdown__rows_for-count-'}${dropdownFor}`)
+      .dropdown__rows.js-dropdown__rows(class=`dropdown__rows_for-count-${dropdownFor}`)
         block
-      .dropdown__buttons(class=`${'dropdown__buttons_'}${display}`)
+      .dropdown__buttons(class=`dropdown__buttons_${display}`)
         .dropdown__buttons-container.dropdown__buttons-container_with-button-clear.js-dropdown__buttons-container_with-button-clear
           +button({text: 'Очистить', decor: 'noDecor'})
         .dropdown__buttons-container.dropdown__buttons-container_with-button-apply.js-dropdown__buttons-container_with-button-apply
