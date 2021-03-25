@@ -40,7 +40,7 @@ mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat =
           - const calculationItems = [[{number: '9 990', description: ' x 4 суток', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'},{number: '39 690', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}],[{number: '', description: 'Сбор за услуги: скидка', visibilitySignNumber: 'hidden', visibilitySignRouble: 'hidden', visibilityDescriptionSign: 'hidden'},{number: ' 2 179', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: ''},{number: '0', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}],[{number: '', description: 'Сбор за дополнительные услуги', visibilitySignNumber: 'hidden', visibilitySignRouble: 'hidden', visibilityDescriptionSign: ''},{number: '300', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}]]
           - const itemNumber = ['first', 'second', 'third']
           each value, index in calculationItems
-              - let [firstItem, secondItem, thirdItem] = value
+              - const [firstItem, secondItem, thirdItem] = value
               .form-room-cost__calculation-item
                   if(index === 1)
                       .form-room-cost__calculation-item-content(class=`form-room-cost__calculation-item-content_${itemNumber[index]}`)

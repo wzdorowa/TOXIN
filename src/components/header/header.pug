@@ -11,7 +11,7 @@ mixin header()
       .header__navigation-icon.js-header__navigation-icon
     ul.header__navigation.js-header__navigation
       each value, index in ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
-        - let itemName = value
+        - const itemName = value
         - const suitableValue = itemName === 'Услуги' || itemName === 'Соглашения'
         if(suitableValue)
           li.header__item.header__item_with-drop-down
