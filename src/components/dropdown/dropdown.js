@@ -21,10 +21,10 @@ class Dropdown {
       '.js-input__icon-arrow-down',
     );
     this.buttonApply = this.dropdown.querySelector(
-      '.js-dropdown__buttons-container_for-apply',
+      '.js-dropdown__buttons-container_with-button-apply',
     );
     this.buttonClear = this.dropdown.querySelector(
-      '.js-dropdown__buttons-container_for-clear',
+      '.js-dropdown__buttons-container_with-button-clear',
     );
     this.rowsGroupParent = this.dropdown.querySelector('.dropdown__rows');
     this.rowsGroup = this.dropdown.querySelectorAll('.js-dropdown-row');

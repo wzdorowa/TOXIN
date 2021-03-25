@@ -14,7 +14,7 @@ mixin header()
         - let itemName = value
         - const suitableValue = itemName === 'Услуги' || itemName === 'Соглашения'
         if(suitableValue)
-          li.header__item.header__item_menu_drop-down
+          li.header__item.header__item_with-drop-down
             a.header__link(href='')= value
         else
           li.header__item

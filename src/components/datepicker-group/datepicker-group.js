@@ -24,10 +24,10 @@ class Datepicker {
       '.js-input__icon-arrow-down',
     );
     this.buttonApply = this.datepickerGroup.querySelector(
-      '.js-calendar__buttons-container_for-apply',
+      '.js-calendar__buttons-container_with-button-apply',
     );
     this.buttonClear = this.datepickerGroup.querySelector(
-      '.js-calendar__buttons-container_for-clear',
+      '.js-calendar__buttons-container_with-button-clear',
     );
     this.calendar = this.datepickerGroup.querySelector('.js-calendar__content');
   }

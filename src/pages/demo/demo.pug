@@ -69,7 +69,7 @@ block content
                   labelArray: dateDropdownLabels,
                   dates: datesDropdown,
                   size: 'small',
-                  amountField: 'two'
+                  amountField: 'with-two-inputs'
                 })
             .components__inputs-item.components__inputs-item_width_medium
                 - const filterDatesDropdown = ['ДД.ММ - ДД.ММ']
@@ -78,7 +78,7 @@ block content
                   labelArray: filterDateDropdownLabel,
                   dates: filterDatesDropdown,
                   size: 'large',
-                  amountField: 'only',
+                  amountField: 'with-one-input',
                 })
             .components__inputs-item.components__inputs-item_width_medium.components__inputs-item_type_email
                     +input({
