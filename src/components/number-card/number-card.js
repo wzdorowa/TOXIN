@@ -36,10 +36,9 @@ class NumberCard {
     }
     this.slides.forEach(element => {
       const slide = element;
-      if (slide.classList.contains('number-card__content_display_visible')) {
-        slide.classList.remove('number-card__content_display_visible');
+      if (!slide.classList.contains('number-card__content_display_hidden')) {
+        slide.classList.add('number-card__content_display_hidden');
       }
-      slide.classList.add('number-card__content_display_hidden');
     });
     this.dots.forEach(element => {
       const slide = element;
@@ -57,9 +56,6 @@ class NumberCard {
         'number-card__content_display_hidden',
       );
     }
-    this.slides[this.slideIndex - 1].classList.add(
-      'number-card__content_display_visible',
-    );
     this.dots[this.slideIndex - 1].className +=
       ' number-card__switch-slider-active';
   }
