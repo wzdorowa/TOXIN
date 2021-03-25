@@ -1,7 +1,7 @@
 include ../../components/calendar/calendar.pug
 include ../../elements/input/input.pug
 
-mixin datepicker-group({labelArray = ['date dropdown', 'date dropdown'], dates = ['ДД.ММ.ГГГГ','ДД.ММ.ГГГГ'], size = 'large', amountField = 'two'} = {labelArray, dates, size, amountField})
+mixin datepicker-group({labelArray = ['date dropdown', 'date dropdown'], dates = ['ДД.ММ.ГГГГ','ДД.ММ.ГГГГ'], size = 'large', amountField = 'two'} = {})
   .datepicker-group.js-datepicker-group
     .datepicker-group__inputs
       if (amountField === 'with-one-input')

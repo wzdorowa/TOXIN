@@ -1,4 +1,4 @@
-mixin bulleted-list({values = [{modifier: 'light-gray', text: 'Text', padding: 'increased-indent'}]} = {values})
+mixin bulleted-list({values = [{modifier: 'light-gray', text: 'Text', padding: 'increased-indent'}]} = {})
   ul.bulleted-list
       each value in values
         - const {modifier, text, padding} = value

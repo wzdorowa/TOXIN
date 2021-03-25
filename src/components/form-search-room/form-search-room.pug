@@ -3,7 +3,7 @@ include ../../elements/button/button.pug
 include ../dropdown/dropdown.pug
 include ../../components/datepicker-group/datepicker-group.pug
 
-mixin form-search-room({text = 'Form name', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']} = {text, dateFormat})
+mixin form-search-room({text = 'Form name', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']} = {})
   .form-search-room
     span.form-search-room__title= text
     -const labelInputs = ['Прибытие', 'Выезд']

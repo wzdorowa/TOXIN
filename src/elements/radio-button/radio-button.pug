@@ -1,4 +1,4 @@
-mixin radio-button({text = 'Text', checked, name = ''} = {text, checked, name})
+mixin radio-button({text = 'Text', checked, name = ''})
   .radio-button
     label.radio-button__filter
       input.radio-button__content.visually-hidden(type='radio', name=`${'radio-button__content-'}${name}`, checked=checked)
