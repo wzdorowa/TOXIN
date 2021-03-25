@@ -1,16 +1,14 @@
 include ../../elements/rating/rating.pug
 
-mixin number-card({number = '100', text, cost = '1000', amount = '0'})
+mixin number-card({number = '100', text, cost = '1000', amount = '0', images})
   .number-card.js-number-card
     .number-card__slider
-      - const images = new Array(4);
       each value, index in images
-        .number-card__content.js-number-card__content(class=`number-card__content_with-img-${number}`)
+        img.number-card__content.js-number-card__content(src=`${value}`, alt=`Room №${number}`)
       .number-card__prev.js-number-card__prev
       .number-card__next.js-number-card__next
     .number-card__slider-dots
-      - const switches = new Array(4);
-      each value, index in switches
+      each value, index in images
         span.number-card__switch-slider.js-number-card__switch-slider
     .number-card__description
       .number-card__data
