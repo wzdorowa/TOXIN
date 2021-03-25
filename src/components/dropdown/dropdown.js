@@ -73,11 +73,11 @@ class Dropdown {
 
   countValues(result, values, declinations) {
     const isMatchingValue = value => {
-      const boolean =
+      return (
         String(value).includes('2') ||
         String(value).includes('3') ||
-        String(value).includes('4');
-      return boolean;
+        String(value).includes('4')
+      );
     };
     if (result === 0) {
       this.elementInput.value = '';
