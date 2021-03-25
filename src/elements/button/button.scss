@@ -61,9 +61,12 @@
       cursor: pointer;
     }
 
-    &_with-noDecor:hover {
-      color: $DarkShade50;
-      cursor: pointer;
+    &_with-noDecor {
+      justify-content: start;
+      &:hover {
+        color: $DarkShade50;
+        cursor: pointer;
+      }
     }
 
     &_with-border {
