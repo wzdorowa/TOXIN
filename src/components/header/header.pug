@@ -20,7 +20,7 @@ mixin header()
           li.header__item
             a.header__link(href='')= value
     .header__user.js-header__user
-      a.header__user-button-login(href='../../pages/sign-in/sign-in.pug', target='_blank')
-        +button({text: 'Войти', decor: 'border', type: 'submit', height: 'small'})
-      a.header__user-button-registration(href='../../pages/registration/registration.pug', target='_blank')
-        +button({text: 'Зарегистироваться', decor: 'background', type: 'submit', height: 'small'})
+      .header__user-button-login
+        +button({text: 'Войти', decor: 'border', height: 'small', href: '../../pages/sign-in/sign-in.pug'})
+      .header__user-button-registration
+        +button({text: 'Зарегистироваться', decor: 'background', height: 'small', href: '../../pages/registration/registration.pug'})
