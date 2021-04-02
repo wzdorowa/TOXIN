@@ -29,7 +29,7 @@ class Datepicker {
     this.buttonClear = this.datepickerGroup.querySelector(
       '.js-calendar__buttons-container_with-button-clear',
     );
-    this.calendar = this.datepickerGroup.querySelector('.js-datepicker-here');
+    this.calendar = this.datepickerGroup.querySelector('.js-calendar__content');
   }
 
   addClass() {
@@ -45,7 +45,7 @@ class Datepicker {
   }
 
   clearValues() {
-    const $myCalendar = $(this.datepickerGroup).find('.js-datepicker-here');
+    const $myCalendar = $(this.datepickerGroup).find('.js-calendar__content');
     const $calendar = $($myCalendar).datepicker().data('datepicker');
     $calendar.clear();
   }
@@ -63,6 +63,7 @@ class Datepicker {
   }
 
   handleButtonsContainerForClearClick() {
+    console.log(this);
     this.clearValues();
   }
 
@@ -102,8 +103,8 @@ class Datepicker {
 
   setValueToInput() {
     if (
-      $(this.calendar).parents('.datepicker-group__datepicker_with-one-input')
-        .length === 1
+      $(this.calendar).parents('.datepicker-group__datepicker_only').length ===
+      1
     ) {
       $(this.calendar).datepicker({
         navTitles: {
