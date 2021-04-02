@@ -161,16 +161,17 @@ block content
               +checkbox-button({value: 'Шампунь'})
         .components__rich-checkbox-buttons
             h1.buttons-title Rich checkbox buttons
-            +checkbox-button({
-              value: 'Широкий коридор',
-              isBoldText: true,
-              description: 'Ширина коридоров в номере не менее 91 см.'
-              })
-            +checkbox-button({
-              value: 'Помощник для инвалидов',
-              isBoldText: true,
-              description: 'На 1 этаже вас встретит специалист и проводит до номера.'
-              })
+            .components__rich-checkbox-buttons-list
+              +checkbox-button({
+                value: 'Широкий коридор',
+                isBoldText: true,
+                description: 'Ширина коридоров в номере не менее 91 см.'
+                })
+              +checkbox-button({
+                value: 'Помощник для инвалидов',
+                isBoldText: true,
+                description: 'На 1 этаже вас встретит специалист и проводит до номера.'
+                })
         .components__bullet-list
             h1.buttons-title Bullet list
             - const rules = [{modifier: 'light-gray', text: 'Нельзя с питомцами', padding: 'increased-indent'}, {modifier: 'light-gray', text: 'Без вечеринок и мероприятий', padding: 'increased-indent'}, {modifier: 'light-gray', text: 'Время прибытия — после 13:00, а выезд до 12:00', padding: 'increased-indent'}]
