@@ -1,4 +1,4 @@
-import MaskedInput from '../../js/masked-input';
+import MaskedInput from '../masked-input/masked-input';
 
 const maskedContainer = document.querySelectorAll(
   '.js-form-check-in__input-container_with-masked-field',
