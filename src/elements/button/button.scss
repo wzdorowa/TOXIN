@@ -74,6 +74,10 @@
         color: $DarkShade50;
         cursor: pointer;
       }
+      &:focus {
+        outline: none;
+        border: none;
+      }
     }
 
     &_with-border {
