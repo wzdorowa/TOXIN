@@ -1,12 +1,12 @@
 class MaskedInput {
   constructor(element) {
-    this.maskedContainer = element;
+    this._maskedContainer = element;
 
-    this.setMaskedField();
+    this._setMaskedField();
   }
 
-  setMaskedField() {
-    const maskedForDate = this.maskedContainer.querySelector('.input__content');
+  _setMaskedField() {
+    const maskedForDate = this._maskedContainer.querySelector('.input__content');
     $(maskedForDate).inputmask('99.99.9999', { placeholder: 'ДД/ММ/ГГГГ' });
   }
 }

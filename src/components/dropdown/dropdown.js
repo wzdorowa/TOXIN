@@ -1,77 +1,77 @@
 class Dropdown {
   constructor(element) {
-    this.dropdown = element;
-    this.elementInput = null;
-    this.dropdownList = null;
-    this.dropdownArrow = null;
-    this.buttonApply = null;
-    this.buttonClear = null;
-    this.rowsGroupParent = null;
-    this.rowsGroup = null;
+    this._dropdown = element;
+    this._elementInput = null;
+    this._dropdownList = null;
+    this._dropdownArrow = null;
+    this._buttonApply = null;
+    this._buttonClear = null;
+    this._rowsGroupParent = null;
+    this._rowsGroup = null;
     this.numbers = null;
 
-    this.findElement();
-    this.bindEventListeners();
+    this._findElement();
+    this._bindEventListeners();
   }
 
-  findElement() {
-    this.elementInput = this.dropdown.querySelector('.js-input__content');
-    this.dropdownList = this.dropdown.querySelector('.js-dropdown__content');
-    this.dropdownArrow = this.dropdown.querySelector(
+  _findElement() {
+    this._elementInput = this._dropdown.querySelector('.js-input__content');
+    this._dropdownList = this._dropdown.querySelector('.js-dropdown__content');
+    this._dropdownArrow = this._dropdown.querySelector(
       '.js-input__icon-arrow-down',
     );
-    this.buttonApply = this.dropdown.querySelector(
+    this._buttonApply = this._dropdown.querySelector(
       '.js-dropdown__buttons-container_with-button-apply',
     );
-    this.buttonClear = this.dropdown.querySelector(
+    this._buttonClear = this._dropdown.querySelector(
       '.js-dropdown__buttons-container_with-button-clear',
     );
-    this.rowsGroupParent = this.dropdown.querySelector('.dropdown__rows');
-    this.rowsGroup = this.dropdown.querySelectorAll('.js-dropdown-row');
-    this.numbers = this.dropdown.querySelectorAll(
+    this._rowsGroupParent = this._dropdown.querySelector('.dropdown__rows');
+    this._rowsGroup = this._dropdown.querySelectorAll('.js-dropdown-row');
+    this._numbers = this._dropdown.querySelectorAll(
       '.js-dropdown-row__amount_with-count',
     );
   }
 
-  addClass() {
-    this.dropdownList.classList.add('dropdown__content_visible');
+  _addClass() {
+    this._dropdownList.classList.add('dropdown__content_visible');
   }
 
-  removeClass() {
-    this.dropdownList.classList.remove('dropdown__content_visible');
+  _removeClass() {
+    this._dropdownList.classList.remove('dropdown__content_visible');
   }
 
-  toggleClass() {
-    this.dropdownList.classList.toggle('dropdown__content_visible');
+  _toggleClass() {
+    this._dropdownList.classList.toggle('dropdown__content_visible');
   }
 
-  handleIconArrowDownClick() {
-    this.toggleClass();
+  _handleIconArrowDownClick() {
+    this._toggleClass();
   }
 
-  handleInputContentFocus() {
-    this.addClass();
+  _handleInputContentFocus() {
+    this._addClass();
   }
 
-  handleButtonsContainerForApplyClick() {
-    this.removeClass();
+  _handleButtonsContainerForApplyClick() {
+    this._removeClass();
   }
 
-  handleButtonsContainerForClearClick() {
-    this.elementInput.value = '';
-    this.numbers.forEach(number => {
+  _handleButtonsContainerForClearClick() {
+    this._elementInput.value = '';
+    this._numbers.forEach(number => {
       const element = number;
       element.innerHTML = '0';
     });
   }
 
-  handleDocumentClick(event) {
-    if (event.target.closest('.dropdown') !== this.dropdown) {
-      this.removeClass();
+  _handleDocumentClick(event) {
+    if (event.target.closest('.dropdown') !== this._dropdown) {
+      this._removeClass();
     }
   }
 
-  countValues(result, values, declinations) {
+  _countValues(result, values, declinations) {
     const isMatchingValue = value => {
       return (
         String(value).includes('2') ||
@@ -80,7 +80,7 @@ class Dropdown {
       );
     };
     if (result === 0) {
-      this.elementInput.value = '';
+      this._elementInput.value = '';
     } else {
       const newString = [];
       values.forEach((value, i) => {
@@ -102,25 +102,25 @@ class Dropdown {
         const intermediateElementString =
           index < newString.length - 1 && newString.length > 1;
         const futureStringLength =
-          this.elementInput.value.length + newString[index].length;
+          this._elementInput.value.length + newString[index].length;
         if (firstOrLastElementString) {
           if (futureStringLength >= 23) {
-            const stringWithoutComma = this.elementInput.value.substring(0, 20);
-            this.elementInput.value = `${stringWithoutComma}...`;
+            const stringWithoutComma = this._elementInput.value.substring(0, 20);
+            this._elementInput.value = `${stringWithoutComma}...`;
           } else {
-            this.elementInput.value += `${newString[index]}`;
+            this._elementInput.value += `${newString[index]}`;
           }
         } else if (intermediateElementString) {
-          this.elementInput.value += `${newString[index]}, `;
+          this._elementInput.value += `${newString[index]}, `;
         }
       });
     }
   }
 
-  countTheGuests() {
+  _countTheGuests() {
     let adults = 0;
     let babies = 0;
-    this.numbers.forEach((number, index) => {
+    this._numbers.forEach((number, index) => {
       if (index <= 1) {
         adults += Number(number.innerHTML);
       } else if (index === 2) {
@@ -132,15 +132,15 @@ class Dropdown {
     const declinationGuests = ['гость', 'гостя', 'гостей'];
     const declinationBabies = ['младенец', 'младенца', 'младенцев'];
     const declinations = [declinationGuests, declinationBabies];
-    this.countValues(amountGuests, guests, declinations);
+    this._countValues(amountGuests, guests, declinations);
   }
 
-  countAmenities() {
+  _countAmenities() {
     let bedrooms = 0;
     let beds = 0;
     let bathrooms = 0;
 
-    this.numbers.forEach((number, index) => {
+    this._numbers.forEach((number, index) => {
       if (index === 0) {
         bedrooms += Number(number.innerHTML);
       } else if (index === 1) {
@@ -163,50 +163,50 @@ class Dropdown {
       declinationBeds,
       declinationBathrooms,
     ];
-    this.countValues(amountAmenities, amenities, declinations);
+    this._countValues(amountAmenities, amenities, declinations);
   }
 
-  handleDropdownRowsClick(event) {
+  _handleDropdownRowsClick(event) {
     event.preventDefault();
 
-    this.elementInput.value = null;
+    this._elementInput.value = null;
     if (
-      this.rowsGroupParent.classList.contains(
+      this._rowsGroupParent.classList.contains(
         'dropdown__rows_for-count-the-guests',
       )
     ) {
-      this.countTheGuests();
+      this._countTheGuests();
     } else if (
-      this.rowsGroupParent.classList.contains(
+      this._rowsGroupParent.classList.contains(
         'dropdown__rows_for-count-amenities',
       )
     ) {
-      this.countAmenities();
+      this._countAmenities();
     }
   }
 
-  bindEventListeners() {
-    this.dropdownArrow.addEventListener(
+  _bindEventListeners() {
+    this._dropdownArrow.addEventListener(
       'click',
-      this.handleIconArrowDownClick.bind(this),
+      this._handleIconArrowDownClick.bind(this),
     );
-    this.elementInput.addEventListener(
+    this._elementInput.addEventListener(
       'focus',
-      this.handleInputContentFocus.bind(this),
+      this._handleInputContentFocus.bind(this),
     );
-    this.buttonApply.addEventListener(
+    this._buttonApply.addEventListener(
       'click',
-      this.handleButtonsContainerForApplyClick.bind(this),
+      this._handleButtonsContainerForApplyClick.bind(this),
     );
-    this.buttonClear.addEventListener(
+    this._buttonClear.addEventListener(
       'click',
-      this.handleButtonsContainerForClearClick.bind(this),
+      this._handleButtonsContainerForClearClick.bind(this),
     );
-    document.addEventListener('click', this.handleDocumentClick.bind(this));
-    this.rowsGroup.forEach(element => {
+    document.addEventListener('click', this._handleDocumentClick.bind(this));
+    this._rowsGroup.forEach(element => {
       element.addEventListener(
         'click',
-        this.handleDropdownRowsClick.bind(this),
+        this._handleDropdownRowsClick.bind(this),
       );
     });
   }

@@ -1,45 +1,45 @@
 class CheckboxList {
   constructor(element) {
-    this.checkboxList = element;
-    this.checkboxListTitle = null;
-    this.checkboxListToggle = null;
-    this.checkboxListIndicator = null;
+    this._checkboxList = element;
+    this._checkboxListTitle = null;
+    this._checkboxListToggle = null;
+    this._checkboxListIndicator = null;
 
-    this.findElements();
-    this.bindEventListeners();
+    this._findElements();
+    this._bindEventListeners();
   }
 
-  findElements() {
-    this.checkboxListTitle = this.checkboxList.querySelector(
+  _findElements() {
+    this._checkboxListTitle = this._checkboxList.querySelector(
       '.js-checkbox-list__title',
     );
-    this.checkboxListToggle = this.checkboxList.querySelector(
+    this._checkboxListToggle = this._checkboxList.querySelector(
       '.js-checkbox-list__container_hidden',
     );
-    this.checkboxListIndicator = this.checkboxList.querySelector(
+    this._checkboxListIndicator = this._checkboxList.querySelector(
       '.js-checkbox-list__indicator',
     );
   }
 
-  handleCheckboxListTitleClick() {
-    this.checkboxListToggle.classList.toggle('checkbox-list__container_hidden');
-    this.checkboxListIndicator.classList.toggle(
+  _handleCheckboxListTitleClick() {
+    this._checkboxListToggle.classList.toggle('checkbox-list__container_hidden');
+    this._checkboxListIndicator.classList.toggle(
       'checkbox-list__indicator_opened',
     );
   }
 
-  handleDocumentClick(event) {
-    if (event.target.closest('.checkbox-list') !== this.checkboxList) {
-      this.checkboxListToggle.classList.add('checkbox-list__container_hidden');
+  _handleDocumentClick(event) {
+    if (event.target.closest('.checkbox-list') !== this._checkboxList) {
+      this._checkboxListToggle.classList.add('checkbox-list__container_hidden');
     }
   }
 
-  bindEventListeners() {
-    this.checkboxListTitle.addEventListener(
+  _bindEventListeners() {
+    this._checkboxListTitle.addEventListener(
       'click',
-      this.handleCheckboxListTitleClick.bind(this),
+      this._handleCheckboxListTitleClick.bind(this),
     );
-    document.addEventListener('click', this.handleDocumentClick.bind(this));
+    document.addEventListener('click', this._handleDocumentClick.bind(this));
   }
 }
 

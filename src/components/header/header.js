@@ -1,37 +1,37 @@
 class Header {
   constructor() {
-    this.user = null;
-    this.userIcon = null;
-    this.navigation = null;
-    this.navigationIcon = null;
+    this._user = null;
+    this._userIcon = null;
+    this._navigation = null;
+    this._navigationIcon = null;
 
-    this.findElements();
-    this.bindEventListeners();
+    this._findElements();
+    this._bindEventListeners();
   }
 
-  findElements() {
-    this.userIcon = document.querySelector('.js-header__user-icon');
-    this.user = document.querySelector('.js-header__user');
-    this.navigationIcon = document.querySelector('.js-header__navigation-icon');
-    this.navigation = document.querySelector('.js-header__navigation');
+  _findElements() {
+    this._userIcon = document.querySelector('.js-header__user-icon');
+    this._user = document.querySelector('.js-header__user');
+    this._navigationIcon = document.querySelector('.js-header__navigation-icon');
+    this._navigation = document.querySelector('.js-header__navigation');
   }
 
-  handleUserIconClick() {
-    this.user.classList.toggle('header__user-icon_visible');
+  _handleUserIconClick() {
+    this._user.classList.toggle('header__user-icon_visible');
   }
 
-  handleNavigationIconClick() {
-    this.navigation.classList.toggle('header__navigation-icon_visible');
+  _handleNavigationIconClick() {
+    this._navigation.classList.toggle('header__navigation-icon_visible');
   }
 
-  bindEventListeners() {
-    this.userIcon.addEventListener(
+  _bindEventListeners() {
+    this._userIcon.addEventListener(
       'click',
-      this.handleUserIconClick.bind(this),
+      this._handleUserIconClick.bind(this),
     );
-    this.navigationIcon.addEventListener(
+    this._navigationIcon.addEventListener(
       'click',
-      this.handleNavigationIconClick.bind(this),
+      this._handleNavigationIconClick.bind(this),
     );
   }
 }

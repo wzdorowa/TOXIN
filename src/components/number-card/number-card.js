@@ -1,46 +1,46 @@
 class NumberCard {
   constructor(element) {
-    this.numberCardContainer = element;
-    this.slides = null;
-    this.dots = null;
-    this.buttonPrev = null;
-    this.buttonNext = null;
-    this.slideIndex = 1;
+    this._numberCardContainer = element;
+    this._slides = null;
+    this._dots = null;
+    this._buttonPrev = null;
+    this._buttonNext = null;
+    this._slideIndex = 1;
 
-    this.findElements();
-    this.showSlides(this.slideIndex);
-    this.bindEventListeners();
+    this._findElements();
+    this._showSlides(this._slideIndex);
+    this._bindEventListeners();
   }
 
-  findElements() {
-    this.slides = this.numberCardContainer.querySelectorAll(
+  _findElements() {
+    this._slides = this._numberCardContainer.querySelectorAll(
       '.js-number-card__content',
     );
-    this.dots = this.numberCardContainer.querySelectorAll(
+    this._dots = this._numberCardContainer.querySelectorAll(
       '.js-number-card__switch-slider',
     );
-    this.buttonPrev = this.numberCardContainer.querySelector(
+    this._buttonPrev = this._numberCardContainer.querySelector(
       '.js-number-card__prev',
     );
-    this.buttonNext = this.numberCardContainer.querySelector(
+    this._buttonNext = this._numberCardContainer.querySelector(
       '.js-number-card__next',
     );
   }
 
-  showSlides(slideNumber) {
-    if (slideNumber > this.slides.length) {
-      this.slideIndex = 1;
+  _showSlides(slideNumber) {
+    if (slideNumber > this._slides.length) {
+      this._slideIndex = 1;
     }
     if (slideNumber < 1) {
-      this.slideIndex = this.slides.length;
+      this._slideIndex = this._slides.length;
     }
-    this.slides.forEach(element => {
+    this._slides.forEach(element => {
       const slide = element;
       if (!slide.classList.contains('number-card__content_display_hidden')) {
         slide.classList.add('number-card__content_display_hidden');
       }
     });
-    this.dots.forEach(element => {
+    this._dots.forEach(element => {
       const slide = element;
       slide.className = element.className.replace(
         ' number-card__switch-slider-active',
@@ -48,45 +48,45 @@ class NumberCard {
       );
     });
     if (
-      this.slides[this.slideIndex - 1].classList.contains(
+      this._slides[this._slideIndex - 1].classList.contains(
         'number-card__content_display_hidden',
       )
     ) {
-      this.slides[this.slideIndex - 1].classList.remove(
+      this._slides[this._slideIndex - 1].classList.remove(
         'number-card__content_display_hidden',
       );
     }
-    this.dots[this.slideIndex - 1].className +=
+    this._dots[this._slideIndex - 1].className +=
       ' number-card__switch-slider-active';
   }
 
-  currentSlide(slideNumber) {
-    this.showSlides((this.slideIndex = slideNumber));
+  _currentSlide(slideNumber) {
+    this._showSlides((this._slideIndex = slideNumber));
   }
 
-  handleButtonPrevClick() {
-    this.showSlides((this.slideIndex -= 1));
+  _handleButtonPrevClick() {
+    this._showSlides((this._slideIndex -= 1));
   }
 
-  handleButtonNextClick() {
-    this.showSlides((this.slideIndex += 1));
+  _handleButtonNextClick() {
+    this._showSlides((this._slideIndex += 1));
   }
 
-  handleDotsClick(index) {
-    this.currentSlide(index + 1);
+  _handleDotsClick(index) {
+    this._currentSlide(index + 1);
   }
 
-  bindEventListeners() {
-    this.buttonPrev.addEventListener(
+  _bindEventListeners() {
+    this._buttonPrev.addEventListener(
       'click',
-      this.handleButtonPrevClick.bind(this),
+      this._handleButtonPrevClick.bind(this),
     );
-    this.buttonNext.addEventListener(
+    this._buttonNext.addEventListener(
       'click',
-      this.handleButtonNextClick.bind(this),
+      this._handleButtonNextClick.bind(this),
     );
-    this.dots.forEach((element, index) => {
-      element.addEventListener('click', this.handleDotsClick.bind(this, index));
+    this._dots.forEach((element, index) => {
+      element.addEventListener('click', this._handleDotsClick.bind(this, index));
     });
   }
 }

@@ -1,118 +1,118 @@
 class Datepicker {
   constructor(element) {
-    this.datepickerGroup = element;
-    this.datepicker = null;
-    this.elementsInput = null;
-    this.dropdownsArrow = null;
-    this.buttonApply = null;
-    this.buttonClear = null;
-    this.calendar = null;
+    this._datepickerGroup = element;
+    this._datepicker = null;
+    this._elementsInput = null;
+    this._dropdownsArrow = null;
+    this._buttonApply = null;
+    this._buttonClear = null;
+    this._calendar = null;
 
-    this.findElement();
-    this.bindEventListeners();
-    this.setValueToInput();
+    this._findElement();
+    this._bindEventListeners();
+    this._setValueToInput();
   }
 
-  findElement() {
-    this.datepicker = this.datepickerGroup.querySelector(
+  _findElement() {
+    this._datepicker = this._datepickerGroup.querySelector(
       '.js-datepicker-group__datepicker',
     );
-    this.elementsInput = this.datepickerGroup.querySelectorAll(
+    this._elementsInput = this._datepickerGroup.querySelectorAll(
       '.js-input__content',
     );
-    this.dropdownsArrow = this.datepickerGroup.querySelectorAll(
+    this._dropdownsArrow = this._datepickerGroup.querySelectorAll(
       '.js-input__icon-arrow-down',
     );
-    this.buttonApply = this.datepickerGroup.querySelector(
+    this._buttonApply = this._datepickerGroup.querySelector(
       '.js-calendar__buttons-container_with-button-apply',
     );
-    this.buttonClear = this.datepickerGroup.querySelector(
+    this._buttonClear = this._datepickerGroup.querySelector(
       '.js-calendar__buttons-container_with-button-clear',
     );
-    this.calendar = this.datepickerGroup.querySelector('.js-datepicker-here');
+    this._calendar = this._datepickerGroup.querySelector('.js-datepicker-here');
   }
 
-  addClass() {
-    this.datepicker.classList.add('datepicker-group__datepicker_visible');
+  _addClass() {
+    this._datepicker.classList.add('datepicker-group__datepicker_visible');
   }
 
-  removeClass() {
-    this.datepicker.classList.remove('datepicker-group__datepicker_visible');
+  _removeClass() {
+    this._datepicker.classList.remove('datepicker-group__datepicker_visible');
   }
 
-  toggleClass() {
-    this.datepicker.classList.toggle('datepicker-group__datepicker_visible');
+  _toggleClass() {
+    this._datepicker.classList.toggle('datepicker-group__datepicker_visible');
   }
 
-  clearValues() {
-    const $myCalendar = $(this.datepickerGroup).find('.js-datepicker-here');
+  _clearValues() {
+    const $myCalendar = $(this._datepickerGroup).find('.js-datepicker-here');
     const $calendar = $($myCalendar).datepicker().data('datepicker');
     $calendar.clear();
   }
 
-  handleInputContentFocus() {
-    this.addClass();
+  _handleInputContentFocus() {
+    this._addClass();
   }
 
-  handleIconArrowDownClick() {
-    this.toggleClass();
+  _handleIconArrowDownClick() {
+    this._toggleClass();
   }
 
-  handleButtonsContainerForApplyClick() {
-    this.removeClass();
+  _handleButtonsContainerForApplyClick() {
+    this._removeClass();
   }
 
-  handleButtonsContainerForClearClick() {
-    this.clearValues();
+  _handleButtonsContainerForClearClick() {
+    this._clearValues();
   }
 
-  handleDocumentClick(event) {
-    if (!this.datepickerGroup.contains(event.target)) {
-      this.removeClass();
+  _handleDocumentClick(event) {
+    if (!this._datepickerGroup.contains(event.target)) {
+      this._removeClass();
     }
   }
 
-  bindEventListeners() {
-    this.elementsInput.forEach(elementInput => {
+  _bindEventListeners() {
+    this._elementsInput.forEach(elementInput => {
       elementInput.addEventListener(
         'focus',
-        this.handleInputContentFocus.bind(this),
+        this._handleInputContentFocus.bind(this),
       );
     });
-    this.dropdownsArrow.forEach(dropdownArrow => {
+    this._dropdownsArrow.forEach(dropdownArrow => {
       dropdownArrow.addEventListener(
         'click',
-        this.handleIconArrowDownClick.bind(this),
+        this._handleIconArrowDownClick.bind(this),
       );
     });
-    this.buttonApply.addEventListener(
+    this._buttonApply.addEventListener(
       'click',
-      this.handleButtonsContainerForApplyClick.bind(this),
+      this._handleButtonsContainerForApplyClick.bind(this),
     );
-    this.buttonClear.addEventListener(
+    this._buttonClear.addEventListener(
       'click',
-      this.handleButtonsContainerForClearClick.bind(this),
+      this._handleButtonsContainerForClearClick.bind(this),
     );
     document.addEventListener(
       'click',
-      this.handleDocumentClick.bind(this),
+      this._handleDocumentClick.bind(this),
       true,
     );
   }
 
-  setValueToInput() {
+  _setValueToInput() {
     if (
-      $(this.calendar).parents('.datepicker-group__datepicker_with-one-input')
+      $(this._calendar).parents('.datepicker-group__datepicker_with-one-input')
         .length === 1
     ) {
-      $(this.calendar).datepicker({
+      $(this._calendar).datepicker({
         navTitles: {
           days: 'MM <i>yyyy</i>',
         },
         multipleDatesSeparator: ' - ',
         dateFormat: 'dd M',
         onSelect: (fd, dates) => {
-          const input = this.datepickerGroup.querySelector(
+          const input = this._datepickerGroup.querySelector(
             '.js-input__content',
           );
           let string = '';
@@ -126,13 +126,13 @@ class Datepicker {
         },
       });
     } else {
-      $(this.calendar).datepicker({
+      $(this._calendar).datepicker({
         navTitles: {
           days: 'MM <i>yyyy</i>',
         },
         dateFormat: 'dd.mm.yyyy',
         onSelect: fd => {
-          const inputs = this.datepickerGroup.querySelectorAll(
+          const inputs = this._datepickerGroup.querySelectorAll(
             '.js-input__content',
           );
           let dayFrom = '';

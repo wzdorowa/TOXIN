@@ -1,85 +1,85 @@
 class Rating {
   constructor(element) {
-    this.rating = element;
-    this.ratingItems = null;
+    this._rating = element;
+    this._ratingItems = null;
 
-    this.findElements();
-    this.bindEventListener();
+    this._findElements();
+    this._bindEventListener();
   }
 
-  findElements() {
-    this.ratingItems = Array.from($(this.rating).children('.js-rating-item'));
+  _findElements() {
+    this._ratingItems = Array.from($(this._rating).children('.js-rating-item'));
   }
 
-  removeClass(array, className) {
+  _removeClass(array, className) {
     array.forEach((_element, i) => {
       const elements = new Array(2);
       for (let j = 1; j < elements.length; j += 1) {
-        this.ratingItems[i].classList.remove(className);
+        this._ratingItems[i].classList.remove(className);
       }
     });
   }
 
-  addClass(array, className) {
+  _addClass(array, className) {
     array.forEach((_element, i) => {
       const elements = new Array(2);
       for (let j = 1; j < elements.length; j += 1) {
-        this.ratingItems[i].classList.add(className);
+        this._ratingItems[i].classList.add(className);
       }
     });
   }
 
-  mouseOverActiveClass() {
-    for (let i = 0, iLength = this.ratingItems.length; i < iLength; i += 1) {
-      if (this.ratingItems[i].classList.contains('active')) {
+  _mouseOverActiveClass() {
+    for (let i = 0, iLength = this._ratingItems.length; i < iLength; i += 1) {
+      if (this._ratingItems[i].classList.contains('active')) {
         break;
       } else {
-        this.ratingItems[i].classList.add('active');
+        this._ratingItems[i].classList.add('active');
       }
     }
   }
 
-  mouseOutActiveClass() {
-    for (let i = this.ratingItems.length - 1; i >= 1; i -= 1) {
-      if (this.ratingItems[i].classList.contains('current-active')) {
+  _mouseOutActiveClass() {
+    for (let i = this._ratingItems.length - 1; i >= 1; i -= 1) {
+      if (this._ratingItems[i].classList.contains('current-active')) {
         break;
       } else {
-        this.ratingItems[i].classList.remove('active');
+        this._ratingItems[i].classList.remove('active');
       }
     }
   }
 
-  handleRatingClick(event) {
+  _handleRatingClick(event) {
     const targetElement = event.target;
     if (targetElement.classList.contains('rating-item')) {
-      this.removeClass(this.ratingItems, 'current-active');
+      this._removeClass(this._ratingItems, 'current-active');
       targetElement.classList.add('active', 'current-active');
     }
   }
 
-  handleRatingMouseover(event) {
+  _handleRatingMouseover(event) {
     const targetElement = event.target;
     if (targetElement.classList.contains('rating-item')) {
-      this.removeClass(this.ratingItems, 'active');
+      this._removeClass(this._ratingItems, 'active');
       targetElement.classList.add('active');
-      this.mouseOverActiveClass(this.ratingItems);
+      this._mouseOverActiveClass(this._ratingItems);
     }
   }
 
-  handleRatingMouseout() {
-    this.addClass(this.ratingItems, 'active');
-    this.mouseOutActiveClass(this.ratingItems);
+  _handleRatingMouseout() {
+    this._addClass(this._ratingItems, 'active');
+    this._mouseOutActiveClass(this._ratingItems);
   }
 
-  bindEventListener() {
-    this.rating.addEventListener('click', this.handleRatingClick.bind(this));
-    this.rating.addEventListener(
+  _bindEventListener() {
+    this._rating.addEventListener('click', this._handleRatingClick.bind(this));
+    this._rating.addEventListener(
       'mouseover',
-      this.handleRatingMouseover.bind(this),
+      this._handleRatingMouseover.bind(this),
     );
-    this.rating.addEventListener(
+    this._rating.addEventListener(
       'mouseout',
-      this.handleRatingMouseout.bind(this),
+      this._handleRatingMouseout.bind(this),
     );
   }
 }

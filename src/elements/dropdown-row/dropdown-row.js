@@ -1,62 +1,62 @@
 class DropdownRow {
   constructor(element) {
-    this.dropdownRow = element;
-    this.signs = [];
-    this.minusSign = null;
-    this.plusSign = null;
-    this.listItems = [];
-    this.numberContainer = null;
+    this._dropdownRow = element;
+    this._signs = [];
+    this._minusSign = null;
+    this._plusSign = null;
+    this._listItems = [];
+    this._numberContainer = null;
 
-    this.findElements();
-    this.bindEventListeners();
+    this._findElements();
+    this._bindEventListeners();
   }
 
-  findElements() {
-    this.listItems = this.dropdownRow.querySelectorAll(
+  _findElements() {
+    this._listItems = this._dropdownRow.querySelectorAll(
       '.js-dropdown-row__amount',
     );
-    this.signs = this.dropdownRow.querySelectorAll(
+    this._signs = this._dropdownRow.querySelectorAll(
       '.js-dropdown-row__amount_with-sign',
     );
-    [this.firstArg, this.numberContainer] = this.listItems;
-    [this.minusSign, this.plusSign] = this.signs;
+    [this.firstArg, this._numberContainer] = this._listItems;
+    [this._minusSign, this._plusSign] = this._signs;
   }
 
-  add() {
-    const currentValue = this.numberContainer.innerHTML;
+  _add() {
+    const currentValue = this._numberContainer.innerHTML;
     let result = 0;
     result = Number(currentValue) + 1;
 
-    this.numberContainer.innerHTML = String(result);
+    this._numberContainer.innerHTML = String(result);
   }
 
-  subtract() {
-    const currentValue = this.numberContainer.innerHTML;
+  _subtract() {
+    const currentValue = this._numberContainer.innerHTML;
     let result = 0;
     result = currentValue - 1;
     if (result < 0) {
-      this.numberContainer.innerHTML = '0';
+      this._numberContainer.innerHTML = '0';
     } else {
-      this.numberContainer.innerHTML = result;
+      this._numberContainer.innerHTML = result;
     }
   }
 
-  handlePlusSignClick() {
-    this.add();
+  _handlePlusSignClick() {
+    this._add();
   }
 
-  handleMinusSignClick() {
-    this.subtract();
+  _handleMinusSignClick() {
+    this._subtract();
   }
 
-  bindEventListeners() {
-    this.plusSign.addEventListener(
+  _bindEventListeners() {
+    this._plusSign.addEventListener(
       'click',
-      this.handlePlusSignClick.bind(this),
+      this._handlePlusSignClick.bind(this),
     );
-    this.minusSign.addEventListener(
+    this._minusSign.addEventListener(
       'click',
-      this.handleMinusSignClick.bind(this),
+      this._handleMinusSignClick.bind(this),
     );
   }
 }
