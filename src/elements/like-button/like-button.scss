@@ -8,6 +8,10 @@
     cursor: pointer;
   }
 
+  &__content {
+    display: none;
+  }
+
   &__indicator {
     position: absolute;
     width: 100%;
