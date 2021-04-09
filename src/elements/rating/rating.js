@@ -1,21 +1,21 @@
 class Rating {
   constructor(element) {
-    this._rating = element;
-    this._ratingItems = null;
+    this.rating = element;
+    this.ratingItems = null;
 
     this._findElements();
     this._bindEventListener();
   }
 
   _findElements() {
-    this._ratingItems = Array.from($(this._rating).children('.js-rating-item'));
+    this.ratingItems = Array.from($(this.rating).children('.js-rating-item'));
   }
 
   _removeClass(array, className) {
     array.forEach((_element, i) => {
       const elements = new Array(2);
       for (let j = 1; j < elements.length; j += 1) {
-        this._ratingItems[i].classList.remove(className);
+        this.ratingItems[i].classList.remove(className);
       }
     });
   }
@@ -24,27 +24,27 @@ class Rating {
     array.forEach((_element, i) => {
       const elements = new Array(2);
       for (let j = 1; j < elements.length; j += 1) {
-        this._ratingItems[i].classList.add(className);
+        this.ratingItems[i].classList.add(className);
       }
     });
   }
 
   _mouseOverActiveClass() {
-    for (let i = 0, iLength = this._ratingItems.length; i < iLength; i += 1) {
-      if (this._ratingItems[i].classList.contains('active')) {
+    for (let i = 0, iLength = this.ratingItems.length; i < iLength; i += 1) {
+      if (this.ratingItems[i].classList.contains('active')) {
         break;
       } else {
-        this._ratingItems[i].classList.add('active');
+        this.ratingItems[i].classList.add('active');
       }
     }
   }
 
   _mouseOutActiveClass() {
-    for (let i = this._ratingItems.length - 1; i >= 1; i -= 1) {
-      if (this._ratingItems[i].classList.contains('current-active')) {
+    for (let i = this.ratingItems.length - 1; i >= 1; i -= 1) {
+      if (this.ratingItems[i].classList.contains('current-active')) {
         break;
       } else {
-        this._ratingItems[i].classList.remove('active');
+        this.ratingItems[i].classList.remove('active');
       }
     }
   }
@@ -52,7 +52,7 @@ class Rating {
   _handleRatingClick(event) {
     const targetElement = event.target;
     if (targetElement.classList.contains('rating-item')) {
-      this._removeClass(this._ratingItems, 'current-active');
+      this._removeClass(this.ratingItems, 'current-active');
       targetElement.classList.add('active', 'current-active');
     }
   }
@@ -60,24 +60,24 @@ class Rating {
   _handleRatingMouseover(event) {
     const targetElement = event.target;
     if (targetElement.classList.contains('rating-item')) {
-      this._removeClass(this._ratingItems, 'active');
+      this._removeClass(this.ratingItems, 'active');
       targetElement.classList.add('active');
-      this._mouseOverActiveClass(this._ratingItems);
+      this._mouseOverActiveClass(this.ratingItems);
     }
   }
 
   _handleRatingMouseout() {
-    this._addClass(this._ratingItems, 'active');
-    this._mouseOutActiveClass(this._ratingItems);
+    this._addClass(this.ratingItems, 'active');
+    this._mouseOutActiveClass(this.ratingItems);
   }
 
   _bindEventListener() {
-    this._rating.addEventListener('click', this._handleRatingClick.bind(this));
-    this._rating.addEventListener(
+    this.rating.addEventListener('click', this._handleRatingClick.bind(this));
+    this.rating.addEventListener(
       'mouseover',
       this._handleRatingMouseover.bind(this),
     );
-    this._rating.addEventListener(
+    this.rating.addEventListener(
       'mouseout',
       this._handleRatingMouseout.bind(this),
     );

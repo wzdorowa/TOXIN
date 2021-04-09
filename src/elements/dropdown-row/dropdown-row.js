@@ -1,43 +1,43 @@
 class DropdownRow {
   constructor(element) {
-    this._dropdownRow = element;
-    this._signs = [];
-    this._minusSign = null;
-    this._plusSign = null;
-    this._listItems = [];
-    this._numberContainer = null;
+    this.dropdownRow = element;
+    this.signs = [];
+    this.minusSign = null;
+    this.plusSign = null;
+    this.listItems = [];
+    this.numberContainer = null;
 
     this._findElements();
     this._bindEventListeners();
   }
 
   _findElements() {
-    this._listItems = this._dropdownRow.querySelectorAll(
+    this.listItems = this.dropdownRow.querySelectorAll(
       '.js-dropdown-row__amount',
     );
-    this._signs = this._dropdownRow.querySelectorAll(
+    this.signs = this.dropdownRow.querySelectorAll(
       '.js-dropdown-row__amount_with-sign',
     );
-    [this.firstArg, this._numberContainer] = this._listItems;
-    [this._minusSign, this._plusSign] = this._signs;
+    [this.firstArg, this.numberContainer] = this.listItems;
+    [this.minusSign, this.plusSign] = this.signs;
   }
 
   _add() {
-    const currentValue = this._numberContainer.innerHTML;
+    const currentValue = this.numberContainer.innerHTML;
     let result = 0;
     result = Number(currentValue) + 1;
 
-    this._numberContainer.innerHTML = String(result);
+    this.numberContainer.innerHTML = String(result);
   }
 
   _subtract() {
-    const currentValue = this._numberContainer.innerHTML;
+    const currentValue = this.numberContainer.innerHTML;
     let result = 0;
     result = currentValue - 1;
     if (result < 0) {
-      this._numberContainer.innerHTML = '0';
+      this.numberContainer.innerHTML = '0';
     } else {
-      this._numberContainer.innerHTML = result;
+      this.numberContainer.innerHTML = result;
     }
   }
 
@@ -50,11 +50,11 @@ class DropdownRow {
   }
 
   _bindEventListeners() {
-    this._plusSign.addEventListener(
+    this.plusSign.addEventListener(
       'click',
       this._handlePlusSignClick.bind(this),
     );
-    this._minusSign.addEventListener(
+    this.minusSign.addEventListener(
       'click',
       this._handleMinusSignClick.bind(this),
     );

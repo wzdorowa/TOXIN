@@ -1,41 +1,41 @@
 class CheckboxList {
   constructor(element) {
-    this._checkboxList = element;
-    this._checkboxListTitle = null;
-    this._checkboxListToggle = null;
-    this._checkboxListIndicator = null;
+    this.checkboxList = element;
+    this.checkboxListTitle = null;
+    this.checkboxListToggle = null;
+    this.checkboxListIndicator = null;
 
     this._findElements();
     this._bindEventListeners();
   }
 
   _findElements() {
-    this._checkboxListTitle = this._checkboxList.querySelector(
+    this.checkboxListTitle = this.checkboxList.querySelector(
       '.js-checkbox-list__title',
     );
-    this._checkboxListToggle = this._checkboxList.querySelector(
+    this.checkboxListToggle = this.checkboxList.querySelector(
       '.js-checkbox-list__container_hidden',
     );
-    this._checkboxListIndicator = this._checkboxList.querySelector(
+    this.checkboxListIndicator = this.checkboxList.querySelector(
       '.js-checkbox-list__indicator',
     );
   }
 
   _handleCheckboxListTitleClick() {
-    this._checkboxListToggle.classList.toggle('checkbox-list__container_hidden');
-    this._checkboxListIndicator.classList.toggle(
+    this.checkboxListToggle.classList.toggle('checkbox-list__container_hidden');
+    this.checkboxListIndicator.classList.toggle(
       'checkbox-list__indicator_opened',
     );
   }
 
   _handleDocumentClick(event) {
-    if (event.target.closest('.checkbox-list') !== this._checkboxList) {
-      this._checkboxListToggle.classList.add('checkbox-list__container_hidden');
+    if (event.target.closest('.checkbox-list') !== this.checkboxList) {
+      this.checkboxListToggle.classList.add('checkbox-list__container_hidden');
     }
   }
 
   _bindEventListeners() {
-    this._checkboxListTitle.addEventListener(
+    this.checkboxListTitle.addEventListener(
       'click',
       this._handleCheckboxListTitleClick.bind(this),
     );

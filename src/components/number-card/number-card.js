@@ -1,46 +1,46 @@
 class NumberCard {
   constructor(element) {
-    this._numberCardContainer = element;
-    this._slides = null;
-    this._dots = null;
-    this._buttonPrev = null;
-    this._buttonNext = null;
-    this._slideIndex = 1;
+    this.numberCardContainer = element;
+    this.slides = null;
+    this.dots = null;
+    this.buttonPrev = null;
+    this.buttonNext = null;
+    this.slideIndex = 1;
 
     this._findElements();
-    this._showSlides(this._slideIndex);
+    this._showSlides(this.slideIndex);
     this._bindEventListeners();
   }
 
   _findElements() {
-    this._slides = this._numberCardContainer.querySelectorAll(
+    this.slides = this.numberCardContainer.querySelectorAll(
       '.js-number-card__content',
     );
-    this._dots = this._numberCardContainer.querySelectorAll(
+    this.dots = this.numberCardContainer.querySelectorAll(
       '.js-number-card__switch-slider',
     );
-    this._buttonPrev = this._numberCardContainer.querySelector(
+    this.buttonPrev = this.numberCardContainer.querySelector(
       '.js-number-card__prev',
     );
-    this._buttonNext = this._numberCardContainer.querySelector(
+    this.buttonNext = this.numberCardContainer.querySelector(
       '.js-number-card__next',
     );
   }
 
   _showSlides(slideNumber) {
-    if (slideNumber > this._slides.length) {
-      this._slideIndex = 1;
+    if (slideNumber > this.slides.length) {
+      this.slideIndex = 1;
     }
     if (slideNumber < 1) {
-      this._slideIndex = this._slides.length;
+      this.slideIndex = this.slides.length;
     }
-    this._slides.forEach(element => {
+    this.slides.forEach(element => {
       const slide = element;
       if (!slide.classList.contains('number-card__content_display_hidden')) {
         slide.classList.add('number-card__content_display_hidden');
       }
     });
-    this._dots.forEach(element => {
+    this.dots.forEach(element => {
       const slide = element;
       slide.className = element.className.replace(
         ' number-card__switch-slider-active',
@@ -48,28 +48,28 @@ class NumberCard {
       );
     });
     if (
-      this._slides[this._slideIndex - 1].classList.contains(
+      this.slides[this.slideIndex - 1].classList.contains(
         'number-card__content_display_hidden',
       )
     ) {
-      this._slides[this._slideIndex - 1].classList.remove(
+      this.slides[this.slideIndex - 1].classList.remove(
         'number-card__content_display_hidden',
       );
     }
-    this._dots[this._slideIndex - 1].className +=
+    this.dots[this.slideIndex - 1].className +=
       ' number-card__switch-slider-active';
   }
 
   _currentSlide(slideNumber) {
-    this._showSlides((this._slideIndex = slideNumber));
+    this._showSlides((this.slideIndex = slideNumber));
   }
 
   _handleButtonPrevClick() {
-    this._showSlides((this._slideIndex -= 1));
+    this._showSlides((this.slideIndex -= 1));
   }
 
   _handleButtonNextClick() {
-    this._showSlides((this._slideIndex += 1));
+    this._showSlides((this.slideIndex += 1));
   }
 
   _handleDotsClick(index) {
@@ -77,15 +77,15 @@ class NumberCard {
   }
 
   _bindEventListeners() {
-    this._buttonPrev.addEventListener(
+    this.buttonPrev.addEventListener(
       'click',
       this._handleButtonPrevClick.bind(this),
     );
-    this._buttonNext.addEventListener(
+    this.buttonNext.addEventListener(
       'click',
       this._handleButtonNextClick.bind(this),
     );
-    this._dots.forEach((element, index) => {
+    this.dots.forEach((element, index) => {
       element.addEventListener('click', this._handleDotsClick.bind(this, index));
     });
   }
