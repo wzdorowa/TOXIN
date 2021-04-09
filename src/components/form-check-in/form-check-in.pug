@@ -22,13 +22,14 @@ mixin form-check-in({text = 'Form name'} = {})
         +radio-button({text: 'Мужчина', checked: 'checked', name: 'gender-for-form-check-in'})
         +radio-button({text: 'Женщина', name: 'gender-for-form-check-in'})
     .form-check-in__input
-      .form-check-in__input-container.form-check-in__input-container_with-masked-field.js-form-check-in__input-container_with-masked-field
+      .form-check-in__input-container
         +input({
           label: 'Дата рождения',
           placeholder: 'ДД.ММ.ГГГГ',
           type: 'text',
           hasBorderRadiusTop: true,
           hasBorderRadiusBottom: true,
+          hasInputMask: true
         })
     .form-check-in__login-details
       .form-check-in__group-inputs-login
