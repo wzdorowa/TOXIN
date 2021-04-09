@@ -7,7 +7,6 @@ class MaskedInput {
 
   _setMaskedField() {
     const maskedForDate = this.maskedContainer.querySelector('.input__content');
-    console.log(maskedForDate);
     $(maskedForDate).inputmask('99.99.9999', { placeholder: 'ДД/ММ/ГГГГ' });
   }
 }
