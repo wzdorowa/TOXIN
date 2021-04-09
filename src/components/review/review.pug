@@ -1,9 +1,9 @@
 include ../../elements/advantages/advantages.pug
 include ../../elements/like-button/like-button.pug
 
-mixin review({title = 'Title', value = 'text', nameIcon = 'userIcon', text = 'text description'} = {})
+mixin review({title = 'Title', value = 'text', srcImage, nameIcon = false, text = 'text description'} = {})
   .review
-    +advantages({title: title, value: value, nameIcon: nameIcon})
+    +advantages({title: title, value: value, srcImage: srcImage, nameIcon: nameIcon})
     .review__content
       .review__like-button
         +like-button({text: '12', checked: 'checked'})
