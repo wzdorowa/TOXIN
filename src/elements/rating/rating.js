@@ -2,13 +2,23 @@ class Rating {
   constructor(element) {
     this.rating = element;
     this.ratingItems = null;
+    this.hasRating = null;
 
     this._findElements();
+    this._renderStar();
     this._bindEventListener();
   }
 
   _findElements() {
     this.ratingItems = Array.from($(this.rating).children('.js-rating-item'));
+    this.hasRating = this.rating.dataset.value;
+  }
+
+  _renderStar() {
+    const amount = Number(this.hasRating);
+    for(i = 0; i < amount; i++) {
+      this.ratingItems[i].classList.add('active');
+    }
   }
 
   _removeClass(array, className) {

@@ -1,6 +1,6 @@
 include ../../elements/rating/rating.pug
 
-mixin number-card({number = '100', text, cost = '1000', amount = '0', images})
+mixin number-card({number = '100', text, cost = '1000', amount = '0', images, hasRating})
   .number-card.js-number-card
     .number-card__slider
       each value, index in images
@@ -24,7 +24,7 @@ mixin number-card({number = '100', text, cost = '1000', amount = '0', images})
       .number-card__data-border
       .number-card__reviews
         .number-card__rate-group-button
-            +rating()
+            +rating({hasRating})
         .number-card__amount
           span.number-card__amount-reviews= amount
           span.number-card__amount-reviews-description

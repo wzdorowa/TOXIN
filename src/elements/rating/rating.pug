@@ -1,6 +1,6 @@
-mixin rating()
-  ul.rating.js-rating
-    li.rating-item.js-rating-item(class='active' data-rate='1')
+mixin rating({hasRating = '1'} = {})
+  ul.rating.js-rating(data-value=hasRating)
+    li.rating-item.js-rating-item(data-rate='1')
     li.rating-item.js-rating-item(data-rate='2')
     li.rating-item.js-rating-item(data-rate='3')
     li.rating-item.js-rating-item(data-rate='4')
