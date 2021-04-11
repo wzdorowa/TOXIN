@@ -1,4 +1,4 @@
-class MaskedInput {
+class Input {
   constructor(element) {
     this.maskedContainer = element;
 
@@ -15,5 +15,5 @@ const elements = document.querySelectorAll(
   '.js-input_with-input-mask',
 );
 elements.forEach(element => {
-  new MaskedInput(element);
+  new Input(element);
 });

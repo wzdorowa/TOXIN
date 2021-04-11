@@ -1,4 +1,4 @@
-class Datepicker {
+class DatepickerGroup {
   constructor(element) {
     this.datepickerGroup = element;
     this.datepicker = null;
@@ -156,5 +156,5 @@ class Datepicker {
 
 const elements = document.querySelectorAll('.js-datepicker-group');
 elements.forEach(element => {
-  new Datepicker(element);
+  new DatepickerGroup(element);
 });
