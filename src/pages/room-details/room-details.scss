@@ -277,7 +277,7 @@
     width: 100%;
     min-width: 280px;
     max-width: 720px;
-    min-height: 303px;
+    min-height: 570px;
     padding-right: 10px;
     padding-left: 10px;
     margin-left: auto;
@@ -286,6 +286,21 @@
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 35px;
+    @media(min-width: 320px) {
+      min-height: 490px;
+    }
+    @media(min-width: 375px) {
+      min-height: 420px;
+    }
+    @media(min-width: 410px) {
+      min-height: 390px;
+    }
+    @media(min-width: 481px) {
+      min-height: 350px;
+    }
+    @media(min-width: 590px) {
+      min-height: 303px;
+    }
     @media(min-width: 1000px) {
       grid-column-start: 1;
       grid-column-end: 2;
