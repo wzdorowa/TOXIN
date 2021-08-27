@@ -16,6 +16,7 @@ class Dropdown {
 
   _findElement() {
     this.elementInput = this.dropdown.querySelector('.js-input__content');
+    this.parentInput = this.dropdown.querySelector('.js-dropdown__list');
     this.dropdownList = this.dropdown.querySelector('.js-dropdown__content');
     this.dropdownArrow = this.dropdown.querySelector(
       '.js-input__icon-arrow-down',
@@ -35,14 +36,26 @@ class Dropdown {
 
   _addClass() {
     this.dropdownList.classList.add('dropdown__content_visible');
+    console.log('1', this.parentInput.contains(this.elementInput));
+    if (this.parentInput.contains(this.elementInput)) {
+      this.elementInput.classList.add('input__content_opened')
+    }
   }
 
   _removeClass() {
     this.dropdownList.classList.remove('dropdown__content_visible');
+    console.log('1', this.parentInput.contains(this.elementInput));
+    if (this.parentInput.contains(this.elementInput)) {
+      this.elementInput.classList.remove('input__content_opened')
+    }
   }
 
   _toggleClass() {
     this.dropdownList.classList.toggle('dropdown__content_visible');
+    console.log('1', this.parentInput.contains(this.elementInput));
+    if (this.parentInput.contains(this.elementInput)) {
+      this.elementInput.classList.toggle('input__content_opened')
+    }
   }
 
   _handleIconArrowDownClick() {

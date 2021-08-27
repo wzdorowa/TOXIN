@@ -83,6 +83,10 @@
     padding-left: 12px;
     padding-right: 40px;
 
+    &_opened {
+      border: 1px solid $DarkShade50;
+    }
+
     &:hover, :focus {
       border: 1px solid $DarkShade50;
       line-height: 24px;

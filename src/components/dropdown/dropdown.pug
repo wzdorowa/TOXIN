@@ -2,7 +2,7 @@ include ../../elements/dropdown-row/dropdown-row.pug
 
 mixin dropdown({label, placeholder = 'Выберите нужное количество', isHide = false, readonly = 'readonly', display = '', dropdownFor = ''})
   .dropdown.js-dropdown
-    .dropdown__list
+    .dropdown__list.js-dropdown__list
       +input({
         label: label,
         placeholder: placeholder,
