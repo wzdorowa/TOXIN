@@ -1,30 +1,19 @@
 include ../../components/calendar/calendar.pug
 include ../../components/dropdown/dropdown.pug
-include ../../elements/numerical-group/numerical-group.pug
+include ../../elements/settlement-group/settlement-group.pug
 include ../../elements/dropdown-row/dropdown-row.pug
 
-mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']} = {})
+mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'], } = {})
     .form-room-cost
       .form-room-cost__identification-room
           .form-room-cost__specification-room
-              +numerical-group({
-                numberDecor: 'bold',
-                number: '888',
-                visibilitySignRouble: 'hidden',
-                descriptionDecor: 'bold-pink',
-                description: 'люкс',
-                visibilityDescriptionSign: 'hidden'
-              })
+            span.form-room-cost__sign-number= '№'
+            span.form-room-cost__number-room= number
+            span.form-room-cost__room-class= text
           .form-room-cost__cost-per-day
-              +numerical-group({
-                visibilitySignNumber: 'hidden',
-                numberDecor,
-                number: '9 990',
-                descriptionDecor: 'normal',
-                description: ' в сутки',
-                visibilityDescriptionSign: 'hidden'
-              })
-      -const label = ['Прибытие', 'Выезд']
+            span.form-room-cost__room-cost!= `${cost}<span class='form-room-cost__sign-rouble'>P</span> `
+            span= 'в сутки'
+      - const label = ['Прибытие', 'Выезд']
       +datepicker-group({labelArray: label, dates: dateFormat, size: 'small', amountField: 'with-two-inputs'})
       .form-room-cost__dropdown-container
         +dropdown({
@@ -37,25 +26,11 @@ mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat =
           +dropdown-row({label: 'Дети', number: '1'})
           +dropdown-row({label: 'Младенцы', number: '0'})
       .form-room-cost__calculation
-          - const calculationItems = [[{number: '9 990', description: ' x 4 суток', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'},{number: '39 690', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}],[{number: '', description: 'Сбор за услуги: скидка', visibilitySignNumber: 'hidden', visibilitySignRouble: 'hidden', visibilityDescriptionSign: 'hidden'},{number: ' 2 179', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: ''},{number: '0', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}],[{number: '', description: 'Сбор за дополнительные услуги', visibilitySignNumber: 'hidden', visibilitySignRouble: 'hidden', visibilityDescriptionSign: ''},{number: '300', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}]]
-          - const itemNumber = ['first', 'second', 'third']
-          each value, index in calculationItems
-              - const [firstItem, secondItem, thirdItem] = value
-              .form-room-cost__calculation-item
-                  if(index === 1)
-                      .form-room-cost__calculation-item-content(class=`form-room-cost__calculation-item-content_${itemNumber[index]}`)
-                          +numerical-group(firstItem)
-                          +numerical-group(secondItem)
-                      +numerical-group(thirdItem)
-                  else
-                      .form-room-cost__calculation-item-content(class=`form-room-cost__calculation-item-content_${itemNumber[index]}`)
-                          +numerical-group(firstItem)
-                      +numerical-group(secondItem)
+          - const stateForTable = {pricePerDay: '9 990', numberOfDays: '4 суток', priceForThePeriod: '39 690', serviceCharge: '2 179', servicePrice: '0', additionalServicesPrice: '300', totalCost: '38 081'}
+          +settlement-group(stateForTable)
       .form-room-cost__total
           .form-room-cost__total-item Итого
           .form-room-cost__total-item.form-room-cost__total-item_with-border
-          .form-room-cost__total-item.form-room-cost__total-item_with-cost
-              - const totalState = {number: '38 081', description: '', visibilitySignNumber: 'hidden', visibilitySignRouble: '', visibilityDescriptionSign: 'hidden'}
-              +numerical-group(totalState)
+          .form-room-cost__total-item.form-room-cost__total-item_with-cost!= `${stateForTable.totalCost}<span class='form-room-cost__sign-rouble'>P</span>`
       .form-room-cost__armor-button
           +button({text: 'Забронировать', decor: 'background', arrow: 'arrow', height: 'large'})
