@@ -100,7 +100,11 @@
   }
 
   &--cell {
-    min-height: 38.5px;
+    min-height: 30px;
+    @media (min-width: 480px) {
+      min-height: 38.5px;
+    }
+    
 
     &.-current- {
       color: #FFFFFF;
