@@ -36,7 +36,6 @@ class Dropdown {
 
   _addClass() {
     this.dropdownList.classList.add('dropdown__content_visible');
-    console.log('1', this.parentInput.contains(this.elementInput));
     if (this.parentInput.contains(this.elementInput)) {
       this.elementInput.classList.add('input__content_opened')
     }
@@ -44,7 +43,6 @@ class Dropdown {
 
   _removeClass() {
     this.dropdownList.classList.remove('dropdown__content_visible');
-    console.log('1', this.parentInput.contains(this.elementInput));
     if (this.parentInput.contains(this.elementInput)) {
       this.elementInput.classList.remove('input__content_opened')
     }
@@ -52,7 +50,6 @@ class Dropdown {
 
   _toggleClass() {
     this.dropdownList.classList.toggle('dropdown__content_visible');
-    console.log('1', this.parentInput.contains(this.elementInput));
     if (this.parentInput.contains(this.elementInput)) {
       this.elementInput.classList.toggle('input__content_opened')
     }
