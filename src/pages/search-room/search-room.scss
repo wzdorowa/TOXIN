@@ -253,7 +253,7 @@
     }
 
     &-title {
-      font-family: 'Montserrat', Arial, sans-serif;
+      font-family: 'Quicksand', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 20px;
@@ -266,6 +266,9 @@
       margin-right: auto;
       margin-bottom: 23px;
       text-align: center;
+      letter-spacing: 0em;
+      text-align: left;
+
       @media (min-width: 321px) {
         width: 90%;
         margin-left: auto;
@@ -279,8 +282,8 @@
       @media (min-width: 1097px) {
         width: 100%;
         text-align: start;
-        font-size: 23.2px;
-        line-height: 23.2px;
+        font-size: 24px;
+        line-height: 30px;
       }
     }
 

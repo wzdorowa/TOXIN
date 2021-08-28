@@ -213,14 +213,16 @@
   }
 
   &__title {
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Quicksand', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 19px;
     line-height: 24px;
     color: $DarkShade100;
     margin: 0;
-    letter-spacing: -0.6px;
+    letter-spacing: 0em;
+    text-align: left;
+
   }
 
   &__advantages {
@@ -241,24 +243,29 @@
   }
 
   &__title-review {
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Quicksand', Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
     color: $DarkShade100;
     margin: 0;
-    letter-spacing: -0.3px
+    letter-spacing: 0em;
+    text-align: left;
+
   }
 
   &__title-cancel {
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Quicksand', Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
     color: $DarkShade100;
     margin: 0;
+    letter-spacing: 0em;
+    text-align: left;
+
   }
 
   &__impressions {
@@ -321,8 +328,8 @@
       font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: normal;
-      font-size: 13px;
-      line-height: 13px;
+      font-size: 14px;
+      line-height: 14px;
       text-align: center;
       display: flex;
       align-items: center;
@@ -354,7 +361,7 @@
   }
 
   &__title-rules {
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Quicksand', Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 19px;
@@ -362,6 +369,9 @@
     color: $DarkShade100;
     margin: 0;
     padding-left: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+
   }
 
   &__rules {
