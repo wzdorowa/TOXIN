@@ -5,18 +5,19 @@ include ../../components/datepicker-group/datepicker-group.pug
 
 mixin form-search-room({text = 'Form name', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']} = {})
   .form-search-room
-    span.form-search-room__title= text
-    -const labelInputs = ['Прибытие', 'Выезд']
-    +datepicker-group({labelArray: labelInputs, dates: dateFormat, size: 'small', amountField: 'with-two-inputs'})
-    .form-search-room__dropdown-container
-      +dropdown({
-        label: 'Гости',
-        placeholder: 'Сколько гостей',
-        readonly: 'readonly',
-        dropdownFor: 'the-guests'
-        })
-        +dropdown-row({label: 'Взрослые', number: '0'})
-        +dropdown-row({label: 'Дети', number: '0'})
-        +dropdown-row({label: 'Младенцы', number: '0'})
+    div.form-search-room__wrapper
+      span.form-search-room__title= text
+      -const labelInputs = ['Прибытие', 'Выезд']
+      +datepicker-group({labelArray: labelInputs, dates: dateFormat, size: 'small', amountField: 'with-two-inputs'})
+      .form-search-room__dropdown-container
+        +dropdown({
+          label: 'Гости',
+          placeholder: 'Сколько гостей',
+          readonly: 'readonly',
+          dropdownFor: 'the-guests'
+          })
+          +dropdown-row({label: 'Взрослые', number: '0'})
+          +dropdown-row({label: 'Дети', number: '0'})
+          +dropdown-row({label: 'Младенцы', number: '0'})
     .form-search-room__select-button
       +button({text: 'Подобрать номер', decor: 'background', arrow: 'arrow', height: 'large', href: '../../pages/search-room/search-room.pug'})
