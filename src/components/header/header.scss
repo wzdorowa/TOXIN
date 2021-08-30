@@ -190,6 +190,10 @@
         width: 196px;
         min-height: 34px;
         text-decoration: none;
+        padding-right: 10px;
+        @media(min-width: 1160px) {
+          padding-right: 0;
+        }
       }
     }
 
