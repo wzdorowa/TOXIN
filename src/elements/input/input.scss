@@ -59,24 +59,33 @@
     }
   }
 
-  &__icon-arrow::before {
-    position: absolute;
-    content: 'arrow_forward';
-    width: 44px;
-    height: 44px;
-    right: 0;
-    top: 0px;
-    font-family: 'Material Icons', Arial, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    text-transform: initial;
-    color: $Purple;
-    cursor: pointer;
+  &__icon-arrow {
+    &:hover {
+      & + .input__content {
+        border: 1px solid $DarkShade50;
+        line-height: 24px;
+        color: $DarkShade75;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: 'arrow_forward';
+      width: 44px;
+      height: 44px;
+      right: 0;
+      top: 0px;
+      font-family: 'Material Icons', Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      text-transform: initial;
+      color: $Purple;
+      cursor: pointer;
+    }
   }
 
   &__content {
