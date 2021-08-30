@@ -105,10 +105,14 @@
       border: 1px solid $DarkShade50;
     }
 
-    &:hover, :focus {
+    &:hover, :focus, {
+      outline-style: none;
       border: 1px solid $DarkShade50;
       line-height: 24px;
       color: $DarkShade75;
+    }
+    &:focus-visible {
+      outline: none;
     }
 
     &::placeholder {
