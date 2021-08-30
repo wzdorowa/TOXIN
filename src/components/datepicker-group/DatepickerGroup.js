@@ -51,7 +51,7 @@ class DatepickerGroup {
   }
 
   _handleInputContentFocus() {
-    this._addClass();
+    this._toggleClass();
   }
 
   _handleIconArrowDownClick() {
@@ -75,7 +75,7 @@ class DatepickerGroup {
   _bindEventListeners() {
     this.elementsInput.forEach(elementInput => {
       elementInput.addEventListener(
-        'focus',
+        'click',
         this._handleInputContentFocus.bind(this),
       );
     });
