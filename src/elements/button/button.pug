@@ -1,5 +1,5 @@
 mixin button({text = 'button', decor = '', arrow = '', type = 'button', height = 'small', href = false} = {})
-  .button(class=`button_with-${arrow}`)
+  .button
     if (href)
       a.button__content(class=`button__content_with-${decor} button__content_height_${height}`, target='_blank', href=`${href}`)
         span.button__text=text
