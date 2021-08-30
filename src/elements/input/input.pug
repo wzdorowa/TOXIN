@@ -2,8 +2,9 @@ mixin input({label, placeholder = 'Введите значение', type = 'tex
   .input(class=`${hasInputMask ? 'input_with-input-mask js-input_with-input-mask' : ''}`)
     span(class=`input__description ${isHide ? 'input__description_hidden' : ''}`)= label
     .input__wrapper
+      span(class=`input__icon-${arrow} js-input__icon-${arrow}`)
       input.input__content.js-input__content(class=`${hasBorderRadiusTop ? 
       'input__content_with-border-radius-top' : ''}`,
       class=`${hasBorderRadiusBottom ? 'input__content_with-border-radius-bottom' : ''}`,
       class=`${areInDropdown ? 'input__content_with-dropdown' : ''}`, type= type, name='input-content', placeholder= placeholder, readonly= readonly)
-      span(class=`input__icon-${arrow} js-input__icon-${arrow}`)
+      
