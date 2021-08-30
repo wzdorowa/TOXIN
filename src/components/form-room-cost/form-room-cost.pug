@@ -26,7 +26,7 @@ mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat =
           +dropdown-row({label: 'Дети', number: '1'})
           +dropdown-row({label: 'Младенцы', number: '0'})
       .form-room-cost__calculation
-          - const stateForTable = {pricePerDay: '9 990', numberOfDays: '4 суток', priceForThePeriod: '39 690', serviceCharge: '2 179', servicePrice: '0', additionalServicesPrice: '300', totalCost: '38 081'}
+          - const stateForTable = {pricePerDay: '9 990', numberOfDays: 'x 4 суток', priceForThePeriod: '39 690', serviceCharge: '2 179', servicePrice: '0', additionalServicesPrice: '300', totalCost: '38 081'}
           +settlement-group(stateForTable)
       .form-room-cost__total
           .form-room-cost__total-item Итого

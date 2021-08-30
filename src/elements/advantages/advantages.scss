@@ -9,6 +9,7 @@
     &_with-sign-mood::before {
       content: 'mood';
       position: absolute;
+      top: 3px;
       font-family: 'Material Icons', Arial, sans-serif;
       font-size: 44px;
       color: $Purple;
@@ -20,6 +21,7 @@
     &_with-sign-locationCity::before {
       content: 'location_city';
       position: absolute;
+      top: 3px;
       font-family: 'Material Icons', Arial, sans-serif;
       font-size: 44px;
       color: $Purple;
@@ -31,6 +33,7 @@
     &_with-sign-whatshot::before {
       content: 'whatshot';
       position: absolute;
+      top: 3px;
       font-family: 'Material Icons', Arial, sans-serif;
       font-size: 44px;
       color: $Purple;
@@ -41,7 +44,7 @@
   }
 
   &__content {
-    padding-left: 15px;
+    padding-left: 10px;
   }
 
   &__title {

@@ -9,10 +9,10 @@
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 18px;
   color: $DarkShade75;
 
-  min-height: 110px;
+  min-height: 107px;
 
   &__string {
     position: relative;
@@ -40,7 +40,7 @@
       content: 'i';
       width: 18px;
       height: 18px;
-      top: 3px;
+      top: 0px;
       right: 0px;
       border: 1px solid $DarkShade25;
       border-radius: 10px;

@@ -6,7 +6,14 @@
   padding: 0;
   padding-top: 15px;
   margin: 0;
-  min-height: 133px;
+
+  &_low-height {
+    min-height: 96px;
+  }
+
+  &_middle-height {
+    min-height: 133px;
+  }
 
   &__item {
     position: relative;
