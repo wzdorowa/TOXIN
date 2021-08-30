@@ -1,9 +1,9 @@
 .form-check-in {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  //display: flex;
+  //flex-direction: column;
+  //flex-wrap: wrap;
+  //justify-content: space-around;
   z-index: 2;
   width: 100%;
 
@@ -23,6 +23,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 130px;
+    margin-top: 20px;
   }
 
   &__login-details {
@@ -30,6 +31,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 150px;
+    margin-top: 20px;
   }
 
   &__group-inputs {
@@ -37,7 +39,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    min-height: 100px;
+    min-height: 96px;
 
     &-login {
       display: flex;
@@ -62,6 +64,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
+    margin-top: 22px;
 
     &-container {
       width: 100%;
@@ -109,7 +112,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 115px;
+      min-height: 117px;
+      margin-top: 22px;
     }
 
     &-button {
