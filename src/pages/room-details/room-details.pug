@@ -42,13 +42,8 @@ block content
             .room-details__impressions
               h2.room-details__title Впечатления от номера
               .room-details__diagram
-                - const impressions = [{modifier: 'yellow-pink', text: 'Великолепно'}, {modifier: 'turquoise-blue', text: 'Хорошо'}, {modifier: 'light-blue', text: 'Удовлетворительно'}, {modifier: 'violet-blue', text: 'Разочарован'}]
-                +diagram({number: '260', label: 'голосов', impressions: impressions})
-                  circle(class='room-details__donut-hole' cx='50%' cy='50%' r='15.91549430918954' fill='#fff')
-                  circle(class='room-details__donut-ring' cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke='#fff' stroke-width='1')
-                  circle(class='room-details__donut-segment' cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke='#FFBA9C' stroke-width='1' stroke-dasharray='49 50' stroke-dashoffset='73.5')
-                  circle(class='room-details__donut-segment' cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke='#6FCF97' stroke-width='1' stroke-dasharray='24.5 75' stroke-dashoffset='-0.4')
-                  circle(class='room-details__donut-segment' cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke='#BC9CFF' stroke-width='2.2' stroke-dasharray='24.5 75' stroke-dashoffset='24.5')
+                - const impressions = [{votes: 65, color: 'violet-blue', colorRGB: '#BC9CFF', text: 'Разочарован'}, {votes: 65, color: 'light-blue', colorRGB: '#6FCF97', text: 'Удовлетворительно'}, {votes: 130, color: 'yellow-pink', colorRGB: '#FFBA9C', text: 'Великолепно'}, {votes: 0, color: 'turquoise-blue', colorRGB: '#909090', text: 'Хорошо'}]
+                +diagram({totalOfVotes: 260, label: 'голосов', impressions: impressions})
           .room-details__column-narrow
             -const roomDetailsRoomDateFormat = ['19.08.2019', '23.08.2019']
             +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: roomDetailsRoomDateFormat})
