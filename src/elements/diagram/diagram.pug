@@ -1,4 +1,4 @@
-mixin diagram({totalOfVotes = '100', label = 'text', impressions})
+mixin diagram({totalOfVotes = '100', label = 'text', impressions, data})
   .diagram
     .diagram__image
       svg(width='100%' height='100%' viewBox='0 0 33.8 33.8' class='donut')
@@ -6,16 +6,13 @@ mixin diagram({totalOfVotes = '100', label = 'text', impressions})
         circle(class='room-details__donut-ring' cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke='#fff' stroke-width='1')
         - let sumActiveSegment = 0;
         - let dashoffset = 26;
-        each value in impressions
+        each value in data
           - const {votes, colorRGB} = value
-          - let segmentActive;
-          - if (value.votes > 0) {segmentActive = (value.votes/totalOfVotes)*100 - 0.5;}
-          - if (value.votes === 0) {segmentActive = (value.votes/totalOfVotes)*100}
+          - const segmentActive = (value.votes/totalOfVotes)*100 - 0.5;
           - sumActiveSegment += segmentActive;
           - const segmentPassive = 100 - segmentActive + 1.5;
           circle(class='room-details__donut-segment' cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke=colorRGB stroke-width='1' stroke-dasharray=`${segmentActive} ${segmentPassive}` stroke-dashoffset=`${dashoffset}`)
           - dashoffset = Math.ceil((100 - sumActiveSegment) + 25);
-          - console.log('dashoffset', dashoffset);
       .diagram__text
         p.diagram__number= totalOfVotes
         p.diagram__label= label
