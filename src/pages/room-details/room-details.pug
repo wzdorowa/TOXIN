@@ -43,7 +43,7 @@ block content
               h2.room-details__title Впечатления от номера
               .room-details__diagram
                 - const impressions = [{color: 'yellow-pink', text: 'Великолепно'}, {color: 'turquoise-blue', text: 'Хорошо'}, {color: 'light-blue', text: 'Удовлетворительно'}, {color: 'violet-blue', text: 'Разочарован'}]
-                - const data = [{votes: 65, color: 'violet-blue', colorRGB: '#BC9CFF', text: 'Разочарован'}, {votes: 65, colorRGB: '#6FCF97'}, {votes: 130, colorRGB: '#FFBA9C'}]
+                - const data = [{votes: 65, color: 'light-blue', colorRGB: '#BC9CFF'}, {votes: 65, color: 'turquoise-blue', colorRGB: '#6FCF97', }, {votes: 130, color: 'yellow-pink', colorRGB: '#FFBA9C'}]
                 +diagram({totalOfVotes: 260, label: 'голосов', impressions: impressions, data: data})
           .room-details__column-narrow
             -const roomDetailsRoomDateFormat = ['19.08.2019', '23.08.2019']

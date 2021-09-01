@@ -6,12 +6,12 @@ mixin diagram({totalOfVotes = '100', label = 'text', impressions, data})
         circle(class='room-details__donut-ring' cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke='#fff' stroke-width='1')
         - let sumActiveSegment = 0;
         - let dashoffset = 26;
-        each value in data
-          - const {votes, colorRGB} = value
+        each value, index in data
+          - const {votes, color, colorRGB} = value
           - const segmentActive = (value.votes/totalOfVotes)*100 - 0.5;
           - sumActiveSegment += segmentActive;
           - const segmentPassive = 100 - segmentActive + 1.5;
-          circle(class='room-details__donut-segment' cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke=colorRGB stroke-width='1' stroke-dasharray=`${segmentActive} ${segmentPassive}` stroke-dashoffset=`${dashoffset}`)
+          circle.room-details__donut-segment(cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke=colorRGB stroke-width='1' stroke-dasharray=`${segmentActive} ${segmentPassive}` stroke-dashoffset=`${dashoffset}` data-votes=votes data-total=totalOfVotes data-color=color)
           - dashoffset = Math.ceil((100 - sumActiveSegment) + 25);
       .diagram__text
         p.diagram__number= totalOfVotes
