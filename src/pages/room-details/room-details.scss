@@ -293,6 +293,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 35px;
+    margin-top: 20px;
     @media(min-width: 320px) {
       min-height: 490px;
     }
@@ -313,6 +314,7 @@
       grid-column-end: 2;
       margin-left: 0;
       margin-right: 0;
+      margin-top: 0;
     }
     @media(min-width: 1160px) {
       min-width: 730px;
