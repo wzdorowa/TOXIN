@@ -3,7 +3,7 @@
   width: 100%;
   cursor: pointer;
 
-  &_with-arrow::before {
+  &__icon-arrow::before {
     position: absolute;
     content: 'arrow_forward';
     width: 44px;
@@ -22,7 +22,6 @@
     color: white;
     z-index: 2;
   }
-
   &__content {
     position: relative;
     display: flex;
@@ -46,8 +45,6 @@
 
     &:focus {
       outline: none;
-      border: solid 2px $DarkShade50;
-      border-radius: 22px;
     }
 
     &_height_small {
