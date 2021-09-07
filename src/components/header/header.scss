@@ -3,7 +3,14 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  min-height: 70px;
+  padding-top: 15px;
+  @media (min-width: 610px) {
+    padding-top: 8px;
+  }
+  @media (min-width: 910px) {
+    min-height: 70px;
+    padding-top: 0;
+  }
 
   &__grouping {
     display: flex;
