@@ -2,21 +2,21 @@ mixin settlement-group(state)
   .settlement-group
     .settlement-group__string
       .settlement-group__column-first
-        span!= `${state.pricePerDay}<span class='numerical-group__sign-rouble'>P</span>`
+        span!= `${state.pricePerDay}<span class='settlement-group__sign-rouble'>P</span>`
         span= ` ${state.numberOfDays}`
       .settlement-group__column-last
-        span.settlement-group__subtotal!= `${state.priceForThePeriod}<span class='numerical-group__sign-rouble'>P</span>`
+        span.settlement-group__subtotal!= `${state.priceForThePeriod}<span class='settlement-group__sign-rouble'>P</span>`
     .settlement-group__string
       .settlement-group__column-first
-        span!= `Cбор за услуги: скидка ${state.serviceCharge}<span class='numerical-group__sign-rouble'>P</span>`
+        span!= `Cбор за услуги: скидка ${state.serviceCharge}<span class='settlement-group__sign-rouble'>P</span>`
         span.settlement-group__information-sign
       .settlement-group__column-last
-        span.settlement-group__subtotal!= `${state.servicePrice}<span class='numerical-group__sign-rouble'>P</span>`
+        span.settlement-group__subtotal!= `${state.servicePrice}<span class='settlement-group__sign-rouble'>P</span>`
     .settlement-group__string
       .settlement-group__column-first
         span= `Сбор за дополнительные услуги`
         span.settlement-group__information-sign
       .settlement-group__column-last
-        span.settlement-group__subtotal!= `${state.additionalServicesPrice}<span class='numerical-group__sign-rouble'>P</span>`
+        span.settlement-group__subtotal!= `${state.additionalServicesPrice}<span class='settlement-group__sign-rouble'>P</span>`
 
     
