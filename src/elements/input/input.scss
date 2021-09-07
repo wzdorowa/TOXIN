@@ -89,7 +89,7 @@
   }
 
   &__content {
-    min-height: 42px;
+    min-height: 43px;
     width: 100%;
     background: #FFFFFF;
     border: 1px solid $DarkShade25;
@@ -135,7 +135,6 @@
     &_with-dropdown {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 14px;
-      line-height: 39px;
       color: $DarkShade75;
     
       &::placeholder {
