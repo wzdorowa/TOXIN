@@ -8,11 +8,17 @@
   font-family: 'Montserrat', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
   color: $DarkShade75;
 
-  min-height: 107px;
+  min-height: 90px;
+
+  @media (min-width: 350px) {
+    font-size: 14px;
+    line-height: 18px;
+    min-height: 107px;
+  }
 
   &__string {
     position: relative;
@@ -24,15 +30,12 @@
   &__column-first {
     position: relative;
     max-width: 240px;
-    padding-right: 25px;
+    padding-right: 30px;
   }
   &__column-last {
     min-width: 33px;
     display: flex;
     justify-content: flex-end;
-  }
-  &__subtotal {
-    
   }
   &__information-sign {
 
