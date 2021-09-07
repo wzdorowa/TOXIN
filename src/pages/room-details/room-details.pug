@@ -68,7 +68,7 @@ block content
             .room-details__rules
               h2.room-details__title-rules Правила
               .room-details__rules-list
-                - const rules = [{modifier: 'light-gray', text: 'Нельзя с питомцами', padding: 'increased-indent'}, {modifier: 'light-gray', text: 'Без вечеринок и мероприятий', padding: 'increased-indent'}, {modifier: 'light-gray', text: 'Время прибытия — после 13:00, а выезд до 12:00', padding: 'increased-indent'}]
+                - const rules = [{color: 'light-gray', text: 'Нельзя с питомцами'}, {color: 'light-gray', text: 'Без вечеринок и мероприятий'}, {color: 'light-gray', text: 'Время прибытия — после 13:00, а выезд до 12:00'}]
                 +bulleted-list({height: 'middle', values: rules})
             .room-details__cancel
               h2.room-details__title-cancel Отмена
