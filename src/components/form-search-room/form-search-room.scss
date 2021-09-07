@@ -10,11 +10,14 @@
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 30px;
     color: $DarkShade100;
     text-align: left;
     padding-right: 20px;
+    @media (min-width:480px) {
+      font-size: 24px;
+    }
   }
 
   &__wrapper {
@@ -24,42 +27,6 @@
     flex-direction: column;
     justify-content: space-between;
   }
-
-  // &__inputs {
-  //   position: relative;
-  //   width: 100%;
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: space-between;
-  //   align-content: space-between;
-
-  //   &-with-datepicker {
-  //     display: flex;
-  //     justify-content: space-between;
-  //   }
-  // }
-
-  // &__input-container {
-  //   width: 47%;
-  // }
-
-  // &__datepicker {
-  //   display: none;
-  //   width: 320px;
-  //   min-height: 369px;
-  //   background: #FFFFFF;
-  //   border: 1px solid $DarkShade25;
-  //   box-sizing: border-box;
-  //   box-shadow: 0px 10px 20px $DarkShade05;
-  //   border-radius: 4px;
-  //   padding: 10px;
-  //   padding-top: 10px;
-  //   margin-top: 5.5px;
-
-  //   &_visible {
-  //     display: block;
-  //   }
-  // }
 
   &__dropdown-container {
     width: 100%;
