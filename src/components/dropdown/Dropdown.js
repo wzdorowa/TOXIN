@@ -10,11 +10,12 @@ class Dropdown {
     this.rowsGroup = null;
     this.numbers = null;
 
-    this._findElement();
-    this._bindEventListeners();
+    this.findElement();
+    this.bindEventListeners();
+    this.calculateTheResult();
   }
 
-  _findElement() {
+  findElement() {
     this.elementInput = this.dropdown.querySelector('.js-input__content');
     this.parentInput = this.dropdown.querySelector('.js-dropdown__list');
     this.dropdownList = this.dropdown.querySelector('.js-dropdown__content');
@@ -34,40 +35,40 @@ class Dropdown {
     );
   }
 
-  _addClass() {
+  addClass() {
     this.dropdownList.classList.add('dropdown__content_visible');
     if (this.parentInput.contains(this.elementInput)) {
-      this.elementInput.classList.add('input__content_opened')
+      this.elementInput.classList.add('input__content_opened');
     }
   }
 
-  _removeClass() {
+  removeClass() {
     this.dropdownList.classList.remove('dropdown__content_visible');
     if (this.parentInput.contains(this.elementInput)) {
-      this.elementInput.classList.remove('input__content_opened')
+      this.elementInput.classList.remove('input__content_opened');
     }
   }
 
-  _toggleClass() {
+  toggleClass() {
     this.dropdownList.classList.toggle('dropdown__content_visible');
     if (this.parentInput.contains(this.elementInput)) {
-      this.elementInput.classList.toggle('input__content_opened')
+      this.elementInput.classList.toggle('input__content_opened');
     }
   }
 
-  _handleIconArrowDownClick() {
-    this._toggleClass();
+  handleIconArrowDownClick() {
+    this.toggleClass();
   }
 
-  _handleInputContentFocus() {
-    this._addClass();
+  handleInputContentFocus() {
+    this.addClass();
   }
 
-  _handleButtonsContainerForApplyClick() {
-    this._removeClass();
+  handleButtonsContainerForApplyClick() {
+    this.removeClass();
   }
 
-  _handleButtonsContainerForClearClick() {
+  handleButtonsContainerForClearClick() {
     this.elementInput.value = '';
     this.numbers.forEach(number => {
       const element = number;
@@ -75,13 +76,13 @@ class Dropdown {
     });
   }
 
-  _handleDocumentClick(event) {
+  handleDocumentClick(event) {
     if (event.target.closest('.dropdown') !== this.dropdown) {
-      this._removeClass();
+      this.removeClass();
     }
   }
 
-  _countValues(result, values, declinations) {
+  countValues(result, values, declinations) {
     const isMatchingValue = value => {
       return (
         String(value).includes('2') ||
@@ -91,6 +92,13 @@ class Dropdown {
     };
     if (result === 0) {
       this.elementInput.value = '';
+      if (
+        !this.buttonClear.classList.contains(
+          '.dropdown__buttons-container_hidden',
+        )
+      ) {
+        this.buttonClear.classList.add('dropdown__buttons-container_hidden');
+      }
     } else {
       const newString = [];
       values.forEach((value, i) => {
@@ -124,10 +132,17 @@ class Dropdown {
           this.elementInput.value += `${newString[index]}, `;
         }
       });
+      if (
+        this.buttonClear.classList.contains(
+          'dropdown__buttons-container_hidden',
+        )
+      ) {
+        this.buttonClear.classList.remove('dropdown__buttons-container_hidden');
+      }
     }
   }
 
-  _countTheGuests() {
+  countTheGuests() {
     let adults = 0;
     let babies = 0;
     this.numbers.forEach((number, index) => {
@@ -142,10 +157,10 @@ class Dropdown {
     const declinationGuests = ['гость', 'гостя', 'гостей'];
     const declinationBabies = ['младенец', 'младенца', 'младенцев'];
     const declinations = [declinationGuests, declinationBabies];
-    this._countValues(amountGuests, guests, declinations);
+    this.countValues(amountGuests, guests, declinations);
   }
 
-  _countAmenities() {
+  countAmenities() {
     let bedrooms = 0;
     let beds = 0;
     let bathrooms = 0;
@@ -173,51 +188,46 @@ class Dropdown {
       declinationBeds,
       declinationBathrooms,
     ];
-    this._countValues(amountAmenities, amenities, declinations);
+    this.countValues(amountAmenities, amenities, declinations);
   }
 
-  _handleDropdownRowsClick(event) {
-    event.preventDefault();
-
+  calculateTheResult() {
     this.elementInput.value = null;
     if (
       this.rowsGroupParent.classList.contains(
         'dropdown__rows_for-count-the-guests',
       )
     ) {
-      this._countTheGuests();
+      this.countTheGuests();
     } else if (
       this.rowsGroupParent.classList.contains(
         'dropdown__rows_for-count-amenities',
       )
     ) {
-      this._countAmenities();
+      this.countAmenities();
     }
   }
 
-  _bindEventListeners() {
+  bindEventListeners() {
     this.dropdownArrow.addEventListener(
       'click',
-      this._handleIconArrowDownClick.bind(this),
+      this.handleIconArrowDownClick.bind(this),
     );
     this.elementInput.addEventListener(
       'focus',
-      this._handleInputContentFocus.bind(this),
+      this.handleInputContentFocus.bind(this),
     );
     this.buttonApply.addEventListener(
       'click',
-      this._handleButtonsContainerForApplyClick.bind(this),
+      this.handleButtonsContainerForApplyClick.bind(this),
     );
     this.buttonClear.addEventListener(
       'click',
-      this._handleButtonsContainerForClearClick.bind(this),
+      this.handleButtonsContainerForClearClick.bind(this),
     );
-    document.addEventListener('click', this._handleDocumentClick.bind(this));
+    document.addEventListener('click', this.handleDocumentClick.bind(this));
     this.rowsGroup.forEach(element => {
-      element.addEventListener(
-        'click',
-        this._handleDropdownRowsClick.bind(this),
-      );
+      element.addEventListener('click', this.calculateTheResult.bind(this));
     });
   }
 }
