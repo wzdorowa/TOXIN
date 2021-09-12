@@ -16,7 +16,7 @@
 ## Макеты
 
 | Landing page | Search room | Room details | Registration | Sign in |
-| :----------- | :---------: | -----------: | -----------: | ------: |
+| :-----------: | :---------: | :-----------: | :-----------: | :------: |
 |  ![Landing page](src/pixel-perfect/landing-page.png) | ![Search room](src/pixel-perfect/search-room.png) | ![Room details](src/pixel-perfect/room-details.png) | ![Registration](src/pixel-perfect/registration.png) | ![Sign in](src/pixel-perfect/sign-in.png) |
 # Сторонние библиотеки
 В проекте используются следующие библиотеки:
