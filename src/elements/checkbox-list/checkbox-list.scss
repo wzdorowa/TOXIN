@@ -2,7 +2,6 @@
   position: relative;
 
   &__title {
-    width: 236px;
     position: relative;
     display: flex;
     font-family: 'Montserrat', Arial, sans-serif;
@@ -45,9 +44,6 @@
     &_opened {
       transform: rotate(180deg);
     }
-  }
-  &__container {
-    width: 236px;
   }
   &__container_hidden {
     display: none;

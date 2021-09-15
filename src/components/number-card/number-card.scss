@@ -141,6 +141,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding-top: 5px;
   
     &-border {
       border-bottom: solid 1px $DarkShade10;
@@ -158,7 +159,7 @@
   }
 
   &__sign-number {
-    font-family: 'Quicksand', Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -168,11 +169,11 @@
   }
 
   &__number {
-    font-family: 'Quicksand', Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 17px;
     color: $DarkShade100;
     padding-right: 5px;
   }
@@ -181,7 +182,7 @@
     font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
     color: $Purple;
@@ -207,7 +208,6 @@
         font-size: 12px;
         line-height: 18px;
         color: $DarkShade50;
-        padding-top: 6px;
       }
     }
   }

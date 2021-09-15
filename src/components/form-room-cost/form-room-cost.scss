@@ -116,12 +116,14 @@
     padding-right: 5px;
 
     &-item {
-      font-family: 'Open Sans', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 19px;
       line-height: 18px;
-    
+      letter-spacing: 0em;
+      text-align: left;
+
       color: $DarkShade100;
 
       &_with-border {
@@ -136,8 +138,11 @@
         font-family: 'Montserrat', Arial, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 19px;
         line-height: 23,75px;
+        letter-spacing: 0em;
+        text-align: left;
+
         color: $DarkShade100;
       }
     }

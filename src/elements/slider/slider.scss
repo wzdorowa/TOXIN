@@ -21,7 +21,7 @@
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
-    line-height: 15px;
+    line-height: 14.63px;
     text-transform: uppercase;
     color: $DarkShade100;
     margin: 0;
@@ -36,16 +36,16 @@
   & .ui-slider {
     position: relative;
     background: white;
-    height: 5px;
+    height: 6px;
     border-radius:3px;
     border: 1px solid $DarkShade25;
     box-sizing: border-box;
 
     & .ui-slider-handle {
       position: absolute;
-      top: -5px;
-      width: 14px;
-      height: 14px;
+      top: -6px;
+      width: 16px;
+      height: 16px;
       cursor: pointer;
       border-radius: 50%;
       border: 2px solid #FFF;
@@ -80,7 +80,7 @@
       font-style: normal;
       font-weight: normal;
       font-size: 12px;
-      line-height: 15px;
+      line-height: 14.63px;
       text-transform: uppercase;
       text-align: right;
       color: $DarkShade50;
@@ -98,7 +98,7 @@
       font-style: normal;
       font-weight: normal;
       font-size: 12px;
-      line-height: 15px;
+      line-height: 14.63px;
       text-transform: uppercase;
       text-align: right;
       color: $DarkShade50;
