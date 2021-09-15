@@ -277,9 +277,7 @@
       text-align: left;
 
       @media (min-width: 321px) {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        text-align: center;
       }
       @media (min-width: 1024px) {
         width: 100%;
