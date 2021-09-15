@@ -2,6 +2,7 @@
   position: relative;
 
   &__title {
+    width: 236px;
     position: relative;
     display: flex;
     font-family: 'Montserrat', Arial, sans-serif;
@@ -22,7 +23,6 @@
     min-width: 44px;
     min-height: 44px;
     margin-right: 0;
-    margin-left: auto;
 
     &::before {
       position: absolute;
@@ -46,7 +46,9 @@
       transform: rotate(180deg);
     }
   }
-
+  &__container {
+    width: 236px;
+  }
   &__container_hidden {
     display: none;
   }
