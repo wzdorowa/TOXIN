@@ -75,8 +75,11 @@
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 4.8%;
+    margin-bottom: 40px;
     display: flex;
+    @media(min-width: 835px) {
+      margin-bottom: 4.8%;
+    }
 
     &-group-image {
       max-width: 31.875%;
@@ -112,11 +115,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    //margin-left: 5%;
     @media(min-width: 500px) {
       margin-left: 5%;
     }
-    @media(min-width: 720px) {
+    @media(min-width: 750px) {
       flex-direction: row;
       flex-wrap: wrap;
     }
@@ -149,29 +151,30 @@
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 25px;
+    margin-left: 2%;
+    margin-bottom: 40px;
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 7.8%;
     order: -1;
     @media(min-width: 340px) {
       margin-right: 2%;
-      margin-left: 2%;
-      margin-bottom: 25px;
+      //margin-bottom: 25px;
       padding-left: 7.9%;
       padding-right: 7.9%;
       padding-top: 7.8%;
     }
     @media(min-width: 400px) {
-      margin-left: auto;
-      margin-right: auto;
       padding-top: 40px;
       padding-left: 28px;
       padding-right: 30px;
       padding-bottom: 30px;
     }
-    @media(min-width: 720px) {
+    @media(min-width: 500px) {
+      margin-left: 0;
+      margin-right: auto;
+    }
+    @media(min-width: 750px) {
       width: 100%;
       margin-left: auto;
       margin-right: auto;
@@ -198,13 +201,14 @@
     justify-content: space-between;
     width: 100%;
     max-width: 290px;
-    margin-left: auto;
+    min-height: 450px;
+    margin-left: 2%;
     margin-right: auto;
-    margin-bottom: 25px;
-    @media(min-width: 720px) {
-      width: 45.23%;
-      // margin-left: auto;
+    @media(min-width: 500px) {
       margin-left: 0;
+    }
+    @media(min-width: 750px) {
+      width: 45.23%;
       margin-right: auto;
       margin-bottom: 60px;
     }
@@ -310,8 +314,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 35px;
-    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
     @media(min-width: 320px) {
       min-height: 490px;
     }
@@ -324,15 +329,23 @@
     @media(min-width: 481px) {
       min-height: 350px;
     }
-    @media(min-width: 590px) {
-      min-height: 303px;
+    @media(min-width: 500px) {
+      padding-right: 0px;
+      padding-left: 0px;
     }
-    @media(min-width: 1000px) {
+    @media(min-width: 590px) {
+      min-height: 340px;
+    }
+    @media(min-width: 620px) {
+      min-height: 306px;
+    }
+    @media(min-width: 1055px) {
       grid-column-start: 1;
       grid-column-end: 2;
       margin-left: 0;
       margin-right: 0;
       margin-top: 0;
+      margin-bottom: 35px;
     }
     @media(min-width: 1160px) {
       min-width: 730px;
@@ -363,15 +376,24 @@
     flex-wrap: wrap;
     min-width: 280px;
     max-width: 720px;
-    min-height: 350px;
+    min-height: 370px;
     padding-left: 10px;
     padding-right: 10px;
     justify-content: space-between;
     width: 100%;
-    @media(min-width: 600px) {
+    @media(min-width: 290px) {
+      min-height: 350px;
+    }
+    @media(min-width: 290px) {
+      min-height: 340px;
+    }
+    @media(min-width: 500px) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    @media(min-width: 650px) {
       flex-direction: row;
       min-height: 150px;
-      // margin-left: auto;
       margin-left: 0;
       margin-right: auto;
     }
@@ -410,7 +432,7 @@
   }
 
   &__cancel {
-    width: 325px;
+    max-width: 325px;
     min-height: 141px;
     padding-left: 20px;
     @media (min-width: 600px) {
