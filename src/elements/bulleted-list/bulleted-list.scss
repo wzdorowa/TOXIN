@@ -23,9 +23,11 @@
     font-size: 14px;
     line-height: 24px;
     color: $DarkShade75;
-    padding-left: 16.5px;
 
-    &_with-increased-indent {
+    &_with-small-indent {
+      padding-left: 16.5px;
+    }
+    &_with-middle-indent {
       padding-left: 21.5px;
     }
 

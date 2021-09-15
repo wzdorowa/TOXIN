@@ -1,7 +1,7 @@
-mixin bulleted-list({height = 'low', values = [{color: 'light-gray', text: 'Text', padding: 'increased-indent'}], } = {})
+mixin bulleted-list({height = 'low', values = [{color: 'light-gray', text: 'Text', indent: 'small-indent'}]} = {})
 
   ul.bulleted-list(class=`bulleted-list_${height}-height`)
       each value in values
-        - const {color, text, padding} = value
-        li.bulleted-list__item(class=`bulleted-list__item_${color}`, class=`bulleted-list__item_with-${padding}` data-color=color)
+        - const {color, text, indent} = value
+        li.bulleted-list__item(class=`bulleted-list__item_${color}`, class=`bulleted-list__item_with-${indent}` data-color=color)
           = text
