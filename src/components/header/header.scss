@@ -129,7 +129,7 @@
 
     &_with-drop-down {
       @media (min-width: 610px) {
-        padding-right: 15px;
+        padding-right: 20px;
       }
 
       & .header__link::before {
@@ -197,6 +197,10 @@
         width: 196px;
         min-height: 34px;
         text-decoration: none;
+        padding-right: 10px;
+        @media(min-width: 1160px) {
+          padding-right: 0;
+        }
       }
     }
 
