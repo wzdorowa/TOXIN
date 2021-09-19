@@ -119,15 +119,8 @@ class Dropdown {
           index === newString.length - 1;
         const intermediateElementString =
           index < newString.length - 1 && newString.length > 1;
-        const futureStringLength =
-          this.elementInput.value.length + newString[index].length;
         if (firstOrLastElementString) {
-          if (futureStringLength >= 23) {
-            const stringWithoutComma = this.elementInput.value.substring(0, 20);
-            this.elementInput.value = `${stringWithoutComma}...`;
-          } else {
-            this.elementInput.value += `${newString[index]}`;
-          }
+          this.elementInput.value += `${newString[index]}`;
         } else if (intermediateElementString) {
           this.elementInput.value += `${newString[index]}, `;
         }
