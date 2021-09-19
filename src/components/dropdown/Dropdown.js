@@ -83,6 +83,9 @@ class Dropdown {
   }
 
   countValues(result, values, declinations) {
+    console.log('result', result);
+    console.log('values', values);
+    console.log('declinations', declinations);
     const isMatchingValue = value => {
       return (
         String(value).includes('2') ||
@@ -104,12 +107,31 @@ class Dropdown {
       values.forEach((value, i) => {
         if (value !== 0) {
           const declination = declinations[i];
-          if (String(value).includes('1')) {
-            newString.push(`${String(value)} ${declination[0]}`);
-          } else if (isMatchingValue(value)) {
-            newString.push(`${String(value)} ${declination[1]}`);
-          } else {
-            newString.push(`${String(value)} ${declination[2]}`);
+          if (String(value).length === 1) {
+            if (String(value).includes('1')) {
+              newString.push(`${String(value)} ${declination[0]}`);
+            } else if (isMatchingValue(value)) {
+              newString.push(`${String(value)} ${declination[1]}`);
+            } else {
+              newString.push(`${String(value)} ${declination[2]}`);
+            }
+          }
+          if (String(value).length === 2) {
+            if (String(value)[1].includes('1')) {
+              if (value === 11) {
+                newString.push(`${String(value)} ${declination[2]}`);
+              } else {
+                newString.push(`${String(value)} ${declination[0]}`);
+              }
+            } else if (isMatchingValue(String(value)[1])) {
+              if (value === 12 || value === 13 || value === 14) {
+                newString.push(`${String(value)} ${declination[2]}`);
+              } else {
+                newString.push(`${String(value)} ${declination[1]}`);
+              }
+            } else {
+              newString.push(`${String(value)} ${declination[2]}`);
+            }
           }
         }
       });
