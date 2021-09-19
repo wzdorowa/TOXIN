@@ -28,18 +28,11 @@ class CheckboxList {
     );
   }
 
-  _handleDocumentClick(event) {
-    if (event.target.closest('.checkbox-list') !== this.checkboxList) {
-      this.checkboxListToggle.classList.add('checkbox-list__container_hidden');
-    }
-  }
-
   _bindEventListeners() {
     this.checkboxListTitle.addEventListener(
       'click',
       this._handleCheckboxListTitleClick.bind(this),
     );
-    document.addEventListener('click', this._handleDocumentClick.bind(this));
   }
 }
 
