@@ -83,9 +83,6 @@ class Dropdown {
   }
 
   countValues(result, values, declinations) {
-    console.log('result', result);
-    console.log('values', values);
-    console.log('declinations', declinations);
     const isMatchingValue = value => {
       return (
         String(value).includes('2') ||

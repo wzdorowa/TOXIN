@@ -63,11 +63,9 @@ block content
                   hasInputMask: true
                 })
             .components__inputs-item
-                - const datesDropdown = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
                 - const dateDropdownLabels = ['Date dropdown', 'Date dropdown']
                 +datepicker-group({
                   labelArray: dateDropdownLabels,
-                  dates: datesDropdown,
                   size: 'small',
                   amountField: 'with-two-inputs'
                 })
@@ -76,7 +74,7 @@ block content
                 - const filterDateDropdownLabel = ['Filter date dropdown']
                 +datepicker-group({
                   labelArray: filterDateDropdownLabel,
-                  dates: filterDatesDropdown,
+                  datesFormat: filterDatesDropdown,
                   size: 'large',
                   amountField: 'with-one-input',
                 })
@@ -201,8 +199,9 @@ block content
                     +form-check-in({text: 'Регистрация аккаунта'})
             .components-content__item
                 .components-content__result-search-room
-                    -const resultSearchRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
-                    +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: resultSearchRoomDateFormat})
+                    - const resultSearchRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+                    - const resultSearchRoomUserDate = ['13.10.2021', '15.12.2021']
+                    +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: resultSearchRoomDateFormat, userDates: resultSearchRoomUserDate})
                 .components-content__login
                     +login({text: 'Вход'})
             .components-content__item

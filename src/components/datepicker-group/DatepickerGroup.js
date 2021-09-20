@@ -7,8 +7,11 @@ class DatepickerGroup {
     this.buttonApply = null;
     this.buttonClear = null;
     this.calendar = null;
+    this.dayFrom = '';
+    this.dayTo = '';
 
     this._findElement();
+    this.setUserDataToCalendar();
     this._bindEventListeners();
     this._setValueToInput();
   }
@@ -30,6 +33,28 @@ class DatepickerGroup {
       '.js-calendar__buttons-container_with-button-clear',
     );
     this.calendar = this.datepickerGroup.querySelector('.js-datepicker-here');
+    this.inputs = this.datepickerGroup.querySelectorAll('.js-input__content');
+  }
+
+  setUserDataToCalendar() {
+    this.dayFrom = this.calendar.dataset.dayFrom;
+    this.dayTo = this.calendar.dataset.dayTo;
+    const isDayFrom = this.dayFrom !== undefined && this.dayFrom !== '';
+    const isDayTo = this.dayTo !== undefined && this.dayTo !== '';
+    const isVerify = isDayFrom && isDayTo;
+
+    if (isVerify) {
+      const datepicker = $(this.calendar).datepicker().data('datepicker');
+
+      const newFormatDayFrom = this.dayFrom.split('.').reverse().join('-');
+      const newFormatDayTo = this.dayTo.split('.').reverse().join('-');
+      datepicker.selectDate([
+        new Date(newFormatDayFrom),
+        new Date(newFormatDayTo),
+      ]);
+      this.inputs[0].value = this.dayFrom;
+      this.inputs[1].value = this.dayTo;
+    }
   }
 
   _addClass() {
@@ -48,6 +73,9 @@ class DatepickerGroup {
     const $myCalendar = $(this.datepickerGroup).find('.js-datepicker-here');
     const $calendar = $($myCalendar).datepicker().data('datepicker');
     $calendar.clear();
+    this.inputs.forEach(input => {
+      input.value = '';
+    });
   }
 
   _handleInputContentFocus() {
