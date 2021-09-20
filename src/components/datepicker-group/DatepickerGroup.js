@@ -9,6 +9,7 @@ class DatepickerGroup {
     this.calendar = null;
     this.dayFrom = '';
     this.dayTo = '';
+    this.dates = [];
 
     this._findElement();
     this.setUserDataToCalendar();
@@ -54,6 +55,9 @@ class DatepickerGroup {
       ]);
       this.inputs[0].value = this.dayFrom;
       this.inputs[1].value = this.dayTo;
+      $(this.calendar).datepicker({
+        moveToOtherMonthsOnSelect: false,
+      });
     }
   }
 
@@ -97,6 +101,9 @@ class DatepickerGroup {
   _handleDocumentClick(event) {
     if (!this.datepickerGroup.contains(event.target)) {
       this._removeClass();
+      if (this.dates.length === 1) {
+        this._clearValues();
+      }
     }
   }
 
@@ -139,7 +146,9 @@ class DatepickerGroup {
         },
         multipleDatesSeparator: ' - ',
         dateFormat: 'dd M',
+        moveToOtherMonthsOnSelect: false,
         onSelect: (fd, dates) => {
+          this.dates = dates;
           const input = this.datepickerGroup.querySelector(
             '.js-input__content',
           );
@@ -159,7 +168,9 @@ class DatepickerGroup {
           days: 'MM <i>yyyy</i>',
         },
         dateFormat: 'dd.mm.yyyy',
-        onSelect: fd => {
+        moveToOtherMonthsOnSelect: false,
+        onSelect: (fd, dates) => {
+          this.dates = dates;
           const inputs = this.datepickerGroup.querySelectorAll(
             '.js-input__content',
           );
