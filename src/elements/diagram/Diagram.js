@@ -38,7 +38,9 @@ class Diagram {
 }
 
 const diagram = document.querySelector('.diagram');
-const items = diagram.querySelectorAll('.bulleted-list__item');
-items.forEach(item => {
-  new Diagram(item);
-});
+if (diagram !== null) {
+  const items = diagram.querySelectorAll('.bulleted-list__item');
+  items.forEach(item => {
+    new Diagram(item);
+  });
+}

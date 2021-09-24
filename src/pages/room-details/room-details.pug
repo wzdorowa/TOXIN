@@ -1,7 +1,7 @@
 extends ../base.pug
 
 include ../../components/header/header.pug
-include ../../elements/advantages/advantages.pug
+include ../../elements/advantage/advantage.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../elements/diagram/diagram.pug
@@ -33,13 +33,13 @@ block content
           .room-details__number-impressions
             .room-details__number-info
               h2.room-details__title Сведения о номере
-              .room-details__advantages
+              .room-details__advantage
                 .room-details__advantage-item
-                  +advantages({title: 'Комфорт', value: 'Шумопоглощающие стены', nameIcon: 'mood'})
+                  +advantage({title: 'Комфорт', value: 'Шумопоглощающие стены', nameIcon: 'mood'})
                 .room-details__advantage-item
-                  +advantages({title: 'Удобство', value: 'Окна в каждой из спален', nameIcon: 'locationCity'})
+                  +advantage({title: 'Удобство', value: 'Окна в каждой из спален', nameIcon: 'locationCity'})
                 .room-details__advantage-item
-                  +advantages({title: 'Уют', value: 'Номер оснащен камином', nameIcon: 'whatshot'})
+                  +advantage({title: 'Уют', value: 'Номер оснащен камином', nameIcon: 'whatshot'})
             .room-details__impressions
               h2.room-details__title Впечатления от номера
               .room-details__diagram
@@ -57,13 +57,13 @@ block content
             +review({
               title: 'Мурад Сарафанов',
               value: '5 дней назад',
-              srcImage: '../../elements/advantages/images/Murad.png',
+              srcImage: '../../elements/advantage/images/Murad.png',
               text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
             })
             +review({
               title: 'Патрисия Стёклышкова',
               value: 'Неделю назад',
-              srcImage: '../../elements/advantages/images/Patriziya.png',
+              srcImage: '../../elements/advantage/images/Patriziya.png',
               text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
             })
           .room-details__extra-info
