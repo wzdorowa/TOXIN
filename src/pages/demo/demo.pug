@@ -13,7 +13,7 @@ include ../../elements/dropdown-row/dropdown-row.pug
 include ../../elements/checkbox-list/checkbox-list.pug
 include ../../elements/bulleted-list/bulleted-list.pug
 include ../../elements/advantage/advantage.pug
-include ../../components/review/review.pug
+include ../../components/comment/comment.pug
 include ../../components/form-room-cost/form-room-cost.pug
 include ../../components/form-search-room/form-search-room.pug
 include ../../components/form-check-in/form-check-in.pug
@@ -181,8 +181,8 @@ block content
                 +advantage({title: 'Комфорт', value: 'Шумопоглощающие стены', nameIcon: 'mood'})
             .components__advantage-item
                 +advantage({title: 'Удобство', value: 'Окна в каждой из спален', nameIcon: 'locationCity'})
-        .components__review
-            +review({
+        .components__comment
+            +comment({
               title: 'Мурад Сарафанов',
               value: '5 дней назад',
               srcImage: '../../elements/advantage/images/Murad.png',
