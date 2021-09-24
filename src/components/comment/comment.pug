@@ -1,6 +1,6 @@
 include ../../elements/like-button/like-button.pug
 
-mixin comment({title = 'Title', value = 'text', srcImage, nameIcon = false, text = 'text description'} = {})
+mixin comment({title = 'Title', value = 'text', srcImage, text = 'text description'} = {})
   .comment
     .comment__user-information
       img.comment__user-icon(src=`${srcImage}`)
