@@ -3,7 +3,7 @@ mixin advantages({advantagesList = [{advantageTitle: 'Advantage', advantageDescr
     each advantagesItem in advantagesList 
       - const {advantageTitle, advantageDescription, advantageIcon} = advantagesItem
       .advantages__item
-        .advantages__icon(class=`advantages__icon_with-sign-${advantageIcon}`)
+        span.advantages__icon(class=`advantages__icon_with-sign-${advantageIcon}`)= advantageIcon
         .advantages__content
           span.advantages__title= advantageTitle
           span.advantages__value= advantageDescription

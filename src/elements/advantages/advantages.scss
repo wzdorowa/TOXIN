@@ -14,43 +14,21 @@
   }
 
   &__icon {
-    width: 48px;
-
-    &_with-sign-mood::before {
-      content: 'mood';
-      position: absolute;
-      top: 0px;
-      font-family: 'Material Icons', Arial, sans-serif;
-      font-size: 48px;
-      color: $Purple;
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    &_with-sign-locationCity::before {
-      content: 'location_city';
-      position: absolute;
-      top: 0px;
-      font-family: 'Material Icons', Arial, sans-serif;
-      font-size: 48px;
-      color: $Purple;
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    &_with-sign-whatshot::before {
-      content: 'whatshot';
-      position: absolute;
-      top: 0px;
-      font-family: 'Material Icons', Arial, sans-serif;
-      font-size: 48px;
-      color: $Purple;
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: $Purple;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   &__content {
