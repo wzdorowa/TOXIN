@@ -9,7 +9,6 @@ include ../../elements/rating/rating.pug
 include ../../elements/slider/slider.pug
 include ../../elements/button/button.pug
 include ../../elements/pagination/pagination.pug
-include ../../elements/dropdown-row/dropdown-row.pug
 include ../../elements/checkbox-list/checkbox-list.pug
 include ../../elements/bulleted-list/bulleted-list.pug
 include ../../elements/advantages/advantages.pug
@@ -44,16 +43,14 @@ block content
                   hasBorderRadiusBottom: true,
                 })
             .components__inputs-item
+              - const dataForDropdownFirst = [{subjectOfCalculation: 'Взрослые', count: '0'}, {subjectOfCalculation: 'Дети', count: '0'}, {subjectOfCalculation: 'Младенцы', count: '0'}]
                 +dropdown({
                   label: 'Dropdown',
                   placeholder: 'Сколько гостей',
-                  display: 'hidden',
-                  readonly: 'readonly',
-                  dropdownFor: 'the-guests'
+                  isButtonsHidden: true,
+                  dropdownFor: 'the-guests',
+                  dropdownRows: dataForDropdownFirst
                 })
-                    +dropdown-row({label: 'Взрослые', number: '0'})
-                    +dropdown-row({label: 'Дети', number: '0'})
-                    +dropdown-row({label: 'Младенцы', number: '0'})
             .components__inputs-item
                 +input({
                   label: 'Masked text field',
@@ -135,16 +132,14 @@ block content
     .components
       .components__wrapper
         .components__dropdown
+          - const dataForDropdownSecond = [{subjectOfCalculation: 'Спальни', count: '2'}, {subjectOfCalculation: 'Кровати', count: '2'}, {subjectOfCalculation: 'Ванные комнаты', count: '0'}]
             +dropdown({
               label: 'Удобства номера',
               placeholder: '2 спальни, 2 кровати',
-              display: 'hidden',
-              readonly: 'readonly',
-              dropdownFor: 'amenities'
+              isButtonsHidden: true,
+              dropdownFor: 'amenities',
+              dropdownRows: dataForDropdownSecond
             })
-              +dropdown-row({label: 'Спальни', number: '2'})
-              +dropdown-row({label: 'Кровати', number: '2'})
-              +dropdown-row({label: 'Ванные комнаты', number: '0'})
     .components
       .components__wrapper
         .components__expandable-checkbox-list

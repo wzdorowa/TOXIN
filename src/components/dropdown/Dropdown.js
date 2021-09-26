@@ -7,8 +7,15 @@ class Dropdown {
     this.buttonApply = null;
     this.buttonClear = null;
     this.rowsGroupParent = null;
-    this.rowsGroup = null;
-    this.numbers = null;
+    this.rowsGroup = [];
+
+    this.dropdownRow = element;
+    this.signs = [];
+    this.minusSign = [];
+    this.plusSign = [];
+    this.listItems = [];
+    this.firstArg = [];
+    this.numberContainer = [];
 
     this.findElement();
     this.bindEventListeners();
@@ -16,11 +23,13 @@ class Dropdown {
   }
 
   findElement() {
-    this.elementInput = this.dropdown.querySelector('.js-input__content');
-    this.parentInput = this.dropdown.querySelector('.js-dropdown__list');
+    this.elementInput = this.dropdown.querySelector(
+      '.js-dropdown__input-content',
+    );
+    this.parentInput = this.dropdown.querySelector('.js-dropdown__input');
     this.dropdownList = this.dropdown.querySelector('.js-dropdown__content');
     this.dropdownArrow = this.dropdown.querySelector(
-      '.js-input__icon-arrow-down',
+      '.js-dropdown__input-arrow-down',
     );
     this.buttonApply = this.dropdown.querySelector(
       '.js-dropdown__buttons-container_with-button-apply',
@@ -28,11 +37,29 @@ class Dropdown {
     this.buttonClear = this.dropdown.querySelector(
       '.js-dropdown__buttons-container_with-button-clear',
     );
-    this.rowsGroupParent = this.dropdown.querySelector('.dropdown__rows');
-    this.rowsGroup = this.dropdown.querySelectorAll('.js-dropdown-row');
-    this.numbers = this.dropdown.querySelectorAll(
-      '.js-dropdown-row__amount_with-count',
-    );
+    this.rowsGroupParent = this.dropdown.querySelector('.js-dropdown__rows');
+    this.rowsGroups = this.dropdown.querySelectorAll('.js-dropdown__row');
+
+    this.rowsGroups.forEach(element => {
+      const list = element.querySelectorAll('.js-dropdown__row-amount');
+      this.listItems.push(list);
+    });
+    this.rowsGroups.forEach(element => {
+      const list = element.querySelectorAll(
+        '.js-dropdown__row-amount_with-sign',
+      );
+      this.signs.push(list);
+    });
+
+    this.listItems.forEach(element => {
+      this.firstArg.push(element[0]);
+      this.numberContainer.push(element[1]);
+    });
+    console.log('this.numberContainer', this.numberContainer);
+    this.signs.forEach(element => {
+      this.minusSign.push(element[0]);
+      this.plusSign.push(element[1]);
+    });
   }
 
   addClass() {
@@ -56,6 +83,33 @@ class Dropdown {
     }
   }
 
+  addNumber(index) {
+    const currentValue = this.numberContainer[index].innerHTML;
+    let result = 0;
+    result = Number(currentValue) + 1;
+
+    this.numberContainer[index].innerHTML = String(result);
+  }
+
+  subtractNumber(index) {
+    const currentValue = this.numberContainer[index].innerHTML;
+    let result = 0;
+    result = currentValue - 1;
+    if (result < 0) {
+      this.numberContainer[index].innerHTML = '0';
+    } else {
+      this.numberContainer[index].innerHTML = result;
+    }
+  }
+
+  handlePlusSignClick(index) {
+    this.addNumber(index);
+  }
+
+  handleMinusSignClick(index) {
+    this.subtractNumber(index);
+  }
+
   handleIconArrowDownClick() {
     this.toggleClass();
   }
@@ -70,10 +124,17 @@ class Dropdown {
 
   handleButtonsContainerForClearClick() {
     this.elementInput.value = '';
-    this.numbers.forEach(number => {
+    this.numberContainer.forEach(number => {
       const element = number;
       element.innerHTML = '0';
     });
+    if (
+      !this.buttonClear.classList.contains(
+        '.dropdown__buttons-container_hidden',
+      )
+    ) {
+      this.buttonClear.classList.add('dropdown__buttons-container_hidden');
+    }
   }
 
   handleDocumentClick(event) {
@@ -157,7 +218,7 @@ class Dropdown {
   countTheGuests() {
     let adults = 0;
     let babies = 0;
-    this.numbers.forEach((number, index) => {
+    this.numberContainer.forEach((number, index) => {
       if (index <= 1) {
         adults += Number(number.innerHTML);
       } else if (index === 2) {
@@ -177,7 +238,7 @@ class Dropdown {
     let beds = 0;
     let bathrooms = 0;
 
-    this.numbers.forEach((number, index) => {
+    this.numberContainer.forEach((number, index) => {
       if (index === 0) {
         bedrooms += Number(number.innerHTML);
       } else if (index === 1) {
@@ -238,9 +299,29 @@ class Dropdown {
       this.handleButtonsContainerForClearClick.bind(this),
     );
     document.addEventListener('click', this.handleDocumentClick.bind(this));
-    this.rowsGroup.forEach(element => {
+    this.rowsGroups.forEach(element => {
       element.addEventListener('click', this.calculateTheResult.bind(this));
     });
+    this.plusSign.forEach((element, index) => {
+      element.addEventListener(
+        'click',
+        this.handlePlusSignClick.bind(this, index),
+      );
+    });
+    // this.plusSign.addEventListener(
+    //   'click',
+    //   this.handlePlusSignClick.bind(this),
+    // );
+    this.minusSign.forEach((element, index) => {
+      element.addEventListener(
+        'click',
+        this.handleMinusSignClick.bind(this, index),
+      );
+    });
+    // this.minusSign.addEventListener(
+    //   'click',
+    //   this.handleMinusSignClick.bind(this),
+    // );
   }
 }
 

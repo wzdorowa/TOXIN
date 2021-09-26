@@ -1,8 +1,86 @@
 .dropdown {
   position: relative;
 
-  &__list {
+  &__input {
+    width: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14.63px;
+    text-transform: uppercase;
+    color: $DarkShade100;
+  }
+  &__input-wrapper {
+    position: relative;
+  }
+  &__input-arrow-down {
+    &:hover {
+      & + .input__content {
+        border: 1px solid $DarkShade50;
+        line-height: 24px;
+        color: $DarkShade75;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: 'keyboard_arrow_down';
+      width: 44px;
+      height: 44px;
+      right: 0;
+      top: 0px;
+      font-family: 'Material Icons', Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      text-transform: initial;
+      color: $DarkShade50;
+      cursor: pointer;
+    }
+  }
+  &__input-content {
+    min-height: 43px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid $DarkShade25;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: $DarkShade75;
+    padding-left: 12px;
+    padding-right: 40px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    text-overflow: ellipsis;
+
+    &_opened {
+      border: 1px solid $DarkShade50;
+    }
+
+    &:hover, :focus {
+      outline-style: none;
+      border: 1px solid $DarkShade50;
+      line-height: 24px;
+      color: $DarkShade75;
+    }
+    &:focus-visible {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+      color: $DarkShade25;
+    }
   }
 
   &__content {
@@ -36,12 +114,56 @@
     justify-content: space-between;
     min-height: 107px;
   }
+  &__row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $DarkShade100;
+  }
+  &__row-amount-counter {
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__row-amount {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+
+    &_with-sign {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+      color: $DarkShade50;
+      border: 1px solid $DarkShade25;
+      box-sizing: border-box;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  }
+
 
   &__buttons {
     display: flex;
     justify-content: space-between;
     min-height: 40px;
     padding-top: 12px;
+
+    &_hidden {
+      display: none;
+    }
 
     &-container {
       cursor: pointer;

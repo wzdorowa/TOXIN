@@ -34,16 +34,14 @@ block content
               size: 'large',
               amountField: 'with-one-input'})
             .search-room__filter-input
+              - const dataForDropdownFirst = [{subjectOfCalculation: 'Взрослые', count: '3'}, {subjectOfCalculation: 'Дети', count: '0'}, {subjectOfCalculation: 'Младенцы', count: '1'}]
               +dropdown({
                 label: 'Гости',
                 placeholder: '3 гостя, 1 младенец',
-                display: 'hidden',
-                readonly: 'readonly',
-                dropdownFor: 'the-guests'
+                isButtonsHidden: true,
+                dropdownFor: 'the-guests',
+                dropdownRows: dataForDropdownFirst
               })
-                +dropdown-row({label: 'Взрослые', number: '3'})
-                +dropdown-row({label: 'Дети', number: '0'})
-                +dropdown-row({label: 'Младенцы', number: '1'})
           .search-room__filter-range-slider
             +slider({text: 'Диапазон цены'})
             span.search-room__filter-range-slider-description Стоимость за сутки пребывания в номере
@@ -67,15 +65,14 @@ block content
                       description: 'На 1 этаже вас встретит специалист и проводит до номера.'
                       })
           .search-room__filter-dropdown
+            - const dataForDropdownSecond = [{subjectOfCalculation: 'Спальни', count: '2'}, {subjectOfCalculation: 'Кровати', count: '2'}, {subjectOfCalculation: 'Ванные комнаты', count: '0'}]
             +dropdown({
               label: 'Удобства номера',
               placeholder: '2 спальни, 2 кровати...',
-              display: 'hidden',
-              dropdownFor: 'amenities'
+              isButtonsHidden: true,
+              dropdownFor: 'amenities',
+              dropdownRows: dataForDropdownSecond
             })
-              +dropdown-row({label: 'Спальни', number: '2'})
-              +dropdown-row({label: 'Кровати', number: '2'})
-              +dropdown-row({label: 'Ванные комнаты', number: '0'})
           .search-room__filter-options
             +checkbox-list({text: 'Дополнительные удобства'})
               +checkbox-button({value: 'Завтрак'})

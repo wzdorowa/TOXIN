@@ -1,7 +1,6 @@
 include ../../components/calendar/calendar.pug
 include ../../components/dropdown/dropdown.pug
 include ../../elements/settlement-group/settlement-group.pug
-include ../../elements/dropdown-row/dropdown-row.pug
 
 mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'], userDates} = {})
     .form-room-cost
@@ -16,15 +15,13 @@ mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat =
       - const label = ['Прибытие', 'Выезд']
       +datepicker-group({labelArray: label, dates: dateFormat, userDates: userDates, size: 'small', amountField: 'with-two-inputs'})
       .form-room-cost__dropdown-container
+        - const dataForDropdown = [{subjectOfCalculation: 'Взрослые', count: '2'}, {subjectOfCalculation: 'Дети', count: '1'}, {subjectOfCalculation: 'Младенцы', count: '0'}]
         +dropdown({
           label: 'Гости',
           placeholder: '3 гостя',
-          readonly: 'readonly',
-          dropdownFor: 'the-guests'
+          dropdownFor: 'the-guests',
+          dropdownRows: dataForDropdown
           })
-          +dropdown-row({label: 'Взрослые', number: '2'})
-          +dropdown-row({label: 'Дети', number: '1'})
-          +dropdown-row({label: 'Младенцы', number: '0'})
       .form-room-cost__calculation
           - const stateForTable = {pricePerDay: '9 990', numberOfDays: 'x 4 суток', priceForThePeriod: '39 690', serviceCharge: '2 179', servicePrice: '0', additionalServicesPrice: '300', totalCost: '38 081'}
           +settlement-group(stateForTable)
