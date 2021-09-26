@@ -19,7 +19,7 @@
     position: relative;
   }
 
-  &__description {
+  &__title {
 
     &_hidden {
       display: none;
@@ -27,35 +27,6 @@
 
     &_visible {
       display: inline;
-    }
-  }
-
-  &__icon-arrow-down {
-    &:hover {
-      & + .input__content {
-        border: 1px solid $DarkShade50;
-        line-height: 24px;
-        color: $DarkShade75;
-      }
-    }
-    &::before {
-      position: absolute;
-      content: 'keyboard_arrow_down';
-      width: 44px;
-      height: 44px;
-      right: 0;
-      top: 0px;
-      font-family: 'Material Icons', Arial, sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 22px;
-      line-height: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      text-transform: initial;
-      color: $DarkShade50;
-      cursor: pointer;
     }
   }
 
@@ -100,6 +71,7 @@
     color: $DarkShade100;
     padding-left: 12px;
     padding-right: 40px;
+    border-radius: 4px;
 
     &_opened {
       border: 1px solid $DarkShade50;
@@ -122,28 +94,5 @@
       color: $DarkShade25;
     }
 
-    &_with-border-radius-top {
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-    }
-
-    &_with-border-radius-bottom {
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
-    }
-
-    &_with-dropdown {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 14px;
-      color: $DarkShade75;
-      text-overflow: ellipsis;
-    
-      &::placeholder {
-        font-family: inherit;
-        font-size: inherit;
-        line-height: inherit;
-        color: inherit;
-      }
-    }
   }
 }

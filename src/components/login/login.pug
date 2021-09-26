@@ -6,17 +6,13 @@ mixin login({text = 'Form name'} = {})
         +input({
           placeholder: 'Email',
           type: 'email',
-          hasBorderRadiusTop: true,
-          hasBorderRadiusBottom: true,
-          isHide: true,
+          isTitleHidden: true,
         })
       .login__input-item
         +input({
           placeholder: 'Пароль',
           type: 'password',
-          hasBorderRadiusTop: true,
-          hasBorderRadiusBottom: true,
-          isHide: true,
+          isTitleHidden: true,
         })
     .login__check-in-details
       .login__check-in-button

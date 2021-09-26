@@ -19,7 +19,7 @@
   }
   &__input-arrow-down {
     &:hover {
-      & + .input__content {
+      & + .dropdown__input-content {
         border: 1px solid $DarkShade50;
         line-height: 24px;
         color: $DarkShade75;

@@ -37,10 +37,8 @@ block content
         .components__inputs
             .components__inputs-item
                 +input({
-                  label: 'Text field',
-                  placeholder: 'Email',
-                  hasBorderRadiusTop: true,
-                  hasBorderRadiusBottom: true,
+                  title: 'Text field',
+                  placeholder: 'Email'
                 })
             .components__inputs-item
               - const dataForDropdownFirst = [{subjectOfCalculation: 'Взрослые', count: '0'}, {subjectOfCalculation: 'Дети', count: '0'}, {subjectOfCalculation: 'Младенцы', count: '0'}]
@@ -53,10 +51,8 @@ block content
                 })
             .components__inputs-item
                 +input({
-                  label: 'Masked text field',
+                  title: 'Masked text field',
                   placeholder: 'ДД.ММ.ГГГГ',
-                  hasBorderRadiusTop: true,
-                  hasBorderRadiusBottom: true,
                   hasInputMask: true
                 })
             .components__inputs-item
@@ -77,12 +73,10 @@ block content
                 })
             .components__inputs-item.components__inputs-item_width_medium.components__inputs-item_type_email
                     +input({
-                      label: 'Subscription text field',
+                      title: 'Subscription text field',
                       placeholder: 'Email',
                       type: 'email',
-                      arrow: 'arrow',
-                      hasBorderRadiusTop: true,
-                      hasBorderRadiusBottom: true,
+                      hasArrow: 'arrow'
                     })
         .components__elements.components__elements_column_first
             .components__checkbox-buttons
