@@ -1,9 +1,0 @@
-mixin advantage({title = 'Field name', value = 'Field description', srcImage = '../elements/advantage/images/userIcon.png', nameIcon = false} = {})
-  .advantage
-    if (!nameIcon)
-      img.advantage__image(src=`${srcImage}`)
-    else
-      .advantage__icon(class=`advantage__icon_with-sign-${nameIcon}`)
-    .advantage__content
-      h1.advantage__title= title
-      span.advantage__value= value

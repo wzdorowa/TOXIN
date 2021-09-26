@@ -1,0 +1,9 @@
+mixin advantages({advantagesList = [{advantageTitle: 'Advantage', advantageDescription: 'Advantage description', advantageIcon: 'mood'}]} = {})
+  .advantages
+    each advantagesItem in advantagesList 
+      - const {advantageTitle, advantageDescription, advantageIcon} = advantagesItem
+      .advantages__item
+        .advantages__icon(class=`advantages__icon_with-sign-${advantageIcon}`)
+        .advantages__content
+          h1.advantages__title= advantageTitle
+          span.advantages__value= advantageDescription
