@@ -19,7 +19,7 @@ include ../../components/form-check-in/form-check-in.pug
 include ../../components/login/login.pug
 include ../../components/number-card/number-card.pug
 include ../../components/calendar/calendar.pug
-include ../../components/datepicker-group/datepicker-group.pug
+include ../../components/date-dropdown/date-dropdown.pug
 include ../../elements/logo/logo.pug
 include ../../components/header/header.pug
 include ../../components/footer/footer.pug
@@ -57,7 +57,7 @@ block content
                 })
             .components__inputs-item
                 - const dateDropdownLabels = ['Date dropdown', 'Date dropdown']
-                +datepicker-group({
+                +date-dropdown({
                   labelArray: dateDropdownLabels,
                   size: 'small',
                   amountField: 'with-two-inputs'
@@ -65,7 +65,7 @@ block content
             .components__inputs-item.components__inputs-item_width_medium
                 - const filterDatesDropdown = ['ДД.ММ - ДД.ММ']
                 - const filterDateDropdownLabel = ['Filter date dropdown']
-                +datepicker-group({
+                +date-dropdown({
                   labelArray: filterDateDropdownLabel,
                   datesFormat: filterDatesDropdown,
                   size: 'large',

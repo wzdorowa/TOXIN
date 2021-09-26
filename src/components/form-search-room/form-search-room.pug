@@ -1,14 +1,14 @@
 include ../../elements/input/input.pug
 include ../../elements/button/button.pug
 include ../dropdown/dropdown.pug
-include ../../components/datepicker-group/datepicker-group.pug
+include ../../components/date-dropdown/date-dropdown.pug
 
 mixin form-search-room({text = 'Form name', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']} = {})
   .form-search-room
     div.form-search-room__wrapper
       span.form-search-room__title= text
       -const labelInputs = ['Прибытие', 'Выезд']
-      +datepicker-group({labelArray: labelInputs, dates: dateFormat, size: 'small', amountField: 'with-two-inputs'})
+      +date-dropdown({labelArray: labelInputs, dates: dateFormat, size: 'small', amountField: 'with-two-inputs'})
       .form-search-room__dropdown-container
         - const dataForDropdown = [{subjectOfCalculation: 'Взрослые', count: '0'}, {subjectOfCalculation: 'Дети', count: '0'}, {subjectOfCalculation: 'Младенцы', count: '0'}]
         +dropdown({

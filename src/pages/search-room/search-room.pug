@@ -4,7 +4,7 @@ include ../../components/header/header.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../components/dropdown/dropdown.pug
-include ../../components/datepicker-group/datepicker-group.pug
+include ../../components/date-dropdown/date-dropdown.pug
 include ../../elements/input/input.pug
 include ../../elements/slider/slider.pug
 include ../../elements/checkbox-button/checkbox-button.pug
@@ -28,7 +28,7 @@ block content
           h1.search-room__filter-access-title Дополнительные параметры
         .search-room__filter.js-search-room__filter
           .search-room__filter-inputs
-            +datepicker-group({
+            +date-dropdown({
               labelArray: ['Даты пребывания в отеле'],
               datesFormat: ['ДД.ММ - ДД.ММ'],
               size: 'large',

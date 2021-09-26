@@ -55,7 +55,6 @@ class Dropdown {
       this.firstArg.push(element[0]);
       this.numberContainer.push(element[1]);
     });
-    console.log('this.numberContainer', this.numberContainer);
     this.signs.forEach(element => {
       this.minusSign.push(element[0]);
       this.plusSign.push(element[1]);
@@ -308,20 +307,12 @@ class Dropdown {
         this.handlePlusSignClick.bind(this, index),
       );
     });
-    // this.plusSign.addEventListener(
-    //   'click',
-    //   this.handlePlusSignClick.bind(this),
-    // );
     this.minusSign.forEach((element, index) => {
       element.addEventListener(
         'click',
         this.handleMinusSignClick.bind(this, index),
       );
     });
-    // this.minusSign.addEventListener(
-    //   'click',
-    //   this.handleMinusSignClick.bind(this),
-    // );
   }
 }
 

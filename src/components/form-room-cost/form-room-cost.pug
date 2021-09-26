@@ -13,7 +13,7 @@ mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat =
             span.form-room-cost__room-cost!= `${cost}<span class='form-room-cost__sign-rouble'>P</span> `
             span= 'в сутки'
       - const label = ['Прибытие', 'Выезд']
-      +datepicker-group({labelArray: label, dates: dateFormat, userDates: userDates, size: 'small', amountField: 'with-two-inputs'})
+      +date-dropdown({labelArray: label, dates: dateFormat, userDates: userDates, size: 'small', amountField: 'with-two-inputs'})
       .form-room-cost__dropdown-container
         - const dataForDropdown = [{subjectOfCalculation: 'Взрослые', count: '2'}, {subjectOfCalculation: 'Дети', count: '1'}, {subjectOfCalculation: 'Младенцы', count: '0'}]
         +dropdown({
