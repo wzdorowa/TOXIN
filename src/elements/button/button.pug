@@ -1,10 +1,10 @@
-mixin button({text = 'button', decor = '', arrow = '', type = 'button', height = 'small', href = false} = {})
+mixin button({text = 'button', decor = 'noDecor', hasArrow = false, type = 'button', height = 'small', href = false} = {})
   .button
     if (href)
-      span(class=`button__icon-${arrow} js-button__icon-${arrow}`)
-      a.button__content(class=`button__content_with-${decor} button__content_height_${height} button__content_with-${arrow}`, target='_blank', href=`${href}`)
+      span.button__icon(class=`${hasArrow ? 'button__icon_with-arrow js-button__icon_with-arrow' : ''}`)
+      a.button__content(class=`button__content_with-${decor} button__content_height_${height}`, target='_blank', href=`${href}`)
         span.button__text=text
     else 
-      span(class=`button__icon-${arrow} js-button__icon-${arrow}`)
-      button.button__content(class=`button__content_with-${decor} button__content_height_${height} button__content_with-${arrow}`, type=type)
+      span.button__icon(class=`${hasArrow ? 'button__icon_with-arrow js-button__icon_with-arrow' : ''}`)
+      button.button__content(class=`button__content_with-${decor} button__content_height_${height}`, type=type)
         span.button__text=text
