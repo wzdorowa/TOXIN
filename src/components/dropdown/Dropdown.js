@@ -32,32 +32,23 @@ class Dropdown {
       '.js-dropdown__input-arrow-down',
     );
     this.buttonApply = this.dropdown.querySelector(
-      '.js-dropdown__buttons-container_with-button-apply',
+      '.js-dropdown__button-apply',
     );
     this.buttonClear = this.dropdown.querySelector(
-      '.js-dropdown__buttons-container_with-button-clear',
+      '.js-dropdown__button-clear',
     );
     this.rowsGroupParent = this.dropdown.querySelector('.js-dropdown__rows');
     this.rowsGroups = this.dropdown.querySelectorAll('.js-dropdown__row');
 
     this.rowsGroups.forEach(element => {
-      const list = element.querySelectorAll('.js-dropdown__row-amount');
-      this.listItems.push(list);
+      const amountElement = element.querySelector('.js-dropdown__amount');
+      this.numberContainer.push(amountElement);
     });
     this.rowsGroups.forEach(element => {
-      const list = element.querySelectorAll(
-        '.js-dropdown__row-amount_with-sign',
-      );
-      this.signs.push(list);
-    });
-
-    this.listItems.forEach(element => {
-      this.firstArg.push(element[0]);
-      this.numberContainer.push(element[1]);
-    });
-    this.signs.forEach(element => {
-      this.minusSign.push(element[0]);
-      this.plusSign.push(element[1]);
+      const minusSign = element.querySelector('.js-dropdown__minus');
+      const plusSign = element.querySelector('.js-dropdown__plus');
+      this.minusSign.push(minusSign);
+      this.plusSign.push(plusSign);
     });
   }
 
@@ -128,11 +119,9 @@ class Dropdown {
       element.innerHTML = '0';
     });
     if (
-      !this.buttonClear.classList.contains(
-        '.dropdown__buttons-container_hidden',
-      )
+      !this.buttonClear.classList.contains('.dropdown__button-clear_hidden')
     ) {
-      this.buttonClear.classList.add('dropdown__buttons-container_hidden');
+      this.buttonClear.classList.add('dropdown__button-clear_hidden');
     }
   }
 
@@ -153,11 +142,9 @@ class Dropdown {
     if (result === 0) {
       this.elementInput.value = '';
       if (
-        !this.buttonClear.classList.contains(
-          '.dropdown__buttons-container_hidden',
-        )
+        !this.buttonClear.classList.contains('.dropdown__button-clear_hidden')
       ) {
-        this.buttonClear.classList.add('dropdown__buttons-container_hidden');
+        this.buttonClear.classList.add('dropdown__button-clear_hidden');
       }
     } else {
       const newString = [];
@@ -205,11 +192,9 @@ class Dropdown {
         }
       });
       if (
-        this.buttonClear.classList.contains(
-          'dropdown__buttons-container_hidden',
-        )
+        this.buttonClear.classList.contains('dropdown__button-clear_hidden')
       ) {
-        this.buttonClear.classList.remove('dropdown__buttons-container_hidden');
+        this.buttonClear.classList.remove('dropdown__button-clear_hidden');
       }
     }
   }

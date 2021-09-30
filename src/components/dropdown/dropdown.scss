@@ -126,7 +126,7 @@
     text-transform: uppercase;
     color: $DarkShade100;
   }
-  &__row-amount-counter {
+  &__row-counter {
     display: flex;
     justify-content: space-between;
     width: 90px;
@@ -134,26 +134,24 @@
     padding: 0;
     margin: 0;
   }
-  &__row-amount {
+  &__minus, &__count, &__plus {
     width: 30px;
     height: 30px;
     text-align: center;
-
-    &_with-sign {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 30px;
-      text-align: center;
-      color: $DarkShade50;
-      border: 1px solid $DarkShade25;
-      box-sizing: border-box;
-      border-radius: 30px;
-      cursor: pointer;
-    }
   }
-
+  &__minus, &__plus {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: $DarkShade50;
+    border: 1px solid $DarkShade25;
+    box-sizing: border-box;
+    border-radius: 30px;
+    cursor: pointer;
+  }
 
   &__buttons {
     display: flex;
@@ -164,13 +162,13 @@
     &_hidden {
       display: none;
     }
+  }
 
-    &-container {
-      cursor: pointer;
+  &__button-clear, &__button-apply {
+    cursor: pointer;
 
-      &_hidden {
-        visibility: hidden
-      }
+    &_hidden {
+      visibility: hidden;
     }
   }
 }

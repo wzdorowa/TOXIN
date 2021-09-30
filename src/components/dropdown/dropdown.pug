@@ -7,18 +7,16 @@ mixin dropdown({label, placeholder = 'Выберите нужное количе
         input.dropdown__input-content.js-dropdown__input-content(type= 'text', name='dropdown-input-content', placeholder= placeholder, readonly= 'readonly')
     .dropdown__content.js-dropdown__content
       .dropdown__rows.js-dropdown__rows(class=`dropdown__rows_for-count-${dropdownFor}`)
-        block
         each dropdownRow in dropdownRows
           - const {subjectOfCalculation, count} = dropdownRow
           .dropdown__row.js-dropdown__row
             span.dropdown__row-label= subjectOfCalculation
-            ul.dropdown__row-amount-counter
-              li.dropdown__row-amount.js-dropdown__row-amount.dropdown__row-amount_with-sign.js-dropdown__row-amount_with-sign -
-              li.dropdown__row-amount.js-dropdown__row-amount.dropdown__row-amount_with-count.js-dropdown__row-amount_with-count
-                = count
-              li.dropdown__row-amount.js-dropdown__row-amount.dropdown__row-amount_with-sign.js-dropdown__row-amount_with-sign +
+            p.dropdown__row-counter
+              span.dropdown__minus.js-dropdown__minus -
+              span.dropdown__amount.js-dropdown__amount= count
+              span.dropdown__plus.js-dropdown__plus +
       .dropdown__buttons(class=`${isButtonsHidden ? 'dropdown__buttons_hidden' : ''}`)
-        .dropdown__buttons-container.dropdown__buttons-container_with-button-clear.js-dropdown__buttons-container_with-button-clear
+        .dropdown__button-clear.js-dropdown__button-clear
           +button({text: 'Очистить'})
-        .dropdown__buttons-container.dropdown__buttons-container_with-button-apply.js-dropdown__buttons-container_with-button-apply
+        .dropdown__button-apply.js-dropdown__button-apply
           +button({text: 'Применить'})
