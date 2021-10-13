@@ -8,16 +8,8 @@
 
   &__input {
     width: 100%;
-    position: relative;
     display: flex;
     flex-direction: column;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 14.63px;
-    text-transform: uppercase;
-    color: $DarkShade100;
 
     &_width {
 
@@ -36,6 +28,13 @@
         }
       }
     }
+  }
+  &__input-label {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14.63px;
+    text-transform: uppercase;
+    color: $DarkShade100;
   }
   &__input-wrapper {
     position: relative;
@@ -99,8 +98,6 @@
     }
 
     &::placeholder {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 14px;
       line-height: 18px;
       color: $DarkShade25;
     }

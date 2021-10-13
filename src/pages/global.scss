@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import 'src/fonts/fonts.scss';
 @import 'src/components/date-dropdown/date-dropdown.scss';
 @import 'src/components/social-button/social-button.scss';
 @import 'src/components/copyright/copyright.scss';
@@ -27,7 +28,6 @@
 @import 'src/elements/radio-button/radio-button.scss';
 @import 'src/elements/checkbox-button/checkbox-button.scss';
 @import 'src/elements/input/input.scss';
-@import 'src/fonts/fonts.scss';
 @import 'src/pages/sign-in/sign-in.scss';
 @import 'src/pages/registration/registration.scss';
 @import 'src/pages/room-details/room-details.scss';

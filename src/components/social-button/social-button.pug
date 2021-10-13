@@ -1,13 +1,6 @@
-mixin social-button()
-  ul.social-button
-    - const social = ['tw', 'fb', 'insta']
-    each val in social
-      li.social-button__item
-        a.social-button__button
-          case val
-            when 'tw'
-              img(src='../../components/social-button/images/twitter.svg', alt='', weight='19px', height='19px')
-            when 'fb'
-              img(src='../../components/social-button/images/facebook.svg', alt='', weight='20.5px', height='20.5px')
-            when 'insta'
-              img(src='../../components/social-button/images/instagram.svg', alt='', weight='20.5px', height='20.5px')
+mixin social-button({ buttons = [{name: 'Icon', href: '/', width: 24, height: 24}] } = {})
+  .social-button
+    each button in buttons
+      - const { name, src, href, width, height } = button
+      a.social-button__button(target="_blank" rel="noopener noreferrer" href=href)
+        img(src=`${src}` alt=name width=`${width}` height=`${height}`)
