@@ -12,3 +12,16 @@ $BlueLilac:rgba(139, 164, 249, 1);
 $BlueLilac50:rgba(139, 164, 249, 0.5);
 $BlueLilac25: rgba(139, 164, 249, 0.25);
 $Green: #6FCF97;
+$TurquoiseBlue: #66D2EA;
+
+$PrimaryGradient: linear-gradient(180deg, $Purple 0%, $BlueLilac 100%);
+$PrimaryGradient25: linear-gradient(180deg, $Purple25 0%, $BlueLilac25 100%);
+$PrimaryGradient50: linear-gradient(180deg, $Purple50 0%, $BlueLilac50 100%);
+
+$SecondaryGradient: linear-gradient(180deg, $Green 0%, $TurquoiseBlue 100%);
+
+$YellowPink: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+
+$VioletBlue: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+
+$BlackTransparent: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);

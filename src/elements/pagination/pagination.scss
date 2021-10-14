@@ -25,14 +25,14 @@
     &:first-child {
       width: 40px;
       font-weight: bold;
-      color: #FFFFFF;
-      background: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
+      color: #fff;
+      background: $PrimaryGradient;
       border-radius: 50%;
     }
 
     &:last-of-type {
       width: 40px;
-      background: linear-gradient(180deg, $Green 0%, #66D2EA 100%);
+      background: $SecondaryGradient;
       border-radius: 50%;
 
       &::before {

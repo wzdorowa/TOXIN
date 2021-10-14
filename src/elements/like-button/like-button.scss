@@ -40,7 +40,7 @@
       }
 
       & ~ .like-button__description {
-        color:#BC9CFF;
+        color: $Purple;
 
         &::before {
           content: 'favorite';
@@ -52,7 +52,7 @@
           font-weight: normal;
           font-size: 10px;
           line-height: 20px;
-          color: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
+          color: $PrimaryGradient;
         }
       }
     }
@@ -69,7 +69,7 @@
         font-weight: normal;
         font-size: 10px;
         line-height: 20px;
-        color: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
+        color: $PrimaryGradient;
       }
     }
   }

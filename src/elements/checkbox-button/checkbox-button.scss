@@ -25,7 +25,7 @@
         height: 4px;
         border-top: 2px solid;
         border-right: 2px solid;
-        border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-image: $PrimaryGradient;
         border-image-slice: 1;
         transform: rotate(135deg); 
       }

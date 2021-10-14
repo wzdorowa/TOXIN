@@ -37,7 +37,7 @@
     text-decoration: none;
     letter-spacing: 0.03em;
     color: $Purple;
-    background: white;
+    background: #fff;
     border: none;
     width: 100%;
     padding: 0;
@@ -55,7 +55,7 @@
     }
 
     &_with-background {
-      background: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
+      background: $PrimaryGradient;
       color: white;
       border-radius: 22px;
     }
@@ -89,7 +89,7 @@
         bottom: -2px;
         left: -2px;
         right: -2px;
-        background: linear-gradient(180deg, $Purple 0%, $BlueLilac 100%);
+        background: $PrimaryGradient;
         content: '';
         z-index: -1;
         border-radius: 22px;
@@ -100,7 +100,7 @@
         cursor: pointer;
 
         &::before {
-          background: linear-gradient(180deg, $Purple50 0%, $BlueLilac50 100%);
+          background: $PrimaryGradient50;
         }
       }
     }

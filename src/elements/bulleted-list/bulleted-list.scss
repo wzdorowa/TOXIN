@@ -39,7 +39,7 @@
       border-radius: 50%;
       top: 25%;
       left: 0;
-      background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+      background: $YellowPink;
     }
 
     &_turquoise-blue::before {
@@ -50,7 +50,7 @@
       border-radius: 50%;
       top: 25%;
       left: 0;
-      background: linear-gradient(180deg, $Green 0%, #66D2EA 100%);
+      background: $SecondaryGradient;
     }
 
     &_light-blue::before {
@@ -61,7 +61,7 @@
       border-radius: 50%;
       top: 25%;
       left: 0;
-      background: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
+      background: $PrimaryGradient;
     }
 
     &_violet-blue::before {
@@ -72,7 +72,7 @@
       border-radius: 50%;
       top: 25%;
       left: 0;
-      background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+      background: $VioletBlue;
     }
 
     &_light-gray::before {

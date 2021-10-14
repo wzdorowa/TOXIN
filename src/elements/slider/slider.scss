@@ -36,7 +36,7 @@
 
   & .ui-slider {
     position: relative;
-    background: white;
+    background: #fff;
     height: 6px;
     border-radius:3px;
     border: 1px solid $DarkShade25;
@@ -50,7 +50,7 @@
       cursor: pointer;
       border-radius: 50%;
       border: 2px solid #FFF;
-      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      background: $SecondaryGradient;
       z-index: 2;
       transition: transform 0.2s, border 0.4s;
     }
@@ -60,7 +60,7 @@
       z-index: 1;
       min-height: 5px;
       border: 0;
-      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      background: $SecondaryGradient;
       border-radius:3px;
       margin-top: -1px;
     }
@@ -86,7 +86,7 @@
       text-align: right;
       color: $DarkShade50;
       max-width: 40px;
-      background: #FFF;
+      background: #fff;
       border: none;
     }
   }
@@ -104,7 +104,7 @@
       text-align: right;
       color: $DarkShade50;
       max-width: 40px;
-      background: #FFF;
+      background: #fff;
       border: none;
     }
   }
