@@ -11,10 +11,7 @@
   }
 
   &__specification-room {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
     font-weight: bold;
-    font-size: 14px;
     line-height: 17px;
     color: $DarkShade100;
   }
@@ -28,9 +25,7 @@
     padding-right: 3px;
   }
   &__room-class {
-    font-family: 'Montserrat', Arial, sans-serif;
     font-size: 12px;
-    font-style: normal;
     font-weight: bold;
     line-height: 15px;
     letter-spacing: 0em;
@@ -43,15 +38,12 @@
 
   &__cost-per-day {
     padding-right: 3px;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
     font-size: 12px;
     line-height: 34px;
     color: $DarkShade50;
   }
   &__room-cost {
     font-weight: bold;
-    font-size: 14px;
     padding-right: 3px;
   }
   &__sign-rouble {
@@ -116,8 +108,6 @@
     padding-right: 5px;
 
     &-item {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-style: normal;
       font-weight: bold;
       font-size: 19px;
       line-height: 18px;
@@ -135,8 +125,6 @@
         }
       }
       &_with-cost {
-        font-family: 'Montserrat', Arial, sans-serif;
-        font-style: normal;
         font-weight: bold;
         font-size: 19px;
         line-height: 23,75px;

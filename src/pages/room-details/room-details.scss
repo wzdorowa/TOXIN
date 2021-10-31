@@ -233,9 +233,7 @@
   }
 
   &__title {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 19px;
     line-height: 23px;
     color: $DarkShade100;
@@ -254,8 +252,6 @@
   }
 
   &__title-comment {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
@@ -267,8 +263,6 @@
   }
 
   &__title-cancel {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
@@ -352,11 +346,6 @@
     }
 
     &-sum {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 14px;
       text-align: center;
       display: flex;
       align-items: center;
@@ -403,8 +392,6 @@
   }
 
   &__title-rules {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
@@ -438,12 +425,7 @@
 
     &-description {
       display: inline-block;
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
       line-height: 24px;
-      color: $DarkShade75;
       margin: 0;
     }
   }

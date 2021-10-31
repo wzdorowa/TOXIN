@@ -103,8 +103,6 @@
     &-title {
       display: inline-block;
       position: relative;
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-style: normal;
       font-weight: bold;
       font-size: 15px;
       line-height: 17px;
@@ -120,8 +118,6 @@
         position: absolute;
         content: 'filter_list';
         font-family: 'Material Icons', Arial, sans-serif;
-        font-style: normal;
-        font-weight: normal;
         font-size: 20px;
         line-height: 20px;
         top: -2px;
@@ -172,11 +168,7 @@
 
       &-description {
         display: block;
-        font-family: 'Montserrat', Arial, sans-serif;
-        font-style: normal;
-        font-weight: normal;
         font-size: 12px;
-        line-height: 14px;
         color: $DarkShade50;
       }
     }
@@ -190,8 +182,6 @@
       margin-top: 30px;
 
       &-title {
-        font-family: 'Montserrat', Arial, sans-serif;
-        font-style: normal;
         font-weight: bold;
         font-size: 12px;
         line-height: 14.63px;
@@ -228,8 +218,6 @@
 
 
     &-item-title {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-style: normal;
       font-weight: bold;
       font-size: 12px;
       line-height: 14.63px;
@@ -266,8 +254,6 @@
     }
 
     &-title {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-style: normal;
       font-weight: bold;
       font-size: 20px;
       line-height: 20px;

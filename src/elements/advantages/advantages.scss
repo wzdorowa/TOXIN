@@ -15,8 +15,6 @@
 
   &__icon {
     font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
     font-size: 48px;
     display: inline-block;
     line-height: 1;
@@ -36,22 +34,13 @@
   }
 
   &__title {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
     font-weight: bold;
-    font-size: 14px;
     line-height: 24px;
-    color: $DarkShade75;
     margin: 0;
     display: block;
   }
 
   &__value {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
     line-height: 24px;
-    color: $DarkShade75;
   }
 }

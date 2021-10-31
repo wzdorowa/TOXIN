@@ -3,8 +3,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 14.63px;
@@ -35,7 +33,6 @@
       & + .input__content {
         border: 1px solid $DarkShade50;
         line-height: 24px;
-        color: $DarkShade75;
       }
     }
     &::before {
@@ -46,8 +43,6 @@
       right: 0;
       top: 0px;
       font-family: 'Material Icons', Arial, sans-serif;
-      font-style: normal;
-      font-weight: normal;
       font-size: 22px;
       line-height: 22px;
       display: flex;
@@ -65,8 +60,6 @@
     background: #fff;
     border: 1px solid $DarkShade25;
     box-sizing: border-box;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 14px;
     line-height: 18px;
     color: $DarkShade100;
     padding-left: 12px;
@@ -81,15 +74,12 @@
       outline-style: none;
       border: 1px solid $DarkShade50;
       line-height: 24px;
-      color: $DarkShade75;
     }
     &:focus-visible {
       outline: none;
     }
 
     &::placeholder {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 14px;
       line-height: 18px;
       color: $DarkShade25;
     }

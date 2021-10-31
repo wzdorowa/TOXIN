@@ -5,17 +5,12 @@
   justify-content: space-between;
   align-items: baseline;
 
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 18px;
-  color: $DarkShade75;
 
   min-height: 90px;
 
   @media (min-width: 350px) {
-    font-size: 14px;
     line-height: 18px;
     min-height: 107px;
   }
@@ -48,8 +43,6 @@
       right: 0px;
       border: 1px solid $DarkShade25;
       border-radius: 10px;
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-style: normal;
       font-weight: bold;
       font-size: 13px;
       line-height: 18px;
@@ -70,8 +63,6 @@
   }
 
   &__number_bold {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 24px;
@@ -90,8 +81,6 @@
     display: inline-block;
 
     &_bold-pink {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-style: normal;
       font-weight: bold;
       font-size: 12px;
       line-height: 33px;
@@ -100,9 +89,6 @@
     }
 
     &_normal {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-style: normal;
-      font-weight: 400;
       font-size: 11px;
       line-height: 30px;
       color: $DarkShade50;

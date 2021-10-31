@@ -17,8 +17,6 @@
   }
 
   &__title {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 14.63px;
@@ -77,9 +75,6 @@
     display: flex;
 
     &-price {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-style: normal;
-      font-weight: normal;
       font-size: 12px;
       line-height: 14.63px;
       text-transform: uppercase;
@@ -95,9 +90,6 @@
     display: flex;
 
     &-price {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-style: normal;
-      font-weight: normal;
       font-size: 12px;
       line-height: 14.63px;
       text-transform: uppercase;
@@ -110,9 +102,6 @@
   }
 
   &__ruble-sign {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
-    font-weight: normal;
     font-size: 11px;
     line-height: 15px;
     color: $DarkShade50;
@@ -121,9 +110,6 @@
   }
 
   &__sign {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
