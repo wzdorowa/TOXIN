@@ -55,21 +55,21 @@ class Dropdown {
   addClass() {
     this.dropdownList.classList.add('dropdown__content_visible');
     if (this.parentInput.contains(this.elementInput)) {
-      this.elementInput.classList.add('input__content_opened');
+      this.elementInput.classList.add('dropdown__input-content_opened');
     }
   }
 
   removeClass() {
     this.dropdownList.classList.remove('dropdown__content_visible');
     if (this.parentInput.contains(this.elementInput)) {
-      this.elementInput.classList.remove('input__content_opened');
+      this.elementInput.classList.remove('dropdown__input-content_opened');
     }
   }
 
   toggleClass() {
     this.dropdownList.classList.toggle('dropdown__content_visible');
     if (this.parentInput.contains(this.elementInput)) {
-      this.elementInput.classList.toggle('input__content_opened');
+      this.elementInput.classList.toggle('dropdown__input-content_opened');
     }
   }
 

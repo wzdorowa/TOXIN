@@ -35,6 +35,9 @@
 @import 'src/pages/landing/landing.scss';
 @import 'src/pages/demo/demo.scss';
 
+*{
+  box-sizing: border-box;
+}
 body {
   background-color: #fff;
   color: $DarkShade75;

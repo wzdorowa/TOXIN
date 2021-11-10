@@ -1,13 +1,8 @@
 .input {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  color: $DarkShade100;
   font-weight: bold;
   font-size: 12px;
-  line-height: 14.63px;
   text-transform: uppercase;
-  color: $DarkShade100;
 
   &__description {
     padding-bottom: 5px;
@@ -18,7 +13,6 @@
   }
 
   &__title {
-
     &_hidden {
       display: none;
     }
@@ -31,58 +25,54 @@
   &__icon-arrow {
     &:hover {
       & + .input__content {
-        border: 1px solid $DarkShade50;
         line-height: 24px;
+        border: 1px solid $DarkShade50;
       }
     }
+
     &::before {
       position: absolute;
-      content: 'arrow_forward';
-      width: 44px;
-      height: 44px;
+      top: 0;
       right: 0;
-      top: 0px;
-      font-family: 'Material Icons', Arial, sans-serif;
-      font-size: 22px;
-      line-height: 22px;
       display: flex;
       align-items: center;
       justify-content: space-around;
-      text-transform: initial;
+      width: 44px;
+      height: 44px;
       color: $Purple;
+      font-size: 22px;
+      font-family: 'Material Icons', Arial, sans-serif;
+      line-height: 22px;
+      text-transform: initial;
       cursor: pointer;
+      content: 'arrow_forward';
     }
   }
 
   &__content {
-    min-height: 43px;
     width: 100%;
-    background: #fff;
-    border: 1px solid $DarkShade25;
-    box-sizing: border-box;
-    line-height: 18px;
-    color: $DarkShade100;
-    padding-left: 12px;
+    min-height: 43px;
     padding-right: 40px;
+    padding-left: 12px;
+    color: $DarkShade100;
+    border: 1px solid $DarkShade25;
     border-radius: 4px;
 
-    &_opened {
+    &:hover,
+    :focus {
+      color: $DarkShade75;
       border: 1px solid $DarkShade50;
+      outline-style: none;
     }
 
-    &:hover, :focus {
-      outline-style: none;
-      border: 1px solid $DarkShade50;
-      line-height: 24px;
-    }
     &:focus-visible {
       outline: none;
     }
 
     &::placeholder {
-      line-height: 18px;
       color: $DarkShade25;
+      font-size: 14px;
+      line-height: 18px;
     }
-
   }
 }
