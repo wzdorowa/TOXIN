@@ -3,17 +3,9 @@ mixin login({text = 'Form name'} = {})
     span.login__title= text
     .login__login-details
       .login__input-item
-        +input({
-          placeholder: 'Email',
-          type: 'email',
-          isTitleHidden: true,
-        })
+        input.login__input(type='email', placeholder='Email')
       .login__input-item
-        +input({
-          placeholder: 'Пароль',
-          type: 'password',
-          isTitleHidden: true,
-        })
+        input.login__input(type='password', placeholder='Пароль')
     .login__check-in-details
       .login__check-in-button
         +button({text: 'Войти', decor: 'background', hasArrow: 'arrow', height: 'large', href: '../../pages/landing/landing.pug'})

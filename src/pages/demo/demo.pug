@@ -1,6 +1,5 @@
 extends ../base.pug
 
-include ../../elements/input/input.pug
 include ../../elements/checkbox-button/checkbox-button.pug
 include ../../elements/radio-button/radio-button.pug
 include ../../elements/toggle/toggle.pug
@@ -36,10 +35,9 @@ block content
       .components__wrapper
         .components__inputs
             .components__inputs-item
-                +input({
-                  title: 'Text field',
-                  placeholder: 'Email'
-                })
+              span.components__input-title= 'Text field'
+              .components__input-container
+                input.components__input(type='email', placeholder='Email')
             .components__inputs-item
               - const dataForDropdownFirst = [{subjectOfCalculation: 'Взрослые', count: '0'}, {subjectOfCalculation: 'Дети', count: '0'}, {subjectOfCalculation: 'Младенцы', count: '0'}]
                 +dropdown({
@@ -50,11 +48,9 @@ block content
                   dropdownRows: dataForDropdownFirst
                 })
             .components__inputs-item
-                +input({
-                  title: 'Masked text field',
-                  placeholder: 'ДД.ММ.ГГГГ',
-                  hasInputMask: true
-                })
+              span.components__input-title= 'Masked text field'
+              .components__input-container
+                input.components__input(type='date', placeholder='ДД.ММ.ГГГГ')
             .components__inputs-item
                 - const dateDropdownLabels = ['Date dropdown', 'Date dropdown']
                 +date-dropdown({
@@ -72,12 +68,9 @@ block content
                   amountField: 'with-one-input',
                 })
             .components__inputs-item.components__inputs-item_width_medium.components__inputs-item_type_email
-                    +input({
-                      title: 'Subscription text field',
-                      placeholder: 'Email',
-                      type: 'email',
-                      hasArrow: 'arrow'
-                    })
+              span.components__input-title-email= 'Subscription text field'
+              .components__input-container
+                input.components__input(type='email', placeholder='Email')
         .components__elements.components__elements_column_first
             .components__checkbox-buttons
                 h1.buttons-title Chechbox buttons

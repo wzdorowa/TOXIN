@@ -6,37 +6,22 @@ mixin form-check-in({text = 'Form name'} = {})
     span.form-check-in__title= text
     .form-check-in__user-data
       .form-check-in__group-inputs
-          +input({
-            placeholder: 'Имя',
-            isTitleHidden: true,
-          })
-          +input({
-            placeholder: 'Фамилия',
-            isTitleHidden: true,
-          })
+        input.form-check-in__input(type='text', placeholder='Имя')
+        input.form-check-in__input(type='text', placeholder='Фамилия')
       .form-check-in__buttons
         +radio-button({text: 'Мужчина', checked: 'checked', name: 'gender-for-form-check-in'})
         +radio-button({text: 'Женщина', name: 'gender-for-form-check-in'})
-    .form-check-in__input
+    .form-check-in__date-of-birth
+      span.form-check-in__input-title= 'Дата рождения'
       .form-check-in__input-container
-        +input({
-          title: 'Дата рождения',
-          placeholder: 'ДД.ММ.ГГГГ',
-          hasInputMask: true
-        })
+        input.form-check-in__input(type='date', placeholder='ДД.ММ.ГГГГ')
     .form-check-in__login-details
       .form-check-in__group-inputs-login
+        span.form-check-in__input-title= 'Данные для входа в сервис'
         .form-check-in__input-container
-          +input({
-            title: 'Данные для входа в сервис',
-            placeholder: 'email',
-            type: 'Email',
-          })
+          input.form-check-in__input(type='email', placeholder='Email')
         .form-check-in__input-container
-          +input({
-            placeholder: 'Пароль',
-            type: 'password',
-          })
+          input.form-check-in__input(type='password', placeholder='Пароль')
       .form-check-in__toggle
         +toggle({text: 'Получать спецпредложения'})
     .form-check-in__check-in-details

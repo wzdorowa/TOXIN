@@ -18,8 +18,6 @@ mixin footer()
       .footer__subscribe
         span.footer__subscribe-title Подписка
         span.footer__subscribe-description Получайте специальные предложения и новости сервиса
-        +input({
-          placeholder: 'Email',
-          type: 'email',
-          hasArrow: true
-        })
+        .footer__subscribe-input-wrapper
+          span.footer__subscribe-input-title
+          input.footer__subscribe-input.js-footer__subscribe-input(type='email', placeholder='Email')

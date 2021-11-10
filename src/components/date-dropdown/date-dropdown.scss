@@ -46,6 +46,7 @@
 
   &__input-content {
     @include input;
+    width: 100%;
     cursor: pointer;
 
     &:hover,

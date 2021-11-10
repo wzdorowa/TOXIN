@@ -1,7 +1,0 @@
-mixin input({title, placeholder = 'Введите значение', type = 'text', hasArrow = false, isTitleHidden = false, hasInputMask = false})
-  .input(class=`${hasInputMask ? 'input_with-input-mask js-input_with-input-mask' : ''}`)
-    span(class=`input__title ${isTitleHidden ? 'input__title_hidden' : ''}`)= title
-    .input__wrapper
-      span(class=`${hasArrow ? 'input__icon-arrow js-input__icon-arrow' : ''}`)
-      input.input__content.js-input__content(type= type, name='input-content', placeholder= placeholder)
-      

@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .form-check-in {
   position: relative;
   z-index: 2;
@@ -7,7 +9,7 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
   }
 
@@ -42,6 +44,11 @@
     }
   }
 
+  &__input {
+    @include input;
+    width: 100%;
+  }
+
   &__buttons {
     display: flex;
     justify-content: space-between;
@@ -50,32 +57,39 @@
     padding-top: 3px;
   }
 
-  &__input {
+  &__date-of-birth {
     position: relative;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-content: space-between;
+    justify-content: space-between;
+    width: 100%;
     margin-top: 22px;
+  }
 
-    &-container {
-      width: 100%;
-    }
+  &__input-title {
+    color: $DarkShade100;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__input-container {
+    width: 100%;
   }
 
   &__datepicker {
     display: none;
     width: 320px;
     min-height: 369px;
-    background: #fff;
-    border: 1px solid $DarkShade25;
-    box-shadow: 0px 10px 20px $DarkShade05;
-    border-radius: 4px;
-    padding: 10px;
-    padding-top: 10px;
     margin-top: 5.5px;
     margin-bottom: 5px;
+    padding: 10px;
+    padding-top: 10px;
+    background: #fff;
+    border: 1px solid $DarkShade25;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px $DarkShade05;
 
     &_visible {
       display: block;
@@ -84,22 +98,22 @@
 
   &__text {
     display: inline-block;
+    align-items: center;
     line-height: 25px;
     text-align: center;
-    align-items: center;
-    @media(min-width: 400px) {
+
+    @media (min-width: 400px) {
       line-height: 39px;
       text-align: left;
-    } 
+    }
   }
 
   &__check-in {
-
     &-details {
-      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      width: 100%;
       min-height: 117px;
       margin-top: 22px;
     }
