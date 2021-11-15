@@ -73,15 +73,8 @@ block content
               dropdownRows: dataForDropdownSecond
             })
           .search-room__filter-options
-            +checkbox-list({text: 'Дополнительные удобства'})
-              +checkbox-button({value: 'Завтрак'})
-              +checkbox-button({value: 'Письменный стол', checked: 'checked'})
-              +checkbox-button({value: 'Стул для кормления', checked: 'checked'})
-              +checkbox-button({value: 'Кроватка', checked: 'checked'})
-              +checkbox-button({value: 'Телевизор'})
-              +checkbox-button({value: 'Шампунь'})
-              +checkbox-button({value: 'Телевизор'})
-              +checkbox-button({value: 'Шампунь'})
+            - const checkboxList = [{value: 'Завтрак'}, {value: 'Письменный стол', checked: 'checked'}, {value: 'Стул для кормления', checked: 'checked'}, {value: 'Кроватка', checked: 'checked'}, {value: 'Телевизор'}, {value: 'Шампунь'}, {value: 'Телевизор'}, {value: 'Шампунь'}]
+            +checkbox-list({text: 'Дополнительные удобства', checkboxList})
         .search-room__result
           h1.search-room__result-title Номера, которые мы для вас подобрали
           .search-room__result-cards-numbers

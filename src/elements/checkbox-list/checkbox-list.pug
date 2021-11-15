@@ -1,8 +1,9 @@
-mixin checkbox-list({text = 'Text'} = {})
+mixin checkbox-list({text = 'Text', checkboxList} = {})
   .checkbox-list.js-checkbox-list
     .checkbox-list__title.js-checkbox-list__title
       span.checkbox-list__description= text
       span.checkbox-list__indicator.js-checkbox-list__indicator
     .checkbox-list__container(class='checkbox-list__container_hidden js-checkbox-list__container_hidden')
       .checkbox-list__content
-        block
+        each checkbox in checkboxList
+          +checkbox-button({value: checkbox.value, checked: checkbox.checked})
