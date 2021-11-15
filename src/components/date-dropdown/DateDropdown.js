@@ -110,6 +110,11 @@ class DateDropdown {
       this.removeClass();
       if (this.dates.length === 1) {
         this.clearValues();
+        if (
+          !this.buttonClear.classList.contains('.calendar__button-clear_hidden')
+        ) {
+          this.buttonClear.classList.add('calendar__button-clear_hidden');
+        }
       }
     }
   }
@@ -166,6 +171,8 @@ class DateDropdown {
               string = fd;
             });
             input.value = string;
+
+            this.buttonClear.classList.remove('calendar__button-clear_hidden');
           }
         },
       });
