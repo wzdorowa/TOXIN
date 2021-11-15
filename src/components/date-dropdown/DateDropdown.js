@@ -28,10 +28,10 @@ class DateDropdown {
       '.js-date-dropdown__input-arrow-down',
     );
     this.buttonApply = this.datepickerGroup.querySelector(
-      '.js-calendar__buttons-container_with-button-apply',
+      '.js-calendar__button-apply',
     );
     this.buttonClear = this.datepickerGroup.querySelector(
-      '.js-calendar__buttons-container_with-button-clear',
+      '.js-calendar__button-clear',
     );
     this.calendar = this.datepickerGroup.querySelector('.js-datepicker-here');
     this.inputs = this.datepickerGroup.querySelectorAll(
@@ -97,6 +97,11 @@ class DateDropdown {
   }
 
   handleButtonsContainerForClearClick() {
+    if (
+      !this.buttonClear.classList.contains('.calendar__button-clear_hidden')
+    ) {
+      this.buttonClear.classList.add('calendar__button-clear_hidden');
+    }
     this.clearValues();
   }
 
@@ -189,6 +194,8 @@ class DateDropdown {
           });
           inputs[0].value = dayFrom;
           inputs[1].value = dayTo;
+
+          this.buttonClear.classList.remove('calendar__button-clear_hidden');
         },
       });
     }

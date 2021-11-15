@@ -1,17 +1,17 @@
 @import '../../pages/variables.scss';
 
 @mixin range {
-  content: '';
-  display: block;
   position: absolute;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
   width: 100%;
   height: 100%;
   background: $PrimaryGradient;
   opacity: 0.25;
+  content: '';
 }
 
 .calendar {
@@ -22,26 +22,39 @@
   &__buttons {
     display: flex;
     justify-content: space-between;
+    margin-right: 10px;
     margin-left: 10px;
-    margin-right: 10px; 
+  }
+
+  &__button-clear,
+  &__button-apply {
+    cursor: pointer;
+
+    &_hidden {
+      visibility: hidden;
+    }
   }
 }
+
 .datepicker-inline .datepicker {
   width: 100%;
   min-height: 302px;
+
   @include fontMontserrat;
   color: $DarkShade50;
   border: none;
 
-  &.-selected-.datepicker--cell-day.-other-month-, .-selected-.datepicker--cell-year.-other-decade- {
+  &.-selected-.datepicker--cell-day.-other-month-,
+  .-selected-.datepicker--cell-year.-other-decade- {
     background: $PrimaryGradient;
   }
+
   &--nav {
     @include fontMontserrat;
+    color: $DarkShade100;
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
-    color: $DarkShade100;
     border: none;
 
     &-title {
@@ -50,7 +63,7 @@
       }
 
       &:hover {
-        background: $PrimaryGradient25
+        background: $PrimaryGradient25;
       }
     }
 
@@ -58,7 +71,7 @@
       position: relative;
 
       &:hover {
-        background: $PrimaryGradient25
+        background: $PrimaryGradient25;
       }
 
       path {
@@ -67,16 +80,18 @@
 
       &[data-action='prev']::before {
         position: absolute;
-        content: 'arrow_back';
-        @include fontMaterialIcons;
         color: $Purple;
+        content: 'arrow_back';
+
+        @include fontMaterialIcons;
       }
 
       &[data-action='next']::before {
         position: absolute;
-        content: 'arrow_forward';
-        @include fontMaterialIcons;
         color: $Purple;
+        content: 'arrow_forward';
+
+        @include fontMaterialIcons;
       }
     }
   }
@@ -93,10 +108,10 @@
     @include fontMontserrat;
     display: flex;
     align-items: center;
-    text-align: center;
-    text-transform: none;
     min-height: 42px;
     color: $Purple;
+    text-align: center;
+    text-transform: none;
   }
 
   &--cell-day {
@@ -112,14 +127,15 @@
         background: $PrimaryGradient;
       }
     }
+
     &.-current-.-in-range- {
-      border-radius: 0;
       color: #fff;
+      border-radius: 0;
     }
 
     &.-range-from- {
+      background: $PrimaryGradient25;
       border: none;
-      background: $PrimaryGradient25 ;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
 
@@ -127,16 +143,18 @@
         @include range;
         border-radius: 50% 0 0 50%;
       }
+
       &.-selected- {
-        &.-other-month-, .-selected- .-other-decade- {
+        &.-other-month-,
+        .-selected- .-other-decade- {
           background: $PrimaryGradient;
         }
       }
     }
 
     &.-range-to- {
-      border: none;
       background: $PrimaryGradient25;
+      border: none;
 
       &::before {
         @include range;
@@ -146,8 +164,10 @@
       &.-focus- {
         border-radius: 50%;
       }
+
       &.-selected- {
-        &.-other-month-, .-selected- .-other-decade- {
+        &.-other-month-,
+        .-selected- .-other-decade- {
           background: $PrimaryGradient;
         }
       }
@@ -160,9 +180,9 @@
 
     &.-selected- {
       position: relative;
+      font-weight: bold;
       background: $PrimaryGradient;
       border-radius: 20px;
-      font-weight: bold;
 
       &.-focus- {
         background: $PrimaryGradient;
@@ -171,17 +191,17 @@
     }
 
     &.-in-range- {
-      background: $PrimaryGradient25;
       color: $DarkShade50;
+      background: $PrimaryGradient25;
 
-      &.-other-month-, .-other-decade- {
-        background: $PrimaryGradient25;
+      &.-other-month-,
+      &.-other-decade- {
         color: $DarkShade50;
+        background: $PrimaryGradient25;
       }
 
       &.-focus- {
         border-radius: 0;
-
       }
     }
   }
