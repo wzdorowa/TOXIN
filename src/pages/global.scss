@@ -27,7 +27,7 @@
 @import 'src/elements/toggle/toggle.scss';
 @import 'src/elements/radio-button/radio-button.scss';
 @import 'src/elements/checkbox-button/checkbox-button.scss';
-@import 'src/elements/input/input.scss';
+@import 'src/elements/input-date/input-date.scss';
 @import 'src/pages/sign-in/sign-in.scss';
 @import 'src/pages/registration/registration.scss';
 @import 'src/pages/room-details/room-details.scss';
@@ -35,12 +35,13 @@
 @import 'src/pages/landing/landing.scss';
 @import 'src/pages/demo/demo.scss';
 
-*{
+* {
   box-sizing: border-box;
 }
+
 body {
-  background-color: #fff;
   color: $DarkShade75;
   font-size: 14px;
   font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #fff;
 }

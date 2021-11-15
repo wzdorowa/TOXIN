@@ -1,3 +1,4 @@
+include ../../elements/input-date/input-date.pug
 include ../../elements/radio-button/radio-button.pug
 include ../../elements/toggle/toggle.pug
 
@@ -14,7 +15,7 @@ mixin form-check-in({text = 'Form name'} = {})
     .form-check-in__date-of-birth
       span.form-check-in__input-title= 'Дата рождения'
       .form-check-in__input-container
-        input.form-check-in__input(type='date', placeholder='ДД.ММ.ГГГГ')
+        +input-date()
     .form-check-in__login-details
       .form-check-in__group-inputs-login
         span.form-check-in__input-title= 'Данные для входа в сервис'
