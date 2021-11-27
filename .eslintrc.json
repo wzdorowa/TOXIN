@@ -20,7 +20,8 @@
   "import/first": "off",
   "import/order": "off",
   "no-new": "off",
-  "no-shadow": "off"
+  "no-shadow": "off",
+  "no-underscore-dangle": "off"
 },
 "globals": {
   "$": true,

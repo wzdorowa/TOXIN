@@ -1,13 +1,53 @@
+@mixin link() {
+  color: $DarkShade50;
+  font-size: 12.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  @media (min-width: 720px) {
+    font-size: 14px;
+    text-transform: none;
+  }
+}
+
+@mixin itemMenu() {
+  position: relative;
+  display: block;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  @media (max-width: 720px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 18px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.5);
+  }
+}
+
+@mixin icon() {
+  position: relative;
+  width: 38px;
+  min-height: 38px;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    color: $Purple;
+    font: 38px 'Material Icons', Arial, sans-serif;
+  }
+}
+
 .header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding-top: 15px;
-  @media (min-width: 610px) {
-    padding-top: 8px;
-  }
-  @media (min-width: 910px) {
+
+  @media (min-width: 930px) {
     min-height: 70px;
     padding-top: 0;
   }
@@ -16,189 +56,202 @@
     display: flex;
     align-items: center;
     width: 100%;
-    @media (min-width: 610px) {
+
+    @media (min-width: 720px) {
       width: 30%;
     }
-    @media (min-width: 910px) {
+
+    @media (min-width: 930px) {
       width: 106px;
     }
   }
 
   &__logo {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     width: 105px;
+
     @media (min-width: 1055px) {
       justify-content: flex-start;
     }
   }
 
-  &__user-icon{
-    position: relative;
-    width: 38px;
-    min-height: 38px;
-    margin-left: auto;
-    margin-right: 10px;
-    cursor: pointer;
-    @media (min-width: 910px) {
-      display: none;
-    }
+  &__user-icon {
+    @include icon();
+    margin: 0 10px 0 auto;
 
     &::before {
-      position: absolute;
       content: 'account_circle';
-      right: 0px;
-      font-family: 'Material Icons', Arial, sans-serif;
-      font-size: 38px;
-      line-height: 38px;
-      text-transform: initial;
-      color: $Purple;
+    }
+
+    @media (min-width: 930px) {
+      display: none;
+    }
+  }
+
+  &__navigation-icon {
+    @include icon();
+
+    &::before {
+      content: 'reorder';
+    }
+
+    @media (min-width: 720px) {
+      display: none;
     }
   }
 
   &__navigation {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
-    list-style: none;
-    display: none;
+    width: 100%;
     min-width: 300px;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-    @media (min-width: 610px) {
+    margin: 0;
+    padding: 10px 0 0 0;
+
+    @media (min-width: 720px) {
       display: flex;
       flex-direction: row;
+      justify-content: flex-end;
       width: 65%;
-      margin-left: auto;
       margin-right: 0;
-      padding-right: 15px;
+      margin-left: auto;
+      padding: 0 10px 0 0;
     }
-    @media (min-width: 910px) {
-      width: 446px;
-    }
-    @media (min-width: 1055px) {
-      display: flex;
-      flex-direction: row;
+
+    @media (min-width: 930px) {
       width: 465px;
-      padding-right: 27px;
     }
 
-    &-icon{
-      position: relative;
-      width: 38px;
-      min-height: 38px;
-      cursor: pointer;
-      @media (min-width: 610px) {
-        display: none;
-      }
-      @media (min-width: 1055px) {
-        display: none;
-      }
-
-      &::before {
-        position: absolute;
-        content: 'reorder';
-        right: 0px;
-        font-family: 'Material Icons', Arial, sans-serif;
-        font-size: 38px;
-        line-height: 38px;
-        text-transform: initial;
-        color: $Purple;
-      }
-
-      &_visible {
-        display: flex;
-      }
+    &_visible {
+      display: flex;
     }
   }
 
   &__item {
+    @include itemMenu();
+    margin-right: 10px;
+  }
+
+  &__item:first-child {
+    margin-left: 0;
+
+    @media (max-width: 720px) {
+      border-top: 1px solid rgba(31, 32, 65, 0.5);
+    }
+  }
+
+  &__title-submenu {
+    @include itemMenu();
+    flex-direction: column;
+    padding-right: 25px;
+
+    @media (max-width: 720px) {
+      padding: 0;
+    }
+  }
+
+  &__text-title {
+    @include link();
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+    cursor: pointer;
 
-    &_with-drop-down {
-      @media (min-width: 610px) {
-        padding-right: 20px;
-      }
+    @media (max-width: 720px) {
+      padding: 10px 18px;
+    }
 
-      & .header__link::before {
-        position: absolute;
-        content: 'keyboard_arrow_down';
-        font-family: 'Material Icons', Arial, sans-serif;
-        font-size: 24px;
-        line-height: 20px;
-        top: 5px;
-        right: 50px;
-        text-transform: initial;
-        @media (min-width: 610px) {
-          top: 7px;
-          right: -5px;
-        }
+    &::before {
+      position: absolute;
+      top: 2px;
+      right: -25px;
+      font: normal 24px/17px 'Material Icons', sans-serif;
+      content: '\e5cf';
+
+      @media (max-width: 720px) {
+        top: 10px;
+        right: -15px;
       }
     }
+  }
+
+  &__submenu {
+    position: absolute;
+    top: 30px;
+    left: -20px;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 3px;
+
+    @media (max-width: 720px) {
+      position: static;
+      min-width: 100%;
+    }
+
+    &_active {
+      display: flex;
+    }
+  }
+
+  &__submenu-item {
+    display: flex;
+    justify-content: center;
+    padding: 5px 18px;
+    border: none;
+
+    @media (max-width: 720px) {
+      width: 100%;
+      padding: 10px 18px;
+      border-bottom: 1px dashed $DarkShade50;
+    }
+  }
+
+  &__submenu-item:first-child {
+    @media (max-width: 720px) {
+      border-top: 1px solid $DarkShade50;
+      border-bottom: 1px dashed $DarkShade50;
+    }
+  }
+
+  &__submenu-item:last-child {
+    border: none;
   }
 
   &__link {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    font-size: 12.8px;
-    text-transform: uppercase;
-    color: $DarkShade50;
-    margin: 0;
-    padding: 0px;
-    @media (min-width: 610px) {
-      font-size: 14px;
-      text-transform: none;
-    }
+    @include link();
   }
 
   &__user {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 303px;
-    min-height: 70px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: auto;
-    margin-left: auto;
     z-index: 1;
     display: none;
-    @media (min-width: 910px) {
+    align-items: center;
+    justify-content: space-between;
+    min-width: 303px;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+
+    @media (min-width: 930px) {
       display: flex;
       margin-right: 0;
       margin-left: 0;
     }
 
-    &-button {
-
-      &-login {
-        width: 87px;
-        min-height: 34px;
-        text-decoration: none;
-      }
-
-      &-registration {
-        width: 196px;
-        min-height: 34px;
-        text-decoration: none;
-        padding-right: 10px;
-        @media(min-width: 1160px) {
-          padding-right: 0;
-        }
-      }
-    }
-
-    &-icon_visible {
+    &_visible {
       display: flex;
     }
+  }
+
+  &__user-button-login {
+    width: 87px;
+  }
+
+  &__user-button-registration {
+    width: 196px;
   }
 }
