@@ -1,68 +1,81 @@
 body {
   margin: 0;
 }
+
 .landing {
   &__wrapper {
     background-image: url('../../src/pages/landing/image/image-3.png');
     background-repeat: no-repeat;
     background-position: top;
-  
+
     @media (width: 280px) {
       min-height: 1850px;
     }
+
     @media (width: 320px) {
       min-height: 1680px;
     }
+
     @media (width: 360px) {
       min-height: 1780px;
     }
+
     @media (width: 375px) {
       min-height: 2000px;
     }
+
     @media (width: 411px) {
       min-height: 1950px;
     }
+
     @media (width: 414px) {
       min-height: 1930px;
     }
+
     @media (width: 540px) {
       min-height: 1820px;
     }
+
     @media (width: 768px) {
       min-height: 2120px;
     }
+
     @media (width: 1024px) {
       min-height: 2450px;
     }
   }
 
   &__header {
-    background-color: #fff;
-    box-shadow: 0px 10px 20px $DarkShade05;
     min-width: 280px;
     min-height: 70px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+    box-shadow: $primaryShadow;
+
     @media (min-width: 720px) {
       min-width: 720px;
     }
+
     @media (min-width: 1160px) {
       min-width: 1160px;
     }
 
     &-container {
-      margin-left: 10px;
-      margin-right: 10px;
       min-width: 280px;
+      margin-right: 10px;
+      margin-left: 10px;
+
       @media (min-width: 720px) {
         min-width: 720px;
       }
+
       @media (min-width: 1200px) {
-        margin-left: auto;
-        margin-right: auto;
+        flex-direction: row;
         max-width: 1160px;
         min-height: 64px;
-        flex-direction: row;
+        margin-right: auto;
+        margin-left: auto;
       }
     }
   }
@@ -71,93 +84,104 @@ body {
     min-width: 280px;
     max-width: 1440px;
     min-height: 765px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 
   &__content {
     position: relative;
+    z-index: 1;
     min-width: 280px;
     max-width: 1160px;
     min-height: 765px;
-    padding-top: 70px;
-    z-index: 1;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    padding-top: 70px;
   }
 
   &__form-search-room {
     width: 280px;
     min-height: 375px;
     padding-top: 40px;
-    padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 30px;
+    padding-left: 5px;
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid $borderColor;
     border-radius: 4px;
-    @media(min-width: 300px) {
+    box-shadow: $cardShadow;
+
+    @media (min-width: 300px) {
       width: 300px;
-      padding-left: 15px;
-      padding-right: 15px;
+      margin-right: auto;
       margin-left: auto;
-      margin-right: auto;
+      padding-right: 15px;
+      padding-left: 15px;
     }
-    @media(min-width: 480px) {
+
+    @media (min-width: 480px) {
       width: 380px;
-      padding-left: 30px;
-      padding-right: 30px;
-      margin-left: 8%;
       margin-right: auto;
+      margin-left: 8%;
+      padding-right: 30px;
+      padding-left: 30px;
     }
-    @media(min-width: 1160px) {
-      margin-left: 7.5%;
+
+    @media (min-width: 1160px) {
       margin-right: 0;
+      margin-left: 7.5%;
     }
-    @media(min-width: 1180px) {
+
+    @media (min-width: 1180px) {
       margin-left: 7%;
     }
-    @media(min-width: 1200px) {
+
+    @media (min-width: 1200px) {
       margin-left: 6%;
     }
-    @media(min-width: 1220px) {
+
+    @media (min-width: 1220px) {
       margin-left: 4%;
     }
-    @media(min-width: 1240px) {
+
+    @media (min-width: 1240px) {
       margin-left: 2%;
     }
-    @media(min-width: 1260px) {
+
+    @media (min-width: 1260px) {
       margin-left: 0;
     }
   }
 
   &__text {
     position: absolute;
-    width: 280px;
     right: 5px;
     bottom: -45px;
+    width: 280px;
+    margin: 0;
     font-family: 'Montserrat', Arial, sans-serif;
     line-height: 24px;
     text-align: right;
-    margin: 0;
-    @media(min-width: 320px) {
-      margin-right: 20px;
+
+    @media (min-width: 320px) {
       right: -5px;
+      margin-right: 20px;
     }
-    @media(min-width: 1160px) {
-      margin-right: 0px;
-      
+
+    @media (min-width: 1160px) {
+      margin-right: 0;
     }
   }
 
   &__footer {
     margin-top: 65px;
-    @media(min-width: 768px) {
+
+    @media (min-width: 768px) {
       padding-top: 30px;
       padding-bottom: 30px;
     }
-    @media(min-width: 1160px) {
+
+    @media (min-width: 1160px) {
       padding-top: 60px;
       padding-bottom: 20px;
     }

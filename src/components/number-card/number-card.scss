@@ -1,64 +1,61 @@
 .number-card {
   position: relative;
   background: #fff;
-  box-shadow: 0px 10px 20px $DarkShade05;
   border-radius: 4px;
+  box-shadow: $primaryShadow;
 
   &__slider {
     position: relative;
     width: 100%;
 
     &:hover {
-
       & .number-card__prev {
-
         &::after {
           position: absolute;
-          content: 'keyboard_arrow_left';
           top: 60px;
           left: 5px;
-          font-family: 'Material Icons', Arial, sans-serif;
-          font-size: 24px;
-          line-height: 24px;
           color: #fff;
+          font-size: 24px;
+          font-family: 'Material Icons', Arial, sans-serif;
+          line-height: 24px;
           cursor: pointer;
+          content: 'keyboard_arrow_left';
         }
 
         &::before {
           position: absolute;
-          content: '';
           top: 0;
           width: 42px;
           height: 152px;
           background-image: $BlackTransparent;
           border-top-left-radius: 4px;
+          content: '';
         }
       }
 
       & .number-card__next {
-
         &::after {
           position: absolute;
-          content: 'keyboard_arrow_right';
           top: 60px;
           right: 5px;
-          font-family: 'Material Icons', Arial, sans-serif;
-          font-size: 24px;
-          line-height: 24px;
           color: #fff;
+          font-size: 24px;
+          font-family: 'Material Icons', Arial, sans-serif;
+          line-height: 24px;
           cursor: pointer;
+          content: 'keyboard_arrow_right';
         }
 
         &::before {
           position: absolute;
-          content: '';
-          width: 42px;
-          height: 152px;
           top: 0;
           right: 0;
+          width: 42px;
+          height: 152px;
           background-image: $BlackTransparent;
-          transform: matrix(-1, 0, 0, 1, 0, 0);
           border-top-left-radius: 4px;
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+          content: '';
         }
       }
     }
@@ -96,19 +93,19 @@
     display: inline-block;
     width: 7px;
     min-height: 7px;
-    border-radius: 50%;
     margin-right: 3.3px;
+    border-radius: 50%;
     cursor: pointer;
 
     &::after {
-      display: block;
       position: absolute;
-      content: '';
-      border: 1px solid #fff;
-      box-shadow: 0px 5px 5px $DarkShade25;
+      display: block;
       width: 7px;
       height: 7px;
+      border: 1px solid #fff;
       border-radius: 50%;
+      box-shadow: $cardShadow;
+      content: '';
     }
 
     &-active {
@@ -125,11 +122,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding-left: 20px;
-    padding-right: 17px;
-    padding-top: 5px;
-    padding-bottom: 10px;
     min-height: 101px;
+    padding-top: 5px;
+    padding-right: 17px;
+    padding-bottom: 10px;
+    padding-left: 20px;
   }
 
   &__data {
@@ -137,43 +134,44 @@
     justify-content: space-between;
     width: 100%;
     padding-top: 5px;
-  
+
     &-border {
       border-bottom: solid 1px $DarkShade10;
     }
   }
+
   &__specification {
     text-decoration: none;
 
     &-group {
-      outline: none;
-      border: none;
       background-color: #fff;
+      border: none;
+      outline: none;
       cursor: pointer;
     }
   }
 
   &__sign-number {
+    padding-right: 5px;
+    color: $DarkShade100;
     font-weight: bold;
     line-height: 17px;
-    color: $DarkShade100;
-    padding-right: 5px;
   }
 
   &__number {
+    padding-right: 5px;
+    color: $DarkShade100;
     font-weight: bold;
     font-size: 20px;
     line-height: 17px;
-    color: $DarkShade100;
-    padding-right: 5px;
   }
 
   &__kind {
+    color: $Purple;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: $Purple;
   }
 
   &__cost {
@@ -181,15 +179,15 @@
     align-items: center;
 
     &-room {
+      padding-right: 5px;
+      color: $DarkShade50;
       font-weight: bold;
       line-height: 18px;
-      color: $DarkShade50;
-      padding-right: 5px;
 
       &-description {
+        color: $DarkShade50;
         font-size: 12px;
         line-height: 18px;
-        color: $DarkShade50;
       }
     }
   }
@@ -211,42 +209,44 @@
     align-items: center;
 
     &-reviews {
+      padding-right: 7px;
+      color: $DarkShade50;
       font-weight: bold;
       line-height: 20px;
-      color: $DarkShade50;
-      padding-right: 7px;
 
       &-description {
-        line-height: 20px;
         color: $DarkShade50;
+        line-height: 20px;
       }
     }
   }
 
   &__controls {
-    width: 16.5%;
     position: absolute;
+    top: 50%;
+    right: 12px;
     display: flex;
     justify-content: space-between;
-    right: 12px;
-    top: 50%;
+    width: 16.5%;
   }
 }
 
 @-webkit-keyframes fade {
   from {
-    opacity: .4
+    opacity: 0.4;
   }
+
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
 @keyframes fade {
   from {
-    opacity: .4
+    opacity: 0.4;
   }
+
   to {
-    opacity: 1
+    opacity: 1;
   }
 }

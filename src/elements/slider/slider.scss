@@ -1,12 +1,14 @@
+@import './variables.scss';
+
 .slider {
   & * {
     outline: none;
   }
 
-  &:after {
-    content: '';
-    clear: both;
+  &::after {
     display: table;
+    clear: both;
+    content: '';
   }
 
   &__description {
@@ -16,37 +18,37 @@
   }
 
   &__title {
+    margin: 0;
+    color: $DarkShade100;
     font-weight: bold;
     font-size: 12px;
     line-height: 14.63px;
     text-transform: uppercase;
-    color: $DarkShade100;
-    margin: 0;
   }
 
   & .ui-widget.ui-widget-content {
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid $DarkShade25;
     border-radius: 3px;
     cursor: pointer;
   }
 
   & .ui-slider {
     position: relative;
-    background: #fff;
     height: 6px;
-    border-radius:3px;
+    background: #fff;
     border: 1px solid $DarkShade25;
+    border-radius: 3px;
 
     & .ui-slider-handle {
       position: absolute;
       top: -6px;
+      z-index: 2;
       width: 16px;
       height: 16px;
-      cursor: pointer;
-      border-radius: 50%;
-      border: 2px solid #FFF;
       background: $SecondaryGradient;
-      z-index: 2;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      cursor: pointer;
       transition: transform 0.2s, border 0.4s;
     }
 
@@ -54,17 +56,17 @@
       position: absolute;
       z-index: 1;
       min-height: 5px;
-      border: 0;
-      background: $SecondaryGradient;
-      border-radius:3px;
       margin-top: -1px;
+      background: $SecondaryGradient;
+      border: 0;
+      border-radius: 3px;
     }
   }
 
   &__price {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     min-width: 107px;
   }
 
@@ -72,12 +74,12 @@
     display: flex;
 
     &-price {
+      max-width: 40px;
+      color: $DarkShade50;
       font-size: 12px;
       line-height: 14.63px;
-      text-transform: uppercase;
       text-align: right;
-      color: $DarkShade50;
-      max-width: 40px;
+      text-transform: uppercase;
       background: #fff;
       border: none;
     }
@@ -87,30 +89,30 @@
     display: flex;
 
     &-price {
+      max-width: 40px;
+      color: $DarkShade50;
       font-size: 12px;
       line-height: 14.63px;
-      text-transform: uppercase;
       text-align: right;
-      color: $DarkShade50;
-      max-width: 40px;
+      text-transform: uppercase;
       background: #fff;
       border: none;
     }
   }
 
   &__ruble-sign {
+    margin: 0;
+    padding: 0;
+    color: $DarkShade50;
     font-size: 11px;
     line-height: 15px;
-    color: $DarkShade50;
-    padding: 0;
-    margin: 0;
   }
 
   &__sign {
+    color: $DarkShade50;
     font-size: 12px;
     line-height: 15px;
-    text-transform: uppercase;
     text-align: right;
-    color: $DarkShade50;
+    text-transform: uppercase;
   }
 }

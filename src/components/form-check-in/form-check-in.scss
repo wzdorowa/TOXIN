@@ -89,7 +89,7 @@
     background: #fff;
     border: 1px solid $DarkShade25;
     border-radius: 4px;
-    box-shadow: 0 10px 20px $DarkShade05;
+    box-shadow: $primaryShadow;
 
     &_visible {
       display: block;

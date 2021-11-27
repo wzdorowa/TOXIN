@@ -11,46 +11,50 @@
   }
 
   &__specification-room {
+    color: $DarkShade100;
     font-weight: bold;
     line-height: 17px;
-    color: $DarkShade100;
   }
+
   &__sign-number {
-    line-height: 17,5px;
     padding-right: 3px;
+    line-height: 17, 5px;
   }
+
   &__number-room {
+    padding-right: 3px;
     font-size: 24px;
     line-height: 30px;
-    padding-right: 3px;
   }
+
   &__room-class {
-    font-size: 12px;
+    padding-left: 5px;
+    color: $Purple;
     font-weight: bold;
+    font-size: 12px;
     line-height: 15px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     text-transform: uppercase;
-    padding-left: 5px;
-
-    color: $Purple;
   }
 
   &__cost-per-day {
     padding-right: 3px;
+    color: $DarkShade50;
     font-size: 12px;
     line-height: 34px;
-    color: $DarkShade50;
   }
+
   &__room-cost {
-    font-weight: bold;
     padding-right: 3px;
+    font-weight: bold;
   }
+
   &__sign-rouble {
-    line-height: 7px;
-    width: 0.4em;
-    border-bottom: 1px solid; 
     display: inline-block;
+    width: 0.4em;
+    line-height: 7px;
+    border-bottom: 1px solid;
   }
 
   &__inputs-with-datepicker {
@@ -66,13 +70,13 @@
     display: none;
     width: 320px;
     min-height: 369px;
-    background: #fff;
-    border: 1px solid $DarkShade25;
-    box-shadow: 0px 10px 20px $DarkShade05;
-    border-radius: 4px;
+    margin-top: 5.5px;
     padding: 10px;
     padding-top: 10px;
-    margin-top: 5.5px;
+    background: #fff;
+    border: 1px solid $DarkShade25;
+    border-radius: 4px;
+    box-shadow: $primaryShadow;
 
     &_visible {
       display: block;
@@ -85,52 +89,51 @@
   }
 
   &__calculation {
-    width: 100%;
-    min-height: 110px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 28px;
+    width: 100%;
+    min-height: 110px;
     margin-top: 19px;
+    margin-bottom: 28px;
   }
+
   &__total {
     display: flex;
     justify-content: space-between;
-  
     width: 100%;
     min-height: 15px;
-  
-    list-style: none;
-    padding: 0;
     margin: 0;
     margin-bottom: 23.5px;
+    padding: 0;
     padding-right: 5px;
+    list-style: none;
 
     &-item {
+      color: $DarkShade100;
       font-weight: bold;
       font-size: 19px;
       line-height: 18px;
-      letter-spacing: 0em;
+      letter-spacing: 0;
       text-align: left;
-
-      color: $DarkShade100;
 
       &_with-border {
         width: 120px;
         min-height: 18px;
         border-bottom: 1px dotted $DarkShade25;
-        @media(min-width: 380px) {
+
+        @media (min-width: 380px) {
           width: 180px;
         }
       }
+
       &_with-cost {
+        color: $DarkShade100;
         font-weight: bold;
         font-size: 19px;
-        line-height: 23,75px;
-        letter-spacing: 0em;
+        line-height: 23, 75px;
+        letter-spacing: 0;
         text-align: left;
-
-        color: $DarkShade100;
       }
     }
   }

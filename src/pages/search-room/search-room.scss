@@ -1,63 +1,76 @@
 .search-room {
   &__wrapper {
-    margin-left: auto;
     margin-right: auto;
-    @media(width: 280px) {
+    margin-left: auto;
+
+    @media (width: 280px) {
       min-height: 4720px;
     }
-    @media(width: 320px) {
+
+    @media (width: 320px) {
       min-height: 4660px;
     }
-    @media(width: 360px) {
+
+    @media (width: 360px) {
       min-height: 4690px;
     }
-    @media(width: 375px) {
+
+    @media (width: 375px) {
       min-height: 4860px;
     }
-    @media(width: 411px) {
+
+    @media (width: 411px) {
       min-height: 4870px;
     }
-    @media(width: 414px) {
+
+    @media (width: 414px) {
       min-height: 4785px;
     }
-    @media(width: 540px) {
+
+    @media (width: 540px) {
       min-height: 2990px;
     }
-    @media(width: 768px) {
+
+    @media (width: 768px) {
       min-height: 3180px;
     }
-    @media(width: 1024px) {
+
+    @media (width: 1024px) {
       min-height: 3500px;
     }
   }
 
   &__header {
-    background-color: #fff;
-    box-shadow: 0px 10px 20px $DarkShade05;
     min-width: 280px;
     min-height: 70px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+    box-shadow: $primaryShadow;
+
     @media (min-width: 720px) {
       min-width: 720px;
     }
+
     @media (min-width: 1160px) {
       min-width: 1160px;
     }
 
     &-container {
-      margin-left: 10px;
-      margin-right: 10px;
       min-width: 280px;
+      margin-right: 10px;
+      margin-left: 10px;
+
       @media (min-width: 720px) {
         min-width: 720px;
       }
+
       @media (min-width: 1160px) {
-        margin-left: auto;
-        margin-right: auto;
+        flex-direction: row;
         max-width: 1160px;
         min-height: 64px;
-        flex-direction: row;
+        margin-right: auto;
+        margin-left: auto;
       }
     }
   }
@@ -66,32 +79,37 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     min-width: 280px;
-    padding-top: 30px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    padding-top: 30px;
+
     @media (min-width: 321px) {
       min-width: 321px;
     }
+
     @media (min-width: 480px) {
       min-width: 480px;
     }
+
     @media (min-width: 720px) {
       min-width: 720px;
     }
+
     @media (min-width: 1024px) {
-      min-width: 1024px;
       flex-direction: row;
       align-items: flex-start;
+      min-width: 1024px;
     }
+
     @media (min-width: 1136px) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
       min-width: 1136px;
       max-width: 1170px;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
     }
   }
 
@@ -101,28 +119,29 @@
     }
 
     &-title {
-      display: inline-block;
       position: relative;
-      font-weight: bold;
-      font-size: 15px;
-      line-height: 17px;
-      color: $DarkShade100;
+      display: inline-block;
       margin: 0;
       padding-right: 30px;
       padding-bottom: 30px;
-      @media(min-width: 320px){
+      color: $DarkShade100;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 17px;
+
+      @media (min-width: 320px) {
         font-size: 17px;
       }
 
       &::before {
         position: absolute;
-        content: 'filter_list';
-        font-family: 'Material Icons', Arial, sans-serif;
-        font-size: 20px;
-        line-height: 20px;
         top: -2px;
-        right: 0px;
+        right: 0;
+        font-size: 20px;
+        font-family: 'Material Icons', Arial, sans-serif;
+        line-height: 20px;
         text-transform: initial;
+        content: 'filter_list';
       }
     }
   }
@@ -134,20 +153,22 @@
     justify-content: space-between;
     min-width: 265px;
     padding-bottom: 30px;
+
     @media (min-width: 650px) {
-      min-width: 40%;
       flex-wrap: wrap;
       justify-content: flex-start;
+      min-width: 40%;
       margin-right: auto;
       margin-left: auto;
     }
+
     @media (min-width: 1024px) {
-      min-width: 265px;
       display: flex;
-      justify-content: space-between;
       flex-wrap: nowrap;
-      margin-left: 4px;
+      justify-content: space-between;
+      min-width: 265px;
       margin-top: 1px;
+      margin-left: 4px;
     }
 
     &-inputs {
@@ -168,35 +189,35 @@
 
       &-description {
         display: block;
-        font-size: 12px;
         color: $DarkShade50;
+        font-size: 12px;
       }
     }
 
     &-checkbox-buttons {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
+      justify-content: space-between;
       max-width: 230px;
       min-height: 133px;
       margin-top: 30px;
 
       &-title {
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: $DarkShade100;
         font-weight: bold;
         font-size: 12px;
         line-height: 14.63px;
         text-transform: uppercase;
-        color: $DarkShade100;
-        margin-bottom: 15px;
-        margin-top: 0;
       }
 
       &-group {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        min-height: 102px;
         width: 100%;
+        min-height: 102px;
       }
     }
 
@@ -209,21 +230,20 @@
       margin-top: 20px;
 
       &-wrapper {
-        min-height: 113px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        min-height: 113px;
       }
     }
 
-
     &-item-title {
+      margin-bottom: 5px;
+      color: $DarkShade100;
       font-weight: bold;
       font-size: 12px;
       line-height: 14.63px;
       text-transform: uppercase;
-      color: $DarkShade100;
-      margin-bottom: 5px;
     }
 
     &-dropdown {
@@ -231,68 +251,75 @@
     }
 
     &-options {
-      margin-top: 15px;
       min-width: 265px;
+      margin-top: 15px;
     }
   }
 
   &__result {
-    width: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
+
     @media (min-width: 1024px) {
-      margin-left: 1%;
       margin-right: 1%;
+      margin-left: 1%;
     }
+
     @media (min-width: 1136px) {
-      margin-left: 2%;
       margin-right: 2%;
+      margin-left: 2%;
     }
+
     @media (min-width: 1170px) {
-      margin-left: 5.25%;
       margin-right: 0.5%;
+      margin-left: 5.25%;
     }
 
     &-title {
+      width: 90%;
+      margin: 0;
+      margin-right: auto;
+      margin-bottom: 21px;
+      margin-left: auto;
+      color: $DarkShade100;
       font-weight: bold;
       font-size: 20px;
       line-height: 20px;
-      color: $DarkShade100;
-      margin: 0;
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 21px;
       text-align: center;
       text-align: left;
 
       @media (min-width: 321px) {
         text-align: center;
       }
+
       @media (min-width: 1024px) {
         width: 100%;
         font-size: 23.2px;
         line-height: 23.2px;
       }
+
       @media (min-width: 1097px) {
         width: 100%;
-        text-align: start;
         font-size: 24px;
         line-height: 30px;
+        text-align: start;
       }
     }
 
     &-cards-numbers {
-      width: 100%;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
       @media (min-width: 321px) {
         flex-direction: row;
         justify-content: space-around;
       }
+
       @media (min-width: 1136px) {
         justify-content: space-between;
       }
@@ -309,19 +336,21 @@
   &__card-number {
     width: 270px;
     min-height: 258px;
-    margin-bottom: 20px;
     margin-right: 7px;
+    margin-bottom: 20px;
+
     @media (min-width: 1170px) {
       margin-right: 0;
     }
   }
 
   &__footer {
-    background-color: #fff;
-    box-shadow: 0px 10px 20px $DarkShade05;
-    border-top: 1px solid $DarkShade25;
-    padding-top: 30px;
     margin-top: 35px;
+    padding-top: 30px;
+    background-color: #fff;
+    border-top: 1px solid $DarkShade25;
+    box-shadow: $primaryShadow;
+
     @media (min-width: 1160px) {
       margin-top: 67px;
       padding-top: 60px;

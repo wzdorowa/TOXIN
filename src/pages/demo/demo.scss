@@ -255,9 +255,9 @@
     padding-bottom: 30px;
     padding-left: 27px;
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid $borderColor;
     border-radius: 4px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    box-shadow: $cardShadow;
 
     @media (min-width: 480px) {
       width: 380px;
@@ -277,9 +277,9 @@
     padding-bottom: 30px;
     padding-left: 29px;
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid $borderColor;
     border-radius: 4px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    box-shadow: $cardShadow;
 
     @media (min-width: 400px) {
       width: 380px;
@@ -299,9 +299,9 @@
     padding-right: 7.9%;
     padding-left: 7.9%;
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid $borderColor;
     border-radius: 4px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    box-shadow: $cardShadow;
 
     @media (min-width: 400px) {
       margin-right: auto;
@@ -344,9 +344,9 @@
     padding-bottom: 33px;
     padding-left: 29px;
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid $borderColor;
     border-radius: 4px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    box-shadow: $cardShadow;
 
     @media (min-width: 400px) {
       width: 380px;
@@ -364,9 +364,9 @@
     padding-bottom: 33px;
     padding-left: 29px;
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid $borderColor;
     border-radius: 4px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    box-shadow: $cardShadow;
 
     @media (min-width: 400px) {
       width: 380px;
@@ -387,7 +387,7 @@
     margin-right: auto;
     margin-left: auto;
     background-color: #fff;
-    box-shadow: 0 10px 20px $DarkShade05;
+    box-shadow: $primaryShadow;
 
     @media (min-width: 720px) {
       min-width: 720px;
@@ -422,7 +422,7 @@
     padding-top: 30px;
     background-color: #fff;
     border-top: 1px solid $DarkShade25;
-    box-shadow: 0 10px 20px $DarkShade05;
+    box-shadow: $primaryShadow;
 
     @media (min-width: 1160px) {
       padding-top: 62px;
