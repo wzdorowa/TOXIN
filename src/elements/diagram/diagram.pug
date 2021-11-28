@@ -9,12 +9,12 @@ mixin diagram({impressions})
   -const satisfactorilyInPixels = calcLengthOfOneReview(satisfactorily);
   -const badInPixels = calcLengthOfOneReview(bad);
   -const stylesCircle = (amount) => {
-      -const classesArr = ['diagram__image-circle'];
+      -const classesArr = ['diagram__image-circle', 'js-diagram__image-circle'];
       -if (amount === 0) { classesArr.push('diagram__image-circle_hide'); }
       -return classesArr.join(' ');
   -};
   - console.log('data', sum, goodInPixels, amazingInPixels, satisfactorilyInPixels, badInPixels)
-  .diagram
+  .diagram.js-diagram
     .diagram__image
       svg(width="125" height="125" viewBox="0 0 125 125")
         linearGradient(id="yellow" x1="0" x2="0" y1="0" y2="1")
@@ -61,10 +61,10 @@ mixin diagram({impressions})
           stroke-dasharray=`${badInPixels - 2} ${CIRCLE_LENGTH}`,
           stroke-dashoffset=`${-(goodInPixels + amazingInPixels + satisfactorilyInPixels + 1)}`, data-votes=bad, data-total=sum, data-impression='bad')
       .diagram__text
-        p.diagram__number= sum
+        p.diagram__number.js-diagram__number= sum
         p.diagram__label= 'голосов'
     .diagram__list
-      li.diagram__item(class=`diagram__item_amazing`, data-impression='amazing')='Великолепно'
-      li.diagram__item(class=`diagram__item_good`, data-impression='good')='Хорошо'
-      li.diagram__item(class=`diagram__item_satisfactorily`, data-impression='satisfactorily')='Удовлетворительно'
-      li.diagram__item(class=`diagram__item_bad`, data-impression='bad')='Разочарован'
+      li.diagram__item.js-diagram__item(class=`diagram__item_amazing`, data-impression='amazing')='Великолепно'
+      li.diagram__item.js-diagram__item(class=`diagram__item_good`, data-impression='good')='Хорошо'
+      li.diagram__item.js-diagram__item(class=`diagram__item_satisfactorily`, data-impression='satisfactorily')='Удовлетворительно'
+      li.diagram__item.js-diagram__item(class=`diagram__item_bad`, data-impression='bad')='Разочарован'

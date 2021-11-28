@@ -7,8 +7,8 @@ class Diagram {
   }
 
   _findElement() {
-    this.segments = document.querySelectorAll('.diagram__image-circle');
-    this.votesValue = document.querySelector('.diagram__number');
+    this.segments = document.querySelectorAll('.js-diagram__image-circle');
+    this.votesValue = document.querySelector('.js-diagram__number');
   }
 
   _bindEventListeners() {
@@ -37,9 +37,9 @@ class Diagram {
   }
 }
 
-const diagram = document.querySelector('.diagram');
+const diagram = document.querySelector('.js-diagram');
 if (diagram !== null) {
-  const items = diagram.querySelectorAll('.diagram__item');
+  const items = diagram.querySelectorAll('.js-diagram__item');
   items.forEach(item => {
     new Diagram(item);
   });
