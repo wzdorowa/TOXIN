@@ -1,6 +1,5 @@
 mixin diagram({impressions})
   -const { amazing, good, satisfactorily, bad } = impressions;
-  -console.log(amazing, good, satisfactorily, bad);
   -const CIRCLE_LENGTH = 364.424672;
   -const sum = amazing + good + satisfactorily + bad;
   -const calcLengthOfOneReview = (number) => (CIRCLE_LENGTH * number) / sum;
@@ -13,7 +12,6 @@ mixin diagram({impressions})
       -if (amount === 0) { classesArr.push('diagram__image-circle_hide'); }
       -return classesArr.join(' ');
   -};
-  - console.log('data', sum, goodInPixels, amazingInPixels, satisfactorilyInPixels, badInPixels)
   .diagram.js-diagram
     .diagram__image
       svg(width="125" height="125" viewBox="0 0 125 125")
