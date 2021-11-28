@@ -1,20 +1,70 @@
-mixin diagram({totalOfVotes = '100', label = 'text', impressions, data})
+mixin diagram({impressions})
+  -const { amazing, good, satisfactorily, bad } = impressions;
+  -console.log(amazing, good, satisfactorily, bad);
+  -const CIRCLE_LENGTH = 364.424672;
+  -const sum = amazing + good + satisfactorily + bad;
+  -const calcLengthOfOneReview = (number) => (CIRCLE_LENGTH * number) / sum;
+  -const goodInPixels = calcLengthOfOneReview(good);
+  -const amazingInPixels = calcLengthOfOneReview(amazing);
+  -const satisfactorilyInPixels = calcLengthOfOneReview(satisfactorily);
+  -const badInPixels = calcLengthOfOneReview(bad);
+  -const stylesCircle = (amount) => {
+      -const classesArr = ['diagram__image-circle'];
+      -if (amount === 0) { classesArr.push('diagram__image-circle_hide'); }
+      -return classesArr.join(' ');
+  -};
+  - console.log('data', sum, goodInPixels, amazingInPixels, satisfactorilyInPixels, badInPixels)
   .diagram
     .diagram__image
-      svg(width='100%' height='100%' viewBox='0 0 33.8 33.8' class='donut')
-        circle(class='room-details__donut-hole' cx='50%' cy='50%' r='15.91549430918954' fill='#fff')
-        circle(class='room-details__donut-ring' cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke='#fff' stroke-width='1')
-        - let sumActiveSegment = 0;
-        - let dashoffset = 26;
-        each value, index in data
-          - const {votes, color, colorRGB} = value
-          - const segmentActive = (value.votes/totalOfVotes)*100 - 0.5;
-          - sumActiveSegment += segmentActive;
-          - const segmentPassive = 100 - segmentActive + 1.5;
-          circle.room-details__donut-segment(cx='50%' cy='50%' r='15.91549430918954' fill='transparent' stroke=colorRGB stroke-width='1' stroke-dasharray=`${segmentActive} ${segmentPassive}` stroke-dashoffset=`${dashoffset}` data-votes=votes data-total=totalOfVotes data-color=color)
-          - dashoffset = Math.ceil((100 - sumActiveSegment) + 25);
+      svg(width="125" height="125" viewBox="0 0 125 125")
+        linearGradient(id="yellow" x1="0" x2="0" y1="0" y2="1")
+          stop(offset="0%" stop-color="#FFE39C")
+          stop(offset="100%" stop-color="#FFBA9C")
+        linearGradient(id="green" x1="0" x2="0" y1="0" y2="1")
+          stop(offset="0%" stop-color="#6FCF97")
+          stop(offset="100%" stop-color="#66D2EA")
+        linearGradient(id="purple" x1="0" x2="0" y1="0" y2="1")
+          stop(offset="0%" stop-color="#BC9CFF")
+          stop(offset="100%" stop-color="#8BA4F9")
+        linearGradient(id="black" x1="0" x2="0" y1="0" y2="1")
+          stop(offset="0%" stop-color="#909090")
+          stop(offset="100%" stop-color="#3D4975")
+        circle(
+          class=`${stylesCircle(good)}`,
+          r="58", cx="50%", cy="50%",
+          stroke="url(#green)",
+          stroke-width="4",
+          stroke-dasharray=`${goodInPixels - 2} ${CIRCLE_LENGTH}`,
+          stroke-dashoffset="-1",
+          data-votes=good, data-total=sum, data-impression='good')
+        circle(
+          class=`${stylesCircle(amazing)}`,
+          r="58", cx="50%", cy="50%",
+          stroke="url(#yellow)",
+          stroke-width="4",
+          stroke-dasharray=`${amazingInPixels - 2} ${CIRCLE_LENGTH}`,
+          stroke-dashoffset=`${-(goodInPixels + 1)}`
+          data-votes=amazing, data-total=sum, data-impression='amazing')
+        circle(
+          class=`${stylesCircle(satisfactorily)}`,
+          r="58", cx="50%", cy="50%",
+          stroke="url(#purple)",
+          stroke-width="4",
+          stroke-dasharray=`${satisfactorilyInPixels - 2} ${CIRCLE_LENGTH}`,
+          stroke-dashoffset=`${-(goodInPixels + amazingInPixels + 1)}`,
+          data-votes=satisfactorily, data-total=sum, data-impression='satisfactorily')
+        circle(
+          class=`${stylesCircle(bad)}`,
+          r="58", cx="50%", cy="50%",
+          stroke="url(#black)",
+          stroke-width="4",
+          stroke-dasharray=`${badInPixels - 2} ${CIRCLE_LENGTH}`,
+          stroke-dashoffset=`${-(goodInPixels + amazingInPixels + satisfactorilyInPixels + 1)}`, data-votes=bad, data-total=sum, data-impression='bad')
       .diagram__text
-        p.diagram__number= totalOfVotes
-        p.diagram__label= label
+        p.diagram__number= sum
+        p.diagram__label= 'голосов'
     .diagram__list
-      +bulleted-list({values: impressions})
+      li.diagram__item(class=`diagram__item_amazing`, data-impression='amazing')='Великолепно'
+      li.diagram__item(class=`diagram__item_good`, data-impression='good')='Хорошо'
+      li.diagram__item(class=`diagram__item_satisfactorily`, data-impression='satisfactorily')='Удовлетворительно'
+      li.diagram__item(class=`diagram__item_bad`, data-impression='bad')='Разочарован'

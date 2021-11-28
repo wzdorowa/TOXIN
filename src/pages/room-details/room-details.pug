@@ -39,9 +39,7 @@ block content
             .room-details__impressions
               h2.room-details__title Впечатления от номера
               .room-details__diagram
-                - const impressions = [{color: 'yellow-pink', text: 'Великолепно', indent: 'small-indent'}, {color: 'turquoise-blue', text: 'Хорошо', indent: 'small-indent'}, {color: 'light-blue', text: 'Удовлетворительно', indent: 'small-indent'}, {color: 'violet-blue', text: 'Разочарован', indent: 'small-indent'}]
-                - const data = [{votes: 65, color: 'light-blue', colorRGB: '#BC9CFF'}, {votes: 65, color: 'turquoise-blue', colorRGB: '#6FCF97'}, {votes: 130, color: 'yellow-pink', colorRGB: '#FFBA9C'}]
-                +diagram({totalOfVotes: 260, label: 'голосов', impressions: impressions, data: data})
+                +diagram({impressions: {amazing: 130, good: 65, satisfactorily: 65, bad: 0}})
           .room-details__column-narrow
             - const roomDetailsRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
             - const roomDetailsRoomUserDate = ['13.10.2021', '15.10.2021']

@@ -1,41 +1,85 @@
+@mixin text() {
+  margin: 0;
+  color: $Purple;
+  font-weight: bold;
+  text-align: center;
+}
+
+@mixin itemIcon() {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  content: '';
+}
+
 .diagram {
   display: flex;
 
   &__image {
     position: relative;
-    width: 120px;
+    width: 125px;
+  }
+
+  &__image-circle {
+    fill: none;
+
+    &_hide {
+      display: none;
+    }
   }
 
   &__text {
     position: absolute;
-    top: 30%;
+    top: 50%;
+    left: 50%;
     width: 100%;
+    transform: translate(-50%, -50%);
   }
 
   &__number {
-    font-weight: bold;
+    @include text();
     font-size: 24px;
-    line-height: 29.26px;
-    color: $Purple;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0em;
-    margin: 0;
   }
 
   &__label {
-    font-weight: bold;
+    @include text();
     font-size: 12px;
-    line-height: 15px;
-    text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0em;
-    color: $Purple;
-    margin: 0;
   }
 
   &__list {
-    margin-left: 9%;
     margin-top: auto;
+    margin-left: 9%;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 16px;
+    line-height: 24px;
+    cursor: pointer;
+
+    &_amazing::before {
+      @include itemIcon();
+      background: $YellowPink;
+    }
+
+    &_good::before {
+      @include itemIcon();
+      background: $SecondaryGradient;
+    }
+
+    &_satisfactorily::before {
+      @include itemIcon();
+      background: $PrimaryGradient;
+    }
+
+    &_bad::before {
+      @include itemIcon();
+      background: $VioletBlue;
+    }
   }
 }
