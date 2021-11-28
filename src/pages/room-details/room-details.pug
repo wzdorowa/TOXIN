@@ -64,8 +64,8 @@ block content
             .room-details__rules
               h2.room-details__title-rules Правила
               .room-details__rules-list
-                - const rules = [{color: 'light-gray', text: 'Нельзя с питомцами', indent: 'middle-indent'}, {color: 'light-gray', text: 'Без вечеринок и мероприятий', indent: 'middle-indent'}, {color: 'light-gray', text: 'Время прибытия — после 13:00, а выезд до 12:00', indent: 'middle-indent'}]
-                +bulleted-list({height: 'middle', values: rules})
+                - const rules = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+                +bulleted-list({values: rules})
             .room-details__cancel
               h2.room-details__title-cancel Отмена
               p.room-details__cancel-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.

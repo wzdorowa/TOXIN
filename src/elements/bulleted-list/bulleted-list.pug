@@ -1,7 +1,4 @@
-mixin bulleted-list({height = 'low', values = [{color: 'light-gray', text: 'Text', indent: 'small-indent'}]} = {})
-
-  ul.bulleted-list(class=`bulleted-list_${height}-height`)
-      each value in values
-        - const {color, text, indent} = value
-        li.bulleted-list__item(class=`bulleted-list__item_${color}`, class=`bulleted-list__item_with-${indent}` data-color=color)
-          = text
+mixin bulleted-list({values = []} = {})
+  ul.bulleted-list
+    each value, index in values
+      li.bulleted-list__item= value

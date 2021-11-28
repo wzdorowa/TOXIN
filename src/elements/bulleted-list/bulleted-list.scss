@@ -2,83 +2,26 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  list-style: none;
+  min-height: 133px;
+  margin: 0;
   padding: 0;
   padding-top: 15px;
-  margin: 0;
-
-  &_low-height {
-    min-height: 96px;
-  }
-
-  &_middle-height {
-    min-height: 133px;
-  }
+  list-style: none;
 
   &__item {
     position: relative;
+    padding-left: 21.5px;
     line-height: 24px;
 
-    &_with-small-indent {
-      padding-left: 16.5px;
-    }
-    &_with-middle-indent {
-      padding-left: 21.5px;
-    }
-
-    &_yellow-pink::before {
-      content: '';
+    &::before {
       position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      top: 25%;
-      left: 0;
-      background: $YellowPink;
-    }
-
-    &_turquoise-blue::before {
-      content: '';
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      top: 25%;
-      left: 0;
-      background: $SecondaryGradient;
-    }
-
-    &_light-blue::before {
-      content: '';
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      top: 25%;
-      left: 0;
-      background: $PrimaryGradient;
-    }
-
-    &_violet-blue::before {
-      content: '';
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      top: 25%;
-      left: 0;
-      background: $VioletBlue;
-    }
-
-    &_light-gray::before {
-      content: '';
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
       top: 7px;
       left: 0;
+      width: 10px;
+      height: 10px;
       background: $DarkShade25;
+      border-radius: 50%;
+      content: '';
     }
   }
 }
