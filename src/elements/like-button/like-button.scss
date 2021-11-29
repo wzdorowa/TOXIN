@@ -1,5 +1,6 @@
 .like-button {
   position: relative;
+  width: inherit;
   color: $DarkShade50;
 
   &__filter {
@@ -23,15 +24,13 @@
   &__description {
     position: relative;
     display: flex;
+    padding-left: 50%;
     font-size: 10px;
     line-height: 20px;
-    padding-left: 50%;
   }
 
   &__filter {
-
     & input[type='checkbox']:checked {
-
       & + .like-button__indicator {
         border: 1px solid $Purple;
       }
@@ -40,29 +39,28 @@
         color: $Purple;
 
         &::before {
-          content: 'favorite';
           position: absolute;
           top: 0;
           left: 5px;
-          font-family: 'Material Icons', Arial, sans-serif;
-          font-size: 10px;
-          line-height: 20px;
           color: $PrimaryGradient;
+          font-size: 10px;
+          font-family: 'Material Icons', Arial, sans-serif;
+          line-height: 20px;
+          content: 'favorite';
         }
       }
     }
 
     & input[type='checkbox']:not(:checked) {
-
       & ~ .like-button__description::before {
-        content: 'favorite_border';
         position: absolute;
         top: 0;
         left: 5px;
-        font-family: 'Material Icons', Arial, sans-serif;
-        font-size: 10px;
-        line-height: 20px;
         color: $PrimaryGradient;
+        font-size: 10px;
+        font-family: 'Material Icons', Arial, sans-serif;
+        line-height: 20px;
+        content: 'favorite_border';
       }
     }
   }

@@ -1,0 +1,22 @@
+.comments {
+  max-width: 710px;
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+
+  &__title {
+    @include h2();
+  }
+
+  &__amount {
+    color: $DarkShade50;
+  }
+
+  &__comment {
+    margin-bottom: 23px;
+  }
+}

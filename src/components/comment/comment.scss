@@ -1,51 +1,40 @@
 @import './variables.scss';
 
 .comment {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  color: $DarkShade75;
+  line-height: 24px;
 
-  &__user-information {
-    position: relative;
+  &__info {
     display: flex;
-    justify-content: flex-start;
   }
 
   &__user-icon {
     filter: drop-shadow(0 10px 20px $DarkShade10);
   }
 
-  &__user-information-content {
-    padding-left: 10px;
+  &__user {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
   }
 
   &__user-name {
-    margin: 0;
     font-weight: bold;
-    line-height: 24px;
-  }
-
-  &__date {
-    line-height: 24px;
   }
 
   &__content {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
     margin-top: 10px;
-    margin-left: 2px;
   }
 
   &__like-button {
     width: 40px;
-    min-height: 20px;
+    height: 20px;
+    margin: 0 4px;
   }
 
   &__paragraph {
-    width: 92%;
     margin: 0;
     margin-left: 10px;
-    line-height: 24px;
   }
 }

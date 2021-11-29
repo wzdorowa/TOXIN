@@ -1,13 +1,13 @@
 include ../../elements/like-button/like-button.pug
 
-mixin comment({title = 'Title', value = 'text', srcImage, text = 'text description'} = {})
+mixin comment({userName = 'Title', date = 'text', srcImage, text = 'text description', amountLike = '0', likeChecked} = {})
   .comment
-    .comment__user-information
+    .comment__info
       img.comment__user-icon(src=`${srcImage}`)
-      .comment__user-information-content
-        h1.comment__user-name= title
-        span.comment__date= value
+      .comment__user
+        span.comment__user-name= userName
+        span.comment__date= date
     .comment__content
       .comment__like-button
-        +like-button({text: '12', checked: 'checked'})
+        +like-button({text: amountLike, checked: likeChecked})
       p.comment__paragraph= text

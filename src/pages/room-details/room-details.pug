@@ -6,7 +6,7 @@ include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../elements/diagram/diagram.pug
 include ../../elements/bulleted-list/bulleted-list.pug
-include ../../components/comment/comment.pug
+include ../../components/comments/comments.pug
 include ../../components/form-room-cost/form-room-cost.pug
 include ../../components/calendar/calendar.pug
 include ../../components/date-dropdown/date-dropdown.pug
@@ -45,21 +45,8 @@ block content
             - const roomDetailsRoomUserDate = ['13.10.2021', '15.10.2021']
             +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: roomDetailsRoomDateFormat, userDates: roomDetailsRoomUserDate})
           .room-details__comment
-            .room-details__comment-description
-              h2.room-details__title-comment Отзывы посетителей номера
-              span.room-details__comment-sum 2 отзыва
-            +comment({
-              title: 'Мурад Сарафанов',
-              value: '5 дней назад',
-              srcImage: 'images/user-icon/Murad.png',
-              text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
-            })
-            +comment({
-              title: 'Патрисия Стёклышкова',
-              value: 'Неделю назад',
-              srcImage: 'images/user-icon/Patriziya.png',
-              text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
-            })
+            -const commentList = [{userName: 'Мурад Сарафанов', date: '5 дней назад', srcImage: 'images/user-icon/Murad.png', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', amountLike: 12, likeChecked: 'checked'}, {userName: 'Патрисия Стёклышкова', date: 'Неделю назад', srcImage: 'images/user-icon/Patriziya.png', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', amountLike: 2, likeChecked: false }]
+            +comments({commentsList: commentList})
           .room-details__extra-info
             .room-details__rules
               h2.room-details__title-rules Правила

@@ -46,6 +46,8 @@ $borderColor: rgba(0, 0, 0, 0.12);
   line-height: 20px;
 }
 
+$primaryFont: 'Montserrat', 'Arial', 'sans-serif';
+
 @mixin input {
   padding: 9px 10px 9px 15px;
   color: $DarkShade75;
@@ -68,4 +70,13 @@ $borderColor: rgba(0, 0, 0, 0.12);
     border-color: $DarkShade50;
     outline: none;
   }
+}
+
+@mixin h2() {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: $primaryFont;
+  letter-spacing: -0.6px;
 }
