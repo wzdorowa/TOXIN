@@ -35,14 +35,3 @@
 @import 'src/pages/search-room/search-room.scss';
 @import 'src/pages/landing/landing.scss';
 @import 'src/pages/demo/demo.scss';
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  color: $DarkShade75;
-  font-size: 14px;
-  font-family: 'Montserrat', Arial, sans-serif;
-  background-color: #fff;
-}
