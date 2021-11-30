@@ -33,6 +33,6 @@ mixin header()
             a.header__link(href='')= value
     .header__user.js-header__user
       .header__user-button-login
-        +button({text: 'Войти', decor: 'border', height: 'small', href: '../../pages/sign-in/sign-in.pug'})
+        +button({text: 'Войти', decor: 'bordered', height: 'small', href: '../../pages/sign-in/sign-in.pug'})
       .header__user-button-registration
-        +button({text: 'Зарегистрироваться', decor: 'background', height: 'small', href: '../../pages/registration/registration.pug'})
+        +button({text: 'Зарегистрироваться', decor: 'solid', size: 'small', href: '../../pages/registration/registration.pug'})

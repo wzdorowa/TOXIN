@@ -107,13 +107,13 @@ block content
             .components__base-button
                 h1.buttons-title Buttons
                 .components__base-button-content.components__base-button-content_small
-                  +button({text: 'Click Me', decor: 'background', height: 'large'})
+                  +button({text: 'Click Me', decor: 'solid', size: 'large'})
                 .components__base-button-content.components__base-button-content_small
-                  +button({text: 'Click Me', decor: 'border', height: 'large'})
+                  +button({text: 'Click Me', decor: 'bordered', size: 'large'})
                 .components__base-button-content.components__base-button-content_small
                   +button({text: 'Click Me'})
                 .components__base-button-content.components__base-button-content_big
-                  +button({text: 'Перейти к оплате', decor: 'background', hasArrow: true, height: 'large'})
+                  +button({text: 'Перейти к оплате', decor: 'solid', directed: true, size: 'large'})
             .components__pagination
                 h1.buttons-title Pagination
                 +pagination({text: '1 - 12 из 100+ вариантов аренды'})

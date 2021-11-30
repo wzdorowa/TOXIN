@@ -30,4 +30,4 @@ mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat =
           .form-room-cost__total-item.form-room-cost__total-item_with-border
           .form-room-cost__total-item.form-room-cost__total-item_with-cost!= `${stateForTable.totalCost}<span class='form-room-cost__sign-rouble'>P</span>`
       .form-room-cost__armor-button
-          +button({text: 'Забронировать', decor: 'background', hasArrow: true, height: 'large'})
+          +button({text: 'Забронировать', decor: 'solid', directed: true, size: 'large'})
