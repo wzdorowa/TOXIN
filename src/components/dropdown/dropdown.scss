@@ -16,6 +16,8 @@
   &__input-content {
     @include input;
     width: 100%;
+    padding-right: 30px;
+    text-overflow: ellipsis;
     cursor: pointer;
 
     &_opened {
