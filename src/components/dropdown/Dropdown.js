@@ -1,3 +1,4 @@
+import convertNumToWordform from './helpers';
 class Dropdown {
   constructor(element) {
     this.dropdown = element;
@@ -112,17 +113,27 @@ class Dropdown {
     this.removeClass();
   }
 
+  hideButtonClear() {
+    if (
+      !this.buttonClear.classList.contains('.dropdown__button-clear_hidden')
+    ) {
+      this.buttonClear.classList.add('dropdown__button-clear_hidden');
+    }
+  }
+
+  showButtonClear() {
+    if (this.buttonClear.classList.contains('dropdown__button-clear_hidden')) {
+      this.buttonClear.classList.remove('dropdown__button-clear_hidden');
+    }
+  }
+
   handleButtonsContainerForClearClick() {
     this.elementInput.value = '';
     this.numberContainer.forEach(number => {
       const element = number;
       element.innerHTML = '0';
     });
-    if (
-      !this.buttonClear.classList.contains('.dropdown__button-clear_hidden')
-    ) {
-      this.buttonClear.classList.add('dropdown__button-clear_hidden');
-    }
+    this.hideButtonClear();
   }
 
   handleDocumentClick(event) {
@@ -132,51 +143,17 @@ class Dropdown {
   }
 
   countValues(result, values, declinations) {
-    const isMatchingValue = value => {
-      return (
-        String(value).includes('2') ||
-        String(value).includes('3') ||
-        String(value).includes('4')
-      );
-    };
     if (result === 0) {
       this.elementInput.value = '';
-      if (
-        !this.buttonClear.classList.contains('.dropdown__button-clear_hidden')
-      ) {
-        this.buttonClear.classList.add('dropdown__button-clear_hidden');
-      }
+      this.hideButtonClear();
     } else {
       const newString = [];
       values.forEach((value, i) => {
         if (value !== 0) {
           const declination = declinations[i];
-          if (String(value).length === 1) {
-            if (String(value).includes('1')) {
-              newString.push(`${String(value)} ${declination[0]}`);
-            } else if (isMatchingValue(value)) {
-              newString.push(`${String(value)} ${declination[1]}`);
-            } else {
-              newString.push(`${String(value)} ${declination[2]}`);
-            }
-          }
-          if (String(value).length === 2) {
-            if (String(value)[1].includes('1')) {
-              if (value === 11) {
-                newString.push(`${String(value)} ${declination[2]}`);
-              } else {
-                newString.push(`${String(value)} ${declination[0]}`);
-              }
-            } else if (isMatchingValue(String(value)[1])) {
-              if (value === 12 || value === 13 || value === 14) {
-                newString.push(`${String(value)} ${declination[2]}`);
-              } else {
-                newString.push(`${String(value)} ${declination[1]}`);
-              }
-            } else {
-              newString.push(`${String(value)} ${declination[2]}`);
-            }
-          }
+          newString.push(
+            `${String(value)} ${convertNumToWordform(value, declination)}`,
+          );
         }
       });
       newString.forEach((string, index) => {
@@ -191,11 +168,7 @@ class Dropdown {
           this.elementInput.value += `${newString[index]}, `;
         }
       });
-      if (
-        this.buttonClear.classList.contains('dropdown__button-clear_hidden')
-      ) {
-        this.buttonClear.classList.remove('dropdown__button-clear_hidden');
-      }
+      this.showButtonClear();
     }
   }
 
