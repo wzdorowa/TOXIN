@@ -57,6 +57,9 @@ class DateDropdown {
       ]);
       this.inputs[0].value = this.dayFrom;
       this.inputs[1].value = this.dayTo;
+
+      this.showButtonClear();
+
       $(this.calendar).datepicker({
         moveToOtherMonthsOnSelect: false,
       });
@@ -84,6 +87,18 @@ class DateDropdown {
     });
   }
 
+  hideButtonClear() {
+    if (!this.buttonClear.classList.contains('calendar__button-clear_hidden')) {
+      this.buttonClear.classList.add('calendar__button-clear_hidden');
+    }
+  }
+
+  showButtonClear() {
+    if (this.buttonClear.classList.contains('calendar__button-clear_hidden')) {
+      this.buttonClear.classList.remove('calendar__button-clear_hidden');
+    }
+  }
+
   handleInputContentFocus() {
     this.toggleClass();
   }
@@ -97,12 +112,8 @@ class DateDropdown {
   }
 
   handleButtonsContainerForClearClick() {
-    if (
-      !this.buttonClear.classList.contains('.calendar__button-clear_hidden')
-    ) {
-      this.buttonClear.classList.add('calendar__button-clear_hidden');
-    }
     this.clearValues();
+    this.hideButtonClear();
   }
 
   handleDocumentClick(event) {
@@ -110,11 +121,7 @@ class DateDropdown {
       this.removeClass();
       if (this.dates.length === 1) {
         this.clearValues();
-        if (
-          !this.buttonClear.classList.contains('.calendar__button-clear_hidden')
-        ) {
-          this.buttonClear.classList.add('calendar__button-clear_hidden');
-        }
+        this.hideButtonClear();
       }
     }
   }
@@ -172,7 +179,7 @@ class DateDropdown {
             });
             input.value = string;
 
-            this.buttonClear.classList.remove('calendar__button-clear_hidden');
+            this.showButtonClear();
           }
         },
       });
@@ -202,7 +209,7 @@ class DateDropdown {
           inputs[0].value = dayFrom;
           inputs[1].value = dayTo;
 
-          this.buttonClear.classList.remove('calendar__button-clear_hidden');
+          this.showButtonClear();
         },
       });
     }

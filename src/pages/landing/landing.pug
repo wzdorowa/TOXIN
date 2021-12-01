@@ -24,7 +24,13 @@ block content
         .landing__content
           .landing__form-search-room
             -const landingDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
-            +form-search-room({text: 'Найдём номера под ваши пожелания', dateFormat: landingDateFormat})
+            - const toDate = new Date();
+            - let fromDate = new Date();
+            - fromDate.setDate(fromDate.getDate() + 3);
+            - const toDateShort = toDate.toISOString().replace(/T.*/,'').split('-').reverse().join('.');
+            - const fromDateShort = fromDate.toISOString().replace(/T.*/,'').split('-').reverse().join('.');
+            - const landingUserDate = [toDateShort, fromDateShort]
+            +form-search-room({text: 'Найдём номера под ваши пожелания', dateFormat: landingDateFormat, userDates: landingUserDate})
           p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения
       .landing__footer
         +footer()

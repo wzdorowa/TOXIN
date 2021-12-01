@@ -42,7 +42,12 @@ block content
                 +diagram({impressions: {amazing: 130, good: 65, satisfactorily: 65, bad: 0}})
           .room-details__column-narrow
             - const roomDetailsRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
-            - const roomDetailsRoomUserDate = ['13.10.2021', '15.10.2021']
+            - const toDate = new Date();
+            - let fromDate = new Date();
+            - fromDate.setDate(fromDate.getDate() + 3);
+            - const toDateShort = toDate.toISOString().replace(/T.*/,'').split('-').reverse().join('.');
+            - const fromDateShort = fromDate.toISOString().replace(/T.*/,'').split('-').reverse().join('.');
+            - const roomDetailsRoomUserDate = [toDateShort, fromDateShort]
             +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: roomDetailsRoomDateFormat, userDates: roomDetailsRoomUserDate})
           .room-details__comment
             -const commentList = [{userName: 'Мурад Сарафанов', date: '5 дней назад', srcImage: 'images/user-icon/Murad.png', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', amountLike: 12, likeChecked: 'checked'}, {userName: 'Патрисия Стёклышкова', date: 'Неделю назад', srcImage: 'images/user-icon/Patriziya.png', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', amountLike: 2, likeChecked: false }]
