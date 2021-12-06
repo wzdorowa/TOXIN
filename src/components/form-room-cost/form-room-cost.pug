@@ -1,6 +1,6 @@
 include ../../components/calendar/calendar.pug
 include ../../components/dropdown/dropdown.pug
-include ../../elements/settlement-group/settlement-group.pug
+include ../../elements/tooltip/tooltip.pug
 
 mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'], userDates} = {})
     .form-room-cost
@@ -23,11 +23,30 @@ mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat =
           dropdownRows: dataForDropdown
           })
       .form-room-cost__calculation
-          - const stateForTable = {pricePerDay: '9 990', numberOfDays: 'x 4 суток', priceForThePeriod: '39 690', serviceCharge: '2 179', servicePrice: '0', additionalServicesPrice: '300', totalCost: '38 081'}
-          +settlement-group(stateForTable)
+          -const state = {pricePerDay: 9990, numberOfDays: 'x 4 суток', priceForThePeriod: 39960, serviceCharge: 2179, servicePrice: 0, additionalServicesPrice: 300, totalCost: 38081}
+          -const formatCost = (cost) => {
+            -const value = cost.toLocaleString('ru-RU')
+            -return value
+          -};
+          .form-room-cost__cost-item
+            .form-room-cost__column-calc
+              span.form-room-cost__cost= `${formatCost(state.pricePerDay)}`
+              span= ` ${state.numberOfDays}`
+            .form-room-cost__cost= `${formatCost(state.priceForThePeriod)}`
+          .form-room-cost__cost-item
+            .form-room-cost__column-calc
+              span.form-room-cost__cost= 'Cбор за услуги: скидка'+ ` ${formatCost(state.serviceCharge)}`
+            .form-room-cost__block-with-tooltip
+              +tooltip('С учетом Вашей бонусной карты')
+              .form-room-cost__cost= `${formatCost(state.servicePrice)}`
+          .form-room-cost__cost-item
+            .form-room-cost__column-calc
+              span= `Сбор за дополнительные услуги`
+            .form-room-cost__block-with-tooltip
+              +tooltip('С учетом Вашей бонусной карты')
+              .form-room-cost__cost= `${formatCost(state.additionalServicesPrice)}`
       .form-room-cost__total
           .form-room-cost__total-item Итого
           .form-room-cost__total-item.form-room-cost__total-item_with-border
-          .form-room-cost__total-item.form-room-cost__total-item_with-cost= `${stateForTable.totalCost}`
-      .form-room-cost__armor-button
-          +button({text: 'Забронировать', decor: 'solid', directed: true, size: 'large'})
+          .form-room-cost__total-item.form-room-cost__total-item_with-cost= `${formatCost(state.totalCost)}`
+      +button({text: 'Забронировать', decor: 'solid', directed: true, size: 'large'})

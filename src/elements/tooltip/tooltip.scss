@@ -1,0 +1,47 @@
+@import '../../pages/variables.scss';
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    color: $DarkShade25;
+    font-weight: bold;
+    font-size: 12px;
+    background: #fff;
+    border: 1px solid $DarkShade25;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &::before {
+      content: 'i';
+    }
+
+    &:hover,
+    &:focus {
+      color: $DarkShade50;
+      border-color: $DarkShade50;
+      outline: none;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 25px;
+    z-index: 100;
+    display: none;
+    min-width: 140px;
+    padding: 6px;
+    color: $DarkShade75;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    transform: translate(-100%);
+  }
+
+  &:hover .tooltip__text {
+    display: inline-block;
+  }
+}
