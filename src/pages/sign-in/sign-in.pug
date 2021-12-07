@@ -1,4 +1,4 @@
-extends ../base.pug
+extends ../layout/layout.pug
 
 include ../../components/header/header.pug
 include ../../components/footer/footer.pug
@@ -12,14 +12,6 @@ block meta
 block title
     title Sign in page
 block content
-  .sign-in
-    .sign-in__wrapper
-      .sign-in__header
-        .sign-in__header-container
-          +header()
-      .sign-in__container
-        .sign-in__login
-          +login({text: 'Войти'})
-      .sign-in__footer
-        +footer()
-      +copyright()
+  .sign-in__container
+    .sign-in__login
+      +login({text: 'Войти'})

@@ -1,3 +1,6 @@
+include ../../components/header/header.pug
+include ../../components/footer/footer.pug
+
 doctype html
 html
     head
@@ -17,7 +20,11 @@ html
             script(src='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.js')
             script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.js' integrity='sha512-SSQo56LrrC0adA0IJk1GONb6LLfKM6+gqBTAGgWNO8DIxHiy0ARRIztRWVK6hGnrlYWOFKEbSLQuONZDtJFK0Q==' crossorigin='anonymous')
     body
-        block content
+        .layout
+            +header()
+            main.layout__main
+                block content
+            +footer()
         block scripts
             script(src='../../components/date-dropdown/DateDropdown.js')
             script(src='../../components/number-card/NumberCard.js')

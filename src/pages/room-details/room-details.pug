@@ -1,4 +1,4 @@
-extends ../base.pug
+extends ../layout/layout.pug
 
 include ../../components/header/header.pug
 include ../../components/collage/collage.pug
@@ -18,47 +18,38 @@ block meta
 block title
     title Room details page
 block content
-  .room-details
-    .room-details__wrapper
-      .room-details__header
-        .room-details__header-shadow
-        .room-details__header-container
-          +header()
-      .room-details__content
-        -const images = ['images/images-room/image1.png', 'images/images-room/image3.png', 'images/images-room/image2.png']
-        +collage(images)
-        .room-details__information
-          .room-details__number-impressions
-            .room-details__number-info
-              h2.room-details__title Сведения о номере
-              .room-details__advantages
-                - const list = [{advantageTitle: 'Комфорт', advantageDescription: 'Шумопоглощающие стены', advantageIcon: 'mood'}, {advantageTitle: 'Удобство', advantageDescription: 'Окна в каждой из спален', advantageIcon: 'location_city'}, {advantageTitle: 'Уют', advantageDescription: 'Номер оснащен камином', advantageIcon: 'whatshot'}]
-                +advantages({advantagesList: list})
-            .room-details__impressions
-              h2.room-details__title Впечатления от номера
-              .room-details__diagram
-                +diagram({impressions: {amazing: 130, good: 65, satisfactorily: 65, bad: 0}})
-          .room-details__column-narrow
-            - const roomDetailsRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
-            - const toDate = new Date();
-            - let fromDate = new Date();
-            - fromDate.setDate(fromDate.getDate() + 4);
-            - const toDateShort = toDate.toISOString().replace(/T.*/,'').split('-').reverse().join('.');
-            - const fromDateShort = fromDate.toISOString().replace(/T.*/,'').split('-').reverse().join('.');
-            - const roomDetailsRoomUserDate = [toDateShort, fromDateShort]
-            +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: roomDetailsRoomDateFormat, userDates: roomDetailsRoomUserDate})
-          .room-details__comment
-            -const commentList = [{userName: 'Мурад Сарафанов', date: '5 дней назад', srcImage: 'images/user-icon/Murad.png', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', amountLike: 12, likeChecked: 'checked'}, {userName: 'Патрисия Стёклышкова', date: 'Неделю назад', srcImage: 'images/user-icon/Patriziya.png', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', amountLike: 2, likeChecked: false }]
-            +comments({commentsList: commentList})
-          .room-details__extra-info
-            .room-details__rules
-              h2.room-details__title-rules Правила
-              .room-details__rules-list
-                - const rules = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
-                +bulleted-list({values: rules})
-            .room-details__cancel
-              h2.room-details__title-cancel Отмена
-              p.room-details__cancel-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-      .room-details__footer
-        +footer()
-      +copyright()
+    .room-details__content
+      -const images = ['images/images-room/image1.png', 'images/images-room/image3.png', 'images/images-room/image2.png']
+      +collage(images)
+      .room-details__information
+        .room-details__number-impressions
+          .room-details__number-info
+            h2.room-details__title Сведения о номере
+            .room-details__advantages
+              - const list = [{advantageTitle: 'Комфорт', advantageDescription: 'Шумопоглощающие стены', advantageIcon: 'mood'}, {advantageTitle: 'Удобство', advantageDescription: 'Окна в каждой из спален', advantageIcon: 'location_city'}, {advantageTitle: 'Уют', advantageDescription: 'Номер оснащен камином', advantageIcon: 'whatshot'}]
+              +advantages({advantagesList: list})
+          .room-details__impressions
+            h2.room-details__title Впечатления от номера
+            .room-details__diagram
+              +diagram({impressions: {amazing: 130, good: 65, satisfactorily: 65, bad: 0}})
+        .room-details__column-narrow
+          - const roomDetailsRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+          - const toDate = new Date();
+          - let fromDate = new Date();
+          - fromDate.setDate(fromDate.getDate() + 4);
+          - const toDateShort = toDate.toISOString().replace(/T.*/,'').split('-').reverse().join('.');
+          - const fromDateShort = fromDate.toISOString().replace(/T.*/,'').split('-').reverse().join('.');
+          - const roomDetailsRoomUserDate = [toDateShort, fromDateShort]
+          +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: roomDetailsRoomDateFormat, userDates: roomDetailsRoomUserDate})
+        .room-details__comment
+          -const commentList = [{userName: 'Мурад Сарафанов', date: '5 дней назад', srcImage: 'images/user-icon/Murad.png', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', amountLike: 12, likeChecked: 'checked'}, {userName: 'Патрисия Стёклышкова', date: 'Неделю назад', srcImage: 'images/user-icon/Patriziya.png', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', amountLike: 2, likeChecked: false }]
+          +comments({commentsList: commentList})
+        .room-details__extra-info
+          .room-details__rules
+            h2.room-details__title-rules Правила
+            .room-details__rules-list
+              - const rules = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+              +bulleted-list({values: rules})
+          .room-details__cancel
+            h2.room-details__title-cancel Отмена
+            p.room-details__cancel-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.

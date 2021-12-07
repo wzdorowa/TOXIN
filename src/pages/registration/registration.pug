@@ -1,4 +1,4 @@
-extends ../base.pug
+extends ../layout/layout.pug
 
 include ../../components/header/header.pug
 include ../../components/footer/footer.pug
@@ -13,14 +13,6 @@ block meta
 block title
     title Registration page
 block content
-  .registration
-    .registration__wrapper
-      .registration__header
-        .registration__header-container
-          +header()
-      .registration__container
-        .registration__check-in
-          +form-check-in({text: 'Регистрация аккаунта'})
-      .registration__footer
-        +footer()
-      +copyright()
+    .registration__container
+      .registration__check-in
+        +form-check-in({text: 'Регистрация аккаунта'})

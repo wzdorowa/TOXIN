@@ -1,3 +1,5 @@
+include ../../components/copyright/copyright.pug
+
 mixin footer()
   .footer
     .footer__container
@@ -21,3 +23,4 @@ mixin footer()
         .footer__subscribe-input-wrapper
           span.footer__subscribe-input-title
           input.footer__subscribe-input(type='email', placeholder='Email')
+    +copyright()
