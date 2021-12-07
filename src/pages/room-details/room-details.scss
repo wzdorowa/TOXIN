@@ -85,45 +85,6 @@
     background: #fff;
   }
 
-  &__slider {
-    display: flex;
-    min-width: 280px;
-    max-width: 1440px;
-    margin-right: auto;
-    margin-bottom: 40px;
-    margin-left: auto;
-
-    @media (min-width: 835px) {
-      margin-bottom: 4.8%;
-    }
-
-    &-group-image {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      max-width: 31.875%;
-      background: $Purple25;
-    }
-
-    &-image-1 {
-      max-width: 68.125%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    &-image-2 {
-      max-width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    &-image-3 {
-      max-width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-  }
-
   &__information {
     display: flex;
     flex-direction: column;

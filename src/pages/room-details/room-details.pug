@@ -1,6 +1,7 @@
 extends ../base.pug
 
 include ../../components/header/header.pug
+include ../../components/collage/collage.pug
 include ../../elements/advantages/advantages.pug
 include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
@@ -24,11 +25,8 @@ block content
         .room-details__header-container
           +header()
       .room-details__content
-        .room-details__slider
-          img.room-details__slider-image-1(src='images/images-room/image1.png')
-          .room-details__slider-group-image
-            img.room-details__slider-image-2(src='images/images-room/image2.png')
-            img.room-details__slider-image-3(src='images/images-room/image3.png')
+        -const images = ['images/images-room/image1.png', 'images/images-room/image3.png', 'images/images-room/image2.png']
+        +collage(images)
         .room-details__information
           .room-details__number-impressions
             .room-details__number-info
