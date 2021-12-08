@@ -1,16 +1,25 @@
+@import '../../pages/variables.scss';
+
 .bulleted-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 133px;
-  margin: 0;
-  padding: 0;
-  padding-top: 15px;
-  list-style: none;
+  &__title {
+    @include h2();
+    margin-bottom: 18px;
+    padding-left: 20px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 115px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
   &__item {
     position: relative;
-    padding-left: 21.5px;
+    padding-left: 20px;
     line-height: 24px;
 
     &::before {

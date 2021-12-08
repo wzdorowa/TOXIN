@@ -16,7 +16,13 @@
 }
 
 .diagram {
-  display: flex;
+  &__title {
+    @include h2();
+  }
+
+  &__content {
+    display: flex;
+  }
 
   &__image {
     position: relative;
@@ -51,14 +57,13 @@
   }
 
   &__list {
-    margin-top: auto;
-    margin-left: 9%;
+    margin: auto 0 5px 9%;
     list-style: none;
   }
 
   &__item {
     position: relative;
-    padding-left: 16px;
+    padding-left: 15px;
     line-height: 24px;
     cursor: pointer;
 

@@ -5,10 +5,12 @@
 }
 
 .form-room-cost {
+  padding: 40px 30px 30px 30px;
+
   &__identification-room {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   &__specification-room {

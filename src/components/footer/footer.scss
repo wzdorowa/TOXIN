@@ -14,19 +14,18 @@
     @include flex();
     justify-content: space-between;
     min-width: 280px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 40px;
+    margin: 0 auto;
+    padding: 40px 0;
 
     @media (min-width: 720px) {
       min-width: 720px;
-      padding-top: 40px;
     }
 
     @media (min-width: 1170px) {
       flex-direction: row;
       align-items: flex-start;
       width: 1160px;
+      padding: 102px 0 60px 0;
     }
   }
 

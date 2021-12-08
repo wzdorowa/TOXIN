@@ -1,15 +1,14 @@
 .comments {
-  max-width: 710px;
-
   &__header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   &__title {
     @include h2();
+    margin: 0;
   }
 
   &__amount {

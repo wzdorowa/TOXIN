@@ -1,4 +1,4 @@
-mixin diagram({impressions})
+mixin diagram({title, impressions})
   -const { amazing, good, satisfactorily, bad } = impressions;
   -const CIRCLE_LENGTH = 364.424672;
   -const sum = amazing + good + satisfactorily + bad;
@@ -13,56 +13,58 @@ mixin diagram({impressions})
       -return classesArr.join(' ');
   -};
   .diagram.js-diagram
-    .diagram__image
-      svg(width="125" height="125" viewBox="0 0 125 125")
-        linearGradient(id="yellow" x1="0" x2="0" y1="0" y2="1")
-          stop(offset="0%" stop-color="#FFE39C")
-          stop(offset="100%" stop-color="#FFBA9C")
-        linearGradient(id="green" x1="0" x2="0" y1="0" y2="1")
-          stop(offset="0%" stop-color="#6FCF97")
-          stop(offset="100%" stop-color="#66D2EA")
-        linearGradient(id="purple" x1="0" x2="0" y1="0" y2="1")
-          stop(offset="0%" stop-color="#BC9CFF")
-          stop(offset="100%" stop-color="#8BA4F9")
-        linearGradient(id="black" x1="0" x2="0" y1="0" y2="1")
-          stop(offset="0%" stop-color="#909090")
-          stop(offset="100%" stop-color="#3D4975")
-        circle(
-          class=`${stylesCircle(good)}`,
-          r="58", cx="50%", cy="50%",
-          stroke="url(#green)",
-          stroke-width="4",
-          stroke-dasharray=`${goodInPixels - 2} ${CIRCLE_LENGTH}`,
-          stroke-dashoffset="-1",
-          data-votes=good, data-total=sum, data-impression='good')
-        circle(
-          class=`${stylesCircle(amazing)}`,
-          r="58", cx="50%", cy="50%",
-          stroke="url(#yellow)",
-          stroke-width="4",
-          stroke-dasharray=`${amazingInPixels - 2} ${CIRCLE_LENGTH}`,
-          stroke-dashoffset=`${-(goodInPixels + 1)}`
-          data-votes=amazing, data-total=sum, data-impression='amazing')
-        circle(
-          class=`${stylesCircle(satisfactorily)}`,
-          r="58", cx="50%", cy="50%",
-          stroke="url(#purple)",
-          stroke-width="4",
-          stroke-dasharray=`${satisfactorilyInPixels - 2} ${CIRCLE_LENGTH}`,
-          stroke-dashoffset=`${-(goodInPixels + amazingInPixels + 1)}`,
-          data-votes=satisfactorily, data-total=sum, data-impression='satisfactorily')
-        circle(
-          class=`${stylesCircle(bad)}`,
-          r="58", cx="50%", cy="50%",
-          stroke="url(#black)",
-          stroke-width="4",
-          stroke-dasharray=`${badInPixels - 2} ${CIRCLE_LENGTH}`,
-          stroke-dashoffset=`${-(goodInPixels + amazingInPixels + satisfactorilyInPixels + 1)}`, data-votes=bad, data-total=sum, data-impression='bad')
-      .diagram__text
-        p.diagram__number.js-diagram__number= sum
-        p.diagram__label= 'голосов'
-    .diagram__list
-      li.diagram__item.js-diagram__item(class=`diagram__item_amazing`, data-impression='amazing')='Великолепно'
-      li.diagram__item.js-diagram__item(class=`diagram__item_good`, data-impression='good')='Хорошо'
-      li.diagram__item.js-diagram__item(class=`diagram__item_satisfactorily`, data-impression='satisfactorily')='Удовлетворительно'
-      li.diagram__item.js-diagram__item(class=`diagram__item_bad`, data-impression='bad')='Разочарован'
+    h2.diagram__title= title
+    .diagram__content
+      .diagram__image
+        svg(width="125" height="125" viewBox="0 0 125 125")
+          linearGradient(id="yellow" x1="0" x2="0" y1="0" y2="1")
+            stop(offset="0%" stop-color="#FFE39C")
+            stop(offset="100%" stop-color="#FFBA9C")
+          linearGradient(id="green" x1="0" x2="0" y1="0" y2="1")
+            stop(offset="0%" stop-color="#6FCF97")
+            stop(offset="100%" stop-color="#66D2EA")
+          linearGradient(id="purple" x1="0" x2="0" y1="0" y2="1")
+            stop(offset="0%" stop-color="#BC9CFF")
+            stop(offset="100%" stop-color="#8BA4F9")
+          linearGradient(id="black" x1="0" x2="0" y1="0" y2="1")
+            stop(offset="0%" stop-color="#909090")
+            stop(offset="100%" stop-color="#3D4975")
+          circle(
+            class=`${stylesCircle(good)}`,
+            r="58", cx="50%", cy="50%",
+            stroke="url(#green)",
+            stroke-width="4",
+            stroke-dasharray=`${goodInPixels - 2} ${CIRCLE_LENGTH}`,
+            stroke-dashoffset="-1",
+            data-votes=good, data-total=sum, data-impression='good')
+          circle(
+            class=`${stylesCircle(amazing)}`,
+            r="58", cx="50%", cy="50%",
+            stroke="url(#yellow)",
+            stroke-width="4",
+            stroke-dasharray=`${amazingInPixels - 2} ${CIRCLE_LENGTH}`,
+            stroke-dashoffset=`${-(goodInPixels + 1)}`
+            data-votes=amazing, data-total=sum, data-impression='amazing')
+          circle(
+            class=`${stylesCircle(satisfactorily)}`,
+            r="58", cx="50%", cy="50%",
+            stroke="url(#purple)",
+            stroke-width="4",
+            stroke-dasharray=`${satisfactorilyInPixels - 2} ${CIRCLE_LENGTH}`,
+            stroke-dashoffset=`${-(goodInPixels + amazingInPixels + 1)}`,
+            data-votes=satisfactorily, data-total=sum, data-impression='satisfactorily')
+          circle(
+            class=`${stylesCircle(bad)}`,
+            r="58", cx="50%", cy="50%",
+            stroke="url(#black)",
+            stroke-width="4",
+            stroke-dasharray=`${badInPixels - 2} ${CIRCLE_LENGTH}`,
+            stroke-dashoffset=`${-(goodInPixels + amazingInPixels + satisfactorilyInPixels + 1)}`, data-votes=bad, data-total=sum, data-impression='bad')
+        .diagram__text
+          p.diagram__number.js-diagram__number= sum
+          p.diagram__label= 'голосов'
+      .diagram__list
+        li.diagram__item.js-diagram__item(class=`diagram__item_amazing`, data-impression='amazing')='Великолепно'
+        li.diagram__item.js-diagram__item(class=`diagram__item_good`, data-impression='good')='Хорошо'
+        li.diagram__item.js-diagram__item(class=`diagram__item_satisfactorily`, data-impression='satisfactorily')='Удовлетворительно'
+        li.diagram__item.js-diagram__item(class=`diagram__item_bad`, data-impression='bad')='Разочарован'
