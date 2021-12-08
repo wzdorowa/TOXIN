@@ -8,17 +8,37 @@
     margin: 66px auto 72px auto;
     padding: 0 20px;
     background: #fff;
+
+    @media (max-width: 1150px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 800px) {
+      padding: 0 10px;
+    }
   }
 
   &__information {
     display: flex;
     flex-direction: column;
-    width: 100%;
     max-width: 710px;
+
+    @media (max-width: 1150px) {
+      margin: 0 auto 40px auto;
+    }
+
+    @media (max-width: 800px) {
+      max-width: 320px;
+    }
+
+    @media (max-width: 340px) {
+      max-width: 300px;
+    }
   }
 
   &__room-impressions {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 675px;
   }
@@ -29,10 +49,18 @@
 
   &__diagram {
     width: 316px;
+
+    @media (max-width: 800px) {
+      margin-top: 30px;
+    }
   }
 
   &__comment {
     margin: 10px 0;
+
+    @media (max-width: 800px) {
+      margin-top: 40px;
+    }
   }
 
   &__extra-info {
@@ -48,6 +76,10 @@
 
   &__cancel {
     max-width: 325px;
+
+    @media (max-width: 800px) {
+      margin-top: 30px;
+    }
 
     &-description {
       margin: 0;
@@ -66,5 +98,13 @@
     border: 1px solid $borderColor;
     border-radius: 4px;
     box-shadow: $cardShadow;
+
+    @media (max-width: 1150px) {
+      margin: 0 auto;
+    }
+
+    @media (max-width: 800px) {
+      width: 300px;
+    }
   }
 }

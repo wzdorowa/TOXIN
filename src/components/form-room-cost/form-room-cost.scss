@@ -7,6 +7,10 @@
 .form-room-cost {
   padding: 40px 30px 30px 30px;
 
+  @media (max-width: 800px) {
+    padding: 20px 15px;
+  }
+
   &__identification-room {
     display: flex;
     justify-content: space-between;

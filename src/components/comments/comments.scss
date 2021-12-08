@@ -4,6 +4,11 @@
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 20px;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__title {
@@ -13,6 +18,10 @@
 
   &__amount {
     color: $DarkShade50;
+
+    @media (max-width: 800px) {
+      margin-top: 5px;
+    }
   }
 
   &__comment {

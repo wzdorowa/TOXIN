@@ -59,6 +59,10 @@
   &__list {
     margin: auto 0 5px 9%;
     list-style: none;
+
+    @media (max-width: 340px) {
+      margin-left: 10px;
+    }
   }
 
   &__item {

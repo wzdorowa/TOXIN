@@ -25,8 +25,8 @@
       &_small {
         width: 48%;
 
-        @media (min-width: 480px) {
-          width: 150px;
+        @media (min-width: 800px) {
+          width: 140px;
         }
       }
     }
@@ -79,9 +79,7 @@
       width: 44px;
       height: 44px;
       color: $DarkShade50;
-      font-size: 22px;
-      font-family: 'Material Icons', Arial, sans-serif;
-      line-height: 22px;
+      font: 22px/22px 'Material Icons', Arial, sans-serif;
       text-transform: initial;
       cursor: pointer;
       content: 'keyboard_arrow_down';
@@ -93,10 +91,8 @@
     z-index: 3;
     display: none;
     min-width: 260px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px 0;
     padding: 10px;
-    padding-top: 10px;
     background: #fff;
     border: 1px solid $DarkShade25;
     border-radius: 4px;

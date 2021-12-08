@@ -3,6 +3,7 @@
 @mixin link() {
   color: $DarkShade50;
   font-size: 12.8px;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
