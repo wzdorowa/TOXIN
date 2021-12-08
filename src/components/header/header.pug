@@ -6,33 +6,34 @@ mixin header()
   - const services = ['Аренда конференц-зала', 'Трансфер до отеля', 'Аренда транспорта', 'Камера хранения / сейф'];
   - const agreements = ['Обработка персональных данных', 'Условия бронирования'];
   .header
-    .header__grouping
-      .header__logo
-        +logo()
-      .header__user-icon.js-header__user-icon
-      .header__navigation-icon.js-header__navigation-icon
-    ul.header__navigation.js-header__navigation
-      each value, index in menu
-        - const itemName = value
-        - const suitableServices = itemName === 'Услуги'
-        - const suitableAgreements = itemName === 'Соглашения'
-        if(suitableServices || suitableAgreements)
-          li.header__title-submenu.js-header__title-submenu
-            span.header__text-title= value
-            ul.header__submenu.js-header__submenu
-              if(suitableServices)
-                each value in services
-                  li.header__submenu-item
-                    a.header__link(href='')= value
-              if(suitableAgreements)
-                each value in agreements
-                  li.header__submenu-item
-                    a.header__link(href='')= value
-        else
-          li.header__item
-            a.header__link(href='')= value
-    .header__user.js-header__user
-      .header__user-button-login
-        +button({text: 'Войти', decor: 'bordered', height: 'small', href: '../../pages/sign-in/sign-in.pug'})
-      .header__user-button-registration
-        +button({text: 'Зарегистрироваться', decor: 'solid', size: 'small', href: '../../pages/registration/registration.pug'})
+    .header__content
+      .header__grouping
+        .header__logo
+          +logo()
+        .header__user-icon.js-header__user-icon
+        .header__navigation-icon.js-header__navigation-icon
+      ul.header__navigation.js-header__navigation
+        each value, index in menu
+          - const itemName = value
+          - const suitableServices = itemName === 'Услуги'
+          - const suitableAgreements = itemName === 'Соглашения'
+          if(suitableServices || suitableAgreements)
+            li.header__title-submenu.js-header__title-submenu
+              span.header__text-title= value
+              ul.header__submenu.js-header__submenu
+                if(suitableServices)
+                  each value in services
+                    li.header__submenu-item
+                      a.header__link(href='')= value
+                if(suitableAgreements)
+                  each value in agreements
+                    li.header__submenu-item
+                      a.header__link(href='')= value
+          else
+            li.header__item
+              a.header__link(href='')= value
+      .header__user.js-header__user
+        .header__user-button-login
+          +button({text: 'Войти', decor: 'bordered', height: 'small', href: '../../pages/sign-in/sign-in.pug'})
+        .header__user-button-registration
+          +button({text: 'Зарегистрироваться', decor: 'solid', size: 'small', href: '../../pages/registration/registration.pug'})
