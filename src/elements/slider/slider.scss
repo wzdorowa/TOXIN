@@ -74,10 +74,11 @@
     display: flex;
 
     &-price {
-      max-width: 37px;
+      max-width: 40px;
       padding: 0;
       color: $DarkShade50;
       font-size: 12px;
+      font-family: inherit;
       line-height: 14.63px;
       text-align: right;
       text-transform: uppercase;
@@ -90,10 +91,11 @@
     display: flex;
 
     &-price {
-      max-width: 37px;
+      max-width: 40px;
       padding: 0;
       color: $DarkShade50;
       font-size: 12px;
+      font-family: inherit;
       line-height: 14.63px;
       text-align: right;
       text-transform: uppercase;
