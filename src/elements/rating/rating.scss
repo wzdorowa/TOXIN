@@ -1,36 +1,28 @@
-.rating {
-  position: relative;
-  display: flex;
-  list-style: none;
-  width: 100%;
-  padding: 0;
-  margin: 0;
+@mixin star() {
+  font: 22px 'Material Icons', Arial, sans-serif;
+  background: $PrimaryGradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-  &-item {
-    min-width: 24px;
-    min-height: 24px;
-    cursor: pointer;
+.rating {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    width: 24px;
+    height: 24px;
 
     &::before {
+      @include star();
       content: 'star_border';
-      position: absolute;
-      font-family: 'Material Icons', Arial, sans-serif;
-      font-size: 22px;
-      color: $Purple;
-      background: $PrimaryGradient;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
 
-    &.active::after {
+    &_active::before {
+      @include star();
       content: 'star';
-      position: absolute;
-      font-family: 'Material Icons', Arial, sans-serif;
-      font-size: 22px;
-      color: $Purple;
-      background: $PrimaryGradient;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
   }
 }

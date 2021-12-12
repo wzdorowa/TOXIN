@@ -1,6 +1,6 @@
 include ../../elements/rating/rating.pug
 
-mixin number-card({number = '100', text, cost = '1000', amount = '0', images, amountStar})
+mixin number-card({number = '100', text, cost = '1000', amount = '0', images, amountActiveStar})
   .number-card.js-number-card
     .number-card__slider
       each value, index in images
@@ -9,7 +9,7 @@ mixin number-card({number = '100', text, cost = '1000', amount = '0', images, am
       .number-card__next.js-number-card__next
     .number-card__slider-dots
       each value, index in images
-        span.number-card__switch-slider.js-number-card__switch-slider
+        button.number-card__switch-slider.js-number-card__switch-slider(type='button')
     .number-card__description
       .number-card__data
         a.number-card__specification(href='../../pages/room-details/room-details.pug', target='_blank')
@@ -24,7 +24,7 @@ mixin number-card({number = '100', text, cost = '1000', amount = '0', images, am
       .number-card__data-border
       .number-card__reviews
         .number-card__rate-group-button
-            +rating({amountStar})
+            +rating({amountActiveStar})
         .number-card__amount
           span.number-card__amount-reviews= amount
           span.number-card__amount-reviews-description

@@ -80,10 +80,7 @@
     }
   }
 
-  &__prev {
-    width: 44px;
-  }
-
+  &__prev,
   &__next {
     width: 44px;
   }
@@ -92,21 +89,16 @@
     position: relative;
     display: inline-block;
     width: 7px;
-    min-height: 7px;
-    margin-right: 3.3px;
+    height: 7px;
+    margin: 0;
+    margin-left: 3.75px;
+    padding: 0;
+    background: none;
+    border: 1px solid #fff;
     border-radius: 50%;
+    -webkit-box-shadow: 0 5px 5px rgb(31 32 65 / 25%);
+    box-shadow: 0 5px 5px rgb(31 32 65 / 25%);
     cursor: pointer;
-
-    &::after {
-      position: absolute;
-      display: block;
-      width: 7px;
-      height: 7px;
-      border: 1px solid #fff;
-      border-radius: 50%;
-      box-shadow: $cardShadow;
-      content: '';
-    }
 
     &-active {
       background-color: #fff;
@@ -123,9 +115,9 @@
     flex-direction: column;
     justify-content: space-evenly;
     min-height: 101px;
-    padding-top: 5px;
+    padding-top: 10px;
     padding-right: 17px;
-    padding-bottom: 10px;
+    padding-bottom: 7px;
     padding-left: 20px;
   }
 
@@ -133,7 +125,6 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-top: 5px;
 
     &-border {
       border-bottom: solid 1px $DarkShade10;
@@ -195,13 +186,13 @@
   &__reviews {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    //width: 100%;
+    padding-right: 4px;
   }
 
   &__rate-group-button {
     display: flex;
     justify-content: space-between;
-    width: 105px;
   }
 
   &__amount {
@@ -209,7 +200,7 @@
     align-items: center;
 
     &-reviews {
-      padding-right: 7px;
+      padding-right: 4px;
       color: $DarkShade50;
       font-weight: bold;
       line-height: 20px;
