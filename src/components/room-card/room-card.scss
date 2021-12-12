@@ -11,7 +11,7 @@
   top: 0;
   width: 25%;
   height: 100%;
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+  background-image: $BlackTransparent;
   content: '';
 }
 
@@ -150,15 +150,14 @@
   &__cost {
     display: flex;
     align-items: center;
+    color: $DarkShade50;
 
     &-room {
       padding-right: 5px;
-      color: $DarkShade50;
       font-weight: bold;
     }
 
     &-room-description {
-      color: $DarkShade50;
       font-size: 12px;
     }
   }
@@ -172,15 +171,11 @@
   &__amount {
     display: flex;
     align-items: center;
+    color: $DarkShade50;
 
     &-reviews {
       padding-right: 4px;
-      color: $DarkShade50;
       font-weight: bold;
-    }
-
-    &-reviews-description {
-      color: $DarkShade50;
     }
   }
 

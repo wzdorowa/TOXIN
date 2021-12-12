@@ -19,7 +19,7 @@ block title
     title Room details page
 block content
   .room-details
-    -const images = ['images/images-room/image1.png', 'images/images-room/image3.png', 'images/images-room/image2.png']
+    -const images = ['images/images-room/image1.jpeg', 'images/images-room/image3.jpeg', 'images/images-room/image2.jpeg']
     +collage(images)
     .room-details__content
       .room-details__information
@@ -30,7 +30,7 @@ block content
           .room-details__diagram
             +diagram({title: 'Впечатления от номера', impressions: {amazing: 130, good: 65, satisfactorily: 65, bad: 0}})
         .room-details__comment
-          -const commentList = [{userName: 'Мурад Сарафанов', date: '5 дней назад', srcImage: 'images/user-icon/Murad.png', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', amountLike: 12, likeChecked: 'checked'}, {userName: 'Патрисия Стёклышкова', date: 'Неделю назад', srcImage: 'images/user-icon/Patriziya.png', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', amountLike: 2, likeChecked: false }]
+          -const commentList = [{userName: 'Мурад Сарафанов', date: '5 дней назад', srcImage: 'images/user-icon/Murad.jpeg', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', amountLike: 12, likeChecked: 'checked'}, {userName: 'Патрисия Стёклышкова', date: 'Неделю назад', srcImage: 'images/user-icon/Patriziya.jpeg', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', amountLike: 2, likeChecked: false }]
           +comments({commentsList: commentList})
         .room-details__extra-info
           .room-details__rules
