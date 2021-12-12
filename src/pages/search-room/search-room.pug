@@ -8,7 +8,7 @@ include ../../components/date-dropdown/date-dropdown.pug
 include ../../elements/slider/slider.pug
 include ../../elements/checkbox-button/checkbox-button.pug
 include ../../elements/checkbox-list/checkbox-list.pug
-include ../../components/number-card/number-card.pug
+include ../../components/room-card/room-card.pug
 include ../../elements/pagination/pagination.pug
 
 block meta
@@ -74,28 +74,28 @@ block content
       h1.search-room__result-title Номера, которые мы для вас подобрали
       .search-room__result-cards-numbers
         .search-room__card-number
-          +number-card({number: '888', text: 'люкс', cost: '9 990', amount: '145', images: ['./images/images-rooms/image888.png', './images/images-rooms/image350.png', './images/images-rooms/image352.png', './images/images-rooms/image444.png'], amountActiveStar: '5'})
+          +room-card({number: '888', text: 'люкс', cost: '9 990', amount: '145', images: ['./images/images-rooms/image888.png', './images/images-rooms/image350.png', './images/images-rooms/image352.png', './images/images-rooms/image444.png'], amountActiveStar: '5'})
         .search-room__card-number
-          +number-card({number: '840', cost: '9 990', amount: '65', images: ['./images/images-rooms/image350.png', './images/images-rooms/image352.png', './images/images-rooms/image444.png', './images/images-rooms/image450.png'], amountActiveStar: '4'})
+          +room-card({number: '840', cost: '9 990', amount: '65', images: ['./images/images-rooms/image350.png', './images/images-rooms/image352.png', './images/images-rooms/image444.png', './images/images-rooms/image450.png'], amountActiveStar: '4'})
         .search-room__card-number
-          +number-card({number: '980', text: 'люкс', cost: '8 500', amount: '35', images: ['./images/images-rooms/image352.png', './images/images-rooms/image444.png', './images/images-rooms/image450.png', './images/images-rooms/image666.png'], amountActiveStar: '3'})
+          +room-card({number: '980', text: 'люкс', cost: '8 500', amount: '35', images: ['./images/images-rooms/image352.png', './images/images-rooms/image444.png', './images/images-rooms/image450.png', './images/images-rooms/image666.png'], amountActiveStar: '3'})
         .search-room__card-number
-          +number-card({number: '856', cost: '7 300', amount: '19', images: ['./images/images-rooms/image444.png', './images/images-rooms/image450.png', './images/images-rooms/image666.png', './images/images-rooms/image678.png'], amountActiveStar: '5'})
+          +room-card({number: '856', cost: '7 300', amount: '19', images: ['./images/images-rooms/image444.png', './images/images-rooms/image450.png', './images/images-rooms/image666.png', './images/images-rooms/image678.png'], amountActiveStar: '5'})
         .search-room__card-number
-          +number-card({number: '740', cost: '6 000', amount: '44', images: ['./images/images-rooms/image450.png', './images/images-rooms/image666.png', './images/images-rooms/image678.png', './images/images-rooms/image740.png'], amountActiveStar: '4'})
+          +room-card({number: '740', cost: '6 000', amount: '44', images: ['./images/images-rooms/image450.png', './images/images-rooms/image666.png', './images/images-rooms/image678.png', './images/images-rooms/image740.png'], amountActiveStar: '4'})
         .search-room__card-number
-          +number-card({number: '982', cost: '5 800', amount: '56', images: ['./images/images-rooms/image666.png', './images/images-rooms/image678.png', './images/images-rooms/image740.png', './images/images-rooms/image840.png'], amountActiveStar: '3'})
+          +room-card({number: '982', cost: '5 800', amount: '56', images: ['./images/images-rooms/image666.png', './images/images-rooms/image678.png', './images/images-rooms/image740.png', './images/images-rooms/image840.png'], amountActiveStar: '3'})
         .search-room__card-number
-          +number-card({number: '678', cost: '5 500', amount: '45', images: ['./images/images-rooms/image678.png', './images/images-rooms/image740.png', './images/images-rooms/image840.png', './images/images-rooms/image856.png'], amountActiveStar: '5'})
+          +room-card({number: '678', cost: '5 500', amount: '45', images: ['./images/images-rooms/image678.png', './images/images-rooms/image740.png', './images/images-rooms/image840.png', './images/images-rooms/image856.png'], amountActiveStar: '5'})
         .search-room__card-number
-          +number-card({number: '450', cost: '5 300', amount: '39', images: ['./images/images-rooms/image740.png', './images/images-rooms/image840.png', './images/images-rooms/image856.png', './images/images-rooms/image980.png'], amountActiveStar: '4'})
+          +room-card({number: '450', cost: '5 300', amount: '39', images: ['./images/images-rooms/image740.png', './images/images-rooms/image840.png', './images/images-rooms/image856.png', './images/images-rooms/image980.png'], amountActiveStar: '4'})
         .search-room__card-number
-          +number-card({number: '350', cost: '5 000', amount: '77', images: ['./images/images-rooms/image840.png', './images/images-rooms/image856.png', './images/images-rooms/image980.png', './images/images-rooms/image982.png'], amountActiveStar: '3'})
+          +room-card({number: '350', cost: '5 000', amount: '77', images: ['./images/images-rooms/image840.png', './images/images-rooms/image856.png', './images/images-rooms/image980.png', './images/images-rooms/image982.png'], amountActiveStar: '3'})
         .search-room__card-number
-          +number-card({number: '666', cost: '5 000', amount: '25', images: ['./images/images-rooms/image856.png', './images/images-rooms/image980.png', './images/images-rooms/image982.png', './images/images-rooms/image888.png'], amountActiveStar: '5'})
+          +room-card({number: '666', cost: '5 000', amount: '25', images: ['./images/images-rooms/image856.png', './images/images-rooms/image980.png', './images/images-rooms/image982.png', './images/images-rooms/image888.png'], amountActiveStar: '5'})
         .search-room__card-number
-          +number-card({number: '444', cost: '5 000', amount: '15', images: ['./images/images-rooms/image980.png', './images/images-rooms/image982.png', './images/images-rooms/image888.png', './images/images-rooms/image350.png'], amountActiveStar: '4'})
+          +room-card({number: '444', cost: '5 000', amount: '15', images: ['./images/images-rooms/image980.png', './images/images-rooms/image982.png', './images/images-rooms/image888.png', './images/images-rooms/image350.png'], amountActiveStar: '4'})
         .search-room__card-number
-          +number-card({number: '352', cost: '5 000', amount: '55', images: ['./images/images-rooms/image982.png', './images/images-rooms/image888.png', './images/images-rooms/image350.png', './images/images-rooms/image352.png'], amountActiveStar: '3'})
+          +room-card({number: '352', cost: '5 000', amount: '55', images: ['./images/images-rooms/image982.png', './images/images-rooms/image888.png', './images/images-rooms/image350.png', './images/images-rooms/image352.png'], amountActiveStar: '3'})
       .search-room__result-pagination
         +pagination({text: '1 – 12 из 100+ вариантов аренды'})

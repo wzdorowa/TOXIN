@@ -1,4 +1,4 @@
-class NumberCard {
+class RoomCard {
   constructor(element) {
     this.numberCardContainer = element;
     this.slides = null;
@@ -14,16 +14,16 @@ class NumberCard {
 
   _findElements() {
     this.slides = this.numberCardContainer.querySelectorAll(
-      '.js-number-card__content',
+      '.js-room-card__content',
     );
     this.dots = this.numberCardContainer.querySelectorAll(
-      '.js-number-card__switch-slider',
+      '.js-room-card__switch-slider',
     );
     this.buttonPrev = this.numberCardContainer.querySelector(
-      '.js-number-card__prev',
+      '.js-room-card__prev',
     );
     this.buttonNext = this.numberCardContainer.querySelector(
-      '.js-number-card__next',
+      '.js-room-card__next',
     );
   }
 
@@ -36,28 +36,28 @@ class NumberCard {
     }
     this.slides.forEach(element => {
       const slide = element;
-      if (!slide.classList.contains('number-card__content_display_hidden')) {
-        slide.classList.add('number-card__content_display_hidden');
+      if (!slide.classList.contains('room-card__content_display_hidden')) {
+        slide.classList.add('room-card__content_display_hidden');
       }
     });
     this.dots.forEach(element => {
       const slide = element;
       slide.className = element.className.replace(
-        ' number-card__switch-slider-active',
+        ' room-card__switch-slider-active',
         '',
       );
     });
     if (
       this.slides[this.slideIndex - 1].classList.contains(
-        'number-card__content_display_hidden',
+        'room-card__content_display_hidden',
       )
     ) {
       this.slides[this.slideIndex - 1].classList.remove(
-        'number-card__content_display_hidden',
+        'room-card__content_display_hidden',
       );
     }
     this.dots[this.slideIndex - 1].className +=
-      ' number-card__switch-slider-active';
+      ' room-card__switch-slider-active';
   }
 
   _currentSlide(slideNumber) {
@@ -90,7 +90,7 @@ class NumberCard {
     });
   }
 }
-const elements = document.querySelectorAll('.js-number-card');
+const elements = document.querySelectorAll('.js-room-card');
 elements.forEach(element => {
-  new NumberCard(element);
+  new RoomCard(element);
 });

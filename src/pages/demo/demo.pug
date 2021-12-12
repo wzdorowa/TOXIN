@@ -17,7 +17,7 @@ include ../../components/form-room-cost/form-room-cost.pug
 include ../../components/form-search-room/form-search-room.pug
 include ../../components/form-check-in/form-check-in.pug
 include ../../components/login/login.pug
-include ../../components/number-card/number-card.pug
+include ../../components/room-card/room-card.pug
 include ../../components/calendar/calendar.pug
 include ../../components/date-dropdown/date-dropdown.pug
 include ../../elements/logo/logo.pug
@@ -182,10 +182,10 @@ block content
                 .components-content__datepicker
                     +calendar()
                       .datepicker-here(data-range='true').js-datepicker-here
-                .components-content__number-card
-                    +number-card({number: '888', text: 'люкс', cost: '9 990', amount: '145', images: ['./images/images-rooms/image888.png', './images/images-rooms/image350.png', './images/images-rooms/image352.png', './images/images-rooms/image444.png'], amountStar: '5'})
-                .components-content__number-card
-                    +number-card({number: '840', text: 'люкс', cost: '9 990', amount: '65', images: ['./images/images-rooms/image350.png', './images/images-rooms/image352.png', './images/images-rooms/image444.png', './images/images-rooms/image450.png'], amountStar: '4'})
+                .components-content__room-card
+                    +room-card({number: '888', text: 'люкс', cost: '9 990', amount: '145', images: ['./images/images-rooms/image888.png', './images/images-rooms/image350.png', './images/images-rooms/image352.png', './images/images-rooms/image444.png'], amountStar: '5'})
+                .components-content__room-card
+                    +room-card({number: '840', text: 'люкс', cost: '9 990', amount: '65', images: ['./images/images-rooms/image350.png', './images/images-rooms/image352.png', './images/images-rooms/image444.png', './images/images-rooms/image450.png'], amountStar: '4'})
         .components-header
           .components-header__wrapper
             .components-header__container

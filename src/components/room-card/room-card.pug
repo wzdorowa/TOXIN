@@ -1,0 +1,31 @@
+include ../../elements/rating/rating.pug
+
+mixin room-card({number = '100', text, cost = '1000', amount = '0', images, amountActiveStar})
+  .room-card.js-room-card
+    .room-card__slider
+      each value, index in images
+        img.room-card__content.js-room-card__content(src=`${value}`, alt=`Room №${number}`)
+      .room-card__prev.js-room-card__prev
+      .room-card__next.js-room-card__next
+    .room-card__slider-dots
+      each value, index in images
+        button.room-card__switch-slider.js-room-card__switch-slider(type='button')
+    .room-card__description
+      .room-card__data
+        a.room-card__specification(href='../../pages/room-details/room-details.pug', target='_blank')
+          .room-card__specification-group
+            span.room-card__sign-number №
+            span.room-card__number= number
+            span.room-card__kind= text
+        .room-card__cost
+          span.room-card__cost-room= cost
+            | &#x20bd
+          span.room-card__cost-room-description в сутки
+      .room-card__data-border
+      .room-card__reviews
+        .room-card__rate-group-button
+            +rating({amountActiveStar})
+        .room-card__amount
+          span.room-card__amount-reviews= amount
+          span.room-card__amount-reviews-description
+            |  Отзывов
