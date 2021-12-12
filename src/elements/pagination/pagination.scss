@@ -2,10 +2,10 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
+    width: 255px;
     margin: 0;
     padding: 0;
-    width: 255px;
+    list-style: none;
   }
 
   &__item {
@@ -13,16 +13,16 @@
     display: inline-block;
     width: 40px;
     min-height: 40px;
+    color: $DarkShade50;
     font-size: 12px;
     line-height: 40px;
     text-align: center;
-    color: $DarkShade50;
     cursor: pointer;
 
     &:first-child {
       width: 40px;
-      font-weight: bold;
       color: #fff;
+      font-weight: bold;
       background: $PrimaryGradient;
       border-radius: 50%;
     }
@@ -34,27 +34,27 @@
 
       &::before {
         position: absolute;
-        content: 'arrow_forward';
-        width: 24px;
-        height: 24px;
         top: 8px;
         left: 8px;
-        font-family: 'Material Icons', Arial, sans-serif;
-        font-size: 24px;
-        line-height: 24px;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        text-transform: initial;
+        width: 24px;
+        height: 24px;
         color: white;
+        font-size: 24px;
+        font-family: 'Material Icons', Arial, sans-serif;
+        line-height: 24px;
+        text-transform: initial;
+        content: 'arrow_forward';
       }
     }
   }
 
   &__description {
     display: inline-block;
-    line-height: 24px;
-    margin-top: 5px;
+    margin-top: 15px;
     padding-left: 5px;
+    line-height: 24px;
   }
 }
