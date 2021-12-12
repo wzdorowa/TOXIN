@@ -199,7 +199,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       max-width: 230px;
-      min-height: 133px;
+      min-height: 135px;
       margin-top: 30px;
 
       &-title {
@@ -225,20 +225,21 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      max-width: 240px;
+      max-width: 255px;
       min-height: 150px;
-      margin-top: 20px;
+      margin-top: 17px;
 
       &-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        min-height: 113px;
+        min-height: 115px;
       }
     }
 
     &-item-title {
-      margin-bottom: 5px;
+      margin-top: 8px;
+      margin-bottom: 15px;
       color: $DarkShade100;
       font-weight: bold;
       font-size: 12px;
@@ -247,7 +248,7 @@
     }
 
     &-dropdown {
-      margin-top: 33px;
+      margin-top: 30px;
     }
 
     &-options {

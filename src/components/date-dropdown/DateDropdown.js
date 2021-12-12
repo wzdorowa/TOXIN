@@ -55,8 +55,12 @@ class DateDropdown {
         new Date(newFormatDayFrom),
         new Date(newFormatDayTo),
       ]);
-      this.inputs[0].value = this.dayFrom;
-      this.inputs[1].value = this.dayTo;
+      if (this.inputs.length > 1) {
+        this.inputs[0].value = this.dayFrom;
+        this.inputs[1].value = this.dayTo;
+      } else {
+        this.inputs[0].value = `${this.dayFrom} - ${this.dayTo}`;
+      }
 
       this.showButtonClear();
 

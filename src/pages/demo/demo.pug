@@ -74,28 +74,28 @@ block content
                 input.components__input(type='email', placeholder='Email')
         .components__elements.components__elements_column_first
             .components__checkbox-buttons
-                h1.buttons-title Chechbox buttons
+                label.buttons-title Chechbox buttons
                 +checkbox-button({value: 'Можно курить'})
                 +checkbox-button({value: 'Можно с питомцами', checked: 'checked'})
                 +checkbox-button({value: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
             .components__radio-buttons
-                h1.buttons-title Radio buttons
+                label.buttons-title Radio buttons
                 .components__radio-buttons-string
                     +radio-button({text: 'Мужчина', checked: 'checked', name: 'gender'})
                     +radio-button({text:'Женщина', name: 'gender'})
             .components__toggle
-                h1.buttons-title Toggle
+                label.buttons-title Toggle
                 +toggle({text: 'Получать спецпредложения', checked: 'checked'})
                 +toggle({text: 'Получать спецпредложения'})
             .components__like-button
-                h1.buttons-title Like button
+                label.buttons-title Like button
                 .components__like-button-string
                   .components__like-button-content
                     +like-button({text: '2'})
                   .components__like-button-content
                     +like-button({text: '12', checked: 'checked'})
             .components__rate-button
-              h1.buttons-title Rate button
+              label.buttons-title Rate button
               .components__rate-button-string
                   .components__rate-button-group
                       +rating({amountStar: '4'})
@@ -105,7 +105,7 @@ block content
             .components__range-slider
                 +slider({text: 'Range Slider'})
             .components__base-button
-                h1.buttons-title Buttons
+                label.buttons-title Buttons
                 .components__base-button-content.components__base-button-content_small
                   +button({text: 'Click Me', decor: 'solid', size: 'large'})
                 .components__base-button-content.components__base-button-content_small
@@ -115,7 +115,7 @@ block content
                 .components__base-button-content.components__base-button-content_big
                   +button({text: 'Перейти к оплате', decor: 'solid', directed: true, size: 'large'})
             .components__pagination
-                h1.buttons-title Pagination
+                label.buttons-title Pagination
                 +pagination({text: '1 - 12 из 100+ вариантов аренды'})
     .components
       .components__wrapper
@@ -134,7 +134,7 @@ block content
             - const checkboxList = [{value: 'Завтрак'}, {value: 'Письменный стол', checked: 'checked'}, {value: 'Стул для кормления', checked: 'checked'}, {value: 'Кроватка', checked: 'checked'}, {value: 'Телевизор'}, {value: 'Шампунь'}, {value: 'Телевизор'}, {value: 'Шампунь'}]
             +checkbox-list({text: 'Expandable checkbox list', checkboxList})
         .components__rich-checkbox-buttons
-            h1.buttons-title Rich checkbox buttons
+            label.buttons-title Rich checkbox buttons
             .components__rich-checkbox-buttons-list
               +checkbox-button({
                 value: 'Широкий коридор',
@@ -147,7 +147,7 @@ block content
                 description: 'На 1 этаже вас встретит специалист и проводит до номера.'
                 })
         .components__bullet-list
-            h1.buttons-title Bullet list
+            label.buttons-title Bullet list
             - const rules = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
             +bulleted-list({values: rules})
     .components

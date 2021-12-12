@@ -5,12 +5,14 @@ $('.js-slider__range').slider({
   range: true,
   animate: 'fast',
   slide(event, ui) {
-    $('.js-slider__left-price').val(ui.values[0]);
-    $('.js-slider__right-price').val(ui.values[1]);
+    $('.js-slider__left-price').val(ui.values[0].toLocaleString('ru-RU'));
+    $('.js-slider__right-price').val(ui.values[1].toLocaleString('ru-RU'));
   },
 });
-$('.js-slider__left-price').val($('.js-slider__range').slider('values', 0));
-$('.js-slider__right-price').val($('.js-slider__range').slider('values', 1));
+
+$('.js-slider__left-price').val('5 000');
+$('.js-slider__right-price').val('10 000');
+
 $('.js-slider__range').focusout(() => {
   let inputLeft = $('.js-slider__left-price')
     .val()
@@ -40,7 +42,8 @@ $('.js-slider__range').focusout(() => {
   if (inputRight === '') {
     inputRight = 0;
   }
-  $('.js-slider__left-price').val(inputLeft);
-  $('.js-slider__right-price').val(inputRight);
+
+  $('.js-slider__left-price').val(Number(inputLeft).toLocaleString('ru-RU'));
+  $('.js-slider__right-price').val(Number(inputRight).toLocaleString('ru-RU'));
   $('.js-slider__range').slider('values', [inputLeft, inputRight]);
 });

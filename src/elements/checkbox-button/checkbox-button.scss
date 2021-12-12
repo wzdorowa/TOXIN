@@ -1,19 +1,17 @@
 .checkbox-button {
-  line-height: 20px;
   color: $DarkShade50;
+  line-height: 20px;
 
   &__filter {
     position: relative;
     display: flex;
 
     & input[type='checkbox']:checked {
-
       & + .checkbox-button__indicator {
         border: 1px solid $Purple;
       }
 
       & + .checkbox-button__indicator::before {
-        content: '';
         position: absolute;
         top: 4.5px;
         left: 5px;
@@ -23,7 +21,8 @@
         border-right: 2px solid;
         border-image: $PrimaryGradient;
         border-image-slice: 1;
-        transform: rotate(135deg); 
+        transform: rotate(135deg);
+        content: '';
       }
     }
   }
@@ -43,23 +42,20 @@
   }
 
   &__value {
-    line-height: 18px;
-    padding-left: 28px;
+    padding-left: 30px;
     cursor: pointer;
 
     &_bold {
-      font-weight: bold;
-      line-height: 18px;
       padding-top: 1px;
+      font-weight: bold;
     }
   }
 
   &__description {
-    font-size: 12px;
-    padding-left: 28px;
     padding-top: 5px;
-    letter-spacing: 0em;
+    padding-left: 30px;
+    font-size: 12px;
+    line-height: 14px;
     text-align: left;
-    min-width: 255px;
   }
 }

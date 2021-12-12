@@ -14,7 +14,7 @@
   &__description {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   &__title {
@@ -67,14 +67,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 107px;
+    min-width: 108px;
   }
 
   &__left {
     display: flex;
 
     &-price {
-      max-width: 40px;
+      max-width: 37px;
+      padding: 0;
       color: $DarkShade50;
       font-size: 12px;
       line-height: 14.63px;
@@ -89,7 +90,8 @@
     display: flex;
 
     &-price {
-      max-width: 40px;
+      max-width: 37px;
+      padding: 0;
       color: $DarkShade50;
       font-size: 12px;
       line-height: 14.63px;
