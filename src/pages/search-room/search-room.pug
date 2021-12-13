@@ -17,6 +17,7 @@ block meta
 block title
     title Search room page
 block content
+  -const rooms = [{number: '888', text: 'люкс', cost: '9 990', amount: '145', images: ['./images/image888.jpeg', './images/image350.jpeg', './images/image352.jpeg', './images/image444.jpeg'], amountActiveStar: '5'}, {number: '840', cost: '9 990', amount: '65', images: ['./images/image350.jpeg', './images/image352.jpeg', './images/image444.jpeg', './images/image450.jpeg'], amountActiveStar: '4'}, {number: '980', text: 'люкс', cost: '8 500', amount: '35', images: ['./images/image352.jpeg', './images/image444.jpeg', './images/image450.jpeg', './images/image666.jpeg'], amountActiveStar: '3'}, {number: '856', cost: '7 300', amount: '19', images: ['./images/image444.jpeg', './images/image450.jpeg', './images/image666.jpeg', './images/image678.jpeg'], amountActiveStar: '5'}, {number: '740', cost: '6 000', amount: '44', images: ['./images/image450.jpeg', './images/image666.jpeg', './images/image678.jpeg', './images/image740.jpeg'], amountActiveStar: '4'}, {number: '982', cost: '5 800', amount: '56', images: ['./images/image666.jpeg', './images/image678.jpeg', './images/image740.jpeg', './images/image840.jpeg'], amountActiveStar: '3'}, {number: '678', cost: '5 500', amount: '45', images: ['./images/image678.jpeg', './images/image740.jpeg', './images/image840.jpeg', './images/image856.jpeg'], amountActiveStar: '5'}, {number: '450', cost: '5 300', amount: '39', images: ['./images/image740.jpeg', './images/image840.jpeg', './images/image856.jpeg', './images/image980.jpeg'], amountActiveStar: '4'}, {number: '350', cost: '5 000', amount: '77', images: ['./images/image840.jpeg', './images/image856.jpeg', './images/image980.jpeg', './images/image982.jpeg'], amountActiveStar: '3'}, {number: '666', cost: '5 000', amount: '25', images: ['./images/image856.jpeg', './images/image980.jpeg', './images/image982.jpeg', './images/image888.jpeg'], amountActiveStar: '5'}, {number: '444', cost: '5 000', amount: '15', images: ['./images/image980.jpeg', './images/image982.jpeg', './images/image888.jpeg', './images/image350.jpeg'], amountActiveStar: '4'}, {number: '352', cost: '5 000', amount: '55', images: ['./images/image982.jpeg', './images/image888.jpeg', './images/image350.jpeg', './images/image352.jpeg'], amountActiveStar: '3'}];
   .search-room__content
     .search-room__filter-access.js-search-room__filter-access
       label.search-room__filter-access-title Дополнительные параметры
@@ -85,29 +86,8 @@ block content
     .search-room__result
       label.search-room__result-title Номера, которые мы для вас подобрали
       .search-room__result-cards-numbers
-        .search-room__card-number
-          +room-card({number: '888', text: 'люкс', cost: '9 990', amount: '145', images: ['./images/image888.jpeg', './images/image350.jpeg', './images/image352.jpeg', './images/image444.jpeg'], amountActiveStar: '5'})
-        .search-room__card-number
-          +room-card({number: '840', cost: '9 990', amount: '65', images: ['./images/image350.jpeg', './images/image352.jpeg', './images/image444.jpeg', './images/image450.jpeg'], amountActiveStar: '4'})
-        .search-room__card-number
-          +room-card({number: '980', text: 'люкс', cost: '8 500', amount: '35', images: ['./images/image352.jpeg', './images/image444.jpeg', './images/image450.jpeg', './images/image666.jpeg'], amountActiveStar: '3'})
-        .search-room__card-number
-          +room-card({number: '856', cost: '7 300', amount: '19', images: ['./images/image444.jpeg', './images/image450.jpeg', './images/image666.jpeg', './images/image678.jpeg'], amountActiveStar: '5'})
-        .search-room__card-number
-          +room-card({number: '740', cost: '6 000', amount: '44', images: ['./images/image450.jpeg', './images/image666.jpeg', './images/image678.jpeg', './images/image740.jpeg'], amountActiveStar: '4'})
-        .search-room__card-number
-          +room-card({number: '982', cost: '5 800', amount: '56', images: ['./images/image666.jpeg', './images/image678.jpeg', './images/image740.jpeg', './images/image840.jpeg'], amountActiveStar: '3'})
-        .search-room__card-number
-          +room-card({number: '678', cost: '5 500', amount: '45', images: ['./images/image678.jpeg', './images/image740.jpeg', './images/image840.jpeg', './images/image856.jpeg'], amountActiveStar: '5'})
-        .search-room__card-number
-          +room-card({number: '450', cost: '5 300', amount: '39', images: ['./images/image740.jpeg', './images/image840.jpeg', './images/image856.jpeg', './images/image980.jpeg'], amountActiveStar: '4'})
-        .search-room__card-number
-          +room-card({number: '350', cost: '5 000', amount: '77', images: ['./images/image840.jpeg', './images/image856.jpeg', './images/image980.jpeg', './images/image982.jpeg'], amountActiveStar: '3'})
-        .search-room__card-number
-          +room-card({number: '666', cost: '5 000', amount: '25', images: ['./images/image856.jpeg', './images/image980.jpeg', './images/image982.jpeg', './images/image888.jpeg'], amountActiveStar: '5'})
-        .search-room__card-number
-          +room-card({number: '444', cost: '5 000', amount: '15', images: ['./images/image980.jpeg', './images/image982.jpeg', './images/image888.jpeg', './images/image350.jpeg'], amountActiveStar: '4'})
-        .search-room__card-number
-          +room-card({number: '352', cost: '5 000', amount: '55', images: ['./images/image982.jpeg', './images/image888.jpeg', './images/image350.jpeg', './images/image352.jpeg'], amountActiveStar: '3'})
+        each room in rooms
+          .search-room__card-number
+            +room-card(room)
       .search-room__result-pagination
         +pagination({text: '1 – 12 из 100+ вариантов аренды'})
