@@ -23,21 +23,9 @@ block content
       label.search-room__filter-access-title Дополнительные параметры
     .search-room__filter.js-search-room__filter
       .search-room__filter-inputs
-        - const options = {month: 'short', day: 'numeric'}
-        - const toDate = new Date();
-        - let fromDate = new Date();
-        - fromDate.setDate(fromDate.getDate() + 4);
-        - let toDateShort = Array.from(toDate.toLocaleString('ru-RU', options));
-        - toDateShort.pop();
-        - const newToDateShort = toDateShort.join('');
-        - const fromDateShort = Array.from(fromDate.toLocaleString('ru-RU', options));
-        - fromDateShort.pop();
-        - const newFromDateShort = fromDateShort.join('');
-        - const landingUserDate = [newToDateShort, newFromDateShort]
         +date-dropdown({
           labelArray: ['Даты пребывания в отеле'],
           datesFormat: ['ДД.ММ - ДД.ММ'],
-          userDates: landingUserDate,
           size: 'large',
           amountField: 'with-one-input',})
         .search-room__filter-input

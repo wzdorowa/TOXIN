@@ -2,7 +2,7 @@ include ../../components/calendar/calendar.pug
 include ../../components/dropdown/dropdown.pug
 include ../../elements/tooltip/tooltip.pug
 
-mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'], userDates} = {})
+mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']} = {})
     .form-room-cost
       .form-room-cost__identification-room
           .form-room-cost__specification-room
@@ -12,8 +12,7 @@ mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat =
           .form-room-cost__room-cost
             span.form-room-cost__cost= `${cost}`
             span.form-room-cost__cost-text= 'в сутки'
-      - const label = ['Прибытие', 'Выезд']
-      +date-dropdown({labelArray: label, dates: dateFormat, userDates: userDates, size: 'small', amountField: 'with-two-inputs'})
+      +date-dropdown({labelArray: ['Прибытие', 'Выезд'], dates: dateFormat, size: 'small', amountField: 'with-two-inputs'})
       .form-room-cost__dropdown-container
         - const dataForDropdown = [{subjectOfCalculation: 'Взрослые', count: '2'}, {subjectOfCalculation: 'Дети', count: '1'}, {subjectOfCalculation: 'Младенцы', count: '0'}]
         +dropdown({

@@ -53,18 +53,15 @@ block content
               .components__input-container
                 +input-date
             .components__inputs-item
-                - const dateDropdownLabels = ['Date dropdown', 'Date dropdown']
                 +date-dropdown({
-                  labelArray: dateDropdownLabels,
+                  labelArray: ['Date dropdown', 'Date dropdown'],
                   size: 'small',
                   amountField: 'with-two-inputs'
                 })
             .components__inputs-item.components__inputs-item_width_medium
-                - const filterDatesDropdown = ['ДД.ММ - ДД.ММ']
-                - const filterDateDropdownLabel = ['Filter date dropdown']
                 +date-dropdown({
-                  labelArray: filterDateDropdownLabel,
-                  datesFormat: filterDatesDropdown,
+                  labelArray: ['Filter date dropdown'],
+                  datesFormat: ['ДД.ММ - ДД.ММ'],
                   size: 'large',
                   amountField: 'with-one-input',
                 })
@@ -173,9 +170,7 @@ block content
                     +form-check-in({text: 'Регистрация аккаунта'})
             .components-content__item
                 .components-content__result-search-room
-                    - const resultSearchRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
-                    - const resultSearchRoomUserDate = ['13.10.2021', '15.12.2021']
-                    +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: resultSearchRoomDateFormat, userDates: resultSearchRoomUserDate})
+                    +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']})
                 .components-content__login
                     +login({text: 'Вход'})
             .components-content__item

@@ -41,11 +41,4 @@ block content
             p.room-details__cancel-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
       .room-details__reservation-card
         .room-details__form-room-cost
-          - const roomDetailsRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
-          - const toDate = new Date();
-          - let fromDate = new Date();
-          - fromDate.setDate(fromDate.getDate() + 4);
-          - const toDateShort = toDate.toISOString().replace(/T.*/,'').split('-').reverse().join('.');
-          - const fromDateShort = fromDate.toISOString().replace(/T.*/,'').split('-').reverse().join('.');
-          - const roomDetailsRoomUserDate = [toDateShort, fromDateShort]
-          +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: roomDetailsRoomDateFormat, userDates: roomDetailsRoomUserDate})
+          +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']})

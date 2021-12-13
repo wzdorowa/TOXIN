@@ -11,13 +11,13 @@ class DateDropdown {
     this.dayTo = '';
     this.dates = [];
 
-    this.findElement();
-    this.setUserDataToCalendar();
-    this.bindEventListeners();
-    this.setValueToInput();
+    this._findElement();
+    this._setDefaultDate();
+    this._bindEventListeners();
+    this._setValueToInput();
   }
 
-  findElement() {
+  _findElement() {
     this.datepicker = this.datepickerGroup.querySelector(
       '.js-date-dropdown__datepicker',
     );
@@ -39,126 +39,141 @@ class DateDropdown {
     );
   }
 
-  setUserDataToCalendar() {
-    this.dayFrom = this.calendar.dataset.dayFrom;
-    this.dayTo = this.calendar.dataset.dayTo;
-    const isDayFrom = this.dayFrom !== undefined && this.dayFrom !== '';
-    const isDayTo = this.dayTo !== undefined && this.dayTo !== '';
-    const isVerify = isDayFrom && isDayTo;
+  _setDefaultDate() {
+    const today = new Date();
+    const dayAfter = new Date();
+    dayAfter.setDate(dayAfter.getDate() + 4);
 
-    if (isVerify) {
-      const datepicker = $(this.calendar).datepicker().data('datepicker');
+    const datepicker = $(this.calendar).datepicker().data('datepicker');
 
-      const newFormatDayFrom = this.dayFrom.split('.').reverse().join('-');
-      const newFormatDayTo = this.dayTo.split('.').reverse().join('-');
-      datepicker.selectDate([
-        new Date(newFormatDayFrom),
-        new Date(newFormatDayTo),
-      ]);
-      if (this.inputs.length > 1) {
-        this.inputs[0].value = this.dayFrom;
-        this.inputs[1].value = this.dayTo;
-      } else {
-        this.inputs[0].value = `${this.dayFrom} - ${this.dayTo}`;
-      }
+    datepicker.selectDate([today, dayAfter]);
+    if (this.inputs.length > 1) {
+      const todayShort = today
+        .toISOString()
+        .replace(/T.*/, '')
+        .split('-')
+        .reverse()
+        .join('.');
+      const dayAfterShort = dayAfter
+        .toISOString()
+        .replace(/T.*/, '')
+        .split('-')
+        .reverse()
+        .join('.');
 
-      this.showButtonClear();
+      this.inputs[0].value = todayShort;
+      this.inputs[1].value = dayAfterShort;
+    } else {
+      const options = { month: 'short', day: 'numeric' };
+      const todayShort = Array.from(today.toLocaleString('ru-RU', options));
+      todayShort.pop();
+      const formatTodayShort = todayShort.join('');
+      const dayAfterShort = Array.from(
+        dayAfter.toLocaleString('ru-RU', options),
+      );
+      dayAfterShort.pop();
+      const formatDayAfterShort = dayAfterShort.join('');
 
-      $(this.calendar).datepicker({
-        moveToOtherMonthsOnSelect: false,
-      });
+      this.inputs[0].value = `${formatTodayShort} - ${formatDayAfterShort}`;
     }
+
+    this._showButtonClear();
+
+    $(this.calendar).datepicker({
+      moveToOtherMonthsOnSelect: false,
+    });
   }
 
-  addClass() {
+  _addClass() {
     this.datepicker.classList.add('date-dropdown__datepicker_visible');
   }
 
-  removeClass() {
+  _removeClass() {
     this.datepicker.classList.remove('date-dropdown__datepicker_visible');
   }
 
-  toggleClass() {
+  _toggleClass() {
     this.datepicker.classList.toggle('date-dropdown__datepicker_visible');
   }
 
-  clearValues() {
+  _clearValues() {
     const $myCalendar = $(this.datepickerGroup).find('.js-datepicker-here');
     const $calendar = $($myCalendar).datepicker().data('datepicker');
     $calendar.clear();
     this.inputs.forEach(element => {
-      element.value = '';
+      const input = element;
+      input.value = '';
     });
   }
 
-  hideButtonClear() {
+  _hideButtonClear() {
     if (!this.buttonClear.classList.contains('calendar__button-clear_hidden')) {
       this.buttonClear.classList.add('calendar__button-clear_hidden');
     }
   }
 
-  showButtonClear() {
+  _showButtonClear() {
     if (this.buttonClear.classList.contains('calendar__button-clear_hidden')) {
       this.buttonClear.classList.remove('calendar__button-clear_hidden');
     }
   }
 
-  handleInputContentFocus() {
-    this.toggleClass();
+  _handleInputContentFocus() {
+    this._toggleClass();
   }
 
-  handleIconArrowDownClick() {
-    this.toggleClass();
+  _handleIconArrowDownClick() {
+    this._toggleClass();
   }
 
-  handleButtonsContainerForApplyClick() {
-    this.removeClass();
+  _handleButtonsContainerForApplyClick() {
+    this._removeClass();
   }
 
-  handleButtonsContainerForClearClick() {
-    this.clearValues();
-    this.hideButtonClear();
+  _handleButtonsContainerForClearClick() {
+    this._clearValues();
+    this._hideButtonClear();
   }
 
-  handleDocumentClick(event) {
+  _handleDocumentClick(event) {
     if (!this.datepickerGroup.contains(event.target)) {
-      this.removeClass();
+      this._removeClass();
       if (this.dates.length === 1) {
-        this.clearValues();
-        this.hideButtonClear();
+        this._clearValues();
+        this._hideButtonClear();
       }
     }
   }
 
-  bindEventListeners() {
+  _bindEventListeners() {
     this.elementsInput.forEach(elementInput => {
       elementInput.addEventListener(
         'click',
-        this.handleInputContentFocus.bind(this),
+        this._handleInputContentFocus.bind(this),
       );
     });
     this.dropdownsArrow.forEach(dropdownArrow => {
       dropdownArrow.addEventListener(
         'click',
-        this.handleIconArrowDownClick.bind(this),
+        this._handleIconArrowDownClick.bind(this),
       );
     });
     this.buttonApply.addEventListener(
       'click',
-      this.handleButtonsContainerForApplyClick.bind(this),
+      this._handleButtonsContainerForApplyClick.bind(this),
     );
     this.buttonClear.addEventListener(
       'click',
-      this.handleButtonsContainerForClearClick.bind(this),
+      this._handleButtonsContainerForClearClick.bind(this),
     );
     document.addEventListener(
       'click',
-      this.handleDocumentClick.bind(this),
+      this._handleDocumentClick.bind(this),
       true,
     );
   }
 
-  setValueToInput() {
+  _setValueToInput() {
     if (
       $(this.calendar).parents('.date-dropdown__datepicker_with-one-input')
         .length === 1
@@ -183,7 +198,7 @@ class DateDropdown {
             });
             input.value = string;
 
-            this.showButtonClear();
+            this._showButtonClear();
           }
         },
       });
@@ -213,7 +228,7 @@ class DateDropdown {
           inputs[0].value = dayFrom;
           inputs[1].value = dayTo;
 
-          this.showButtonClear();
+          this._showButtonClear();
         },
       });
     }
