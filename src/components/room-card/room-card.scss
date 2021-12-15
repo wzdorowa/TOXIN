@@ -71,7 +71,7 @@
 
   &__content {
     display: block;
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
     object-position: 50% 50%;
     border-top-left-radius: 4px;
@@ -86,8 +86,8 @@
 
   &__slider-dots {
     position: absolute;
-    top: 47.5%;
     right: 15px;
+    bottom: 118px;
   }
 
   &__switch-slider {

@@ -6,14 +6,10 @@
   &__input {
     font-weight: bold;
     font-size: 12px;
-    text-transform: uppercase;
   }
 
   &__input-label {
     color: $DarkShade100;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 14.63px;
     text-transform: uppercase;
   }
 
@@ -65,7 +61,6 @@
       color: $DarkShade50;
       font-size: 22px;
       font-family: 'Material Icons', Arial, sans-serif;
-      text-transform: initial;
       cursor: pointer;
       content: 'keyboard_arrow_down';
     }

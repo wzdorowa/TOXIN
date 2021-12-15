@@ -1,249 +1,152 @@
+@mixin flexColumn() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@mixin size($width, $height, $top, $bottom) {
+  max-width: $width;
+  min-height: $height;
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin filter($size, $translate) {
+  background-color: #fff;
+  border: 2px solid $Purple;
+  border-left: none;
+  border-top-right-radius: $size;
+  border-bottom-right-radius: $size;
+  box-shadow: $primaryShadow;
+  transform: translateX($translate);
+  transition: all 0.5s ease-in-out;
+}
+
 .search-room {
-  &__wrapper {
-    margin-right: auto;
-    margin-left: auto;
-
-    @media (width: 280px) {
-      min-height: 4720px;
-    }
-
-    @media (width: 320px) {
-      min-height: 4660px;
-    }
-
-    @media (width: 360px) {
-      min-height: 4690px;
-    }
-
-    @media (width: 375px) {
-      min-height: 4860px;
-    }
-
-    @media (width: 411px) {
-      min-height: 4870px;
-    }
-
-    @media (width: 414px) {
-      min-height: 4785px;
-    }
-
-    @media (width: 540px) {
-      min-height: 2990px;
-    }
-
-    @media (width: 768px) {
-      min-height: 3180px;
-    }
-
-    @media (width: 1024px) {
-      min-height: 3500px;
-    }
-  }
-
-  &__header {
-    min-width: 280px;
-    min-height: 70px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #fff;
-    box-shadow: $primaryShadow;
-
-    @media (min-width: 720px) {
-      min-width: 720px;
-    }
-
-    @media (min-width: 1160px) {
-      min-width: 1160px;
-    }
-
-    &-container {
-      min-width: 280px;
-      margin-right: 10px;
-      margin-left: 10px;
-
-      @media (min-width: 720px) {
-        min-width: 720px;
-      }
-
-      @media (min-width: 1160px) {
-        flex-direction: row;
-        max-width: 1160px;
-        min-height: 64px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-    }
-  }
-
   &__content {
     position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    min-width: 280px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 30px;
-
-    @media (min-width: 321px) {
-      min-width: 321px;
-    }
-
-    @media (min-width: 480px) {
-      min-width: 480px;
-    }
-
-    @media (min-width: 720px) {
-      min-width: 720px;
-    }
+    padding: 30px 20px 0 20px;
 
     @media (min-width: 1024px) {
-      flex-direction: row;
       align-items: flex-start;
-      min-width: 1024px;
     }
 
-    @media (min-width: 1136px) {
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-between;
-      min-width: 1136px;
-      max-width: 1170px;
+    @media (min-width: 1200px) {
+      width: 1160px;
+      padding: 30px 0 0 0;
     }
   }
 
-  &__filter-access {
+  &__filter-button {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+
+    @include filter(10px, 0);
+
     @media (min-width: 1024px) {
       display: none;
     }
 
-    &-title {
-      position: relative;
-      display: inline-block;
-      margin: 0;
-      padding-right: 30px;
-      padding-bottom: 30px;
-      color: $DarkShade100;
-      font-weight: bold;
-      font-size: 15px;
-      line-height: 17px;
+    &::after {
+      @include fontMaterialIcons;
+      position: absolute;
+      top: 9px;
+      left: 5px;
+      font-size: 27px;
+      background: $DarkShade50;
+      -webkit-background-clip: text;
+      content: 'swap_horiz';
+      -webkit-text-fill-color: transparent;
+    }
 
-      @media (min-width: 320px) {
-        font-size: 17px;
-      }
+    &:hover {
+      cursor: pointer;
 
-      &::before {
-        position: absolute;
-        top: -2px;
-        right: 0;
-        font-size: 20px;
-        font-family: 'Material Icons', Arial, sans-serif;
-        line-height: 20px;
-        text-transform: initial;
-        content: 'filter_list';
+      &::after {
+        background: $PrimaryGradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
+    }
+
+    &_open {
+      transform: translateX(280px);
     }
   }
 
   &__filter {
-    display: flex;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    min-width: 265px;
-    padding-bottom: 30px;
+    @include flexColumn;
+    position: absolute;
+    top: 0;
+    left: -280px;
+    z-index: 1;
+    width: 280px;
+    padding: 10px;
 
-    @media (min-width: 650px) {
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      min-width: 40%;
-      margin-right: auto;
-      margin-left: auto;
-    }
+    @include filter(5px, -280px);
 
     @media (min-width: 1024px) {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-between;
+      position: static;
       min-width: 265px;
-      margin-top: 1px;
-      margin-left: 4px;
+      margin: 1px 5.2% 0 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      transform: none;
+    }
+
+    &_open {
+      transform: translateX(280px);
+
+      @media (min-width: 1024px) {
+        transform: none;
+      }
     }
 
     &-inputs {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 147px;
-      margin-bottom: 15px;
+      @include flexColumn;
+      @include size(none, 147px, none, 15px);
     }
 
     &-range-slider {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 100%;
-      min-height: 71px;
-      margin-top: 17px;
+      @include flexColumn;
+      @include size(none, 72px, 17px, none);
 
       &-description {
-        display: block;
         color: $DarkShade50;
         font-size: 12px;
       }
     }
 
     &-checkbox-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      max-width: 230px;
-      min-height: 135px;
-      margin-top: 30px;
-
-      &-title {
-        margin-top: 0;
-        margin-bottom: 15px;
-        color: $DarkShade100;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 14.63px;
-        text-transform: uppercase;
-      }
+      @include flexColumn;
+      @include size(230px, 135px, 30px, none);
 
       &-group {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        @include flexColumn;
         width: 100%;
         min-height: 102px;
       }
     }
 
     &-rich-checkbox {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      max-width: 255px;
-      min-height: 150px;
-      margin-top: 17px;
+      @include flexColumn;
+      @include size(255px, 145px, 25px, none);
 
-      &-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+      &-group {
+        @include flexColumn;
         min-height: 115px;
       }
     }
 
     &-item-title {
-      margin-top: 8px;
-      margin-bottom: 15px;
       color: $DarkShade100;
       font-weight: bold;
       font-size: 12px;
-      line-height: 14.63px;
       text-transform: uppercase;
     }
 
@@ -252,8 +155,7 @@
     }
 
     &-options {
-      min-width: 265px;
-      margin-top: 15px;
+      @include size(265px, none, 15px, none);
     }
   }
 
@@ -261,99 +163,56 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 70px;
+  }
+
+  &__result-title {
+    margin: 0 auto 22px auto;
+    margin-left: 20px;
+    color: $DarkShade100;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+
+    @media (min-width: 400px) {
+      margin-left: 30px;
+    }
 
     @media (min-width: 1024px) {
-      margin-right: 1%;
-      margin-left: 1%;
+      margin-left: 0;
+      font-size: 24px;
+    }
+  }
+
+  &__result-cards-numbers {
+    display: grid;
+    grid-column-gap: 1.5%;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 540px) {
+      grid-template-columns: 1fr 1fr;
     }
 
-    @media (min-width: 1136px) {
-      margin-right: 2%;
-      margin-left: 2%;
+    @media (min-width: 800px) {
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
-    @media (min-width: 1170px) {
-      margin-right: 0.45%;
-      margin-bottom: 72px;
-      margin-left: 5.25%;
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
     }
 
-    &-title {
-      width: 90%;
-      margin: 0;
-      margin-right: auto;
-      margin-bottom: 20px;
-      margin-left: auto;
-      color: $DarkShade100;
-      font-weight: bold;
-      font-size: 20px;
-      line-height: 20px;
-      text-align: center;
-      text-align: left;
-
-      @media (min-width: 321px) {
-        text-align: center;
-      }
-
-      @media (min-width: 1024px) {
-        width: 100%;
-        font-size: 23.2px;
-        line-height: 23.2px;
-      }
-
-      @media (min-width: 1097px) {
-        width: 100%;
-        font-size: 24px;
-        line-height: 30px;
-        text-align: start;
-      }
-    }
-
-    &-cards-numbers {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-
-      @media (min-width: 321px) {
-        flex-direction: row;
-        justify-content: space-around;
-      }
-
-      @media (min-width: 1136px) {
-        justify-content: space-between;
-      }
-    }
-
-    &-pagination {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
+    @media (min-width: 1200px) {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
   &__card-number {
-    max-width: 270px;
     margin-bottom: 20px;
-
-    @media (min-width: 1170px) {
-      margin-right: 0;
-    }
   }
 
-  &__footer {
-    margin-top: 35px;
-    padding-top: 30px;
-    background-color: #fff;
-    border-top: 1px solid $DarkShade25;
-    box-shadow: $primaryShadow;
-
-    @media (min-width: 1160px) {
-      margin-top: 67px;
-      padding-top: 60px;
-      padding-bottom: 20px;
-    }
+  &__result-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
   }
 }
