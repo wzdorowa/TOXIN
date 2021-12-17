@@ -3,36 +3,23 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
   min-height: 303px;
 
   &__title {
+    color: $DarkShade100;
     font-weight: bold;
     font-size: 22px;
-    line-height: 29.26px;
-    color: $DarkShade100;
     text-align: left;
-    padding-right: 20px;
-    @media (min-width:480px) {
+
+    @media (min-width: 480px) {
       font-size: 24px;
     }
   }
 
   &__wrapper {
-    position: relative;
-    min-height: 227px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-
-  &__dropdown-container {
-    width: 100%;
-  }
-
-  &__select-button {
-    width: 100%;
-    min-height: 44px;
-    text-decoration: none;
+    min-height: 227px;
   }
 }

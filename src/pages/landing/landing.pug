@@ -15,8 +15,9 @@ block meta
 block title 
     title Landing page
 block content
-    .landing__container
+    .landing
       .landing__content
         .landing__form-search-room
           +form-search-room({text: 'Найдём номера под ваши пожелания', dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']})
-        p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+        .landing__slogan
+          p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения
