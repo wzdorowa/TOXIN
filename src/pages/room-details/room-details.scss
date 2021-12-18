@@ -94,10 +94,8 @@
 
   &__form-room-cost {
     width: 380px;
-    background-color: #fff;
-    border: 1px solid $borderColor;
-    border-radius: 4px;
-    box-shadow: $cardShadow;
+
+    @include card;
 
     @media (max-width: 1150px) {
       margin: 0 auto;

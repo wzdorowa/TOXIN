@@ -80,3 +80,10 @@ $primaryFont: 'Montserrat', 'Arial', 'sans-serif';
   font-family: $primaryFont;
   letter-spacing: -0.6px;
 }
+
+@mixin card() {
+  background-color: #fff;
+  border: 1px solid $borderColor;
+  border-radius: 4px;
+  box-shadow: $cardShadow;
+}
