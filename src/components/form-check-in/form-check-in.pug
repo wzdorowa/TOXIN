@@ -14,15 +14,12 @@ mixin form-check-in({text = 'Form name'} = {})
         +radio-button({text: 'Женщина', name: 'gender-for-form-check-in'})
     .form-check-in__date-of-birth
       span.form-check-in__input-title= 'Дата рождения'
-      .form-check-in__input-container
-        +input-date()
+      +input-date()
     .form-check-in__login-details
-      .form-check-in__group-inputs-login
-        span.form-check-in__input-title= 'Данные для входа в сервис'
-        .form-check-in__input-container
-          input.form-check-in__input(type='email', placeholder='Email')
-        .form-check-in__input-container
-          input.form-check-in__input(type='password', placeholder='Пароль')
+      span.form-check-in__input-title= 'Данные для входа в сервис'
+      .form-check-in__group-inputs
+        input.form-check-in__input(type='email', placeholder='Email')
+        input.form-check-in__input(type='password', placeholder='Пароль')
       .form-check-in__toggle
         +toggle({text: 'Получать спецпредложения'})
     .form-check-in__check-in-details

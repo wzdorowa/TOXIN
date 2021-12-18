@@ -1,6 +1,6 @@
 include ../../components/calendar/calendar.pug
 
-mixin date-dropdown({labelArray = ['date from', 'date to'], datesFormat = ['ДД.ММ.ГГГГ','ДД.ММ.ГГГГ'], userDates = ['', ''], size = 'large', amountField = 'two'} = {})
+mixin date-dropdown({labelArray = ['date from', 'date to'], datesFormat = ['ДД.ММ.ГГГГ','ДД.ММ.ГГГГ'], userDates = ['', ''], size = 'large', amountField = 'with-two-inputs'} = {})
   .date-dropdown.js-date-dropdown
     .date-dropdown__inputs
       if (amountField === 'with-one-input')

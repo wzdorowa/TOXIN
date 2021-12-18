@@ -1,128 +1,39 @@
 .registration {
-  &__wrapper {
-    background-image: url('../../src/pages/registration/images/image4.jpeg');
-    background-repeat: no-repeat;
-    background-position: top;
+  height: 684px;
+  background-image: url('../../src/pages/registration/images/image4.jpeg');
+  background-position: bottom;
+  background-size: cover;
 
-    @media (width: 280px) {
-      min-height: 1790px;
-    }
-
-    @media (width: 320px) {
-      min-height: 1690px;
-    }
-
-    @media (width: 360px) {
-      min-height: 1760px;
-    }
-
-    @media (width: 375px) {
-      min-height: 1940px;
-    }
-
-    @media (width: 411px) {
-      min-height: 1950px;
-    }
-
-    @media (width: 414px) {
-      min-height: 1860px;
-    }
-
-    @media (width: 540px) {
-      min-height: 1750px;
-    }
-
-    @media (width: 768px) {
-      min-height: 1970px;
-    }
-
-    @media (width: 1024px) {
-      min-height: 2300px;
-    }
-
-    @media (width: 1366px) {
-      min-height: 2220px;
-    }
-  }
-
-  &__header {
-    min-width: 280px;
-    min-height: 70px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #fff;
-    box-shadow: $primaryShadow;
-
-    @media (min-width: 720px) {
-      min-width: 720px;
-    }
-
-    @media (min-width: 1160px) {
-      min-width: 1160px;
-    }
-
-    &-container {
-      min-width: 280px;
-      margin-right: 10px;
-      margin-left: 10px;
-
-      @media (min-width: 720px) {
-        min-width: 720px;
-      }
-
-      @media (min-width: 1160px) {
-        flex-direction: row;
-        max-width: 1160px;
-        min-height: 64px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-    }
-  }
-
-  &__container {
-    min-width: 280px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     max-width: 1440px;
-    min-height: 665px;
-    margin-top: 19px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
+    padding-top: 19px;
+    padding-left: 5px;
+
+    @media (max-width: 800px) {
+      align-items: center;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
   }
 
   &__check-in {
-    display: flex;
-    justify-content: center;
-    width: 280px;
-    min-height: 643px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 40px;
-    padding-right: 30px;
-    padding-bottom: 20px;
-    padding-left: 30px;
+    width: 380px;
+    min-height: 645px;
+    margin: 0 auto;
+    padding: 40px 28px 20px 30px;
     background-color: #fff;
     border: 1px solid $borderColor;
     border-radius: 4px;
     box-shadow: $cardShadow;
 
-    @media (min-width: 300px) {
-      width: 300px;
-    }
-
-    @media (min-width: 400px) {
-      width: 380px;
-    }
-  }
-
-  &__footer {
-    margin-top: 60px;
-
-    @media (min-width: 768px) {
-      padding-bottom: 30px;
-    }
-
-    @media (min-width: 1160px) {
-      padding-bottom: 20px;
+    @media (max-width: 450px) {
+      width: 280px;
+      min-height: 350px;
+      padding: 20px 8px 10px 8px;
     }
   }
 }

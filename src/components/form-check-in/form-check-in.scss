@@ -1,140 +1,61 @@
-@import './variables.scss';
-
 .form-check-in {
   position: relative;
   z-index: 2;
-  width: 100%;
 
   &__title {
     font-weight: bold;
     font-size: 24px;
-    line-height: 30px;
-    letter-spacing: 0;
-    text-align: left;
   }
 
   &__user-data {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 130px;
     margin-top: 20px;
-  }
-
-  &__login-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 150px;
-    margin-top: 20px;
-  }
-
-  &__group-inputs {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 96px;
-
-    &-login {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 115px;
-    }
   }
 
   &__input {
     @include input;
     width: 100%;
+    margin-bottom: 10px;
   }
 
   &__buttons {
     display: flex;
     justify-content: space-between;
     width: 220px;
-    min-height: 25px;
-    padding-top: 3px;
   }
 
   &__date-of-birth {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: space-between;
-    width: 100%;
     margin-top: 22px;
   }
 
   &__input-title {
+    display: inline-block;
+    margin-bottom: 5px;
     color: $DarkShade100;
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
   }
 
-  &__input-container {
-    width: 100%;
+  &__login-details {
+    margin-top: 18px;
   }
 
-  &__datepicker {
-    display: none;
-    width: 320px;
-    min-height: 369px;
-    margin-top: 5.5px;
-    margin-bottom: 5px;
-    padding: 10px;
-    padding-top: 10px;
-    background: #fff;
-    border: 1px solid $DarkShade25;
-    border-radius: 4px;
-    box-shadow: $primaryShadow;
-
-    &_visible {
-      display: block;
-    }
+  &__check-in-details {
+    margin-top: 25px;
   }
 
-  &__text {
-    display: inline-block;
-    align-items: center;
-    line-height: 25px;
-    text-align: center;
-
-    @media (min-width: 400px) {
-      line-height: 39px;
-      text-align: left;
-    }
-  }
-
-  &__check-in {
-    &-details {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 100%;
-      min-height: 117px;
-      margin-top: 22px;
-    }
-
-    &-button {
-      width: 100%;
-      min-height: 44px;
-      text-decoration: none;
-    }
+  &__check-in-button {
+    margin-bottom: 30px;
   }
 
   &__have-an-account {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    width: 100%;
     min-height: 40px;
   }
 
   &__sign-in-button {
     width: 99px;
-    min-height: 44px;
-    text-decoration: none;
   }
 }
