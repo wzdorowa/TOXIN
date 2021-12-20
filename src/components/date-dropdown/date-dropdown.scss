@@ -1,5 +1,3 @@
-@import './variables.scss';
-
 .date-dropdown {
   position: relative;
 
@@ -23,14 +21,6 @@
       }
 
       &_small {
-        width: 48%;
-
-        @media (min-width: 800px) {
-          width: 140px;
-        }
-      }
-
-      &_small-long {
         width: 47%;
       }
     }
@@ -54,8 +44,7 @@
     width: 100%;
     cursor: pointer;
 
-    &:hover,
-    :focus {
+    &:hover {
       border: 1px solid $DarkShade50;
     }
 
@@ -70,7 +59,8 @@
   }
 
   &__input-arrow-down {
-    &:hover {
+    &:hover,
+    &:focus {
       & + .date-dropdown__input-content {
         line-height: 24px;
         border: 1px solid $DarkShade50;

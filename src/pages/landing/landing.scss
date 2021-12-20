@@ -1,7 +1,7 @@
 .landing {
   height: 830px;
   background-image: url('../../src/pages/landing/image/image-3.jpeg');
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
 
   &__content {
@@ -10,7 +10,7 @@
     justify-content: space-between;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 70px 140px 21px;
+    padding: 70px 135px 21px 140px;
 
     @media (max-width: 800px) {
       align-items: center;

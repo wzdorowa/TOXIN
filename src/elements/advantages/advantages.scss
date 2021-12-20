@@ -1,5 +1,3 @@
-@import './variables.scss';
-
 .advantages {
   &__main-title {
     @include h2();
@@ -25,16 +23,7 @@
   }
 
   &__icon {
-    display: inline-block;
-    color: $Purple;
-    font-size: 48px;
-    font-family: 'Material Icons';
-    line-height: 1;
-    direction: ltr;
-    letter-spacing: normal;
-    white-space: nowrap;
-    text-transform: none;
-    word-wrap: normal;
+    font: 48px 'Material Icons', Arial, sans-serif;
     background: $PrimaryGradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -45,13 +34,7 @@
   }
 
   &__title {
-    display: block;
-    margin: 0;
+    margin: 4px 0 5px 0;
     font-weight: bold;
-    line-height: 24px;
-  }
-
-  &__value {
-    line-height: 24px;
   }
 }

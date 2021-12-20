@@ -111,7 +111,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     min-height: 106px;
-    padding: 12px 17px 7px 20px;
+    padding: 10px 17px 7px 20px;
   }
 
   &__data {
@@ -165,7 +165,7 @@
   &__reviews {
     display: flex;
     justify-content: space-between;
-    padding-right: 4px;
+    padding: 0 2px;
   }
 
   &__amount {
