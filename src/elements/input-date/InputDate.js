@@ -2,10 +2,10 @@ class InputDate {
   constructor(element) {
     this.maskedContainer = element;
 
-    this.setMaskedField();
+    this._setMaskedField();
   }
 
-  setMaskedField() {
+  _setMaskedField() {
     $(this.maskedContainer).inputmask('99.99.9999', {
       placeholder: 'ДД/ММ/ГГГГ',
     });

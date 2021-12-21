@@ -86,7 +86,10 @@ class RoomCard {
       this._handleButtonNextClick.bind(this),
     );
     this.dots.forEach((element, index) => {
-      element.addEventListener('click', this._handleDotsClick.bind(this, index));
+      element.addEventListener(
+        'click',
+        this._handleDotsClick.bind(this, index),
+      );
     });
   }
 }

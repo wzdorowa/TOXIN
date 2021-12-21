@@ -4,11 +4,11 @@ class LikeButton {
     this.likeButton = null;
     this.description = '';
 
-    this.findElements();
-    this.bindEventListener();
+    this._findElements();
+    this._bindEventListener();
   }
 
-  findElements() {
+  _findElements() {
     this.likeButton = this.buttonContainer.querySelector(
       '.js-like-button__content',
     );
@@ -17,7 +17,7 @@ class LikeButton {
     );
   }
 
-  handleClick() {
+  _handleClick() {
     if (this.likeButton.checked === true) {
       this.description.innerHTML = Number(this.description.innerHTML) + 1;
     }
@@ -26,8 +26,8 @@ class LikeButton {
     }
   }
 
-  bindEventListener() {
-    this.likeButton.addEventListener('click', this.handleClick.bind(this));
+  _bindEventListener() {
+    this.likeButton.addEventListener('click', this._handleClick.bind(this));
   }
 }
 

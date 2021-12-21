@@ -18,12 +18,12 @@ class Dropdown {
     this.firstArg = [];
     this.numberContainer = [];
 
-    this.findElement();
-    this.bindEventListeners();
-    this.calculateTheResult();
+    this._findElement();
+    this._bindEventListeners();
+    this._calculateTheResult();
   }
 
-  findElement() {
+  _findElement() {
     this.elementInput = this.dropdown.querySelector(
       '.js-dropdown__input-content',
     );
@@ -53,28 +53,28 @@ class Dropdown {
     });
   }
 
-  addClass() {
+  _addClass() {
     this.dropdownList.classList.add('dropdown__content_visible');
     if (this.parentInput.contains(this.elementInput)) {
       this.elementInput.classList.add('dropdown__input-content_opened');
     }
   }
 
-  removeClass() {
+  _removeClass() {
     this.dropdownList.classList.remove('dropdown__content_visible');
     if (this.parentInput.contains(this.elementInput)) {
       this.elementInput.classList.remove('dropdown__input-content_opened');
     }
   }
 
-  toggleClass() {
+  _toggleClass() {
     this.dropdownList.classList.toggle('dropdown__content_visible');
     if (this.parentInput.contains(this.elementInput)) {
       this.elementInput.classList.toggle('dropdown__input-content_opened');
     }
   }
 
-  addNumber(index) {
+  _addNumber(index) {
     const currentValue = this.numberContainer[index].innerHTML;
     let result = 0;
     result = Number(currentValue) + 1;
@@ -82,7 +82,7 @@ class Dropdown {
     this.numberContainer[index].innerHTML = String(result);
   }
 
-  subtractNumber(index) {
+  _subtractNumber(index) {
     const currentValue = this.numberContainer[index].innerHTML;
     let result = 0;
     result = currentValue - 1;
@@ -93,27 +93,27 @@ class Dropdown {
     }
   }
 
-  handlePlusSignClick(index) {
-    this.addNumber(index);
+  _handlePlusSignClick(index) {
+    this._addNumber(index);
   }
 
-  handleMinusSignClick(index) {
-    this.subtractNumber(index);
+  _handleMinusSignClick(index) {
+    this._subtractNumber(index);
   }
 
-  handleIconArrowDownClick() {
-    this.toggleClass();
+  _handleIconArrowDownClick() {
+    this._toggleClass();
   }
 
-  handleInputContentFocus() {
-    this.addClass();
+  _handleInputContentFocus() {
+    this._addClass();
   }
 
-  handleButtonsContainerForApplyClick() {
-    this.removeClass();
+  _handleButtonsContainerForApplyClick() {
+    this._removeClass();
   }
 
-  hideButtonClear() {
+  _hideButtonClear() {
     if (
       !this.buttonClear.classList.contains('.dropdown__button-clear_hidden')
     ) {
@@ -121,31 +121,31 @@ class Dropdown {
     }
   }
 
-  showButtonClear() {
+  _showButtonClear() {
     if (this.buttonClear.classList.contains('dropdown__button-clear_hidden')) {
       this.buttonClear.classList.remove('dropdown__button-clear_hidden');
     }
   }
 
-  handleButtonsContainerForClearClick() {
+  _handleButtonsContainerForClearClick() {
     this.elementInput.value = '';
     this.numberContainer.forEach(number => {
       const element = number;
       element.innerHTML = '0';
     });
-    this.hideButtonClear();
+    this._hideButtonClear();
   }
 
-  handleDocumentClick(event) {
+  _handleDocumentClick(event) {
     if (event.target.closest('.dropdown') !== this.dropdown) {
-      this.removeClass();
+      this._removeClass();
     }
   }
 
-  setValues(sum, values, declinations) {
+  _setValues(sum, values, declinations) {
     if (sum === 0) {
       this.elementInput.value = '';
-      this.hideButtonClear();
+      this._hideButtonClear();
     } else {
       const newString = [];
       values.forEach((value, i) => {
@@ -168,11 +168,11 @@ class Dropdown {
           this.elementInput.value += `${newString[index]}, `;
         }
       });
-      this.showButtonClear();
+      this._showButtonClear();
     }
   }
 
-  calculateTheResult() {
+  _calculateTheResult() {
     const parse = JSON.parse(this.dropdown.getAttribute('data-words-form'));
     const wordsForm = [];
     Object.values(parse).forEach(element => {
@@ -206,40 +206,40 @@ class Dropdown {
     }
     const sum = firstValue + secondValue + thirstValue;
     const values = [firstValue, secondValue, thirstValue];
-    this.setValues(sum, values, wordsForm);
+    this._setValues(sum, values, wordsForm);
   }
 
-  bindEventListeners() {
+  _bindEventListeners() {
     this.dropdownArrow.addEventListener(
       'click',
-      this.handleIconArrowDownClick.bind(this),
+      this._handleIconArrowDownClick.bind(this),
     );
     this.elementInput.addEventListener(
       'focus',
-      this.handleInputContentFocus.bind(this),
+      this._handleInputContentFocus.bind(this),
     );
     this.buttonApply.addEventListener(
       'click',
-      this.handleButtonsContainerForApplyClick.bind(this),
+      this._handleButtonsContainerForApplyClick.bind(this),
     );
     this.buttonClear.addEventListener(
       'click',
-      this.handleButtonsContainerForClearClick.bind(this),
+      this._handleButtonsContainerForClearClick.bind(this),
     );
-    document.addEventListener('click', this.handleDocumentClick.bind(this));
+    document.addEventListener('click', this._handleDocumentClick.bind(this));
     this.rowsGroups.forEach(element => {
-      element.addEventListener('click', this.calculateTheResult.bind(this));
+      element.addEventListener('click', this._calculateTheResult.bind(this));
     });
     this.plusSign.forEach((element, index) => {
       element.addEventListener(
         'click',
-        this.handlePlusSignClick.bind(this, index),
+        this._handlePlusSignClick.bind(this, index),
       );
     });
     this.minusSign.forEach((element, index) => {
       element.addEventListener(
         'click',
-        this.handleMinusSignClick.bind(this, index),
+        this._handleMinusSignClick.bind(this, index),
       );
     });
   }
