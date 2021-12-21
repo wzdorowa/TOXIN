@@ -142,8 +142,8 @@ class Dropdown {
     }
   }
 
-  countValues(result, values, declinations) {
-    if (result === 0) {
+  setValues(sum, values, declinations) {
+    if (sum === 0) {
       this.elementInput.value = '';
       this.hideButtonClear();
     } else {
@@ -172,70 +172,41 @@ class Dropdown {
     }
   }
 
-  countTheGuests() {
-    let adults = 0;
-    let babies = 0;
-    this.numberContainer.forEach((number, index) => {
-      if (index <= 1) {
-        adults += Number(number.innerHTML);
-      } else if (index === 2) {
-        babies += Number(number.innerHTML);
-      }
-    });
-    const amountGuests = adults + babies;
-    const guests = [adults, babies];
-    const declinationGuests = ['гость', 'гостя', 'гостей'];
-    const declinationBabies = ['младенец', 'младенца', 'младенцев'];
-    const declinations = [declinationGuests, declinationBabies];
-    this.countValues(amountGuests, guests, declinations);
-  }
-
-  countAmenities() {
-    let bedrooms = 0;
-    let beds = 0;
-    let bathrooms = 0;
-
-    this.numberContainer.forEach((number, index) => {
-      if (index === 0) {
-        bedrooms += Number(number.innerHTML);
-      } else if (index === 1) {
-        beds += Number(number.innerHTML);
-      } else if (index === 2) {
-        bathrooms += Number(number.innerHTML);
-      }
-    });
-    const amountAmenities = bedrooms + beds + bathrooms;
-    const amenities = [bedrooms, beds, bathrooms];
-    const declinationBedrooms = ['спальня', 'спальни', 'спален'];
-    const declinationBeds = ['кровать', 'кровати', 'кроватей'];
-    const declinationBathrooms = [
-      'ванная комната',
-      'ванные комнаты',
-      'ванных комнат',
-    ];
-    const declinations = [
-      declinationBedrooms,
-      declinationBeds,
-      declinationBathrooms,
-    ];
-    this.countValues(amountAmenities, amenities, declinations);
-  }
-
   calculateTheResult() {
+    const parse = JSON.parse(this.dropdown.getAttribute('data-words-form'));
+    const wordsForm = [];
+    Object.values(parse).forEach(element => {
+      wordsForm.push(element);
+    });
+
     this.elementInput.value = null;
-    if (
-      this.rowsGroupParent.classList.contains(
-        'dropdown__rows_for-count-the-guests',
-      )
-    ) {
-      this.countTheGuests();
-    } else if (
-      this.rowsGroupParent.classList.contains(
-        'dropdown__rows_for-count-amenities',
-      )
-    ) {
-      this.countAmenities();
+
+    let firstValue = 0;
+    let secondValue = 0;
+    let thirstValue = 0;
+
+    if (Object.values(wordsForm).length < 3) {
+      this.numberContainer.forEach((number, index) => {
+        if (index <= 1) {
+          firstValue += Number(number.innerHTML);
+        } else if (index === 2) {
+          secondValue += Number(number.innerHTML);
+        }
+      });
+    } else {
+      this.numberContainer.forEach((number, index) => {
+        if (index === 0) {
+          firstValue += Number(number.innerHTML);
+        } else if (index === 1) {
+          secondValue += Number(number.innerHTML);
+        } else if (index === 2) {
+          thirstValue += Number(number.innerHTML);
+        }
+      });
     }
+    const sum = firstValue + secondValue + thirstValue;
+    const values = [firstValue, secondValue, thirstValue];
+    this.setValues(sum, values, wordsForm);
   }
 
   bindEventListeners() {

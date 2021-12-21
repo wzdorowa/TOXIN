@@ -12,7 +12,7 @@ mixin form-search-room({text = 'Form name', dateFormat = ['ДД.ММ.ГГГГ', 
       +dropdown({
         label: 'Гости',
         placeholder: 'Сколько гостей',
-        dropdownFor: 'the-guests',
-        dropdownRows: dataForDropdown
+        dropdownRows: dataForDropdown,
+        wordsForm: `{"0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"]}`,
         })
     +button({text: 'Подобрать номер', decor: 'solid', directed: true, size: 'large', href: '../../pages/search-room/search-room.pug'})

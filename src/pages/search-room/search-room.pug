@@ -33,8 +33,8 @@ block content
             label: 'Гости',
             placeholder: '3 гостя, 1 младенец',
             isButtonsHidden: true,
-            dropdownFor: 'the-guests',
-            dropdownRows: dataForDropdownFirst
+            dropdownRows: dataForDropdownFirst,
+            wordsForm: `{"0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"]}`,
           })
       .search-room__filter-range-slider
         +slider({text: 'Диапазон цены'})
@@ -64,8 +64,8 @@ block content
           label: 'Удобства номера',
           placeholder: '2 спальни, 2 кровати...',
           isButtonsHidden: true,
-          dropdownFor: 'amenities',
-          dropdownRows: dataForDropdownSecond
+          dropdownRows: dataForDropdownSecond,
+          wordsForm: `{"0": ["спальня", "спальни", "спален"], "1": ["кровать", "кровати", "кроватей"], "2": ["ванная комната", "ванные комнаты", "ванных комнат"]}`,
         })
       .search-room__filter-options
         - const checkboxList = [{value: 'Завтрак'}, {value: 'Письменный стол', checked: 'checked'}, {value: 'Стул для кормления', checked: 'checked'}, {value: 'Кроватка', checked: 'checked'}, {value: 'Телевизор'}, {value: 'Шампунь'}, {value: 'Телевизор'}, {value: 'Шампунь'}]

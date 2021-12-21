@@ -18,8 +18,8 @@ mixin form-room-cost({number = '100', text = 'text', cost = '1000', dateFormat =
         +dropdown({
           label: 'Гости',
           placeholder: '3 гостя',
-          dropdownFor: 'the-guests',
-          dropdownRows: dataForDropdown
+          dropdownRows: dataForDropdown,
+          wordsForm: `{"0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"]}`,
           })
       .form-room-cost__calculation
           -const state = {pricePerDay: 9990, numberOfDays: 'x 4 суток', priceForThePeriod: 39960, serviceCharge: 2179, servicePrice: 0, additionalServicesPrice: 300, totalCost: 38081}

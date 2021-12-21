@@ -45,8 +45,8 @@ block content
                   label: 'Dropdown',
                   placeholder: 'Сколько гостей',
                   isButtonsHidden: true,
-                  dropdownFor: 'the-guests',
-                  dropdownRows: dataForDropdownFirst
+                  dropdownRows: dataForDropdownFirst,
+                  wordsForm: `{"0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"]}`,
                 })
             .components__inputs-item
               span.components__input-title= 'Masked text field'
@@ -122,8 +122,8 @@ block content
               label: 'Удобства номера',
               placeholder: '2 спальни, 2 кровати',
               isButtonsHidden: true,
-              dropdownFor: 'amenities',
-              dropdownRows: dataForDropdownSecond
+              dropdownRows: dataForDropdownSecond,
+              wordsForm: `{"0": ["спальня", "спальни", "спален"], "1": ["кровать", "кровати", "кроватей"], "2": ["ванная комната", "ванные комнаты", "ванных комнат"]}`,
             })
     .components
       .components__wrapper
