@@ -28,7 +28,8 @@
     background: $PrimaryGradient;
     border-radius: 22px;
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 0.5;
     }
   }
@@ -36,7 +37,8 @@
   &_clear {
     justify-content: start;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $DarkShade50;
     }
   }
@@ -59,7 +61,8 @@
       content: '';
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       &::before {
         background: $PrimaryGradient50;
       }

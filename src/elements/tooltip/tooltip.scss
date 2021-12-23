@@ -38,7 +38,8 @@
     @include card();
   }
 
-  &:hover .tooltip__text {
+  &:hover .tooltip__text,
+  &:focus .tooltip__text {
     display: inline-block;
   }
 }

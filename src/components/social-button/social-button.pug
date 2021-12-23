@@ -2,5 +2,5 @@ mixin social-button({ buttons = [{name: 'Icon', src: '', href: '/'}] } = {})
   .social-button
     each button in buttons
       - const { name, src, href } = button
-      a.social-button__button(target="_blank" rel="noopener noreferrer" href=href)
-        img(src=`${src}` alt=name width='24px' height='24px')
+      a.social-button__button(tabindex='0', target="_blank" rel="noopener noreferrer" href=href)
+        img(src=`${src}`, alt=name, aria-label=name, width='24px', height='24px')

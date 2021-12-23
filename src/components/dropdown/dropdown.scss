@@ -41,7 +41,8 @@
   }
 
   &__input-arrow-down {
-    &:hover {
+    &:hover,
+    &:focus {
       & + .dropdown__input-content {
         border: 1px solid $DarkShade50;
       }

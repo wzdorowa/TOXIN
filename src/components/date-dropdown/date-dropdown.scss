@@ -40,7 +40,8 @@
     width: 100%;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border: 1px solid $DarkShade50;
     }
 

@@ -2,5 +2,5 @@ mixin toggle({text = 'text', checked})
   label.toggle
     input.toggle__content(type='checkbox',
       name='toggle-container__content', checked=checked)
-    span.toggle__indicator
+    span.toggle__indicator(tabindex='0')
     span.toggle__description=text

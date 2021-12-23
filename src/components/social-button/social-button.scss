@@ -4,5 +4,10 @@
 
   &__button {
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
   }
 }

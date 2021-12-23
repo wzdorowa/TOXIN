@@ -59,7 +59,8 @@
         color: $DarkShade100;
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         background: $PrimaryGradient25;
       }
     }
@@ -67,7 +68,8 @@
     &-action {
       position: relative;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background: $PrimaryGradient25;
       }
 

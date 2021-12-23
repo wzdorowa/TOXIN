@@ -64,7 +64,8 @@
       -webkit-text-fill-color: transparent;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       cursor: pointer;
 
       &::after {

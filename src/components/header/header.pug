@@ -19,7 +19,7 @@ mixin header()
           - const suitableAgreements = itemName === 'Соглашения'
           if(suitableServices || suitableAgreements)
             li.header__title-submenu.js-header__title-submenu
-              span.header__text-title= value
+              button.header__text-title= value
               ul.header__submenu.js-header__submenu
                 if(suitableServices)
                   each value in services

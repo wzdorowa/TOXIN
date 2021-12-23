@@ -60,15 +60,8 @@ $primaryFont: 'Montserrat', 'Arial', 'sans-serif';
     color: $DarkShade25;
   }
 
-  &:hover,
-  &:focus,
-  &.hover-focus {
+  &:hover {
     border-color: $DarkShade50;
-  }
-
-  &:focus {
-    border-color: $DarkShade50;
-    outline: none;
   }
 }
 

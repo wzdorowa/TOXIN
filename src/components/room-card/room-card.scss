@@ -58,7 +58,8 @@
     position: relative;
     width: 100%;
 
-    &:hover {
+    &:hover,
+    &:focus {
       & .room-card__prev {
         @include cardPrev();
       }
