@@ -21,4 +21,6 @@ class Filter {
 }
 
 const filter = document.querySelector('.js-search-room__filter');
-new Filter(filter);
+if (filter !== null) {
+  new Filter(filter);
+}
