@@ -3,7 +3,7 @@ include ../../elements/like-button/like-button.pug
 mixin comment({userName = 'Title', date = 'text', srcImage, text = 'text description', amountLike = '0', likeChecked} = {})
   .comment
     .comment__info
-      img.comment__user-icon(src=`${srcImage}`)
+      img.comment__user-icon(src=`${srcImage}` width='48px', height='48px')
       .comment__user
         span.comment__user-name= userName
         span.comment__date= date

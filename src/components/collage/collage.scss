@@ -1,6 +1,7 @@
 .collage {
   display: grid;
   grid-template-columns: repeat(2, 34%) 1fr;
+  background-color: grey;
 
   @media (max-width: 1000px) {
     grid-template-columns: repeat(2, 50%);
