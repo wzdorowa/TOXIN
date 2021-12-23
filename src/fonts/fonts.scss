@@ -3,6 +3,7 @@
     font-weight: $weight;
     font-family: $font-family;
     font-style: $style;
+    font-display: auto;
     src: url('/../src/fonts/#{$file-path}.woff2') format('woff2');
     src: url('/../src/fonts/#{$file-path}.woff') format('woff');
   }
