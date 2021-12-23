@@ -1,6 +1,6 @@
-mixin social-button({ buttons = [{name: 'Icon', src: '', href: '/', width: 24, height: 24}] } = {})
+mixin social-button({ buttons = [{name: 'Icon', src: '', href: '/'}] } = {})
   .social-button
     each button in buttons
-      - const { name, src, href, width, height } = button
+      - const { name, src, href } = button
       a.social-button__button(target="_blank" rel="noopener noreferrer" href=href)
-        img(src=`${src}` alt=name width=`${width}` height=`${height}`)
+        img(src=`${src}` alt=name width='24px' height='24px')
