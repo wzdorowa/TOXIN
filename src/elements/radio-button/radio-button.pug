@@ -3,5 +3,5 @@ mixin radio-button({text = 'Text', checked, name = 'text'})
     label.radio-button__filter
       input.radio-button__content(type='radio', name=`radio-button__content-${name}`, 
         checked=checked)
-      span.radio-button__indicator(tabindex='0')
+      span.radio-button__indicator
       span.radio-button__description=text

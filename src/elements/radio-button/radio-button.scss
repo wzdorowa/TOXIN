@@ -2,11 +2,13 @@
   color: $DarkShade50;
 
   &__filter {
+    position: relative;
+    display: flex;
     cursor: pointer;
   }
 
   &__content {
-    display: none;
+    opacity: 0;
   }
 
   &__indicator {
@@ -18,7 +20,7 @@
   }
 
   &__description {
-    padding-left: 30px;
+    padding-left: 10px;
   }
 
   &__filter input[type='radio']:checked {
@@ -39,6 +41,12 @@
 
     & ~ .radio-button__description {
       color: $DarkShade75;
+    }
+  }
+
+  &__filter input[type='radio']:focus {
+    & + .radio-button__indicator {
+      box-shadow: 0 5px 10px $Purple;
     }
   }
 }
