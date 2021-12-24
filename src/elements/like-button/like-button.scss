@@ -9,7 +9,7 @@
   }
 
   &__content {
-    display: none;
+    opacity: 0;
   }
 
   &__indicator {
@@ -21,7 +21,7 @@
   }
 
   &__description {
-    padding-left: 55%;
+    // padding-left: 55%;
     font-size: 10px;
     line-height: 20px;
   }
@@ -55,6 +55,12 @@
       font-size: 10px;
       font-family: 'Material Icons', Arial, sans-serif;
       content: 'favorite_border';
+    }
+  }
+
+  &__filter input[type='checkbox']:focus {
+    & + .like-button__indicator {
+      outline: rgb(59, 153, 252) auto 5px;
     }
   }
 }
