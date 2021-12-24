@@ -60,7 +60,7 @@
 
   &__filter input[type='checkbox']:focus {
     & + .like-button__indicator {
-      outline: rgb(59, 153, 252) auto 5px;
+      box-shadow: 0 5px 10px $Purple;
     }
   }
 }
