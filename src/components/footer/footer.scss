@@ -22,8 +22,6 @@
     @media (min-width: 1170px) {
       flex-direction: row;
       align-items: flex-start;
-      // width: 1165px;
-      // padding: 100px 0 60px 5px;
       width: 1160px;
       padding: 102px 0 60px 0;
     }
@@ -41,9 +39,9 @@
   }
 
   &__logo {
-    width: 105px;
     position: relative;
     top: -2px;
+    width: 105px;
   }
 
   &__logo-description {
