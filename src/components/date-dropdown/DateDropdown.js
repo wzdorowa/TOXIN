@@ -7,8 +7,6 @@ class DateDropdown {
     this.buttonApply = null;
     this.buttonClear = null;
     this.calendar = null;
-    this.dayFrom = '';
-    this.dayTo = '';
     this.dates = [];
 
     this._findElement();
