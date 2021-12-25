@@ -46,6 +46,10 @@ class DateDropdown {
 
     const datepicker = $(this.calendar).datepicker().data('datepicker');
 
+    $(this.calendar).datepicker({
+      minDate: today,
+    });
+
     datepicker.selectDate([today, dayAfter]);
     if (this.inputs.length > 1) {
       const todayShort = today
