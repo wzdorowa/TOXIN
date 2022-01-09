@@ -35,6 +35,7 @@ block content
         .room-details__extra-info
           .room-details__rules
             - const rules = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+            h2.room-details__title-rules Правила
             +bulleted-list({title: 'Правила', values: rules})
           .room-details__cancel
             h2.room-details__title-cancel Отмена

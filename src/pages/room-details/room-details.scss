@@ -85,6 +85,11 @@
     }
   }
 
+  &__title-rules {
+    @include h2();
+    margin-left: 20px;
+  }
+
   &__title-cancel {
     @include h2();
     margin-bottom: 18px;
