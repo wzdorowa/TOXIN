@@ -1,19 +1,11 @@
 .bulleted-list {
-  &__title {
-    @include h2();
-    margin-bottom: 18px;
-    padding-left: 20px;
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 115px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 115px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
   &__item {
     position: relative;

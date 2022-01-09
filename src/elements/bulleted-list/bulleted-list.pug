@@ -1,6 +1,4 @@
-mixin bulleted-list({title= 'Заголовок', values = []} = {})
-  .bulleted-list
-    .bulleted-list__title= title
-    ul.bulleted-list__content
-      each value, index in values
-        li.bulleted-list__item= value
+mixin bulleted-list({values = []} = {})
+  ul.bulleted-list
+    each value, index in values
+      li.bulleted-list__item= value

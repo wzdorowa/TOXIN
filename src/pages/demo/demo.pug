@@ -1,4 +1,4 @@
-extends ../layout/layout.pug
+// extends ../layout/layout.pug
 
 include ../../elements/input-date/input-date.pug
 include ../../elements/checkbox-button/checkbox-button.pug
@@ -26,167 +26,185 @@ include ../../components/footer/footer.pug
 include ../../components/copyright/copyright.pug
 include ../../components/social-button/social-button.pug
 
-block meta
-    meta(name='keywords', content='демонстрационная страница компонентов, toxin, ui kit')
-    meta(name='description', content='Демонстрационная страница компонентов используемых в TOXIN')
-block title
-    title Demo page
-block content
-    .components
-      .components__wrapper
-        .components__inputs
-            .components__inputs-item
-              span.components__input-title= 'Text field'
-              .components__input-container
-                input.components__input(type='email', placeholder='Email')
-            .components__inputs-item
-              - const dataForDropdownFirst = [{subjectOfCalculation: 'Взрослые', count: '0'}, {subjectOfCalculation: 'Дети', count: '0'}, {subjectOfCalculation: 'Младенцы', count: '0'}]
-                +dropdown({
-                  label: 'Dropdown',
-                  placeholder: 'Сколько гостей',
-                  isButtonsHidden: true,
-                  dropdownRows: dataForDropdownFirst,
-                  wordsForm: `{"0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"]}`,
-                })
-            .components__inputs-item
-              span.components__input-title= 'Masked text field'
-              .components__input-container
-                +input-date
-            .components__inputs-item
-                +date-dropdown({
-                  labelArray: ['Date dropdown', 'Date dropdown'],
-                  size: 'small',
-                  amountField: 'with-two-inputs'
-                })
-            .components__inputs-item.components__inputs-item_width_medium
-                +date-dropdown({
-                  labelArray: ['Filter date dropdown'],
-                  datesFormat: ['ДД.ММ - ДД.ММ'],
-                  size: 'large',
-                  amountField: 'with-one-input',
-                })
-            .components__inputs-item.components__inputs-item_width_medium.components__inputs-item_type_email
-              span.components__input-title-email= 'Subscription text field'
-              .components__input-container
-                input.components__input(type='email', placeholder='Email')
-        .components__elements.components__elements_column_first
-            .components__checkbox-buttons
-                label.buttons-title Chechbox buttons
-                +checkbox-button({value: 'Можно курить'})
-                +checkbox-button({value: 'Можно с питомцами', checked: 'checked'})
-                +checkbox-button({value: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
-            .components__radio-buttons
-                label.buttons-title Radio buttons
-                .components__radio-buttons-string
-                    +radio-button({text: 'Мужчина', checked: 'checked', name: 'gender'})
-                    +radio-button({text:'Женщина', name: 'gender'})
-            .components__toggle
-                label.buttons-title Toggle
-                +toggle({text: 'Получать спецпредложения', checked: 'checked'})
-                +toggle({text: 'Получать спецпредложения'})
-            .components__like-button
-                label.buttons-title Like button
-                .components__like-button-string
-                  .components__like-button-content
-                    +like-button({text: '2'})
-                  .components__like-button-content
-                    +like-button({text: '12', checked: 'checked'})
-            .components__rate-button
-              label.buttons-title Rate button
-              .components__rate-button-string
-                  .components__rate-button-group
-                      +rating({amountStar: '4'})
-                  .components__rate-button-group
-                      +rating({amountStar: '5'})
-        .components__elements.components__elements_column_last
-            .components__range-slider
-                +slider({text: 'Range Slider'})
-            .components__base-button
-                label.buttons-title Buttons
-                .components__base-button-content.components__base-button-content_small
-                  +button({text: 'Click Me', decor: 'solid', size: 'large'})
-                .components__base-button-content.components__base-button-content_small
-                  +button({text: 'Click Me', decor: 'bordered', size: 'large'})
-                .components__base-button-content.components__base-button-content_small
-                  +button({text: 'Click Me'})
-                .components__base-button-content.components__base-button-content_big
-                  +button({text: 'Перейти к оплате', decor: 'solid', directed: true, size: 'large'})
-            .components__pagination
-                label.buttons-title Pagination
-                +pagination({text: '1 - 12 из 100+ вариантов аренды'})
-    .components
-      .components__wrapper
-        .components__dropdown
-          - const dataForDropdownSecond = [{subjectOfCalculation: 'Спальни', count: '2'}, {subjectOfCalculation: 'Кровати', count: '2'}, {subjectOfCalculation: 'Ванные комнаты', count: '0'}]
-            +dropdown({
-              label: 'Удобства номера',
-              placeholder: '2 спальни, 2 кровати',
-              isButtonsHidden: true,
-              dropdownRows: dataForDropdownSecond,
-              wordsForm: `{"0": ["спальня", "спальни", "спален"], "1": ["кровать", "кровати", "кроватей"], "2": ["ванная комната", "ванные комнаты", "ванных комнат"]}`,
-            })
-    .components
-      .components__wrapper
-        .components__expandable-checkbox-list
-            - const checkboxList = [{value: 'Завтрак'}, {value: 'Письменный стол', checked: 'checked'}, {value: 'Стул для кормления', checked: 'checked'}, {value: 'Кроватка', checked: 'checked'}, {value: 'Телевизор'}, {value: 'Шампунь'}, {value: 'Телевизор'}, {value: 'Шампунь'}]
-            +checkbox-list({text: 'Expandable checkbox list', checkboxList})
-        .components__rich-checkbox-buttons
-            label.buttons-title Rich checkbox buttons
-            .components__rich-checkbox-buttons-list
-              +checkbox-button({
-                value: 'Широкий коридор',
-                isBoldText: true,
-                description: 'Ширина коридоров в номере не менее 91 см.'
-                })
-              +checkbox-button({
-                value: 'Помощник для инвалидов',
-                isBoldText: true,
-                description: 'На 1 этаже вас встретит специалист и проводит до номера.'
-                })
-        .components__bullet-list
-            label.buttons-title Bullet list
-            - const rules = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
-            +bulleted-list({values: rules})
-    .components
-      .components__wrapper
-        .components__advantages
-            - const list = [{advantageTitle: 'Комфорт', advantageDescription: 'Шумопоглощающие стены', advantageIcon: 'mood'}, {advantageTitle: 'Удобство', advantageDescription: 'Окна в каждой из спален', advantageIcon: 'location_city'}]
-            +advantages({advantagesList: list})
-        .components__comment
-            +comment({
-              title: 'Мурад Сарафанов',
-              value: '5 дней назад',
-              srcImage: 'images/user-icon/Murad.jpeg',
-              text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
-              })
-    .components-content-wrapper
-        .components-content
-          .components-content__wrapper
-            .components-content__item
-                .components-content__search-room
-                    -const searchRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
-                    +form-search-room({text: 'Найдём номера под ваши пожелания', dateFormat: searchRoomDateFormat})
-                .components-content__check-in
-                    +form-check-in({text: 'Регистрация аккаунта'})
-            .components-content__item
-                .components-content__result-search-room
-                    +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']})
-                .components-content__login
-                    +login({text: 'Вход'})
-            .components-content__item
-                .components-content__datepicker
-                    +calendar()
-                      .datepicker-here(data-range='true').js-datepicker-here
-                .components-content__room-card
-                    +room-card({number: '888', text: 'люкс', cost: '9 990', amount: '145', images: ['./images/images-rooms/image888.jpeg', './images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg'], amountStar: '5'})
-                .components-content__room-card
-                    +room-card({number: '840', text: 'люкс', cost: '9 990', amount: '65', images: ['./images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg', './images/images-rooms/image450.jpeg'], amountStar: '4'})
-        .components-header
-          .components-header__wrapper
-            .components-header__container
-              +header()
-        .components-footer
-          .components-footer__wrapper
-            +footer()
-            +copyright()
-            
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(name='keywords', content='демонстрационная страница компонентов, toxin, ui kit')
+        meta(name='description', content='Демонстрационная страница компонентов используемых в TOXIN')
+        title Demo page
+        link(rel='stylesheet', href='../global.scss')
+        link(rel='shortcut icon' href='../images/favicon.ico' type='image/x-icon')
+        link(rel='mask-icon' href='../images/favicon-safari.svg' color='blue')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.css')
+        link(rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+        block scripts
+            script(src='https://code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous')
+            script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+            script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js' integrity='sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=' crossorigin='anonymous')
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.js')
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.js' integrity='sha512-SSQo56LrrC0adA0IJk1GONb6LLfKM6+gqBTAGgWNO8DIxHiy0ARRIztRWVK6hGnrlYWOFKEbSLQuONZDtJFK0Q==' crossorigin='anonymous')
+    body
+        .demo
+            .demo__row
+                .demo__inputs
+                    .demo__inputs-item
+                      span.demo__input-title= 'Text field'
+                      .demo__input-container
+                        input.demo__input(type='email', placeholder='Email')
+                    .demo__inputs-item
+                      - const dataForDropdownFirst = [{subjectOfCalculation: 'Взрослые', count: '0'}, {subjectOfCalculation: 'Дети', count: '0'}, {subjectOfCalculation: 'Младенцы', count: '0'}]
+                        +dropdown({
+                          label: 'Dropdown',
+                          placeholder: 'Сколько гостей',
+                          isButtonsHidden: true,
+                          dropdownRows: dataForDropdownFirst,
+                          wordsForm: `{"0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"]}`,
+                        })
+                    .demo__inputs-item
+                      span.demo__input-title= 'Masked text field'
+                      .demo__input-container
+                        +input-date
+                    .demo__inputs-item
+                        +date-dropdown({
+                          labelArray: ['Date dropdown', 'Date dropdown'],
+                          size: 'small',
+                          amountField: 'with-two-inputs'
+                        })
+                    .demo__inputs-item.demo__inputs-item_width_medium
+                        +date-dropdown({
+                          labelArray: ['Filter date dropdown'],
+                          datesFormat: ['ДД.ММ - ДД.ММ'],
+                          size: 'large',
+                          amountField: 'with-one-input',
+                        })
+                    .demo__inputs-item.demo__inputs-item_width_medium
+                      span.demo__input-title= 'Subscription text field'
+                      .demo__input-container-email
+                        input.demo__input(type='email', placeholder='Email')
+                .demo__elements
+                    .demo__elements-container
+                        span.demo__element-title Chechbox buttons
+                        .demo__checkbox-button
+                            +checkbox-button({value: 'Можно курить'})
+                        .demo__checkbox-button
+                            +checkbox-button({value: 'Можно с питомцами', checked: 'checked'})
+                        .demo__checkbox-button
+                            +checkbox-button({value: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
+                    .demo__elements-container
+                        span.demo__element-title Radio buttons
+                        .demo__radio-buttons
+                            +radio-button({text: 'Мужчина', checked: 'checked', name: 'gender'})
+                            +radio-button({text:'Женщина', name: 'gender'})
+                    .demo__elements-container
+                        span.demo__element-title Toggle
+                        .demo__toggle-button
+                            +toggle({text: 'Получать спецпредложения', checked: 'checked'})
+                        .demo__toggle-button
+                            +toggle({text: 'Получать спецпредложения'})
+                    .demo__elements-container
+                        span.demo__element-title Like button
+                        .demo__like-button
+                          +like-button({text: '2'})
+                        .demo__like-button
+                          +like-button({text: '12', checked: 'checked'})
+                    .demo__elements-container
+                      span.demo__element-title Rate button
+                      .demo__rate-buttons
+                          +rating({amountStar: '4'})
+                          +rating({amountStar: '5'})
+                .demo__elements
+                    .demo__range-slider
+                        +slider({text: 'Range Slider'})
+                    .demo__elements-container
+                        span.demo__element-title Buttons
+                        .demo__base-button-content.demo__base-button-content_small
+                          +button({text: 'Click Me', decor: 'solid', size: 'large'})
+                        .demo__base-button-content.demo__base-button-content_small
+                          +button({text: 'Click Me', decor: 'bordered', size: 'large'})
+                        .demo__base-button-content.demo__base-button-content_small
+                          +button({text: 'Click Me'})
+                        .demo__base-button-content.demo__base-button-content_big
+                          +button({text: 'Перейти к оплате', decor: 'solid', directed: true, size: 'large'})
+                    .demo__elements-container
+                        span.demo__element-title Pagination
+                        +pagination({text: '1 - 12 из 100+ вариантов аренды'})
+            .demo__row
+                .demo__dropdown
+                  - const dataForDropdownSecond = [{subjectOfCalculation: 'Спальни', count: '2'}, {subjectOfCalculation: 'Кровати', count: '2'}, {subjectOfCalculation: 'Ванные комнаты', count: '0'}]
+                    +dropdown({
+                      label: 'Удобства номера',
+                      placeholder: '2 спальни, 2 кровати',
+                      isButtonsHidden: true,
+                      dropdownRows: dataForDropdownSecond,
+                      wordsForm: `{"0": ["спальня", "спальни", "спален"], "1": ["кровать", "кровати", "кроватей"], "2": ["ванная комната", "ванные комнаты", "ванных комнат"]}`,
+                    })
+            .demo__row
+                .demo__expandable-checkbox-list
+                    - const checkboxList = [{value: 'Завтрак'}, {value: 'Письменный стол', checked: 'checked'}, {value: 'Стул для кормления', checked: 'checked'}, {value: 'Кроватка', checked: 'checked'}, {value: 'Телевизор'}, {value: 'Шампунь'}, {value: 'Телевизор'}, {value: 'Шампунь'}]
+                    +checkbox-list({text: 'Expandable checkbox list', checkboxList})
+                .demo__rich-checkbox-buttons
+                    span.demo__element-title Rich checkbox buttons
+                    +checkbox-button({
+                      value: 'Широкий коридор',
+                      isBoldText: true,
+                      description: 'Ширина коридоров в номере не менее 91 см.'
+                      })
+                    +checkbox-button({
+                      value: 'Помощник для инвалидов',
+                      isBoldText: true,
+                      description: 'На 1 этаже вас встретит специалист и проводит до номера.'
+                      })
+                .demo__bullet-list
+                    span.demo__element-title Bullet list
+                    - const rules = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+                    +bulleted-list({values: rules})
+            .demo__row
+                - const list = [{advantageTitle: 'Комфорт', advantageDescription: 'Шумопоглощающие стены', advantageIcon: 'mood'}, {advantageTitle: 'Удобство', advantageDescription: 'Окна в каждой из спален', advantageIcon: 'location_city'}]
+                +advantages({advantagesList: list})
+                .demo__comment
+                    +comment({
+                      userName: 'Мурад Сарафанов',
+                      date: '5 дней назад',
+                      srcImage: 'images/user-icon/Murad.jpeg',
+                      text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                      amountLike: '12',
+                      likeChecked: true,
+                      })
+            .demo__content
+                .demo__content-wrapper
+                  .demo__content-item
+                      .demo__search-room
+                          -const searchRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+                          +form-search-room({text: 'Найдём номера под ваши пожелания', dateFormat: searchRoomDateFormat})
+                      .demo__check-in
+                          +form-check-in({text: 'Регистрация аккаунта'})
+                  .demo__content-item
+                      .demo__result-search-room
+                          +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']})
+                      .demo__login
+                          +login({text: 'Вход'})
+                  .demo__content-item
+                      .demo__datepicker
+                          +calendar()
+                            .datepicker-here(data-range='true').js-datepicker-here
+                      .demo__room-card
+                          +room-card({number: '888', text: 'люкс', cost: '9 990', amount: '145', images: ['./images/images-rooms/image888.jpeg', './images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg'], amountStar: '5'})
+                      .demo__room-card
+                          +room-card({number: '840', text: 'люкс', cost: '9 990', amount: '65', images: ['./images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg', './images/images-rooms/image450.jpeg'], amountStar: '4'})
+                .demo__header
+                    +header()
+                .demo__footer
+                    +footer()
+            block scripts
+                script(src='../../components/date-dropdown/DateDropdown.js')
+                script(src='../../components/room-card/RoomCard.js')
+                script(src='../../components/header/Header.js')
+                script(src='../../components/dropdown/Dropdown.js')
+                script(src='../../elements/input-date/InputDate.js')
+                script(src='../../elements/checkbox-list/CheckboxList.js')
+                script(src='../../elements/slider/slider.js')
+                script(src='../search-room/search-room.js')
+                script(src='../../elements/diagram/Diagram.js')
+                script(src='../../elements/like-button/LikeButton.js')
