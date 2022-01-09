@@ -1,5 +1,3 @@
-// extends ../layout/layout.pug
-
 include ../../elements/input-date/input-date.pug
 include ../../elements/checkbox-button/checkbox-button.pug
 include ../../elements/radio-button/radio-button.pug
@@ -190,9 +188,9 @@ html(lang='ru')
                           +calendar()
                             .datepicker-here(data-range='true').js-datepicker-here
                       .demo__room-card
-                          +room-card({number: '888', text: 'люкс', cost: '9 990', amount: '145', images: ['./images/images-rooms/image888.jpeg', './images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg'], amountStar: '5'})
+                          +room-card({number: '888', text: 'люкс', cost: '9 990', amountReviews: '145', images: ['./images/images-rooms/image888.jpeg', './images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg'], amountStar: '5'})
                       .demo__room-card
-                          +room-card({number: '840', text: 'люкс', cost: '9 990', amount: '65', images: ['./images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg', './images/images-rooms/image450.jpeg'], amountStar: '4'})
+                          +room-card({number: '840', text: 'люкс', cost: '9 990', amountReviews: '65', images: ['./images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg', './images/images-rooms/image450.jpeg'], amountStar: '4'})
                 .demo__header
                     +header()
                 .demo__footer

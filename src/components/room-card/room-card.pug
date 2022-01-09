@@ -1,6 +1,6 @@
 include ../../elements/rating/rating.pug
 
-mixin room-card({number = '100', text, cost = '1000', amount = '0', images, amountActiveStar})
+mixin room-card({number = '100', text, cost = '1000', amountReviews = '0', images, amountActiveStar})
   .room-card.js-room-card
     .room-card__slider
       each value, index in images
@@ -26,6 +26,6 @@ mixin room-card({number = '100', text, cost = '1000', amount = '0', images, amou
         .room-card__rate-group-button
             +rating({amountActiveStar})
         .room-card__amount
-          span.room-card__amount-reviews= amount
+          span.room-card__amount-reviews= amountReviews
           span.room-card__amount-reviews-description
             |  Отзывов
