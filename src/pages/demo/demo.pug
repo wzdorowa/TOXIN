@@ -52,13 +52,13 @@ html(lang='ru')
                       .demo__input-container
                         input.demo__input(type='email', placeholder='Email')
                     .demo__inputs-item
-                      - const dataForDropdownFirst = [{subjectOfCalculation: 'Взрослые', count: '0'}, {subjectOfCalculation: 'Дети', count: '0'}, {subjectOfCalculation: 'Младенцы', count: '0'}]
+                      - const dataForDropdownFirst = [{ subjectOfCalculation: 'Взрослые', count: '0' }, { subjectOfCalculation: 'Дети', count: '0' }, { subjectOfCalculation: 'Младенцы', count: '0' }]
                         +dropdown({
                           label: 'Dropdown',
                           placeholder: 'Сколько гостей',
                           isButtonsHidden: true,
                           dropdownRows: dataForDropdownFirst,
-                          wordsForm: `{"0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"]}`,
+                          wordsForm: `{ "0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"] }`,
                         })
                     .demo__inputs-item
                       span.demo__input-title= 'Masked text field'
@@ -85,49 +85,49 @@ html(lang='ru')
                     .demo__elements-container
                         span.demo__element-title Chechbox buttons
                         .demo__checkbox-button
-                            +checkbox-button({value: 'Можно курить'})
+                            +checkbox-button({ value: 'Можно курить' })
                         .demo__checkbox-button
-                            +checkbox-button({value: 'Можно с питомцами', checked: 'checked'})
+                            +checkbox-button({ value: 'Можно с питомцами', checked: 'checked' })
                         .demo__checkbox-button
-                            +checkbox-button({value: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'})
+                            +checkbox-button({ value: 'Можно пригласить гостей (до 10 человек)', checked: 'checked' })
                     .demo__elements-container
                         span.demo__element-title Radio buttons
                         .demo__radio-buttons
-                            +radio-button({text: 'Мужчина', checked: 'checked', name: 'gender'})
-                            +radio-button({text:'Женщина', name: 'gender'})
+                            +radio-button({ text: 'Мужчина', checked: 'checked', name: 'gender' })
+                            +radio-button({ text:'Женщина', name: 'gender' })
                     .demo__elements-container
                         span.demo__element-title Toggle
                         .demo__toggle-button
-                            +toggle({text: 'Получать спецпредложения', checked: 'checked'})
+                            +toggle({ text: 'Получать спецпредложения', checked: 'checked' })
                         .demo__toggle-button
-                            +toggle({text: 'Получать спецпредложения'})
+                            +toggle({ text: 'Получать спецпредложения' })
                     .demo__elements-container
                         span.demo__element-title Like button
                         .demo__like-button
-                          +like-button({text: '2'})
+                          +like-button({ text: '2' })
                         .demo__like-button
-                          +like-button({text: '12', checked: 'checked'})
+                          +like-button({ text: '12', checked: 'checked' })
                     .demo__elements-container
                       span.demo__element-title Rate button
                       .demo__rate-buttons
-                          +rating({amountStar: '4'})
-                          +rating({amountStar: '5'})
+                          +rating({ amountStar: '4' })
+                          +rating({ amountStar: '5' })
                 .demo__elements
                     .demo__range-slider
-                        +slider({text: 'Range Slider'})
+                        +slider({ text: 'Range Slider' })
                     .demo__elements-container
                         span.demo__element-title Buttons
                         .demo__base-button-content.demo__base-button-content_small
-                          +button({text: 'Click Me', decor: 'solid', size: 'large'})
+                          +button({ text: 'Click Me', decor: 'solid', size: 'large' })
                         .demo__base-button-content.demo__base-button-content_small
-                          +button({text: 'Click Me', decor: 'bordered', size: 'large'})
+                          +button({ text: 'Click Me', decor: 'bordered', size: 'large' })
                         .demo__base-button-content.demo__base-button-content_small
-                          +button({text: 'Click Me'})
+                          +button({ text: 'Click Me' })
                         .demo__base-button-content.demo__base-button-content_big
-                          +button({text: 'Перейти к оплате', decor: 'solid', directed: true, size: 'large'})
+                          +button({ text: 'Перейти к оплате', decor: 'solid', directed: true, size: 'large' })
                     .demo__elements-container
                         span.demo__element-title Pagination
-                        +pagination({text: '1 - 12 из 100+ вариантов аренды'})
+                        +pagination({ text: '1 - 12 из 100+ вариантов аренды' })
             .demo__row
                 .demo__dropdown
                   - const dataForDropdownSecond = [{subjectOfCalculation: 'Спальни', count: '2'}, {subjectOfCalculation: 'Кровати', count: '2'}, {subjectOfCalculation: 'Ванные комнаты', count: '0'}]
@@ -159,8 +159,8 @@ html(lang='ru')
                     - const rules = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
                     +bulleted-list({values: rules})
             .demo__row
-                - const list = [{advantageTitle: 'Комфорт', advantageDescription: 'Шумопоглощающие стены', advantageIcon: 'mood'}, {advantageTitle: 'Удобство', advantageDescription: 'Окна в каждой из спален', advantageIcon: 'location_city'}]
-                +advantages({advantagesList: list})
+                - const list = [{ advantageTitle: 'Комфорт', advantageDescription: 'Шумопоглощающие стены', advantageIcon: 'mood' }, { advantageTitle: 'Удобство', advantageDescription: 'Окна в каждой из спален', advantageIcon: 'location_city' }]
+                +advantages({ advantagesList: list })
                 .demo__comment
                     +comment({
                       userName: 'Мурад Сарафанов',
@@ -175,22 +175,22 @@ html(lang='ru')
                   .demo__content-item
                       .demo__search-room
                           -const searchRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
-                          +form-search-room({text: 'Найдём номера под ваши пожелания', dateFormat: searchRoomDateFormat})
+                          +form-search-room({ text: 'Найдём номера под ваши пожелания', dateFormat: searchRoomDateFormat })
                       .demo__check-in
-                          +form-check-in({text: 'Регистрация аккаунта'})
+                          +form-check-in({ text: 'Регистрация аккаунта' })
                   .demo__content-item
                       .demo__result-search-room
-                          +form-room-cost({number: '888', text: 'люкс', cost: '9 990', dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']})
+                          +form-room-cost({ number: '888', text: 'люкс', cost: '9 990', dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'] })
                       .demo__login
-                          +login({text: 'Вход'})
+                          +login({ text: 'Вход' })
                   .demo__content-item
                       .demo__datepicker
                           +calendar()
                             .datepicker-here(data-range='true').js-datepicker-here
                       .demo__room-card
-                          +room-card({number: '888', text: 'люкс', cost: '9 990', amountReviews: '145', images: ['./images/images-rooms/image888.jpeg', './images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg'], amountStar: '5'})
+                          +room-card({ number: '888', text: 'люкс', cost: '9 990', amountReviews: '145', images: ['./images/images-rooms/image888.jpeg', './images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg'], amountStar: '5' })
                       .demo__room-card
-                          +room-card({number: '840', text: 'люкс', cost: '9 990', amountReviews: '65', images: ['./images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg', './images/images-rooms/image450.jpeg'], amountStar: '4'})
+                          +room-card({ number: '840', text: 'люкс', cost: '9 990', amountReviews: '65', images: ['./images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg', './images/images-rooms/image450.jpeg'], amountStar: '4' })
                 .demo__header
                     +header()
                 .demo__footer

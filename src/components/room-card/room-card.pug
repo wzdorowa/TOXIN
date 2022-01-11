@@ -1,10 +1,10 @@
 include ../../elements/rating/rating.pug
 
-mixin room-card({number = '100', text, cost = '1000', amountReviews = '0', images, amountActiveStar})
+mixin room-card({ number = '100', text, cost = '1000', amountReviews = '0', images, amountActiveStar })
   .room-card.js-room-card
     .room-card__slider
       each value, index in images
-        img.room-card__content.js-room-card__content(src=`${value}`, alt=`Room №${number}`, aria-label=`Room №${number}`, width='100%', height='100%')
+        img.room-card__content.js-room-card__content(src=`${ value }`, alt=`Room №${ number }`, aria-label=`Room №${ number }`, width='100%', height='100%')
       .room-card__prev.js-room-card__prev
       .room-card__next.js-room-card__next
     .room-card__slider-dots
@@ -24,7 +24,7 @@ mixin room-card({number = '100', text, cost = '1000', amountReviews = '0', image
       .room-card__data-border
       .room-card__reviews
         .room-card__rate-group-button
-            +rating({amountActiveStar})
+            +rating({ amountActiveStar })
         .room-card__amount
           span.room-card__amount-reviews= amountReviews
           span.room-card__amount-reviews-description

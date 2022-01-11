@@ -1,4 +1,4 @@
-mixin dropdown({label, placeholder = 'Выберите нужное количество', isButtonsHidden = false, dropdownRows = [{subjectOfCalculation: 'Текст', count: '0'}], wordsForm = ''})
+mixin dropdown({ label, placeholder = 'Выберите нужное количество', isButtonsHidden = false, dropdownRows = [{ subjectOfCalculation: 'Текст', count: '0' }], wordsForm = '' })
   .dropdown.js-dropdown(data-words-form=wordsForm)
     .dropdown__input.js-dropdown__input
       span.dropdown__input-label= label
@@ -8,15 +8,15 @@ mixin dropdown({label, placeholder = 'Выберите нужное количе
     .dropdown__content.js-dropdown__content
       .dropdown__rows.js-dropdown__rows
         each dropdownRow in dropdownRows
-          - const {subjectOfCalculation, count} = dropdownRow
+          - const { subjectOfCalculation, count } = dropdownRow
           .dropdown__row.js-dropdown__row
             span.dropdown__row-label= subjectOfCalculation
             p.dropdown__row-counter
               button.dropdown__minus.js-dropdown__minus(tabindex='0') -
               span.dropdown__amount.js-dropdown__amount= count
               button.dropdown__plus.js-dropdown__plus(tabindex='0') +
-      .dropdown__buttons(class=`${isButtonsHidden ? 'dropdown__buttons_hidden' : ''}`)
+      .dropdown__buttons(class=`${ isButtonsHidden ? 'dropdown__buttons_hidden' : '' }`)
         .dropdown__button-clear.js-dropdown__button-clear
-          +button({text: 'Очистить'})
+          +button({ text: 'Очистить' })
         .dropdown__button-apply.js-dropdown__button-apply
-          +button({text: 'Применить'})
+          +button({ text: 'Применить' })

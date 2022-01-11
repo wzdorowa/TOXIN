@@ -1,4 +1,5 @@
 import convertNumToWordform from './helpers';
+
 class Dropdown {
   constructor(element) {
     this.dropdown = element;

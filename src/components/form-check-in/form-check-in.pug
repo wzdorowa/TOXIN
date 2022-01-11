@@ -2,7 +2,7 @@ include ../../elements/input-date/input-date.pug
 include ../../elements/radio-button/radio-button.pug
 include ../../elements/toggle/toggle.pug
 
-mixin form-check-in({text = 'Form name'} = {})
+mixin form-check-in({ text = 'Form name' } = {})
   .form-check-in
     span.form-check-in__title= text
     .form-check-in__user-data
@@ -10,8 +10,8 @@ mixin form-check-in({text = 'Form name'} = {})
         input.form-check-in__input(type='text', placeholder='Имя')
         input.form-check-in__input(type='text', placeholder='Фамилия')
       .form-check-in__buttons
-        +radio-button({text: 'Мужчина', checked: 'checked', name: 'gender-for-form-check-in'})
-        +radio-button({text: 'Женщина', name: 'gender-for-form-check-in'})
+        +radio-button({ text: 'Мужчина', checked: 'checked', name: 'gender-for-form-check-in' })
+        +radio-button({ text: 'Женщина', name: 'gender-for-form-check-in' })
     .form-check-in__date-of-birth
       span.form-check-in__input-title= 'Дата рождения'
       +input-date()
@@ -21,11 +21,11 @@ mixin form-check-in({text = 'Form name'} = {})
         input.form-check-in__input(type='email', placeholder='Email')
         input.form-check-in__input(type='password', placeholder='Пароль')
       .form-check-in__toggle
-        +toggle({text: 'Получать спецпредложения'})
+        +toggle({ text: 'Получать спецпредложения' })
     .form-check-in__check-in-details
       .form-check-in__check-in-button
-        +button({text: 'Зарегистрироваться', decor: 'solid', directed: true, size: 'large', href: '../../pages/landing/landing.pug'})
+        +button({ text: 'Зарегистрироваться', decor: 'solid', directed: true, size: 'large', href: '../../pages/landing/landing.pug' })
       .form-check-in__have-an-account
         span.form-check-in__text Уже есть аккаунт на Toxin
         .form-check-in__sign-in-button
-          +button({text: 'Войти', decor: 'bordered', size: 'large', href: '../../pages/sign-in/sign-in.pug'})
+          +button({ text: 'Войти', decor: 'bordered', size: 'large', href: '../../pages/sign-in/sign-in.pug' })
