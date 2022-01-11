@@ -2,6 +2,6 @@ mixin like-button({ text = '0', checked })
   div.like-button(class='js-like-button')
     label.like-button__filter
       input.like-button__content(class='js-like-button__content', type='checkbox',
-        name='like-button__content', checked=checked)
+        name='like-button-content', checked=checked)
       span.like-button__indicator
       span.like-button__description(class='js-like-button__description')=text
