@@ -1,21 +1,25 @@
 include ../../components/calendar/calendar.pug
 
 mixin date-dropdown({ labelArray = ['date from', 'date to'], datesFormat = ['ДД.ММ.ГГГГ','ДД.ММ.ГГГГ'], userDates = ['', ''], size = 'large', amountField = 'with-two-inputs' } = {})
+  -let classSize;
+  -if (size === 'large') classSize = 'date-dropdown__input_width_large';
+  -if (size === 'small') classSize = 'date-dropdown__input_width_small';
+
   .date-dropdown.js-date-dropdown
     .date-dropdown__inputs
       if (amountField === 'with-one-input')
-        .date-dropdown__input(class=`date-dropdown__input_width_${ size }`)
+        .date-dropdown__input(class=classSize)
           span.date-dropdown__input-label= labelArray[0]
           .date-dropdown__input-wrapper
             span.date-dropdown__input-arrow-down.js-date-dropdown__input-arrow-down
             input.date-dropdown__input-content.js-date-dropdown__input-content(type= 'text', name='date-dropdown-input-content', placeholder= datesFormat[0], readonly= 'readonly')
       else if (amountField === 'with-two-inputs')
-        .date-dropdown__input(class=`date-dropdown__input_width_${ size }`)
+        .date-dropdown__input(class=classSize)
           span.date-dropdown__input-label= labelArray[0]
           .date-dropdown__input-wrapper
             span.date-dropdown__input-arrow-down.js-date-dropdown__input-arrow-down
             input.date-dropdown__input-content.js-date-dropdown__input-content(type= 'text', name='date-dropdown-input-content', placeholder= datesFormat[0], readonly= 'readonly')
-        .date-dropdown__input(class=`date-dropdown__input_width_${ size }`)
+        .date-dropdown__input(class=classSize)
           span.date-dropdown__input-label= labelArray[1]
           .date-dropdown__input-wrapper
             span.date-dropdown__input-arrow-down.js-date-dropdown__input-arrow-down
