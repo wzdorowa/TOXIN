@@ -118,13 +118,13 @@ html(lang='ru')
                     .demo__elements-container
                         span.demo__element-title Buttons
                         .demo__base-button-content.demo__base-button-content_small
-                          +button({ text: 'Click Me', decor: 'solid', size: 'large' })
+                          +button({ text: 'Click Me', type: 'solid', size: 'large' })
                         .demo__base-button-content.demo__base-button-content_small
-                          +button({ text: 'Click Me', decor: 'bordered', size: 'large' })
+                          +button({ text: 'Click Me', type: 'bordered', size: 'large' })
                         .demo__base-button-content.demo__base-button-content_small
                           +button({ text: 'Click Me' })
                         .demo__base-button-content.demo__base-button-content_big
-                          +button({ text: 'Перейти к оплате', decor: 'solid', directed: true, size: 'large' })
+                          +button({ text: 'Перейти к оплате', type: 'solid', isDirected: true, size: 'large' })
                     .demo__elements-container
                         span.demo__element-title Pagination
                         +pagination({ text: '1 - 12 из 100+ вариантов аренды' })

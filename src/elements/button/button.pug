@@ -1,8 +1,18 @@
-mixin button({ text = 'button', decor = 'clear', directed = false, type = 'button', size = 'small', href = '' } = {})
-  -const classes = [`button_${ decor }`, `button_${ size }`]
-  -if(directed) { classes.push('button_directed') }
+mixin button({ text = 'button', type = 'clean', isDirected = false, size = 'small', href } = {})
+  -const classes = [];
+
+  -if (type === 'clean') classes.push('button_clean');
+  -if (type === 'solid') classes.push('button_solid');
+  -if (type === 'bordered') classes.push('button_bordered');
+
+  -if (size === 'small') classes.push('button_small');
+  -if (size === 'large' && type !== 'clean') classes.push('button_large');
+
+  -if (isDirected && type !== 'clean') classes.push('button_directed');
+
   -const classesButton = classes.join(' ');
-  if (href.length > 0)
+
+  if (href)
     a.button(class=classesButton, target='_blank', href=`${ href }`)=text
   else 
-    button.button(class=classesButton, type=type)=text
+    button.button(class=classesButton, type='button')=text

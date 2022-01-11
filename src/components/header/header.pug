@@ -17,15 +17,15 @@ mixin header()
           - const itemName = value
           - const suitableServices = itemName === 'Услуги'
           - const suitableAgreements = itemName === 'Соглашения'
-          if(suitableServices || suitableAgreements)
+          if (suitableServices || suitableAgreements)
             li.header__title-submenu.js-header__title-submenu
               button.header__text-title= value
               ul.header__submenu.js-header__submenu
-                if(suitableServices)
+                if (suitableServices)
                   each value in services
                     li.header__submenu-item
                       a.header__link(href='')= value
-                if(suitableAgreements)
+                if (suitableAgreements)
                   each value in agreements
                     li.header__submenu-item
                       a.header__link(href='')= value
@@ -34,6 +34,6 @@ mixin header()
               a.header__link(href='')= value
       .header__user.js-header__user
         .header__user-button-login
-          +button({ text: 'Войти', decor: 'bordered', height: 'small', href: '../../pages/sign-in/sign-in.pug' })
+          +button({ text: 'Войти', type: 'bordered', height: 'small', href: '../../pages/sign-in/sign-in.pug' })
         .header__user-button-registration
-          +button({ text: 'Зарегистрироваться', decor: 'solid', size: 'small', href: '../../pages/registration/registration.pug' })
+          +button({ text: 'Зарегистрироваться', type: 'solid', size: 'small', href: '../../pages/registration/registration.pug' })
