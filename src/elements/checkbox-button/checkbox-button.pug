@@ -1,8 +1,16 @@
 mixin checkbox-button({ value = 'Text', checked, isBoldText = false, description })
-  .checkbox-button
-    label.checkbox-button__filter
-      input.checkbox-button__content(type='checkbox',
-        name='checkbox-button__content', checked=checked)
-      span.checkbox-button__indicator
-      span.checkbox-button__value(class=`${ isBoldText ? 'checkbox-button__value_bold' : '' }`)=value
-    .checkbox-button__description= description
+  if description
+    .checkbox-button
+      label.checkbox-button__filter
+        input.checkbox-button__content(type='checkbox',
+          name='checkbox-button__content', checked=checked)
+        span.checkbox-button__indicator
+        span.checkbox-button__value(class=`${ isBoldText ? 'checkbox-button__value_bold' : '' }`)=value
+      .checkbox-button__description= description
+  else
+    .checkbox-button
+      label.checkbox-button__filter
+        input.checkbox-button__content(type='checkbox',
+          name='checkbox-button__content', checked=checked)
+        span.checkbox-button__indicator
+        span.checkbox-button__value(class=`${ isBoldText ? 'checkbox-button__value_bold' : '' }`)=value
