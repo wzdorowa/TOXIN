@@ -14,7 +14,7 @@ class CheckboxList {
       '.js-checkbox-list__title',
     );
     this.checkboxListToggle = this.checkboxList.querySelector(
-      '.js-checkbox-list__container_hidden',
+      '.js-checkbox-list__container',
     );
     this.checkboxListIndicator = this.checkboxList.querySelector(
       '.js-checkbox-list__indicator',
