@@ -33,19 +33,16 @@ class Header {
   }
 
   _bindEventListeners() {
-    this.userIcon.addEventListener(
-      'click',
-      this._handleUserIconClick.bind(this),
-    );
-    this.navigationIcon.addEventListener(
-      'click',
-      this._handleNavigationIconClick.bind(this),
-    );
+    this.userIcon.addEventListener('click', () => {
+      this._handleUserIconClick();
+    });
+    this.navigationIcon.addEventListener('click', () => {
+      this._handleNavigationIconClick();
+    });
     this.menuItem.forEach((element, index) => {
-      element.addEventListener(
-        'click',
-        this._handleSubmenuClick.bind(this, index),
-      );
+      element.addEventListener('click', () => {
+        this._handleSubmenuClick(index);
+      });
     });
   }
 }

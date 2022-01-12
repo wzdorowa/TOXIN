@@ -211,37 +211,35 @@ class Dropdown {
   }
 
   _bindEventListeners() {
-    this.dropdownArrow.addEventListener(
-      'click',
-      this._handleIconArrowDownClick.bind(this),
-    );
-    this.elementInput.addEventListener(
-      'focus',
-      this._handleInputContentFocus.bind(this),
-    );
-    this.buttonApply.addEventListener(
-      'click',
-      this._handleButtonsContainerForApplyClick.bind(this),
-    );
-    this.buttonClear.addEventListener(
-      'click',
-      this._handleButtonsContainerForClearClick.bind(this),
-    );
-    document.addEventListener('click', this._handleDocumentClick.bind(this));
+    this.dropdownArrow.addEventListener('click', () => {
+      this._handleIconArrowDownClick();
+    });
+    this.elementInput.addEventListener('focus', () => {
+      this._handleInputContentFocus();
+    });
+    this.buttonApply.addEventListener('click', () => {
+      this._handleButtonsContainerForApplyClick();
+    });
+    this.buttonClear.addEventListener('click', () => {
+      this._handleButtonsContainerForClearClick();
+    });
+    document.addEventListener('click', () => {
+      this._handleDocumentClick();
+    });
     this.rowsGroups.forEach(element => {
-      element.addEventListener('click', this._calculateTheResult.bind(this));
+      element.addEventListener('click', () => {
+        this._calculateTheResult();
+      });
     });
     this.plusSign.forEach((element, index) => {
-      element.addEventListener(
-        'click',
-        this._handlePlusSignClick.bind(this, index),
-      );
+      element.addEventListener('click', () => {
+        this._handlePlusSignClick(index);
+      });
     });
     this.minusSign.forEach((element, index) => {
-      element.addEventListener(
-        'click',
-        this._handleMinusSignClick.bind(this, index),
-      );
+      element.addEventListener('click', () => {
+        this._handleMinusSignClick(index);
+      });
     });
   }
 }

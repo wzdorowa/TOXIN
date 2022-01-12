@@ -26,7 +26,9 @@ class LikeButton {
   }
 
   _bindEventListener() {
-    this.likeButton.addEventListener('click', this._handleClick.bind(this));
+    this.likeButton.addEventListener('click', () => {
+      this._handleClick();
+    });
   }
 }
 

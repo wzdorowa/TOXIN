@@ -29,10 +29,9 @@ class CheckboxList {
   }
 
   _bindEventListeners() {
-    this.checkboxListTitle.addEventListener(
-      'click',
-      this._handleCheckboxListTitleClick.bind(this),
-    );
+    this.checkboxListTitle.addEventListener('click', () => {
+      this._handleCheckboxListTitleClick();
+    });
   }
 }
 

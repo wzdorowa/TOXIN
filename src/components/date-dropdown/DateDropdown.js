@@ -149,28 +149,26 @@ class DateDropdown {
 
   _bindEventListeners() {
     this.elementsInput.forEach(elementInput => {
-      elementInput.addEventListener(
-        'click',
-        this._handleInputContentFocus.bind(this),
-      );
+      elementInput.addEventListener('click', () => {
+        this._handleInputContentFocus();
+      });
     });
     this.dropdownsArrow.forEach(dropdownArrow => {
-      dropdownArrow.addEventListener(
-        'click',
-        this._handleIconArrowDownClick.bind(this),
-      );
+      dropdownArrow.addEventListener('click', () => {
+        this._handleIconArrowDownClick();
+      });
     });
-    this.buttonApply.addEventListener(
-      'click',
-      this._handleButtonsContainerForApplyClick.bind(this),
-    );
-    this.buttonClear.addEventListener(
-      'click',
-      this._handleButtonsContainerForClearClick.bind(this),
-    );
+    this.buttonApply.addEventListener('click', () => {
+      this._handleButtonsContainerForApplyClick();
+    });
+    this.buttonClear.addEventListener('click', () => {
+      this._handleButtonsContainerForClearClick();
+    });
     document.addEventListener(
       'click',
-      this._handleDocumentClick.bind(this),
+      () => {
+        this._handleDocumentClick();
+      },
       true,
     );
   }

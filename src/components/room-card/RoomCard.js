@@ -77,19 +77,16 @@ class RoomCard {
   }
 
   _bindEventListeners() {
-    this.buttonPrev.addEventListener(
-      'click',
-      this._handleButtonPrevClick.bind(this),
-    );
-    this.buttonNext.addEventListener(
-      'click',
-      this._handleButtonNextClick.bind(this),
-    );
+    this.buttonPrev.addEventListener('click', () => {
+      this._handleButtonPrevClick();
+    });
+    this.buttonNext.addEventListener('click', () => {
+      this._handleButtonNextClick();
+    });
     this.dots.forEach((element, index) => {
-      element.addEventListener(
-        'click',
-        this._handleDotsClick.bind(this, index),
-      );
+      element.addEventListener('click', () => {
+        this._handleDotsClick(index);
+      });
     });
   }
 }
