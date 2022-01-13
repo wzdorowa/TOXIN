@@ -10,14 +10,14 @@ include ../../components/calendar/calendar.pug
 include ../../components/date-dropdown/date-dropdown.pug
 
 block meta
-    meta(name='keywords', content='landing, toxin')
-    meta(name='description', content='Landing page TOXIN')
-block title 
-    title Landing page
+  meta(name='keywords', content='landing, toxin')
+  meta(name='description', content='Landing page TOXIN')
+block title
+  title Landing page
 block content
-    .landing
-      .landing__content
-        .landing__form-search-room
-          +form-search-room({ text: 'Найдём номера под ваши пожелания', dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'] })
-        .landing__slogan
-          p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+  .landing
+    .landing__content
+      .landing__form-search-room
+        +form-search-room({ text: 'Найдём номера под ваши пожелания', dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'] })
+      .landing__slogan
+        p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения

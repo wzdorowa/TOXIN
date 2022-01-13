@@ -13,6 +13,6 @@ mixin button({ text = 'button', type = 'clean', isDirected = false, size = 'smal
   - const classesButton = classes.join(' ');
 
   if (href)
-    a.button(class=classesButton, target='_blank', href=`${ href }`)=text
-  else 
-    button.button(class=classesButton, type='button')=text
+    a.button(class=classesButton, target='_blank', href=`${ href }`)= text
+  else
+    button.button(class=classesButton, type='button')= text

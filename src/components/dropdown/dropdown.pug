@@ -4,11 +4,16 @@ mixin dropdown({ label, placeholder = 'Выберите нужное колич�
       span.dropdown__input-label= label
       .dropdown__input-wrapper
         span.dropdown__input-arrow-down.js-dropdown__input-arrow-down
-        input.dropdown__input-content.js-dropdown__input-content(type= 'text', name='dropdown-input-content', placeholder= placeholder, readonly= 'readonly')
+        input.dropdown__input-content.js-dropdown__input-content(
+          type='text',
+          name='dropdown-input-content',
+          placeholder=placeholder,
+          readonly='readonly'
+        )
     .dropdown__content.js-dropdown__content
       .dropdown__rows.js-dropdown__rows
         each dropdownRow in dropdownRows
-          - const { subjectOfCalculation, count } = dropdownRow
+          - const { subjectOfCalculation, count } = dropdownRow;
 
           .dropdown__row.js-dropdown__row
             span.dropdown__row-label= subjectOfCalculation

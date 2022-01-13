@@ -1,9 +1,7 @@
 const convertNumToWordform = (amount, textForms) => {
   const [one, two, many] = textForms;
 
-  const isMatchingValue = amount => {
-    return Number(amount) > 1 && Number(amount) < 5;
-  };
+  const isMatchingValue = amount => Number(amount) > 1 && Number(amount) < 5;
 
   if (String(amount).includes('1')) {
     if (amount === 1) {

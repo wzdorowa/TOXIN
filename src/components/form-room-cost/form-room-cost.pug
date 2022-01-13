@@ -3,67 +3,62 @@ include ../../components/dropdown/dropdown.pug
 include ../../elements/tooltip/tooltip.pug
 
 mixin form-room-cost({ number = '100', text = 'text', cost = '1000', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'] } = {})
-    .form-room-cost
-      - 
-        const dataForDropdown = [
-          { subjectOfCalculation: 'Взрослые', count: '2' },
-          { subjectOfCalculation: 'Дети', count: '1' },
-          { subjectOfCalculation: 'Младенцы', count: '0' },
-        ];
+  .form-room-cost
+    -
+      const dataForDropdown = [
+        { subjectOfCalculation: 'Взрослые', count: '2' },
+        { subjectOfCalculation: 'Дети', count: '1' },
+        { subjectOfCalculation: 'Младенцы', count: '0' },
+      ];
 
-      - 
-        const state = {
-          pricePerDay: 9990,
-          numberOfDays: 'x 4 суток',
-          priceForThePeriod: 39960,
-          serviceCharge: 2179,
-          servicePrice: 0,
-          additionalServicesPrice: 300,
-          totalCost: 38081,
-        };
+    -
+      const state = {
+        pricePerDay: 9990,
+        numberOfDays: 'x 4 суток',
+        priceForThePeriod: 39960,
+        serviceCharge: 2179,
+        servicePrice: 0,
+        additionalServicesPrice: 300,
+        totalCost: 38081,
+      };
 
-      - 
-        const formatCost = (cost) => {
-          const value = cost.toLocaleString('ru-RU')
-          return value
-        };
+    -
+      const formatCost = (cost) => {
+        const value = cost.toLocaleString('ru-RU')
+        return value
+      };
 
-      .form-room-cost__identification-room
-          .form-room-cost__specification-room
-            span.form-room-cost__sign-number= '№'
-            span.form-room-cost__number-room= number
-            span.form-room-cost__room-class= text
-          .form-room-cost__room-cost
-            span.form-room-cost__cost= `${ cost }`
-            span.form-room-cost__cost-text= 'в сутки'
-      +date-dropdown({ labelArray: ['Прибытие', 'Выезд'], dates: dateFormat, size: 'small', amountField: 'with-two-inputs' })
-      .form-room-cost__dropdown-container
-        +dropdown({
-          label: 'Гости',
-          placeholder: '3 гостя',
-          dropdownRows: dataForDropdown,
-          wordsForm: `{ "0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"] }`,
-          })
-      .form-room-cost__calculation
-          .form-room-cost__cost-item
-            .form-room-cost__column-calc
-              span.form-room-cost__cost= `${ formatCost(state.pricePerDay) }`
-              span= ` ${ state.numberOfDays }`
-            .form-room-cost__cost= `${ formatCost(state.priceForThePeriod) }`
-          .form-room-cost__cost-item
-            .form-room-cost__column-calc
-              span.form-room-cost__cost= 'Cбор за услуги: скидка'+ ` ${ formatCost(state.serviceCharge) }`
-            .form-room-cost__block-with-tooltip
-              +tooltip('С учетом Вашей бонусной карты')
-              .form-room-cost__cost= `${ formatCost(state.servicePrice) }`
-          .form-room-cost__cost-item
-            .form-room-cost__column-calc
-              span= `Сбор за дополнительные услуги`
-            .form-room-cost__block-with-tooltip
-              +tooltip('С учетом Вашей бонусной карты')
-              .form-room-cost__cost= `${ formatCost(state.additionalServicesPrice) }`
-      .form-room-cost__total
-          .form-room-cost__total-item Итого
-          .form-room-cost__total-item.form-room-cost__total-item_with-border
-          .form-room-cost__total-item.form-room-cost__total-item_with-cost= `${ formatCost(state.totalCost) }`
-      +button({ text: 'Забронировать', type: 'solid', isDirected: true, size: 'large' })
+    .form-room-cost__identification-room
+      .form-room-cost__specification-room
+        span.form-room-cost__sign-number= '№'
+        span.form-room-cost__number-room= number
+        span.form-room-cost__room-class= text
+      .form-room-cost__room-cost
+        span.form-room-cost__cost= `${cost}`
+        span.form-room-cost__cost-text= 'в сутки'
+    +date-dropdown({ labelArray: ['Прибытие', 'Выезд'], dates: dateFormat, size: 'small', amountField: 'with-two-inputs' })
+    .form-room-cost__dropdown-container
+      +dropdown({ label: 'Гости', placeholder: '3 гостя', dropdownRows: dataForDropdown, wordsForm: `{ "0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"] }`, })
+    .form-room-cost__calculation
+      .form-room-cost__cost-item
+        .form-room-cost__column-calc
+          span.form-room-cost__cost= `${formatCost(state.pricePerDay)}`
+          span= ` ${state.numberOfDays}`
+        .form-room-cost__cost= `${formatCost(state.priceForThePeriod)}`
+      .form-room-cost__cost-item
+        .form-room-cost__column-calc
+          span.form-room-cost__cost= 'Cбор за услуги: скидка' + ` ${formatCost(state.serviceCharge)}`
+        .form-room-cost__block-with-tooltip
+          +tooltip('С учетом Вашей бонусной карты')
+          .form-room-cost__cost= `${formatCost(state.servicePrice)}`
+      .form-room-cost__cost-item
+        .form-room-cost__column-calc
+          span= `Сбор за дополнительные услуги`
+        .form-room-cost__block-with-tooltip
+          +tooltip('С учетом Вашей бонусной карты')
+          .form-room-cost__cost= `${formatCost(state.additionalServicesPrice)}`
+    .form-room-cost__total
+      .form-room-cost__total-item Итого
+      .form-room-cost__total-item.form-room-cost__total-item_with-border
+      .form-room-cost__total-item.form-room-cost__total-item_with-cost= `${formatCost(state.totalCost)}`
+    +button({ text: 'Забронировать', type: 'solid', isDirected: true, size: 'large' })

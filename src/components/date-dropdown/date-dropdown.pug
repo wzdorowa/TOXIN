@@ -12,18 +12,35 @@ mixin date-dropdown({ labelArray = ['date from', 'date to'], datesFormat = ['Ð”Ð
           span.date-dropdown__input-label= labelArray[0]
           .date-dropdown__input-wrapper
             span.date-dropdown__input-arrow-down.js-date-dropdown__input-arrow-down
-            input.date-dropdown__input-content.js-date-dropdown__input-content(type= 'text', name='date-dropdown-input-content', placeholder= datesFormat[0], readonly= 'readonly')
+            input.date-dropdown__input-content.js-date-dropdown__input-content(
+              type='text',
+              name='date-dropdown-input-content',
+              placeholder=datesFormat[0],
+              readonly='readonly'
+            )
       else if (amountField === 'with-two-inputs')
         .date-dropdown__input(class=classSize)
           span.date-dropdown__input-label= labelArray[0]
           .date-dropdown__input-wrapper
             span.date-dropdown__input-arrow-down.js-date-dropdown__input-arrow-down
-            input.date-dropdown__input-content.js-date-dropdown__input-content(type= 'text', name='date-dropdown-input-content', placeholder= datesFormat[0], readonly= 'readonly')
+            input.date-dropdown__input-content.js-date-dropdown__input-content(
+              type='text',
+              name='date-dropdown-input-content',
+              placeholder=datesFormat[0],
+              readonly='readonly'
+            )
         .date-dropdown__input(class=classSize)
           span.date-dropdown__input-label= labelArray[1]
           .date-dropdown__input-wrapper
             span.date-dropdown__input-arrow-down.js-date-dropdown__input-arrow-down
-            input.date-dropdown__input-content.js-date-dropdown__input-content(type= 'text', name='date-dropdown-input-content', placeholder= datesFormat[1], readonly= 'readonly')
-    .date-dropdown__datepicker.js-date-dropdown__datepicker(class=`date-dropdown__datepicker_${ amountField }`)
-      +calendar()
-        .datepicker-here(data-range='true', data-day-from=userDates[0], data-day-to=userDates[1]).js-datepicker-here
+            input.date-dropdown__input-content.js-date-dropdown__input-content(
+              type='text',
+              name='date-dropdown-input-content',
+              placeholder=datesFormat[1],
+              readonly='readonly'
+            )
+    .date-dropdown__datepicker.js-date-dropdown__datepicker(
+      class=`date-dropdown__datepicker_${ amountField }`
+    )
+      +calendar
+        .datepicker-here.js-datepicker-here(data-range='true', data-day-from=userDates[0], data-day-to=userDates[1])

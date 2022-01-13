@@ -3,18 +3,11 @@ include ../../components/comment/comment.pug
 mixin comments({ commentsList })
   .comments
     .comments__header
-      h2.comments__title='Отзывы посетителей номера'
-      span.comments__amount=`${ commentsList.length } отзыва`
+      h2.comments__title= 'Отзывы посетителей номера'
+      span.comments__amount= `${commentsList.length} отзыва`
     .comments__content
       each comment in commentsList
-        - const { userName, date, srcImage, text, amountLike, likeChecked } = comment
+        - const { userName, date, srcImage, text, amountLike, likeChecked } = comment;
 
         .comments__comment
-          +comment({
-            userName,
-            date,
-            srcImage,
-            text,
-            amountLike,
-            likeChecked
-          })
+          +comment({ userName, date, srcImage, text, amountLike, likeChecked })

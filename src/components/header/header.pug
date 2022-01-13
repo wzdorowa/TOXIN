@@ -1,8 +1,8 @@
 include ../../elements/logo/logo.pug
 include ../../elements/button/button.pug
 
-mixin header()
-  - 
+mixin header
+  -
     const menu = [
       'О нас',
       {
@@ -22,7 +22,7 @@ mixin header()
     .header__content
       .header__grouping
         .header__logo
-          +logo()
+          +logo
         .header__user-icon.js-header__user-icon
         .header__navigation-icon.js-header__navigation-icon
       ul.header__navigation.js-header__navigation

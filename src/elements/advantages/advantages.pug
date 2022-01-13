@@ -3,7 +3,7 @@ mixin advantages({ title, advantagesList = [{ advantageTitle: 'Advantage', advan
     h2.advantages__main-title= title
     .advantages__wrapper
       each advantagesItem in advantagesList 
-        - const { advantageTitle, advantageDescription, advantageIcon } = advantagesItem
+        - const { advantageTitle, advantageDescription, advantageIcon } = advantagesItem;
 
         .advantages__item
           span.advantages__icon(class=`advantages__icon_with-sign-${ advantageIcon }`)= advantageIcon

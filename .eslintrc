@@ -1,0 +1,31 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "es2017": true,
+    "jest": true
+  },
+  "plugins": [
+    "prettier",
+    "pug"
+  ],
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "rules": {
+    "import": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/first": "off",
+    "import/order": "off",
+    "no-new": "off",
+    "no-shadow": "off",
+    "no-underscore-dangle": "off",
+    "max-len": ["error", { "code": 80 }]
+  },
+  "globals": {
+    "$": true,
+    "jQuery": true
+  }
+}

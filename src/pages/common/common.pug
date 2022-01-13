@@ -3,36 +3,51 @@ include ../../components/footer/footer.pug
 
 doctype html
 html(lang='ru')
-    head
-        meta(charset='UTF-8')
-        meta(name='viewport' content='width=device-width, initial-scale=1')
-        block meta
-        block title
-        link(rel='stylesheet', href='../../styles/global.scss')
-        link(rel='shortcut icon' href='../../images/favicon.ico' type='image/x-icon')
-        link(rel='mask-icon' href='../../images/favicon-safari.svg' color='blue')
-        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.css')
-        link(rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
-        block scripts
-            script(src='https://code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous')
-            script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
-            script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js' integrity='sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=' crossorigin='anonymous')
-            script(src='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.js')
-            script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.js' integrity='sha512-SSQo56LrrC0adA0IJk1GONb6LLfKM6+gqBTAGgWNO8DIxHiy0ARRIztRWVK6hGnrlYWOFKEbSLQuONZDtJFK0Q==' crossorigin='anonymous')
-    body
-        .common
-            +header()
-            main.common__main
-                block content
-            +footer()
-        block scripts
-            script(src='../../components/date-dropdown/DateDropdown.js')
-            script(src='../../components/room-card/RoomCard.js')
-            script(src='../../components/header/Header.js')
-            script(src='../../components/dropdown/Dropdown.js')
-            script(src='../../elements/input-date/InputDate.js')
-            script(src='../../elements/checkbox-list/CheckboxList.js')
-            script(src='../../elements/slider/slider.js')
-            script(src='../search-room/search-room.js')
-            script(src='../../elements/diagram/Diagram.js')
-            script(src='../../elements/like-button/LikeButton.js')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    block meta
+    block title
+    link(rel='stylesheet', href='../../styles/global.scss')
+    link(rel='shortcut icon', href='../../images/favicon.ico', type='image/x-icon')
+    link(rel='mask-icon', href='../../images/favicon-safari.svg', color='blue')
+    link(
+      rel='stylesheet',
+      href='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.css'
+    )
+    link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    block scripts
+      script(
+        src='https://code.jquery.com/jquery-3.4.1.min.js',
+        integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=',
+        crossorigin='anonymous'
+      )
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+      script(
+        src='https://code.jquery.com/ui/1.12.1/jquery-ui.js',
+        integrity='sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=',
+        crossorigin='anonymous'
+      )
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.js')
+      script(
+        src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.js',
+        integrity='sha512-SSQo56LrrC0adA0IJk1GONb6LLfKM6+gqBTAGgWNO8DIxHiy0ARRIztRWVK6hGnrlYWOFKEbSLQuONZDtJFK0Q==',
+        crossorigin='anonymous'
+      )
+  body
+    .common
+      +header
+      main.common__main
+        block content
+      +footer
+    block scripts
+      script(src='../../components/date-dropdown/DateDropdown.js')
+      script(src='../../components/room-card/RoomCard.js')
+      script(src='../../components/header/Header.js')
+      script(src='../../components/dropdown/Dropdown.js')
+      script(src='../../elements/input-date/InputDate.js')
+      script(src='../../elements/checkbox-list/CheckboxList.js')
+      script(src='../../elements/slider/slider.js')
+      script(src='../search-room/search-room.js')
+      script(src='../../elements/diagram/Diagram.js')
+      script(src='../../elements/like-button/LikeButton.js')
