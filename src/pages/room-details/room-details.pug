@@ -19,22 +19,26 @@ block title
     title Room details page
 block content
   .room-details
-    -const images = ['images/images-room/room-image1.jpeg', 'images/images-room/room-image2.jpeg', 'images/images-room/room-image3.jpeg']
+    - const images = ['images/images-room/room-image1.jpeg', 'images/images-room/room-image2.jpeg', 'images/images-room/room-image3.jpeg'];
+
+    - const list = [{ advantageTitle: 'Комфорт', advantageDescription: 'Шумопоглощающие стены', advantageIcon: 'mood' }, { advantageTitle: 'Удобство', advantageDescription: 'Окна в каждой из спален', advantageIcon: 'location_city' }, { advantageTitle: 'Уют', advantageDescription: 'Номер оснащен камином', advantageIcon: 'whatshot' }];
+
+    - const rules = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'];
+
+    - const commentList = [{ userName: 'Мурад Сарафанов', date: '5 дней назад', srcImage: 'images/user-icon/Murad.jpeg', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', amountLike: 12, likeChecked: 'checked' }, { userName: 'Патрисия Стёклышкова', date: 'Неделю назад', srcImage: 'images/user-icon/Patriziya.jpeg', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', amountLike: 2, likeChecked: false }];
+
     +collage(images)
     .room-details__content
       .room-details__information
         .room-details__room-impressions
           .room-details__advantages
-            - const list = [{ advantageTitle: 'Комфорт', advantageDescription: 'Шумопоглощающие стены', advantageIcon: 'mood' }, { advantageTitle: 'Удобство', advantageDescription: 'Окна в каждой из спален', advantageIcon: 'location_city' }, { advantageTitle: 'Уют', advantageDescription: 'Номер оснащен камином', advantageIcon: 'whatshot' }]
             +advantages({ title: 'Сведения о номере', advantagesList: list })
           .room-details__diagram
             +diagram({ title: 'Впечатления от номера', impressions: { amazing: 130, good: 65, satisfactorily: 65, bad: 0 } })
         .room-details__comment
-          -const commentList = [{ userName: 'Мурад Сарафанов', date: '5 дней назад', srcImage: 'images/user-icon/Murad.jpeg', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', amountLike: 12, likeChecked: 'checked' }, { userName: 'Патрисия Стёклышкова', date: 'Неделю назад', srcImage: 'images/user-icon/Patriziya.jpeg', text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', amountLike: 2, likeChecked: false }]
           +comments({ commentsList: commentList })
         .room-details__extra-info
           .room-details__rules
-            - const rules = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
             h2.room-details__title-rules Правила
             +bulleted-list({ title: 'Правила', values: rules })
           .room-details__cancel
