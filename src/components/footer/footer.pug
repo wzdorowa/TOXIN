@@ -12,9 +12,9 @@ mixin footer()
         - const columnMedium = ['О нас', 'О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
         - const columnLast = ['Служба поддержки', 'Соглашения', 'Сообщества', 'Связь с нами']
         - const columns = [columnFirst, columnMedium, columnLast]
-        each column, index in columns
+        each column in columns
           ul.footer__list
-            each value, index in column
+            each value in column
               li.footer__item
                 a.footer__link(href='')= value
       .footer__subscribe

@@ -3,12 +3,12 @@ include ../../elements/rating/rating.pug
 mixin room-card({ number = '100', text, cost = '1000', amountReviews = '0', images, amountActiveStar })
   .room-card.js-room-card
     .room-card__slider
-      each value, index in images
+      each value in images
         img.room-card__content.js-room-card__content(src=`${ value }`, alt=`Room №${ number }`, aria-label=`Room №${ number }`, width='100%', height='100%')
       .room-card__prev.js-room-card__prev
       .room-card__next.js-room-card__next
     .room-card__slider-dots
-      each value, index in images
+      each value in images
         button.room-card__switch-slider.js-room-card__switch-slider(type='button')
     .room-card__description
       .room-card__data
