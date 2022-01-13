@@ -3,7 +3,21 @@ include ../../elements/button/button.pug
 
 mixin header()
   - 
-    const menu = ['О нас', {'Услуги': ['Аренда конференц-зала', 'Трансфер до отеля', 'Аренда транспорта', 'Камера хранения / сейф']}, 'Вакансии', 'Новости', {'Соглашения': ['Обработка персональных данных', 'Условия бронирования']}];
+    const menu = [
+      'О нас',
+      {
+        Услуги: [
+          'Аренда конференц-зала',
+          'Трансфер до отеля',
+          'Аренда транспорта',
+          'Камера хранения / сейф',
+        ],
+      },
+      'Вакансии',
+      'Новости',
+      { Соглашения: ['Обработка персональных данных', 'Условия бронирования'] },
+    ];
+
   header.header
     .header__content
       .header__grouping
@@ -16,6 +30,7 @@ mixin header()
           if (typeof(itemMenu) === 'object')
             - const itemName = Object.keys(itemMenu);
             - const subItemMenu = itemMenu[itemName];
+
             li.header__title-submenu.js-header__title-submenu
               button.header__text-title= itemName[0]
               ul.header__submenu.js-header__submenu

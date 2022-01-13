@@ -1,9 +1,9 @@
 include ../../components/calendar/calendar.pug
 
 mixin date-dropdown({ labelArray = ['date from', 'date to'], datesFormat = ['ДД.ММ.ГГГГ','ДД.ММ.ГГГГ'], userDates = ['', ''], size = 'large', amountField = 'with-two-inputs' } = {})
-  -let classSize;
-  -if (size === 'large') classSize = 'date-dropdown__input_width_large';
-  -if (size === 'small') classSize = 'date-dropdown__input_width_small';
+  - let classSize;
+  - if (size === 'large') classSize = 'date-dropdown__input_width_large';
+  - if (size === 'small') classSize = 'date-dropdown__input_width_small';
 
   .date-dropdown.js-date-dropdown
     .date-dropdown__inputs

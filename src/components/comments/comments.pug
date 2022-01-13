@@ -8,6 +8,7 @@ mixin comments({ commentsList })
     .comments__content
       each comment in commentsList
         - const { userName, date, srcImage, text, amountLike, likeChecked } = comment
+
         .comments__comment
           +comment({
             userName,

@@ -9,6 +9,7 @@ mixin dropdown({ label, placeholder = 'Выберите нужное колич�
       .dropdown__rows.js-dropdown__rows
         each dropdownRow in dropdownRows
           - const { subjectOfCalculation, count } = dropdownRow
+
           .dropdown__row.js-dropdown__row
             span.dropdown__row-label= subjectOfCalculation
             p.dropdown__row-counter
