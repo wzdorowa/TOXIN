@@ -8,10 +8,12 @@ mixin footer()
           +logo()
         p.footer__logo-description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»‎
       .footer__information
-        - const columnFirst = ['Навигация', 'О нас', 'Новости', 'Служба поддержки', 'Услуги']
-        - const columnMedium = ['О нас', 'О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
-        - const columnLast = ['Служба поддержки', 'Соглашения', 'Сообщества', 'Связь с нами']
-        - const columns = [columnFirst, columnMedium, columnLast]
+        - 
+          const columns = [
+            ['Навигация', 'О нас', 'Новости', 'Служба поддержки', 'Услуги'],
+            ['О нас', 'О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы'],
+            ['Служба поддержки', 'Соглашения', 'Сообщества', 'Связь с нами'],
+          ];
         each column in columns
           ul.footer__list
             each value in column

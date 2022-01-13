@@ -45,6 +45,55 @@ html(lang='ru')
             script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.js' integrity='sha512-SSQo56LrrC0adA0IJk1GONb6LLfKM6+gqBTAGgWNO8DIxHiy0ARRIztRWVK6hGnrlYWOFKEbSLQuONZDtJFK0Q==' crossorigin='anonymous')
     body
         .demo
+          - 
+            const dataForDropdownFirst = [
+              { subjectOfCalculation: 'Взрослые', count: '0' },
+              { subjectOfCalculation: 'Дети', count: '0' },
+              { subjectOfCalculation: 'Младенцы', count: '0' },
+            ];
+
+          - 
+            const dataForDropdownSecond = [
+              { subjectOfCalculation: 'Спальни', count: '2' },
+              { subjectOfCalculation: 'Кровати', count: '2' },
+              { subjectOfCalculation: 'Ванные комнаты', count: '0' },
+            ];
+
+          - 
+            const checkboxList = [
+              { value: 'Завтрак' },
+              { value: 'Письменный стол', checked: 'checked' },
+              { value: 'Стул для кормления', checked: 'checked' },
+              { value: 'Кроватка', checked: 'checked' },
+              { value: 'Телевизор' },
+              { value: 'Шампунь' },
+              { value: 'Телевизор' },
+              { value: 'Шампунь' },
+            ];
+
+          - 
+            const rules = [
+              'Нельзя с питомцами',
+              'Без вечеринок и мероприятий',
+              'Время прибытия — после 13:00, а выезд до 12:00',
+            ];
+
+          - 
+            const list = [
+              {
+                advantageTitle: 'Комфорт',
+                advantageDescription: 'Шумопоглощающие стены',
+                advantageIcon: 'mood',
+              },
+              {
+                advantageTitle: 'Удобство',
+                advantageDescription: 'Окна в каждой из спален',
+                advantageIcon: 'location_city',
+              },
+            ];
+
+          - const searchRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'];
+
             .demo__row
                 .demo__inputs
                     .demo__inputs-item
@@ -52,7 +101,6 @@ html(lang='ru')
                       .demo__input-container
                         input.demo__input(type='email', placeholder='Email')
                     .demo__inputs-item
-                      - const dataForDropdownFirst = [{ subjectOfCalculation: 'Взрослые', count: '0' }, { subjectOfCalculation: 'Дети', count: '0' }, { subjectOfCalculation: 'Младенцы', count: '0' }]
                         +dropdown({
                           label: 'Dropdown',
                           placeholder: 'Сколько гостей',
@@ -130,7 +178,6 @@ html(lang='ru')
                         +pagination({ text: '1 - 12 из 100+ вариантов аренды' })
             .demo__row
                 .demo__dropdown
-                  - const dataForDropdownSecond = [{subjectOfCalculation: 'Спальни', count: '2'}, {subjectOfCalculation: 'Кровати', count: '2'}, {subjectOfCalculation: 'Ванные комнаты', count: '0'}]
                     +dropdown({
                       label: 'Удобства номера',
                       placeholder: '2 спальни, 2 кровати',
@@ -140,7 +187,6 @@ html(lang='ru')
                     })
             .demo__row
                 .demo__expandable-checkbox-list
-                    - const checkboxList = [{value: 'Завтрак'}, {value: 'Письменный стол', checked: 'checked'}, {value: 'Стул для кормления', checked: 'checked'}, {value: 'Кроватка', checked: 'checked'}, {value: 'Телевизор'}, {value: 'Шампунь'}, {value: 'Телевизор'}, {value: 'Шампунь'}]
                     +checkbox-list({text: 'Expandable checkbox list', checkboxList})
                 .demo__rich-checkbox-buttons
                     span.demo__element-title Rich checkbox buttons
@@ -156,10 +202,8 @@ html(lang='ru')
                       })
                 .demo__bullet-list
                     span.demo__element-title Bullet list
-                    - const rules = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
                     +bulleted-list({values: rules})
             .demo__row
-                - const list = [{ advantageTitle: 'Комфорт', advantageDescription: 'Шумопоглощающие стены', advantageIcon: 'mood' }, { advantageTitle: 'Удобство', advantageDescription: 'Окна в каждой из спален', advantageIcon: 'location_city' }]
                 +advantages({ advantagesList: list })
                 .demo__comment
                     +comment({
@@ -174,7 +218,6 @@ html(lang='ru')
                 .demo__content-wrapper
                   .demo__content-item
                       .demo__search-room
-                          -const searchRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
                           +form-search-room({ text: 'Найдём номера под ваши пожелания', dateFormat: searchRoomDateFormat })
                       .demo__check-in
                           +form-check-in({ text: 'Регистрация аккаунта' })

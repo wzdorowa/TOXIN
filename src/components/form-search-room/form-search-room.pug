@@ -4,11 +4,16 @@ include ../../components/date-dropdown/date-dropdown.pug
 
 mixin form-search-room({ text = 'Form name', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'] } = {})
   .form-search-room
+    - const labelInputs = ['Прибытие', 'Выезд']
+    - 
+      const dataForDropdown = [
+        { subjectOfCalculation: 'Взрослые', count: '0' },
+        { subjectOfCalculation: 'Дети', count: '0' },
+        { subjectOfCalculation: 'Младенцы', count: '0' },
+      ];
     div.form-search-room__wrapper
       span.form-search-room__title= text
-      -const labelInputs = ['Прибытие', 'Выезд']
       +date-dropdown({ labelArray: labelInputs, dates: dateFormat, size: 'small', amountField: 'with-two-inputs' })
-      - const dataForDropdown = [{ subjectOfCalculation: 'Взрослые', count: '0' }, { subjectOfCalculation: 'Дети', count: '0' }, { subjectOfCalculation: 'Младенцы', count: '0' }]
       +dropdown({
         label: 'Гости',
         placeholder: 'Сколько гостей',

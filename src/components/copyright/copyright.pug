@@ -1,7 +1,18 @@
 include ../../components/social-button/social-button.pug
 
 mixin copyright()
-  - const buttons = [{ name: 'Twitter', src: '../../components/copyright/images/twitter.svg' }, { name: 'Facebook', src: '../../components/copyright/images/facebook.svg' }, { name: 'Instagram', src: '../../components/copyright/images/instagram.svg' }]
+  - 
+    const buttons = [
+      { name: 'Twitter', src: '../../components/copyright/images/twitter.svg' },
+      {
+        name: 'Facebook',
+        src: '../../components/copyright/images/facebook.svg',
+      },
+      {
+        name: 'Instagram',
+        src: '../../components/copyright/images/instagram.svg',
+      },
+    ];
   .copyright
     .copyright__content
       span.copyright__description
