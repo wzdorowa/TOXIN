@@ -9,5 +9,5 @@ mixin comment({ userName = 'Title', date = 'text', srcImage, text = 'text descri
         span.comment__date= date
     .comment__content
       .comment__like-button
-        +like-button({ text: amountLike, checked: likeChecked })
+        +like-button({ value: amountLike, checked: likeChecked })
       p.comment__paragraph= text
