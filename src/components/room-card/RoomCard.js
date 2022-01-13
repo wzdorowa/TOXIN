@@ -60,20 +60,23 @@ class RoomCard {
       ' room-card__switch-slider-active';
   }
 
-  _currentSlide(slideNumber) {
-    this._showSlides((this.slideIndex = slideNumber));
+  _setCurrentSlide(slideNumber) {
+    this.slideIndex = slideNumber;
+    this._showSlides(this.slideIndex);
   }
 
   _handleButtonPrevClick() {
-    this._showSlides((this.slideIndex -= 1));
+    this.slideIndex -= 1;
+    this._showSlides(this.slideIndex);
   }
 
   _handleButtonNextClick() {
-    this._showSlides((this.slideIndex += 1));
+    this.slideIndex += 1;
+    this._showSlides();
   }
 
   _handleDotsClick(index) {
-    this._currentSlide(index + 1);
+    this._setCurrentSlide(index + 1);
   }
 
   _bindEventListeners() {
