@@ -27,7 +27,8 @@
       border-radius: 50%;
     }
 
-    &:last-of-type {
+    &_with-arrow {
+      position: relative;
       width: 40px;
       background: $SecondaryGradient;
       border-radius: 50%;
