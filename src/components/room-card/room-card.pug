@@ -3,10 +3,10 @@ include ../../elements/rating/rating.pug
 mixin room-card(roomCardData)
   -
     const {
-      number = '100',
+      number,
       level,
-      cost = '1000',
-      amountReviews = '0',
+      cost,
+      amountReviews,
       images,
       amountActiveStar
     } = roomCardData;

@@ -3,7 +3,7 @@ include ../../elements/like-button/like-button.pug
 mixin comment(comment)
   -
     const {
-      userName = 'Гость',
+      userName,
       date = 'несколько дней назад',
       srcImage,
       text = 'Здесь должно быть содержание комментария.',
