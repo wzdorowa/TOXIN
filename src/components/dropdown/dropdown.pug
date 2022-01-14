@@ -1,4 +1,13 @@
-mixin dropdown({ label, placeholder = 'Выберите нужное количество', isButtonsHidden = false, dropdownRows = [{ subjectOfCalculation: 'Текст', count: '0' }], wordsForm = '' })
+mixin dropdown(data)
+  -
+    const {
+      label,
+      placeholder = 'Выберите нужное количество',
+      isButtonsHidden = false,
+      dropdownRows = [{ subjectOfCalculation: 'Текст', count: '0' }],
+      wordsForm = ''
+    } = data;
+
   .dropdown.js-dropdown(data-words-form=wordsForm)
     .dropdown__input.js-dropdown__input
       span.dropdown__input-label= label

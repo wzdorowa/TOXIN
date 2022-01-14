@@ -1,4 +1,14 @@
-mixin advantages({ title, advantagesList = [{ advantageTitle: 'Advantage', advantageDescription: 'Advantage description', advantageIcon: 'mood' }]} = {})
+mixin advantages(advantageData)
+  -
+    const {
+      title,
+      advantagesList = [{
+        advantageTitle: 'Advantage',
+        advantageDescription: 'Advantage description',
+        advantageIcon: 'mood'
+      }]
+    } = advantageData;
+
   .advantages
     h2.advantages__main-title= title
     .advantages__wrapper

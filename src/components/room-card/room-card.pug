@@ -1,6 +1,16 @@
 include ../../elements/rating/rating.pug
 
-mixin room-card({ number = '100', text, cost = '1000', amountReviews = '0', images, amountActiveStar })
+mixin room-card(roomCardData)
+  -
+    const {
+      number = '100',
+      text,
+      cost = '1000',
+      amountReviews = '0',
+      images,
+      amountActiveStar
+    } = roomCardData;
+
   .room-card.js-room-card
     .room-card__slider
       each value in images

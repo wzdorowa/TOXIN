@@ -107,6 +107,91 @@ html(lang='ru')
           },
         ];
 
+      -
+        const dropdownGuests = {
+          label: 'Dropdown',
+          placeholder: 'Сколько гостей',
+          isButtonsHidden: true,
+          dropdownRows: dataForDropdownFirst,
+          wordsForm: `{ "0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"] }`
+        }
+
+      -
+        const dropdownConveniences = {
+          label: 'Удобства номера',
+          placeholder: '2 спальни, 2 кровати',
+          isButtonsHidden: true,
+          dropdownRows: dataForDropdownSecond,
+          wordsForm: `{"0": ["спальня", "спальни", "спален"], "1": ["кровать", "кровати", "кроватей"], "2": ["ванная комната", "ванные комнаты", "ванных комнат"]`
+        }
+
+      -
+        const dateDropdownOneField = {
+          labelArray: ['Date dropdown', 'Date dropdown'],
+          size: 'small',
+          amountField: 'with-two-inputs'
+        }
+
+      -
+        const dateDropdownTwoField = {
+          labelArray: ['Filter date dropdown'],
+          datesFormat: ['ДД.ММ - ДД.ММ'],
+          size: 'large',
+          amountField: 'with-one-input'
+        }
+
+      -
+        const checkboxHallway = {
+          value: 'Широкий коридор',
+          isBoldText: true,
+          description: 'Ширина коридоров в номере не менее 91 см.'
+        }
+
+      -
+        const checkboxForInvalids = {
+          value: 'Помощник для инвалидов',
+          isBoldText: true,
+          description: 'На 1 этаже вас встретит специалист и проводит до номера.'
+        }
+
+      -
+        const comment = {
+          userName: 'Мурад Сарафанов',
+          date: '5 дней назад',
+          srcImage: 'images/user-icon/Murad.jpeg',
+          text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+          amountLike: '12',
+          likeChecked: true
+        }
+
+      -
+        const roomForm = {
+          number: '888',
+          text: 'люкс',
+          cost: '9 990',
+          dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+        }
+
+      -
+        const roomCard1 = {
+          number: '888',
+          text: 'люкс',
+          cost: '9 990',
+          amountReviews: '145',
+          images: ['./images/images-rooms/image888.jpeg', './images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg'],
+          amountStar: '5'
+        }
+
+      -
+        const roomCard2 = {
+          number: '840',
+          text: 'люкс',
+          cost: '9 990',
+          amountReviews: '65',
+          images: ['./images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg', './images/images-rooms/image450.jpeg'],
+          amountStar: '4'
+        }
+
       - const searchRoomDateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'];
         .demo__row
           .demo__inputs
@@ -115,15 +200,15 @@ html(lang='ru')
               .demo__input-container
                 input.demo__input(type='email', placeholder='Email')
             .demo__inputs-item
-              +dropdown({ label: 'Dropdown', placeholder: 'Сколько гостей', isButtonsHidden: true, dropdownRows: dataForDropdownFirst, wordsForm: `{ "0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"] }`, })
+              +dropdown({dropdownGuests})
             .demo__inputs-item
               span.demo__input-title= 'Masked text field'
               .demo__input-container
                 +input-date
             .demo__inputs-item
-              +date-dropdown({ labelArray: ['Date dropdown', 'Date dropdown'], size: 'small', amountField: 'with-two-inputs' })
+              +date-dropdown(dateDropdownOneField)
             .demo__inputs-item.demo__inputs-item_width_medium
-              +date-dropdown({ labelArray: ['Filter date dropdown'], datesFormat: ['ДД.ММ - ДД.ММ'], size: 'large', amountField: 'with-one-input', })
+              +date-dropdown(dateDropdownTwoField)
             .demo__inputs-item.demo__inputs-item_width_medium
               span.demo__input-title= 'Subscription text field'
               .demo__input-container-email
@@ -177,21 +262,21 @@ html(lang='ru')
               +pagination({ text: '1 - 12 из 100+ вариантов аренды' })
         .demo__row
           .demo__dropdown
-            +dropdown({ label: 'Удобства номера', placeholder: '2 спальни, 2 кровати', isButtonsHidden: true, dropdownRows: dataForDropdownSecond, wordsForm: `{"0": ["спальня", "спальни", "спален"], "1": ["кровать", "кровати", "кроватей"], "2": ["ванная комната", "ванные комнаты", "ванных комнат"]}`, })
+            +dropdown(dropdownConveniences)
         .demo__row
           .demo__expandable-checkbox-list
             +checkbox-list({text: 'Expandable checkbox list', checkboxList})
           .demo__rich-checkbox-buttons
             span.demo__element-title Rich checkbox buttons
-            +checkbox-button({ value: 'Широкий коридор', isBoldText: true, description: 'Ширина коридоров в номере не менее 91 см.' })
-            +checkbox-button({ value: 'Помощник для инвалидов', isBoldText: true, description: 'На 1 этаже вас встретит специалист и проводит до номера.' })
+            +checkbox-button(checkboxHallway)
+            +checkbox-button(checkboxForInvalids)
           .demo__bullet-list
             span.demo__element-title Bullet list
             +bulleted-list({values: rules})
         .demo__row
           +advantages({ advantagesList: list })
           .demo__comment
-            +comment({ userName: 'Мурад Сарафанов', date: '5 дней назад', srcImage: 'images/user-icon/Murad.jpeg', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', amountLike: '12', likeChecked: true, })
+            +comment(comment)
         .demo__content
           .demo__content-wrapper
             .demo__content-item
@@ -201,7 +286,7 @@ html(lang='ru')
                 +form-check-in({ text: 'Регистрация аккаунта' })
             .demo__content-item
               .demo__result-search-room
-                +form-room-cost({ number: '888', text: 'люкс', cost: '9 990', dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'] })
+                +form-room-cost(roomForm)
               .demo__login
                 +login({ text: 'Вход' })
             .demo__content-item
@@ -209,9 +294,9 @@ html(lang='ru')
                 +calendar
                   .datepicker-here.js-datepicker-here(data-range='true')
               .demo__room-card
-                +room-card({ number: '888', text: 'люкс', cost: '9 990', amountReviews: '145', images: ['./images/images-rooms/image888.jpeg', './images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg'], amountStar: '5' })
+                +room-card(roomCard1)
               .demo__room-card
-                +room-card({ number: '840', text: 'люкс', cost: '9 990', amountReviews: '65', images: ['./images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg', './images/images-rooms/image450.jpeg'], amountStar: '4' })
+                +room-card(roomCard2)
           .demo__header
             +header
           .demo__footer

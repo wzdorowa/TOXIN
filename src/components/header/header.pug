@@ -18,6 +18,22 @@ mixin header
       { Соглашения: ['Обработка персональных данных', 'Условия бронирования'] },
     ];
 
+  -
+    const loginButton = {
+      text: 'Войти',
+      type: 'bordered',
+      height: 'small',
+      href: '../../pages/sign-in/sign-in.pug'
+    }
+
+  -
+    const registrationButton = {
+      text: 'Зарегистрироваться',
+      type: 'solid',
+      size: 'small',
+      href: '../../pages/registration/registration.pug'
+    }
+
   header.header
     .header__content
       .header__grouping
@@ -42,6 +58,6 @@ mixin header
               a.header__link(href='')= itemMenu
       .header__user.js-header__user
         .header__user-button-login
-          +button({ text: 'Войти', type: 'bordered', height: 'small', href: '../../pages/sign-in/sign-in.pug' })
+          +button(loginButton)
         .header__user-button-registration
-          +button({ text: 'Зарегистрироваться', type: 'solid', size: 'small', href: '../../pages/registration/registration.pug' })
+          +button(registrationButton)

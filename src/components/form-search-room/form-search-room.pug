@@ -3,18 +3,42 @@ include ../dropdown/dropdown.pug
 include ../../components/date-dropdown/date-dropdown.pug
 
 mixin form-search-room({ text = 'Form name', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'] } = {})
+  -
+    const rowsForDropdown = [
+      { subjectOfCalculation: 'Взрослые', count: '0' },
+      { subjectOfCalculation: 'Дети', count: '0' },
+      { subjectOfCalculation: 'Младенцы', count: '0' },
+    ];
+
+  - const labelInputs = ['Прибытие', 'Выезд'];
+
+  -
+    const dateDropdown = {
+      labelArray: labelInputs,
+      dates: dateFormat, size: 'small',
+      amountField: 'with-two-inputs'
+    };
+
+  -
+    const dropdown = {
+      label: 'Гости',
+      placeholder: 'Сколько гостей',
+      dropdownRows: rowsForDropdown,
+      wordsForm: `{ "0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"] }`
+    };
+
+  -
+    const roomSelectionButton = {
+      text: 'Подобрать номер',
+      type: 'solid',
+      isDirected: true,
+      size: 'large',
+      href: '../../pages/search-room/search-room.pug'
+    };
+
   .form-search-room
-    - const labelInputs = ['Прибытие', 'Выезд'];
-
-    -
-      const dataForDropdown = [
-        { subjectOfCalculation: 'Взрослые', count: '0' },
-        { subjectOfCalculation: 'Дети', count: '0' },
-        { subjectOfCalculation: 'Младенцы', count: '0' },
-      ];
-
     .form-search-room__wrapper
       span.form-search-room__title= text
-      +date-dropdown({ labelArray: labelInputs, dates: dateFormat, size: 'small', amountField: 'with-two-inputs' })
-      +dropdown({ label: 'Гости', placeholder: 'Сколько гостей', dropdownRows: dataForDropdown, wordsForm: `{ "0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"] }`, })
-    +button({ text: 'Подобрать номер', type: 'solid', isDirected: true, size: 'large', href: '../../pages/search-room/search-room.pug' })
+      +date-dropdown(dateDropdown)
+      +dropdown(dropdown)
+    +button(roomSelectionButton)

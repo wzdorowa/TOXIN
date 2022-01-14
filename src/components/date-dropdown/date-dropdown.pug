@@ -1,6 +1,15 @@
 include ../../components/calendar/calendar.pug
 
-mixin date-dropdown({ labelArray = ['date from', 'date to'], datesFormat = ['ДД.ММ.ГГГГ','ДД.ММ.ГГГГ'], userDates = ['', ''], size = 'large', amountField = 'with-two-inputs' } = {})
+mixin date-dropdown(data)
+  -
+    const {
+      labelArray = ['date from', 'date to'],
+      datesFormat = ['ДД.ММ.ГГГГ','ДД.ММ.ГГГГ'],
+      userDates = ['', ''],
+      size = 'large',
+      amountField = 'with-two-inputs'
+    } = data;
+
   - let classSize;
   - if (size === 'large') classSize = 'date-dropdown__input_width_large';
   - if (size === 'small') classSize = 'date-dropdown__input_width_small';
@@ -43,4 +52,8 @@ mixin date-dropdown({ labelArray = ['date from', 'date to'], datesFormat = ['Д�
       class=`date-dropdown__datepicker_${ amountField }`
     )
       +calendar
-        .datepicker-here.js-datepicker-here(data-range='true', data-day-from=userDates[0], data-day-to=userDates[1])
+        .datepicker-here.js-datepicker-here(
+          data-range='true',
+          data-day-from=userDates[0],
+          data-day-to=userDates[1]
+        )
