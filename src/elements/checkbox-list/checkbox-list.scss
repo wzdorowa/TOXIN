@@ -2,7 +2,7 @@
   position: relative;
   min-width: 266px;
 
-  &__title {
+  &__title-wrapper {
     display: flex;
     justify-content: space-between;
     color: $DarkShade100;
@@ -12,7 +12,7 @@
     text-transform: uppercase;
   }
 
-  &__description {
+  &__title {
     cursor: pointer;
   }
 

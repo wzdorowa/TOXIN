@@ -1,4 +1,4 @@
-mixin login({ text = 'Form name' } = {})
+mixin login(title = 'Войти')
   -
     const loginButton = {
       text: 'Войти',
@@ -17,7 +17,7 @@ mixin login({ text = 'Form name' } = {})
     }
 
   .login
-    h2.login__title= text
+    h2.login__title= title
     input.login__input(type='email', placeholder='Email')
     input.login__input(type='password', placeholder='Пароль')
     .login__check-in-button

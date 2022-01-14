@@ -11,7 +11,7 @@ class CheckboxList {
 
   _findElements() {
     this.checkboxListTitle = this.checkboxList.querySelector(
-      '.js-checkbox-list__title',
+      '.js-checkbox-list__title-wrapper',
     );
     this.checkboxListToggle = this.checkboxList.querySelector(
       '.js-checkbox-list__container',

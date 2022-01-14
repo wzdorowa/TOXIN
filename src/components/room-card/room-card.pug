@@ -4,7 +4,7 @@ mixin room-card(roomCardData)
   -
     const {
       number = '100',
-      text,
+      level,
       cost = '1000',
       amountReviews = '0',
       images,
@@ -35,7 +35,7 @@ mixin room-card(roomCardData)
           .room-card__specification-group
             span.room-card__sign-number №
             span.room-card__number= number
-            span.room-card__kind= text
+            span.room-card__kind= level
         .room-card__cost
           span.room-card__cost-room= cost
             | &#x20bd

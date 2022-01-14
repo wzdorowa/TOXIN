@@ -2,7 +2,13 @@ include ../../elements/button/button.pug
 include ../dropdown/dropdown.pug
 include ../../components/date-dropdown/date-dropdown.pug
 
-mixin form-search-room({ text = 'Form name', dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'] } = {})
+mixin form-search-room(formSearchRoomData)
+  -
+    const {
+      title  = 'Найти номера под ваши пожелания',
+      dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+    } = formSearchRoomData;
+
   -
     const rowsForDropdown = [
       { subjectOfCalculation: 'Взрослые', count: '0' },
@@ -38,7 +44,7 @@ mixin form-search-room({ text = 'Form name', dateFormat = ['ДД.ММ.ГГГГ',
 
   .form-search-room
     .form-search-room__wrapper
-      span.form-search-room__title= text
+      span.form-search-room__title= title
       +date-dropdown(dateDropdown)
       +dropdown(dropdown)
     +button(roomSelectionButton)

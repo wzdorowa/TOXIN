@@ -72,6 +72,25 @@ block content
         },
       ];
 
+    -
+      const diagramData = {
+        title: 'Впечатления от номера',
+        impressions: {
+          amazing: 130,
+          good: 65,
+          satisfactorily: 65,
+          bad: 0
+        }
+      };
+
+    -
+      const formRoomCostData = {
+        number: '888',
+        level: 'люкс',
+        cost: '9 990',
+        dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+      };
+
     +collage(images)
     .room-details__content
       .room-details__information
@@ -79,7 +98,7 @@ block content
           .room-details__advantages
             +advantages({ title: 'Сведения о номере', advantagesList: list })
           .room-details__diagram
-            +diagram({ title: 'Впечатления от номера', impressions: { amazing: 130, good: 65, satisfactorily: 65, bad: 0 } })
+            +diagram(diagramData)
         .room-details__comment
           +comments({ commentsList: commentList })
         .room-details__extra-info
@@ -88,7 +107,9 @@ block content
             +bulleted-list({ title: 'Правила', values: rules })
           .room-details__cancel
             h2.room-details__title-cancel Отмена
-            p.room-details__cancel-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+            p.room-details__cancel-description
+              | Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до
+              | прибытия вы получите полный возврат за вычетом сбора за услуги.
       .room-details__reservation-card
         .room-details__form-room-cost
-          +form-room-cost({ number: '888', text: 'люкс', cost: '9 990', dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'] })
+          +form-room-cost(formRoomCostData)

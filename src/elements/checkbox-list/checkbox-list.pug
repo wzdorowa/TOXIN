@@ -1,7 +1,7 @@
-mixin checkbox-list({ text = 'Text', checkboxList } = {})
+mixin checkbox-list({ title = 'Expandable checkbox list', checkboxList } = {})
   .checkbox-list.js-checkbox-list
-    .checkbox-list__title.js-checkbox-list__title
-      span.checkbox-list__description= text
+    .checkbox-list__title-wrapper.js-checkbox-list__title-wrapper
+      span.checkbox-list__title= title
       span.checkbox-list__indicator.js-checkbox-list__indicator
     .checkbox-list__container.js-checkbox-list__container.checkbox-list__container_hidden
       .checkbox-list__content

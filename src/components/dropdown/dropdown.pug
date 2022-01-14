@@ -4,8 +4,8 @@ mixin dropdown(data)
       label,
       placeholder = 'Выберите нужное количество',
       isButtonsHidden = false,
-      dropdownRows = [{ subjectOfCalculation: 'Текст', count: '0' }],
-      wordsForm = ''
+      dropdownRows = [{ subjectOfCalculation: 'Гость', count: '0' }],
+      wordsForm = `{ "0": ["гость", "гостя", "гостей"] }`
     } = data;
 
   .dropdown.js-dropdown(data-words-form=wordsForm)
