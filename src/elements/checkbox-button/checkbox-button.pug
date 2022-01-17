@@ -1,4 +1,6 @@
 mixin checkbox-button({ value = 'Значение для выбора', checked, isBoldText = false, description })
+  - const classBoldText = `${isBoldText ? 'checkbox-button__value_bold' : ''}`;
+
   if description
     .checkbox-button
       label.checkbox-button__filter
@@ -8,7 +10,7 @@ mixin checkbox-button({ value = 'Значение для выбора', checked,
           checked=checked
         )
         span.checkbox-button__indicator
-        span.checkbox-button__value(class=`${ isBoldText ? 'checkbox-button__value_bold' : '' }`)= value
+        span.checkbox-button__value(class=classBoldText)= value
       .checkbox-button__description= description
   else
     .checkbox-button
@@ -19,4 +21,4 @@ mixin checkbox-button({ value = 'Значение для выбора', checked,
           checked=checked
         )
         span.checkbox-button__indicator
-        span.checkbox-button__value(class=`${ isBoldText ? 'checkbox-button__value_bold' : '' }`)= value
+        span.checkbox-button__value(class=classBoldText)= value

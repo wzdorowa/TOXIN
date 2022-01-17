@@ -14,6 +14,10 @@ mixin date-dropdown(data)
   - if (size === 'large') classSize = 'date-dropdown__input_width_large';
   - if (size === 'small') classSize = 'date-dropdown__input_width_small';
 
+  - let classAmountField;
+  - if (amountField === 'with-one-input') classAmountField = 'date-dropdown__datepicker_with-one-input';
+  - if (amountField === 'with-two-inputs') classAmountField = 'date-dropdown__datepicker_with-two-inputs';
+
   .date-dropdown.js-date-dropdown
     .date-dropdown__inputs
       if (amountField === 'with-one-input')
@@ -48,9 +52,7 @@ mixin date-dropdown(data)
               placeholder=datesFormat[1],
               readonly='readonly'
             )
-    .date-dropdown__datepicker.js-date-dropdown__datepicker(
-      class=`date-dropdown__datepicker_${ amountField }`
-    )
+    .date-dropdown__datepicker.js-date-dropdown__datepicker(class=classAmountField)
       +calendar
         .datepicker-here.js-datepicker-here(
           data-range='true',
