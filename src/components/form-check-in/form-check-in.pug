@@ -2,7 +2,7 @@ include ../../elements/input-date/input-date.pug
 include ../../elements/radio-button/radio-button.pug
 include ../../elements/toggle/toggle.pug
 
-mixin form-check-in({ text = 'Регистрация аккаунта' } = {})
+mixin form-check-in
   -
     const registrationButton = {
       text: 'Зарегистрироваться',
@@ -21,7 +21,7 @@ mixin form-check-in({ text = 'Регистрация аккаунта' } = {})
     }
 
   .form-check-in
-    span.form-check-in__title= text
+    span.form-check-in__title= 'Регистрация аккаунта'
     .form-check-in__user-data
       .form-check-in__group-inputs
         input.form-check-in__input(type='text', placeholder='Имя')
