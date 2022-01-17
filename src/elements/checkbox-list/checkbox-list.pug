@@ -1,9 +1,11 @@
-mixin checkbox-list({ title = 'Expandable checkbox list', checkboxList } = {})
+mixin checkbox-list({ title = 'Expandable checkbox list', isOpen = false, checkboxList } = {})
+  - const classContainer = `${!isOpen ? 'checkbox-list__container_hidden' : ''}`;
+
   .checkbox-list.js-checkbox-list
     .checkbox-list__title-wrapper.js-checkbox-list__title-wrapper
       span.checkbox-list__title= title
       span.checkbox-list__indicator.js-checkbox-list__indicator
-    .checkbox-list__container.js-checkbox-list__container.checkbox-list__container_hidden
+    .checkbox-list__container.js-checkbox-list__container(class=classContainer)
       .checkbox-list__content
         each checkbox in checkboxList
           +checkbox-button({ value: checkbox.value, checked: checkbox.checked })
