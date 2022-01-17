@@ -76,9 +76,9 @@ html(lang='ru')
     -
       const checkboxList = [
         { value: 'Завтрак' },
-        { value: 'Письменный стол', checked: 'checked' },
-        { value: 'Стул для кормления', checked: 'checked' },
-        { value: 'Кроватка', checked: 'checked' },
+        { value: 'Письменный стол', checked: true },
+        { value: 'Стул для кормления', checked: true },
+        { value: 'Кроватка', checked: true },
         { value: 'Телевизор' },
         { value: 'Шампунь' },
         { value: 'Телевизор' },
@@ -218,18 +218,18 @@ html(lang='ru')
             .demo__checkbox-button
               +checkbox-button({ value: 'Можно курить' })
             .demo__checkbox-button
-              +checkbox-button({ value: 'Можно с питомцами', checked: 'checked' })
+              +checkbox-button({ value: 'Можно с питомцами', checked: true })
             .demo__checkbox-button
-              +checkbox-button({ value: 'Можно пригласить гостей (до 10 человек)', checked: 'checked' })
+              +checkbox-button({ value: 'Можно пригласить гостей (до 10 человек)', checked: true })
           .demo__elements-container
             span.demo__element-title Radio buttons
             .demo__radio-buttons
-              +radio-button({ text: 'Мужчина', checked: 'checked', name: 'gender' })
+              +radio-button({ text: 'Мужчина', checked: true, name: 'gender' })
               +radio-button({ text:'Женщина', name: 'gender' })
           .demo__elements-container
             span.demo__element-title Toggle
             .demo__toggle-button
-              +toggle({ text: 'Получать спецпредложения', checked: 'checked' })
+              +toggle({ text: 'Получать спецпредложения', checked: true })
             .demo__toggle-button
               +toggle({ text: 'Получать спецпредложения' })
           .demo__elements-container
@@ -237,7 +237,7 @@ html(lang='ru')
             .demo__like-button
               +like-button({ value: '2' })
             .demo__like-button
-              +like-button({ value: '12', checked: 'checked' })
+              +like-button({ value: '12', checked: true })
           .demo__elements-container
             span.demo__element-title Rate button
             .demo__rate-buttons

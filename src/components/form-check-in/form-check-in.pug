@@ -27,7 +27,7 @@ mixin form-check-in({ text = 'Регистрация аккаунта' } = {})
         input.form-check-in__input(type='text', placeholder='Имя')
         input.form-check-in__input(type='text', placeholder='Фамилия')
       .form-check-in__buttons
-        +radio-button({ text: 'Мужчина', checked: 'checked', name: 'gender-for-form-check-in' })
+        +radio-button({ text: 'Мужчина', checked: true, name: 'gender-for-form-check-in' })
         +radio-button({ text: 'Женщина', name: 'gender-for-form-check-in' })
     .form-check-in__date-of-birth
       span.form-check-in__input-title= 'Дата рождения'

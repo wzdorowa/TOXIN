@@ -170,9 +170,9 @@ block content
   -
     const checkboxList = [
       { value: 'Завтрак' },
-      { value: 'Письменный стол', checked: 'checked' },
-      { value: 'Стул для кормления', checked: 'checked' },
-      { value: 'Кроватка', checked: 'checked' },
+      { value: 'Письменный стол', checked: true },
+      { value: 'Стул для кормления', checked: true },
+      { value: 'Кроватка', checked: true },
       { value: 'Телевизор' },
       { value: 'Шампунь' },
       { value: 'Телевизор' },
@@ -247,8 +247,8 @@ block content
         label.search-room__filter-item-title Правила дома
         .search-room__filter-checkbox-buttons-group
           +checkbox-button({ value: 'Можно курить' })
-          +checkbox-button({ value: 'Можно с питомцами', checked: 'checked' })
-          +checkbox-button({ value: 'Можно пригласить гостей (до 10 человек)', checked: 'checked' })
+          +checkbox-button({ value: 'Можно с питомцами', checked: true })
+          +checkbox-button({ value: 'Можно пригласить гостей (до 10 человек)', checked: true })
       .search-room__filter-rich-checkbox
         label.search-room__filter-item-title Доступность
         .search-room__filter-rich-checkbox-group
