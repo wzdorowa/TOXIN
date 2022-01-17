@@ -201,6 +201,8 @@ class DateDropdown {
             input.value = string;
 
             this._showButtonClear();
+          } else {
+            _hideButtonClear();
           }
         },
       });

@@ -116,14 +116,14 @@ class Dropdown {
 
   _hideButtonClear() {
     if (
-      !this.buttonClear.classList.contains('.dropdown__button-clear_hidden')
+      this.buttonClear && !this.buttonClear.classList.contains('.dropdown__button-clear_hidden')
     ) {
       this.buttonClear.classList.add('dropdown__button-clear_hidden');
     }
   }
 
   _showButtonClear() {
-    if (this.buttonClear.classList.contains('dropdown__button-clear_hidden')) {
+    if (this.buttonClear && this.buttonClear.classList.contains('dropdown__button-clear_hidden')) {
       this.buttonClear.classList.remove('dropdown__button-clear_hidden');
     }
   }
@@ -175,6 +175,7 @@ class Dropdown {
 
   _calculateTheResult() {
     const parse = JSON.parse(this.dropdown.getAttribute('data-words-form'));
+    console.log('parse', parse);
     const wordsForm = [];
     Object.values(parse).forEach(element => {
       wordsForm.push(element);
@@ -217,12 +218,16 @@ class Dropdown {
     this.elementInput.addEventListener('focus', () => {
       this._handleInputContentFocus();
     });
-    this.buttonApply.addEventListener('click', () => {
-      this._handleButtonsContainerForApplyClick();
-    });
-    this.buttonClear.addEventListener('click', () => {
-      this._handleButtonsContainerForClearClick();
-    });
+    if (this.buttonApply) {
+      this.buttonApply.addEventListener('click', () => {
+        this._handleButtonsContainerForApplyClick();
+      });
+    }
+    if (this.buttonClear) {
+      this.buttonClear.addEventListener('click', () => {
+        this._handleButtonsContainerForClearClick();
+      });
+    }
     document.addEventListener('click', () => {
       this._handleDocumentClick();
     });
