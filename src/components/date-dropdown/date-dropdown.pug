@@ -23,7 +23,7 @@ mixin date-dropdown(data)
       if (amountField === 'with-one-input')
         .date-dropdown__input(class=classSize)
           span.date-dropdown__input-label= labelArray[0]
-          .date-dropdown__input-wrapper
+          .date-dropdown__input-content-wrapper
             span.date-dropdown__input-arrow-down.js-date-dropdown__input-arrow-down
             input.date-dropdown__input-content.js-date-dropdown__input-content(
               type='text',
@@ -34,7 +34,7 @@ mixin date-dropdown(data)
       else if (amountField === 'with-two-inputs')
         .date-dropdown__input(class=classSize)
           span.date-dropdown__input-label= labelArray[0]
-          .date-dropdown__input-wrapper
+          .date-dropdown__input-content-wrapper
             span.date-dropdown__input-arrow-down.js-date-dropdown__input-arrow-down
             input.date-dropdown__input-content.js-date-dropdown__input-content(
               type='text',
