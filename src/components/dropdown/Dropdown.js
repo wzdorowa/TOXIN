@@ -1,4 +1,5 @@
 import convertNumToWordform from './helpers';
+import { guests, amenities } from './variables';
 
 class Dropdown {
   constructor(element) {
@@ -174,12 +175,20 @@ class Dropdown {
   }
 
   _calculateTheResult() {
-    const parse = JSON.parse(this.dropdown.getAttribute('data-words-form'));
-    console.log('parse', parse);
+    const typeWordsForm = this.dropdown.getAttribute('data-words-form');
     const wordsForm = [];
-    Object.values(parse).forEach(element => {
-      wordsForm.push(element);
-    });
+  
+    if (typeWordsForm === 'guests') {
+      guests.forEach(element => {
+        wordsForm.push(element);
+      });
+    }
+
+    if (typeWordsForm === 'amenities') {
+      amenities.forEach(element => {
+        wordsForm.push(element);
+      });
+    }
 
     this.elementInput.value = null;
 

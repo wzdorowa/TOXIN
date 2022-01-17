@@ -5,10 +5,10 @@ mixin dropdown(data)
       placeholder = 'Выберите нужное количество',
       hasButtons = false,
       dropdownRows = [{ subjectOfCalculation: 'Гость', count: '0' }],
-      wordsForm = `{ "0": ["гость", "гостя", "гостей"] }`
+      typeWordsForm = 'guests'
     } = data;
 
-  .dropdown.js-dropdown(data-words-form=wordsForm)
+  .dropdown.js-dropdown(data-words-form=typeWordsForm)
     .dropdown__input.js-dropdown__input
       span.dropdown__input-label= label
       .dropdown__input-wrapper
@@ -30,7 +30,6 @@ mixin dropdown(data)
               button.dropdown__minus.js-dropdown__minus(tabindex='0') -
               span.dropdown__amount.js-dropdown__amount= count
               button.dropdown__plus.js-dropdown__plus(tabindex='0') +
-      - console.log('hasButtons', hasButtons);
       if (!hasButtons)
         .dropdown__buttons(class=classDropdownButtons)
           .dropdown__button-clear.js-dropdown__button-clear

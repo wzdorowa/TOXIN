@@ -112,7 +112,7 @@ html(lang='ru')
         placeholder: 'Сколько гостей',
         hasButtons: true,
         dropdownRows: dataForDropdownFirst,
-        wordsForm: `{ "0": ["гость", "гостя", "гостей"], "1": ["младенец", "младенца", "младенцев"] }`
+        typeWordsForm: 'guests'
       };
 
     -
@@ -121,7 +121,7 @@ html(lang='ru')
         placeholder: '2 спальни, 2 кровати',
         hasButtons: true,
         dropdownRows: dataForDropdownSecond,
-        wordsForm: `{"0": ["спальня", "спальни", "спален"], "1": ["кровать", "кровати", "кроватей"], "2": ["ванная комната", "ванные комнаты", "ванных комнат"]`
+        typeWordsForm: 'amenities'
       };
 
     -
@@ -199,7 +199,7 @@ html(lang='ru')
             .demo__input-container
               input.demo__input(type='email', placeholder='Email')
           .demo__inputs-item
-            +dropdown({dropdownGuests})
+            +dropdown(dropdownGuests)
           .demo__inputs-item
             span.demo__input-title= 'Masked text field'
             .demo__input-container
