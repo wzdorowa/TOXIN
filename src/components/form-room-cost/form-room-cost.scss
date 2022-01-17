@@ -82,6 +82,11 @@
     @include sign-rouble();
   }
 
+  &__cost-title {
+    @include sign-rouble();
+    color: $DarkShade50;
+  }
+
   &__block-with-tooltip {
     display: flex;
     flex-grow: 1;
