@@ -38,9 +38,9 @@ class DateDropdown {
   }
 
   _setDefaultDate() {
+    const numberOfDays = 4 * 24 * 3600 * 1000;
     const today = new Date();
-    const dayAfter = new Date();
-    dayAfter.setDate(dayAfter.getDate() + 4);
+    const dayAfter = new Date(Date.now() + numberOfDays);
 
     const datepicker = $(this.calendar).datepicker().data('datepicker');
 
