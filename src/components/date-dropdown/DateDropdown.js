@@ -1,3 +1,5 @@
+const { event } = require("jquery");
+
 class DateDropdown {
   constructor(element) {
     this.datepickerGroup = element;
@@ -86,15 +88,15 @@ class DateDropdown {
     });
   }
 
-  _addClass() {
+  _addVisibilityClass() {
     this.datepicker.classList.add('date-dropdown__datepicker_visible');
   }
 
-  _removeClass() {
+  _removeVisibilityClass() {
     this.datepicker.classList.remove('date-dropdown__datepicker_visible');
   }
 
-  _toggleClass() {
+  _toggleVisibilityClass() {
     this.datepicker.classList.toggle('date-dropdown__datepicker_visible');
   }
 
@@ -121,15 +123,15 @@ class DateDropdown {
   }
 
   _handleInputContentFocus() {
-    this._toggleClass();
+    this._toggleVisibilityClass();
   }
 
   _handleIconArrowDownClick() {
-    this._toggleClass();
+    this._toggleVisibilityClass();
   }
 
   _handleButtonsContainerForApplyClick() {
-    this._removeClass();
+    this._removeVisibilityClass();
   }
 
   _handleButtonsContainerForClearClick() {
@@ -139,7 +141,7 @@ class DateDropdown {
 
   _handleDocumentClick(event) {
     if (!this.datepickerGroup.contains(event.target)) {
-      this._removeClass();
+      this._removeVisibilityClass();
       if (this.dates.length === 1) {
         this._clearValues();
         this._hideButtonClear();
@@ -166,8 +168,8 @@ class DateDropdown {
     });
     document.addEventListener(
       'click',
-      () => {
-        this._handleDocumentClick();
+      (event) => {
+        this._handleDocumentClick(event);
       },
       true,
     );
