@@ -21,8 +21,10 @@
   }
 
   &__description {
+    width: 14px;
     font-size: 10px;
     line-height: 20px;
+    text-align: center;
   }
 
   &__filter input[type='checkbox']:checked {
