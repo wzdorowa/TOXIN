@@ -125,8 +125,10 @@
     }
 
     &-checkbox-buttons {
-      @include flexColumn;
-      @include size(230px, 135px, 30px, none);
+      display: flex;
+      flex-direction: column;
+
+      @include size(230px, 135px, 29px, none);
 
       &-group {
         @include flexColumn;
@@ -146,6 +148,7 @@
     }
 
     &-item-title {
+      margin-bottom: 15px;
       color: $DarkShade100;
       font-weight: bold;
       font-size: 12px;

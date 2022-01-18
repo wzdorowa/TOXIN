@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 66px auto 72px auto;
+    margin: 70px auto 72px auto;
     padding: 0 20px;
     background: #fff;
 
@@ -54,7 +54,7 @@
   }
 
   &__comment {
-    margin: 10px 0;
+    margin: 12px 0 8px 0;
 
     @media (max-width: 800px) {
       margin-top: 40px;
@@ -65,7 +65,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 687px;
+    max-width: 686px;
   }
 
   &__rules {
@@ -92,7 +92,7 @@
 
   &__title-cancel {
     @include h2();
-    margin-bottom: 18px;
+    margin-bottom: 19px;
   }
 
   &__form-room-cost {

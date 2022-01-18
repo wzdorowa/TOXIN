@@ -38,7 +38,9 @@ mixin form-search-room(dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
 
   .form-search-room
     .form-search-room__wrapper
-      span.form-search-room__title= 'Найти номера под ваши пожелания'
-      +date-dropdown(dateDropdown)
-      +dropdown(dropdown)
+      span.form-search-room__title= 'Найдём номера под ваши пожелания'
+      .form-search-room__dates
+        +date-dropdown(dateDropdown)
+      .form-search-room__dropdown
+        +dropdown(dropdown)
     +button(roomSelectionButton)

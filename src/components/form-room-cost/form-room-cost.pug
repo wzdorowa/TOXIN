@@ -53,7 +53,7 @@ mixin form-room-cost(formRoomCostData)
         span.form-room-cost__number-room= number
         span.form-room-cost__room-class= level
       .form-room-cost__room-cost
-        span.form-room-cost__cost-title= `${cost}`
+        span.form-room-cost__cost-title= `${formatCost(cost)}`
         span.form-room-cost__cost-text= 'в сутки'
     +date-dropdown(dateDropdown)
     .form-room-cost__dropdown-container

@@ -32,12 +32,13 @@
 
   &__input-content-wrapper {
     position: relative;
-    margin-top: 5px;
+    margin-top: 4px;
   }
 
   &__input-content {
     @include input;
     width: 100%;
+    padding: 7px 10px 10px 15px;
     cursor: pointer;
 
     &:hover,
