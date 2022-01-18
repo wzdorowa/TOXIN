@@ -121,9 +121,13 @@
     color: $DarkShade50;
     font-size: 18px;
     background-color: #fff;
-    border: 1px solid $DarkShade25;
+    border: 1px solid $DarkShade50;
     border-radius: 30px;
     cursor: pointer;
+
+    &_disabled {
+      border: 1px solid $DarkShade25;
+    }
   }
 
   &__buttons {

@@ -82,6 +82,7 @@ class Dropdown {
     result = Number(currentValue) + 1;
 
     this.numberContainer[index].innerHTML = String(result);
+    this.minusSign[index].classList.remove('dropdown__minus_disabled');
   }
 
   _subtractNumber(index) {
@@ -90,6 +91,7 @@ class Dropdown {
     result = currentValue - 1;
     if (result < 0) {
       this.numberContainer[index].innerHTML = '0';
+      this.minusSign[index].classList.add('dropdown__minus_disabled');
     } else {
       this.numberContainer[index].innerHTML = result;
     }
@@ -198,6 +200,9 @@ class Dropdown {
 
     if (Object.values(wordsForm).length < 3) {
       this.numberContainer.forEach((number, index) => {
+        if (Number(number.innerHTML) === 0) {
+          this.minusSign[index].classList.add('dropdown__minus_disabled');
+        }
         if (index <= 1) {
           firstValue += Number(number.innerHTML);
         } else if (index === 2) {
@@ -206,6 +211,9 @@ class Dropdown {
       });
     } else {
       this.numberContainer.forEach((number, index) => {
+        if (Number(number.innerHTML) === 0) {
+          this.minusSign[index].classList.add('dropdown__minus_disabled');
+        }
         if (index === 0) {
           firstValue += Number(number.innerHTML);
         } else if (index === 1) {
