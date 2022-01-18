@@ -41,6 +41,8 @@
 }
 
 .header {
+  position: relative;
+  z-index: 999;
   padding: 0 10px;
   background-color: #fff;
   box-shadow: 0 10px 20px $DarkShade05;
