@@ -245,8 +245,8 @@ class Dropdown {
         this._handleButtonsContainerForClearClick();
       });
     }
-    document.addEventListener('click', () => {
-      this._handleDocumentClick();
+    document.addEventListener('click', (event) => {
+      this._handleDocumentClick(event);
     });
     this.rowsGroups.forEach(element => {
       element.addEventListener('click', () => {
