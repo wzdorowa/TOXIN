@@ -17,7 +17,7 @@
   display: block;
   margin: 0 10px;
 
-  @media (max-width: 740px) {
+  @media (max-width: 739px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,7 +146,7 @@
   &__item:first-child {
     margin-left: 0;
 
-    @media (max-width: 740px) {
+    @media (max-width: 739px) {
       border-top: 1px solid rgba(31, 32, 65, 0.5);
     }
   }
@@ -156,7 +156,7 @@
     flex-direction: column;
     padding-right: 25px;
 
-    @media (max-width: 740px) {
+    @media (max-width: 739px) {
       padding: 0;
     }
   }
@@ -170,7 +170,7 @@
     border: none;
     cursor: pointer;
 
-    @media (max-width: 740px) {
+    @media (max-width: 739px) {
       padding: 10px 18px;
     }
 
@@ -181,7 +181,7 @@
       font: normal 24px/17px 'Material Icons', sans-serif;
       content: '\e5cf';
 
-      @media (max-width: 740px) {
+      @media (max-width: 739px) {
         top: 10px;
         right: -15px;
       }
@@ -199,7 +199,7 @@
     background-color: #fff;
     border-radius: 3px;
 
-    @media (max-width: 740px) {
+    @media (max-width: 739px) {
       position: static;
       min-width: 100%;
     }
@@ -215,7 +215,7 @@
     padding: 5px 18px;
     border: none;
 
-    @media (max-width: 740px) {
+    @media (max-width: 739px) {
       width: 100%;
       padding: 10px 18px;
       border-bottom: 1px dashed $DarkShade50;
@@ -223,7 +223,7 @@
   }
 
   &__submenu-item:first-child {
-    @media (max-width: 740px) {
+    @media (max-width: 739px) {
       border-top: 1px solid $DarkShade50;
       border-bottom: 1px dashed $DarkShade50;
     }
