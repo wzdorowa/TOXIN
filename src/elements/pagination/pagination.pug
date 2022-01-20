@@ -6,14 +6,32 @@ mixin pagination({ currentPage = 1, amountItemsPerPage = 12, amountItems = 180 }
   - const endRange = amountItemsPerPage * currentPage;
   - const rangeItems = `${beginningRange} – ${endRange}`;
 
-  - const approximateAmountItems = Math.floor(amountItems / 100) * 100;
+  - let approximateAmountItems;
 
-  .pagination
-    ul.pagination__list
-      each value, index in arrayPages
-        if index < 3
-          li.pagination__item= value
-      li.pagination__item= '...'
-      li.pagination__item= amountPages
-      li.pagination__item_with-arrow
-    span.pagination__description= `${rangeItems} из ${approximateAmountItems}+ вариантов аренды`
+  -
+    if (amountItems < 100) {
+      approximateAmountItems = Math.floor(amountItems / 10) * 10;
+    } else {
+      approximateAmountItems = Math.floor(amountItems / 100) * 100;
+    }
+
+  if (amountPages < 2)
+    null
+  else if (amountPages > 1 && amountPages < 5)
+    .pagination
+      ul.pagination__list
+        each value, index in arrayPages
+          if index < 5
+            li.pagination__item= value
+        li.pagination__item_with-arrow
+      span.pagination__description= `${rangeItems} из ${approximateAmountItems}+ вариантов аренды`
+  else
+    .pagination
+      ul.pagination__list
+        each value, index in arrayPages
+          if index < 3
+            li.pagination__item= value
+        li.pagination__item= '...'
+        li.pagination__item= amountPages
+        li.pagination__item_with-arrow
+      span.pagination__description= `${rangeItems} из ${approximateAmountItems}+ вариантов аренды`
