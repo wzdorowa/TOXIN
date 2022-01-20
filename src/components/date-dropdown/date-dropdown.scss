@@ -68,18 +68,15 @@
 
     &::before {
       position: absolute;
-      top: 0;
-      right: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 44px;
-      height: 44px;
-      color: $DarkShade50;
-      font: 22px/22px 'Material Icons', sans-serif;
-      text-transform: initial;
+      top: 12px;
+      right: 22px;
+      width: 6px;
+      height: 6px;
+      border-top: 2px solid $DarkShade50;
+      border-right: 2px solid $DarkShade50;
+      transform: translate(50%, 50%) rotate(135deg);
       cursor: pointer;
-      content: 'keyboard_arrow_down';
+      content: '';
     }
   }
 

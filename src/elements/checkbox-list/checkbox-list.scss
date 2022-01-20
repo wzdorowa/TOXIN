@@ -24,13 +24,13 @@
     &::before {
       position: absolute;
       top: 12px;
-      left: 12px;
-      color: $DarkShade50;
-      font-size: 22px;
-      font-family: 'Material Icons', sans-serif;
-      line-height: 22px;
-      text-transform: initial;
-      content: 'keyboard_arrow_down';
+      left: 14px;
+      width: 6px;
+      height: 6px;
+      border-top: 2px solid $DarkShade50;
+      border-right: 2px solid $DarkShade50;
+      transform: translate(50%, 50%) rotate(135deg);
+      content: '';
     }
 
     &:hover,
