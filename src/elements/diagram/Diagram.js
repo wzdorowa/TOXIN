@@ -1,14 +1,17 @@
 class Diagram {
-  constructor(element) {
+  constructor(element, index) {
     this.item = element;
+    this.indexDiagram = index;
 
     this._findElement();
     this._bindEventListeners();
   }
 
   _findElement() {
-    this.segments = document.querySelectorAll('.js-diagram__image-circle');
-    this.votesValue = document.querySelector('.js-diagram__number');
+    this.diagrams = document.querySelectorAll('.js-diagram');
+
+    this.segments = this.diagrams[this.indexDiagram].querySelectorAll('.js-diagram__image-circle');
+    this.votesValue = this.diagrams[this.indexDiagram].querySelector('.js-diagram__number');
   }
 
   _handleSegmentMouseover(segment) {
@@ -45,10 +48,13 @@ class Diagram {
   }
 }
 
-const diagram = document.querySelector('.js-diagram');
-if (diagram !== null) {
-  const items = diagram.querySelectorAll('.js-diagram__item');
-  items.forEach(item => {
-    new Diagram(item);
-  });
-}
+const diagrams = document.querySelectorAll('.js-diagram');
+
+diagrams.forEach((diagram, index) => {
+  if (diagram !== null) {
+    const items = diagrams[index].querySelectorAll('.js-diagram__item');
+    items.forEach((item) => {
+      new Diagram(item, index);
+    });
+  }
+});
