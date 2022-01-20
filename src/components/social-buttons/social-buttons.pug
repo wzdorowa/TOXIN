@@ -1,0 +1,20 @@
+mixin social-buttons
+  -
+    const buttons = [
+      { name: 'Twitter', src: '../../components/social-buttons/images/twitter.svg' },
+      {
+        name: 'Facebook',
+        src: '../../components/social-buttons/images/facebook.svg',
+      },
+      {
+        name: 'Instagram',
+        src: '../../components/social-buttons/images/instagram.svg',
+      },
+    ];
+
+  .social-buttons
+    each button in buttons
+      - const { name, src, href } = button;
+
+      a.social-buttons__button(tabindex='0', target='_blank', rel='noopener noreferrer', href=href)
+        img(src=`${ src }`, alt=name, aria-label=name, width='23px', height='23px')

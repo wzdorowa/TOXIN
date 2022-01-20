@@ -1,4 +1,4 @@
-include ../../components/copyright/copyright.pug
+include ../../components/social-buttons/social-buttons.pug
 
 mixin footer
   footer.footer
@@ -27,4 +27,9 @@ mixin footer
         .footer__subscribe-input-wrapper
           span.footer__subscribe-input-title
           input.footer__subscribe-input(type='email', placeholder='Email')
-    +copyright
+    .footer__lower-part
+      .footer__lower-part-content
+        span.footer__copyright
+          | Copyright © 2018 Toxin отель. Все права защищены.
+        .footer__social-buttons
+          +social-buttons
