@@ -59,16 +59,16 @@ html(lang='ru')
   body
     -
       const dataForDropdownFirst = [
-        { subjectOfCalculation: 'Взрослые', count: '0' },
-        { subjectOfCalculation: 'Дети', count: '0' },
-        { subjectOfCalculation: 'Младенцы', count: '0' },
+        { subjectOfCalculation: 'Взрослые', count: 0 },
+        { subjectOfCalculation: 'Дети', count: 0 },
+        { subjectOfCalculation: 'Младенцы', count: 0 },
       ];
 
     -
       const dataForDropdownSecond = [
-        { subjectOfCalculation: 'Спальни', count: '2' },
-        { subjectOfCalculation: 'Кровати', count: '2' },
-        { subjectOfCalculation: 'Ванные комнаты', count: '0' },
+        { subjectOfCalculation: 'Спальни', count: 2 },
+        { subjectOfCalculation: 'Кровати', count: 2 },
+        { subjectOfCalculation: 'Ванные комнаты', count: 0 },
       ];
 
     -
@@ -163,7 +163,7 @@ html(lang='ru')
 
     -
       const roomForm = {
-        number: '888',
+        number: 888,
         level: 'люкс',
         dateFormat: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ'],
         cost: 9990,
@@ -177,22 +177,22 @@ html(lang='ru')
 
     -
       const roomCard1 = {
-        number: '888',
+        number: 888,
         level: 'люкс',
-        cost: '9 990',
-        amountReviews: '145',
+        cost: 9990,
+        amountReviews: 145,
         images: ['./images/images-rooms/image888.jpeg', './images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg'],
-        amountStar: '5'
+        amountStar: 5
       };
 
     -
       const roomCard2 = {
-        number: '840',
+        number: 840,
         level: 'люкс',
-        cost: '9 990',
-        amountReviews: '65',
+        cost: 9990,
+        amountReviews: 65,
         images: ['./images/images-rooms/image350.jpeg', './images/images-rooms/image352.jpeg', './images/images-rooms/image444.jpeg', './images/images-rooms/image450.jpeg'],
-        amountStar: '4'
+        amountStar: 4
       };
 
     .demo
@@ -245,8 +245,8 @@ html(lang='ru')
           .demo__elements-container
             span.demo__element-title Rate button
             .demo__rate-buttons
-              +rating({ amountStar: '4' })
-              +rating({ amountStar: '5' })
+              +rating({ amountStar: 4 })
+              +rating({ amountStar: 5 })
         .demo__elements
           .demo__range-slider
             +slider({ text: 'Range Slider' })

@@ -11,6 +11,12 @@ mixin room-card(roomCardData)
       amountActiveStar
     } = roomCardData;
 
+  -
+    const formatCost = (cost) => {
+      const value = cost.toLocaleString('ru-RU')
+      return value
+    };
+
   .room-card.js-room-card
     .room-card__slider
       each value in images
@@ -37,7 +43,7 @@ mixin room-card(roomCardData)
             span.room-card__number= number
             span.room-card__kind= level
         .room-card__cost
-          span.room-card__cost-room= cost
+          span.room-card__cost-room= formatCost(cost)
             | &#x20bd
           span.room-card__cost-room-description в сутки
       .room-card__data-border
