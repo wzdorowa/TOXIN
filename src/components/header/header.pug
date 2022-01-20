@@ -44,13 +44,13 @@ mixin header
       ul.header__navigation.js-header__navigation
         each itemMenu in menu
           if (typeof(itemMenu) === 'object')
-            - const itemName = Object.keys(itemMenu);
-            - const subItemMenu = itemMenu[itemName];
+            - const subMenu = Object.keys(itemMenu);
+            - const itemsSubMenu = itemMenu[subMenu];
 
             li.header__title-submenu.js-header__title-submenu
-              button.header__text-title= itemName[0]
+              button.header__text-title= subMenu[0]
               ul.header__submenu.js-header__submenu
-                each value in subItemMenu
+                each value in itemsSubMenu
                   li.header__submenu-item
                     a.header__link(href='')= value
           else
