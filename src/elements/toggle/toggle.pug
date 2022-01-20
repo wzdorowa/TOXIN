@@ -1,4 +1,4 @@
-mixin toggle({ text = 'Значение для выбора', checked })
+mixin toggle({ text, checked })
   label.toggle
     input.toggle__content(type='checkbox', name='toggle-container-content', checked=checked)
     span.toggle__indicator
