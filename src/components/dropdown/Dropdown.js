@@ -4,21 +4,13 @@ import { guests, amenities } from './variables';
 class Dropdown {
   constructor(element) {
     this.dropdown = element;
-    this.elementInput = null;
+    this.dropdownInput = null;
     this.dropdownList = null;
     this.dropdownArrow = null;
     this.buttonApply = null;
     this.buttonClear = null;
-    this.rowsGroupParent = null;
-    this.rowsGroup = [];
-
-    this.dropdownRow = element;
-    this.signs = [];
-    this.minusSign = [];
-    this.plusSign = [];
-    this.listItems = [];
-    this.firstArg = [];
-    this.numberContainer = [];
+    this.dropdownRows = [];
+    this.dropdownItems = [];
 
     this._findElement();
     this._bindEventListeners();
@@ -26,7 +18,7 @@ class Dropdown {
   }
 
   _findElement() {
-    this.elementInput = this.dropdown.querySelector(
+    this.dropdownInput = this.dropdown.querySelector(
       '.js-dropdown__input-content',
     );
     this.parentInput = this.dropdown.querySelector('.js-dropdown__input');
@@ -40,60 +32,56 @@ class Dropdown {
     this.buttonClear = this.dropdown.querySelector(
       '.js-dropdown__button-clear',
     );
-    this.rowsGroupParent = this.dropdown.querySelector('.js-dropdown__rows');
-    this.rowsGroups = this.dropdown.querySelectorAll('.js-dropdown__row');
+    this.dropdownRows = this.dropdown.querySelectorAll('.js-dropdown__row');
 
-    this.rowsGroups.forEach(element => {
-      const amountElement = element.querySelector('.js-dropdown__amount');
-      this.numberContainer.push(amountElement);
-    });
-    this.rowsGroups.forEach(element => {
-      const minusSign = element.querySelector('.js-dropdown__minus');
-      const plusSign = element.querySelector('.js-dropdown__plus');
-      this.minusSign.push(minusSign);
-      this.plusSign.push(plusSign);
+    this.dropdownRows.forEach(element => {
+      const dropdownRowData = {};
+      dropdownRowData.minus = element.querySelector('.js-dropdown__minus');
+      dropdownRowData.plus = element.querySelector('.js-dropdown__plus');
+      dropdownRowData.value = element.querySelector('.js-dropdown__amount');
+      this.dropdownItems.push(dropdownRowData);
     });
   }
 
   _addClass() {
     this.dropdownList.classList.add('dropdown__content_visible');
-    if (this.parentInput.contains(this.elementInput)) {
-      this.elementInput.classList.add('dropdown__input-content_opened');
+    if (this.parentInput.contains(this.dropdownInput)) {
+      this.dropdownInput.classList.add('dropdown__input-content_opened');
     }
   }
 
   _removeClass() {
     this.dropdownList.classList.remove('dropdown__content_visible');
-    if (this.parentInput.contains(this.elementInput)) {
-      this.elementInput.classList.remove('dropdown__input-content_opened');
+    if (this.parentInput.contains(this.dropdownInput)) {
+      this.dropdownInput.classList.remove('dropdown__input-content_opened');
     }
   }
 
   _toggleClass() {
     this.dropdownList.classList.toggle('dropdown__content_visible');
-    if (this.parentInput.contains(this.elementInput)) {
-      this.elementInput.classList.toggle('dropdown__input-content_opened');
+    if (this.parentInput.contains(this.dropdownInput)) {
+      this.dropdownInput.classList.toggle('dropdown__input-content_opened');
     }
   }
 
   _addNumber(index) {
-    const currentValue = this.numberContainer[index].innerHTML;
+    const currentValue = this.dropdownItems[index].value.innerHTML;
     let result = 0;
     result = Number(currentValue) + 1;
 
-    this.numberContainer[index].innerHTML = String(result);
-    this.minusSign[index].classList.remove('dropdown__minus_disabled');
+    this.dropdownItems[index].value.innerHTML = String(result);
+    this.dropdownItems[index].minus.classList.remove('dropdown__minus_disabled');
   }
 
   _subtractNumber(index) {
-    const currentValue = this.numberContainer[index].innerHTML;
+    const currentValue = this.dropdownItems[index].value.innerHTML;
     let result = 0;
     result = currentValue - 1;
     if (result < 0) {
-      this.numberContainer[index].innerHTML = '0';
-      this.minusSign[index].classList.add('dropdown__minus_disabled');
+      this.dropdownItems[index].value.innerHTML = '0';
+      this.dropdownItems[index].minus.classList.add('dropdown__minus_disabled');
     } else {
-      this.numberContainer[index].innerHTML = result;
+      this.dropdownItems[index].value.innerHTML = result;
     }
   }
 
@@ -132,9 +120,9 @@ class Dropdown {
   }
 
   _handleButtonsContainerForClearClick = () => {
-    this.elementInput.value = '';
-    this.numberContainer.forEach(number => {
-      const element = number;
+    this.dropdownInput.value = '';
+    this.dropdownItems.forEach(item => {
+      const element = item.value;
       element.innerHTML = '0';
     });
     this._hideButtonClear();
@@ -148,7 +136,7 @@ class Dropdown {
 
   _setValues(sum, values, declinations) {
     if (sum === 0) {
-      this.elementInput.value = '';
+      this.dropdownInput.value = '';
       this._hideButtonClear();
     } else {
       const newString = [];
@@ -167,9 +155,9 @@ class Dropdown {
         const intermediateElementString =
           index < newString.length - 1 && newString.length > 1;
         if (firstOrLastElementString) {
-          this.elementInput.value += `${newString[index]}`;
+          this.dropdownInput.value += `${newString[index]}`;
         } else if (intermediateElementString) {
-          this.elementInput.value += `${newString[index]}, `;
+          this.dropdownInput.value += `${newString[index]}, `;
         }
       });
       this._showButtonClear();
@@ -192,34 +180,34 @@ class Dropdown {
       });
     }
 
-    this.elementInput.value = null;
+    this.dropdownInput.value = null;
 
     let firstValue = 0;
     let secondValue = 0;
     let thirstValue = 0;
 
     if (Object.values(wordsForm).length < 3) {
-      this.numberContainer.forEach((number, index) => {
-        if (Number(number.innerHTML) === 0) {
-          this.minusSign[index].classList.add('dropdown__minus_disabled');
+      this.dropdownItems.forEach((item, index) => {
+        if (Number(item.value.innerHTML) === 0) {
+          this.dropdownItems[index].minus.classList.add('dropdown__minus_disabled');
         }
         if (index <= 1) {
-          firstValue += Number(number.innerHTML);
+          firstValue += Number(item.value.innerHTML);
         } else if (index === 2) {
-          secondValue += Number(number.innerHTML);
+          secondValue += Number(item.value.innerHTML);
         }
       });
     } else {
-      this.numberContainer.forEach((number, index) => {
-        if (Number(number.innerHTML) === 0) {
-          this.minusSign[index].classList.add('dropdown__minus_disabled');
+      this.dropdownItems.forEach((item, index) => {
+        if (Number(item.value.innerHTML) === 0) {
+          this.dropdownItems[index].minus.classList.add('dropdown__minus_disabled');
         }
         if (index === 0) {
-          firstValue += Number(number.innerHTML);
+          firstValue += Number(item.value.innerHTML);
         } else if (index === 1) {
-          secondValue += Number(number.innerHTML);
+          secondValue += Number(item.value.innerHTML);
         } else if (index === 2) {
-          thirstValue += Number(number.innerHTML);
+          thirstValue += Number(item.value.innerHTML);
         }
       });
     }
@@ -230,7 +218,7 @@ class Dropdown {
 
   _bindEventListeners() {
     this.dropdownArrow.addEventListener('click', this._handleIconArrowDownClick);
-    this.elementInput.addEventListener('focus', this._handleInputContentFocus);
+    this.dropdownInput.addEventListener('focus', this._handleInputContentFocus);
     if (this.buttonApply) {
       this.buttonApply.addEventListener('click', this._handleButtonsContainerForApplyClick);
     }
@@ -238,14 +226,14 @@ class Dropdown {
       this.buttonClear.addEventListener('click', this._handleButtonsContainerForClearClick);
     }
     document.addEventListener('click', this._handleDocumentClick);
-    this.rowsGroups.forEach(element => {
+    this.dropdownRows.forEach(element => {
       element.addEventListener('click', this._calculateTheResult);
     });
-    this.plusSign.forEach((element, index) => {
-      element.addEventListener('click', this._handlePlusSignClick.bind(this, index));
+    this.dropdownItems.forEach((item, index) => {
+      item.plus.addEventListener('click', this._handlePlusSignClick.bind(this, index));
     });
-    this.minusSign.forEach((element, index) => {
-      element.addEventListener('click', this._handleMinusSignClick.bind(this, index));
+    this.dropdownItems.forEach((item, index) => {
+      item.minus.addEventListener('click', this._handleMinusSignClick.bind(this, index));
     });
   }
 }
