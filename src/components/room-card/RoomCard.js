@@ -34,7 +34,6 @@ class RoomCard {
     if (slideNumber < 1) {
       this.slideIndex = this.slides.length;
     }
-    console.log('this.slides', this.slides);
     this.slides.forEach(element => {
       const slide = element;
       if (!slide.classList.contains('room-card__content_display_hidden')) {
@@ -48,7 +47,6 @@ class RoomCard {
         '',
       );
     });
-    console.log('this.slideIndex', this.slideIndex - 1);
     if (
       this.slides[this.slideIndex - 1].classList.contains(
         'room-card__content_display_hidden',
