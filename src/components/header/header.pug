@@ -4,18 +4,52 @@ include ../../elements/button/button.pug
 mixin header(currentPage)
   -
     const menu = [
-      'О нас',
       {
-        Услуги: [
-          'Аренда конференц-зала',
-          'Трансфер до отеля',
-          'Аренда транспорта',
-          'Камера хранения / сейф',
+        content: 'О нас',
+        href: '',
+      },
+      {
+        content: 'Услуги',
+        links: [
+          {
+            content: 'Аренда конференц-зала',
+            href: '',
+          },
+          {
+            content: 'Трансфер до отеля',
+            href: '',
+          },
+          {
+            content:'Аренда транспорта',
+            href: '',
+          },
+          {
+            content: 'Камера хранения / сейф',
+            href: '',
+          },
         ],
       },
-      'Вакансии',
-      'Новости',
-      { Соглашения: ['Обработка персональных данных', 'Условия бронирования'] },
+      {
+        content: 'Вакансии',
+        href: '',
+      },
+      {
+        content: 'Новости',
+        href: '',
+      },
+      {
+        content: 'Соглашения',
+        links: [
+          {
+            content: 'Обработка персональных данных',
+            href: ''
+          },
+          {
+            content: 'Условия бронирования',
+            href: ''
+          }
+        ],
+      },
     ];
 
   -
@@ -43,19 +77,16 @@ mixin header(currentPage)
         .header__navigation-icon.js-header__navigation-icon
       ul.header__navigation.js-header__navigation
         each itemMenu in menu
-          if (typeof(itemMenu) === 'object')
-            - const subMenu = Object.keys(itemMenu);
-            - const itemsSubMenu = itemMenu[subMenu];
-
+          if (itemMenu.links)
             li.header__title-submenu.js-header__title-submenu
-              button.header__text-title= subMenu[0]
+              button.header__text-title= itemMenu.content
               ul.header__submenu.js-header__submenu
-                each value in itemsSubMenu
+                each value in itemMenu.links
                   li.header__submenu-item
-                    a.header__link(href='')= value
+                    a.header__link(href=value.href)= value.content
           else
             li.header__item
-              a.header__link(href='')= itemMenu
+              a.header__link(href=itemMenu.href)= itemMenu.content
       .header__user.js-header__user
         .header__user-button-login
           +button(loginButton)
