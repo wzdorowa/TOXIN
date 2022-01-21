@@ -37,14 +37,16 @@
     &:focus {
       cursor: pointer;
     }
-
-    &_opened {
-      transform: rotate(180deg);
-    }
   }
 
-  &__container_hidden {
-    display: none;
+  &_closed {
+    & > .checkbox-list__container {
+      display: none;
+    }
+
+    & > .checkbox-list__indicator {
+      transform: rotate(180deg);
+    }
   }
 
   &__content {

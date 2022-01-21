@@ -13,19 +13,10 @@ class CheckboxList {
     this.checkboxListTitle = this.checkboxList.querySelector(
       '.js-checkbox-list__title-wrapper',
     );
-    this.checkboxListToggle = this.checkboxList.querySelector(
-      '.js-checkbox-list__container',
-    );
-    this.checkboxListIndicator = this.checkboxList.querySelector(
-      '.js-checkbox-list__indicator',
-    );
   }
 
   _handleCheckboxListTitleClick = () => {
-    this.checkboxListToggle.classList.toggle('checkbox-list__container_hidden');
-    this.checkboxListIndicator.classList.toggle(
-      'checkbox-list__indicator_opened',
-    );
+    this.checkboxList.classList.toggle('checkbox-list_closed');
   }
 
   _bindEventListeners() {
