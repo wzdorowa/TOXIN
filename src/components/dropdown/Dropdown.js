@@ -97,23 +97,23 @@ class Dropdown {
     }
   }
 
-  _handlePlusSignClick(index) {
+  _handlePlusSignClick = (index) => {
     this._addNumber(index);
   }
 
-  _handleMinusSignClick(index) {
+  _handleMinusSignClick = (index) => {
     this._subtractNumber(index);
   }
 
-  _handleIconArrowDownClick() {
+  _handleIconArrowDownClick = () => {
     this._toggleClass();
   }
 
-  _handleInputContentFocus() {
+  _handleInputContentFocus = () => {
     this._addClass();
   }
 
-  _handleButtonsContainerForApplyClick() {
+  _handleButtonsContainerForApplyClick = () => {
     this._removeClass();
   }
 
@@ -131,7 +131,7 @@ class Dropdown {
     }
   }
 
-  _handleButtonsContainerForClearClick() {
+  _handleButtonsContainerForClearClick = () => {
     this.elementInput.value = '';
     this.numberContainer.forEach(number => {
       const element = number;
@@ -140,7 +140,7 @@ class Dropdown {
     this._hideButtonClear();
   }
 
-  _handleDocumentClick(event) {
+  _handleDocumentClick = (event) => {
     if (event.target.closest('.dropdown') !== this.dropdown) {
       this._removeClass();
     }
@@ -176,7 +176,7 @@ class Dropdown {
     }
   }
 
-  _calculateTheResult() {
+  _calculateTheResult = () => {
     const typeWordsForm = this.dropdown.getAttribute('data-words-form');
     const wordsForm = [];
   
@@ -229,39 +229,23 @@ class Dropdown {
   }
 
   _bindEventListeners() {
-    this.dropdownArrow.addEventListener('click', () => {
-      this._handleIconArrowDownClick();
-    });
-    this.elementInput.addEventListener('focus', () => {
-      this._handleInputContentFocus();
-    });
+    this.dropdownArrow.addEventListener('click', this._handleIconArrowDownClick);
+    this.elementInput.addEventListener('focus', this._handleInputContentFocus);
     if (this.buttonApply) {
-      this.buttonApply.addEventListener('click', () => {
-        this._handleButtonsContainerForApplyClick();
-      });
+      this.buttonApply.addEventListener('click', this._handleButtonsContainerForApplyClick);
     }
     if (this.buttonClear) {
-      this.buttonClear.addEventListener('click', () => {
-        this._handleButtonsContainerForClearClick();
-      });
+      this.buttonClear.addEventListener('click', this._handleButtonsContainerForClearClick);
     }
-    document.addEventListener('click', (event) => {
-      this._handleDocumentClick(event);
-    });
+    document.addEventListener('click', this._handleDocumentClick);
     this.rowsGroups.forEach(element => {
-      element.addEventListener('click', () => {
-        this._calculateTheResult();
-      });
+      element.addEventListener('click', this._calculateTheResult);
     });
     this.plusSign.forEach((element, index) => {
-      element.addEventListener('click', () => {
-        this._handlePlusSignClick(index);
-      });
+      element.addEventListener('click', this._handlePlusSignClick.bind(this, index));
     });
     this.minusSign.forEach((element, index) => {
-      element.addEventListener('click', () => {
-        this._handleMinusSignClick(index);
-      });
+      element.addEventListener('click', this._handleMinusSignClick.bind(this, index));
     });
   }
 }

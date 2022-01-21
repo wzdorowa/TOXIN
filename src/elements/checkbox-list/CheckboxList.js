@@ -21,7 +21,7 @@ class CheckboxList {
     );
   }
 
-  _handleCheckboxListTitleClick() {
+  _handleCheckboxListTitleClick = () => {
     this.checkboxListToggle.classList.toggle('checkbox-list__container_hidden');
     this.checkboxListIndicator.classList.toggle(
       'checkbox-list__indicator_opened',
@@ -29,9 +29,7 @@ class CheckboxList {
   }
 
   _bindEventListeners() {
-    this.checkboxListTitle.addEventListener('click', () => {
-      this._handleCheckboxListTitleClick();
-    });
+    this.checkboxListTitle.addEventListener('click', this._handleCheckboxListTitleClick);
   }
 }
 

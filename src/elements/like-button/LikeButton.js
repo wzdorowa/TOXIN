@@ -17,7 +17,7 @@ class LikeButton {
     );
   }
 
-  _handleClick() {
+  _handleClick = () => {
     if (this.likeButton.checked === true) {
       this.description.innerHTML = Number(this.description.innerHTML) + 1;
     } else if (this.likeButton.checked === false) {
@@ -26,9 +26,7 @@ class LikeButton {
   }
 
   _bindEventListener() {
-    this.likeButton.addEventListener('click', () => {
-      this._handleClick();
-    });
+    this.likeButton.addEventListener('click', this._handleClick);
   }
 }
 

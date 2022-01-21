@@ -20,29 +20,23 @@ class Header {
     this.menuItem = document.querySelectorAll('.js-header__title-submenu');
   }
 
-  _handleUserIconClick() {
+  _handleUserIconClick = () => {
     this.user.classList.toggle('header__user_visible');
   }
 
-  _handleNavigationIconClick() {
+  _handleNavigationIconClick = () => {
     this.navigation.classList.toggle('header__navigation_visible');
   }
 
-  _handleSubmenuClick(index) {
+  _handleSubmenuClick = (index) => {
     this.submenu[index].classList.toggle('header__submenu_active');
   }
 
   _bindEventListeners() {
-    this.userIcon.addEventListener('click', () => {
-      this._handleUserIconClick();
-    });
-    this.navigationIcon.addEventListener('click', () => {
-      this._handleNavigationIconClick();
-    });
+    this.userIcon.addEventListener('click', this._handleUserIconClick);
+    this.navigationIcon.addEventListener('click', this._handleNavigationIconClick);
     this.menuItem.forEach((element, index) => {
-      element.addEventListener('click', () => {
-        this._handleSubmenuClick(index);
-      });
+      element.addEventListener('click', this._handleSubmenuClick.bind(this, index));
     });
   }
 }

@@ -67,31 +67,25 @@ class RoomCard {
     this._showSlides(this.slideIndex);
   }
 
-  _handleButtonPrevClick() {
+  _handleButtonPrevClick = () => {
     this.slideIndex -= 1;
     this._showSlides(this.slideIndex);
   }
 
-  _handleButtonNextClick() {
+  _handleButtonNextClick = () => {
     this.slideIndex += 1;
     this._showSlides(this.slideIndex);
   }
 
-  _handleDotsClick(index) {
+  _handleDotsClick = (index) => {
     this._setCurrentSlide(index + 1);
   }
 
   _bindEventListeners() {
-    this.buttonPrev.addEventListener('click', () => {
-      this._handleButtonPrevClick();
-    });
-    this.buttonNext.addEventListener('click', () => {
-      this._handleButtonNextClick();
-    });
+    this.buttonPrev.addEventListener('click', this._handleButtonPrevClick);
+    this.buttonNext.addEventListener('click', this._handleButtonNextClick);
     this.dots.forEach((element, index) => {
-      element.addEventListener('click', () => {
-        this._handleDotsClick(index);
-      });
+      element.addEventListener('click', this._handleDotsClick.bind(this, index));
     });
   }
 }

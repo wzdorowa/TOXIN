@@ -122,24 +122,24 @@ class DateDropdown {
     }
   }
 
-  _handleInputContentFocus() {
+  _handleInputContentFocus = () => {
     this._toggleVisibilityClass();
   }
 
-  _handleIconArrowDownClick() {
+  _handleIconArrowDownClick = () => {
     this._toggleVisibilityClass();
   }
 
-  _handleButtonsContainerForApplyClick() {
+  _handleButtonsContainerForApplyClick = () => {
     this._removeVisibilityClass();
   }
 
-  _handleButtonsContainerForClearClick() {
+  _handleButtonsContainerForClearClick = () => {
     this._clearValues();
     this._hideButtonClear();
   }
 
-  _handleDocumentClick(event) {
+  _handleDocumentClick = (event) => {
     if (!this.datepickerGroup.contains(event.target)) {
       this._removeVisibilityClass();
       if (this.dates.length === 1) {
@@ -151,28 +151,14 @@ class DateDropdown {
 
   _bindEventListeners() {
     this.elementsInput.forEach(elementInput => {
-      elementInput.addEventListener('click', () => {
-        this._handleInputContentFocus();
-      });
+      elementInput.addEventListener('click', this._handleInputContentFocus);
     });
     this.dropdownsArrow.forEach(dropdownArrow => {
-      dropdownArrow.addEventListener('click', () => {
-        this._handleIconArrowDownClick();
-      });
+      dropdownArrow.addEventListener('click', this._handleIconArrowDownClick);
     });
-    this.buttonApply.addEventListener('click', () => {
-      this._handleButtonsContainerForApplyClick();
-    });
-    this.buttonClear.addEventListener('click', () => {
-      this._handleButtonsContainerForClearClick();
-    });
-    document.addEventListener(
-      'click',
-      (event) => {
-        this._handleDocumentClick(event);
-      },
-      true,
-    );
+    this.buttonApply.addEventListener('click', this._handleButtonsContainerForApplyClick);
+    this.buttonClear.addEventListener('click', this._handleButtonsContainerForClearClick);
+    document.addEventListener('click', this._handleDocumentClick, true);
   }
 
   _setValueToInput() {

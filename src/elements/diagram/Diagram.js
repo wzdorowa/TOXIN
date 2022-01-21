@@ -14,13 +14,13 @@ class Diagram {
     this.votesValue = this.diagrams[this.indexDiagram].querySelector('.js-diagram__number');
   }
 
-  _handleSegmentMouseover(segment) {
+  _handleSegmentMouseover = (segment) => {
     const { votes } = segment.dataset;
     segment.setAttribute('stroke-width', '7');
     this.votesValue.innerHTML = votes;
   }
 
-  _handleSegmentMouseoute(segment) {
+  _handleSegmentMouseoute = (segment) => {
     const { total } = segment.dataset;
     segment.setAttribute('stroke-width', '4');
     this.votesValue.innerHTML = total;
@@ -38,12 +38,8 @@ class Diagram {
     });
 
     if (segment !== undefined) {
-      this.item.addEventListener('mouseover', () => {
-        this._handleSegmentMouseover(segment);
-      });
-      this.item.addEventListener('mouseout', () => {
-        this._handleSegmentMouseoute(segment);
-      });
+      this.item.addEventListener('mouseover', this._handleSegmentMouseover.bind(this, segment));
+      this.item.addEventListener('mouseout', this._handleSegmentMouseoute.bind(this, segment));
     }
   }
 }
