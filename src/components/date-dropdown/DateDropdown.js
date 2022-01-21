@@ -173,22 +173,20 @@ class DateDropdown {
         multipleDatesSeparator: ' - ',
         dateFormat: 'dd M',
         moveToOtherMonthsOnSelect: false,
-        onSelect: (fd, dates) => {
+        onSelect: (selectedDay, dates) => {
           this.dates = dates;
           const input = this.datepickerGroup.querySelector(
             '.js-date-dropdown__input-content',
           );
-          let string = '';
 
           if (dates) {
             dates.forEach(() => {
-              string = fd;
+              input.value = selectedDay;
             });
-            input.value = string;
 
             this._showButtonClear();
           } else {
-            _hideButtonClear();
+            this._hideButtonClear();
           }
         },
       });
@@ -199,7 +197,7 @@ class DateDropdown {
         },
         dateFormat: 'dd.mm.yyyy',
         moveToOtherMonthsOnSelect: false,
-        onSelect: (fd, dates) => {
+        onSelect: (selectedDay, dates) => {
           this.dates = dates;
           const inputs = this.datepickerGroup.querySelectorAll(
             '.js-date-dropdown__input-content',
@@ -207,7 +205,7 @@ class DateDropdown {
           let dayFrom = '';
           let dayTo = '';
 
-          const signs = fd.split('');
+          const signs = selectedDay.split('');
           signs.forEach((element, i) => {
             if (i < 10) {
               dayFrom += element;
