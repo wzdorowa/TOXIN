@@ -1,4 +1,8 @@
 .demo {
+  position: relative;
+  z-index: 999;
+  background-color: #fff;
+
   &__row {
     display: flex;
     justify-content: space-between;
