@@ -1,4 +1,4 @@
-mixin checkbox-list({ title = 'Expandable checkbox list', isOpen = false, checkboxList } = {})
+mixin checkbox-list({ title = 'Expandable checkbox list', isOpen = false, checkboxList = [] } = {})
   - const classContainer = `${!isOpen ? 'checkbox-list_closed' : ''}`;
 
   .checkbox-list.js-checkbox-list(class=classContainer)
