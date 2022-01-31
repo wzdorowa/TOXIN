@@ -123,7 +123,6 @@
 
   &__subscribe {
     @include flex();
-    // justify-content: space-between;
     width: 80%;
     max-width: 427px;
     min-height: 120px;
@@ -147,9 +146,9 @@
   }
 
   &__subscribe-description {
+    margin-bottom: 23px;
     line-height: 24px;
     text-align: center;
-    margin-bottom: 23px;
 
     @media (min-width: 1170px) {
       text-align: start;
@@ -186,7 +185,7 @@
     background-color: #fff;
     border-top: 1px solid $DarkShade25;
     box-shadow: $primaryShadow;
-  
+
     @media (min-width: 1200px) {
       padding: 0;
     }

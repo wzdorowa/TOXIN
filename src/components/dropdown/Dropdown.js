@@ -128,7 +128,6 @@ class Dropdown {
       amount.innerHTML = '0';
       minus.classList.add('dropdown__minus_disabled');
     });
-    // this.dropdownItems[index].minus.classList.add('dropdown__minus_disabled');
     this._hideButtonClear();
   }
 
