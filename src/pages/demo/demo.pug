@@ -262,7 +262,7 @@ html(lang='ru')
               +button({ text: 'Перейти к оплате', type: 'solid', isDirected: true, size: 'large' })
           .demo__elements-container
             span.demo__element-title Pagination
-            +pagination
+            +pagination({ currentPage: 1, amountItemsPerPage: 12, amountItems: 180 })
       .demo__row
         .demo__dropdown
           +dropdown(dropdownConveniences)
