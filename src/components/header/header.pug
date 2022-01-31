@@ -1,7 +1,7 @@
 include ../../elements/logo/logo.pug
 include ../../elements/button/button.pug
 
-mixin header(currentPage)
+mixin header(currentPageHref)
   -
     const menu = [
       {
@@ -83,10 +83,16 @@ mixin header(currentPage)
               ul.header__submenu.js-header__submenu
                 each value in itemMenu.links
                   li.header__submenu-item
-                    a.header__link(href=value.href)= value.content
+                    if currentPageHref === value.href
+                      a.header__link.header__link_active(href=value.href, title=value.content)= value.content
+                    else
+                      a.header__link(href=value.href)= value.content
           else
             li.header__item
-              a.header__link(href=itemMenu.href)= itemMenu.content
+              if currentPageHref === itemMenu.href
+                a.header__link.header__link_active(href=itemMenu.href, title=itemMenu.content)= itemMenu.content
+              else
+                a.header__link(href=itemMenu.href)= itemMenu.content
       .header__user.js-header__user
         .header__user-button-login
           +button(loginButton)

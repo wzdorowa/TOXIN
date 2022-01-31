@@ -132,7 +132,7 @@
     }
 
     @media (min-width: 930px) {
-      width: 465px;
+      width: 470px;
     }
 
     &_visible {
@@ -237,6 +237,11 @@
 
   &__link {
     @include link();
+
+    &_active {
+      color: $DarkShade75;
+      font-weight: bold;
+    }
   }
 
   &__user {
