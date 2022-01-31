@@ -1,17 +1,16 @@
 class Diagram {
-  constructor(element, index) {
-    this.item = element;
-    this.indexDiagram = index;
+  constructor(element) {
+    this.diagram = element;
 
     this._findElement();
     this._bindEventListeners();
   }
 
   _findElement() {
-    this.diagrams = document.querySelectorAll('.js-diagram');
+    this.diagramItems = this.diagram.querySelectorAll('.js-diagram__item');
 
-    this.segments = this.diagrams[this.indexDiagram].querySelectorAll('.js-diagram__image-circle');
-    this.votesValue = this.diagrams[this.indexDiagram].querySelector('.js-diagram__number');
+    this.segments = this.diagram.querySelectorAll('.js-diagram__image-circle');
+    this.votesValue = this.diagram.querySelector('.js-diagram__number');
   }
 
   _handleSegmentMouseover = (segment) => {
@@ -27,30 +26,29 @@ class Diagram {
   }
 
   _bindEventListeners() {
-    const { impression } = this.item.dataset;
-    let segment;
-    this.segments.forEach(element => {
-      const impressionSegment = element.dataset.impression;
-      if (impressionSegment === impression) {
-        segment = element;
+    this.diagramItems.forEach((item) => {
+      const { impression } = item.dataset;
+      let segment;
+      this.segments.forEach(element => {
+        const impressionSegment = element.dataset.impression;
+        if (impressionSegment === impression) {
+          segment = element;
+        }
+        return null;
+      });
+  
+      if (segment !== undefined) {
+        item.addEventListener('mouseover', this._handleSegmentMouseover.bind(this, segment));
+        item.addEventListener('mouseout', this._handleSegmentMouseoute.bind(this, segment));
       }
-      return null;
     });
-
-    if (segment !== undefined) {
-      this.item.addEventListener('mouseover', this._handleSegmentMouseover.bind(this, segment));
-      this.item.addEventListener('mouseout', this._handleSegmentMouseoute.bind(this, segment));
-    }
   }
 }
 
 const diagrams = document.querySelectorAll('.js-diagram');
 
-diagrams.forEach((diagram, index) => {
+diagrams.forEach((diagram) => {
   if (diagram !== null) {
-    const items = diagrams[index].querySelectorAll('.js-diagram__item');
-    items.forEach((item) => {
-      new Diagram(item, index);
-    });
+    new Diagram(diagram);
   }
 });
