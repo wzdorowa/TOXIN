@@ -180,9 +180,7 @@ class DateDropdown {
           );
 
           if (dates) {
-            dates.forEach(() => {
-              input.value = selectedDay;
-            });
+            input.value = selectedDay;
 
             this._showButtonClear();
           } else {
