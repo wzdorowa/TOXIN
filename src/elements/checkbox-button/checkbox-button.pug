@@ -6,6 +6,7 @@ mixin checkbox-button({ value, checked = false, isBoldText = false, description 
       input.checkbox-button__content(
         type='checkbox',
         name='checkbox-button-content',
+        value=value,
         checked=checked
       )
       span.checkbox-button__indicator
