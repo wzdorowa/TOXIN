@@ -23,19 +23,6 @@
     text-overflow: ellipsis;
     cursor: pointer;
 
-    &_opened {
-      border: 1px solid $DarkShade50;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-
-      & ~ .dropdown__input-arrow-down {
-        &::before {
-          border-top: 2px solid $DarkShade75;
-          border-right: 2px solid $DarkShade75;
-        }
-      }
-    }
-
     &:hover,
     :focus {
       border: 1px solid $DarkShade50;
@@ -76,6 +63,19 @@
       height: 44px;
       cursor: pointer;
       content: '';
+    }
+  }
+
+  &__input-content_opened {
+    border: 1px solid $DarkShade50;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    & ~ .dropdown__input-arrow-down {
+      &::before {
+        border-top: 2px solid $DarkShade75;
+        border-right: 2px solid $DarkShade75;
+      }
     }
   }
 
