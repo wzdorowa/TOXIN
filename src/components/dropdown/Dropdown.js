@@ -77,7 +77,7 @@ class Dropdown {
     const currentValue = this.dropdownItems[index].value.innerHTML;
     let result = 0;
     result = currentValue - 1;
-    if (result < 0) {
+    if (result <= 0) {
       this.dropdownItems[index].value.innerHTML = '0';
       this.dropdownItems[index].minus.classList.add('dropdown__minus_disabled');
     } else {
@@ -122,9 +122,13 @@ class Dropdown {
   _handleButtonsContainerForClearClick = () => {
     this.dropdownInput.value = '';
     this.dropdownItems.forEach(item => {
-      const element = item.value;
-      element.innerHTML = '0';
+      const amount = item.value;
+      const minus = item.minus;
+
+      amount.innerHTML = '0';
+      minus.classList.add('dropdown__minus_disabled');
     });
+    // this.dropdownItems[index].minus.classList.add('dropdown__minus_disabled');
     this._hideButtonClear();
   }
 
