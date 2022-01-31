@@ -1,24 +1,14 @@
 mixin checkbox-button({ value, checked, isBoldText = false, description })
   - const classBoldText = `${isBoldText ? 'checkbox-button__value_bold' : ''}`;
 
-  if description
-    .checkbox-button
-      label.checkbox-button__filter
-        input.checkbox-button__content(
-          type='checkbox',
-          name='checkbox-button-content',
-          checked=checked
-        )
-        span.checkbox-button__indicator
-        span.checkbox-button__value(class=classBoldText)= value
+  .checkbox-button
+    label.checkbox-button__filter
+      input.checkbox-button__content(
+        type='checkbox',
+        name='checkbox-button-content',
+        checked=checked
+      )
+      span.checkbox-button__indicator
+      span.checkbox-button__value(class=classBoldText)= value
+    if description
       .checkbox-button__description= description
-  else
-    .checkbox-button
-      label.checkbox-button__filter
-        input.checkbox-button__content(
-          type='checkbox',
-          name='checkbox-button-content',
-          checked=checked
-        )
-        span.checkbox-button__indicator
-        span.checkbox-button__value(class=classBoldText)= value
