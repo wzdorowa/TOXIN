@@ -176,6 +176,14 @@ html(lang='ru')
       };
 
     -
+      const dateDropdown = {
+        labelArray: ['Прибытие', 'Выезд'],
+        dates: dateFormat,
+        size: 'small',
+        amountField: 'with-two-inputs'
+      }
+
+    -
       const roomCard1 = {
         number: 888,
         level: 'люкс',
@@ -294,8 +302,9 @@ html(lang='ru')
               +login
           .demo__content-item
             .demo__datepicker.js-demo__datepicker
-              +calendar
-                .datepicker-here.js-datepicker-here(data-range='true')
+              //- +calendar
+              //-   .datepicker-here.js-datepicker-here(data-range='true')
+              +date-dropdown(dateDropdown)
             .demo__room-card
               +room-card(roomCard1)
             .demo__room-card
