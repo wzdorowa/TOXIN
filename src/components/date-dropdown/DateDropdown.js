@@ -1,5 +1,3 @@
-const { event } = require("jquery");
-
 class DateDropdown {
   constructor(element) {
     this.datepickerGroup = element;
