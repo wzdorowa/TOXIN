@@ -2,7 +2,7 @@ import convertNumToWordform from './helpers';
 import { guests, amenities } from './variables';
 
 class Dropdown {
-  constructor(element) {
+  constructor(element, index) {
     this.dropdown = element;
     this.dropdownInput = null;
     this.dropdownList = null;
@@ -11,6 +11,7 @@ class Dropdown {
     this.buttonClear = null;
     this.dropdownRows = [];
     this.dropdownItems = [];
+    this.index = index;
 
     this._findElement();
     this._bindEventListeners();
@@ -43,13 +44,6 @@ class Dropdown {
     });
   }
 
-  _addClass() {
-    this.dropdownList.classList.add('dropdown__content_visible');
-    if (this.parentInput.contains(this.dropdownInput)) {
-      this.dropdownInput.classList.add('dropdown__input-content_opened');
-    }
-  }
-
   _removeClass() {
     this.dropdownList.classList.remove('dropdown__content_visible');
     if (this.parentInput.contains(this.dropdownInput)) {
@@ -58,7 +52,7 @@ class Dropdown {
   }
 
   _toggleClass() {
-    this.dropdownList.classList.toggle('dropdown__content_visible');
+    this.dropdownList.classList.toggle('dropdown__content_visible')
     if (this.parentInput.contains(this.dropdownInput)) {
       this.dropdownInput.classList.toggle('dropdown__input-content_opened');
     }
@@ -98,7 +92,7 @@ class Dropdown {
   }
 
   _handleInputContentFocus = () => {
-    this._addClass();
+    this._toggleClass();
   }
 
   _handleButtonsContainerForApplyClick = () => {
@@ -221,7 +215,7 @@ class Dropdown {
 
   _bindEventListeners() {
     this.dropdownArrow.addEventListener('click', this._handleIconArrowDownClick);
-    this.dropdownInput.addEventListener('focus', this._handleInputContentFocus);
+    this.dropdownInput.addEventListener('click', this._handleInputContentFocus);
     if (this.buttonApply) {
       this.buttonApply.addEventListener('click', this._handleButtonsContainerForApplyClick);
     }
@@ -242,6 +236,6 @@ class Dropdown {
 }
 
 const elements = document.querySelectorAll('.js-dropdown');
-elements.forEach(element => {
-  new Dropdown(element);
+elements.forEach((element, index) => {
+  new Dropdown(element, index);
 });
