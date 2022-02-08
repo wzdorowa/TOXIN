@@ -35,7 +35,8 @@ mixin form-room-cost(formRoomCostData)
       labelArray: ['Прибытие', 'Выезд'],
       dates: dateFormat,
       size: 'small',
-      amountField: 'with-two-inputs'
+      amountField: 'with-two-inputs',
+      name: 'form-room-cost-date-dropdown-input'
     }
 
   -
@@ -44,6 +45,7 @@ mixin form-room-cost(formRoomCostData)
       placeholder: 'Сколько гостей',
       dropdownRows: rowsForDropdown,
       typeWordsForm: 'guests',
+      name: 'form-room-cost-dropdown'
     }
 
   .form-room-cost

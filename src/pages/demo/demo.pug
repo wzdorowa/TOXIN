@@ -73,14 +73,14 @@ html(lang='ru')
 
     -
       const checkboxList = [
-        { value: 'Завтрак' },
-        { value: 'Письменный стол', checked: true },
-        { value: 'Стул для кормления', checked: true },
-        { value: 'Кроватка', checked: true },
-        { value: 'Телевизор' },
-        { value: 'Шампунь' },
-        { value: 'Телевизор' },
-        { value: 'Шампунь' },
+        { value: 'Завтрак', name: 'breakfast' },
+        { value: 'Письменный стол', name: 'desk', checked: true },
+        { value: 'Стул для кормления', name: 'feeding chair', checked: true },
+        { value: 'Кроватка', name: 'crib',  checked: true },
+        { value: 'Телевизор', name: 'first-tv' },
+        { value: 'Шампунь', name: 'first-shampoo' },
+        { value: 'Телевизор', name: 'second-tv' },
+        { value: 'Шампунь', name: 'second-shampoo' },
       ];
 
     -
@@ -110,7 +110,8 @@ html(lang='ru')
         placeholder: 'Сколько гостей',
         hasButtons: true,
         dropdownRows: dataForDropdownFirst,
-        typeWordsForm: 'guests'
+        typeWordsForm: 'guests',
+        name: 'demo-dropdown-guests'
       };
 
     -
@@ -119,14 +120,16 @@ html(lang='ru')
         placeholder: 'Выберите удобства',
         hasButtons: true,
         dropdownRows: dataForDropdownSecond,
-        typeWordsForm: 'amenities'
+        typeWordsForm: 'amenities',
+        name: 'demo-dropdown-amenities'
       };
 
     -
       const dateDropdownOneField = {
         labelArray: ['Date dropdown', 'Date dropdown'],
         size: 'small',
-        amountField: 'with-two-inputs'
+        amountField: 'with-two-inputs',
+        name: 'demo-first-date-dropdown-input'
       };
 
     -
@@ -134,12 +137,14 @@ html(lang='ru')
         labelArray: ['Filter date dropdown'],
         datesFormat: ['ДД.ММ - ДД.ММ'],
         size: 'large',
-        amountField: 'with-one-input'
+        amountField: 'with-one-input',
+        name: 'demo-second-date-dropdown-input'
       };
 
     -
       const checkboxHallway = {
         value: 'Широкий коридор',
+        name: 'wide-corridor',
         isBoldText: true,
         description: 'Ширина коридоров в номере не менее 91 см.'
       };
@@ -147,6 +152,7 @@ html(lang='ru')
     -
       const checkboxForInvalids = {
         value: 'Помощник для инвалидов',
+        name: 'assistant-for-the-disabled',
         isBoldText: true,
         description: 'На 1 этаже вас встретит специалист и проводит до номера.'
       };
@@ -158,7 +164,8 @@ html(lang='ru')
         srcImage: 'images/user-icon/Murad.jpeg',
         text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
         amountLike: 12,
-        likeChecked: true
+        likeChecked: true,
+        name: 'comment-1-like-button'
       };
 
     -
@@ -180,7 +187,8 @@ html(lang='ru')
         labelArray: ['Прибытие', 'Выезд'],
         dates: dateFormat,
         size: 'small',
-        amountField: 'with-two-inputs'
+        amountField: 'with-two-inputs',
+        name: 'demo-date-dropdown-input'
       }
 
     -
@@ -228,11 +236,11 @@ html(lang='ru')
           .demo__elements-container
             span.demo__element-title Checkbox buttons
             .demo__checkbox-button
-              +checkbox-button({ value: 'Можно курить' })
+              +checkbox-button({ value: 'Можно курить', name: 'can-smoke' })
             .demo__checkbox-button
-              +checkbox-button({ value: 'Можно с питомцами', checked: true })
+              +checkbox-button({ value: 'Можно с питомцами', name: 'can-with-pets', checked: true })
             .demo__checkbox-button
-              +checkbox-button({ value: 'Можно пригласить гостей (до 10 человек)', checked: true })
+              +checkbox-button({ value: 'Можно пригласить гостей (до 10 человек)', name: 'can-invite-guests', checked: true })
           .demo__elements-container
             span.demo__element-title Radio buttons
             .demo__radio-buttons
@@ -241,15 +249,15 @@ html(lang='ru')
           .demo__elements-container
             span.demo__element-title Toggle
             .demo__toggle-button
-              +toggle({ text: 'Получать спецпредложения', checked: true })
+              +toggle({ text: 'Получать спецпредложения', checked: true, name: 'demo-toggle-1' })
             .demo__toggle-button
-              +toggle({ text: 'Получать спецпредложения' })
+              +toggle({ text: 'Получать спецпредложения', name: 'demo-toggle-2' })
           .demo__elements-container
             span.demo__element-title Like button
             .demo__like-button
-              +like-button({ value: 2 })
+              +like-button({ value: 2, name: 'first-like-button' })
             .demo__like-button
-              +like-button({ value: 12, checked: true })
+              +like-button({ value: 12, checked: true, name: 'second-like-button' })
           .demo__elements-container
             span.demo__element-title Rate button
             .demo__rate-buttons
@@ -302,8 +310,6 @@ html(lang='ru')
               +login
           .demo__content-item
             .demo__datepicker.js-demo__datepicker
-              //- +calendar
-              //-   .datepicker-here.js-datepicker-here(data-range='true')
               +date-dropdown(dateDropdown)
             .demo__room-card
               +room-card(roomCard1)

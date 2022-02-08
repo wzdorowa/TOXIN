@@ -7,7 +7,8 @@ mixin date-dropdown(data)
       datesFormat = ['ДД.ММ.ГГГГ','ДД.ММ.ГГГГ'],
       userDates = ['', ''],
       size = 'large',
-      amountField = 'with-two-inputs'
+      amountField = 'with-two-inputs',
+      name = 'date-dropdown-input'
     } = data;
 
   - let classSize;
@@ -27,7 +28,7 @@ mixin date-dropdown(data)
             span.date-dropdown__input-arrow-down.js-date-dropdown__input-arrow-down
             input.date-dropdown__input-content.js-date-dropdown__input-content(
               type='text',
-              name='date-dropdown-input-content',
+              name=`${ name }`,
               placeholder=datesFormat[0],
               readonly='readonly'
             )
@@ -38,7 +39,7 @@ mixin date-dropdown(data)
             span.date-dropdown__input-arrow-down.js-date-dropdown__input-arrow-down
             input.date-dropdown__input-content.js-date-dropdown__input-content(
               type='text',
-              name='date-dropdown-input-content',
+              name=`${ name }`,
               placeholder=datesFormat[0],
               readonly='readonly'
             )
@@ -48,7 +49,7 @@ mixin date-dropdown(data)
             span.date-dropdown__input-arrow-down.js-date-dropdown__input-arrow-down
             input.date-dropdown__input-content.js-date-dropdown__input-content(
               type='text',
-              name='date-dropdown-input-content',
+              name=`${ name }`,
               placeholder=datesFormat[1],
               readonly='readonly'
             )

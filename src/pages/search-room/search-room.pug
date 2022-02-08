@@ -168,14 +168,14 @@ block content
 
   -
     const checkboxList = [
-      { value: 'Завтрак' },
-      { value: 'Письменный стол', checked: true },
-      { value: 'Стул для кормления', checked: true },
-      { value: 'Кроватка', checked: true },
-      { value: 'Телевизор' },
-      { value: 'Шампунь' },
-      { value: 'Телевизор' },
-      { value: 'Шампунь' },
+      { value: 'Завтрак', name: 'breakfast' },
+      { value: 'Письменный стол', name: 'desk', checked: true },
+      { value: 'Стул для кормления', name: 'feeding chair', checked: true },
+      { value: 'Кроватка', name: 'crib', checked: true },
+      { value: 'Телевизор', name: 'first-tv' },
+      { value: 'Шампунь', name: 'first-shampoo' },
+      { value: 'Телевизор', name: 'second-tv' },
+      { value: 'Шампунь', name: 'second-shampoo' },
     ];
 
   -
@@ -183,7 +183,8 @@ block content
       labelArray: ['Даты пребывания в отеле'],
       datesFormat: ['ДД.ММ - ДД.ММ'],
       size: 'large',
-      amountField: 'with-one-input'
+      amountField: 'with-one-input',
+      name: 'filter-date-dropdown-input'
     };
 
   -
@@ -206,7 +207,8 @@ block content
       placeholder: 'Сколько гостей',
       hasButtons: true,
       dropdownRows: dataForDropdownFirst,
-      typeWordsForm: 'guests'
+      typeWordsForm: 'guests',
+      name: 'search-room-dropdown-guests'
     };
 
   -
@@ -215,12 +217,14 @@ block content
       placeholder: 'Выберите удобства',
       hasButtons: true,
       dropdownRows: dataForDropdownSecond,
-      typeWordsForm: 'amenities'
+      typeWordsForm: 'amenities',
+      name: 'search-room-dropdown-amenities'
     };
 
   -
     const checkboxHallway = {
       value: 'Широкий коридор',
+      name: 'wide-corridor',
       isBoldText: true,
       description: 'Ширина коридоров в номере не менее 91 см.'
     };
@@ -228,6 +232,7 @@ block content
   -
     const checkboxForInvalid = {
       value: 'Помощник для инвалидов',
+      name: 'assistant-for-the-disabled',
       isBoldText: true,
       description: 'На 1 этаже вас встретит специалист и проводит до номера.'
     };
@@ -245,9 +250,9 @@ block content
       .search-room__filter-checkbox-buttons
         label.search-room__filter-item-title Правила дома
         .search-room__filter-checkbox-buttons-group
-          +checkbox-button({ value: 'Можно курить' })
-          +checkbox-button({ value: 'Можно с питомцами', checked: true })
-          +checkbox-button({ value: 'Можно пригласить гостей (до 10 человек)', checked: true })
+          +checkbox-button({ value: 'Можно курить', name: 'can-smoke' })
+          +checkbox-button({ value: 'Можно с питомцами', name: 'can-with-pets', checked: true })
+          +checkbox-button({ value: 'Можно пригласить гостей (до 10 человек)', name: 'can-invite-guests', checked: true })
       .search-room__filter-rich-checkbox
         label.search-room__filter-item-title Доступность
         .search-room__filter-rich-checkbox-group

@@ -8,4 +8,4 @@ mixin checkbox-list({ title = 'Expandable checkbox list', isOpen = false, checkb
     .checkbox-list__container
       .checkbox-list__content
         each checkbox in checkboxList
-          +checkbox-button({ value: checkbox.value, checked: checkbox.checked })
+          +checkbox-button({ value: checkbox.value, name: checkbox.name, checked: checkbox.checked })

@@ -1,11 +1,11 @@
-mixin checkbox-button({ value, checked = false, isBoldText = false, description })
+mixin checkbox-button({ value, name = 'checkbox-button', checked = false, isBoldText = false, description })
   - const classBoldText = `${isBoldText ? 'checkbox-button__value_bold' : ''}`;
 
   .checkbox-button
     label.checkbox-button__filter
       input.checkbox-button__content(
         type='checkbox',
-        name='checkbox-button-content',
+        name=`${ name }`,
         value=value,
         checked=checked
       )

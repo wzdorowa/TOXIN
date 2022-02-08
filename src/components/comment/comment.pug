@@ -8,7 +8,8 @@ mixin comment(comment)
       srcImage,
       text,
       amountLike = 0,
-      likeChecked
+      likeChecked,
+      name = 'comment-like-button'
     } = comment;
 
   .comment
@@ -25,5 +26,5 @@ mixin comment(comment)
         span.comment__date= date
     .comment__content
       .comment__like-button
-        +like-button({ value: amountLike, checked: likeChecked })
+        +like-button({ value: amountLike, name: name, checked: likeChecked })
       p.comment__paragraph= text

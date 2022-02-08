@@ -7,7 +7,7 @@ mixin comments({ commentsList })
       span.comments__amount= `${commentsList.length} отзыва`
     .comments__content
       each comment in commentsList
-        - const { userName, date, srcImage, text, amountLike, likeChecked } = comment;
+        - const { userName, date, srcImage, text, amountLike, likeChecked, name } = comment;
 
         .comments__comment
-          +comment({ userName, date, srcImage, text, amountLike, likeChecked })
+          +comment({ userName, date, srcImage, text, amountLike, likeChecked, name })

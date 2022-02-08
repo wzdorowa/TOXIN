@@ -38,7 +38,7 @@ mixin form-check-in
         input.form-check-in__input(type='email', placeholder='Email')
         input.form-check-in__input(type='password', placeholder='Пароль')
       .form-check-in__toggle
-        +toggle({ text: 'Получать спецпредложения' })
+        +toggle({ text: 'Получать спецпредложения', name: 'receive-special-offers' })
     .form-check-in__check-in-details
       .form-check-in__check-in-button
         +button(registrationButton)

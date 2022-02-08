@@ -5,7 +5,8 @@ mixin dropdown(data)
       placeholder = 'Выберите нужное количество',
       hasButtons = false,
       dropdownRows,
-      typeWordsForm
+      typeWordsForm,
+      name = 'dropdown-input'
     } = data;
 
   .dropdown.js-dropdown(data-words-form=typeWordsForm)
@@ -14,7 +15,7 @@ mixin dropdown(data)
       .dropdown__input-wrapper
         input.dropdown__input-content.js-dropdown__input-content(
           type='text',
-          name='dropdown-input-content',
+          name=`${ name }`,
           placeholder=placeholder,
           readonly='readonly'
         )

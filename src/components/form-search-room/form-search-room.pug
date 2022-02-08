@@ -16,7 +16,8 @@ mixin form-search-room(dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
     const dateDropdown = {
       labelArray: labelInputs,
       dates: dateFormat, size: 'small',
-      amountField: 'with-two-inputs'
+      amountField: 'with-two-inputs',
+      name: 'form-search-room-date-dropdown-input'
     };
 
   -
@@ -24,7 +25,8 @@ mixin form-search-room(dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
       label: 'Гости',
       placeholder: 'Сколько гостей',
       dropdownRows: rowsForDropdown,
-      typeWordsForm: 'guests'
+      typeWordsForm: 'guests',
+      name: 'form-search-room-dropdown'
     };
 
   -
