@@ -28,7 +28,10 @@ mixin pagination({ currentPage = 1, amountItemsPerPage = 12, amountItems = 0 } =
       ul.pagination__list
         each value, index in arrayPages
           if index < 5
-            li.pagination__item= value
+            if index === currentPage - 1
+              li.pagination__item.pagination__item_active= value
+            else
+              li.pagination__item= value
         li.pagination__item_with-arrow
       span.pagination__description= `${rangeItems} из ${approximateAmountItems}+ вариантов аренды`
   else
@@ -36,8 +39,14 @@ mixin pagination({ currentPage = 1, amountItemsPerPage = 12, amountItems = 0 } =
       ul.pagination__list
         each value, index in arrayPages
           if index < 3
-            li.pagination__item= value
+            if index === currentPage - 1
+              li.pagination__item.pagination__item_active= value
+            else
+              li.pagination__item= value
         li.pagination__item= '...'
-        li.pagination__item= amountPages
+        if amountPages === currentPage
+          li.pagination__item.pagination__item_active= amountPages
+        else
+          li.pagination__item= amountPages
         li.pagination__item_with-arrow
       span.pagination__description= `${rangeItems} из ${approximateAmountItems}+ вариантов аренды`
