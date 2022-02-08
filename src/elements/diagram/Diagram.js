@@ -48,7 +48,5 @@ class Diagram {
 const diagrams = document.querySelectorAll('.js-diagram');
 
 diagrams.forEach((diagram) => {
-  if (diagram !== null) {
-    new Diagram(diagram);
-  }
+  new Diagram(diagram);
 });
