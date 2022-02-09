@@ -1,5 +1,6 @@
 mixin pagination({ currentPage = 1, amountItemsPerPage = 12, amountItems = 0 } = {})
   - const amountPages = Math.ceil(amountItems / amountItemsPerPage);
+  // - console.log('amountPages', amountPages);
   - const arrayPages = Array.from({ length: amountPages }, (v, k) => k + 1);
 
   - const beginningRange = amountItemsPerPage * currentPage - amountItemsPerPage + 1;
@@ -21,32 +22,53 @@ mixin pagination({ currentPage = 1, amountItemsPerPage = 12, amountItems = 0 } =
       approximateAmountItems = Math.floor(amountItems / 100) * 100;
     }
 
-  if (amountPages < 2)
-    null
-  else if (amountPages > 1 && amountPages < 5)
-    .pagination
-      ul.pagination__list
+  .pagination
+    ul.pagination__list
+      if amountPages < 2
+        null
+      else if amountPages >= 2 && amountPages <= 5
         each value, index in arrayPages
-          if index < 5
+          if index === currentPage - 1
+            li.pagination__item.pagination__item_active= value
+          else
+            li.pagination__item= value
+      else
+        if currentPage <= 2
+          each value, index in arrayPages
             if index === currentPage - 1
               li.pagination__item.pagination__item_active= value
-            else
+            else if index <= 2
               li.pagination__item= value
-        li.pagination__item_with-arrow
-      span.pagination__description= `${rangeItems} из ${approximateAmountItems}+ вариантов аренды`
-  else
-    .pagination
-      ul.pagination__list
-        each value, index in arrayPages
-          if index < 3
-            if index === currentPage - 1
-              li.pagination__item.pagination__item_active= value
-            else
-              li.pagination__item= value
-        li.pagination__item= '...'
-        if amountPages === currentPage
-          li.pagination__item.pagination__item_active= amountPages
-        else
+          li.pagination__item= '...'
           li.pagination__item= amountPages
+        else if currentPage >= 3 && currentPage <= 4
+          each value, index in arrayPages
+            if index + 1 <= currentPage
+              if index === currentPage - 1
+                li.pagination__item.pagination__item_active= value
+                if amountPages >= currentPage + 3
+                  li.pagination__item= currentPage + 1
+                  li.pagination__item= '...'
+                  li.pagination__item= amountPages
+                else
+                  li.pagination__item= currentPage + 1
+                  li.pagination__item= amountPages
+              else
+                li.pagination__item= value
+        else if currentPage >= 5
+          li.pagination__item= 1
+          li.pagination__item= '...'
+          li.pagination__item= currentPage - 1
+          li.pagination__item.pagination__item_active= currentPage
+          if amountPages >= currentPage + 3
+            li.pagination__item= currentPage + 1
+            li.pagination__item= '...'
+            li.pagination__item= amountPages
+          else
+            if currentPage + 1 < amountPages
+              li.pagination__item= currentPage + 1
+            if currentPage < amountPages
+              li.pagination__item= amountPages
+      if currentPage < amountPages
         li.pagination__item_with-arrow
       span.pagination__description= `${rangeItems} из ${approximateAmountItems}+ вариантов аренды`

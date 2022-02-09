@@ -2,7 +2,8 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    width: 255px;
+    min-width: 255px;
+    max-width: 320px;
     margin: 0;
     padding: 0;
     list-style: none;
