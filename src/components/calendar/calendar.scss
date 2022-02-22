@@ -48,6 +48,7 @@
 
   &--nav {
     @include fontMontserrat;
+    padding: 5px 4px;
     color: $DarkShade100;
     font-weight: bold;
     font-size: 19px;
@@ -96,7 +97,7 @@
   }
 
   &--content {
-    margin: 18px 5px 0 7px;
+    margin: 16px 5px 0 5px;
   }
 
   &--days-names {
