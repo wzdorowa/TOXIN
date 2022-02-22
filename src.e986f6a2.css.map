@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA,oBACE,eAAA,CACA,cAAA,CACA,uCAAA,CACA","file":"src.e986f6a2.css","sourceRoot":"../src","sourcesContent":[".content-list__item {\n  min-height: 40px;\n  font-size: 14px;\n  font-family: 'Montserrat', Arial, sans-serif;\n  list-style: none;\n}\n"]}
