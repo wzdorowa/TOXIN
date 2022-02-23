@@ -1,5 +1,9 @@
 mixin pagination({ currentPage = 1, amountItemsPerPage = 12, amountItems = 0 } = {})
   -
+    if (currentPage < 1) {
+      currentPage = 1;
+    }
+
     const amountPages = Math.ceil(amountItems / amountItemsPerPage);
     const arrayPages = Array.from({ length: amountPages }, (v, k) => k + 1);
 
@@ -9,16 +13,19 @@ mixin pagination({ currentPage = 1, amountItemsPerPage = 12, amountItems = 0 } =
     if (endRange > amountItems) {
       endRange = amountItems;
     }
+
     const rangeItems = `${beginningRange} – ${endRange}`;
 
     let approximateAmountItems;
 
-    if (amountItems < 10) {
+    if (amountItems < 100) {
       approximateAmountItems = amountItems
-    } else if (amountItems < 100) {
-      approximateAmountItems = Math.floor(amountItems / 10) * 10;
+    } else if (amountItems < 1000) {
+      approximateAmountItems = `${Math.floor(amountItems / 100) * 100}+`;
+    } else if (amountItems < 1000000) {
+      approximateAmountItems = `${Math.floor(amountItems / 100) / 10}к`;
     } else {
-      approximateAmountItems = Math.floor(amountItems / 100) * 100;
+      approximateAmountItems = `${Math.floor(amountItems / 100000) / 10}м`;
     }
 
   .pagination
@@ -31,6 +38,9 @@ mixin pagination({ currentPage = 1, amountItemsPerPage = 12, amountItems = 0 } =
             li.pagination__item.pagination__item_active= value
           else
             li.pagination__item= value
+        if currentPage < amountPages
+          li.pagination__item_with-arrow
+        span.pagination__description= `${rangeItems} из ${approximateAmountItems} вариантов аренды`
       else
         if currentPage <= 2
           each value, index in arrayPages
@@ -39,7 +49,7 @@ mixin pagination({ currentPage = 1, amountItemsPerPage = 12, amountItems = 0 } =
             else if index <= 2
               li.pagination__item= value
           li.pagination__item= '...'
-          li.pagination__item= amountPages
+          li.pagination__item.pagination__item_last= amountPages
         else if currentPage >= 3 && currentPage <= 4
           each value, index in arrayPages
             if index + 1 <= currentPage
@@ -68,6 +78,6 @@ mixin pagination({ currentPage = 1, amountItemsPerPage = 12, amountItems = 0 } =
               li.pagination__item= currentPage + 1
             if currentPage < amountPages
               li.pagination__item= amountPages
-      if currentPage < amountPages
-        li.pagination__item_with-arrow
-      span.pagination__description= `${rangeItems} из ${approximateAmountItems}+ вариантов аренды`
+        if currentPage < amountPages
+          li.pagination__item_with-arrow
+        span.pagination__description= `${rangeItems} из ${approximateAmountItems} вариантов аренды`
