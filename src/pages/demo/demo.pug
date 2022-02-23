@@ -64,14 +64,12 @@ html(lang='ru')
         { subjectOfCalculation: 'Младенцы', count: 0 },
       ];
 
-    -
       const dataForDropdownSecond = [
         { subjectOfCalculation: 'Спальни', count: 2 },
         { subjectOfCalculation: 'Кровати', count: 2 },
         { subjectOfCalculation: 'Ванные комнаты', count: 0 },
       ];
 
-    -
       const checkboxList = [
         { value: 'Завтрак', name: 'breakfast' },
         { value: 'Письменный стол', name: 'desk', checked: true },
@@ -83,14 +81,12 @@ html(lang='ru')
         { value: 'Шампунь', name: 'second-shampoo' },
       ];
 
-    -
       const rules = [
         'Нельзя с питомцами',
         'Без вечеринок и мероприятий',
         'Время прибытия — после 13:00, а выезд до 12:00',
       ];
 
-    -
       const list = [
         {
           advantageTitle: 'Комфорт',
@@ -104,7 +100,6 @@ html(lang='ru')
         },
       ];
 
-    -
       const dropdownGuests = {
         label: 'Dropdown',
         placeholder: 'Сколько гостей',
@@ -114,7 +109,6 @@ html(lang='ru')
         name: 'demo-dropdown-guests'
       };
 
-    -
       const dropdownConveniences = {
         label: 'Удобства номера',
         placeholder: 'Выберите удобства',
@@ -124,7 +118,6 @@ html(lang='ru')
         name: 'demo-dropdown-amenities'
       };
 
-    -
       const dateDropdownOneField = {
         labelArray: ['Date dropdown', 'Date dropdown'],
         size: 'small',
@@ -132,7 +125,6 @@ html(lang='ru')
         name: 'demo-first-date-dropdown-input'
       };
 
-    -
       const dateDropdownTwoField = {
         labelArray: ['Filter date dropdown'],
         datesFormat: ['ДД.ММ - ДД.ММ'],
@@ -141,7 +133,6 @@ html(lang='ru')
         name: 'demo-second-date-dropdown-input'
       };
 
-    -
       const checkboxHallway = {
         value: 'Широкий коридор',
         name: 'wide-corridor',
@@ -149,7 +140,6 @@ html(lang='ru')
         description: 'Ширина коридоров в номере не менее 91 см.'
       };
 
-    -
       const checkboxForInvalids = {
         value: 'Помощник для инвалидов',
         name: 'assistant-for-the-disabled',
@@ -157,7 +147,6 @@ html(lang='ru')
         description: 'На 1 этаже вас встретит специалист и проводит до номера.'
       };
 
-    -
       const comment = {
         userName: 'Мурад Сарафанов',
         date: '5 дней назад',
@@ -168,7 +157,6 @@ html(lang='ru')
         name: 'comment-1-like-button'
       };
 
-    -
       const roomForm = {
         number: 888,
         level: 'люкс',
@@ -182,7 +170,6 @@ html(lang='ru')
         totalCost: 38081,
       };
 
-    -
       const dateDropdown = {
         labelArray: ['Прибытие', 'Выезд'],
         dates: dateFormat,
@@ -191,7 +178,6 @@ html(lang='ru')
         name: 'demo-date-dropdown-input'
       }
 
-    -
       const roomCard1 = {
         number: 888,
         level: 'люкс',
@@ -201,7 +187,6 @@ html(lang='ru')
         amountStar: 5
       };
 
-    -
       const roomCard2 = {
         number: 840,
         level: 'люкс',
@@ -261,8 +246,8 @@ html(lang='ru')
           .demo__elements-container
             span.demo__element-title Rate button
             .demo__rate-buttons
-              +rating({ amountStar: 4 })
-              +rating({ amountStar: 5 })
+              +rating({ amountActiveStar: 4 })
+              +rating({ amountActiveStar: 5 })
         .demo__elements
           .demo__range-slider
             +slider({ text: 'Range Slider' })

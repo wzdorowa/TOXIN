@@ -1,13 +1,14 @@
 mixin diagram({ title, impressions })
-  - const { amazing, good, satisfactorily, bad } = impressions;
-  - const CIRCLE_LENGTH = 364.424672;
-  - const sum = amazing + good + satisfactorily + bad;
-  - const calcLengthOfOneReview = number => (CIRCLE_LENGTH * number) / sum;
-  - const goodInPixels = calcLengthOfOneReview(good);
-  - const amazingInPixels = calcLengthOfOneReview(amazing);
-  - const satisfactorilyInPixels = calcLengthOfOneReview(satisfactorily);
-  - const badInPixels = calcLengthOfOneReview(bad);
   -
+    const { amazing, good, satisfactorily, bad } = impressions;
+    const CIRCLE_LENGTH = 364.424672;
+    const sum = amazing + good + satisfactorily + bad;
+    const calcLengthOfOneReview = number => (CIRCLE_LENGTH * number) / sum;
+    const goodInPixels = calcLengthOfOneReview(good);
+    const amazingInPixels = calcLengthOfOneReview(amazing);
+    const satisfactorilyInPixels = calcLengthOfOneReview(satisfactorily);
+    const badInPixels = calcLengthOfOneReview(bad);
+
     const stylesCircle = (amount) => {
       const classesArr = ['diagram__image-circle', 'js-diagram__image-circle'];
       if (amount === 0) classesArr.push('diagram__image-circle_hide');

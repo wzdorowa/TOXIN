@@ -1,19 +1,18 @@
 mixin pagination({ currentPage = 1, amountItemsPerPage = 12, amountItems = 0 } = {})
-  - const amountPages = Math.ceil(amountItems / amountItemsPerPage);
-  // - console.log('amountPages', amountPages);
-  - const arrayPages = Array.from({ length: amountPages }, (v, k) => k + 1);
-
-  - const beginningRange = amountItemsPerPage * currentPage - amountItemsPerPage + 1;
-  - let endRange = amountItemsPerPage * currentPage;
   -
+    const amountPages = Math.ceil(amountItems / amountItemsPerPage);
+    const arrayPages = Array.from({ length: amountPages }, (v, k) => k + 1);
+
+    const beginningRange = amountItemsPerPage * currentPage - amountItemsPerPage + 1;
+    let endRange = amountItemsPerPage * currentPage;
+
     if (endRange > amountItems) {
       endRange = amountItems;
     }
-  - const rangeItems = `${beginningRange} – ${endRange}`;
+    const rangeItems = `${beginningRange} – ${endRange}`;
 
-  - let approximateAmountItems;
+    let approximateAmountItems;
 
-  -
     if (amountItems < 10) {
       approximateAmountItems = amountItems
     } else if (amountItems < 100) {

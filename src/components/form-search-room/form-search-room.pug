@@ -10,9 +10,8 @@ mixin form-search-room(dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
       { subjectOfCalculation: 'Младенцы', count: 0 },
     ];
 
-  - const labelInputs = ['Прибытие', 'Выезд'];
+    const labelInputs = ['Прибытие', 'Выезд'];
 
-  -
     const dateDropdown = {
       labelArray: labelInputs,
       dates: dateFormat, size: 'small',
@@ -20,7 +19,6 @@ mixin form-search-room(dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
       name: 'form-search-room-date-dropdown-input'
     };
 
-  -
     const dropdown = {
       label: 'Гости',
       placeholder: 'Сколько гостей',
@@ -29,7 +27,6 @@ mixin form-search-room(dateFormat = ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
       name: 'form-search-room-dropdown'
     };
 
-  -
     const roomSelectionButton = {
       text: 'Подобрать номер',
       type: 'solid',

@@ -17,20 +17,17 @@ mixin form-room-cost(formRoomCostData)
       totalCost,
     } = formRoomCostData;
 
-  -
     const rowsForDropdown = [
       { subjectOfCalculation: 'Взрослые', count: 2 },
       { subjectOfCalculation: 'Дети', count: 1 },
       { subjectOfCalculation: 'Младенцы', count: 0 },
     ];
 
-  -
     const formatCost = (cost) => {
       const value = cost.toLocaleString('ru-RU')
       return value
     };
 
-  -
     const dateDropdown = {
       labelArray: ['Прибытие', 'Выезд'],
       dates: dateFormat,
@@ -39,7 +36,6 @@ mixin form-room-cost(formRoomCostData)
       name: 'form-room-cost-date-dropdown-input'
     }
 
-  -
     const dropdown = {
       label: 'Гости',
       placeholder: 'Сколько гостей',
