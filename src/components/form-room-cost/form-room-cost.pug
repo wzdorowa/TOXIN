@@ -51,7 +51,7 @@ mixin form-room-cost(formRoomCostData)
         span.form-room-cost__number-room= number
         span.form-room-cost__room-class= level
       .form-room-cost__room-cost
-        span.form-room-cost__cost-title= `${formatCost(cost)}`
+        span.form-room-cost__cost-title= formatCost(cost)
         span.form-room-cost__cost-text= 'в сутки'
     +date-dropdown(dateDropdown)
     .form-room-cost__dropdown-container
@@ -59,23 +59,23 @@ mixin form-room-cost(formRoomCostData)
     .form-room-cost__calculation
       .form-room-cost__cost-item
         .form-room-cost__column-calc
-          span.form-room-cost__cost= `${formatCost(cost)}`
+          span.form-room-cost__cost= formatCost(cost)
           span= ` x ${numberOfDays} суток`
-        .form-room-cost__cost= `${formatCost(priceForThePeriod)}`
+        .form-room-cost__cost= formatCost(priceForThePeriod)
       .form-room-cost__cost-item
         .form-room-cost__column-calc
           span.form-room-cost__cost= 'Cбор за услуги: скидка' + ` ${formatCost(serviceCharge)}`
         .form-room-cost__block-with-tooltip
           +tooltip('С учетом Вашей бонусной карты')
-          .form-room-cost__cost= `${formatCost(servicePrice)}`
+          .form-room-cost__cost= formatCost(servicePrice)
       .form-room-cost__cost-item
         .form-room-cost__column-calc
           span= `Сбор за дополнительные услуги`
         .form-room-cost__block-with-tooltip
           +tooltip('С учетом Вашей бонусной карты')
-          .form-room-cost__cost= `${formatCost(additionalServicesPrice)}`
+          .form-room-cost__cost= formatCost(additionalServicesPrice)
     .form-room-cost__total
       .form-room-cost__total-item Итого
       .form-room-cost__total-item.form-room-cost__total-item_with-border
-      .form-room-cost__total-item.form-room-cost__total-item_with-cost= `${formatCost(totalCost)}`
+      .form-room-cost__total-item.form-room-cost__total-item_with-cost= formatCost(totalCost)
     +button({ text: 'Забронировать', type: 'solid', isDirected: true, size: 'large' })

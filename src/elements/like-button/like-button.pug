@@ -3,7 +3,7 @@ mixin like-button({ value = 0, checked = false, name = 'like-button' })
     label.like-button__filter
       input.like-button__content.js-like-button__content(
         type='checkbox',
-        name=`${ name }`,
+        name=name,
         checked=checked
       )
       span.like-button__indicator

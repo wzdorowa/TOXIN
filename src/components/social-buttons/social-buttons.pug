@@ -17,4 +17,4 @@ mixin social-buttons
       - const { name, src, href } = button;
 
       a.social-buttons__button(tabindex='0', target='_blank', rel='noopener noreferrer', href=href)
-        img(src=`${ src }`, alt=name, aria-label=name, width='23px', height='23px')
+        img(src=src, alt=name, aria-label=name, width='23px', height='23px')
